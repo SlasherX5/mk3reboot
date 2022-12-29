@@ -1,0 +1,8 @@
+Incrementally linking...
+LINK : performing full link
+MKCITY.OBJ : error LNK2001: unresolved external symbol "_calla_bank"
+MKCITY.OBJ : error LNK2001: unresolved external symbol "_calla_city"
+MKBKGD.OBJ : error LNK2001: unresolved external symbol "_subflor_addr"
+WinDebug/emulator.exe : error LNK1120: 10 unresolved externals
+Error executing link.exe.
+emulator.exe - 11 error(s), 0 warning(s)

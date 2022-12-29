@@ -1,0 +1,324 @@
+LOADLIST_START( SELECT_SNDS, select  )
+TUNE( TUNE_ATTRACT1, ATTRACT1 )
+SEQUENCE_LL(
+ ID( 352, TS_CHURCH_BELL ),
+  PATCH( 3, pat_bell ),
+   MAP( 3, map_bell ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 9, vag_bell, bell  ),
+    VAG_SIZE( 22480 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 114688 ),
+    VAG_LCD( 2048, 0 )
+)
+SEQUENCE_LL(
+ ID( 350, TS_ROCK_MOVE ),
+  PATCH( 0, pat_srock ),
+   MAP( 1, map_srock ),
+    ROOT_FINE( 58, 0 ),
+   VAG( 0, vag_srock, srock  ),
+    VAG_SIZE( 18272 ),
+    VAG_RATE( 44100 ),
+    VAG_POS( 0 ),
+    VAG_LCD( 24528, 2000 )
+)
+SEQUENCE_LL(
+ ID( 351, TS_DRAGON_SPIN ),
+  PATCH( 1, pat_swhoosh ),
+   MAP( 2, map_swhoosh ),
+    ROOT_FINE( 72, 0 ),
+   VAG( 1, vag_swhoosh, swhoosh  ),
+    VAG_SIZE( 8912 ),
+    VAG_RATE( 22050 ),
+    VAG_POS( 18432 ),
+    VAG_LCD( 42800, 1840 )
+)
+SEQUENCE_LL(
+ ID( 355, TS_P1_CURS ),
+  PATCH( 15, pat_ncurs1 ),
+   MAP( 15, map_ncurs1 ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 10, vag_ncurs1, ncurs1  ),
+    VAG_SIZE( 1872 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 137216 ),
+    VAG_LCD( 51712, 512 )
+)
+SEQUENCE_LL(
+ ID( 356, TS_P2_CURS ),
+  PATCH( 16, pat_ncurs2 ),
+   MAP( 16, map_ncurs2 ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 11, vag_ncurs2, ncurs2  ),
+    VAG_SIZE( 1872 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 139264 ),
+    VAG_LCD( 53584, 336 )
+)
+SEQUENCE_LL(
+ ID( 357, TS_P1_PICKED ),
+  PATCH( 17, pat_picked1 ),
+   MAP( 17, map_picked1 ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 12, vag_picked1, picked1  ),
+    VAG_SIZE( 8352 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 141312 ),
+    VAG_LCD( 55456, 160 )
+)
+SEQUENCE_LL(
+ ID( 358, TS_P2_PICKED ),
+  PATCH( 18, pat_picked2 ),
+   MAP( 18, map_picked2 ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 13, vag_picked2, picked2  ),
+    VAG_SIZE( 7936 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 151552 ),
+    VAG_LCD( 63808, 320 )
+)
+SEQUENCE_LL(
+ ID( 375, TS_MAP_ZOOM ),
+  PATCH( 21, pat_mrtlwhsh ),
+   MAP( 21, map_mrtlwhsh ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 16, vag_mrtlwhsh, mrtlwhsh  ),
+    VAG_SIZE( 10208 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 163840 ),
+    VAG_LCD( 71744, 64 )
+)
+#if 0 
+SEQUENCE_LL(
+ ID( 211, ST_SWAT_BANG ),
+  PATCH( 123, pat_block1 ),
+   MAP( 123, map_block1 ),
+    ROOT_FINE( 81, 105 ),
+   VAG( 28, vag_block1, block1  ),
+    VAG_SIZE( 1968 ),
+    VAG_RATE( 12500 ),
+    VAG_POS( 260096 ),
+    VAG_LCD( 81952, 32 )
+)
+SEQUENCE_LL(
+ ID( 218, ST_IND_BURN_AXE ),
+  PATCH( 107, pat_fireloop ),
+   MAP( 107, map_fireloop ),
+    ROOT_FINE( 81, 105 ),
+   VAG( 148, vag_fireloop, fireloop  ),
+    VAG_SIZE( 9984 ),
+    VAG_RATE( 12500 ),
+    VAG_POS( 1226752 ),
+    VAG_LCD( 83920, 2000 )
+)
+SEQUENCE_LL(
+ ID( 359, TS_SK_KANO ),
+  PATCH( 154, pat_skkano ),
+   MAP( 154, map_skkano ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 173, vag_skkano, skkano  ),
+    VAG_SIZE( 8896 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1454080 ),
+    VAG_LCD( 93904, 1744 )
+)
+SEQUENCE_LL(
+ ID( 360, TS_SK_SONYA ),
+  PATCH( 155, pat_sksonya ),
+   MAP( 155, map_sksonya ),
+    ROOT_FINE( 65, 123 ),
+   VAG( 174, vag_sksonya, sksonya  ),
+    VAG_SIZE( 18976 ),
+    VAG_RATE( 31250 ),
+    VAG_POS( 1464320 ),
+    VAG_LCD( 102800, 400 )
+)
+SEQUENCE_LL(
+ ID( 361, TS_SK_JAX ),
+  PATCH( 156, pat_skjax ),
+   MAP( 156, map_skjax ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 175, vag_skjax, skjax  ),
+    VAG_SIZE( 9648 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1484800 ),
+    VAG_LCD( 121776, 944 )
+)
+SEQUENCE_LL(
+ ID( 362, TS_SK_NIGHTWOLF ),
+  PATCH( 157, pat_sknitwlf ),
+   MAP( 157, map_sknitwlf ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 176, vag_sknitwlf, sknitwlf  ),
+    VAG_SIZE( 12960 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1495040 ),
+    VAG_LCD( 131424, 352 )
+)
+SEQUENCE_LL(
+ ID( 363, TS_SK_SUBZERO ),
+  PATCH( 158, pat_sksubz ),
+   MAP( 158, map_sksubz ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 177, vag_sksubz, sksubz  ),
+    VAG_SIZE( 10688 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1509376 ),
+    VAG_LCD( 144384, 1024 )
+)
+SEQUENCE_LL(
+ ID( 364, TS_SK_STRYKER ),
+  PATCH( 159, pat_skstrkr2 ),
+   MAP( 159, map_skstrkr2 ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 178, vag_skstrkr2, skstrkr2  ),
+    VAG_SIZE( 8688 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1521664 ),
+    VAG_LCD( 155072, 1472 )
+)
+SEQUENCE_LL(
+ ID( 365, TS_SK_SINDEL ),
+  PATCH( 160, pat_sksindel ),
+   MAP( 160, map_sksindel ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 179, vag_sksindel, sksindel  ),
+    VAG_SIZE( 10480 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1531904 ),
+    VAG_LCD( 163760, 1968 )
+)
+SEQUENCE_LL(
+ ID( 366, TS_SK_SEKTOR ),
+  PATCH( 161, pat_sksector ),
+   MAP( 161, map_sksector ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 180, vag_sksector, sksector  ),
+    VAG_SIZE( 10912 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1544192 ),
+    VAG_LCD( 174240, 160 )
+)
+SEQUENCE_LL(
+ ID( 367, TS_SK_CYRAX ),
+  PATCH( 162, pat_skcyrax ),
+   MAP( 162, map_skcyrax ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 181, vag_skcyrax, skcyrax  ),
+    VAG_SIZE( 11168 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1556480 ),
+    VAG_LCD( 185152, 832 )
+)
+SEQUENCE_LL(
+ ID( 368, TS_SK_LAO ),
+  PATCH( 163, pat_skknglao ),
+   MAP( 163, map_skknglao ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 182, vag_skknglao, skknglao  ),
+    VAG_SIZE( 10736 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1568768 ),
+    VAG_LCD( 196320, 1760 )
+)
+SEQUENCE_LL(
+ ID( 369, TS_SK_KABAL ),
+  PATCH( 164, pat_skcabal ),
+   MAP( 164, map_skcabal ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 183, vag_skcabal, skcabal  ),
+    VAG_SIZE( 9984 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1581056 ),
+    VAG_LCD( 207056, 208 )
+)
+SEQUENCE_LL(
+ ID( 370, TS_SK_SHEEVA ),
+  PATCH( 165, pat_sksheeva ),
+   MAP( 165, map_sksheeva ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 184, vag_sksheeva, sksheeva  ),
+    VAG_SIZE( 8560 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1591296 ),
+    VAG_LCD( 217040, 2000 )
+)
+SEQUENCE_LL(
+ ID( 371, TS_SK_ST ),
+  PATCH( 166, pat_skshang ),
+   MAP( 166, map_skshang ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 185, vag_skshang, skshang  ),
+    VAG_SIZE( 12256 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1601536 ),
+    VAG_LCD( 225600, 320 )
+)
+SEQUENCE_LL(
+ ID( 372, TS_SK_LKANG ),
+  PATCH( 167, pat_skliukng ),
+   MAP( 167, map_skliukng ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 186, vag_skliukng, skliukng  ),
+    VAG_SIZE( 10688 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1613824 ),
+    VAG_LCD( 237856, 288 )
+)
+SEQUENCE_LL(
+ ID( 374, TS_SK_SMOKE ),
+  PATCH( 169, pat_sksmoke ),
+   MAP( 169, map_sksmoke ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 188, vag_sksmoke, sksmoke  ),
+    VAG_SIZE( 8288 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1638400 ),
+    VAG_LCD( 248544, 736 )
+)
+SEQUENCE_LL(
+ ID( 376, TS_SK_EXCELLENT ),
+  PATCH( 189, pat_skexelnt ),
+   MAP( 189, map_skexelnt ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 206, vag_skexelnt, skexelnt  ),
+    VAG_SIZE( 11136 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1853440 ),
+    VAG_LCD( 256832, 832 )
+)
+SEQUENCE_LL(
+ ID( 377, TS_SK_NEVER_WIN ),
+  PATCH( 190, pat_sknvrwin ),
+   MAP( 190, map_sknvrwin ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 207, vag_sknvrwin, sknvrwin  ),
+    VAG_SIZE( 18112 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1865728 ),
+    VAG_LCD( 267968, 1728 )
+)
+SEQUENCE_LL(
+ ID( 197, ST_SZ_ICE_UP ),
+  PATCH( 193, pat_sziceup ),
+   MAP( 193, map_sziceup ),
+    ROOT_FINE( 77, 123 ),
+   VAG( 209, vag_sziceup, sziceup  ),
+    VAG_SIZE( 11856 ),
+    VAG_RATE( 15624 ),
+    VAG_POS( 1900544 ),
+    VAG_LCD( 286080, 1408 )
+)
+SEQUENCE_LL(
+ ID( 436, TUNE_SELECT ),
+  PATCH( 316, pat_selectl ),
+   MAP( 316, map_selectl ),
+    ROOT_FINE( 58, 0 ),
+   VAG( 307, vag_selectl, selectl  ),
+    VAG_SIZE( 205088 ),
+    VAG_RATE( 44100 ),
+    VAG_POS( 3014656 ),
+    VAG_LCD( 297936, 976 )
+)
+#endif
+LOADLIST_END( SELECT_SNDS, select, 500976 )

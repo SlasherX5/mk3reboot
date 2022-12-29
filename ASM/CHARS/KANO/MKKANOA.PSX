@@ -1,0 +1,198 @@
+kano_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+kano_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+	DD a_kano_spider-kano_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_kano_spider:
+	DD SPIDER1-kano_anitab1
+	DD SPIDER3-kano_anitab1
+	DD SPIDER4-kano_anitab1
+	DD SPIDER5-kano_anitab1
+	DD SPIDER6-kano_anitab1
+	DD 0
+	DD ani_adjustxy
+	DW 014H
+	DW -00aH
+	DD SPIDER7-kano_anitab1
+	DD ani_adjustxy
+	DW 014H
+	DW -00aH
+	DD SPIDER8-kano_anitab1
+	DD ani_adjustxy
+	DW 014H
+	DW -00aH
+	DD SPIDER10-kano_anitab1
+	DD 0
+	DD ani_adjustxy
+	DW -014H
+	DW 00aH
+	DD SPIDER10-kano_anitab1
+	DD ani_adjustxy
+	DW -014H
+	DW 00aH
+	DD SPIDER8-kano_anitab1
+	DD ani_adjustxy
+	DW -014H
+	DW 00aH
+	DD SPIDER7-kano_anitab1
+	DD SPIDER6-kano_anitab1
+	DD 0
+	DD SPIDER5-kano_anitab1
+	DD SPIDER4-kano_anitab1
+	DD SPIDER3-kano_anitab1
+	DD SPIDER1-kano_anitab1
+	DD 0
+SPIDER1:
+	DD SPIDER1_SUB-kano_anitab1, 0
+SPIDER1_SUB:
+	DD SPIDER1_IMG-kano_anitab1
+	DW 57, 109, 25, -8
+	DD   _SPIDER_P
+SPIDER3:
+	DD SPIDER3_SUB-kano_anitab1, 0
+SPIDER3_SUB:
+	DD SPIDER3_IMG-kano_anitab1
+	DW 76, 103, 34, -20
+SPIDER4:
+	DD SPIDER4_SUB-kano_anitab1, 0
+SPIDER4_SUB:
+	DD SPIDER4_IMG-kano_anitab1
+	DW 94, 90, 38, -36
+SPIDER5:
+	DD SPIDER5_SUB-kano_anitab1, 0
+SPIDER5_SUB:
+	DD SPIDER5_IMG-kano_anitab1
+	DW 110, 88, 46, -40
+SPIDER6:
+	DD SPIDER6_SUB-kano_anitab1, 0
+SPIDER6_SUB:
+	DD SPIDER6_IMG-kano_anitab1
+	DW 131, 89, 54, -42
+SPIDER7:
+	DD SPIDER7_SUB-kano_anitab1, 0
+SPIDER7_SUB:
+	DD SPIDER7_IMG-kano_anitab1
+	DW 98, 89, 42, -32
+SPIDER8:
+	DD SPIDER8_SUB-kano_anitab1, 0
+SPIDER8_SUB:
+	DD SPIDER8_IMG-kano_anitab1
+	DW 72, 86, 32, -34
+SPIDER10:
+	DD SPIDER10_SUB-kano_anitab1, 0
+SPIDER10_SUB:
+	DD SPIDER10_IMG-kano_anitab1
+	DW 64, 80, 38, -35

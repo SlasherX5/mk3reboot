@@ -1,0 +1,58 @@
+ochar_reached:
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD a_reached_kano-base_anims
+	DD 0
+a_reached_kano:
+	DD ani_adjustxy
+	DW -9
+	DW 10
+	DD KNMOUTH3-base_anims
+	DD KNMOUTH4-base_anims
+	DD KNMOUTH5-base_anims
+	DD KNMOUTH6-base_anims
+	DD KNMOUTH7-base_anims
+	DD KNMOUTH8-base_anims
+	DD 0
+KNMOUTH3:
+	DD KNMOUTH3_SUB-base_anims, 0
+KNMOUTH3_SUB:
+	DD KNMOUTH3_IMG-base_anims
+	DW 58, 97, 26, -20
+KNMOUTH4:
+	DD KNMOUTH4_SUB-base_anims, 0
+KNMOUTH4_SUB:
+	DD KNMOUTH4_IMG-base_anims
+	DW 62, 97, 30, -20
+KNMOUTH5:
+	DD KNMOUTH5_SUB-base_anims, 0
+KNMOUTH5_SUB:
+	DD KNMOUTH5_IMG-base_anims
+	DW 66, 97, 34, -20
+KNMOUTH6:
+	DD KNMOUTH6_SUB-base_anims, 0
+KNMOUTH6_SUB:
+	DD KNMOUTH6_IMG-base_anims
+	DW 80, 64, 41, -53
+KNMOUTH7:
+	DD KNMOUTH7_SUB-base_anims, 0
+KNMOUTH7_SUB:
+	DD KNMOUTH7_IMG-base_anims
+	DW 105, 25, 59, -93
+KNMOUTH8:
+	DD KNMOUTH8_SUB-base_anims, 0
+KNMOUTH8_SUB:
+	DD KNMOUTH8_IMG-base_anims
+	DW 98, 34, 55, -84

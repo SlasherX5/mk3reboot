@@ -1,0 +1,58 @@
+ochar_reached:
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_sz-base_anims
+	DD 0
+a_reached_sz:
+	DD ani_adjustxy
+	DW 000H
+	DW 00aH
+	DD SZMOUTH3-base_anims
+	DD SZMOUTH4-base_anims
+	DD SZMOUTH5-base_anims
+	DD SZMOUTH6-base_anims
+	DD SZMOUTH7-base_anims
+	DD SZMOUTH8-base_anims
+	DD 0
+SZMOUTH3:
+	DD SZMOUTH3_SUB-base_anims, 0
+SZMOUTH3_SUB:
+	DD SZMOUTH3_IMG-base_anims
+	DW 66, 96, 35, -19
+SZMOUTH4:
+	DD SZMOUTH4_SUB-base_anims, 0
+SZMOUTH4_SUB:
+	DD SZMOUTH4_IMG-base_anims
+	DW 70, 94, 38, -20
+SZMOUTH5:
+	DD SZMOUTH5_SUB-base_anims, 0
+SZMOUTH5_SUB:
+	DD SZMOUTH5_IMG-base_anims
+	DW 74, 94, 43, -21
+SZMOUTH6:
+	DD SZMOUTH6_SUB-base_anims, 0
+SZMOUTH6_SUB:
+	DD SZMOUTH6_IMG-base_anims
+	DW 90, 68, 54, -47
+SZMOUTH7:
+	DD SZMOUTH7_SUB-base_anims, 0
+SZMOUTH7_SUB:
+	DD SZMOUTH7_IMG-base_anims
+	DW 120, 20, 70, -95
+SZMOUTH8:
+	DD SZMOUTH8_SUB-base_anims, 0
+SZMOUTH8_SUB:
+	DD SZMOUTH8_IMG-base_anims
+	DW 114, 25, 66, -90

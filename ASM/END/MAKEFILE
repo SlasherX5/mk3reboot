@@ -1,0 +1,70 @@
+#include ../../mk3.mif
+
+all:  $(EXE)end/godsend.bin \
+    $(EXE)end/indyend.bin \
+	$(EXE)end/jaxend.bin \
+	$(EXE)end/kanoend.bin \
+	$(EXE)end/laoend.bin \
+	$(EXE)end/liaend.bin \
+	$(EXE)end/lkangend.bin \
+	$(EXE)end/robo1end.bin \
+	$(EXE)end/robo2end.bin \
+	$(EXE)end/shangend.bin \
+	$(EXE)end/shevaend.bin \
+	$(EXE)end/smokeend.bin \
+	$(EXE)end/sonyaend.bin \
+	$(EXE)end/subend.bin \
+	$(EXE)end/swatend.bin \
+	$(EXE)end/tuskend.bin \
+	 .SYMBOLIC
+
+godsend.obj: godsend.asm $(OVLARTI) \
+    ../attract/gods/gods.$(TP)
+
+indyend.obj: indyend.asm $(OVLARTI) \
+	../attract/end/indian/indyend.$(TP)
+
+jaxend.obj: jaxend.asm $(OVLARTI) \
+	../attract/end/jax/jaxend.$(TP)
+
+kanoend.obj: kanoend.asm $(OVLARTI) \
+	../attract/end/kano/kanoend.$(TP)
+
+laoend.obj: laoend.asm $(OVLARTI) \
+	../attract/end/kung/kungend.$(TP)
+
+liaend.obj: liaend.asm $(OVLARTI) \
+	../attract/end/sindel/sinend.$(TP)
+
+lkangend.obj: lkangend.asm $(OVLARTI) \
+	../attract/end/kang/kangend.$(TP)
+
+robo1end.obj: robo1end.asm $(OVLARTI) \
+	../attract/end/sektor/sekend.$(TP)
+
+robo2end.obj: robo2end.asm $(OVLARTI) \
+	../attract/end/cyrax/cyraxend.$(TP)
+
+shangend.obj: shangend.asm $(OVLARTI) \
+	../attract/end/shang/shangend.$(TP)
+
+shevaend.obj: shevaend.asm $(OVLARTI) \
+	../attract/end/sheeva/shevaend.$(TP)
+
+smokeend.obj: smokeend.asm $(OVLARTI) \
+	../attract/end/smoke/smokeend.$(TP)
+
+sonyaend.obj: sonyaend.asm $(OVLARTI) \
+	../attract/end/sonya/sonyaend.$(TP)
+
+subend.obj: subend.asm $(OVLARTI) \
+	../attract/end/subzero/subend.$(TP)
+
+swatend.obj: swatend.asm $(OVLARTI) \
+	../attract/end/stryker/copend.$(TP)
+
+tuskend.obj: tuskend.asm $(OVLARTI) \
+	../attract/end/kabal/kabalend.$(TP)
+
+
+

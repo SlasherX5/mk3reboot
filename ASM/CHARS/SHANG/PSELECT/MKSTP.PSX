@@ -1,0 +1,195 @@
+_st_panitab1:
+	DD a__st_stance-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_dummy-_st_panitab1
+	DD a__st_victory-_st_panitab1
+a__st_dummy:
+a__st_stance:
+	DD TSSTANCE1-_st_panitab1
+	DD TSSTANCE2-_st_panitab1
+	DD TSSTANCE3-_st_panitab1
+	DD TSSTANCE4-_st_panitab1
+	DD TSSTANCE5-_st_panitab1
+	DD TSSTANCE6-_st_panitab1
+	DD TSSTANCE7-_st_panitab1
+	DD TSSTANCE8-_st_panitab1
+	DD TSSTANCE9-_st_panitab1
+	DD ani_jump
+	DD a__st_stance-_st_panitab1
+a__st_victory:
+	DD TSVICTORY1-_st_panitab1
+	DD TSVICTORY2-_st_panitab1
+	DD TSVICTORY3-_st_panitab1
+	DD TSVICTORY4-_st_panitab1
+	DD ani_sladd
+	DD GLOW01-_st_panitab1
+	DD ani_slani_sleep
+	DD GLOW01-_st_panitab1
+	DD ani_slani_sleep
+	DD GLOW02-_st_panitab1
+	DD ani_slani_sleep
+	DD GLOW03-_st_panitab1
+j__st_vic:
+	DD ani_slani_sleep
+	DD LOOP01-_st_panitab1
+	DD ani_slani_sleep
+	DD LOOP02-_st_panitab1
+	DD ani_slani_sleep
+	DD LOOP03-_st_panitab1
+	DD ani_slani_sleep
+	DD LOOP04-_st_panitab1
+	DD ani_slani_sleep
+	DD LOOP05-_st_panitab1
+	DD ani_slani_sleep
+	DD LOOP06-_st_panitab1
+	DD ani_slani_sleep
+	DD LOOP07-_st_panitab1
+	DD ani_slani_sleep
+	DD LOOP08-_st_panitab1
+	DD ani_slani_sleep
+	DD LOOP09-_st_panitab1
+	DD ani_slani_sleep
+	DD LOOP10-_st_panitab1
+	DD ani_jump
+	DD j__st_vic-_st_panitab1
+TSSTANCE1:
+	DD TSSTANCE1_SUB-_st_panitab1, 0
+TSSTANCE1_SUB:
+	DD TSSTANCE1_IMG-_st_panitab1
+	DW 54, 103, 18, -7
+TSSTANCE2:
+	DD TSSTANCE2_SUB-_st_panitab1, 0
+TSSTANCE2_SUB:
+	DD TSSTANCE2_IMG-_st_panitab1
+	DW 51, 104, 17, -6
+TSSTANCE3:
+	DD TSSTANCE3_SUB-_st_panitab1, 0
+TSSTANCE3_SUB:
+	DD TSSTANCE3_IMG-_st_panitab1
+	DW 50, 105, 15, -5
+TSSTANCE4:
+	DD TSSTANCE4_SUB-_st_panitab1, 0
+TSSTANCE4_SUB:
+	DD TSSTANCE4_IMG-_st_panitab1
+	DW 50, 105, 15, -5
+TSSTANCE5:
+	DD TSSTANCE5_SUB-_st_panitab1, 0
+TSSTANCE5_SUB:
+	DD TSSTANCE5_IMG-_st_panitab1
+	DW 50, 104, 15, -6
+TSSTANCE6:
+	DD TSSTANCE6_SUB-_st_panitab1, 0
+TSSTANCE6_SUB:
+	DD TSSTANCE6_IMG-_st_panitab1
+	DW 51, 104, 15, -6
+TSSTANCE7:
+	DD TSSTANCE7_SUB-_st_panitab1, 0
+TSSTANCE7_SUB:
+	DD TSSTANCE7_IMG-_st_panitab1
+	DW 53, 104, 15, -6
+TSSTANCE8:
+	DD TSSTANCE8_SUB-_st_panitab1, 0
+TSSTANCE8_SUB:
+	DD TSSTANCE8_IMG-_st_panitab1
+	DW 54, 104, 16, -6
+TSSTANCE9:
+	DD TSSTANCE9_SUB-_st_panitab1, 0
+TSSTANCE9_SUB:
+	DD TSSTANCE9_IMG-_st_panitab1
+	DW 56, 104, 18, -6
+TSVICTORY1:
+	DD TSVICTORY1_SUB-_st_panitab1, 0
+TSVICTORY1_SUB:
+	DD TSVICTORY1_IMG-_st_panitab1
+	DW 58, 104, 19, -6
+TSVICTORY2:
+	DD TSVICTORY2_SUB-_st_panitab1, 0
+TSVICTORY2_SUB:
+	DD TSVICTORY2_IMG-_st_panitab1
+	DW 62, 106, 26, -4
+TSVICTORY3:
+	DD TSVICTORY3_SUB-_st_panitab1, 0
+TSVICTORY3_SUB:
+	DD TSVICTORY3_IMG-_st_panitab1
+	DW 50, 123, 18, 12
+TSVICTORY4:
+	DD TSVICTORY4_SUB-_st_panitab1, 0
+TSVICTORY4_SUB:
+	DD TSVICTORY4_IMG-_st_panitab1
+	DW 50, 125, 17, 14
+GLOW01:
+	DD GLOW01_SUB-_st_panitab1, 0
+GLOW01_SUB:
+	DD GLOW01_IMG-_st_panitab1
+	DW 10, 10, 11, 15
+	DD _GLOW_P
+GLOW02:
+	DD GLOW02_SUB-_st_panitab1, 0
+GLOW02_SUB:
+	DD GLOW02_IMG-_st_panitab1
+	DW 17, 18, 14, 20
+GLOW03:
+	DD GLOW03_SUB-_st_panitab1, 0
+GLOW03_SUB:
+	DD GLOW03_IMG-_st_panitab1
+	DW 26, 22, 19, 22
+LOOP01:
+	DD LOOP01_SUB-_st_panitab1, 0
+LOOP01_SUB:
+	DD LOOP01_IMG-_st_panitab1
+	DW 29, 26, 21, 24
+LOOP02:
+	DD LOOP02_SUB-_st_panitab1, 0
+LOOP02_SUB:
+	DD LOOP02_IMG-_st_panitab1
+	DW 29, 26, 21, 24
+LOOP03:
+	DD LOOP03_SUB-_st_panitab1, 0
+LOOP03_SUB:
+	DD LOOP03_IMG-_st_panitab1
+	DW 29, 26, 21, 24
+LOOP04:
+	DD LOOP04_SUB-_st_panitab1, 0
+LOOP04_SUB:
+	DD LOOP04_IMG-_st_panitab1
+	DW 29, 26, 21, 24
+LOOP05:
+	DD LOOP05_SUB-_st_panitab1, 0
+LOOP05_SUB:
+	DD LOOP05_IMG-_st_panitab1
+	DW 29, 26, 21, 24
+LOOP06:
+	DD LOOP06_SUB-_st_panitab1, 0
+LOOP06_SUB:
+	DD LOOP06_IMG-_st_panitab1
+	DW 29, 26, 21, 24
+LOOP07:
+	DD LOOP07_SUB-_st_panitab1, 0
+LOOP07_SUB:
+	DD LOOP07_IMG-_st_panitab1
+	DW 29, 26, 21, 24
+LOOP08:
+	DD LOOP08_SUB-_st_panitab1, 0
+LOOP08_SUB:
+	DD LOOP08_IMG-_st_panitab1
+	DW 29, 26, 21, 24
+LOOP09:
+	DD LOOP09_SUB-_st_panitab1, 0
+LOOP09_SUB:
+	DD LOOP09_IMG-_st_panitab1
+	DW 29, 26, 21, 24
+LOOP10:
+	DD LOOP10_SUB-_st_panitab1, 0
+LOOP10_SUB:
+	DD LOOP10_IMG-_st_panitab1
+	DW 29, 26, 21, 24

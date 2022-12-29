@@ -1,0 +1,105 @@
+_sz_panitab1:
+	DD a__sz_stance-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_dummy-_sz_panitab1
+	DD a__sz_victory-_sz_panitab1
+a__sz_dummy:
+a__sz_stance:
+	DD SZSTANCE1-_sz_panitab1
+	DD SZSTANCE2-_sz_panitab1
+	DD SZSTANCE3-_sz_panitab1
+	DD SZSTANCE4-_sz_panitab1
+	DD SZSTANCE5-_sz_panitab1
+	DD SZSTANCE6-_sz_panitab1
+	DD SZSTANCE7-_sz_panitab1
+	DD SZSTANCE8-_sz_panitab1
+	DD SZSTANCE9-_sz_panitab1
+	DD SZSTANCE10-_sz_panitab1
+	DD ani_jump
+	DD a__sz_stance-_sz_panitab1
+a__sz_victory:
+	DD SZVICTORY1-_sz_panitab1
+	DD SZVICTORY2-_sz_panitab1
+	DD SZVICTORY3-_sz_panitab1
+	DD SZVICTORY4-_sz_panitab1
+	DD 0
+SZSTANCE1:
+	DD SZSTANCE1_SUB-_sz_panitab1, 0
+SZSTANCE1_SUB:
+	DD SZSTANCE1_IMG-_sz_panitab1
+	DW 45, 109, 14, -6
+SZSTANCE2:
+	DD SZSTANCE2_SUB-_sz_panitab1, 0
+SZSTANCE2_SUB:
+	DD SZSTANCE2_IMG-_sz_panitab1
+	DW 46, 109, 15, -6
+SZSTANCE3:
+	DD SZSTANCE3_SUB-_sz_panitab1, 0
+SZSTANCE3_SUB:
+	DD SZSTANCE3_IMG-_sz_panitab1
+	DW 46, 109, 15, -6
+SZSTANCE4:
+	DD SZSTANCE4_SUB-_sz_panitab1, 0
+SZSTANCE4_SUB:
+	DD SZSTANCE4_IMG-_sz_panitab1
+	DW 46, 110, 14, -5
+SZSTANCE5:
+	DD SZSTANCE5_SUB-_sz_panitab1, 0
+SZSTANCE5_SUB:
+	DD SZSTANCE5_IMG-_sz_panitab1
+	DW 50, 109, 14, -6
+SZSTANCE6:
+	DD SZSTANCE6_SUB-_sz_panitab1, 0
+SZSTANCE6_SUB:
+	DD SZSTANCE6_IMG-_sz_panitab1
+	DW 52, 109, 14, -6
+SZSTANCE7:
+	DD SZSTANCE7_SUB-_sz_panitab1, 0
+SZSTANCE7_SUB:
+	DD SZSTANCE7_IMG-_sz_panitab1
+	DW 51, 110, 14, -5
+SZSTANCE8:
+	DD SZSTANCE8_SUB-_sz_panitab1, 0
+SZSTANCE8_SUB:
+	DD SZSTANCE8_IMG-_sz_panitab1
+	DW 48, 110, 14, -5
+SZSTANCE9:
+	DD SZSTANCE9_SUB-_sz_panitab1, 0
+SZSTANCE9_SUB:
+	DD SZSTANCE9_IMG-_sz_panitab1
+	DW 44, 110, 14, -5
+SZSTANCE10:
+	DD SZSTANCE10_SUB-_sz_panitab1, 0
+SZSTANCE10_SUB:
+	DD SZSTANCE10_IMG-_sz_panitab1
+	DW 45, 109, 14, -6
+SZVICTORY1:
+	DD SZVICTORY1_SUB-_sz_panitab1, 0
+SZVICTORY1_SUB:
+	DD SZVICTORY1_IMG-_sz_panitab1
+	DW 52, 113, 26, -2
+SZVICTORY2:
+	DD SZVICTORY2_SUB-_sz_panitab1, 0
+SZVICTORY2_SUB:
+	DD SZVICTORY2_IMG-_sz_panitab1
+	DW 52, 116, 31, 1
+SZVICTORY3:
+	DD SZVICTORY3_SUB-_sz_panitab1, 0
+SZVICTORY3_SUB:
+	DD SZVICTORY3_IMG-_sz_panitab1
+	DW 47, 137, 28, 21
+SZVICTORY4:
+	DD SZVICTORY4_SUB-_sz_panitab1, 0
+SZVICTORY4_SUB:
+	DD SZVICTORY4_IMG-_sz_panitab1
+	DW 42, 145, 23, 29

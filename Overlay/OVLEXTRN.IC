@@ -1,0 +1,28 @@
+#include "makeihdr.c"
+
+#define OVLEXTERN(sym)  _ ## sym, 
+
+enum {
+	#include "ovlextrn.h"
+};
+
+#undef OVLEXTERN
+
+int main(int argc,char **argv)
+{
+static char *fmtsym = "_%s equ _start_ - %d\n";
+
+	openit(argc,argv);
+
+	outf("\n");
+
+#define OVLEXTERN(sym)  outf(fmtsym, #sym, _ ## sym);
+
+	#include "ovlextrn.h"
+
+#undef OVLEXTERN
+
+	closeit();
+	return(0);
+}
+

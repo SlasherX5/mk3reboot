@@ -1,0 +1,124 @@
+#makepp V1.0
+
+# header for watcom C++ makes
+
+MAKETYPE = $(%MAKETYPE)
+
+P = \\
+
+MAKE = make $(MAKEFLAGS)
+
+
+# suffix for object files
+o = obj
+
+
+.EXTENSIONS:
+.EXTENSIONS: .i .ic .exe .bin .obj .lst .asm .cpp .c
+
+
+# make include file for mortal combat assembler files
+
+
+HDIR = \mk3p\\
+
+I = $(HDIR)asm\\
+
+IL = $(HDIR)emulator\inc\\
+
+# EXE = $(HDIR)winrel\\
+
+EXE = $(HDIR)windebug\\
+
+AS = $(AFLAGS) 386asm
+APF = -NOLIST -TWOCASE -i $(I) -i $(IL) $(EXTAPF) 
+
+.asm.obj:
+	$(AS) $* $(APF)
+
+ASM = $(AS) $* $(APF)
+
+# stuff for watcom compiler to build executables for file generation
+## these macros are for the watcom c++ compiler
+
+CFLAGS =
+CC = wpp386 $(CFLAGS)
+CPF = -d1 -I$(I) $(EXTCPPF) 
+
+
+.c.obj:
+	$(CC) $*.c $(CPF) 
+
+
+.cpp.obj:
+	$(CC) $*.cpp $(CPF) 
+
+
+.cpp.lst:
+	$(CC) $*.cpp $(CPF) -d1
+	wdisasm $*.obj -l -s -a
+	del $*.obj
+
+# "overlay" files as the "relocatable executable" format put out by
+# the pharlap linker
+
+.obj.bin:
+	386link $[*.obj -NOMAP -RELEXE $*.bin 
+
+# for rational systems extender
+
+.obj.exe:
+   wlink option stack=20k name $* FILE $^*.obj
+
+.ic.i:
+	$(CC) $^*.ic $(CPF)
+    wlink option stack=20k name $* FILE $^*.obj
+	$*  $*.i
+	del $*.exe
+	del $*.obj
+
+
+
+#define MAKEBIN(name,objs)
+{
+$(name): makefile $(objs) 
+   @%create $^*.lnk
+   @for %i in ($(objs)) do @%append $^*.lnk %i
+   386link @$^*.lnk -NOMAP -RELEXE $(name) 
+   @del $^*.lnk
+}
+
+
+#define MAKELINK(name,objs,libs)
+{
+ 
+.NOCHECK
+$(name): $(name).exe 
+   @%null
+ 
+$(name).exe: makefile $(libs) $(objs) 
+   @%create $^*.lnk
+   @%append $^*.lnk debug all
+   @%append $^*.lnk option map
+   @%append $^*.lnk option stack=20k
+   @%append $^*.lnk name $*
+   @for %i in ($(libs)) do @%append $^*.lnk LIBRARY %i
+   @for %i in ($(objs)) do @%append $^*.lnk FILE %i
+   wlink @$^*.lnk 
+   @del $^*.lnk
+}
+
+#define MAKELIB(name,objs)
+{
+
+$(name): $(objs)
+    @%create $^&.lbc 
+    @for %i in ($(objs)) do @%append $^&.lbc +%i 
+	del $@ 
+	wlib $@ @$^&.lbc 
+	@del $^&.lbc
+}
+
+
+OVLARTI = $(I)compress.i $(I)overlay.i $(I)ovlextrn.i $(IL)win95.i $(I)mkchar.i
+

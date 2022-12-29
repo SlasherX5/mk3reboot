@@ -1,0 +1,696 @@
+robo2_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+robo2_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD a_tele_explode-robo2_anitab1
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0	;a_self_destruct-robo2_anitab1
+	DD a_helecopter-robo2_anitab1
+
+	DD 0
+	DD	0
+	DD ochar_cutups-base_anims
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0				; 30
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD a_blood_explode-base_anims	;34
+	DD 0
+	DD a_arm2-base_anims
+	DD a_leg-base_anims
+	DD 0
+	DD a_bone-base_anims
+	DD 0
+	DD a_rib_cage-base_anims
+	DD a_skull-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_zap:
+a_dummy:
+a_tele_explode:
+	DD RBEXPLODE1-robo2_anitab1
+	DD RBEXPLODE2-robo2_anitab1
+	DD RBEXPLODE3-robo2_anitab1
+	DD 0
+jlimb2:
+	DD RBXPLARM1-robo2_anitab1
+	DD RBXPLARM2-robo2_anitab1
+	DD RBXPLARM3-robo2_anitab1
+	DD RBXPLARM4-robo2_anitab1
+	DD RBXPLARM5-robo2_anitab1
+	DD RBXPLARM6-robo2_anitab1
+	DD RBXPLARM7-robo2_anitab1
+	DD RBXPLARM8-robo2_anitab1
+	DD ani_jump
+	DD jlimb2-robo2_anitab1
+	DD 0
+jlimb3:
+	DD RBXPHEAD1-robo2_anitab1
+	DD RBXPHEAD2-robo2_anitab1
+	DD RBXPHEAD3-robo2_anitab1
+	DD RBXPHEAD4-robo2_anitab1
+	DD RBXPHEAD5-robo2_anitab1
+	DD RBXPHEAD6-robo2_anitab1
+	DD RBXPHEAD7-robo2_anitab1
+	DD RBXPHEAD8-robo2_anitab1
+	DD ani_jump
+	DD jlimb3-robo2_anitab1
+	DD 0
+jlimb4:
+	DD RBXPRARM1-robo2_anitab1
+	DD RBXPRARM2-robo2_anitab1
+	DD RBXPRARM3-robo2_anitab1
+	DD RBXPRARM4-robo2_anitab1
+	DD RBXPRARM5-robo2_anitab1
+	DD RBXPRARM6-robo2_anitab1
+	DD RBXPRARM7-robo2_anitab1
+	DD RBXPRARM8-robo2_anitab1
+	DD ani_jump
+	DD jlimb4-robo2_anitab1
+	DD 0
+jlimb5:
+	DD RBXPCHEST1-robo2_anitab1
+	DD RBXPCHEST2-robo2_anitab1
+	DD RBXPCHEST3-robo2_anitab1
+	DD RBXPCHEST4-robo2_anitab1
+	DD RBXPCHEST5-robo2_anitab1
+	DD RBXPCHEST6-robo2_anitab1
+	DD RBXPCHEST7-robo2_anitab1
+	DD RBXPCHEST8-robo2_anitab1
+	DD ani_jump
+	DD jlimb5-robo2_anitab1
+	DD 0
+jlimb6:
+	DD RBXPHIP1-robo2_anitab1
+	DD RBXPHIP2-robo2_anitab1
+	DD RBXPHIP3-robo2_anitab1
+	DD RBXPHIP4-robo2_anitab1
+	DD RBXPHIP5-robo2_anitab1
+	DD RBXPHIP6-robo2_anitab1
+	DD RBXPHIP7-robo2_anitab1
+	DD RBXPHIP8-robo2_anitab1
+	DD ani_jump
+	DD jlimb6-robo2_anitab1
+	DD 0
+jlimb7:
+	DD RBXPRLEG1-robo2_anitab1
+	DD RBXPRLEG2-robo2_anitab1
+	DD RBXPRLEG3-robo2_anitab1
+	DD RBXPRLEG4-robo2_anitab1
+	DD RBXPRLEG5-robo2_anitab1
+	DD RBXPRLEG6-robo2_anitab1
+	DD RBXPRLEG7-robo2_anitab1
+	DD RBXPRLEG8-robo2_anitab1
+	DD ani_jump
+	DD jlimb7-robo2_anitab1
+	DD 0
+jlimb8:
+	DD RBXPLLEG1-robo2_anitab1
+	DD RBXPLLEG2-robo2_anitab1
+	DD RBXPLLEG3-robo2_anitab1
+	DD RBXPLLEG4-robo2_anitab1
+	DD RBXPLLEG5-robo2_anitab1
+	DD RBXPLLEG6-robo2_anitab1
+	DD RBXPLLEG7-robo2_anitab1
+	DD RBXPLLEG8-robo2_anitab1
+	DD ani_jump
+	DD jlimb8-robo2_anitab1
+	DD 0
+;a_self_destruct
+;	DW RBDESTRUCT1-robo2_anitab1
+;	DW RBDESTRUCT2-robo2_anitab1
+;	DW ani_sladd
+;	DW PLITE3-robo2_anitab1
+;	DW RBDESTRUCT4-robo2_anitab1
+;	DW 0
+;	DW ani_slani
+;	DW PLITE4-robo2_anitab1
+;	DW RBDESTRUCT5-robo2_anitab1
+;	DW ani_calla
+;	DW beep_sound
+;	DW ani_slani
+;	DW PLITE5-robo2_anitab1
+;	DW RBDESTRUCT6-robo2_anitab1
+;	DW ani_slani
+;	DW PLITE6-robo2_anitab1
+;	DW RBDESTRUCT7-robo2_anitab1
+;	DW ani_calla
+;	DW beep_sound
+;	DW ani_slani
+;	DW PLITE5-robo2_anitab1
+;	DW RBDESTRUCT6-robo2_anitab1
+;	DW 0
+;	DW ani_sladd
+;	DW RBDISPLAY1-robo2_anitab1
+;	DW RBLAFF1-robo2_anitab1
+;	DW ani_slani
+;	DW RBDISPLAY2-robo2_anitab1
+;	DW RBLAFF2-robo2_anitab1
+;	DW ani_slani
+;	DW RBDISPLAY3-robo2_anitab1
+;	DW RBLAFF3-robo2_anitab1
+;	DW 0
+;	DW ani_calla
+;	DW robo_laugh_sound
+;	DW RBLAFF4-robo2_anitab1
+;	DW ani_slani
+;	DW RBDISPLAY2-robo2_anitab1
+;	DW RBLAFF5-robo2_anitab1
+;	DW ani_slani
+;	DW RBDISPLAY3-robo2_anitab1
+;	DW RBLAFF6-robo2_anitab1
+;	DW ani_slani
+;	DW RBDISPLAY1-robo2_anitab1
+;	DW RBLAFF5-robo2_anitab1
+;	DW 0
+a_helecopter:
+j_copt1:
+	DD COPTERA1-robo2_anitab1
+	DD COPTERA2-robo2_anitab1
+	DD COPTERA3-robo2_anitab1
+	DD COPTERA4-robo2_anitab1
+	DD COPTERA5-robo2_anitab1
+	DD COPTERA6-robo2_anitab1
+	DD COPTERA7-robo2_anitab1
+	DD COPTERA8-robo2_anitab1
+	DD ani_jump
+	DD j_copt1-robo2_anitab1
+	DD 0
+j_copt2:
+	DD COPTERB1-robo2_anitab1
+	DD COPTERB2-robo2_anitab1
+	DD COPTERB3-robo2_anitab1
+	DD COPTERB4-robo2_anitab1
+	DD COPTERB5-robo2_anitab1
+	DD COPTERB6-robo2_anitab1
+	DD COPTERB7-robo2_anitab1
+	DD COPTERB8-robo2_anitab1
+	DD ani_jump
+	DD j_copt2-robo2_anitab1
+	DD 0
+j_copt3:
+	DD COPTERC1-robo2_anitab1
+	DD COPTERC2-robo2_anitab1
+	DD COPTERC3-robo2_anitab1
+	DD COPTERC4-robo2_anitab1
+	DD COPTERC5-robo2_anitab1
+	DD COPTERC6-robo2_anitab1
+	DD COPTERC7-robo2_anitab1
+	DD COPTERC8-robo2_anitab1
+	DD ani_jump
+	DD j_copt3-robo2_anitab1
+	DD 0
+RBEXPLODE1:
+	DD RBEXPLODE1_SUB-robo2_anitab1, 0
+RBEXPLODE1_SUB:
+	DD RBEXPLODE1_IMG-robo2_anitab1
+	DW 47, 108, 22, -9
+RBEXPLODE2:
+	DD RBEXPLODE2_SUB-robo2_anitab1, 0
+RBEXPLODE2_SUB:
+	DD RBEXPLODE2_IMG-robo2_anitab1
+	DW 63, 120, 30, -2
+RBEXPLODE3:
+	DD RBEXPLODE3_SUB-robo2_anitab1, 0
+RBEXPLODE3_SUB:
+	DD RBEXPLODE3_IMG-robo2_anitab1
+	DW 74, 126, 33, 7
+RBXPLARM1:
+	DD RBXPLARM1_IMG-robo2_anitab1
+	DW 24, 29, 34, 8
+RBXPLARM2:
+	DD RBXPLARM2_IMG-robo2_anitab1
+	DW 32, 10, 38, -3
+RBXPLARM3:
+	DD RBXPLARM3_IMG-robo2_anitab1
+	DW 30, 25, 37, 4
+RBXPLARM4:
+	DD RBXPLARM4_IMG-robo2_anitab1
+	DW 13, 33, 28, 8
+RBXPLARM5:
+	DD RBXPLARM5_IMG-robo2_anitab1
+	DW 23, 31, 34, 6
+RBXPLARM6:
+	DD RBXPLARM6_IMG-robo2_anitab1
+	DW 33, 10, 37, -4
+RBXPLARM7:
+	DD RBXPLARM7_IMG-robo2_anitab1
+	DW 27, 26, 33, 5
+RBXPLARM8:
+	DD RBXPLARM8_IMG-robo2_anitab1
+	DW 10, 32, 26, 9
+RBXPHEAD1:
+	DD RBXPHEAD1_IMG-robo2_anitab1
+	DW 30, 19, 2, 0
+RBXPHEAD2:
+	DD RBXPHEAD2_IMG-robo2_anitab1
+	DW 21, 20, 4, 1
+RBXPHEAD3:
+	DD RBXPHEAD3_IMG-robo2_anitab1
+	DW 29, 20, 16, 2
+RBXPHEAD4:
+	DD RBXPHEAD4_IMG-robo2_anitab1
+	DW 34, 20, 20, 0
+RBXPHEAD5:
+	DD RBXPHEAD5_IMG-robo2_anitab1
+	DW 27, 26, 16, -1
+RBXPHEAD6:
+	DD RBXPHEAD6_IMG-robo2_anitab1
+	DW 32, 27, 6, 0
+RBXPHEAD7:
+	DD RBXPHEAD7_IMG-robo2_anitab1
+	DW 39, 23, 6, 2
+RBXPHEAD8:
+	DD RBXPHEAD8_IMG-robo2_anitab1
+	DW 31, 20, 5, 1
+RBXPRARM1:
+	DD RBXPRARM1_IMG-robo2_anitab1
+	DW 25, 29, -16, 8
+RBXPRARM2:
+	DD RBXPRARM2_IMG-robo2_anitab1
+	DW 32, 14, -14, 1
+RBXPRARM3:
+	DD RBXPRARM3_IMG-robo2_anitab1
+	DW 30, 25, -16, 6
+RBXPRARM4:
+	DD RBXPRARM4_IMG-robo2_anitab1
+	DW 10, 33, -27, 9
+RBXPRARM5:
+	DD RBXPRARM5_IMG-robo2_anitab1
+	DW 25, 29, -18, 8
+RBXPRARM6:
+	DD RBXPRARM6_IMG-robo2_anitab1
+	DW 32, 10, -14, -2
+RBXPRARM7:
+	DD RBXPRARM7_IMG-robo2_anitab1
+	DW 30, 25, -14, 4
+RBXPRARM8:
+	DD RBXPRARM8_IMG-robo2_anitab1
+	DW 13, 33, -22, 10
+RBXPCHEST1:
+	DD RBXPCHEST1_IMG-robo2_anitab1
+	DW 34, 36, 13, -14
+RBXPCHEST2:
+	DD RBXPCHEST2_IMG-robo2_anitab1
+	DW 33, 36, 14, -14
+RBXPCHEST3:
+	DD RBXPCHEST3_IMG-robo2_anitab1
+	DW 17, 36, 4, -14
+RBXPCHEST4:
+	DD RBXPCHEST4_IMG-robo2_anitab1
+	DW 29, 36, 7, -14
+RBXPCHEST5:
+	DD RBXPCHEST5_IMG-robo2_anitab1
+	DW 30, 36, 11, -14
+RBXPCHEST6:
+	DD RBXPCHEST6_IMG-robo2_anitab1
+	DW 24, 36, 10, -14
+RBXPCHEST7:
+	DD RBXPCHEST7_IMG-robo2_anitab1
+	DW 20, 36, 7, -14
+RBXPCHEST8:
+	DD RBXPCHEST8_IMG-robo2_anitab1
+	DW 32, 36, 10, -14
+RBXPHIP1:
+	DD RBXPHIP1_IMG-robo2_anitab1
+	DW 34, 40, 13, -46
+RBXPHIP2:
+	DD RBXPHIP2_IMG-robo2_anitab1
+	DW 30, 42, 7, -47
+RBXPHIP3:
+	DD RBXPHIP3_IMG-robo2_anitab1
+	DW 30, 40, 6, -47
+RBXPHIP4:
+	DD RBXPHIP4_IMG-robo2_anitab1
+	DW 40, 47, 7, -45
+RBXPHIP5:
+	DD RBXPHIP5_IMG-robo2_anitab1
+	DW 42, 50, 7, -42
+RBXPHIP6:
+	DD RBXPHIP6_IMG-robo2_anitab1
+	DW 32, 51, 7, -41
+RBXPHIP7:
+	DD RBXPHIP7_IMG-robo2_anitab1
+	DW 22, 47, 7, -45
+RBXPHIP8:
+	DD RBXPHIP8_IMG-robo2_anitab1
+	DW 26, 37, 10, -47
+RBXPRLEG1:
+	DD RBXPRLEG1_IMG-robo2_anitab1
+	DW 18, 36, -17, -82
+RBXPRLEG2:
+	DD RBXPRLEG2_IMG-robo2_anitab1
+	DW 17, 32, -17, -82
+RBXPRLEG3:
+	DD RBXPRLEG3_IMG-robo2_anitab1
+	DW 16, 31, -17, -83
+RBXPRLEG4:
+	DD RBXPRLEG4_IMG-robo2_anitab1
+	DW 12, 32, -19, -82
+RBXPRLEG5:
+	DD RBXPRLEG5_IMG-robo2_anitab1
+	DW 11, 36, -17, -80
+RBXPRLEG6:
+	DD RBXPRLEG6_IMG-robo2_anitab1
+	DW 13, 34, -17, -81
+RBXPRLEG7:
+	DD RBXPRLEG7_IMG-robo2_anitab1
+	DW 19, 34, -12, -81
+RBXPRLEG8:
+	DD RBXPRLEG8_IMG-robo2_anitab1
+	DW 14, 34, -16, -81
+RBXPLLEG1:
+	DD RBXPLLEG1_IMG-robo2_anitab1
+	DW 16, 37, 25, -82
+RBXPLLEG2:
+	DD RBXPLLEG2_IMG-robo2_anitab1
+	DW 26, 31, 26, -85
+RBXPLLEG3:
+	DD RBXPLLEG3_IMG-robo2_anitab1
+	DW 31, 16, 29, -93
+RBXPLLEG4:
+	DD RBXPLLEG4_IMG-robo2_anitab1
+	DW 30, 27, 29, -82
+RBXPLLEG5:
+	DD RBXPLLEG5_IMG-robo2_anitab1
+	DW 16, 34, 24, -81
+RBXPLLEG6:
+	DD RBXPLLEG6_IMG-robo2_anitab1
+	DW 26, 31, 33, -81
+RBXPLLEG7:
+	DD RBXPLLEG7_IMG-robo2_anitab1
+	DW 32, 16, 36, -90
+RBXPLLEG8:
+	DD RBXPLLEG8_IMG-robo2_anitab1
+	DW 30, 27, 34, -87
+;RBDESTRUCT1
+;	DW RBDESTRUCT1_SUB-robo2_anitab1, 0
+;RBDESTRUCT1_SUB
+;	DW RBDESTRUCT1_IMG-robo2_anitab1
+;	DH 65, 111, 27, -9
+;RBDESTRUCT2
+;	DW RBDESTRUCT2_SUB-robo2_anitab1, 0
+;RBDESTRUCT2_SUB
+;	DW RBDESTRUCT2_IMG-robo2_anitab1
+;	DH 54, 111, 23, -9
+;PLITE3
+;	DW PLITE3_SUB-robo2_anitab1, 0
+;PLITE3_SUB
+;	DW PLITE3_IMG-robo2_anitab1
+;	DH 26, 23, -1, -11
+;	dw _PLITE_P
+;RBDESTRUCT4
+;	DW RBDESTRUCT4_SUB-robo2_anitab1, 0
+;RBDESTRUCT4_SUB
+;	DW RBDESTRUCT4_IMG-robo2_anitab1
+;	DH 50, 112, 18, -8
+;PLITE4
+;	DW PLITE4_SUB-robo2_anitab1, 0
+;PLITE4_SUB
+;	DW PLITE4_IMG-robo2_anitab1
+;	DH 28, 26, -1, -11
+;RBDESTRUCT5
+;	DW RBDESTRUCT5_SUB-robo2_anitab1, 0
+;RBDESTRUCT5_SUB
+;	DW RBDESTRUCT5_IMG-robo2_anitab1
+;	DH 47, 112, 17, -8
+;PLITE5
+;	DW PLITE5_SUB-robo2_anitab1, 0
+;PLITE5_SUB
+;	DW PLITE5_IMG-robo2_anitab1
+;	DH 26, 26, -1, -12
+;RBDESTRUCT6
+;	DW RBDESTRUCT6_SUB-robo2_anitab1, 0
+;RBDESTRUCT6_SUB
+;	DW RBDESTRUCT6_IMG-robo2_anitab1
+;	DH 46, 112, 17, -8
+;PLITE6
+;	DW PLITE6_SUB-robo2_anitab1, 0
+;PLITE6_SUB
+;	DW PLITE6_IMG-robo2_anitab1
+;	DH 13, 9, -14, -25
+;RBDESTRUCT7
+;	DW RBDESTRUCT7_SUB-robo2_anitab1, 0
+;RBDESTRUCT7_SUB
+;	DW RBDESTRUCT7_IMG-robo2_anitab1
+;	DH 47, 112, 17, -8
+;RBDISPLAY1
+;	DW RBDISPLAY1_SUB-robo2_anitab1, 0
+;RBDISPLAY1_SUB
+;	DW RBDISPLAY1_IMG-robo2_anitab1
+;	DH 79, 85, -15, -39
+;	dw _DISPLAY_P
+;RBLAFF1
+;	DW RBLAFF1_SUB-robo2_anitab1, 0
+;RBLAFF1_SUB
+;	DW RBLAFF1_IMG-robo2_anitab1
+;	DH 50, 111, 17, -9
+;RBDISPLAY2
+;	DW RBDISPLAY2_SUB-robo2_anitab1, 0
+;RBDISPLAY2_SUB
+;	DW RBDISPLAY2_IMG-robo2_anitab1
+;	DH 90, 85, 44, -27
+;RBLAFF2
+;	DW RBLAFF2_SUB-robo2_anitab1, 0
+;RBLAFF2_SUB
+;	DW RBLAFF2_IMG-robo2_anitab1
+;	DH 57, 111, 25, -9
+;RBDISPLAY3
+;	DW RBDISPLAY3_SUB-robo2_anitab1, 0
+;RBDISPLAY3_SUB
+;	DW RBDISPLAY3_IMG-robo2_anitab1
+;	DH 123, 114, 54, -2
+;RBLAFF3
+;	DW RBLAFF3_SUB-robo2_anitab1, 0
+;RBLAFF3_SUB
+;	DW RBLAFF3_IMG-robo2_anitab1
+;	DH 65, 111, 29, -9
+;RBLAFF4
+;	DW RBLAFF4_SUB-robo2_anitab1, 0
+;RBLAFF4_SUB
+;	DW RBLAFF4_IMG-robo2_anitab1
+;	DH 71, 111, 33, -9
+;RBLAFF5
+;	DW RBLAFF5_SUB-robo2_anitab1, 0
+;RBLAFF5_SUB
+;	DW RBLAFF5_IMG-robo2_anitab1
+;	DH 73, 111, 34, -9
+;RBLAFF6
+;	DW RBLAFF6_SUB-robo2_anitab1, 0
+;RBLAFF6_SUB
+;	DW RBLAFF6_IMG-robo2_anitab1
+;	DH 76, 111, 35, -9
+COPTERA1:
+	DD COPTERA1_SUB-robo2_anitab1, 0
+COPTERA1_SUB:
+	DD COPTERA1_IMG-robo2_anitab1
+	DW 55, 122, 30, 0
+COPTERA2:
+	DD COPTERA2_SUB-robo2_anitab1, 0
+COPTERA2_SUB:
+	DD COPTERA2_IMG-robo2_anitab1
+	DW 55, 122, 30, 1
+COPTERA3:
+	DD COPTERA3_SUB-robo2_anitab1, 0
+COPTERA3_SUB:
+	DD COPTERA3_IMG-robo2_anitab1
+	DW 55, 123, 30, 2
+COPTERA4:
+	DD COPTERA4_SUB-robo2_anitab1, 0
+COPTERA4_SUB:
+	DD COPTERA4_IMG-robo2_anitab1
+	DW 55, 122, 30, 0
+COPTERA5:
+	DD COPTERA5_SUB-robo2_anitab1, 0
+COPTERA5_SUB:
+	DD COPTERA5_IMG-robo2_anitab1
+	DW 55, 120, 30, -1
+COPTERA6:
+	DD COPTERA6_SUB-robo2_anitab1, 0
+COPTERA6_SUB:
+	DD COPTERA6_IMG-robo2_anitab1
+	DW 55, 122, 30, 0
+COPTERA7:
+	DD COPTERA7_SUB-robo2_anitab1, 0
+COPTERA7_SUB:
+	DD COPTERA7_IMG-robo2_anitab1
+	DW 56, 123, 30, 2
+COPTERA8:
+	DD COPTERA8_SUB-robo2_anitab1, 0
+COPTERA8_SUB:
+	DD COPTERA8_IMG-robo2_anitab1
+	DW 55, 122, 30, 1
+COPTERB1:
+	DD COPTERB1_SUB-robo2_anitab1, 0
+COPTERB1_SUB:
+	DD COPTERB1_IMG-robo2_anitab1
+	DW 76, 125, 30, 3
+COPTERB2:
+	DD COPTERB2_SUB-robo2_anitab1, 0
+COPTERB2_SUB:
+	DD COPTERB2_IMG-robo2_anitab1
+	DW 55, 126, 30, 4
+COPTERB3:
+	DD COPTERB3_SUB-robo2_anitab1, 0
+COPTERB3_SUB:
+	DD COPTERB3_IMG-robo2_anitab1
+	DW 67, 126, 42, 4
+COPTERB4:
+	DD COPTERB4_SUB-robo2_anitab1, 0
+COPTERB4_SUB:
+	DD COPTERB4_IMG-robo2_anitab1
+	DW 73, 123, 47, 2
+COPTERB5:
+	DD COPTERB5_SUB-robo2_anitab1, 0
+COPTERB5_SUB:
+	DD COPTERB5_IMG-robo2_anitab1
+	DW 75, 121, 50, 0
+COPTERB6:
+	DD COPTERB6_SUB-robo2_anitab1, 0
+COPTERB6_SUB:
+	DD COPTERB6_IMG-robo2_anitab1
+	DW 64, 121, 36, 0
+COPTERB7:
+	DD COPTERB7_SUB-robo2_anitab1, 0
+COPTERB7_SUB:
+	DD COPTERB7_IMG-robo2_anitab1
+	DW 71, 121, 30, 0
+COPTERB8:
+	DD COPTERB8_SUB-robo2_anitab1, 0
+COPTERB8_SUB:
+	DD COPTERB8_IMG-robo2_anitab1
+	DW 74, 122, 30, 1
+COPTERC1:
+	DD COPTERC1_SUB-robo2_anitab1, 0
+COPTERC1_SUB:
+	DD COPTERC1_IMG-robo2_anitab1
+	DW 94, 128, 47, 7
+COPTERC2:
+	DD COPTERC2_SUB-robo2_anitab1, 0
+COPTERC2_SUB:
+	DD COPTERC2_IMG-robo2_anitab1
+	DW 94, 128, 47, 7
+COPTERC3:
+	DD COPTERC3_SUB-robo2_anitab1, 0
+COPTERC3_SUB:
+	DD COPTERC3_IMG-robo2_anitab1
+	DW 94, 128, 47, 7
+COPTERC4:
+	DD COPTERC4_SUB-robo2_anitab1, 0
+COPTERC4_SUB:
+	DD COPTERC4_IMG-robo2_anitab1
+	DW 94, 128, 47, 7
+COPTERC5:
+	DD COPTERC5_SUB-robo2_anitab1, 0
+COPTERC5_SUB:
+	DD COPTERC5_IMG-robo2_anitab1
+	DW 94, 128, 47, 7
+COPTERC6:
+	DD COPTERC6_SUB-robo2_anitab1, 0
+COPTERC6_SUB:
+	DD COPTERC6_IMG-robo2_anitab1
+	DW 94, 128, 47, 7
+COPTERC7:
+	DD COPTERC7_SUB-robo2_anitab1, 0
+COPTERC7_SUB:
+	DD COPTERC7_IMG-robo2_anitab1
+	DW 94, 128, 47, 7
+COPTERC8:
+	DD COPTERC8_SUB-robo2_anitab1, 0
+COPTERC8_SUB:
+	DD COPTERC8_IMG-robo2_anitab1
+	DW 94, 128, 47, 7

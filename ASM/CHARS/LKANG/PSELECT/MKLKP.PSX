@@ -1,0 +1,172 @@
+_lk_panitab1:
+	DD a__lk_stance-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_dummy-_lk_panitab1
+	DD a__lk_victory-_lk_panitab1
+a__lk_dummy:
+a__lk_stance:
+	DD LUSTANCE1-_lk_panitab1
+	DD LUSTANCE2-_lk_panitab1
+	DD LUSTANCE3-_lk_panitab1
+	DD LUSTANCE4-_lk_panitab1
+	DD LUSTANCE5-_lk_panitab1
+	DD LUSTANCE6-_lk_panitab1
+	DD LUSTANCE7-_lk_panitab1
+	DD LUSTANCE8-_lk_panitab1
+	DD LUSTANCE9-_lk_panitab1
+	DD LUSTANCE8-_lk_panitab1
+	DD LUSTANCE7-_lk_panitab1
+	DD LUSTANCE6-_lk_panitab1
+	DD LUSTANCE5-_lk_panitab1
+	DD LUSTANCE4-_lk_panitab1
+	DD LUSTANCE3-_lk_panitab1
+	DD LUSTANCE2-_lk_panitab1
+	DD ani_jump
+	DD a__lk_stance-_lk_panitab1
+a__lk_victory:
+	DD LUVICTORY1-_lk_panitab1
+	DD LUVICTORY2-_lk_panitab1
+	DD LUVICTORY3-_lk_panitab1
+	DD LUVICTORY4-_lk_panitab1
+	DD LUVICTORY5-_lk_panitab1
+	DD LUVICTORY6-_lk_panitab1
+	DD LUVICTORY7-_lk_panitab1
+	DD LUVICTORY8-_lk_panitab1
+	DD LUVICTORY9-_lk_panitab1
+	DD LUVICTORY10-_lk_panitab1
+	DD LUVICTORY11-_lk_panitab1
+	DD LUVICTORY12-_lk_panitab1
+	DD LUVICTORY13-_lk_panitab1
+	DD LUVICTORY14-_lk_panitab1
+	DD LUVICTORY15-_lk_panitab1
+	DD 0
+LUSTANCE1:
+	DD LUSTANCE1_SUB-_lk_panitab1, 0
+LUSTANCE1_SUB:
+	DD LUSTANCE1_IMG-_lk_panitab1
+	DW 47, 106, 16, -7
+LUSTANCE2:
+	DD LUSTANCE2_SUB-_lk_panitab1, 0
+LUSTANCE2_SUB:
+	DD LUSTANCE2_IMG-_lk_panitab1
+	DW 47, 107, 16, -6
+LUSTANCE3:
+	DD LUSTANCE3_SUB-_lk_panitab1, 0
+LUSTANCE3_SUB:
+	DD LUSTANCE3_IMG-_lk_panitab1
+	DW 48, 108, 16, -5
+LUSTANCE4:
+	DD LUSTANCE4_SUB-_lk_panitab1, 0
+LUSTANCE4_SUB:
+	DD LUSTANCE4_IMG-_lk_panitab1
+	DW 49, 109, 16, -4
+LUSTANCE5:
+	DD LUSTANCE5_SUB-_lk_panitab1, 0
+LUSTANCE5_SUB:
+	DD LUSTANCE5_IMG-_lk_panitab1
+	DW 50, 109, 16, -4
+LUSTANCE6:
+	DD LUSTANCE6_SUB-_lk_panitab1, 0
+LUSTANCE6_SUB:
+	DD LUSTANCE6_IMG-_lk_panitab1
+	DW 52, 109, 18, -4
+LUSTANCE7:
+	DD LUSTANCE7_SUB-_lk_panitab1, 0
+LUSTANCE7_SUB:
+	DD LUSTANCE7_IMG-_lk_panitab1
+	DW 54, 108, 21, -5
+LUSTANCE8:
+	DD LUSTANCE8_SUB-_lk_panitab1, 0
+LUSTANCE8_SUB:
+	DD LUSTANCE8_IMG-_lk_panitab1
+	DW 56, 106, 22, -7
+LUSTANCE9:
+	DD LUSTANCE9_SUB-_lk_panitab1, 0
+LUSTANCE9_SUB:
+	DD LUSTANCE9_IMG-_lk_panitab1
+	DW 55, 105, 23, -8
+LUVICTORY1:
+	DD LUVICTORY1_SUB-_lk_panitab1, 0
+LUVICTORY1_SUB:
+	DD LUVICTORY1_IMG-_lk_panitab1
+	DW 52, 115, 15, 2
+LUVICTORY2:
+	DD LUVICTORY2_SUB-_lk_panitab1, 0
+LUVICTORY2_SUB:
+	DD LUVICTORY2_IMG-_lk_panitab1
+	DW 32, 117, 12, 5
+LUVICTORY3:
+	DD LUVICTORY3_SUB-_lk_panitab1, 0
+LUVICTORY3_SUB:
+	DD LUVICTORY3_IMG-_lk_panitab1
+	DW 75, 117, 32, 5
+LUVICTORY4:
+	DD LUVICTORY4_SUB-_lk_panitab1, 0
+LUVICTORY4_SUB:
+	DD LUVICTORY4_IMG-_lk_panitab1
+	DW 106, 117, 49, 5
+LUVICTORY5:
+	DD LUVICTORY5_SUB-_lk_panitab1, 0
+LUVICTORY5_SUB:
+	DD LUVICTORY5_IMG-_lk_panitab1
+	DW 82, 133, 38, 20
+LUVICTORY6:
+	DD LUVICTORY6_SUB-_lk_panitab1, 0
+LUVICTORY6_SUB:
+	DD LUVICTORY6_IMG-_lk_panitab1
+	DW 37, 145, 15, 33
+LUVICTORY7:
+	DD LUVICTORY7_SUB-_lk_panitab1, 0
+LUVICTORY7_SUB:
+	DD LUVICTORY7_IMG-_lk_panitab1
+	DW 27, 142, 10, 30
+LUVICTORY8:
+	DD LUVICTORY8_SUB-_lk_panitab1, 0
+LUVICTORY8_SUB:
+	DD LUVICTORY8_IMG-_lk_panitab1
+	DW 33, 130, 13, 18
+LUVICTORY9:
+	DD LUVICTORY9_SUB-_lk_panitab1, 0
+LUVICTORY9_SUB:
+	DD LUVICTORY9_IMG-_lk_panitab1
+	DW 38, 116, 15, 4
+LUVICTORY10:
+	DD LUVICTORY10_SUB-_lk_panitab1, 0
+LUVICTORY10_SUB:
+	DD LUVICTORY10_IMG-_lk_panitab1
+	DW 37, 117, 15, 5
+LUVICTORY11:
+	DD LUVICTORY11_SUB-_lk_panitab1, 0
+LUVICTORY11_SUB:
+	DD LUVICTORY11_IMG-_lk_panitab1
+	DW 37, 117, 15, 5
+LUVICTORY12:
+	DD LUVICTORY12_SUB-_lk_panitab1, 0
+LUVICTORY12_SUB:
+	DD LUVICTORY12_IMG-_lk_panitab1
+	DW 37, 115, 14, 3
+LUVICTORY13:
+	DD LUVICTORY13_SUB-_lk_panitab1, 0
+LUVICTORY13_SUB:
+	DD LUVICTORY13_IMG-_lk_panitab1
+	DW 37, 108, 14, -3
+LUVICTORY14:
+	DD LUVICTORY14_SUB-_lk_panitab1, 0
+LUVICTORY14_SUB:
+	DD LUVICTORY14_IMG-_lk_panitab1
+	DW 38, 104, 14, -8
+LUVICTORY15:
+	DD LUVICTORY15_SUB-_lk_panitab1, 0
+LUVICTORY15_SUB:
+	DD LUVICTORY15_IMG-_lk_panitab1
+	DW 37, 98, 14, -13

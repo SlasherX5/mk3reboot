@@ -1,0 +1,66 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)lkang/lkangb.bin  \
+     $(EXE)lkang/lkang.bin \
+	 $(EXE)lkang/lkanga.bin \
+	 $(EXE)lkang/lkangs.bin \
+	 $(EXE)lkang/lkangf.bin \
+	 $(EXE)lkang/lkangf1.bin \
+	 .SYMBOLIC
+
+
+# MAIN GAME	PLAY
+
+lkang.obj: lkang.asm  $(OVLARTI) \
+	..\chars\lkang\mklk.psx \
+	..\chars\lkang\mklk.psi \
+	..\chars\lkang\lub.psi
+
+# FRIENDSHIP 
+
+lkangs.obj: lkangs.asm $(OVLARTI) \
+	..\chars\lkang\mklks.psx \
+	..\chars\lkang\mklks.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+#  BABALITY
+
+lkangb.obj: lkangb.asm $(OVLARTI) \
+	..\chars\lkang\mklkb.psx \
+	..\common\baby\babylk.psx \
+	..\common\baby\babylk.psi \
+	..\common\baby\babyxpld.psi 
+
+
+# ANIMALITY
+
+lkanga.obj: lkanga.asm $(OVLARTI) \
+	..\chars\lkang\mklka.psx \
+	..\chars\lkang\mklka.psi \
+	..\common\half\ohalf.psx	\
+	..\common\half\ohalf.psi	\
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+
+# FATALITIES
+
+lkangf.obj: lkangf.asm $(OVLARTI) \
+	..\chars\lkang\mklkf.psx \
+	..\chars\lkang\mklkf.psi \
+	..\common\common\skelfire.psx	\
+	..\common\common\skelfire.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+lkanf1.obj: lkanf1.asm $(OVLARTI) \
+	..\chars\lkang\mklkf1.psx \
+	..\chars\lkang\mklkf1.psi \
+	..\common\common\bloodxp.psx \
+	..\common\common\bloodxp.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{bb088fb3-7e85-4ccc-9f6c-fdcc30ed1ded}</ProjectGuid>
+    <RootNamespace>MK3Reboot</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Winmm.lib;d3d11.lib;dxgi.lib;d3dcompiler.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <DelayLoadDLLs>d3d12.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(IntDirFullPath)ASM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sound\WAVE.H" />
+    <ClInclude Include="BIGSTACK.H" />
+    <ClInclude Include="D3DTest.h" />
+    <ClInclude Include="DAVID.H" />
+    <ClInclude Include="DIGLOAD.H" />
+    <ClInclude Include="emulator.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="hqxcommon.h" />
+    <ClInclude Include="LCDLOAD.H" />
+    <ClInclude Include="LOADADDR.H" />
+    <ClInclude Include="MK3Reboot.h" />
+    <ClInclude Include="MK3SND.H" />
+    <ClInclude Include="MKAMODE.H" />
+    <ClInclude Include="MKANI.H" />
+    <ClInclude Include="MKANIMAL.H" />
+    <ClInclude Include="MKBIO.H" />
+    <ClInclude Include="MKBKGD.H" />
+    <ClInclude Include="MKBLOOD.H" />
+    <ClInclude Include="MKBONUS.H" />
+    <ClInclude Include="MKBOSS.H" />
+    <ClInclude Include="MKBRIEF.H" />
+    <ClInclude Include="MKBUG.H" />
+    <ClInclude Include="MKBUYIN.H" />
+    <ClInclude Include="MKCANNED.H" />
+    <ClInclude Include="MKCOMBO.H" />
+    <ClInclude Include="MKDIAG.H" />
+    <ClInclude Include="MKDRONE.H" />
+    <ClInclude Include="MKEND.H" />
+    <ClInclude Include="MKFADE.H" />
+    <ClInclude Include="MKFATAL.H" />
+    <ClInclude Include="MKFILE.H" />
+    <ClInclude Include="MKFRIEND.H" />
+    <ClInclude Include="MKFX.H" />
+    <ClInclude Include="MKGAME.H" />
+    <ClInclude Include="MKGUYS.H" />
+    <ClInclude Include="MKHSTD.H" />
+    <ClInclude Include="MKINIT.H" />
+    <ClInclude Include="MKJOY.H" />
+    <ClInclude Include="MKLADDER.H" />
+    <ClInclude Include="MKMAIN.H" />
+    <ClInclude Include="MKMARK.H" />
+    <ClInclude Include="MKOBJ.H" />
+    <ClInclude Include="MKOPT.H" />
+    <ClInclude Include="MKOS.H" />
+    <ClInclude Include="MKPAL.H" />
+    <ClInclude Include="MKPROP.H" />
+    <ClInclude Include="MKR1.H" />
+    <ClInclude Include="MKREACT.H" />
+    <ClInclude Include="MKREPELL.H" />
+    <ClInclude Include="MKSCORE.H" />
+    <ClInclude Include="MKSEL.H" />
+    <ClInclude Include="MKSLAM.H" />
+    <ClInclude Include="MKSND.H" />
+    <ClInclude Include="MKSONY.H" />
+    <ClInclude Include="MKSOUND.H" />
+    <ClInclude Include="MKSTAT.H" />
+    <ClInclude Include="MKTEXT.H" />
+    <ClInclude Include="MKUTIL.H" />
+    <ClInclude Include="MKVS.H" />
+    <ClInclude Include="MKZAP.H" />
+    <ClInclude Include="MOVES.H" />
+    <ClInclude Include="OVERLAY.H" />
+    <ClInclude Include="ovlextrn.h" />
+    <ClInclude Include="PCH.H" />
+    <ClInclude Include="PSXCD.H" />
+    <ClInclude Include="PSXCDABS.H" />
+    <ClInclude Include="PSXCDOLD.H" />
+    <ClInclude Include="PSXLIB.H" />
+    <ClInclude Include="PSXSND.H" />
+    <ClInclude Include="PSXSPU.H" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SEQLOAD.H" />
+    <ClInclude Include="SNDLST.H" />
+    <ClInclude Include="SOUNDHW.H" />
+    <ClInclude Include="stdstuff.h" />
+    <ClInclude Include="SYSTEM.H" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="VALLOC.H" />
+    <ClInclude Include="WESSAPI.H" />
+    <ClInclude Include="win_port.h" />
+    <ClInclude Include="XCHARS.H" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\sound\BUILDSND.C">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="..\sound\WAVE.C">
+      <FileType>CppCode</FileType>
+    </None>
+    <ClCompile Include="BKGDBANK.C" />
+    <ClCompile Include="BKGDBELL.C" />
+    <ClCompile Include="BKGDBRIG.C" />
+    <ClCompile Include="BKGDCITY.C" />
+    <ClCompile Include="BKGDGRAV.C" />
+    <ClCompile Include="BKGDMOCK.C" />
+    <ClCompile Include="BKGDPIT.C" />
+    <ClCompile Include="BKGDPORT.C" />
+    <ClCompile Include="BKGDSBST.C" />
+    <ClCompile Include="BKGDSKEN.C" />
+    <ClCompile Include="BKGDSOUL.C" />
+    <ClCompile Include="BKGDTEMP.C" />
+    <ClCompile Include="FLICPLAY.C" />
+    <ClCompile Include="hq3x.c" />
+    <ClCompile Include="hqxInit.c" />
+    <ClCompile Include="LOADADDR.C" />
+    <ClCompile Include="MK3Reboot.cpp" />
+    <ClCompile Include="MKAMODE.C" />
+    <ClCompile Include="MKANI.C" />
+    <ClCompile Include="MKANIMAL.C" />
+    <ClCompile Include="MKBIO.C" />
+    <ClCompile Include="MKBKGD.C" />
+    <ClCompile Include="MKBKMOD.C" />
+    <ClCompile Include="MKBLOOD.C" />
+    <ClCompile Include="MKBONUS.C" />
+    <ClCompile Include="MKBOSS.C" />
+    <ClCompile Include="MKBT.C" />
+    <ClCompile Include="MKBUG.C" />
+    <ClCompile Include="MKBUYIN.C" />
+    <ClCompile Include="MKCANNED.C" />
+    <ClCompile Include="MKCOMBO.C" />
+    <ClCompile Include="MKDIAG.C" />
+    <ClCompile Include="MKDRONE.C" />
+    <ClCompile Include="MKEND.C" />
+    <ClCompile Include="MKFADE.C" />
+    <ClCompile Include="MKFATAL.C" />
+    <ClCompile Include="MKFILE.C" />
+    <ClCompile Include="MKFRIEND.C" />
+    <ClCompile Include="MKFX.C" />
+    <ClCompile Include="MKGLOBAL.C" />
+    <ClCompile Include="MKGUYS.C" />
+    <ClCompile Include="MKHSTD.C" />
+    <ClCompile Include="Mkinit.c" />
+    <ClCompile Include="MKJOY.C" />
+    <ClCompile Include="MKLADDER.C" />
+    <ClCompile Include="MKMAIN.C" />
+    <ClCompile Include="MKMARK.C" />
+    <ClCompile Include="MKOBJ.C" />
+    <ClCompile Include="MKOS.C" />
+    <ClCompile Include="MKPAL.C" />
+    <ClCompile Include="MKPROP.C" />
+    <ClCompile Include="MKR1.C" />
+    <ClCompile Include="MKREACT.C" />
+    <ClCompile Include="MKREPELL.C" />
+    <ClCompile Include="MKSCORE.C" />
+    <ClCompile Include="MKSEL.C" />
+    <ClCompile Include="MKSLAM.C" />
+    <ClCompile Include="MKSONY.C" />
+    <ClCompile Include="MKSOUND.C" />
+    <ClCompile Include="MKSTAT.C" />
+    <ClCompile Include="MKTEXT.C" />
+    <ClCompile Include="MKUTIL.C" />
+    <ClCompile Include="MKVS.C" />
+    <ClCompile Include="MKWIN95.C" />
+    <ClCompile Include="MKZAP.C" />
+    <ClCompile Include="MOVES.C" />
+    <ClCompile Include="OVERLAY.C" />
+    <ClCompile Include="PSXSND.C" />
+    <ClCompile Include="VALLOC.C" />
+    <ClCompile Include="WESSAPI.C" />
+    <ClCompile Include="WESSARC.C" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MK3Reboot.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="MK3Reboot.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ASM\ASM.vcxproj">
+      <Project>{4b3c9d0b-5658-4363-9da8-8c8a4c01a067}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Runtime\D3DTest.fx">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,162 @@
+jaxf_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+jaxf_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD a_jax_headsmash-jaxf_anitab1
+	DD 0	;a_jax_grow-jaxf_anitab1
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0	;a_jax_boot-jaxf_anitab1	;9
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD ochar_headoffs-base_anims		; 17
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD a_blood_explode-base_anims	;34
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_dummy:
+a_jax_headsmash:
+	DD JXHEADSM1-jaxf_anitab1
+	DD 0
+	DD JXHEADSM2-jaxf_anitab1
+	DD JXHEADSM3-jaxf_anitab1
+	DD JXHEADSM4-jaxf_anitab1
+	DD 0
+	DD JXHEADSM3-jaxf_anitab1
+	DD JXHEADSM2-jaxf_anitab1
+	DD JXHEADSM1-jaxf_anitab1
+	DD 0	
+
+JXHEADSM1:
+	DD JXHEADSM1_SUB-jaxf_anitab1, 0
+JXHEADSM1_SUB:
+	DD JXHEADSM1_IMG-jaxf_anitab1
+	DW 45, 114, 24, -11
+JXHEADSM2:
+	DD JXHEADSM2_SUB-jaxf_anitab1, 0
+JXHEADSM2_SUB:
+	DD JXHEADSM2_IMG-jaxf_anitab1
+	DW 72, 117, 24, -10
+JXHEADSM3:
+	DD JXHEADSM3_SUB-jaxf_anitab1, 0
+JXHEADSM3_SUB:
+	DD JXHEADSM3_IMG-jaxf_anitab1
+	DW 87, 133, 23, -6
+JXHEADSM4:
+	DD JXHEADSM4_SUB-jaxf_anitab1, 0
+JXHEADSM4_SUB:
+	DD JXHEADSM4_IMG-jaxf_anitab1
+	DW 94, 142, 21, -7
+	DD 0 
+	

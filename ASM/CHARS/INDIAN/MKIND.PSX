@@ -1,0 +1,2724 @@
+ind_anitab1:
+	DD a_stance-ind_anitab1
+	DD a_walkf-ind_anitab1
+	DD a_walkb-ind_anitab1
+	DD a_turn-ind_anitab1
+	DD a_duck-ind_anitab1
+	DD a_duck_turn-ind_anitab1
+	DD a_duck_block-ind_anitab1
+	DD a_duck_hit-ind_anitab1
+	DD a_duck_punch-ind_anitab1
+	DD a_duck_kick_hi-ind_anitab1
+	DD a_duck_kick_lo-ind_anitab1
+	DD a_uppercut-ind_anitab1
+	DD a_block-ind_anitab1
+	DD a_victory-ind_anitab1
+	DD a_hipunch-ind_anitab1
+	DD a_lopunch-ind_anitab1
+	DD a_elbow-ind_anitab1
+	DD a_hikick-ind_anitab1
+	DD a_lokick-ind_anitab1
+	DD a_knee-ind_anitab1
+	DD a_sweep_kick-ind_anitab1
+	DD a_roundhouse-ind_anitab1
+	DD a_jump-ind_anitab1
+	DD a_jump_kick-ind_anitab1
+	DD a_flip_punch-ind_anitab1
+	DD a_flip_kick-ind_anitab1
+	DD a_fflip-ind_anitab1
+	DD a_bflip-ind_anitab1
+	DD a_hit_hi-ind_anitab1
+	DD a_hit_lo-ind_anitab1
+	DD a_knockdown-ind_anitab1
+	DD a_sweep_fall-ind_anitab1
+	DD a_stumble-ind_anitab1
+	DD a_getup-ind_anitab1
+	DD a_sweepup-ind_anitab1
+	DD a_throw-ind_anitab1
+	DD a_zap-ind_anitab1
+	DD a_dizzy-ind_anitab1
+	DD a_fb_kano-ind_anitab1
+	DD a_fb_sonya-ind_anitab1
+	DD a_fb_jax-ind_anitab1
+	DD a_fb_ind-ind_anitab1
+	DD a_fb_sz-ind_anitab1
+	DD a_fb_swat-ind_anitab1
+	DD a_fb_lia-ind_anitab1
+	DD a_fb_robo-ind_anitab1
+	DD a_fb_robo2-ind_anitab1
+	DD a_fb_lao-ind_anitab1
+	DD a_fb_tusk-ind_anitab1
+	DD a_fb_sg-ind_anitab1
+	DD a_fb_st-ind_anitab1
+	DD a_fb_lk-ind_anitab1
+	DD a_fb_smoke-ind_anitab1
+	DD a_afb_kano-ind_anitab1
+	DD a_legged-ind_anitab1
+	DD a_projectile-ind_anitab1
+	DD a_shook-ind_anitab1
+	DD a_afb_robo2-ind_anitab1
+	DD a_zoomed-ind_anitab1
+	DD 0
+	DD 0
+	DD a_back_broke-ind_anitab1
+	DD a_run-ind_anitab1
+	DD a_thudd-ind_anitab1
+	DD a_scared-ind_anitab1
+ind_anitab2:
+	DD 0
+	DD a_axe_chop-ind_anitab1
+	DD a_axe_up-ind_anitab1
+	DD a_reflect-ind_anitab1
+	DD a_indy_charge-ind_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD a_dummy-ind_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_stance:
+	DD INSTANCE1-ind_anitab1
+	DD INSTANCE2-ind_anitab1
+	DD INSTANCE3-ind_anitab1
+	DD INSTANCE4-ind_anitab1
+	DD INSTANCE5-ind_anitab1
+	DD INSTANCE6-ind_anitab1
+	DD INSTANCE7-ind_anitab1
+	DD INSTANCE8-ind_anitab1
+	DD INSTANCE9-ind_anitab1
+	DD ani_jump
+	DD a_stance-ind_anitab1
+a_walkf:
+	DD INWALK1-ind_anitab1
+	DD INWALK2-ind_anitab1
+	DD INWALK3-ind_anitab1
+	DD INWALK4-ind_anitab1
+	DD INWALK5-ind_anitab1
+	DD INWALK6-ind_anitab1
+	DD INWALK7-ind_anitab1
+	DD INWALK8-ind_anitab1
+	DD INWALK9-ind_anitab1
+	DD ani_jump
+	DD a_walkf-ind_anitab1
+a_walkb:
+	DD INWALK9-ind_anitab1
+	DD INWALK8-ind_anitab1
+	DD INWALK7-ind_anitab1
+	DD INWALK6-ind_anitab1
+	DD INWALK5-ind_anitab1
+	DD INWALK4-ind_anitab1
+	DD INWALK3-ind_anitab1
+	DD INWALK2-ind_anitab1
+	DD INWALK1-ind_anitab1
+	DD ani_jump
+	DD a_walkb-ind_anitab1
+a_turn:
+	DD INTURN1-ind_anitab1
+	DD INTURN2-ind_anitab1
+	DD ani_flip
+	DD INTURN1-ind_anitab1
+	DD 0
+a_duck_turn:
+	DD INDUCKTURN1-ind_anitab1
+	DD INDUCKTURN2-ind_anitab1
+	DD ani_flip
+	DD INDUCKTURN2-ind_anitab1
+	DD INDUCKTURN1-ind_anitab1
+	DD INDUCK3-ind_anitab1
+	DD 0
+a_duck:
+	DD INDUCK1-ind_anitab1
+	DD INDUCK2-ind_anitab1
+	DD INDUCK3-ind_anitab1
+	DD 0
+a_duck_block:
+	DD INDUCKBLOCK1-ind_anitab1
+	DD INDUCKBLOCK2-ind_anitab1
+	DD INDUCKBLOCK3-ind_anitab1
+	DD 0
+a_duck_punch:
+	DD INDUCKPUNCH1-ind_anitab1
+	DD INDUCKPUNCH2-ind_anitab1
+	DD INDUCKPUNCH3-ind_anitab1
+	DD 0
+	DD INDUCKPUNCH2-ind_anitab1
+	DD INDUCKPUNCH1-ind_anitab1
+	DD INDUCK3-ind_anitab1
+	DD 0
+a_duck_hit:
+	DD INDUCKHIT2-ind_anitab1
+	DD INDUCKHIT3-ind_anitab1
+	DD INDUCKHIT2-ind_anitab1
+	DD INDUCKHIT1-ind_anitab1
+	DD 0
+a_duck_kick_hi:
+	DD INDUCKHIKICK1-ind_anitab1
+	DD INDUCKHIKICK2-ind_anitab1
+	DD INDUCKHIKICK3-ind_anitab1
+	DD INDUCKHIKICK4-ind_anitab1
+	DD 0
+	DD INDUCKHIKICK3-ind_anitab1
+	DD INDUCKHIKICK2-ind_anitab1
+	DD INDUCKHIKICK1-ind_anitab1
+	DD INDUCK3-ind_anitab1
+	DD 0
+a_duck_kick_lo:
+	DD INDUCKLOKICK1-ind_anitab1
+	DD INDUCKLOKICK2-ind_anitab1
+	DD INDUCKLOKICK3-ind_anitab1
+	DD INDUCKLOKICK4-ind_anitab1
+	DD 0
+	DD INDUCKLOKICK3-ind_anitab1
+	DD INDUCKLOKICK2-ind_anitab1
+	DD INDUCKLOKICK1-ind_anitab1
+	DD INDUCK3-ind_anitab1
+	DD 0
+a_uppercut:
+	DD INUPPERCUT2-ind_anitab1
+	DD INUPPERCUT3-ind_anitab1
+	DD INUPPERCUT4-ind_anitab1
+	DD INUPPERCUT5-ind_anitab1
+	DD ani_nosleep
+	DD INUPPERCUT7-ind_anitab1
+	DD 0
+	DD INHIPUNCH1-ind_anitab1
+	DD 0
+a_block:
+	DD INHIBLOCK1-ind_anitab1
+	DD INHIBLOCK2-ind_anitab1
+	DD INHIBLOCK3-ind_anitab1
+	DD 0
+a_elbow:
+	DD INCHOPS1-ind_anitab1
+	DD INCHOPS2-ind_anitab1
+	DD ani_nosleep
+	DD INCHOPS3-ind_anitab1
+	DD 0
+j_unelb:
+	DD INCHOPS2-ind_anitab1
+	DD INCHOPS1-ind_anitab1
+	DD 0
+	DD INCHOPS4-ind_anitab1
+	DD INCHOPS5-ind_anitab1
+	DD 0
+	DD INCHOPS6-ind_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD INCHOPS7-ind_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD INCHOPS8-ind_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD INCHOPS9-ind_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD 0
+	DD ani_jump
+	DD j_unelb-ind_anitab1
+	DD 0
+	DD ani_jump
+	DD a_axe_up-ind_anitab1
+	DD 0
+a_hipunch:
+	DD INHIPUNCH1-ind_anitab1
+	DD INHIPUNCH2-ind_anitab1
+	DD INHIPUNCH3-ind_anitab1
+	DD 0
+	DD INHIPUNCH4-ind_anitab1
+	DD INHIPUNCH5-ind_anitab1
+	DD INHIPUNCH6-ind_anitab1
+	DD 0
+	DD INHIPUNCH5-ind_anitab1
+	DD INHIPUNCH4-ind_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-ind_anitab1
+	DD 0
+	DD INHIPUNCH2-ind_anitab1
+	DD INHIPUNCH1-ind_anitab1
+	DD 0
+	DD INHIPUNCH7-ind_anitab1
+	DD 0
+	DD INHIPUNCH4-ind_anitab1
+	DD INLOPUNCH5-ind_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*6)/8)-ind_anitab1
+	DD 0
+	DD INHIPUNCH5-ind_anitab1
+	DD INLOPUNCH2-ind_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-ind_anitab1
+	DD 0
+a_lopunch:
+	DD INLOPUNCH1-ind_anitab1
+	DD INLOPUNCH2-ind_anitab1
+	DD INLOPUNCH3-ind_anitab1
+	DD 0
+	DD INLOPUNCH4-ind_anitab1
+	DD INLOPUNCH5-ind_anitab1
+	DD INLOPUNCH6-ind_anitab1
+	DD 0
+	DD INLOPUNCH5-ind_anitab1
+	DD INLOPUNCH4-ind_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-ind_anitab1
+	DD 0
+	DD INLOPUNCH2-ind_anitab1
+	DD INLOPUNCH1-ind_anitab1
+	DD 0
+	DD INHIPUNCH7-ind_anitab1
+	DD 0
+	DD INLOPUNCH4-ind_anitab1
+	DD INLOPUNCH5-ind_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*6)/8)-ind_anitab1
+	DD 0
+	DD INLOPUNCH4-ind_anitab1
+	DD INHIPUNCH5-ind_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-ind_anitab1
+a_jump:
+	DD INJUMP1-ind_anitab1
+	DD INJUMP2-ind_anitab1
+	DD INJUMP3-ind_anitab1
+	DD 0
+a_jump_kick:
+	DD INJUMPKICK1-ind_anitab1
+	DD INJUMPKICK2-ind_anitab1
+	DD INJUMPKICK3-ind_anitab1
+	DD 0
+	DD INJUMPKICK2-ind_anitab1
+	DD INJUMPKICK1-ind_anitab1
+	DD 0
+a_flip_kick:
+	DD INFLIPKICK1-ind_anitab1
+	DD INFLIPKICK2-ind_anitab1
+	DD INFLIPKICK3-ind_anitab1
+	DD 0
+	DD INFLIPKICK2-ind_anitab1
+	DD INFLIPKICK1-ind_anitab1
+	DD 0
+a_flip_punch:
+	DD INFLIPUNCH1-ind_anitab1
+	DD INFLIPUNCH2-ind_anitab1
+	DD INFLIPUNCH3-ind_anitab1
+	DD 0
+	DD INFLIPUNCH2-ind_anitab1
+	DD INFLIPUNCH1-ind_anitab1
+	DD 0
+a_fflip:
+	DD INJUMPFLIP1-ind_anitab1
+	DD INJUMPFLIP2-ind_anitab1
+	DD INJUMPFLIP3-ind_anitab1
+	DD INJUMPFLIP4-ind_anitab1
+	DD INJUMPFLIP5-ind_anitab1
+	DD INJUMPFLIP6-ind_anitab1
+	DD INJUMPFLIP7-ind_anitab1
+	DD INJUMPFLIP8-ind_anitab1
+	DD ani_jump
+	DD a_fflip+(32/8)-ind_anitab1
+a_bflip:
+	DD INJUMPFLIP1-ind_anitab1
+	DD INJUMPFLIP8-ind_anitab1
+	DD INJUMPFLIP7-ind_anitab1
+	DD INJUMPFLIP6-ind_anitab1
+	DD INJUMPFLIP5-ind_anitab1
+	DD INJUMPFLIP4-ind_anitab1
+	DD INJUMPFLIP3-ind_anitab1
+	DD INJUMPFLIP2-ind_anitab1
+	DD ani_jump
+	DD a_bflip+(32/8)-ind_anitab1
+a_stumble:
+	DD INSTUMBLE1-ind_anitab1
+	DD INSTUMBLE2-ind_anitab1
+	DD INSTUMBLE3-ind_anitab1
+	DD INSTUMBLE4-ind_anitab1
+	DD INSTUMBLE5-ind_anitab1
+	DD INSTUMBLE6-ind_anitab1
+	DD INSTUMBLE7-ind_anitab1
+	DD 0
+j_stumble:
+	DD INSTUMBLE1-ind_anitab1
+	DD INSTUMBLE2-ind_anitab1
+	DD INSTUMBLE3-ind_anitab1
+	DD INSTUMBLE4-ind_anitab1
+	DD INSTUMBLE5-ind_anitab1
+	DD INSTUMBLE6-ind_anitab1
+	DD INSTUMBLE7-ind_anitab1
+	DD ani_jump
+	DD j_stumble-ind_anitab1
+a_dizzy:
+	DD INSTUNNED1-ind_anitab1
+	DD INSTUNNED2-ind_anitab1
+	DD INSTUNNED3-ind_anitab1
+	DD INSTUNNED4-ind_anitab1
+	DD INSTUNNED5-ind_anitab1
+	DD INSTUNNED6-ind_anitab1
+	DD INSTUNNED7-ind_anitab1
+	DD INSTUNNED8-ind_anitab1
+	DD INSTUNNED9-ind_anitab1
+	DD ani_jump
+	DD a_dizzy-ind_anitab1
+a_hit_hi:
+	DD INHIHIT2-ind_anitab1
+	DD INHIHIT3-ind_anitab1
+	DD INHIHIT2-ind_anitab1
+	DD INHIHIT1-ind_anitab1
+	DD 0
+a_hit_lo:
+	DD INLOHIT2-ind_anitab1
+	DD INLOHIT3-ind_anitab1
+	DD INLOHIT2-ind_anitab1
+	DD INLOHIT1-ind_anitab1
+	DD 0
+a_knockdown:
+	DD INKNOCKDOWN1-ind_anitab1
+	DD INKNOCKDOWN2-ind_anitab1
+	DD INKNOCKDOWN3-ind_anitab1
+	DD INKNOCKDOWN4-ind_anitab1
+	DD INKNOCKDOWN5-ind_anitab1
+	DD 0
+	DD INKNOCKDOWN6-ind_anitab1
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_getup:
+	DD INGETUP1-ind_anitab1
+	DD INGETUP2-ind_anitab1
+	DD INGETUP3-ind_anitab1
+	DD INGETUP4-ind_anitab1
+	DD INGETUP5-ind_anitab1
+	DD INGETUP6-ind_anitab1
+	DD INGETUP7-ind_anitab1
+	DD 0
+a_throw:
+	DD INFLIP1-ind_anitab1
+	DD INFLIP2-ind_anitab1
+	DD 0
+	DD INFLIP3-ind_anitab1
+	DD INFLIP4-ind_anitab1
+	DD INFLIP5-ind_anitab1
+	DD INFLIP6-ind_anitab1
+	DD INFLIP7-ind_anitab1
+	DD INFLIP8-ind_anitab1
+	DD 0
+	DD INFLIP9-ind_anitab1
+	DD 0
+a_afb_kano:
+	DD ani_offset_xy
+	DW -040H
+	DW -01bH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW -00bH
+	DD INKNOCKDOWN4-ind_anitab1
+	DD ani_offset_xy
+	DW -059H
+	DW 022H
+	DD INKNOCKDOWN5-ind_anitab1
+	DD 0
+	DD INKNOCKDOWN5-ind_anitab1
+	DD INKNOCKDOWN6-ind_anitab1
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_fb_smoke:
+a_afb_robo2:
+	DD ani_offset_xy
+	DW -01eH
+	DW -038H
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW 001H
+	DW -048H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 030H
+	DW -038H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 049H
+	DW -01eH
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 058H
+	DW -015H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD ani_offset_xy
+	DW 062H
+	DW 01aH
+	DD INKNOCKDOWN6-ind_anitab1
+	DD 0
+a_fb_kano:
+	DD ani_offset_xy
+	DW -03fH
+	DW -01bH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -028H
+	DW -02eH
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW 035H
+	DW -037H
+	DD INFLIPPED3-ind_anitab1
+	DD 0
+	DD INFLIPPED4-ind_anitab1
+	DD INFLIPPED5-ind_anitab1
+	DD INKNOCKDOWN5-ind_anitab1
+	DD INKNOCKDOWN6-ind_anitab1
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_fb_sonya:
+	DD ani_offset_xy
+	DW -039H
+	DW -005H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -01fH
+	DW 001H
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW 00eH
+	DW -009H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 04fH
+	DW -015H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 08cH
+	DW -021H
+	DD INFLIPPED4-ind_anitab1
+	DD 0
+	DD INFLIPPED5-ind_anitab1
+	DD INKNOCKDOWN5-ind_anitab1
+	DD INKNOCKDOWN6-ind_anitab1
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_fb_jax:
+	DD ani_offset_xy
+	DW -043H
+	DW -01fH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -023H
+	DW -03eH
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW 010H
+	DW -04bH
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 042H
+	DW -01dH
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 05cH
+	DW 005H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD ani_offset_xy
+	DW 049H
+	DW 00aH
+	DD INKNOCKDOWN6-ind_anitab1
+	DD 0
+a_fb_ind:
+	DD ani_offset_xy
+	DW -05cH
+	DW -018H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -048H
+	DW -03eH
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW -013H
+	DW -058H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 02dH
+	DW -03eH
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 04eH
+	DW -00bH
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW 058H
+	DW -002H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD 0
+a_fb_sz:
+	DD ani_offset_xy
+	DW -049H
+	DW -032H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW 051H
+	DW -01fH
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW 040H
+	DW 005H
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW -004H
+	DW -008H
+	DD INKNOCKDOWN5-ind_anitab1
+	DD ani_offset_xy
+	DW -047H
+	DW -033H
+	DD INKNOCKDOWN5-ind_anitab1
+	DD ani_offset_xy
+	DW -072H
+	DW -060H
+	DD INKNOCKDOWN5-ind_anitab1
+	DD 0
+a_fb_swat:
+	DD ani_offset_xy
+	DW -050H
+	DW -00dH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW -041H
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW 023H
+	DW -050H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 056H
+	DW -013H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 04aH
+	DW 006H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD 0
+a_fb_lia:
+	DD ani_offset_xy
+	DW -064H
+	DW 000H
+	DD INSTUMBLE1-ind_anitab1
+	DD ani_offset_xy
+	DW -073H
+	DW 003H
+	DD INSTUMBLE1-ind_anitab1
+	DD ani_offset_xy
+	DW -075H
+	DW -01eH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -057H
+	DW -03dH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -023H
+	DW -046H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW 01eH
+	DW -04eH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW 0a8H
+	DW 012H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 08dH
+	DW 000H
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_fb_robo:
+	DD ani_offset_xy
+	DW -052H
+	DW -00bH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -04fH
+	DW -032H
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW -038H
+	DW -048H
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW -00aH
+	DW -06cH
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 038H
+	DW -062H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 05cH
+	DW -050H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 07bH
+	DW -013H
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW 05aH
+	DW -011H
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_fb_robo2:
+	DD ani_offset_xy
+	DW -030H
+	DW -007H
+	DD INSTUMBLE1-ind_anitab1
+	DD ani_offset_xy
+	DW -02cH
+	DW -01dH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -00eH
+	DW -02aH
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW 016H
+	DW -021H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 025H
+	DW 003H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 018H
+	DW 016H
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW -01eH
+	DW -011H
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_fb_lao:
+	DD ani_offset_xy
+	DW -01dH
+	DW 01aH
+	DD INSTUMBLE1-ind_anitab1
+	DD ani_offset_xy
+	DW -006H
+	DW 02aH
+	DD INSTUMBLE1-ind_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -029H
+	DW 022H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -04aH
+	DW -00fH
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW -032H
+	DW -04fH
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 010H
+	DW -067H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 053H
+	DW -06aH
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW 05eH
+	DW -051H
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW 077H
+	DW 002H
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW 077H
+	DW 052H
+	DD INFLIPPED5-ind_anitab1
+	DD 0
+a_fb_tusk:
+	DD ani_offset_xy
+	DW -072H
+	DW 000H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -05dH
+	DW -04aH
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW -01bH
+	DW -078H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 039H
+	DW -050H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 044H
+	DW -00cH
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW 00fH
+	DW 01eH
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW -031H
+	DW -014H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD ani_offset_xy
+	DW -068H
+	DW 001H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -04eH
+	DW -054H
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW 01bH
+	DW -066H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 065H
+	DW -005H
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW 064H
+	DW 009H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD 0
+a_fb_sg:
+	DD ani_offset_xy
+	DW -03dH
+	DW -030H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -008H
+	DW -052H
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW -001H
+	DW -05eH
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 018H
+	DW -04fH
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 01aH
+	DW -035H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -026H
+	DW -009H
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_fb_st:
+	DD ani_offset_xy
+	DW -04cH
+	DW 000H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW 007H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -02aH
+	DW 001H
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW -007H
+	DW 003H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 00eH
+	DW 025H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW -00fH
+	DW -004H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD ani_offset_xy
+	DW -023H
+	DW -004H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD ani_offset_xy
+	DW -038H
+	DW -004H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD ani_offset_xy
+	DW -060H
+	DW 019H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -067H
+	DW -00bH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW -04cH
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW 02bH
+	DW -041H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 04cH
+	DW -018H
+	DD INFLIPPED5-ind_anitab1
+	DD ani_offset_xy
+	DW 05bH
+	DW -008H
+	DD INKNOCKDOWN6-ind_anitab1
+	DD 0
+a_fb_lk:
+	DD ani_offset_xy
+	DW -044H
+	DW -001H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -03bH
+	DW 007H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -013H
+	DW 002H
+	DD INFLIPPED2-ind_anitab1
+	DD ani_offset_xy
+	DW 010H
+	DW 000H
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 037H
+	DW 009H
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 088H
+	DW -01fH
+	DD INFLIPPED4-ind_anitab1
+	DD 0
+	DD INFLIPPED5-ind_anitab1
+	DD INKNOCKDOWN5-ind_anitab1
+	DD INKNOCKDOWN6-ind_anitab1
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_legged:
+	DD ani_offset_xy
+	DW -05dH
+	DW -007H
+	DD INKNOCKDOWN1-ind_anitab1
+	DD ani_offset_xy
+	DW -051H
+	DW -030H
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -00cH
+	DW -04aH
+	DD INFLIPPED3-ind_anitab1
+	DD ani_offset_xy
+	DW 037H
+	DW -02dH
+	DD INFLIPPED4-ind_anitab1
+	DD ani_offset_xy
+	DW 05eH
+	DW 000H
+	DD INFLIPPED5-ind_anitab1
+	DD 0
+a_zoomed:
+	DD ani_offset_xy
+	DW 055H
+	DW -01cH
+	DD INKNOCKDOWN3-ind_anitab1
+	DD ani_offset_xy
+	DW 057H
+	DW 001H
+	DD INKNOCKDOWN4-ind_anitab1
+	DD ani_offset_xy
+	DW 027H
+	DW 009H
+	DD INKNOCKDOWN5-ind_anitab1
+	DD ani_offset_xy
+	DW -030H
+	DW 012H
+	DD INKNOCKDOWN5-ind_anitab1
+	DD ani_offset_xy
+	DW -08fH
+	DW -00aH
+	DD INFLIPPED1-ind_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW -055H
+	DD INFLIPPED3-ind_anitab1
+	DD 0
+	DD INFLIPPED3-ind_anitab1
+	DD INFLIPPED4-ind_anitab1
+	DD INFLIPPED5-ind_anitab1
+	DD INKNOCKDOWN5-ind_anitab1
+	DD INKNOCKDOWN6-ind_anitab1
+	DD INKNOCKDOWN7-ind_anitab1
+	DD 0
+a_shook:
+	DD ani_offset_xy
+	DW -04aH
+	DW -00dH
+	DD INSTUMBLE2-ind_anitab1
+	DD ani_offset_xy
+	DW -031H
+	DW -026H
+	DD INSTUMBLE2-ind_anitab1
+	DD ani_offset_xy
+	DW -01bH
+	DW -024H
+	DD INSTUMBLE2-ind_anitab1
+	DD 0
+	DD ani_offset_xy
+	DW -01dH
+	DW -026H
+	DD INSTUMBLE2-ind_anitab1
+	DD ani_offset_xy
+	DW -02dH
+	DW -030H
+	DD INSTUMBLE2-ind_anitab1
+	DD ani_offset_xy
+	DW -03dH
+	DW -034H
+	DD INSTUMBLE2-ind_anitab1
+	DD ani_offset_xy
+	DW -02dH
+	DW -030H
+	DD INSTUMBLE2-ind_anitab1
+	DD 0
+a_sweepup:
+	DD INSWEEPUP2-ind_anitab1
+	DD INSWEEPUP3-ind_anitab1
+	DD INSWEEPUP4-ind_anitab1
+	DD INSWEEPUP5-ind_anitab1
+	DD INSWEEPUP6-ind_anitab1
+	DD 0
+a_sweep_fall:
+	DD INSWEEPFALL1-ind_anitab1
+	DD INSWEEPFALL2-ind_anitab1
+	DD INSWEEPFALL3-ind_anitab1
+	DD INSWEEPFALL4-ind_anitab1
+	DD 0
+	DD INSWEEPFALL5-ind_anitab1
+	DD INSWEEPFALL6-ind_anitab1
+	DD INSWEEPUP1-ind_anitab1
+	DD 0
+a_hikick:
+	DD INLOKICK1-ind_anitab1
+	DD INLOKICK2-ind_anitab1
+	DD INLOKICK3-ind_anitab1
+	DD INLOKICK4-ind_anitab1
+	DD INLOKICK5-ind_anitab1
+	DD INHIKICK1-ind_anitab1
+	DD 0
+	DD INLOKICK5-ind_anitab1
+	DD INLOKICK4-ind_anitab1
+	DD INLOKICK3-ind_anitab1
+	DD INLOKICK2-ind_anitab1
+	DD INLOKICK1-ind_anitab1
+	DD 0
+a_lokick:
+	DD INLOKICK1-ind_anitab1
+	DD INLOKICK2-ind_anitab1
+	DD INLOKICK3-ind_anitab1
+	DD INLOKICK4-ind_anitab1
+	DD INLOKICK5-ind_anitab1
+	DD INLOKICK6-ind_anitab1
+	DD 0
+	DD INLOKICK5-ind_anitab1
+	DD INLOKICK4-ind_anitab1
+	DD INLOKICK3-ind_anitab1
+	DD INLOKICK2-ind_anitab1
+	DD INLOKICK1-ind_anitab1
+	DD 0
+a_knee:
+	DD INKNEEBREAK1-ind_anitab1
+	DD INKNEEBREAK2-ind_anitab1
+	DD INKNEEBREAK3-ind_anitab1
+	DD INKNEEBREAK4-ind_anitab1
+	DD 0
+	DD INKNEEBREAK3-ind_anitab1
+	DD INKNEEBREAK2-ind_anitab1
+	DD INKNEEBREAK1-ind_anitab1
+	DD 0
+a_sweep_kick:
+	DD INSWEEPKICK1-ind_anitab1
+	DD INSWEEPKICK2-ind_anitab1
+	DD INSWEEPKICK3-ind_anitab1
+	DD ani_calla
+	DD sweep_sounds
+	DD INSWEEPKICK4-ind_anitab1
+	DD INSWEEPKICK5-ind_anitab1
+	DD 0
+	DD INSWEEPKICK6-ind_anitab1
+	DD INSWEEPKICK7-ind_anitab1
+	DD INSWEEPKICK8-ind_anitab1
+	DD 0
+a_roundhouse:
+	DD INROUNDKICK1-ind_anitab1
+	DD INROUNDKICK2-ind_anitab1
+	DD INROUNDKICK3-ind_anitab1
+	DD INROUNDKICK4-ind_anitab1
+	DD ani_nosleep
+	DD INROUNDKICK5-ind_anitab1
+	DD 0
+	DD INROUNDKICK6-ind_anitab1
+	DD INROUNDKICK7-ind_anitab1
+	DD INROUNDKICK8-ind_anitab1
+	DD 0
+a_victory:
+	DD INVICTORY1-ind_anitab1
+	DD INVICTORY2-ind_anitab1
+	DD INVICTORY3-ind_anitab1
+	DD INVICTORY4-ind_anitab1
+	DD INVICTORY5-ind_anitab1
+	DD INVICTORY6-ind_anitab1
+	DD INVICTORY7-ind_anitab1
+	DD 0
+	DD ani_sladd
+	DD FLAME1-ind_anitab1
+	DD INVICTORY7-ind_anitab1
+	DD ani_slani
+	DD FLAME2-ind_anitab1
+	DD INVICTORY7-ind_anitab1
+j_flame:
+	DD ani_slani
+	DD FLAME3-ind_anitab1
+	DD INVICTORY7-ind_anitab1
+	DD ani_slani
+	DD FLAME4-ind_anitab1
+	DD INVICTORY7-ind_anitab1
+	DD ani_slani
+	DD FLAME5-ind_anitab1
+	DD INVICTORY7-ind_anitab1
+	DD ani_slani
+	DD FLAME6-ind_anitab1
+	DD INVICTORY7-ind_anitab1
+	DD ani_jump
+	DD j_flame-ind_anitab1
+a_run:
+	DD ININTORUN1-ind_anitab1
+	DD ININTORUN2-ind_anitab1
+	DD ININTORUN3-ind_anitab1
+j_run:
+	DD INRUN1-ind_anitab1
+	DD INRUN2-ind_anitab1
+	DD INRUN3-ind_anitab1
+	DD INRUN4-ind_anitab1
+	DD ani_calla
+	DD rsnd_footstep
+	DD INRUN5-ind_anitab1
+	DD INRUN6-ind_anitab1
+	DD INRUN7-ind_anitab1
+	DD INRUN8-ind_anitab1
+	DD INRUN9-ind_anitab1
+	DD ani_calla
+	DD rsnd_footstep
+	DD INRUN10-ind_anitab1
+	DD INRUN11-ind_anitab1
+	DD INRUN12-ind_anitab1
+	DD INRUN13-ind_anitab1
+	DD ani_jump
+	DD j_run-ind_anitab1
+	DD 0
+a_zap:
+	DD ani_sladd
+	DD INBOWNARROW1-ind_anitab1
+	DD INARROW1-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW2-ind_anitab1
+	DD INARROW2-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW3-ind_anitab1
+	DD INARROW3-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW4-ind_anitab1
+	DD INARROW4-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW5-ind_anitab1
+	DD INARROW5-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW6-ind_anitab1
+	DD INARROW6-ind_anitab1
+	DD 0
+	DD ani_slani
+	DD INBOWNARROW7-ind_anitab1
+	DD INARROW7-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW8-ind_anitab1
+	DD INARROW7-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW9-ind_anitab1
+	DD INARROW7-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW10-ind_anitab1
+	DD INARROW7-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW11-ind_anitab1
+	DD INARROW7-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW12-ind_anitab1
+	DD INARROW7-ind_anitab1
+	DD ani_slani
+	DD INBOWNARROW13-ind_anitab1
+	DD INARROW7-ind_anitab1
+	DD ani_calla
+	DD delete_slave
+	DD INARROW7-ind_anitab1
+	DD INARROW4-ind_anitab1
+	DD INARROW3-ind_anitab1
+	DD INARROW2-ind_anitab1
+	DD INARROW1-ind_anitab1
+	DD 0
+j_arrow:
+	DD INBOWNARROW14-ind_anitab1
+	DD INBOWNARROW15-ind_anitab1
+	DD ani_jump
+	DD j_arrow-ind_anitab1
+	DD 0
+	DD INBOWNARROW15-ind_anitab1
+	DD INBOWNARROW16-ind_anitab1
+	DD INBOWNARROW17-ind_anitab1
+	DD INBOWNARROW18-ind_anitab1
+	DD INBOWNARROW19-ind_anitab1
+	DD INBOWNARROW20-ind_anitab1
+	DD 0
+a_projectile:
+	DD INBOWNARROW1-ind_anitab1
+a_axe_chop:
+	DD INAXECHOP1-ind_anitab1
+	DD INAXECHOP2-ind_anitab1
+	DD INAXECHOP3-ind_anitab1
+	DD INAXECHOP4-ind_anitab1
+	DD INAXECHOP5-ind_anitab1
+	DD INAXECHOP6-ind_anitab1
+	DD INAXECHOP7-ind_anitab1
+	DD 0
+a_axe_up:
+	DD ani_sladd
+	DD UPRCUTAXE1-ind_anitab1
+	DD INUPSWING1-ind_anitab1
+	DD ani_slani
+	DD UPRCUTAXE2-ind_anitab1
+	DD INUPSWING2-ind_anitab1
+	DD ani_slani
+	DD UPRCUTAXE3-ind_anitab1
+	DD INUPSWING3-ind_anitab1
+	DD ani_slani
+	DD UPRCUTAXE4-ind_anitab1
+	DD INUPSWING4-ind_anitab1
+	DD 0
+	DD ani_slani
+	DD UPRCUTAXE5-ind_anitab1
+	DD INUPSWING5-ind_anitab1
+	DD ani_slani
+	DD UPRCUTAXE6-ind_anitab1
+	DD INUPSWING6-ind_anitab1
+	DD ani_slani
+	DD UPRCUTAXE7-ind_anitab1
+	DD INUPSWING6-ind_anitab1
+	DD 0
+	DD INUPSWING6-ind_anitab1
+	DD INUPSWING5-ind_anitab1
+	DD INUPSWING4-ind_anitab1
+	DD INUPSWING3-ind_anitab1
+	DD INUPSWING2-ind_anitab1
+	DD 0
+a_reflect:
+	DD INREFLECT1-ind_anitab1
+	DD ani_sladd
+	DD IREFGLOW1-ind_anitab1
+	DD INREFLECT2-ind_anitab1
+	DD ani_slani
+	DD IREFGLOW2-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD ani_slani
+	DD IREFGLOW3-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD ani_slani
+	DD IREFGLOW4-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD ani_slani
+	DD IREFGLOW5-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD 0
+	DD ani_slani
+	DD IREFGLOW4-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD ani_slani
+	DD IREFGLOW3-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD ani_slani
+	DD IREFGLOW2-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD ani_slani
+	DD IREFGLOW3-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD ani_slani
+	DD IREFGLOW4-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD ani_slani
+	DD IREFGLOW5-ind_anitab1
+	DD INREFLECT3-ind_anitab1
+	DD 0
+	DD INREFLECT2-ind_anitab1
+	DD INREFLECT1-ind_anitab1
+	DD 0
+a_indy_charge:
+	DD INCHARGE1-ind_anitab1
+	DD INCHARGE2-ind_anitab1
+	DD INCHARGE3-ind_anitab1
+	DD 0
+	DD INCHARGE2-ind_anitab1
+	DD INCHARGE1-ind_anitab1
+	DD 0
+a_scared:
+	DD INSCARED2-ind_anitab1
+	DD 0
+a_thudd:
+	DD INTHUD1-ind_anitab1
+	DD INTHUD2-ind_anitab1
+	DD INTHUD3-ind_anitab1
+	DD INTHUD4-ind_anitab1
+	DD INTHUD5-ind_anitab1
+	DD INTHUD6-ind_anitab1
+	DD INTHUD7-ind_anitab1
+	DD 0
+INSTANCE1:
+	DD INSTANCE1_SUB-ind_anitab1, 0
+INSTANCE1_SUB:
+	DD INSTANCE1_IMG-ind_anitab1
+	DW 52, 106, 21, -10
+	DD   _INBLU_P
+INSTANCE2:
+	DD INSTANCE2_SUB-ind_anitab1, 0
+INSTANCE2_SUB:
+	DD INSTANCE2_IMG-ind_anitab1
+	DW 52, 106, 20, -10
+INSTANCE3:
+	DD INSTANCE3_SUB-ind_anitab1, 0
+INSTANCE3_SUB:
+	DD INSTANCE3_IMG-ind_anitab1
+	DW 53, 106, 21, -10
+INSTANCE4:
+	DD INSTANCE4_SUB-ind_anitab1, 0
+INSTANCE4_SUB:
+	DD INSTANCE4_IMG-ind_anitab1
+	DW 53, 106, 22, -10
+INSTANCE5:
+	DD INSTANCE5_SUB-ind_anitab1, 0
+INSTANCE5_SUB:
+	DD INSTANCE5_IMG-ind_anitab1
+	DW 52, 106, 23, -10
+INSTANCE6:
+	DD INSTANCE6_SUB-ind_anitab1, 0
+INSTANCE6_SUB:
+	DD INSTANCE6_IMG-ind_anitab1
+	DW 53, 107, 25, -9
+INSTANCE7:
+	DD INSTANCE7_SUB-ind_anitab1, 0
+INSTANCE7_SUB:
+	DD INSTANCE7_IMG-ind_anitab1
+	DW 53, 107, 25, -9
+INSTANCE8:
+	DD INSTANCE8_SUB-ind_anitab1, 0
+INSTANCE8_SUB:
+	DD INSTANCE8_IMG-ind_anitab1
+	DW 51, 107, 23, -9
+INSTANCE9:
+	DD INSTANCE9_SUB-ind_anitab1, 0
+INSTANCE9_SUB:
+	DD INSTANCE9_IMG-ind_anitab1
+	DW 51, 107, 22, -9
+INWALK1:
+	DD INWALK1_SUB-ind_anitab1, 0
+INWALK1_SUB:
+	DD INWALK1_IMG-ind_anitab1
+	DW 54, 111, 21, -6
+INWALK2:
+	DD INWALK2_SUB-ind_anitab1, 0
+INWALK2_SUB:
+	DD INWALK2_IMG-ind_anitab1
+	DW 54, 113, 20, -5
+INWALK3:
+	DD INWALK3_SUB-ind_anitab1, 0
+INWALK3_SUB:
+	DD INWALK3_IMG-ind_anitab1
+	DW 54, 112, 20, -4
+INWALK4:
+	DD INWALK4_SUB-ind_anitab1, 0
+INWALK4_SUB:
+	DD INWALK4_IMG-ind_anitab1
+	DW 54, 110, 20, -7
+INWALK5:
+	DD INWALK5_SUB-ind_anitab1, 0
+INWALK5_SUB:
+	DD INWALK5_IMG-ind_anitab1
+	DW 54, 107, 20, -9
+INWALK6:
+	DD INWALK6_SUB-ind_anitab1, 0
+INWALK6_SUB:
+	DD INWALK6_IMG-ind_anitab1
+	DW 54, 107, 21, -9
+INWALK7:
+	DD INWALK7_SUB-ind_anitab1, 0
+INWALK7_SUB:
+	DD INWALK7_IMG-ind_anitab1
+	DW 54, 108, 21, -8
+INWALK8:
+	DD INWALK8_SUB-ind_anitab1, 0
+INWALK8_SUB:
+	DD INWALK8_IMG-ind_anitab1
+	DW 54, 109, 21, -8
+INWALK9:
+	DD INWALK9_SUB-ind_anitab1, 0
+INWALK9_SUB:
+	DD INWALK9_IMG-ind_anitab1
+	DW 55, 109, 21, -8
+INTURN1:
+	DD INTURN1_SUB-ind_anitab1, 0
+INTURN1_SUB:
+	DD INTURN1_IMG-ind_anitab1
+	DW 48, 109, 19, -8
+INTURN2:
+	DD INTURN2_SUB-ind_anitab1, 0
+INTURN2_SUB:
+	DD INTURN2_IMG-ind_anitab1
+	DW 49, 110, 23, -8
+INDUCK1:
+	DD INDUCK1_SUB-ind_anitab1, 0
+INDUCK1_SUB:
+	DD INDUCK1_IMG-ind_anitab1
+	DW 57, 94, 23, -22
+INDUCK2:
+	DD INDUCK2_SUB-ind_anitab1, 0
+INDUCK2_SUB:
+	DD INDUCK2_IMG-ind_anitab1
+	DW 58, 73, 23, -43
+INDUCK3:
+	DD INDUCK3_SUB-ind_anitab1, 0
+INDUCK3_SUB:
+	DD INDUCK3_IMG-ind_anitab1
+	DW 58, 57, 23, -59
+INDUCKTURN1:
+	DD INDUCKTURN1_SUB-ind_anitab1, 0
+INDUCKTURN1_SUB:
+	DD INDUCKTURN1_IMG-ind_anitab1
+	DW 59, 61, 26, -54
+INDUCKTURN2:
+	DD INDUCKTURN2_SUB-ind_anitab1, 0
+INDUCKTURN2_SUB:
+	DD INDUCKTURN2_IMG-ind_anitab1
+	DW 61, 63, 30, -53
+INDUCKBLOCK1:
+	DD INDUCKBLOCK1_SUB-ind_anitab1, 0
+INDUCKBLOCK1_SUB:
+	DD INDUCKBLOCK1_IMG-ind_anitab1
+	DW 52, 65, 18, -51
+INDUCKBLOCK2:
+	DD INDUCKBLOCK2_SUB-ind_anitab1, 0
+INDUCKBLOCK2_SUB:
+	DD INDUCKBLOCK2_IMG-ind_anitab1
+	DW 46, 71, 18, -45
+INDUCKBLOCK3:
+	DD INDUCKBLOCK3_SUB-ind_anitab1, 0
+INDUCKBLOCK3_SUB:
+	DD INDUCKBLOCK3_IMG-ind_anitab1
+	DW 47, 73, 19, -43
+INDUCKHIT2:
+	DD INDUCKHIT2_SUB-ind_anitab1, 0
+INDUCKHIT2_SUB:
+	DD INDUCKHIT2_IMG-ind_anitab1
+	DW 66, 74, 30, -45
+INDUCKHIT3:
+	DD INDUCKHIT3_SUB-ind_anitab1, 0
+INDUCKHIT3_SUB:
+	DD INDUCKHIT3_IMG-ind_anitab1
+	DW 66, 72, 28, -47
+INDUCKHIT1:
+	DD INDUCKHIT1_SUB-ind_anitab1, 0
+INDUCKHIT1_SUB:
+	DD INDUCKHIT1_IMG-ind_anitab1
+	DW 66, 67, 29, -50
+INDUCKPUNCH1:
+	DD INDUCKPUNCH1_SUB-ind_anitab1, 0
+INDUCKPUNCH1_SUB:
+	DD INDUCKPUNCH1_IMG-ind_anitab1
+	DW 50, 65, 14, -53
+INDUCKPUNCH2:
+	DD INDUCKPUNCH2_SUB-ind_anitab1, 0
+INDUCKPUNCH2_SUB:
+	DD INDUCKPUNCH2_IMG-ind_anitab1
+	DW 57, 67, 13, -50
+INDUCKPUNCH3:
+	DD INDUCKPUNCH3_SUB-ind_anitab1, 0
+INDUCKPUNCH3_SUB:
+	DD INDUCKPUNCH3_IMG-ind_anitab1
+	DW 78, 70, 20, -49
+INDUCKHIKICK1:
+	DD INDUCKHIKICK1_SUB-ind_anitab1, 0
+INDUCKHIKICK1_SUB:
+	DD INDUCKHIKICK1_IMG-ind_anitab1
+	DW 42, 65, 15, -59
+INDUCKHIKICK2:
+	DD INDUCKHIKICK2_SUB-ind_anitab1, 0
+INDUCKHIKICK2_SUB:
+	DD INDUCKHIKICK2_IMG-ind_anitab1
+	DW 42, 68, 12, -56
+INDUCKHIKICK3:
+	DD INDUCKHIKICK3_SUB-ind_anitab1, 0
+INDUCKHIKICK3_SUB:
+	DD INDUCKHIKICK3_IMG-ind_anitab1
+	DW 56, 71, 12, -53
+INDUCKHIKICK4:
+	DD INDUCKHIKICK4_SUB-ind_anitab1, 0
+INDUCKHIKICK4_SUB:
+	DD INDUCKHIKICK4_IMG-ind_anitab1
+	DW 66, 81, 15, -43
+INDUCKLOKICK1:
+	DD INDUCKLOKICK1_SUB-ind_anitab1, 0
+INDUCKLOKICK1_SUB:
+	DD INDUCKLOKICK1_IMG-ind_anitab1
+	DW 44, 61, 17, -64
+INDUCKLOKICK2:
+	DD INDUCKLOKICK2_SUB-ind_anitab1, 0
+INDUCKLOKICK2_SUB:
+	DD INDUCKLOKICK2_IMG-ind_anitab1
+	DW 43, 62, 7, -63
+INDUCKLOKICK3:
+	DD INDUCKLOKICK3_SUB-ind_anitab1, 0
+INDUCKLOKICK3_SUB:
+	DD INDUCKLOKICK3_IMG-ind_anitab1
+	DW 76, 61, 7, -64
+INDUCKLOKICK4:
+	DD INDUCKLOKICK4_SUB-ind_anitab1, 0
+INDUCKLOKICK4_SUB:
+	DD INDUCKLOKICK4_IMG-ind_anitab1
+	DW 91, 59, 10, -64
+INUPPERCUT2:
+	DD INUPPERCUT2_SUB-ind_anitab1, 0
+INUPPERCUT2_SUB:
+	DD INUPPERCUT2_IMG-ind_anitab1
+	DW 44, 80, 14, -37
+INUPPERCUT3:
+	DD INUPPERCUT3_SUB-ind_anitab1, 0
+INUPPERCUT3_SUB:
+	DD INUPPERCUT3_IMG-ind_anitab1
+	DW 59, 88, 16, -30
+INUPPERCUT4:
+	DD INUPPERCUT4_SUB-ind_anitab1, 0
+INUPPERCUT4_SUB:
+	DD INUPPERCUT4_IMG-ind_anitab1
+	DW 72, 93, 18, -25
+INUPPERCUT5:
+	DD INUPPERCUT5_SUB-ind_anitab1, 0
+INUPPERCUT5_SUB:
+	DD INUPPERCUT5_IMG-ind_anitab1
+	DW 65, 106, 19, -13
+INUPPERCUT7:
+	DD INUPPERCUT7_SUB-ind_anitab1, 0
+INUPPERCUT7_SUB:
+	DD INUPPERCUT7_IMG-ind_anitab1
+	DW 47, 131, 19, 11
+INHIPUNCH1:
+	DD INHIPUNCH1_SUB-ind_anitab1, 0
+INHIPUNCH1_SUB:
+	DD INHIPUNCH1_IMG-ind_anitab1
+	DW 46, 109, 19, -8
+INHIBLOCK1:
+	DD INHIBLOCK1_SUB-ind_anitab1, 0
+INHIBLOCK1_SUB:
+	DD INHIBLOCK1_IMG-ind_anitab1
+	DW 49, 109, 18, -8
+INHIBLOCK2:
+	DD INHIBLOCK2_SUB-ind_anitab1, 0
+INHIBLOCK2_SUB:
+	DD INHIBLOCK2_IMG-ind_anitab1
+	DW 44, 108, 18, -9
+INHIBLOCK3:
+	DD INHIBLOCK3_SUB-ind_anitab1, 0
+INHIBLOCK3_SUB:
+	DD INHIBLOCK3_IMG-ind_anitab1
+	DW 44, 108, 18, -9
+INVICTORY1:
+	DD INVICTORY1_SUB-ind_anitab1, 0
+INVICTORY1_SUB:
+	DD INVICTORY1_IMG-ind_anitab1
+	DW 71, 109, 43, -8
+INVICTORY2:
+	DD INVICTORY2_SUB-ind_anitab1, 0
+INVICTORY2_SUB:
+	DD INVICTORY2_IMG-ind_anitab1
+	DW 62, 120, 31, 2
+INVICTORY3:
+	DD INVICTORY3_SUB-ind_anitab1, 0
+INVICTORY3_SUB:
+	DD INVICTORY3_IMG-ind_anitab1
+	DW 53, 121, 20, 3
+INVICTORY4:
+	DD INVICTORY4_SUB-ind_anitab1, 0
+INVICTORY4_SUB:
+	DD INVICTORY4_IMG-ind_anitab1
+	DW 46, 103, 15, -14
+INVICTORY5:
+	DD INVICTORY5_SUB-ind_anitab1, 0
+INVICTORY5_SUB:
+	DD INVICTORY5_IMG-ind_anitab1
+	DW 47, 123, 16, 5
+INVICTORY6:
+	DD INVICTORY6_SUB-ind_anitab1, 0
+INVICTORY6_SUB:
+	DD INVICTORY6_IMG-ind_anitab1
+	DW 51, 132, 19, 14
+INVICTORY7:
+	DD INVICTORY7_SUB-ind_anitab1, 0
+INVICTORY7_SUB:
+	DD INVICTORY7_IMG-ind_anitab1
+	DW 58, 135, 27, 17
+FLAME1:
+	DD FLAME1_SUB-ind_anitab1, 0
+FLAME1_SUB:
+	DD FLAME1_IMG-ind_anitab1
+	DW 46, 45, 32, 24
+	DD   _GRNFLM_P
+FLAME2:
+	DD FLAME2_SUB-ind_anitab1, 0
+FLAME2_SUB:
+	DD FLAME2_IMG-ind_anitab1
+	DW 45, 21, 32, 26
+FLAME3:
+	DD FLAME3_SUB-ind_anitab1, 0
+FLAME3_SUB:
+	DD FLAME3_IMG-ind_anitab1
+	DW 49, 23, 34, 29
+FLAME4:
+	DD FLAME4_SUB-ind_anitab1, 0
+FLAME4_SUB:
+	DD FLAME4_IMG-ind_anitab1
+	DW 50, 26, 35, 31
+FLAME5:
+	DD FLAME5_SUB-ind_anitab1, 0
+FLAME5_SUB:
+	DD FLAME5_IMG-ind_anitab1
+	DW 53, 28, 36, 34
+FLAME6:
+	DD FLAME6_SUB-ind_anitab1, 0
+FLAME6_SUB:
+	DD FLAME6_IMG-ind_anitab1
+	DW 54, 30, 37, 36
+INHIPUNCH2:
+	DD INHIPUNCH2_SUB-ind_anitab1, 0
+INHIPUNCH2_SUB:
+	DD INHIPUNCH2_IMG-ind_anitab1
+	DW 64, 111, 21, -6
+INHIPUNCH3:
+	DD INHIPUNCH3_SUB-ind_anitab1, 0
+INHIPUNCH3_SUB:
+	DD INHIPUNCH3_IMG-ind_anitab1
+	DW 80, 111, 21, -6
+INHIPUNCH4:
+	DD INHIPUNCH4_SUB-ind_anitab1, 0
+INHIPUNCH4_SUB:
+	DD INHIPUNCH4_IMG-ind_anitab1
+	DW 68, 112, 21, -5
+INHIPUNCH5:
+	DD INHIPUNCH5_SUB-ind_anitab1, 0
+INHIPUNCH5_SUB:
+	DD INHIPUNCH5_IMG-ind_anitab1
+	DW 73, 112, 21, -5
+INHIPUNCH6:
+	DD INHIPUNCH6_SUB-ind_anitab1, 0
+INHIPUNCH6_SUB:
+	DD INHIPUNCH6_IMG-ind_anitab1
+	DW 83, 112, 19, -5
+INHIPUNCH7:
+	DD INHIPUNCH7_SUB-ind_anitab1, 0
+INHIPUNCH7_SUB:
+	DD INHIPUNCH7_IMG-ind_anitab1
+	DW 69, 113, 20, -4
+INLOPUNCH5:
+	DD INLOPUNCH5_SUB-ind_anitab1, 0
+INLOPUNCH5_SUB:
+	DD INLOPUNCH5_IMG-ind_anitab1
+	DW 70, 106, 21, -11
+INLOPUNCH2:
+	DD INLOPUNCH2_SUB-ind_anitab1, 0
+INLOPUNCH2_SUB:
+	DD INLOPUNCH2_IMG-ind_anitab1
+	DW 54, 107, 18, -10
+INLOPUNCH1:
+	DD INLOPUNCH1_SUB-ind_anitab1, 0
+INLOPUNCH1_SUB:
+	DD INLOPUNCH1_IMG-ind_anitab1
+	DW 48, 107, 18, -10
+INLOPUNCH3:
+	DD INLOPUNCH3_SUB-ind_anitab1, 0
+INLOPUNCH3_SUB:
+	DD INLOPUNCH3_IMG-ind_anitab1
+	DW 79, 105, 22, -12
+INLOPUNCH4:
+	DD INLOPUNCH4_SUB-ind_anitab1, 0
+INLOPUNCH4_SUB:
+	DD INLOPUNCH4_IMG-ind_anitab1
+	DW 69, 106, 21, -11
+INLOPUNCH6:
+	DD INLOPUNCH6_SUB-ind_anitab1, 0
+INLOPUNCH6_SUB:
+	DD INLOPUNCH6_IMG-ind_anitab1
+	DW 80, 105, 20, -12
+INCHOPS1:
+	DD INCHOPS1_SUB-ind_anitab1, 0
+INCHOPS1_SUB:
+	DD INCHOPS1_IMG-ind_anitab1
+	DW 50, 107, 20, -10
+INCHOPS2:
+	DD INCHOPS2_SUB-ind_anitab1, 0
+INCHOPS2_SUB:
+	DD INCHOPS2_IMG-ind_anitab1
+	DW 46, 107, 17, -9
+INCHOPS3:
+	DD INCHOPS3_SUB-ind_anitab1, 0
+INCHOPS3_SUB:
+	DD INCHOPS3_IMG-ind_anitab1
+	DW 56, 110, 17, -7
+INCHOPS4:
+	DD INCHOPS4_SUB-ind_anitab1, 0
+INCHOPS4_SUB:
+	DD INCHOPS4_IMG-ind_anitab1
+	DW 62, 108, 18, -8
+INCHOPS5:
+	DD INCHOPS5_SUB-ind_anitab1, 0
+INCHOPS5_SUB:
+	DD INCHOPS5_IMG-ind_anitab1
+	DW 78, 111, 17, -7
+INCHOPS6:
+	DD INCHOPS6_SUB-ind_anitab1, 0
+INCHOPS6_SUB:
+	DD INCHOPS6_IMG-ind_anitab1
+	DW 74, 106, 18, -10
+INCHOPS7:
+	DD INCHOPS7_SUB-ind_anitab1, 0
+INCHOPS7_SUB:
+	DD INCHOPS7_IMG-ind_anitab1
+	DW 74, 109, 18, -8
+INCHOPS8:
+	DD INCHOPS8_SUB-ind_anitab1, 0
+INCHOPS8_SUB:
+	DD INCHOPS8_IMG-ind_anitab1
+	DW 64, 128, 22, 10
+INCHOPS9:
+	DD INCHOPS9_SUB-ind_anitab1, 0
+INCHOPS9_SUB:
+	DD INCHOPS9_IMG-ind_anitab1
+	DW 95, 102, 25, -15
+INLOKICK1:
+	DD INLOKICK1_SUB-ind_anitab1, 0
+INLOKICK1_SUB:
+	DD INLOKICK1_IMG-ind_anitab1
+	DW 52, 106, 18, -10
+INLOKICK2:
+	DD INLOKICK2_SUB-ind_anitab1, 0
+INLOKICK2_SUB:
+	DD INLOKICK2_IMG-ind_anitab1
+	DW 41, 113, 11, -2
+INLOKICK3:
+	DD INLOKICK3_SUB-ind_anitab1, 0
+INLOKICK3_SUB:
+	DD INLOKICK3_IMG-ind_anitab1
+	DW 46, 109, 12, -8
+INLOKICK4:
+	DD INLOKICK4_SUB-ind_anitab1, 0
+INLOKICK4_SUB:
+	DD INLOKICK4_IMG-ind_anitab1
+	DW 58, 105, 10, -12
+INLOKICK5:
+	DD INLOKICK5_SUB-ind_anitab1, 0
+INLOKICK5_SUB:
+	DD INLOKICK5_IMG-ind_anitab1
+	DW 70, 104, 11, -13
+INHIKICK1:
+	DD INHIKICK1_SUB-ind_anitab1, 0
+INHIKICK1_SUB:
+	DD INHIKICK1_IMG-ind_anitab1
+	DW 99, 97, 19, -19
+INLOKICK6:
+	DD INLOKICK6_SUB-ind_anitab1, 0
+INLOKICK6_SUB:
+	DD INLOKICK6_IMG-ind_anitab1
+	DW 95, 103, 10, -13
+INKNEEBREAK1:
+	DD INKNEEBREAK1_SUB-ind_anitab1, 0
+INKNEEBREAK1_SUB:
+	DD INKNEEBREAK1_IMG-ind_anitab1
+	DW 51, 110, 31, -7
+INKNEEBREAK2:
+	DD INKNEEBREAK2_SUB-ind_anitab1, 0
+INKNEEBREAK2_SUB:
+	DD INKNEEBREAK2_IMG-ind_anitab1
+	DW 53, 114, 34, -2
+INKNEEBREAK3:
+	DD INKNEEBREAK3_SUB-ind_anitab1, 0
+INKNEEBREAK3_SUB:
+	DD INKNEEBREAK3_IMG-ind_anitab1
+	DW 66, 116, 41, -1
+INKNEEBREAK4:
+	DD INKNEEBREAK4_SUB-ind_anitab1, 0
+INKNEEBREAK4_SUB:
+	DD INKNEEBREAK4_IMG-ind_anitab1
+	DW 77, 103, 38, -14
+INSWEEPKICK1:
+	DD INSWEEPKICK1_SUB-ind_anitab1, 0
+INSWEEPKICK1_SUB:
+	DD INSWEEPKICK1_IMG-ind_anitab1
+	DW 45, 96, 15, -20
+INSWEEPKICK2:
+	DD INSWEEPKICK2_SUB-ind_anitab1, 0
+INSWEEPKICK2_SUB:
+	DD INSWEEPKICK2_IMG-ind_anitab1
+	DW 54, 68, 22, -47
+INSWEEPKICK3:
+	DD INSWEEPKICK3_SUB-ind_anitab1, 0
+INSWEEPKICK3_SUB:
+	DD INSWEEPKICK3_IMG-ind_anitab1
+	DW 50, 53, 12, -68
+INSWEEPKICK4:
+	DD INSWEEPKICK4_SUB-ind_anitab1, 0
+INSWEEPKICK4_SUB:
+	DD INSWEEPKICK4_IMG-ind_anitab1
+	DW 66, 48, 12, -70
+INSWEEPKICK5:
+	DD INSWEEPKICK5_SUB-ind_anitab1, 0
+INSWEEPKICK5_SUB:
+	DD INSWEEPKICK5_IMG-ind_anitab1
+	DW 104, 50, 14, -69
+INSWEEPKICK6:
+	DD INSWEEPKICK6_SUB-ind_anitab1, 0
+INSWEEPKICK6_SUB:
+	DD INSWEEPKICK6_IMG-ind_anitab1
+	DW 52, 77, 4, -48
+INSWEEPKICK7:
+	DD INSWEEPKICK7_SUB-ind_anitab1, 0
+INSWEEPKICK7_SUB:
+	DD INSWEEPKICK7_IMG-ind_anitab1
+	DW 32, 91, -9, -42
+INSWEEPKICK8:
+	DD INSWEEPKICK8_SUB-ind_anitab1, 0
+INSWEEPKICK8_SUB:
+	DD INSWEEPKICK8_IMG-ind_anitab1
+	DW 54, 94, 15, -30
+INROUNDKICK1:
+	DD INROUNDKICK1_SUB-ind_anitab1, 0
+INROUNDKICK1_SUB:
+	DD INROUNDKICK1_IMG-ind_anitab1
+	DW 54, 107, 26, -11
+INROUNDKICK2:
+	DD INROUNDKICK2_SUB-ind_anitab1, 0
+INROUNDKICK2_SUB:
+	DD INROUNDKICK2_IMG-ind_anitab1
+	DW 50, 107, 20, -8
+INROUNDKICK3:
+	DD INROUNDKICK3_SUB-ind_anitab1, 0
+INROUNDKICK3_SUB:
+	DD INROUNDKICK3_IMG-ind_anitab1
+	DW 61, 107, 24, -8
+INROUNDKICK4:
+	DD INROUNDKICK4_SUB-ind_anitab1, 0
+INROUNDKICK4_SUB:
+	DD INROUNDKICK4_IMG-ind_anitab1
+	DW 82, 105, 19, -9
+INROUNDKICK5:
+	DD INROUNDKICK5_SUB-ind_anitab1, 0
+INROUNDKICK5_SUB:
+	DD INROUNDKICK5_IMG-ind_anitab1
+	DW 83, 105, 16, -9
+INROUNDKICK6:
+	DD INROUNDKICK6_SUB-ind_anitab1, 0
+INROUNDKICK6_SUB:
+	DD INROUNDKICK6_IMG-ind_anitab1
+	DW 72, 96, 24, -16
+INROUNDKICK7:
+	DD INROUNDKICK7_SUB-ind_anitab1, 0
+INROUNDKICK7_SUB:
+	DD INROUNDKICK7_IMG-ind_anitab1
+	DW 60, 94, 31, -20
+INROUNDKICK8:
+	DD INROUNDKICK8_SUB-ind_anitab1, 0
+INROUNDKICK8_SUB:
+	DD INROUNDKICK8_IMG-ind_anitab1
+	DW 58, 102, 29, -17
+INJUMP1:
+	DD INJUMP1_SUB-ind_anitab1, 0
+INJUMP1_SUB:
+	DD INJUMP1_IMG-ind_anitab1
+	DW 56, 94, 19, -22
+INJUMP2:
+	DD INJUMP2_SUB-ind_anitab1, 0
+INJUMP2_SUB:
+	DD INJUMP2_IMG-ind_anitab1
+	DW 57, 116, 18, 0
+INJUMP3:
+	DD INJUMP3_SUB-ind_anitab1, 0
+INJUMP3_SUB:
+	DD INJUMP3_IMG-ind_anitab1
+	DW 58, 94, 20, 0
+INJUMPKICK1:
+	DD INJUMPKICK1_SUB-ind_anitab1, 0
+INJUMPKICK1_SUB:
+	DD INJUMPKICK1_IMG-ind_anitab1
+	DW 46, 83, 9, 0
+INJUMPKICK2:
+	DD INJUMPKICK2_SUB-ind_anitab1, 0
+INJUMPKICK2_SUB:
+	DD INJUMPKICK2_IMG-ind_anitab1
+	DW 66, 87, 14, 0
+INJUMPKICK3:
+	DD INJUMPKICK3_SUB-ind_anitab1, 0
+INJUMPKICK3_SUB:
+	DD INJUMPKICK3_IMG-ind_anitab1
+	DW 91, 105, 33, 3
+INFLIPUNCH1:
+	DD INFLIPUNCH1_SUB-ind_anitab1, 0
+INFLIPUNCH1_SUB:
+	DD INFLIPUNCH1_IMG-ind_anitab1
+	DW 48, 55, 15, -11
+INFLIPUNCH2:
+	DD INFLIPUNCH2_SUB-ind_anitab1, 0
+INFLIPUNCH2_SUB:
+	DD INFLIPUNCH2_IMG-ind_anitab1
+	DW 82, 58, 29, -8
+INFLIPUNCH3:
+	DD INFLIPUNCH3_SUB-ind_anitab1, 0
+INFLIPUNCH3_SUB:
+	DD INFLIPUNCH3_IMG-ind_anitab1
+	DW 102, 66, 41, -7
+INFLIPKICK1:
+	DD INFLIPKICK1_SUB-ind_anitab1, 0
+INFLIPKICK1_SUB:
+	DD INFLIPKICK1_IMG-ind_anitab1
+	DW 49, 63, 5, -2
+INFLIPKICK2:
+	DD INFLIPKICK2_SUB-ind_anitab1, 0
+INFLIPKICK2_SUB:
+	DD INFLIPKICK2_IMG-ind_anitab1
+	DW 66, 68, 7, 2
+INFLIPKICK3:
+	DD INFLIPKICK3_SUB-ind_anitab1, 0
+INFLIPKICK3_SUB:
+	DD INFLIPKICK3_IMG-ind_anitab1
+	DW 87, 75, 17, 4
+INJUMPFLIP1:
+	DD INJUMPFLIP1_SUB-ind_anitab1, 0
+INJUMPFLIP1_SUB:
+	DD INJUMPFLIP1_IMG-ind_anitab1
+	DW 52, 116, 8, 0
+INJUMPFLIP2:
+	DD INJUMPFLIP2_SUB-ind_anitab1, 0
+INJUMPFLIP2_SUB:
+	DD INJUMPFLIP2_IMG-ind_anitab1
+	DW 35, 54, 2, -8
+INJUMPFLIP3:
+	DD INJUMPFLIP3_SUB-ind_anitab1, 0
+INJUMPFLIP3_SUB:
+	DD INJUMPFLIP3_IMG-ind_anitab1
+	DW 50, 39, 14, -15
+INJUMPFLIP4:
+	DD INJUMPFLIP4_SUB-ind_anitab1, 0
+INJUMPFLIP4_SUB:
+	DD INJUMPFLIP4_IMG-ind_anitab1
+	DW 46, 49, 14, -8
+INJUMPFLIP5:
+	DD INJUMPFLIP5_SUB-ind_anitab1, 0
+INJUMPFLIP5_SUB:
+	DD INJUMPFLIP5_IMG-ind_anitab1
+	DW 37, 54, 4, 0
+INJUMPFLIP6:
+	DD INJUMPFLIP6_SUB-ind_anitab1, 0
+INJUMPFLIP6_SUB:
+	DD INJUMPFLIP6_IMG-ind_anitab1
+	DW 45, 48, 7, -2
+INJUMPFLIP7:
+	DD INJUMPFLIP7_SUB-ind_anitab1, 0
+INJUMPFLIP7_SUB:
+	DD INJUMPFLIP7_IMG-ind_anitab1
+	DW 51, 39, 5, -12
+INJUMPFLIP8:
+	DD INJUMPFLIP8_SUB-ind_anitab1, 0
+INJUMPFLIP8_SUB:
+	DD INJUMPFLIP8_IMG-ind_anitab1
+	DW 46, 47, 0, -6
+INHIHIT2:
+	DD INHIHIT2_SUB-ind_anitab1, 0
+INHIHIT2_SUB:
+	DD INHIHIT2_IMG-ind_anitab1
+	DW 54, 105, 27, -12
+INHIHIT3:
+	DD INHIHIT3_SUB-ind_anitab1, 0
+INHIHIT3_SUB:
+	DD INHIHIT3_IMG-ind_anitab1
+	DW 56, 100, 29, -16
+INHIHIT1:
+	DD INHIHIT1_SUB-ind_anitab1, 0
+INHIHIT1_SUB:
+	DD INHIHIT1_IMG-ind_anitab1
+	DW 56, 108, 29, -8
+INLOHIT2:
+	DD INLOHIT2_SUB-ind_anitab1, 0
+INLOHIT2_SUB:
+	DD INLOHIT2_IMG-ind_anitab1
+	DW 54, 108, 24, -8
+INLOHIT3:
+	DD INLOHIT3_SUB-ind_anitab1, 0
+INLOHIT3_SUB:
+	DD INLOHIT3_IMG-ind_anitab1
+	DW 58, 107, 28, -9
+INLOHIT1:
+	DD INLOHIT1_SUB-ind_anitab1, 0
+INLOHIT1_SUB:
+	DD INLOHIT1_IMG-ind_anitab1
+	DW 51, 108, 22, -8
+INKNOCKDOWN1:
+	DD INKNOCKDOWN1_SUB-ind_anitab1, 0
+INKNOCKDOWN1_SUB:
+	DD INKNOCKDOWN1_IMG-ind_anitab1
+	DW 47, 105, 14, -11
+INKNOCKDOWN2:
+	DD INKNOCKDOWN2_SUB-ind_anitab1, 0
+INKNOCKDOWN2_SUB:
+	DD INKNOCKDOWN2_IMG-ind_anitab1
+	DW 69, 82, 26, -13
+INKNOCKDOWN3:
+	DD INKNOCKDOWN3_SUB-ind_anitab1, 0
+INKNOCKDOWN3_SUB:
+	DD INKNOCKDOWN3_IMG-ind_anitab1
+	DW 79, 56, 34, -28
+INKNOCKDOWN4:
+	DD INKNOCKDOWN4_SUB-ind_anitab1, 0
+INKNOCKDOWN4_SUB:
+	DD INKNOCKDOWN4_IMG-ind_anitab1
+	DW 77, 62, 38, -36
+INKNOCKDOWN5:
+	DD INKNOCKDOWN5_SUB-ind_anitab1, 0
+INKNOCKDOWN5_SUB:
+	DD INKNOCKDOWN5_IMG-ind_anitab1
+	DW 65, 65, 30, -42
+INKNOCKDOWN6:
+	DD INKNOCKDOWN6_SUB-ind_anitab1, 0
+INKNOCKDOWN6_SUB:
+	DD INKNOCKDOWN6_IMG-ind_anitab1
+	DW 91, 54, 32, -61
+INKNOCKDOWN7:
+	DD INKNOCKDOWN7_SUB-ind_anitab1, 0
+INKNOCKDOWN7_SUB:
+	DD INKNOCKDOWN7_IMG-ind_anitab1
+	DW 106, 22, 33, -96
+INSWEEPFALL1:
+	DD INSWEEPFALL1_SUB-ind_anitab1, 0
+INSWEEPFALL1_SUB:
+	DD INSWEEPFALL1_IMG-ind_anitab1
+	DW 73, 106, 22, -10
+INSWEEPFALL2:
+	DD INSWEEPFALL2_SUB-ind_anitab1, 0
+INSWEEPFALL2_SUB:
+	DD INSWEEPFALL2_IMG-ind_anitab1
+	DW 64, 97, 26, -16
+INSWEEPFALL3:
+	DD INSWEEPFALL3_SUB-ind_anitab1, 0
+INSWEEPFALL3_SUB:
+	DD INSWEEPFALL3_IMG-ind_anitab1
+	DW 46, 57, 24, -29
+INSWEEPFALL4:
+	DD INSWEEPFALL4_SUB-ind_anitab1, 0
+INSWEEPFALL4_SUB:
+	DD INSWEEPFALL4_IMG-ind_anitab1
+	DW 43, 71, 22, -19
+INSWEEPFALL5:
+	DD INSWEEPFALL5_SUB-ind_anitab1, 0
+INSWEEPFALL5_SUB:
+	DD INSWEEPFALL5_IMG-ind_anitab1
+	DW 52, 64, 26, -41
+INSWEEPFALL6:
+	DD INSWEEPFALL6_SUB-ind_anitab1, 0
+INSWEEPFALL6_SUB:
+	DD INSWEEPFALL6_IMG-ind_anitab1
+	DW 64, 37, 31, -76
+INSWEEPUP1:
+	DD INSWEEPUP1_SUB-ind_anitab1, 0
+INSWEEPUP1_SUB:
+	DD INSWEEPUP1_IMG-ind_anitab1
+	DW 53, 48, 23, -81
+INSTUMBLE1:
+	DD INSTUMBLE1_SUB-ind_anitab1, 0
+INSTUMBLE1_SUB:
+	DD INSTUMBLE1_IMG-ind_anitab1
+	DW 48, 101, 19, -15
+INSTUMBLE2:
+	DD INSTUMBLE2_SUB-ind_anitab1, 0
+INSTUMBLE2_SUB:
+	DD INSTUMBLE2_IMG-ind_anitab1
+	DW 59, 122, 26, 4
+INSTUMBLE3:
+	DD INSTUMBLE3_SUB-ind_anitab1, 0
+INSTUMBLE3_SUB:
+	DD INSTUMBLE3_IMG-ind_anitab1
+	DW 63, 132, 40, 14
+INSTUMBLE4:
+	DD INSTUMBLE4_SUB-ind_anitab1, 0
+INSTUMBLE4_SUB:
+	DD INSTUMBLE4_IMG-ind_anitab1
+	DW 67, 116, 50, 0
+INSTUMBLE5:
+	DD INSTUMBLE5_SUB-ind_anitab1, 0
+INSTUMBLE5_SUB:
+	DD INSTUMBLE5_IMG-ind_anitab1
+	DW 52, 106, 23, -13
+INSTUMBLE6:
+	DD INSTUMBLE6_SUB-ind_anitab1, 0
+INSTUMBLE6_SUB:
+	DD INSTUMBLE6_IMG-ind_anitab1
+	DW 52, 105, 21, -17
+INSTUMBLE7:
+	DD INSTUMBLE7_SUB-ind_anitab1, 0
+INSTUMBLE7_SUB:
+	DD INSTUMBLE7_IMG-ind_anitab1
+	DW 52, 101, 24, -20
+INGETUP1:
+	DD INGETUP1_SUB-ind_anitab1, 0
+INGETUP1_SUB:
+	DD INGETUP1_IMG-ind_anitab1
+	DW 92, 35, 34, -84
+INGETUP2:
+	DD INGETUP2_SUB-ind_anitab1, 0
+INGETUP2_SUB:
+	DD INGETUP2_IMG-ind_anitab1
+	DW 67, 59, 34, -60
+INGETUP3:
+	DD INGETUP3_SUB-ind_anitab1, 0
+INGETUP3_SUB:
+	DD INGETUP3_IMG-ind_anitab1
+	DW 49, 62, 33, -56
+INGETUP4:
+	DD INGETUP4_SUB-ind_anitab1, 0
+INGETUP4_SUB:
+	DD INGETUP4_IMG-ind_anitab1
+	DW 71, 59, 34, -61
+INGETUP5:
+	DD INGETUP5_SUB-ind_anitab1, 0
+INGETUP5_SUB:
+	DD INGETUP5_IMG-ind_anitab1
+	DW 78, 55, 26, -63
+INGETUP6:
+	DD INGETUP6_SUB-ind_anitab1, 0
+INGETUP6_SUB:
+	DD INGETUP6_IMG-ind_anitab1
+	DW 57, 82, 20, -36
+INGETUP7:
+	DD INGETUP7_SUB-ind_anitab1, 0
+INGETUP7_SUB:
+	DD INGETUP7_IMG-ind_anitab1
+	DW 51, 104, 19, -14
+INSWEEPUP2:
+	DD INSWEEPUP2_SUB-ind_anitab1, 0
+INSWEEPUP2_SUB:
+	DD INSWEEPUP2_IMG-ind_anitab1
+	DW 42, 39, 15, -69
+INSWEEPUP3:
+	DD INSWEEPUP3_SUB-ind_anitab1, 0
+INSWEEPUP3_SUB:
+	DD INSWEEPUP3_IMG-ind_anitab1
+	DW 33, 62, 10, -46
+INSWEEPUP4:
+	DD INSWEEPUP4_SUB-ind_anitab1, 0
+INSWEEPUP4_SUB:
+	DD INSWEEPUP4_IMG-ind_anitab1
+	DW 34, 43, 12, -64
+INSWEEPUP5:
+	DD INSWEEPUP5_SUB-ind_anitab1, 0
+INSWEEPUP5_SUB:
+	DD INSWEEPUP5_IMG-ind_anitab1
+	DW 46, 62, 22, -53
+INSWEEPUP6:
+	DD INSWEEPUP6_SUB-ind_anitab1, 0
+INSWEEPUP6_SUB:
+	DD INSWEEPUP6_IMG-ind_anitab1
+	DW 63, 94, 30, -20
+INFLIP1:
+	DD INFLIP1_SUB-ind_anitab1, 0
+INFLIP1_SUB:
+	DD INFLIP1_IMG-ind_anitab1
+	DW 76, 109, 15, -9
+INFLIP2:
+	DD INFLIP2_SUB-ind_anitab1, 0
+INFLIP2_SUB:
+	DD INFLIP2_IMG-ind_anitab1
+	DW 81, 99, 17, -17
+INFLIP3:
+	DD INFLIP3_SUB-ind_anitab1, 0
+INFLIP3_SUB:
+	DD INFLIP3_IMG-ind_anitab1
+	DW 78, 102, 15, -14
+INFLIP4:
+	DD INFLIP4_SUB-ind_anitab1, 0
+INFLIP4_SUB:
+	DD INFLIP4_IMG-ind_anitab1
+	DW 65, 125, 16, 8
+INFLIP5:
+	DD INFLIP5_SUB-ind_anitab1, 0
+INFLIP5_SUB:
+	DD INFLIP5_IMG-ind_anitab1
+	DW 66, 135, 16, 18
+INFLIP6:
+	DD INFLIP6_SUB-ind_anitab1, 0
+INFLIP6_SUB:
+	DD INFLIP6_IMG-ind_anitab1
+	DW 82, 111, 30, -5
+INFLIP7:
+	DD INFLIP7_SUB-ind_anitab1, 0
+INFLIP7_SUB:
+	DD INFLIP7_IMG-ind_anitab1
+	DW 101, 86, 46, -30
+INFLIP8:
+	DD INFLIP8_SUB-ind_anitab1, 0
+INFLIP8_SUB:
+	DD INFLIP8_IMG-ind_anitab1
+	DW 84, 66, 30, -50
+INFLIP9:
+	DD INFLIP9_SUB-ind_anitab1, 0
+INFLIP9_SUB:
+	DD INFLIP9_IMG-ind_anitab1
+	DW 69, 97, 22, -19
+INBOWNARROW1:
+	DD INBOWNARROW1_SUB-ind_anitab1, 0
+INBOWNARROW1_SUB:
+	DD INBOWNARROW1_IMG-ind_anitab1
+	DW 50, 27, -28, -26
+	DD   _GRNFLM_P
+INARROW1:
+	DD INARROW1_SUB-ind_anitab1, 0
+INARROW1_SUB:
+	DD INARROW1_IMG-ind_anitab1
+	DW 72, 110, 26, -8
+INBOWNARROW2:
+	DD INBOWNARROW2_SUB-ind_anitab1, 0
+INBOWNARROW2_SUB:
+	DD INBOWNARROW2_IMG-ind_anitab1
+	DW 56, 71, -21, 0
+INARROW2:
+	DD INARROW2_SUB-ind_anitab1, 0
+INARROW2_SUB:
+	DD INARROW2_IMG-ind_anitab1
+	DW 74, 105, 31, -12
+INBOWNARROW3:
+	DD INBOWNARROW3_SUB-ind_anitab1, 0
+INBOWNARROW3_SUB:
+	DD INBOWNARROW3_IMG-ind_anitab1
+	DW 54, 76, -6, 3
+INARROW3:
+	DD INARROW3_SUB-ind_anitab1, 0
+INARROW3_SUB:
+	DD INARROW3_IMG-ind_anitab1
+	DW 70, 104, 30, -13
+INBOWNARROW4:
+	DD INBOWNARROW4_SUB-ind_anitab1, 0
+INBOWNARROW4_SUB:
+	DD INBOWNARROW4_IMG-ind_anitab1
+	DW 54, 76, 10, 5
+INARROW4:
+	DD INARROW4_SUB-ind_anitab1, 0
+INARROW4_SUB:
+	DD INARROW4_IMG-ind_anitab1
+	DW 69, 103, 35, -14
+INBOWNARROW5:
+	DD INBOWNARROW5_SUB-ind_anitab1, 0
+INBOWNARROW5_SUB:
+	DD INBOWNARROW5_IMG-ind_anitab1
+	DW 53, 76, 21, 1
+INARROW5:
+	DD INARROW5_SUB-ind_anitab1, 0
+INARROW5_SUB:
+	DD INARROW5_IMG-ind_anitab1
+	DW 74, 98, 46, -19
+INBOWNARROW6:
+	DD INBOWNARROW6_SUB-ind_anitab1, 0
+INBOWNARROW6_SUB:
+	DD INBOWNARROW6_IMG-ind_anitab1
+	DW 91, 76, 5, 0
+INARROW6:
+	DD INARROW6_SUB-ind_anitab1, 0
+INARROW6_SUB:
+	DD INARROW6_IMG-ind_anitab1
+	DW 78, 98, 51, -19
+INBOWNARROW7:
+	DD INBOWNARROW7_SUB-ind_anitab1, 0
+INBOWNARROW7_SUB:
+	DD INBOWNARROW7_IMG-ind_anitab1
+	DW 13, 76, -9, 0
+INARROW7:
+	DD INARROW7_SUB-ind_anitab1, 0
+INARROW7_SUB:
+	DD INARROW7_IMG-ind_anitab1
+	DW 77, 96, 50, -20
+INBOWNARROW8:
+	DD INBOWNARROW8_SUB-ind_anitab1, 0
+INBOWNARROW8_SUB:
+	DD INBOWNARROW8_IMG-ind_anitab1
+	DW 15, 76, -6, 0
+INBOWNARROW9:
+	DD INBOWNARROW9_SUB-ind_anitab1, 0
+INBOWNARROW9_SUB:
+	DD INBOWNARROW9_IMG-ind_anitab1
+	DW 15, 75, -6, 0
+INBOWNARROW10:
+	DD INBOWNARROW10_SUB-ind_anitab1, 0
+INBOWNARROW10_SUB:
+	DD INBOWNARROW10_IMG-ind_anitab1
+	DW 15, 73, -6, 0
+INBOWNARROW11:
+	DD INBOWNARROW11_SUB-ind_anitab1, 0
+INBOWNARROW11_SUB:
+	DD INBOWNARROW11_IMG-ind_anitab1
+	DW 13, 72, -9, 0
+INBOWNARROW12:
+	DD INBOWNARROW12_SUB-ind_anitab1, 0
+INBOWNARROW12_SUB:
+	DD INBOWNARROW12_IMG-ind_anitab1
+	DW 17, 70, -6, -2
+INBOWNARROW13:
+	DD INBOWNARROW13_SUB-ind_anitab1, 0
+INBOWNARROW13_SUB:
+	DD INBOWNARROW13_IMG-ind_anitab1
+	DW 14, 37, -6, -18
+INBOWNARROW14:
+	DD INBOWNARROW14_SUB-ind_anitab1, 0
+INBOWNARROW14_SUB:
+	DD INBOWNARROW14_IMG-ind_anitab1
+	DW 58, 7, -33, -33
+INBOWNARROW15:
+	DD INBOWNARROW15_SUB-ind_anitab1, 0
+INBOWNARROW15_SUB:
+	DD INBOWNARROW15_IMG-ind_anitab1
+	DW 53, 6, -39, -34
+INBOWNARROW16:
+	DD INBOWNARROW16_SUB-ind_anitab1, 0
+INBOWNARROW16_SUB:
+	DD INBOWNARROW16_IMG-ind_anitab1
+	DW 37, 21, -57, -25
+INBOWNARROW17:
+	DD INBOWNARROW17_SUB-ind_anitab1, 0
+INBOWNARROW17_SUB:
+	DD INBOWNARROW17_IMG-ind_anitab1
+	DW 48, 54, -56, -11
+INBOWNARROW18:
+	DD INBOWNARROW18_SUB-ind_anitab1, 0
+INBOWNARROW18_SUB:
+	DD INBOWNARROW18_IMG-ind_anitab1
+	DW 67, 98, -49, 14
+INBOWNARROW19:
+	DD INBOWNARROW19_SUB-ind_anitab1, 0
+INBOWNARROW19_SUB:
+	DD INBOWNARROW19_IMG-ind_anitab1
+	DW 76, 111, -45, 19
+INBOWNARROW20:
+	DD INBOWNARROW20_SUB-ind_anitab1, 0
+INBOWNARROW20_SUB:
+	DD INBOWNARROW20_IMG-ind_anitab1
+	DW 84, 122, -42, 24
+INSTUNNED1:
+	DD INSTUNNED1_SUB-ind_anitab1, 0
+INSTUNNED1_SUB:
+	DD INSTUNNED1_IMG-ind_anitab1
+	DW 44, 105, 17, -11
+INSTUNNED2:
+	DD INSTUNNED2_SUB-ind_anitab1, 0
+INSTUNNED2_SUB:
+	DD INSTUNNED2_IMG-ind_anitab1
+	DW 43, 106, 16, -10
+INSTUNNED3:
+	DD INSTUNNED3_SUB-ind_anitab1, 0
+INSTUNNED3_SUB:
+	DD INSTUNNED3_IMG-ind_anitab1
+	DW 43, 105, 16, -11
+INSTUNNED4:
+	DD INSTUNNED4_SUB-ind_anitab1, 0
+INSTUNNED4_SUB:
+	DD INSTUNNED4_IMG-ind_anitab1
+	DW 43, 102, 16, -14
+INSTUNNED5:
+	DD INSTUNNED5_SUB-ind_anitab1, 0
+INSTUNNED5_SUB:
+	DD INSTUNNED5_IMG-ind_anitab1
+	DW 43, 100, 16, -16
+INSTUNNED6:
+	DD INSTUNNED6_SUB-ind_anitab1, 0
+INSTUNNED6_SUB:
+	DD INSTUNNED6_IMG-ind_anitab1
+	DW 43, 100, 16, -16
+INSTUNNED7:
+	DD INSTUNNED7_SUB-ind_anitab1, 0
+INSTUNNED7_SUB:
+	DD INSTUNNED7_IMG-ind_anitab1
+	DW 43, 100, 16, -16
+INSTUNNED8:
+	DD INSTUNNED8_SUB-ind_anitab1, 0
+INSTUNNED8_SUB:
+	DD INSTUNNED8_IMG-ind_anitab1
+	DW 43, 101, 16, -15
+INSTUNNED9:
+	DD INSTUNNED9_SUB-ind_anitab1, 0
+INSTUNNED9_SUB:
+	DD INSTUNNED9_IMG-ind_anitab1
+	DW 43, 104, 16, -12
+INFLIPPED1:
+	DD INFLIPPED1_SUB-ind_anitab1, 0
+INFLIPPED1_SUB:
+	DD INFLIPPED1_IMG-ind_anitab1
+	DW 57, 102, 16, -11
+INFLIPPED2:
+	DD INFLIPPED2_SUB-ind_anitab1, 0
+INFLIPPED2_SUB:
+	DD INFLIPPED2_IMG-ind_anitab1
+	DW 65, 85, 25, -26
+INFLIPPED3:
+	DD INFLIPPED3_SUB-ind_anitab1, 0
+INFLIPPED3_SUB:
+	DD INFLIPPED3_IMG-ind_anitab1
+	DW 70, 58, 41, -30
+INFLIPPED4:
+	DD INFLIPPED4_SUB-ind_anitab1, 0
+INFLIPPED4_SUB:
+	DD INFLIPPED4_IMG-ind_anitab1
+	DW 48, 88, 31, 2
+INFLIPPED5:
+	DD INFLIPPED5_SUB-ind_anitab1, 0
+INFLIPPED5_SUB:
+	DD INFLIPPED5_IMG-ind_anitab1
+	DW 49, 89, 32, -1
+ININTORUN1:
+	DD ININTORUN1_SUB-ind_anitab1, 0
+ININTORUN1_SUB:
+	DD ININTORUN1_IMG-ind_anitab1
+	DW 62, 105, 26, -13
+ININTORUN2:
+	DD ININTORUN2_SUB-ind_anitab1, 0
+ININTORUN2_SUB:
+	DD ININTORUN2_IMG-ind_anitab1
+	DW 56, 101, 29, -16
+ININTORUN3:
+	DD ININTORUN3_SUB-ind_anitab1, 0
+ININTORUN3_SUB:
+	DD ININTORUN3_IMG-ind_anitab1
+	DW 57, 99, 30, -17
+INRUN1:
+	DD INRUN1_SUB-ind_anitab1, 0
+INRUN1_SUB:
+	DD INRUN1_IMG-ind_anitab1
+	DW 65, 109, 26, -8
+INRUN2:
+	DD INRUN2_SUB-ind_anitab1, 0
+INRUN2_SUB:
+	DD INRUN2_IMG-ind_anitab1
+	DW 75, 101, 42, -13
+INRUN3:
+	DD INRUN3_SUB-ind_anitab1, 0
+INRUN3_SUB:
+	DD INRUN3_IMG-ind_anitab1
+	DW 82, 104, 48, -12
+INRUN4:
+	DD INRUN4_SUB-ind_anitab1, 0
+INRUN4_SUB:
+	DD INRUN4_IMG-ind_anitab1
+	DW 81, 103, 46, -13
+INRUN5:
+	DD INRUN5_SUB-ind_anitab1, 0
+INRUN5_SUB:
+	DD INRUN5_IMG-ind_anitab1
+	DW 63, 103, 32, -13
+INRUN6:
+	DD INRUN6_SUB-ind_anitab1, 0
+INRUN6_SUB:
+	DD INRUN6_IMG-ind_anitab1
+	DW 54, 104, 17, -13
+INRUN7:
+	DD INRUN7_SUB-ind_anitab1, 0
+INRUN7_SUB:
+	DD INRUN7_IMG-ind_anitab1
+	DW 66, 106, 26, -10
+INRUN8:
+	DD INRUN8_SUB-ind_anitab1, 0
+INRUN8_SUB:
+	DD INRUN8_IMG-ind_anitab1
+	DW 78, 104, 38, -13
+INRUN9:
+	DD INRUN9_SUB-ind_anitab1, 0
+INRUN9_SUB:
+	DD INRUN9_IMG-ind_anitab1
+	DW 85, 102, 47, -12
+INRUN10:
+	DD INRUN10_SUB-ind_anitab1, 0
+INRUN10_SUB:
+	DD INRUN10_IMG-ind_anitab1
+	DW 86, 103, 51, -13
+INRUN11:
+	DD INRUN11_SUB-ind_anitab1, 0
+INRUN11_SUB:
+	DD INRUN11_IMG-ind_anitab1
+	DW 71, 101, 41, -15
+INRUN12:
+	DD INRUN12_SUB-ind_anitab1, 0
+INRUN12_SUB:
+	DD INRUN12_IMG-ind_anitab1
+	DW 53, 102, 23, -14
+INRUN13:
+	DD INRUN13_SUB-ind_anitab1, 0
+INRUN13_SUB:
+	DD INRUN13_IMG-ind_anitab1
+	DW 55, 105, 18, -11
+INTHUD1:
+	DD INTHUD1_SUB-ind_anitab1, 0
+INTHUD1_SUB:
+	DD INTHUD1_IMG-ind_anitab1
+	DW 23, 116, 4, -1
+INTHUD2:
+	DD INTHUD2_SUB-ind_anitab1, 0
+INTHUD2_SUB:
+	DD INTHUD2_IMG-ind_anitab1
+	DW 30, 116, 11, -1
+INTHUD3:
+	DD INTHUD3_SUB-ind_anitab1, 0
+INTHUD3_SUB:
+	DD INTHUD3_IMG-ind_anitab1
+	DW 42, 114, 23, -3
+INTHUD4:
+	DD INTHUD4_SUB-ind_anitab1, 0
+INTHUD4_SUB:
+	DD INTHUD4_IMG-ind_anitab1
+	DW 55, 108, 37, -9
+INTHUD5:
+	DD INTHUD5_SUB-ind_anitab1, 0
+INTHUD5_SUB:
+	DD INTHUD5_IMG-ind_anitab1
+	DW 78, 93, 61, -25
+INTHUD6:
+	DD INTHUD6_SUB-ind_anitab1, 0
+INTHUD6_SUB:
+	DD INTHUD6_IMG-ind_anitab1
+	DW 98, 56, 86, -61
+INTHUD7:
+	DD INTHUD7_SUB-ind_anitab1, 0
+INTHUD7_SUB:
+	DD INTHUD7_IMG-ind_anitab1
+	DW 102, 31, 94, -89
+INSCARED2:
+	DD INSCARED2_SUB-ind_anitab1, 0
+INSCARED2_SUB:
+	DD INSCARED2_IMG-ind_anitab1
+	DW 48, 114, 26, -3
+INAXECHOP1:
+	DD INAXECHOP1_SUB-ind_anitab1, 0
+INAXECHOP1_SUB:
+	DD INAXECHOP1_IMG-ind_anitab1
+	DW 59, 105, 18, -13
+INAXECHOP2:
+	DD INAXECHOP2_SUB-ind_anitab1, 0
+INAXECHOP2_SUB:
+	DD INAXECHOP2_IMG-ind_anitab1
+	DW 46, 128, 18, 10
+INAXECHOP3:
+	DD INAXECHOP3_SUB-ind_anitab1, 0
+INAXECHOP3_SUB:
+	DD INAXECHOP3_IMG-ind_anitab1
+	DW 54, 113, 26, -4
+INAXECHOP4:
+	DD INAXECHOP4_SUB-ind_anitab1, 0
+INAXECHOP4_SUB:
+	DD INAXECHOP4_IMG-ind_anitab1
+	DW 53, 108, 26, -9
+INAXECHOP5:
+	DD INAXECHOP5_SUB-ind_anitab1, 0
+INAXECHOP5_SUB:
+	DD INAXECHOP5_IMG-ind_anitab1
+	DW 56, 114, 29, -3
+INAXECHOP6:
+	DD INAXECHOP6_SUB-ind_anitab1, 0
+INAXECHOP6_SUB:
+	DD INAXECHOP6_IMG-ind_anitab1
+	DW 46, 128, 18, 9
+INAXECHOP7:
+	DD INAXECHOP7_SUB-ind_anitab1, 0
+INAXECHOP7_SUB:
+	DD INAXECHOP7_IMG-ind_anitab1
+	DW 79, 115, 19, -2
+UPRCUTAXE1:
+	DD UPRCUTAXE1_SUB-ind_anitab1, 0
+UPRCUTAXE1_SUB:
+	DD UPRCUTAXE1_IMG-ind_anitab1
+	DW 25, 38, 30, -51
+	DD   _GFIRE_p1
+INUPSWING1:
+	DD INUPSWING1_SUB-ind_anitab1, 0
+INUPSWING1_SUB:
+	DD INUPSWING1_IMG-ind_anitab1
+	DW 55, 101, 28, -15
+UPRCUTAXE2:
+	DD UPRCUTAXE2_SUB-ind_anitab1, 0
+UPRCUTAXE2_SUB:
+	DD UPRCUTAXE2_IMG-ind_anitab1
+	DW 36, 24, 16, -77
+INUPSWING2:
+	DD INUPSWING2_SUB-ind_anitab1, 0
+INUPSWING2_SUB:
+	DD INUPSWING2_IMG-ind_anitab1
+	DW 43, 101, 16, -15
+UPRCUTAXE3:
+	DD UPRCUTAXE3_SUB-ind_anitab1, 0
+UPRCUTAXE3_SUB:
+	DD UPRCUTAXE3_IMG-ind_anitab1
+	DW 73, 33, 17, -61
+INUPSWING3:
+	DD INUPSWING3_SUB-ind_anitab1, 0
+INUPSWING3_SUB:
+	DD INUPSWING3_IMG-ind_anitab1
+	DW 71, 105, 16, -11
+UPRCUTAXE4:
+	DD UPRCUTAXE4_SUB-ind_anitab1, 0
+UPRCUTAXE4_SUB:
+	DD UPRCUTAXE4_IMG-ind_anitab1
+	DW 59, 95, -10, 2
+INUPSWING4:
+	DD INUPSWING4_SUB-ind_anitab1, 0
+INUPSWING4_SUB:
+	DD INUPSWING4_IMG-ind_anitab1
+	DW 90, 116, 26, 0
+UPRCUTAXE5:
+	DD UPRCUTAXE5_SUB-ind_anitab1, 0
+UPRCUTAXE5_SUB:
+	DD UPRCUTAXE5_IMG-ind_anitab1
+	DW 54, 93, -12, 32
+INUPSWING5:
+	DD INUPSWING5_SUB-ind_anitab1, 0
+INUPSWING5_SUB:
+	DD INUPSWING5_IMG-ind_anitab1
+	DW 61, 146, 18, 29
+UPRCUTAXE6:
+	DD UPRCUTAXE6_SUB-ind_anitab1, 0
+UPRCUTAXE6_SUB:
+	DD UPRCUTAXE6_IMG-ind_anitab1
+	DW 69, 41, 8, 31
+INUPSWING6:
+	DD INUPSWING6_SUB-ind_anitab1, 0
+INUPSWING6_SUB:
+	DD INUPSWING6_IMG-ind_anitab1
+	DW 48, 142, 17, 25
+UPRCUTAXE7:
+	DD UPRCUTAXE7_SUB-ind_anitab1, 0
+UPRCUTAXE7_SUB:
+	DD UPRCUTAXE7_IMG-ind_anitab1
+	DW 43, 25, 9, 28
+INREFLECT1:
+	DD INREFLECT1_SUB-ind_anitab1, 0
+INREFLECT1_SUB:
+	DD INREFLECT1_IMG-ind_anitab1
+	DW 47, 112, 19, -5
+IREFGLOW1:
+	DD IREFGLOW1_SUB-ind_anitab1, 0
+IREFGLOW1_SUB:
+	DD IREFGLOW1_IMG-ind_anitab1
+	DW 54, 120, 22, 0
+	DD   _GFIRE_p1
+INREFLECT2:
+	DD INREFLECT2_SUB-ind_anitab1, 0
+INREFLECT2_SUB:
+	DD INREFLECT2_IMG-ind_anitab1
+	DW 46, 115, 18, -2
+IREFGLOW2:
+	DD IREFGLOW2_SUB-ind_anitab1, 0
+IREFGLOW2_SUB:
+	DD IREFGLOW2_IMG-ind_anitab1
+	DW 56, 122, 23, 2
+INREFLECT3:
+	DD INREFLECT3_SUB-ind_anitab1, 0
+INREFLECT3_SUB:
+	DD INREFLECT3_IMG-ind_anitab1
+	DW 48, 116, 19, -2
+IREFGLOW3:
+	DD IREFGLOW3_SUB-ind_anitab1, 0
+IREFGLOW3_SUB:
+	DD IREFGLOW3_IMG-ind_anitab1
+	DW 54, 121, 22, 1
+IREFGLOW4:
+	DD IREFGLOW4_SUB-ind_anitab1, 0
+IREFGLOW4_SUB:
+	DD IREFGLOW4_IMG-ind_anitab1
+	DW 53, 120, 22, 0
+IREFGLOW5:
+	DD IREFGLOW5_SUB-ind_anitab1, 0
+IREFGLOW5_SUB:
+	DD IREFGLOW5_IMG-ind_anitab1
+	DW 51, 119, 21, 0
+INCHARGE1:
+	DD INCHARGE1_SUB-ind_anitab1, 0
+INCHARGE1_SUB:
+	DD INCHARGE1_IMG-ind_anitab1
+	DW 47, 109, 26, -9
+INCHARGE2:
+	DD INCHARGE2_SUB-ind_anitab1, 0
+INCHARGE2_SUB:
+	DD INCHARGE2_IMG-ind_anitab1
+	DW 61, 99, 33, -20
+INCHARGE3:
+	DD INCHARGE3_SUB-ind_anitab1, 0
+INCHARGE3_SUB:
+	DD INCHARGE3_IMG-ind_anitab1
+	DW 66, 98, 34, -21
+
+a_back_broke:
+	DD	INBROKEN1-ind_anitab1
+	DD	0
+
+INBROKEN1:
+	DD INBROKEN1_SUB-ind_anitab1, 0
+INBROKEN1_SUB:
+	DD INBROKEN1_IMG-ind_anitab1
+	DW 107, 49, 43, -30

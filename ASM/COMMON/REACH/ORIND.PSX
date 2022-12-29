@@ -1,0 +1,58 @@
+ochar_reached:
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_ind-base_anims
+	DD 0
+a_reached_ind:
+	DD ani_adjustxy
+	DW -10
+	DW 000H
+	DD INMOUTH3-base_anims
+	DD INMOUTH4-base_anims
+	DD INMOUTH5-base_anims
+	DD INMOUTH6-base_anims
+	DD INMOUTH7-base_anims
+	DD INMOUTH8-base_anims
+	DD 0
+INMOUTH3:
+	DD INMOUTH3_SUB-base_anims, 0
+INMOUTH3_SUB:
+	DD INMOUTH3_IMG-base_anims
+	DW 62, 91, 30, -25
+INMOUTH4:
+	DD INMOUTH4_SUB-base_anims, 0
+INMOUTH4_SUB:
+	DD INMOUTH4_IMG-base_anims
+	DW 62, 93, 30, -24
+INMOUTH5:
+	DD INMOUTH5_SUB-base_anims, 0
+INMOUTH5_SUB:
+	DD INMOUTH5_IMG-base_anims
+	DW 62, 94, 30, -23
+INMOUTH6:
+	DD INMOUTH6_SUB-base_anims, 0
+INMOUTH6_SUB:
+	DD INMOUTH6_IMG-base_anims
+	DW 83, 60, 43, -54
+INMOUTH7:
+	DD INMOUTH7_SUB-base_anims, 0
+INMOUTH7_SUB:
+	DD INMOUTH7_IMG-base_anims
+	DW 106, 19, 63, -100
+INMOUTH8:
+	DD INMOUTH8_SUB-base_anims, 0
+INMOUTH8_SUB:
+	DD INMOUTH8_IMG-base_anims
+	DW 94, 33, 55, -88

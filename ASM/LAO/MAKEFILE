@@ -1,0 +1,68 @@
+#include ../../mk3.mif
+
+all: $(EXE)lao/laob.bin  \
+     $(EXE)lao/lao.bin \
+	 $(EXE)lao/laoa.bin \
+	 $(EXE)lao/laos.bin \
+	 $(EXE)lao/laof.bin \
+	 $(EXE)lao/laof1.bin \
+	 .SYMBOLIC
+
+
+# MAIN GAME	PLAY
+mklao.obj: mklao.asm $(CHARS)\lao\mklao.psx $(CHARS)\lao\mklao.psi $(OVLARTI) \
+		$(CHARS)\lao\klb.psi
+
+
+# FRIENDSHIP & BABALITY
+mklaos.obj: mklaos.asm $(OVLARTI) \
+	..\chars\lao\mklaos.psx \
+	..\chars\lao\mklaos.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+
+# BABALITY
+mklaob.obj: mklaob.asm $(OVLARTI) \
+	..\chars\lao\mklaob.psx \
+	..\common\baby\babylao.psx \
+	..\common\baby\babylao.psi \
+	..\common\baby\babyxpld.psi 
+
+
+# ANIMALITY
+mklaoa.obj: mklaoa.asm $(OVLARTI) \
+	..\chars\lao\mklaoa.psx \
+	..\chars\lao\mklaoa.psi \
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+
+# FATALITIES
+mklaof.obj: mklaof.asm $(OVLARTI) \
+	..\chars\lao\mklaof.psx \
+	..\chars\lao\mklaof.psi \
+	..\common\common\arm2.psx \
+	..\common\common\arm2.psi \
+	..\common\common\leg.psx	\
+	..\common\common\leg.psi	\
+	..\common\common\bone.psx \
+	..\common\common\bone.psi \
+	..\common\common\cage.psx \
+	..\common\common\cage.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+mklaof1.obj: mklaof1.asm $(OVLARTI) \
+	..\chars\lao\mklaof1.psx \
+	..\chars\lao\mklaof1.psi \
+	..\common\cutup\ocutup.psx \
+	..\common\cutup\ocutup.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+
+

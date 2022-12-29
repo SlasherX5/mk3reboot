@@ -1,0 +1,135 @@
+_lia_panitab1:
+	DD a__lia_stance-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_dummy-_lia_panitab1
+	DD a__lia_victory-_lia_panitab1
+a__lia_dummy:
+a__lia_stance:
+	DD LIASTANCE1-_lia_panitab1
+	DD LIASTANCE2-_lia_panitab1
+	DD LIASTANCE3-_lia_panitab1
+	DD LIASTANCE4-_lia_panitab1
+	DD LIASTANCE5-_lia_panitab1
+	DD LIASTANCE6-_lia_panitab1
+	DD LIASTANCE7-_lia_panitab1
+	DD LIASTANCE8-_lia_panitab1
+	DD LIASTANCE9-_lia_panitab1
+	DD ani_jump
+	DD a__lia_stance-_lia_panitab1
+LIASTANCE1:
+	DD LIASTANCE1_SUB-_lia_panitab1, 0
+LIASTANCE1_SUB:
+	DD LIASTANCE1_IMG-_lia_panitab1
+	DW 44, 108, 13, -8
+LIASTANCE2:
+	DD LIASTANCE2_SUB-_lia_panitab1, 0
+LIASTANCE2_SUB:
+	DD LIASTANCE2_IMG-_lia_panitab1
+	DW 44, 107, 13, -9
+LIASTANCE3:
+	DD LIASTANCE3_SUB-_lia_panitab1, 0
+LIASTANCE3_SUB:
+	DD LIASTANCE3_IMG-_lia_panitab1
+	DW 44, 107, 13, -9
+LIASTANCE4:
+	DD LIASTANCE4_SUB-_lia_panitab1, 0
+LIASTANCE4_SUB:
+	DD LIASTANCE4_IMG-_lia_panitab1
+	DW 44, 107, 13, -9
+LIASTANCE5:
+	DD LIASTANCE5_SUB-_lia_panitab1, 0
+LIASTANCE5_SUB:
+	DD LIASTANCE5_IMG-_lia_panitab1
+	DW 45, 108, 13, -8
+LIASTANCE6:
+	DD LIASTANCE6_SUB-_lia_panitab1, 0
+LIASTANCE6_SUB:
+	DD LIASTANCE6_IMG-_lia_panitab1
+	DW 48, 108, 14, -8
+LIASTANCE7:
+	DD LIASTANCE7_SUB-_lia_panitab1, 0
+LIASTANCE7_SUB:
+	DD LIASTANCE7_IMG-_lia_panitab1
+	DW 54, 108, 18, -8
+LIASTANCE8:
+	DD LIASTANCE8_SUB-_lia_panitab1, 0
+LIASTANCE8_SUB:
+	DD LIASTANCE8_IMG-_lia_panitab1
+	DW 57, 107, 21, -9
+LIASTANCE9:
+	DD LIASTANCE9_SUB-_lia_panitab1, 0
+LIASTANCE9_SUB:
+	DD LIASTANCE9_IMG-_lia_panitab1
+	DW 50, 108, 17, -8
+a__lia_victory:
+	DD RBVICTORY1-_lia_panitab1
+	DD RBVICTORY2-_lia_panitab1
+	DD RBVICTORY3-_lia_panitab1
+	DD RBVICTORY4-_lia_panitab1
+	DD RBVICTORY5-_lia_panitab1
+	DD RBVICTORY6-_lia_panitab1
+	DD RBVICTORY7-_lia_panitab1
+	DD 0
+	DD RBVICTORY1-_lia_panitab1
+	DD ani_adjustx
+	DD -3
+	DD RBVICTORY2-_lia_panitab1
+	DD ani_adjustx
+	DD -3
+	DD RBVICTORY3-_lia_panitab1
+	DD ani_adjustx
+	DD -3
+	DD RBVICTORY4-_lia_panitab1
+	DD ani_adjustx
+	DD -3
+	DD RBVICTORY5-_lia_panitab1
+	DD ani_adjustx
+	DD -3
+	DD RBVICTORY6-_lia_panitab1
+	DD RBVICTORY7-_lia_panitab1
+	DD 0
+RBVICTORY1:
+	DD RBVICTORY1_SUB-_lia_panitab1, 0
+RBVICTORY1_SUB:
+	DD RBVICTORY1_IMG-_lia_panitab1
+	DW 54, 110, 12, -8
+RBVICTORY2:
+	DD RBVICTORY2_SUB-_lia_panitab1, 0
+RBVICTORY2_SUB:
+	DD RBVICTORY2_IMG-_lia_panitab1
+	DW 50, 109, 8, -7
+RBVICTORY3:
+	DD RBVICTORY3_SUB-_lia_panitab1, 0
+RBVICTORY3_SUB:
+	DD RBVICTORY3_IMG-_lia_panitab1
+	DW 62, 110, 11, -6
+RBVICTORY4:
+	DD RBVICTORY4_SUB-_lia_panitab1, 0
+RBVICTORY4_SUB:
+	DD RBVICTORY4_IMG-_lia_panitab1
+	DW 67, 114, 13, -2
+RBVICTORY5:
+	DD RBVICTORY5_SUB-_lia_panitab1, 0
+RBVICTORY5_SUB:
+	DD RBVICTORY5_IMG-_lia_panitab1
+	DW 71, 115, 16, -1
+RBVICTORY6:
+	DD RBVICTORY6_SUB-_lia_panitab1, 0
+RBVICTORY6_SUB:
+	DD RBVICTORY6_IMG-_lia_panitab1
+	DW 75, 116, 20, 0
+RBVICTORY7:
+	DD RBVICTORY7_SUB-_lia_panitab1, 0
+RBVICTORY7_SUB:
+	DD RBVICTORY7_IMG-_lia_panitab1
+	DW 78, 116, 20, 0

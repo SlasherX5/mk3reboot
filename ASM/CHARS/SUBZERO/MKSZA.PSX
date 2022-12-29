@@ -1,0 +1,210 @@
+sz_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+sz_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+	DD a_sz_polar-sz_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+a_sz_polar:
+	DD POLAR1-sz_anitab1
+	DD POLAR3-sz_anitab1
+	DD POLAR4-sz_anitab1
+	DD POLAR5-sz_anitab1
+	DD POLAR6-sz_anitab1
+	DD 0
+	DD POLAR8-sz_anitab1
+	DD POLAR10-sz_anitab1
+	DD POLAR11-sz_anitab1
+	DD 0
+	DD POLAR12-sz_anitab1
+	DD ani_adjustxy
+	DW 0
+	DW 8
+	DD POLAR13-sz_anitab1
+	DD ani_adjustxy
+	DW 0
+	DW 8
+j_polar:
+	DD POLAR15-sz_anitab1
+	DD POLAR16-sz_anitab1
+	DD POLAR17-sz_anitab1
+	DD ani_jump
+	DD j_polar-sz_anitab1
+POLAR1:
+	DD POLAR1_SUB-sz_anitab1, 0
+POLAR1_SUB:
+	DD POLAR1_IMG-sz_anitab1
+	DW 45, 109, 14, -6
+	DD	_POLAR_P
+POLAR3:
+	DD POLAR3_SUB-sz_anitab1, 0
+POLAR3_SUB:
+	DD POLAR3_IMG-sz_anitab1
+	DW 53, 105, 22, -13
+POLAR4:
+	DD POLAR4_SUB-sz_anitab1, 0
+POLAR4_SUB:
+	DD POLAR4_IMG-sz_anitab1
+	DW 59, 94, 29, -25
+POLAR5:
+	DD POLAR5_SUB-sz_anitab1, 0
+POLAR5_SUB:
+	DD POLAR5_IMG-sz_anitab1
+	DW 78, 82, 37, -36
+POLAR6:
+	DD POLAR6_SUB-sz_anitab1, 0
+POLAR6_SUB:
+	DD POLAR6_IMG-sz_anitab1
+	DW 100, 69, 45, -50
+POLAR8:
+	DD POLAR8_SUB-sz_anitab1, 0
+POLAR8_SUB:
+	DD POLAR8_IMG-sz_anitab1
+	DW 71, 112, 40, -7
+POLAR10:
+	DD POLAR10_SUB-sz_anitab1, 0
+POLAR10_SUB:
+	DD POLAR10_IMG-sz_anitab1
+	DW 63, 131, 37, 11
+POLAR11:
+	DD POLAR11_SUB-sz_anitab1, 0
+POLAR11_SUB:
+	DD POLAR11_IMG-sz_anitab1
+	DW 60, 132, 31, 11
+POLAR12:
+	DD POLAR12_SUB-sz_anitab1, 0
+POLAR12_SUB:
+	DD POLAR12_IMG-sz_anitab1
+	DW 68, 133, 30, 14
+POLAR13:
+	DD POLAR13_SUB-sz_anitab1, 0
+POLAR13_SUB:
+	DD POLAR13_IMG-sz_anitab1
+	DW 86, 134, 41, 15
+POLAR15:
+	DD POLAR15_SUB-sz_anitab1, 0
+POLAR15_SUB:
+	DD POLAR15_IMG-sz_anitab1
+	DW 82, 98, 43, -20
+POLAR16:
+	DD POLAR16_SUB-sz_anitab1, 0
+POLAR16_SUB:
+	DD POLAR16_IMG-sz_anitab1
+	DW 85, 83, 51, -36
+POLAR17:
+	DD POLAR17_SUB-sz_anitab1, 0
+POLAR17_SUB:
+	DD POLAR17_IMG-sz_anitab1
+	DW 90, 80, 54, -40

@@ -1,0 +1,109 @@
+ochar_ripped_anis:
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_lia_p2_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_normal_skel-base_anims
+	DD 0
+a_lia_rip:
+	DD LARIP1-base_anims
+	DD LARIP2-base_anims
+	DD LARIP3-base_anims
+	DD LARIP4-base_anims
+	DD LARIP5-base_anims
+	DD LARIP6-base_anims
+	DD LARIP7-base_anims
+	DD 0
+a_lia_p2_rip:
+	DD LIA2_LARIP1-base_anims
+	DD LARIP2-base_anims
+	DD LARIP3-base_anims
+	DD LIA2_LARIP4-base_anims
+	DD LARIP5-base_anims
+	DD LARIP6-base_anims
+	DD LARIP7-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+LIA2_LARIP1:
+	DD LIA2_LARIP1_SUB-base_anims, 0
+LIA2_LARIP1_SUB:
+	DD LIA2_LARIP1_IMG-base_anims
+	DW 78, 96, 46, -21
+	DD   _LIALTFA_P
+LIA2_LARIP4:
+	DD LIA2_LARIP4_SUB-base_anims, 0
+LIA2_LARIP4_SUB:
+	DD LIA2_LARIP4_IMG-base_anims
+	DW 151, 96, 123, -21
+	DD   _LIALTFA_P
+LARIP1:
+	DD LARIP1_SUB-base_anims, 0
+LARIP1_SUB:
+	DD LARIP1_IMG-base_anims
+	DW 78, 96, 46, -21
+	DD   _LIAFLA_P
+LARIP2:
+	DD LARIP2_SUB-base_anims, 0
+LARIP2_SUB:
+	DD LARIP2_IMG-base_anims
+	DW 97, 96, 65, -21
+LARIP3:
+	DD LARIP3_SUB-base_anims, 0
+LARIP3_SUB:
+	DD LARIP3_IMG-base_anims
+	DW 126, 96, 94, -21
+LARIP4:
+	DD LARIP4_SUB-base_anims, 0
+LARIP4_SUB:
+	DD LARIP4_IMG-base_anims
+	DW 151, 96, 123, -21
+	DD   _LIAFLA_P
+LARIP5:
+	DD LARIP5_SUB-base_anims, 0
+LARIP5_SUB:
+	DD LARIP5_IMG-base_anims
+	DW 153, 95, 126, -21
+LARIP6:
+	DD LARIP6_SUB-base_anims, 0
+LARIP6_SUB:
+	DD LARIP6_IMG-base_anims
+	DW 152, 95, 127, -21
+LARIP7:
+	DD LARIP7_SUB-base_anims, 0
+LARIP7_SUB:
+	DD LARIP7_IMG-base_anims
+	DW 94, 91, 128, -21

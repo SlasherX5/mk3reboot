@@ -1,0 +1,252 @@
+lao_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+lao_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_lao_friend-lao_anitab1
+
+	DD a_dog-lao_anitab1
+	DD a_fetch-lao_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+a_lao_friend:
+	DD KLFRIEND3-lao_anitab1
+	DD KLFRIEND4-lao_anitab1
+	DD KLFRIEND6-lao_anitab1
+	DD KLFRIEND7-lao_anitab1
+	DD KLFRIEND8-lao_anitab1
+	DD KLFRIEND9-lao_anitab1
+	DD 0
+	DD KLFRIEND10-lao_anitab1
+	DD KLFRIEND11-lao_anitab1
+	DD 0
+	DD KLFRIEND12-lao_anitab1
+	DD KLFRIEND13-lao_anitab1
+j_lao:
+	DD KLFRIEND14-lao_anitab1
+	DD KLFRIEND15-lao_anitab1
+	DD KLFRIEND16-lao_anitab1
+	DD KLFRIEND17-lao_anitab1
+	DD KLFRIEND16-lao_anitab1
+	DD KLFRIEND15-lao_anitab1
+	DD ani_jump
+	DD j_lao-lao_anitab1
+a_dog:
+	DD LAODOG1-lao_anitab1
+	DD LAODOG2-lao_anitab1
+	DD LAODOG3-lao_anitab1
+	DD LAODOG4-lao_anitab1
+	DD LAODOG5-lao_anitab1
+	DD LAODOG6-lao_anitab1
+	DD ani_jump
+	DD a_dog-lao_anitab1
+a_fetch:
+	DD FETCHHAT2-lao_anitab1
+	DD 0
+KLFRIEND3:
+	DD KLFRIEND3_SUB-lao_anitab1, 0
+KLFRIEND3_SUB:
+	DD KLFRIEND3_IMG-lao_anitab1
+	DW 50, 94, 16, -19
+KLFRIEND4:
+	DD KLFRIEND4_SUB-lao_anitab1, 0
+KLFRIEND4_SUB:
+	DD KLFRIEND4_IMG-lao_anitab1
+	DW 48, 106, 16, -6
+KLFRIEND6:
+	DD KLFRIEND6_SUB-lao_anitab1, 0
+KLFRIEND6_SUB:
+	DD KLFRIEND6_IMG-lao_anitab1
+	DW 45, 109, 17, -4
+KLFRIEND7:
+	DD KLFRIEND7_SUB-lao_anitab1, 0
+KLFRIEND7_SUB:
+	DD KLFRIEND7_IMG-lao_anitab1
+	DW 54, 106, 17, -8
+KLFRIEND8:
+	DD KLFRIEND8_SUB-lao_anitab1, 0
+KLFRIEND8_SUB:
+	DD KLFRIEND8_IMG-lao_anitab1
+	DW 75, 111, 18, -2
+KLFRIEND9:
+	DD KLFRIEND9_SUB-lao_anitab1, 0
+KLFRIEND9_SUB:
+	DD KLFRIEND9_IMG-lao_anitab1
+	DW 95, 111, 21, -2
+KLFRIEND10:
+	DD KLFRIEND10_SUB-lao_anitab1, 0
+KLFRIEND10_SUB:
+	DD KLFRIEND10_IMG-lao_anitab1
+	DW 58, 110, 14, -4
+KLFRIEND11:
+	DD KLFRIEND11_SUB-lao_anitab1, 0
+KLFRIEND11_SUB:
+	DD KLFRIEND11_IMG-lao_anitab1
+	DW 44, 95, 25, -19
+KLFRIEND12:
+	DD KLFRIEND12_SUB-lao_anitab1, 0
+KLFRIEND12_SUB:
+	DD KLFRIEND12_IMG-lao_anitab1
+	DW 47, 102, 26, -12
+KLFRIEND13:
+	DD KLFRIEND13_SUB-lao_anitab1, 0
+KLFRIEND13_SUB:
+	DD KLFRIEND13_IMG-lao_anitab1
+	DW 56, 111, 28, -2
+KLFRIEND14:
+	DD KLFRIEND14_SUB-lao_anitab1, 0
+KLFRIEND14_SUB:
+	DD KLFRIEND14_IMG-lao_anitab1
+	DW 41, 113, 16, -1
+KLFRIEND15:
+	DD KLFRIEND15_SUB-lao_anitab1, 0
+KLFRIEND15_SUB:
+	DD KLFRIEND15_IMG-lao_anitab1
+	DW 41, 113, 16, -1
+KLFRIEND16:
+	DD KLFRIEND16_SUB-lao_anitab1, 0
+KLFRIEND16_SUB:
+	DD KLFRIEND16_IMG-lao_anitab1
+	DW 41, 113, 16, -1
+KLFRIEND17:
+	DD KLFRIEND17_SUB-lao_anitab1, 0
+KLFRIEND17_SUB:
+	DD KLFRIEND17_IMG-lao_anitab1
+	DW 41, 113, 16, -1
+LAODOG1:
+	DD LAODOG1_IMG-lao_anitab1
+	DW 50, 30, -1, -1
+	DD   _LAODOG_P
+LAODOG2:
+	DD LAODOG2_IMG-lao_anitab1
+	DW 50, 30, -1, -2
+LAODOG3:
+	DD LAODOG3_IMG-lao_anitab1
+	DW 46, 28, -1, -3
+LAODOG4:
+	DD LAODOG4_IMG-lao_anitab1
+	DW 48, 31, 0, 0
+LAODOG5:
+	DD LAODOG5_IMG-lao_anitab1
+	DW 47, 32, -1, 0
+LAODOG6:
+	DD LAODOG6_IMG-lao_anitab1
+	DW 47, 31, -2, 0
+FETCHHAT2:
+	DD FETCHHAT2_IMG-lao_anitab1
+	DW 32, 17, 15, 10
+	DD _FETCH_P

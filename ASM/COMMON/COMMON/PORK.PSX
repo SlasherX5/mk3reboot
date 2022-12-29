@@ -1,0 +1,52 @@
+a_pork:
+	DD PORK01-base_anims
+	DD PORK02-base_anims
+	DD PORK03-base_anims
+	DD PORK04-base_anims
+	DD PORK05-base_anims
+	DD PORK06-base_anims
+	DD PORK07-base_anims
+	DD PORK08-base_anims
+	DD PORK09-base_anims
+	DD PORK10-base_anims
+	DD PORK11-base_anims
+	DD PORK12-base_anims
+	DD ani_jump
+	DD a_pork-base_anims
+PORK01:
+	DD PORK01_IMG-base_anims
+	DW 14, 20, 7, 9
+	DD   _BODY_P
+PORK02:
+	DD PORK02_IMG-base_anims
+	DW 16, 13, 8, 6
+PORK03:
+	DD PORK03_IMG-base_anims
+	DW 15, 6, 8, 3
+PORK04:
+	DD PORK04_IMG-base_anims
+	DW 12, 14, 6, 7
+PORK05:
+	DD PORK05_IMG-base_anims
+	DW 8, 20, 5, 10
+PORK06:
+	DD PORK06_IMG-base_anims
+	DW 10, 21, 6, 12
+PORK07:
+	DD PORK07_IMG-base_anims
+	DW 14, 20, 8, 11
+PORK08:
+	DD PORK08_IMG-base_anims
+	DW 16, 13, 10, 7
+PORK09:
+	DD PORK09_IMG-base_anims
+	DW 15, 7, 10, 3
+PORK10:
+	DD PORK10_IMG-base_anims
+	DW 12, 14, 7, 6
+PORK11:
+	DD PORK11_IMG-base_anims
+	DW 6, 20, 4, 9
+PORK12:
+	DD PORK12_IMG-base_anims
+	DW 9, 22, 6, 9

@@ -1,0 +1,195 @@
+lia_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+lia_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+
+	DD a_wasp-lia_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_wasp:
+	DD WASP1-lia_anitab1
+	DD WASP3-lia_anitab1
+	DD WASP4-lia_anitab1
+	DD WASP5-lia_anitab1
+	DD WASP6-lia_anitab1
+	DD 0
+j_wasp:
+	DD WASP7-lia_anitab1
+	DD WASP9-lia_anitab1
+	DD ani_jump
+	DD j_wasp-lia_anitab1
+	DD 0
+j_wasp2:
+	DD WASP9-lia_anitab1
+	DD WASP10-lia_anitab1
+	DD WASP11-lia_anitab1
+	DD ani_calla
+	DD rsnd_stab
+	DD WASP10-lia_anitab1
+	DD ani_jump
+	DD j_wasp2-lia_anitab1
+WASP1:
+	DD WASP1_SUB-lia_anitab1, 0
+WASP1_SUB:
+	DD WASP1_IMG-lia_anitab1
+	DW 44, 107, 13, -8
+	DD   _WASP_P
+WASP3:
+	DD WASP3_SUB-lia_anitab1, 0
+WASP3_SUB:
+	DD WASP3_IMG-lia_anitab1
+	DW 58, 108, 22, -13
+WASP4:
+	DD WASP4_SUB-lia_anitab1, 0
+WASP4_SUB:
+	DD WASP4_IMG-lia_anitab1
+	DW 66, 99, 28, -20
+WASP5:
+	DD WASP5_SUB-lia_anitab1, 0
+WASP5_SUB:
+	DD WASP5_IMG-lia_anitab1
+	DW 94, 101, 35, -16
+WASP6:
+	DD WASP6_SUB-lia_anitab1, 0
+WASP6_SUB:
+	DD WASP6_IMG-lia_anitab1
+	DW 116, 105, 42, -12
+WASP7:
+	DD WASP7_SUB-lia_anitab1, 0
+WASP7_SUB:
+	DD WASP7_IMG-lia_anitab1
+	DW 116, 131, 42, 13
+WASP9:
+	DD WASP9_SUB-lia_anitab1, 0
+WASP9_SUB:
+	DD WASP9_IMG-lia_anitab1
+	DW 109, 135, 35, 13
+WASP10:
+	DD WASP10_SUB-lia_anitab1, 0
+WASP10_SUB:
+	DD WASP10_IMG-lia_anitab1
+	DW 111, 122, 43, -6
+WASP11:
+	DD WASP11_SUB-lia_anitab1, 0
+WASP11_SUB:
+	DD WASP11_IMG-lia_anitab1
+	DW 107, 131, 39, 8

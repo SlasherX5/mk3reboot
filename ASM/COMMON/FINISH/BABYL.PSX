@@ -1,0 +1,43 @@
+baby_text:
+    DD BABALITY1-base_anims
+    DD BABALITY2-base_anims
+    DD BABALITY3-base_anims
+    DD BABALITY4-base_anims
+    DD BABALITY5-base_anims
+    DD BABALITY6-base_anims
+    DD BABALITY7-base_anims
+    DD BABALITY8-base_anims
+    DD 0
+
+BABALITY1:
+    DD BABALITY1_IMG-base_anims
+    DW 33, 29, 0, 0
+    DD   _BABYB_P
+BABALITY2:
+    DD BABALITY2_IMG-base_anims
+    DW 31, 29, 0, 0
+    DD   _BABYA_P
+BABALITY3:
+    DD BABALITY3_IMG-base_anims
+    DW 29, 29, 0, 0
+    DD   _BABYB_P
+BABALITY4:
+    DD BABALITY4_IMG-base_anims
+    DW 27, 29, 0, 0
+    DD   _BABYA_P
+BABALITY5:
+    DD BABALITY5_IMG-base_anims
+    DW 28, 29, 0, 0
+    DD   _BABYL_P
+BABALITY6:
+    DD BABALITY6_IMG-base_anims
+    DW 30, 30, 0, 0
+    DD   _BABYI_P
+BABALITY7:
+    DD BABALITY7_IMG-base_anims
+    DW 32, 29, 0, 0
+    DD   _BABYT_P
+BABALITY8:
+    DD BABALITY8_IMG-base_anims
+    DW 34, 29, 0, 0
+    DD   _BABYY_P

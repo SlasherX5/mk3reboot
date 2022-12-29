@@ -1,0 +1,222 @@
+_swat_panitab1:
+	DD a__swat_stance-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_dummy-_swat_panitab1
+	DD a__swat_victory-_swat_panitab1
+a__swat_dummy:
+a__swat_stance:
+	DD OBSTANCE1-_swat_panitab1
+	DD OBSTANCE2-_swat_panitab1
+	DD OBSTANCE3-_swat_panitab1
+	DD OBSTANCE4-_swat_panitab1
+	DD OBSTANCE5-_swat_panitab1
+	DD OBSTANCE6-_swat_panitab1
+	DD OBSTANCE7-_swat_panitab1
+	DD ani_jump
+	DD a__swat_stance-_swat_panitab1
+a__swat_victory:
+	DD OBVICTORY1-_swat_panitab1
+	DD OBVICTORY2-_swat_panitab1
+	DD OBVICTORY3-_swat_panitab1
+	DD OBVICTORY4-_swat_panitab1
+	DD OBVICTORY5-_swat_panitab1
+	DD ani_nosleep
+	DD OBVICTORY6-_swat_panitab1
+	DD ani_sladd
+	DD BLASTVIC1-_swat_panitab1
+	DD 0
+	DD ani_slani_sleep
+	DD BLASTVIC1-_swat_panitab1
+	DD ani_ochar_sound
+	DD 5
+	DD ani_slani_sleep
+	DD BLASTVIC2-_swat_panitab1
+	DD ani_ochar_sound
+	DD 5
+	DD ani_slani_sleep
+	DD BLASTVIC3-_swat_panitab1
+	DD ani_ochar_sound
+	DD 5
+	DD ani_slani_sleep
+	DD BLASTVIC4-_swat_panitab1
+	DD ani_ochar_sound
+	DD 5
+	DD 0
+	DD OBVICTORY7-_swat_panitab1
+	DD OBVICTORY8-_swat_panitab1
+	DD OBVICTORY91-_swat_panitab1
+	DD OBVICTORY92-_swat_panitab1
+	DD OBVICTORY93-_swat_panitab1
+	DD OBVICTORY94-_swat_panitab1
+	DD OBVICTORY95-_swat_panitab1
+	DD OBVICTORY96-_swat_panitab1
+	DD OBVICTORY10-_swat_panitab1
+	DD OBVICTORY11-_swat_panitab1
+	DD OBVICTORY12-_swat_panitab1
+	DD OBVICTORY13-_swat_panitab1
+	DD OBVICTORY14-_swat_panitab1
+	DD 0
+a__swat_victory_bolts:
+	DD 0
+	DD 0
+OBSTANCE1:
+	DD OBSTANCE1_SUB-_swat_panitab1, 0
+OBSTANCE1_SUB:
+	DD OBSTANCE1_IMG-_swat_panitab1
+	DW 45, 112, 14, -7
+OBSTANCE2:
+	DD OBSTANCE2_SUB-_swat_panitab1, 0
+OBSTANCE2_SUB:
+	DD OBSTANCE2_IMG-_swat_panitab1
+	DW 45, 112, 14, -7
+OBSTANCE3:
+	DD OBSTANCE3_SUB-_swat_panitab1, 0
+OBSTANCE3_SUB:
+	DD OBSTANCE3_IMG-_swat_panitab1
+	DW 46, 111, 14, -8
+OBSTANCE4:
+	DD OBSTANCE4_SUB-_swat_panitab1, 0
+OBSTANCE4_SUB:
+	DD OBSTANCE4_IMG-_swat_panitab1
+	DW 46, 111, 14, -8
+OBSTANCE5:
+	DD OBSTANCE5_SUB-_swat_panitab1, 0
+OBSTANCE5_SUB:
+	DD OBSTANCE5_IMG-_swat_panitab1
+	DW 45, 112, 14, -7
+OBSTANCE6:
+	DD OBSTANCE6_SUB-_swat_panitab1, 0
+OBSTANCE6_SUB:
+	DD OBSTANCE6_IMG-_swat_panitab1
+	DW 48, 112, 17, -7
+OBSTANCE7:
+	DD OBSTANCE7_SUB-_swat_panitab1, 0
+OBSTANCE7_SUB:
+	DD OBSTANCE7_IMG-_swat_panitab1
+	DW 49, 112, 18, -7
+OBVICTORY1:
+	DD OBVICTORY1_SUB-_swat_panitab1, 0
+OBVICTORY1_SUB:
+	DD OBVICTORY1_IMG-_swat_panitab1
+	DW 38, 115, 13, -4
+OBVICTORY2:
+	DD OBVICTORY2_SUB-_swat_panitab1, 0
+OBVICTORY2_SUB:
+	DD OBVICTORY2_IMG-_swat_panitab1
+	DW 40, 116, 8, -2
+OBVICTORY3:
+	DD OBVICTORY3_SUB-_swat_panitab1, 0
+OBVICTORY3_SUB:
+	DD OBVICTORY3_IMG-_swat_panitab1
+	DW 41, 116, 10, -2
+OBVICTORY4:
+	DD OBVICTORY4_SUB-_swat_panitab1, 0
+OBVICTORY4_SUB:
+	DD OBVICTORY4_IMG-_swat_panitab1
+	DW 45, 132, 15, 12
+OBVICTORY5:
+	DD OBVICTORY5_SUB-_swat_panitab1, 0
+OBVICTORY5_SUB:
+	DD OBVICTORY5_IMG-_swat_panitab1
+	DW 38, 155, 10, 35
+OBVICTORY6:
+	DD OBVICTORY6_SUB-_swat_panitab1, 0
+OBVICTORY6_SUB:
+	DD OBVICTORY6_IMG-_swat_panitab1
+	DW 38, 151, 10, 31
+BLASTVIC1:
+	DD BLASTVIC1_SUB-_swat_panitab1, 0
+BLASTVIC1_SUB:
+	DD BLASTVIC1_IMG-_swat_panitab1
+	DW 26, 48, 21, 60
+	DD   _GFIRE_P
+BLASTVIC2:
+	DD BLASTVIC2_SUB-_swat_panitab1, 0
+BLASTVIC2_SUB:
+	DD BLASTVIC2_IMG-_swat_panitab1
+	DW 14, 46, 14, 59
+BLASTVIC3:
+	DD BLASTVIC3_SUB-_swat_panitab1, 0
+BLASTVIC3_SUB:
+	DD BLASTVIC3_IMG-_swat_panitab1
+	DW 25, 45, 20, 58
+BLASTVIC4:
+	DD BLASTVIC4_SUB-_swat_panitab1, 0
+BLASTVIC4_SUB:
+	DD BLASTVIC4_IMG-_swat_panitab1
+	DW 15, 42, 14, 54
+OBVICTORY7:
+	DD OBVICTORY7_SUB-_swat_panitab1, 0
+OBVICTORY7_SUB:
+	DD OBVICTORY7_IMG-_swat_panitab1
+	DW 44, 141, 18, 21
+OBVICTORY8:
+	DD OBVICTORY8_SUB-_swat_panitab1, 0
+OBVICTORY8_SUB:
+	DD OBVICTORY8_IMG-_swat_panitab1
+	DW 53, 118, 26, -1
+OBVICTORY91:
+	DD OBVICTORY91_SUB-_swat_panitab1, 0
+OBVICTORY91_SUB:
+	DD OBVICTORY91_IMG-_swat_panitab1
+	DW 58, 118, 32, -1
+OBVICTORY92:
+	DD OBVICTORY92_SUB-_swat_panitab1, 0
+OBVICTORY92_SUB:
+	DD OBVICTORY92_IMG-_swat_panitab1
+	DW 50, 118, 25, -1
+OBVICTORY93:
+	DD OBVICTORY93_SUB-_swat_panitab1, 0
+OBVICTORY93_SUB:
+	DD OBVICTORY93_IMG-_swat_panitab1
+	DW 52, 118, 26, -1
+OBVICTORY94:
+	DD OBVICTORY94_SUB-_swat_panitab1, 0
+OBVICTORY94_SUB:
+	DD OBVICTORY94_IMG-_swat_panitab1
+	DW 49, 118, 23, -1
+OBVICTORY95:
+	DD OBVICTORY95_SUB-_swat_panitab1, 0
+OBVICTORY95_SUB:
+	DD OBVICTORY95_IMG-_swat_panitab1
+	DW 50, 118, 25, -1
+OBVICTORY96:
+	DD OBVICTORY96_SUB-_swat_panitab1, 0
+OBVICTORY96_SUB:
+	DD OBVICTORY96_IMG-_swat_panitab1
+	DW 46, 118, 20, -1
+OBVICTORY10:
+	DD OBVICTORY10_SUB-_swat_panitab1, 0
+OBVICTORY10_SUB:
+	DD OBVICTORY10_IMG-_swat_panitab1
+	DW 43, 114, 16, -5
+OBVICTORY11:
+	DD OBVICTORY11_SUB-_swat_panitab1, 0
+OBVICTORY11_SUB:
+	DD OBVICTORY11_IMG-_swat_panitab1
+	DW 36, 117, 8, -2
+OBVICTORY12:
+	DD OBVICTORY12_SUB-_swat_panitab1, 0
+OBVICTORY12_SUB:
+	DD OBVICTORY12_IMG-_swat_panitab1
+	DW 42, 116, 10, -2
+OBVICTORY13:
+	DD OBVICTORY13_SUB-_swat_panitab1, 0
+OBVICTORY13_SUB:
+	DD OBVICTORY13_IMG-_swat_panitab1
+	DW 38, 116, 14, -2
+OBVICTORY14:
+	DD OBVICTORY14_SUB-_swat_panitab1, 0
+OBVICTORY14_SUB:
+	DD OBVICTORY14_IMG-_swat_panitab1
+	DW 38, 116, 14, -3

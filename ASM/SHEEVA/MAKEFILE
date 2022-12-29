@@ -1,0 +1,203 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)sheeva/sheevab.bin \
+     $(EXE)sheeva/sheeva.bin  \
+	 $(EXE)sheeva/sheevaa.bin \
+	 $(EXE)sheeva/sheevas.bin \
+	 $(EXE)sheeva/sheevaf.bin \
+	 $(EXE)sheeva/sgf1in.bin \
+	 $(EXE)sheeva/sgf1jx.bin \
+	 $(EXE)sheeva/sgf1kl.bin \
+	 $(EXE)sheeva/sgf1kn.bin \
+	 $(EXE)sheeva/sgf1li.bin \
+	 $(EXE)sheeva/sgf1lk.bin \
+	 $(EXE)sheeva/sgf1rb.bin \
+	 $(EXE)sheeva/sgf1sg.bin \
+	 $(EXE)sheeva/sgf1sn.bin \
+	 $(EXE)sheeva/sgf1st.bin \
+	 $(EXE)sheeva/sgf1sw.bin \
+	 $(EXE)sheeva/sgf1sz.bin \
+	 $(EXE)sheeva/sgf1ts.bin \
+	 .SYMBOLIC
+
+
+# MAIN GAME	PLAY
+sheeva.obj: sheeva.asm $(OVLARTI) \
+	..\chars\femgoro\mksg.psx  \
+	..\chars\femgoro\mksg.psi  \
+	..\chars\femgoro\sgb.psi \
+
+# FRIENDSHIP
+sheevas.obj: sheevas.asm $(OVLARTI) \
+	..\chars\femgoro\mksgs.psx \
+	..\chars\femgoro\mksgs.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+# BABALITY
+sheevab.obj: sheevab.asm $(OVLARTI) \
+	..\chars\femgoro\mksgb.psx \
+	..\common\baby\babysg.psx \
+	..\common\baby\babysg.psi \
+	..\common\baby\babyxpld.psi
+
+# ANIMALITY
+sheevaa.obj: sheevaa.asm $(OVLARTI) \
+	..\chars\femgoro\mksga.psx \
+	..\chars\femgoro\mksga.psi \
+	..\common\common\arm2.psx \
+	..\common\common\arm2.psi \
+	..\common\common\leg.psx	\
+	..\common\common\leg.psi	\
+	..\common\common\bone.psx \
+	..\common\common\bone.psi \
+	..\common\common\cage.psx \
+	..\common\common\cage.psi \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+# FATALITIES
+
+sheevaf.obj: sheevaf.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf.psx \
+	..\chars\femgoro\mksgf.psi \
+	..\common\pounded\opound.psx	\
+	..\common\pounded\opound.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1kn.obj: sgf1kn.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orkano.psx \
+	..\common\reach\orkano.psi \
+	..\common\rip\oripkn.psx	  \
+	..\common\rip\oripkn.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1sn.obj: sgf1sn.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orsonya.psx \
+	..\common\reach\orsonya.psi \
+	..\common\rip\oripsn.psx	  \
+	..\common\rip\oripsn.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1jx.obj: sgf1jx.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orjax.psx \
+	..\common\reach\orjax.psi \
+	..\common\rip\oripjax.psx	  \
+	..\common\rip\oripjax.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1in.obj: sgf1in.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orind.psx \
+	..\common\reach\orind.psi \
+	..\common\rip\oripind.psx	  \
+	..\common\rip\oripind.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1sz.obj: sgf1sz.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orsz.psx \
+	..\common\reach\orsz.psi \
+	..\common\rip\oripsz.psx	  \
+	..\common\rip\oripsz.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1sw.obj: sgf1sw.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orswat.psx \
+	..\common\reach\orswat.psi \
+	..\common\rip\oripswat.psx	  \
+	..\common\rip\oripswat.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1li.obj: sgf1li.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orlia.psx \
+	..\common\reach\orlia.psi \
+	..\common\rip\oriplia.psx	  \
+	..\common\rip\oriplia.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1rb.obj: sgf1rb.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orrobo.psx \
+	..\common\reach\orrobo.psi \
+	..\common\rip\oriprobo.psx	  \
+	..\common\rip\oriprobo.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1kl.obj: sgf1kl.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orlao.psx \
+	..\common\reach\orlao.psi \
+	..\common\rip\oriplao.psx	  \
+	..\common\rip\oriplao.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1ts.obj: sgf1ts.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\ortusk.psx \
+	..\common\reach\ortusk.psi \
+	..\common\rip\oriptusk.psx	  \
+	..\common\rip\oriptusk.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1sg.obj: sgf1sg.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orsg.psx \
+	..\common\reach\orsg.psi \
+	..\common\rip\oripsg.psx	  \
+	..\common\rip\oripsg.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1st.obj: sgf1st.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orst.psx \
+	..\common\reach\orst.psi \
+	..\common\rip\oripst.psx	  \
+	..\common\rip\oripst.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+sgf1lk.obj: sgf1lk.asm $(OVLARTI) \
+	..\chars\femgoro\mksgf1.psx \
+	..\chars\femgoro\mksgf1.psi \
+	..\common\reach\orlk.psx \
+	..\common\reach\orlk.psi \
+	..\common\rip\oriplk.psx	  \
+	..\common\rip\oriplk.psi	  \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+

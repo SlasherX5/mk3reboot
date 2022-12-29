@@ -1,0 +1,169 @@
+_ind_panitab1:
+	DD a__ind_stance-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_dummy-_ind_panitab1
+	DD a__ind_vicctory-_ind_panitab1
+a__ind_dummy:
+a__ind_stance:
+	DD INSTANCE1-_ind_panitab1
+	DD INSTANCE2-_ind_panitab1
+	DD INSTANCE3-_ind_panitab1
+	DD INSTANCE4-_ind_panitab1
+	DD INSTANCE5-_ind_panitab1
+	DD INSTANCE6-_ind_panitab1
+	DD INSTANCE7-_ind_panitab1
+	DD INSTANCE8-_ind_panitab1
+	DD INSTANCE9-_ind_panitab1
+	DD ani_jump
+	DD a__ind_stance-_ind_panitab1
+a__ind_vicctory:
+	DD INVICTORY1-_ind_panitab1
+	DD INVICTORY2-_ind_panitab1
+	DD INVICTORY3-_ind_panitab1
+	DD INVICTORY4-_ind_panitab1
+	DD INVICTORY5-_ind_panitab1
+	DD INVICTORY6-_ind_panitab1
+	DD INVICTORY7-_ind_panitab1
+	DD 0
+	DD ani_sladd
+	DD FLAME1-_ind_panitab1
+	DD INVICTORY7-_ind_panitab1
+	DD ani_slani
+	DD FLAME2-_ind_panitab1
+	DD INVICTORY7-_ind_panitab1
+j_flame:
+	DD ani_slani
+	DD FLAME3-_ind_panitab1
+	DD INVICTORY7-_ind_panitab1
+	DD ani_slani
+	DD FLAME4-_ind_panitab1
+	DD INVICTORY7-_ind_panitab1
+	DD ani_slani
+	DD FLAME5-_ind_panitab1
+	DD INVICTORY7-_ind_panitab1
+	DD ani_slani
+	DD FLAME6-_ind_panitab1
+	DD INVICTORY7-_ind_panitab1
+	DD ani_jump
+	DD j_flame-_ind_panitab1
+INSTANCE1:
+	DD INSTANCE1_SUB-_ind_panitab1, 0
+INSTANCE1_SUB:
+	DD INSTANCE1_IMG-_ind_panitab1
+	DW 52, 106, 21, -10
+INSTANCE2:
+	DD INSTANCE2_SUB-_ind_panitab1, 0
+INSTANCE2_SUB:
+	DD INSTANCE2_IMG-_ind_panitab1
+	DW 52, 106, 20, -10
+INSTANCE3:
+	DD INSTANCE3_SUB-_ind_panitab1, 0
+INSTANCE3_SUB:
+	DD INSTANCE3_IMG-_ind_panitab1
+	DW 53, 106, 21, -10
+INSTANCE4:
+	DD INSTANCE4_SUB-_ind_panitab1, 0
+INSTANCE4_SUB:
+	DD INSTANCE4_IMG-_ind_panitab1
+	DW 53, 106, 22, -10
+INSTANCE5:
+	DD INSTANCE5_SUB-_ind_panitab1, 0
+INSTANCE5_SUB:
+	DD INSTANCE5_IMG-_ind_panitab1
+	DW 52, 106, 23, -10
+INSTANCE6:
+	DD INSTANCE6_SUB-_ind_panitab1, 0
+INSTANCE6_SUB:
+	DD INSTANCE6_IMG-_ind_panitab1
+	DW 53, 107, 25, -9
+INSTANCE7:
+	DD INSTANCE7_SUB-_ind_panitab1, 0
+INSTANCE7_SUB:
+	DD INSTANCE7_IMG-_ind_panitab1
+	DW 53, 107, 25, -9
+INSTANCE8:
+	DD INSTANCE8_SUB-_ind_panitab1, 0
+INSTANCE8_SUB:
+	DD INSTANCE8_IMG-_ind_panitab1
+	DW 51, 107, 23, -9
+INSTANCE9:
+	DD INSTANCE9_SUB-_ind_panitab1, 0
+INSTANCE9_SUB:
+	DD INSTANCE9_IMG-_ind_panitab1
+	DW 51, 107, 22, -9
+INVICTORY1:
+	DD INVICTORY1_SUB-_ind_panitab1, 0
+INVICTORY1_SUB:
+	DD INVICTORY1_IMG-_ind_panitab1
+	DW 71, 109, 43, -8
+INVICTORY2:
+	DD INVICTORY2_SUB-_ind_panitab1, 0
+INVICTORY2_SUB:
+	DD INVICTORY2_IMG-_ind_panitab1
+	DW 62, 120, 31, 2
+INVICTORY3:
+	DD INVICTORY3_SUB-_ind_panitab1, 0
+INVICTORY3_SUB:
+	DD INVICTORY3_IMG-_ind_panitab1
+	DW 53, 121, 20, 3
+INVICTORY4:
+	DD INVICTORY4_SUB-_ind_panitab1, 0
+INVICTORY4_SUB:
+	DD INVICTORY4_IMG-_ind_panitab1
+	DW 46, 103, 15, -14
+INVICTORY5:
+	DD INVICTORY5_SUB-_ind_panitab1, 0
+INVICTORY5_SUB:
+	DD INVICTORY5_IMG-_ind_panitab1
+	DW 47, 123, 16, 5
+INVICTORY6:
+	DD INVICTORY6_SUB-_ind_panitab1, 0
+INVICTORY6_SUB:
+	DD INVICTORY6_IMG-_ind_panitab1
+	DW 51, 132, 19, 14
+INVICTORY7:
+	DD INVICTORY7_SUB-_ind_panitab1, 0
+INVICTORY7_SUB:
+	DD INVICTORY7_IMG-_ind_panitab1
+	DW 58, 135, 27, 17
+FLAME1:
+	DD FLAME1_SUB-_ind_panitab1, 0
+FLAME1_SUB:
+	DD FLAME1_IMG-_ind_panitab1
+	DW 46, 45, 32, 24
+	DD   _GRNFLM_P
+FLAME2:
+	DD FLAME2_SUB-_ind_panitab1, 0
+FLAME2_SUB:
+	DD FLAME2_IMG-_ind_panitab1
+	DW 45, 21, 32, 26
+FLAME3:
+	DD FLAME3_SUB-_ind_panitab1, 0
+FLAME3_SUB:
+	DD FLAME3_IMG-_ind_panitab1
+	DW 49, 23, 34, 29
+FLAME4:
+	DD FLAME4_SUB-_ind_panitab1, 0
+FLAME4_SUB:
+	DD FLAME4_IMG-_ind_panitab1
+	DW 50, 26, 35, 31
+FLAME5:
+	DD FLAME5_SUB-_ind_panitab1, 0
+FLAME5_SUB:
+	DD FLAME5_IMG-_ind_panitab1
+	DW 53, 28, 36, 34
+FLAME6:
+	DD FLAME6_SUB-_ind_panitab1, 0
+FLAME6_SUB:
+	DD FLAME6_IMG-_ind_panitab1
+	DW 54, 30, 37, 36

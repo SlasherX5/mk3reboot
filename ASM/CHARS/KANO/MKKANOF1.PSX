@@ -1,0 +1,745 @@
+kano_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+kano_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0	;a_shoot_lazer-kano_anitab1
+	DD a_kano_rip_skel-kano_anitab1
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0	;a_kano_shocked-kano_anitab1
+	DD 0
+	DD 0
+	DD ochar_reached-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD 0	;a_blood_explode-base_anims	;34
+	DD 0
+	DD 0	;a_arm2-base_anims
+	DD 0	;a_leg-base_anims
+	DD 0
+	DD 0	;a_bone-base_anims
+	DD 0
+	DD 0	;a_rib_cage-base_anims
+	DD 0	;a_skull-base_anims
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_dummy:
+;a_shoot_lazer
+;	DW KNLASER1-kano_anitab1
+;	DW KNLASER1-kano_anitab1
+;	DW KNLASER1-kano_anitab1
+;	DW ani_sladd
+;	DW LASEREYE1-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE2-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE3-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE4-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE5-kano_anitab1
+;	DW ani_slani
+;	DW LASEREYE6-kano_anitab1
+;	DW KNLASER2-kano_anitab1
+;	DW ani_slani
+;	DW LASEREYE7-kano_anitab1
+;	DW KNLASER3-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE8-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE9-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE10-kano_anitab1
+;	DW 0
+;	DW ani_slani_sleep
+;	DW LASEREYE11-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE12-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE13-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE14-kano_anitab1
+;	DW 0
+;	DW ani_slani_sleep
+;	DW LASEREYE15-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE16-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE17-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE18-kano_anitab1
+;	DW ani_slani_sleep
+;	DW LASEREYE19-kano_anitab1
+;	DW KNLASER3-kano_anitab1
+;	DW KNLASER2-kano_anitab1
+;	DW KNLASER1-kano_anitab1
+;	DW 0
+a_kano_rip_skel:
+	DD KNRIPSKEL1-kano_anitab1
+	DD KNRIPSKEL2-kano_anitab1
+	DD KNRIPSKEL3-kano_anitab1
+	DD KNRIPSKEL4-kano_anitab1
+	DD 0
+	DD KNRIPSKEL5-kano_anitab1
+	DD ani_sladd
+	DD MAINBONE1-kano_anitab1
+	DD KNRIPSKEL6-kano_anitab1
+	DD ani_slani
+	DD MAINBONE2-kano_anitab1
+	DD KNRIPSKEL7-kano_anitab1
+	DD ani_slani
+	DD MAINBONE3-kano_anitab1
+	DD KNRIPSKEL7-kano_anitab1
+	DD ani_slani
+	DD MAINBONE4-kano_anitab1
+	DD KNRIPSKEL8-kano_anitab1
+	DD ani_slani
+	DD MAINBONE5-kano_anitab1
+	DD KNRIPSKEL9-kano_anitab1
+	DD ani_slani
+	DD MAINBONE6-kano_anitab1
+	DD KNRIPSKEL9-kano_anitab1
+	DD 0
+;a_kano_shocked
+;a_KNBZZ
+;	DW KNBZZ1-kano_anitab1
+;	DW KNBZZ2-kano_anitab1
+;	DW KNBZZ3-kano_anitab1
+;	DW KNBZZ4-kano_anitab1
+;	DW 0
+;a_SBBZZ
+;	DW SBBZZ1-kano_anitab1
+;	DW SBBZZ2-kano_anitab1
+;	DW SBBZZ3-kano_anitab1
+;	DW SBBZZ4-kano_anitab1
+;	DW 0
+;a_JXBZZ
+;	DW JXBZZ1-kano_anitab1
+;	DW JXBZZ2-kano_anitab1
+;	DW JXBZZ3-kano_anitab1
+;	DW JXBZZ4-kano_anitab1
+;	DW 0
+;a_INBZZ
+;	DW INBZZ1-kano_anitab1
+;	DW INBZZ2-kano_anitab1
+;	DW INBZZ3-kano_anitab1
+;	DW INBZZ4-kano_anitab1
+;	DW 0
+;a_SZBZZ
+;	DW SZBZZ1-kano_anitab1
+;	DW SZBZZ2-kano_anitab1
+;	DW SZBZZ3-kano_anitab1
+;	DW SZBZZ4-kano_anitab1
+;	DW 0
+;a_OBBZZ
+;	DW OBBZZ1-kano_anitab1
+;	DW OBBZZ2-kano_anitab1
+;	DW OBBZZ3-kano_anitab1
+;	DW OBBZZ4-kano_anitab1
+;	DW 0
+;a_LIBZZ
+;	DW LIBZZ1-kano_anitab1
+;	DW LIBZZ2-kano_anitab1
+;	DW LIBZZ3-kano_anitab1
+;	DW LIBZZ4-kano_anitab1
+;	DW 0
+;a_RBBZZ2
+;	DW RBBZZ1-kano_anitab1
+;	DW RBBZZ2-kano_anitab1
+;	DW RBBZZ3-kano_anitab1
+;	DW RBBZZ4-kano_anitab1
+;	DW 0
+;a_RBBZZ
+;	DW RBBZZ1-kano_anitab1
+;	DW RBBZZ2-kano_anitab1
+;	DW RBBZZ3-kano_anitab1
+;	DW RBBZZ4-kano_anitab1
+;	DW 0
+;a_KLBZZ
+;	DW KLBZZ1-kano_anitab1
+;	DW KLBZZ2-kano_anitab1
+;	DW KLBZZ3-kano_anitab1
+;	DW KLBZZ4-kano_anitab1
+;	DW 0
+;a_TRBZZ
+;	DW TRBZZ1-kano_anitab1
+;	DW TRBZZ2-kano_anitab1
+;	DW TRBZZ3-kano_anitab1
+;	DW TRBZZ4-kano_anitab1
+;	DW 0
+;a_SGBZZ
+;	DW SGBZZ1-kano_anitab1
+;	DW SGBZZ2-kano_anitab1
+;	DW SGBZZ3-kano_anitab1
+;	DW SGBZZ4-kano_anitab1
+;	DW 0
+;a_TSBZZ
+;	DW TSBZZ1-kano_anitab1
+;	DW TSBZZ2-kano_anitab1
+;	DW TSBZZ3-kano_anitab1
+;	DW TSBZZ4-kano_anitab1
+;	DW 0
+;a_LUBZZ
+;	DW LUBZZ1-kano_anitab1
+;	DW LUBZZ2-kano_anitab1
+;	DW LUBZZ3-kano_anitab1
+;	DW LUBZZ4-kano_anitab1
+;	DW 0
+;	DW RBBZZ1-kano_anitab1
+;	DW RBBZZ2-kano_anitab1
+;	DW RBBZZ3-kano_anitab1
+;	DW RBBZZ4-kano_anitab1
+;	DW 0
+;KNLASER1
+;	DW KNLASER1_SUB-kano_anitab1, 0
+;KNLASER1_SUB
+;	DW KNLASER1_IMG-kano_anitab1
+;	DH 49, 114, 17, -3
+;LASEREYE1
+;	DW LASEREYE1_SUB-kano_anitab1, 0
+;LASEREYE1_SUB
+;	DW LASEREYE1_IMG-kano_anitab1
+;	DH 4, 4, -16, -8
+;	dw   LASEREY_P
+;LASEREYE2
+;	DW LASEREYE2_SUB-kano_anitab1, 0
+;LASEREYE2_SUB
+;	DW LASEREYE2_IMG-kano_anitab1
+;	DH 8, 9, -14, -7
+;LASEREYE3
+;	DW LASEREYE3_SUB-kano_anitab1, 0
+;LASEREYE3_SUB
+;	DW LASEREYE3_IMG-kano_anitab1
+;	DH 12, 13, -13, -5
+;LASEREYE4
+;	DW LASEREYE4_SUB-kano_anitab1, 0
+;LASEREYE4_SUB
+;	DW LASEREYE4_IMG-kano_anitab1
+;	DH 16, 17, -10, -2
+;LASEREYE5
+;	DW LASEREYE5_SUB-kano_anitab1, 0
+;LASEREYE5_SUB
+;	DW LASEREYE5_IMG-kano_anitab1
+;	DH 20, 21, -9, -1
+;LASEREYE6
+;	DW LASEREYE6_SUB-kano_anitab1, 0
+;LASEREYE6_SUB
+;	DW LASEREYE6_IMG-kano_anitab1
+;	DH 16, 17, -20, -7
+;KNLASER2
+;	DW KNLASER2_SUB-kano_anitab1, 0
+;KNLASER2_SUB
+;	DW KNLASER2_IMG-kano_anitab1
+;	DH 48, 110, 16, -8
+;LASEREYE7
+;	DW LASEREYE7_SUB-kano_anitab1, 0
+;LASEREYE7_SUB
+;	DW LASEREYE7_IMG-kano_anitab1
+;	DH 13, 13, -30, -15
+;KNLASER3
+;	DW KNLASER3_SUB-kano_anitab1, 0
+;KNLASER3_SUB
+;	DW KNLASER3_IMG-kano_anitab1
+;	DH 53, 105, 14, -13
+;LASEREYE8
+;	DW LASEREYE8_SUB-kano_anitab1, 0
+;LASEREYE8_SUB
+;	DW LASEREYE8_IMG-kano_anitab1
+;	DH 30, 9, -32, -17
+;LASEREYE9
+;	DW LASEREYE9_SUB-kano_anitab1, 0
+;LASEREYE9_SUB
+;	DW LASEREYE9_IMG-kano_anitab1
+;	DH 61, 4, -34, -19
+;LASEREYE10
+;	DW LASEREYE10_SUB-kano_anitab1, 0
+;LASEREYE10_SUB
+;	DW LASEREYE10_IMG-kano_anitab1
+;	DH 98, 9, -32, -17
+;LASEREYE11
+;	DW LASEREYE11_SUB-kano_anitab1, 0
+;LASEREYE11_SUB
+;	DW LASEREYE11_IMG-kano_anitab1
+;	DH 114, 4, -34, -19
+;LASEREYE12
+;	DW LASEREYE12_SUB-kano_anitab1, 0
+;LASEREYE12_SUB
+;	DW LASEREYE12_IMG-kano_anitab1
+;	DH 115, 6, -33, -19
+;LASEREYE13
+;	DW LASEREYE13_SUB-kano_anitab1, 0
+;LASEREYE13_SUB
+;	DW LASEREYE13_IMG-kano_anitab1
+;	DH 114, 4, -34, -19
+;LASEREYE14
+;	DW LASEREYE14_SUB-kano_anitab1, 0
+;LASEREYE14_SUB
+;	DW LASEREYE14_IMG-kano_anitab1
+;	DH 115, 6, -33, -19
+;LASEREYE15
+;	DW LASEREYE15_SUB-kano_anitab1, 0
+;LASEREYE15_SUB
+;	DW LASEREYE15_IMG-kano_anitab1
+;	DH 114, 4, -34, -19
+;LASEREYE16
+;	DW LASEREYE16_SUB-kano_anitab1, 0
+;LASEREYE16_SUB
+;	DW LASEREYE16_IMG-kano_anitab1
+;	DH 117, 9, -32, -17
+;LASEREYE17
+;	DW LASEREYE17_SUB-kano_anitab1, 0
+;LASEREYE17_SUB
+;	DW LASEREYE17_IMG-kano_anitab1
+;	DH 114, 4, -34, -19
+;LASEREYE18
+;	DW LASEREYE18_SUB-kano_anitab1, 0
+;LASEREYE18_SUB
+;	DW LASEREYE18_IMG-kano_anitab1
+;	DH 114, 4, -34, -19
+;LASEREYE19
+;	DW LASEREYE19_SUB-kano_anitab1, 0
+;LASEREYE19_SUB
+;	DW LASEREYE19_IMG-kano_anitab1
+;	DH 12, 1, -137, -21
+KNRIPSKEL1:
+	DD KNRIPSKEL1_SUB-kano_anitab1, 0
+KNRIPSKEL1_SUB:
+	DD KNRIPSKEL1_IMG-kano_anitab1
+	DW 90, 106, 49, -11
+KNRIPSKEL2:
+	DD KNRIPSKEL2_SUB-kano_anitab1, 0
+KNRIPSKEL2_SUB:
+	DD KNRIPSKEL2_IMG-kano_anitab1
+	DW 81, 115, 39, -2
+KNRIPSKEL3:
+	DD KNRIPSKEL3_SUB-kano_anitab1, 0
+KNRIPSKEL3_SUB:
+	DD KNRIPSKEL3_IMG-kano_anitab1
+	DW 53, 145, 18, 26
+KNRIPSKEL4:
+	DD KNRIPSKEL4_SUB-kano_anitab1, 0
+KNRIPSKEL4_SUB:
+	DD KNRIPSKEL4_IMG-kano_anitab1
+	DW 77, 124, 18, 6
+KNRIPSKEL5:
+	DD KNRIPSKEL5_SUB-kano_anitab1, 0
+KNRIPSKEL5_SUB:
+	DD KNRIPSKEL5_IMG-kano_anitab1
+	DW 96, 103, 19, -14
+MAINBONE1:
+	DD MAINBONE1_SUB-kano_anitab1, 0
+MAINBONE1_SUB:
+	DD MAINBONE1_IMG-kano_anitab1
+	DW 22, 20, -58, -16
+	DD _SKELLS_P
+KNRIPSKEL6:
+	DD KNRIPSKEL6_SUB-kano_anitab1, 0
+KNRIPSKEL6_SUB:
+	DD KNRIPSKEL6_IMG-kano_anitab1
+	DW 89, 103, 22, -14
+MAINBONE2:
+	DD MAINBONE2_SUB-kano_anitab1, 0
+MAINBONE2_SUB:
+	DD MAINBONE2_IMG-kano_anitab1
+	DW 56, 68, -28, 14
+KNRIPSKEL7:
+	DD KNRIPSKEL7_SUB-kano_anitab1, 0
+KNRIPSKEL7_SUB:
+	DD KNRIPSKEL7_IMG-kano_anitab1
+	DW 62, 133, 22, 14
+MAINBONE3:
+	DD MAINBONE3_SUB-kano_anitab1, 0
+MAINBONE3_SUB:
+	DD MAINBONE3_IMG-kano_anitab1
+	DW 82, 83, -25, 12
+MAINBONE4:
+	DD MAINBONE4_SUB-kano_anitab1, 0
+MAINBONE4_SUB:
+	DD MAINBONE4_IMG-kano_anitab1
+	DW 46, 115, 25, 9
+KNRIPSKEL8:
+	DD KNRIPSKEL8_SUB-kano_anitab1, 0
+KNRIPSKEL8_SUB:
+	DD KNRIPSKEL8_IMG-kano_anitab1
+	DW 54, 128, 23, 9
+MAINBONE5:
+	DD MAINBONE5_SUB-kano_anitab1, 0
+MAINBONE5_SUB:
+	DD MAINBONE5_IMG-kano_anitab1
+	DW 38, 120, 57, 14
+KNRIPSKEL9:
+	DD KNRIPSKEL9_SUB-kano_anitab1, 0
+KNRIPSKEL9_SUB:
+	DD KNRIPSKEL9_IMG-kano_anitab1
+	DW 60, 133, 37, 15
+MAINBONE6:
+	DD MAINBONE6_SUB-kano_anitab1, 0
+MAINBONE6_SUB:
+	DD MAINBONE6_IMG-kano_anitab1
+	DW 38, 119, 51, 14
+;KNBZZ1
+;	DW KNBZZ1_SUB-kano_anitab1, 0
+;KNBZZ1_SUB
+;	DW KNBZZ1_IMG-kano_anitab1
+;	DH 42, 129, 18, 3
+;KNBZZ2
+;	DW KNBZZ2_SUB-kano_anitab1, 0
+;KNBZZ2_SUB
+;	DW KNBZZ2_IMG-kano_anitab1
+;	DH 32, 118, 13, -1
+;KNBZZ3
+;	DW KNBZZ3_SUB-kano_anitab1, 0
+;KNBZZ3_SUB
+;	DW KNBZZ3_IMG-kano_anitab1
+;	DH 42, 129, 18, 3
+;KNBZZ4
+;	DW KNBZZ4_SUB-kano_anitab1, 0
+;KNBZZ4_SUB
+;	DW KNBZZ4_IMG-kano_anitab1
+;	DH 32, 118, 13, -1
+;SBBZZ1
+;	DW SBBZZ1_SUB-kano_anitab1, 0
+;SBBZZ1_SUB
+;	DW SBBZZ1_IMG-kano_anitab1
+;	DH 43, 125, 21, 1
+;SBBZZ2
+;	DW SBBZZ2_SUB-kano_anitab1, 0
+;SBBZZ2_SUB
+;	DW SBBZZ2_IMG-kano_anitab1
+;	DH 32, 113, 15, -5
+;SBBZZ3
+;	DW SBBZZ3_SUB-kano_anitab1, 0
+;SBBZZ3_SUB
+;	DW SBBZZ3_IMG-kano_anitab1
+;	DH 43, 124, 21, 0
+;SBBZZ4
+;	DW SBBZZ4_SUB-kano_anitab1, 0
+;SBBZZ4_SUB
+;	DW SBBZZ4_IMG-kano_anitab1
+;	DH 32, 113, 15, -5
+;JXBZZ1
+;	DW JXBZZ1_SUB-kano_anitab1, 0
+;JXBZZ1_SUB
+;	DW JXBZZ1_IMG-kano_anitab1
+;	DH 78, 127, 34, -8
+;JXBZZ2
+;	DW JXBZZ2_SUB-kano_anitab1, 0
+;JXBZZ2_SUB
+;	DW JXBZZ2_IMG-kano_anitab1
+;	DH 66, 113, 28, -15
+;JXBZZ3
+;	DW JXBZZ3_SUB-kano_anitab1, 0
+;JXBZZ3_SUB
+;	DW JXBZZ3_IMG-kano_anitab1
+;	DH 78, 127, 34, -8
+;JXBZZ4
+;	DW JXBZZ4_SUB-kano_anitab1, 0
+;JXBZZ4_SUB
+;	DW JXBZZ4_IMG-kano_anitab1
+;	DH 66, 113, 28, -15
+;INBZZ1
+;	DW INBZZ1_SUB-kano_anitab1, 0
+;INBZZ1_SUB
+;	DW INBZZ1_IMG-kano_anitab1
+;	DH 59, 125, 32, 1
+;INBZZ2
+;	DW INBZZ2_SUB-kano_anitab1, 0
+;INBZZ2_SUB
+;	DW INBZZ2_IMG-kano_anitab1
+;	DH 48, 114, 26, -3
+;INBZZ3
+;	DW INBZZ3_SUB-kano_anitab1, 0
+;INBZZ3_SUB
+;	DW INBZZ3_IMG-kano_anitab1
+;	DH 59, 125, 32, 1
+;INBZZ4
+;	DW INBZZ4_SUB-kano_anitab1, 0
+;INBZZ4_SUB
+;	DW INBZZ4_IMG-kano_anitab1
+;	DH 48, 114, 26, -3
+;SZBZZ1
+;	DW SZBZZ1_SUB-kano_anitab1, 0
+;SZBZZ1_SUB
+;	DW SZBZZ1_IMG-kano_anitab1
+;	DH 45, 128, -9, -11
+;SZBZZ2
+;	DW SZBZZ2_SUB-kano_anitab1, 0
+;SZBZZ2_SUB
+;	DW SZBZZ2_IMG-kano_anitab1
+;	DH 34, 116, 18, 1
+;SZBZZ3
+;	DW SZBZZ3_SUB-kano_anitab1, 0
+;SZBZZ3_SUB
+;	DW SZBZZ3_IMG-kano_anitab1
+;	DH 45, 128, -9, -11
+;SZBZZ4
+;	DW SZBZZ4_SUB-kano_anitab1, 0
+;SZBZZ4_SUB
+;	DW SZBZZ4_IMG-kano_anitab1
+;	DH 34, 116, -14, -18
+;OBBZZ1
+;	DW OBBZZ1_SUB-kano_anitab1, 0
+;OBBZZ1_SUB
+;	DW OBBZZ1_IMG-kano_anitab1
+;	DH 62, 130, 12, 11
+;OBBZZ2
+;	DW OBBZZ2_SUB-kano_anitab1, 0
+;OBBZZ2_SUB
+;	DW OBBZZ2_IMG-kano_anitab1
+;	DH 49, 115, 14, -4
+;OBBZZ3
+;	DW OBBZZ3_SUB-kano_anitab1, 0
+;OBBZZ3_SUB
+;	DW OBBZZ3_IMG-kano_anitab1
+;	DH 62, 129, 12, 10
+;OBBZZ4
+;	DW OBBZZ4_SUB-kano_anitab1, 0
+;OBBZZ4_SUB
+;	DW OBBZZ4_IMG-kano_anitab1
+;	DH 49, 115, 6, 3
+;LIBZZ1
+;	DW LIBZZ1_SUB-kano_anitab1, 0
+;LIBZZ1_SUB
+;	DW LIBZZ1_IMG-kano_anitab1
+;	DH 47, 118, 14, -7
+;LIBZZ2
+;	DW LIBZZ2_SUB-kano_anitab1, 0
+;LIBZZ2_SUB
+;	DW LIBZZ2_IMG-kano_anitab1
+;	DH 37, 106, 8, -13
+;LIBZZ3
+;	DW LIBZZ3_SUB-kano_anitab1, 0
+;LIBZZ3_SUB
+;	DW LIBZZ3_IMG-kano_anitab1
+;	DH 47, 118, 14, -7
+;LIBZZ4
+;	DW LIBZZ4_SUB-kano_anitab1, 0
+;LIBZZ4_SUB
+;	DW LIBZZ4_IMG-kano_anitab1
+;	DH 37, 106, 8, -13
+;RBBZZ1
+;	DW RBBZZ1_SUB-kano_anitab1, 0
+;RBBZZ1_SUB
+;	DW RBBZZ1_IMG-kano_anitab1
+;	DH 66, 134, 31, 5
+;RBBZZ2
+;	DW RBBZZ2_SUB-kano_anitab1, 0
+;RBBZZ2_SUB
+;	DW RBBZZ2_IMG-kano_anitab1
+;	DH 53, 119, 25, -2
+;RBBZZ3
+;	DW RBBZZ3_SUB-kano_anitab1, 0
+;RBBZZ3_SUB
+;	DW RBBZZ3_IMG-kano_anitab1
+;	DH 65, 134, 31, 5
+;RBBZZ4
+;	DW RBBZZ4_SUB-kano_anitab1, 0
+;RBBZZ4_SUB
+;	DW RBBZZ4_IMG-kano_anitab1
+;	DH 53, 119, 25, -2
+;KLBZZ1
+;	DW KLBZZ1_SUB-kano_anitab1, 0
+;KLBZZ1_SUB
+;	DW KLBZZ1_IMG-kano_anitab1
+;	DH 57, 128, 36, 10
+;KLBZZ2
+;	DW KLBZZ2_SUB-kano_anitab1, 0
+;KLBZZ2_SUB
+;	DW KLBZZ2_IMG-kano_anitab1
+;	DH 45, 117, 30, 4
+;KLBZZ3
+;	DW KLBZZ3_SUB-kano_anitab1, 0
+;KLBZZ3_SUB
+;	DW KLBZZ3_IMG-kano_anitab1
+;	DH 57, 128, 36, 10
+;KLBZZ4
+;	DW KLBZZ4_SUB-kano_anitab1, 0
+;KLBZZ4_SUB
+;	DW KLBZZ4_IMG-kano_anitab1
+;	DH 44, 117, 30, 4
+;TRBZZ1
+;	DW TRBZZ1_SUB-kano_anitab1, 0
+;TRBZZ1_SUB
+;	DW TRBZZ1_IMG-kano_anitab1
+;	DH 46, 132, 25, 1
+;TRBZZ2
+;	DW TRBZZ2_SUB-kano_anitab1, 0
+;TRBZZ2_SUB
+;	DW TRBZZ2_IMG-kano_anitab1
+;	DH 34, 119, 18, -4
+;TRBZZ3
+;	DW TRBZZ3_SUB-kano_anitab1, 0
+;TRBZZ3_SUB
+;	DW TRBZZ3_IMG-kano_anitab1
+;	DH 46, 132, 25, 1
+;TRBZZ4
+;	DW TRBZZ4_SUB-kano_anitab1, 0
+;TRBZZ4_SUB
+;	DW TRBZZ4_IMG-kano_anitab1
+;	DH 34, 119, 18, -4
+;SGBZZ1
+;	DW SGBZZ1_SUB-kano_anitab1, 0
+;SGBZZ1_SUB
+;	DW SGBZZ1_IMG-kano_anitab1
+;	DH 66, 138, 52, 5
+;SGBZZ2
+;	DW SGBZZ2_SUB-kano_anitab1, 0
+;SGBZZ2_SUB
+;	DW SGBZZ2_IMG-kano_anitab1
+;	DH 54, 125, 46, -1
+;SGBZZ3
+;	DW SGBZZ3_SUB-kano_anitab1, 0
+;SGBZZ3_SUB
+;	DW SGBZZ3_IMG-kano_anitab1
+;	DH 66, 138, 52, 5
+;SGBZZ4
+;	DW SGBZZ4_SUB-kano_anitab1, 0
+;SGBZZ4_SUB
+;	DW SGBZZ4_IMG-kano_anitab1
+;	DH 54, 125, 46, -1
+;TSBZZ1
+;	DW TSBZZ1_SUB-kano_anitab1, 0
+;TSBZZ1_SUB
+;	DW TSBZZ1_IMG-kano_anitab1
+;	DH 49, 127, 15, 11
+;TSBZZ2
+;	DW TSBZZ2_SUB-kano_anitab1, 0
+;TSBZZ2_SUB
+;	DW TSBZZ2_IMG-kano_anitab1
+;	DH 38, 114, 10, 4
+;TSBZZ3
+;	DW TSBZZ3_SUB-kano_anitab1, 0
+;TSBZZ3_SUB
+;	DW TSBZZ3_IMG-kano_anitab1
+;	DH 38, 114, 10, 4
+;TSBZZ4
+;	DW TSBZZ4_SUB-kano_anitab1, 0
+;TSBZZ4_SUB
+;	DW TSBZZ4_IMG-kano_anitab1
+;	DH 49, 127, 15, 11
+;LUBZZ1
+;	DW LUBZZ1_SUB-kano_anitab1, 0
+;LUBZZ1_SUB
+;	DW LUBZZ1_IMG-kano_anitab1
+;	DH 50, 128, 30, 6
+;LUBZZ2
+;	DW LUBZZ2_SUB-kano_anitab1, 0
+;LUBZZ2_SUB
+;	DW LUBZZ2_IMG-kano_anitab1
+;	DH 36, 115, 24, 0
+;LUBZZ3
+;	DW LUBZZ3_SUB-kano_anitab1, 0
+;LUBZZ3_SUB
+;	DW LUBZZ3_IMG-kano_anitab1
+;	DH 50, 128, 30, 6
+;LUBZZ4
+;	DW LUBZZ4_SUB-kano_anitab1, 0
+;LUBZZ4_SUB
+;	DW LUBZZ4_IMG-kano_anitab1
+;	DH 36, 115, 23, 0

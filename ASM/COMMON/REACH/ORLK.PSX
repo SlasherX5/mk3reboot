@@ -1,0 +1,58 @@
+ochar_reached:
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_lk-base_anims
+	DD 0
+a_reached_lk:
+	DD ani_adjustxy
+	DW 0
+	DW 0
+	DD LUMOUTH3-base_anims
+	DD LUMOUTH4-base_anims
+	DD LUMOUTH5-base_anims
+	DD LUMOUTH6-base_anims
+	DD LUMOUTH7-base_anims
+	DD LUMOUTH8-base_anims
+	DD 0
+LUMOUTH3:
+	DD LUMOUTH3_SUB-base_anims, 0
+LUMOUTH3_SUB:
+	DD LUMOUTH3_IMG-base_anims
+	DW 70, 90, 46, -23
+LUMOUTH4:
+	DD LUMOUTH4_SUB-base_anims, 0
+LUMOUTH4_SUB:
+	DD LUMOUTH4_IMG-base_anims
+	DW 70, 91, 47, -22
+LUMOUTH5:
+	DD LUMOUTH5_SUB-base_anims, 0
+LUMOUTH5_SUB:
+	DD LUMOUTH5_IMG-base_anims
+	DW 75, 93, 52, -20
+LUMOUTH6:
+	DD LUMOUTH6_SUB-base_anims, 0
+LUMOUTH6_SUB:
+	DD LUMOUTH6_IMG-base_anims
+	DW 94, 65, 63, -48
+LUMOUTH7:
+	DD LUMOUTH7_SUB-base_anims, 0
+LUMOUTH7_SUB:
+	DD LUMOUTH7_IMG-base_anims
+	DW 123, 23, 75, -93
+LUMOUTH8:
+	DD LUMOUTH8_SUB-base_anims, 0
+LUMOUTH8_SUB:
+	DD LUMOUTH8_IMG-base_anims
+	DW 120, 27, 73, -89

@@ -1,0 +1,233 @@
+lk_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+lk_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0	;a_kang_fire-lk_anitab1
+	DD a_reform-lk_anitab1
+	DD 0
+	DD 0
+	DD 0
+
+	DD MK1GAME-lk_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;a_sb_skeleton_burn-base_anims
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0				; 30
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD a_blood_explode-base_anims	;34
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_reform:
+	DD LKREFORM1-lk_anitab1
+	DD LKREFORM2-lk_anitab1
+	DD LKREFORM3-lk_anitab1
+	DD LKREFORM4-lk_anitab1
+	DD LKREFORM5-lk_anitab1
+	DD LKREFORM6-lk_anitab1
+	DD 0
+;a_kang_fire
+;	DW ani_swpal
+;	DW LKFIRE1-lk_anitab1
+;	DW LKFIRE2-lk_anitab1
+;	DW LKFIRE3-lk_anitab1
+;	DW LKFIRE4-lk_anitab1
+;	DW LKFIRE5-lk_anitab1
+;	DW LKFIRE6-lk_anitab1
+;	DW LKFIRE7-lk_anitab1
+;	DW LKFIRE8-lk_anitab1
+;	DW LKFIRE9-lk_anitab1
+;	DW LKFIRE10-lk_anitab1
+;	DW LKFIRE11-lk_anitab1
+;	DW 0
+;LKFIRE1
+;	DW LKFIRE1_SUB-lk_anitab1, 0
+;LKFIRE1_SUB
+;	DW LKFIRE1_IMG-lk_anitab1
+;	DH 22, 84, 6, -30
+;	dw   _LUFIRE_P
+;LKFIRE2
+;	DW LKFIRE2_SUB-lk_anitab1, 0
+;LKFIRE2_SUB
+;	DW LKFIRE2_IMG-lk_anitab1
+;	DH 34, 95, 14, -19
+;LKFIRE3
+;	DW LKFIRE3_SUB-lk_anitab1, 0
+;LKFIRE3_SUB
+;	DW LKFIRE3_IMG-lk_anitab1
+;	DH 42, 111, 16, -3
+;LKFIRE4
+;	DW LKFIRE4_SUB-lk_anitab1, 0
+;LKFIRE4_SUB
+;	DW LKFIRE4_IMG-lk_anitab1
+;	DH 61, 133, 23, 13
+;LKFIRE5
+;	DW LKFIRE5_SUB-lk_anitab1, 0
+;LKFIRE5_SUB
+;	DW LKFIRE5_IMG-lk_anitab1
+;	DH 87, 158, 37, 39
+;LKFIRE6
+;	DW LKFIRE6_SUB-lk_anitab1, 0
+;LKFIRE6_SUB
+;	DW LKFIRE6_IMG-lk_anitab1
+;	DH 113, 166, 48, 46
+;LKFIRE7
+;	DW LKFIRE7_SUB-lk_anitab1, 0
+;LKFIRE7_SUB
+;	DW LKFIRE7_IMG-lk_anitab1
+;	DH 46, 92, 20, 44
+;LKFIRE8
+;	DW LKFIRE8_SUB-lk_anitab1, 0
+;LKFIRE8_SUB
+;	DW LKFIRE8_IMG-lk_anitab1
+;	DH 42, 77, 19, 48
+;LKFIRE9
+;	DW LKFIRE9_SUB-lk_anitab1, 0
+;LKFIRE9_SUB
+;	DW LKFIRE9_IMG-lk_anitab1
+;	DH 34, 54, 15, 48
+;LKFIRE10
+;	DW LKFIRE10_SUB-lk_anitab1, 0
+;LKFIRE10_SUB
+;	DW LKFIRE10_IMG-lk_anitab1
+;	DH 24, 71, 6, 71
+;LKFIRE11
+;	DW LKFIRE11_SUB-lk_anitab1, 0
+;LKFIRE11_SUB
+;	DW LKFIRE11_IMG-lk_anitab1
+;	DH 19, 110, 7, 128
+MK1GAME:
+	DD MK1GAME_IMG-lk_anitab1
+	DW 85, 167, 0, 0
+	DD _MK1GAME_P
+LKREFORM1:
+	DD LKREFORM1_SUB-lk_anitab1, 0
+LKREFORM1_SUB:
+	DD LKREFORM1_IMG-lk_anitab1
+	DW 42, 87, 16, -8
+LKREFORM2:
+	DD LKREFORM2_SUB-lk_anitab1, 0
+LKREFORM2_SUB:
+	DD LKREFORM2_IMG-lk_anitab1
+	DW 38, 81, 15, -13
+LKREFORM3:
+	DD LKREFORM3_SUB-lk_anitab1, 0
+LKREFORM3_SUB:
+	DD LKREFORM3_IMG-lk_anitab1
+	DW 35, 105, 14, -5
+LKREFORM4:
+	DD LKREFORM4_SUB-lk_anitab1, 0
+LKREFORM4_SUB:
+	DD LKREFORM4_IMG-lk_anitab1
+	DW 37, 102, 15, -4
+LKREFORM5:
+	DD LKREFORM5_SUB-lk_anitab1, 0
+LKREFORM5_SUB:
+	DD LKREFORM5_IMG-lk_anitab1
+	DW 37, 109, 15, -2
+LKREFORM6:
+	DD LKREFORM6_SUB-lk_anitab1, 0
+LKREFORM6_SUB:
+	DD LKREFORM6_IMG-lk_anitab1
+	DW 37, 109, 15, -3

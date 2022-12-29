@@ -1,0 +1,26 @@
+#include ../../mk3.mif
+
+
+
+all: $(EXE)shaokahn\shao.bin \
+	 $(EXE)shaokahn\shaof.bin \
+	 .SYMBOLIC
+
+
+# MAIN GAME	PLAY
+
+
+shao.obj: shao.asm  $(OVLARTI) \
+	..\chars\shao\mksk.psx  \
+	..\chars\shao\mksk.psi  \
+	..\chars\shao\sklights.psx  \
+	..\chars\shao\sklights.psi
+
+
+shaof.obj: shaof.asm  $(OVLARTI) \
+	..\chars\shao\mkskf.psx  \
+	..\chars\shao\mkskf.psi  \
+    ..\chars\shao\sklights.psx  \
+	..\chars\shao\sklights.psi
+
+

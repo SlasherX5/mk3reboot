@@ -1,0 +1,67 @@
+
+#include ../../mk3.mif
+
+
+all: $(EXE)shang/shangb.bin  \
+     $(EXE)shang/shang.bin \
+	 $(EXE)shang/shanga.bin \
+	 $(EXE)shang/shangs.bin \
+	 $(EXE)shang/shangf.bin \
+	 $(EXE)shang/shangf1.bin \
+	 .SYMBOLIC
+
+
+
+# MAIN GAME	PLAY
+
+shang.obj: shang.asm  $(OVLARTI) \
+	..\chars\shang\mkst.psx \
+	..\chars\shang\mkst.psi 
+
+
+# FRIENDSHIP
+
+shangs.obj: shangs.asm $(OVLARTI) \
+	..\chars\shang\mksts.psx \
+	..\chars\shang\mksts.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi \
+	..\common\baby\babyxpld.psi
+
+# BABALITY
+
+shangb.obj: shangb.asm $(OVLARTI) \
+	..\chars\shang\mkstb.psx \
+	..\common\baby\babyst.psx \
+	..\common\baby\babyst.psi \
+	..\common\baby\babyxpld.psi
+
+# ANIMALITY
+
+shanga.obj: shanga.asm $(OVLARTI) \
+	..\chars\shang\mksta.psx \
+	..\chars\shang\mksta.psi \
+	..\common\common\bloodxp.psx	 \
+	..\common\common\bloodxp.psi \
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+# FATALITIES
+
+shangf.obj: shangf.asm $(OVLARTI) \
+	..\chars\shang\mkstf.psx \
+	..\chars\shang\mkstf.psi \
+	..\common\common\bloodxp.psx \
+	..\common\common\bloodxp.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+shangf1.obj: shangf1.asm $(OVLARTI) \
+	..\chars\shang\mkstf1.psx \
+	..\chars\shang\mkstf1.psi \
+	..\common\float\ofloat.psx \
+	..\common\float\ofloat.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+

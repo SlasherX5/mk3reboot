@@ -1,0 +1,2418 @@
+;******************************************************************************
+ include win95.i  ;: mkverse.s
+;
+; By: David Schwartz
+;
+; Date: Feb 1995
+;
+; (C) Williams Entertainment
+;
+; Mortal Kombat III Mortal Kombat Versus Module
+;******************************************************************************/
+
+	 
+
+	include win95.i
+	include mkchar.i
+	include mkbkgd.i
+
+;*********************************
+;**			EXTERNALS			**
+;*********************************
+	EXTERN _no_scroll
+	EXTERN _dlists_bogus
+
+;*********************************
+;**			PALETTES								**
+;*********************************
+
+	BEGIN_DATA
+
+	ALIGN 4
+	include palsrc\mkvspal.mas
+
+;*********************************
+;**			ANIMATIONS			**
+;*********************************
+	ALIGN 4
+	PUBLIC _vs_anims
+_vs_anims:
+;*************************************************************************
+	ALIGN 4
+	PUBLIC _a_mklight
+_a_mklight:
+	DD _MKLIGHT1-_vs_anims
+	DD MKLIGHT2-_vs_anims
+	DD MKLIGHT3-_vs_anims
+	DD MKLIGHT4-_vs_anims
+	DD MKLIGHT5-_vs_anims
+	DD MKLIGHT6-_vs_anims
+	DD MKLIGHT7-_vs_anims
+	DD MKLIGHT8-_vs_anims
+	DD MKLIGHT9-_vs_anims
+	DD _MKLIGHT10-_vs_anims
+	DD _MKLIGHT11-_vs_anims
+	DD _MKLIGHT12-_vs_anims
+	DD _MKLIGHT13-_vs_anims
+	DD _MKLIGHT14-_vs_anims
+	DD _MKLIGHT15-_vs_anims
+	DD _MKLIGHT16-_vs_anims
+	DD _MKLIGHT17-_vs_anims
+	DD _MKLIGHT18-_vs_anims
+	DD _MKLIGHT19-_vs_anims
+	DD MKLIGHT20-_vs_anims
+	DD ani_jump
+	DD _a_mklight-_vs_anims
+
+	PUBLIC _MKLIGHT1
+_MKLIGHT1:
+	DD MKLIGHT1_IMG-_vs_anims
+	DW 65, 54, 0, 0
+	DD   mKlIGHT_p
+MKLIGHT2:
+	DD MKLIGHT2_IMG-_vs_anims
+	DW 65, 53, 0, 0
+MKLIGHT3:
+	DD MKLIGHT3_IMG-_vs_anims
+	DW 65, 54, 0, 0
+MKLIGHT4:
+	DD MKLIGHT4_IMG-_vs_anims
+	DW 65, 54, 0, 0
+MKLIGHT5:
+	DD MKLIGHT5_IMG-_vs_anims
+	DW 65, 54, 0, 0
+MKLIGHT6:
+	DD MKLIGHT6_IMG-_vs_anims
+	DW 65, 53, 0, 0
+MKLIGHT7:
+	DD MKLIGHT7_IMG-_vs_anims
+	DW 65, 53, 0, 0
+MKLIGHT8:
+	DD MKLIGHT8_IMG-_vs_anims
+	DW 65, 53, 0, 0
+MKLIGHT9:
+	DD MKLIGHT9_IMG-_vs_anims
+	DW 65, 54, 0, 0
+_MKLIGHT10:
+	DD MKLIGHT10_IMG-_vs_anims
+	DW 65, 53, 0, 0
+_MKLIGHT11:
+	DD MKLIGHT11_IMG-_vs_anims
+	DW 65, 54, 0, 0
+_MKLIGHT12:
+	DD MKLIGHT12_IMG-_vs_anims
+	DW 65, 53, 0, 0
+_MKLIGHT13:
+	DD MKLIGHT13_IMG-_vs_anims
+	DW 65, 53, 0, 0
+_MKLIGHT14:
+	DD MKLIGHT14_IMG-_vs_anims
+	DW 65, 53, 0, 0
+_MKLIGHT15:
+	DD MKLIGHT15_IMG-_vs_anims
+	DW 65, 53, 0, 0
+_MKLIGHT16:
+	DD MKLIGHT16_IMG-_vs_anims
+	DW 65, 54, 0, 0
+_MKLIGHT17:
+	DD MKLIGHT17_IMG-_vs_anims
+	DW 65, 53, 0, 0
+_MKLIGHT18:
+	DD MKLIGHT18_IMG-_vs_anims
+	DW 65, 54, 0, 0
+_MKLIGHT19:
+	DD MKLIGHT19_IMG-_vs_anims
+	DW 65, 53, 0, 0
+MKLIGHT20:
+	DD MKLIGHT20_IMG-_vs_anims
+	DW 65, 54, 0, 0
+
+
+;*************************************************************************
+	ALIGN 4
+	PUBLIC _symbol_table
+_symbol_table:
+	DD _I_DRAGON-_vs_anims
+	DD I_MK-_vs_anims
+	DD I_YINYANG-_vs_anims
+	DD I_THREE-_vs_anims
+	DD I_QUESTION-_vs_anims
+	DD I_LIGHTNING-_vs_anims
+	DD I_GORO-_vs_anims
+	DD I_RAIDEN-_vs_anims
+	DD I_SHOKAHN-_vs_anims
+	DD I_SKULL-_vs_anims
+
+	PUBLIC _I_DRAGON
+_I_DRAGON:
+	DD I_DRAGON_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   IDRAG_P
+I_MK:
+	DD I_MK_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   IMK_P
+I_YINYANG:
+	DD I_YINYANG_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   IYIN_P
+I_THREE:
+	DD I_THREE_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   ITHREE_P
+I_QUESTION:
+	DD I_QUESTION_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   IQ_P
+I_LIGHTNING:
+	DD I_LIGHTNING_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   ILIGHT_P
+I_GORO:
+	DD I_GORO_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   IGORO_P
+I_RAIDEN:
+	DD I_RAIDEN_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   IRAID_P
+I_SHOKAHN:
+	DD I_SHOKAHN_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   IKAHN_P
+I_SKULL:
+	DD I_SKULL_IMG-_vs_anims
+	DW 17, 14, 0, 0
+	DD   ISKULL_P
+
+	PUBLIC _BOX2
+_BOX2:
+	DD BOX2_IMG-_vs_anims
+	DW 118, 18, 0, 0
+	DD BOX1_P
+
+;*************************************************************************
+	ALIGN 4
+	PUBLIC _a_vs_v
+_a_vs_v:
+	DD _BURNV1-_vs_anims
+	DD BURNV2-_vs_anims
+	DD BURNV3-_vs_anims
+	DD BURNV4-_vs_anims
+	DD BURNV5-_vs_anims
+	DD BURNV6-_vs_anims
+	DD BURNV7-_vs_anims
+	DD BURNV8-_vs_anims
+	DD BURNV9-_vs_anims
+	DD _BURNV10-_vs_anims
+	DD _BURNV11-_vs_anims
+	DD _BURNV12-_vs_anims
+	DD _BURNV13-_vs_anims
+	DD 0
+
+	PUBLIC _BURNS1
+_BURNS1:
+	DD BURNS1_IMG-_vs_anims
+	DW 10, 14, -21, -1
+	DD   BURNVS_P
+BURNS2:
+	DD BURNS2_IMG-_vs_anims
+	DW 10, 16, -21, 1
+BURNS3:
+	DD BURNS3_IMG-_vs_anims
+	DW 15, 14, -16, -3
+BURNS4:
+	DD BURNS4_IMG-_vs_anims
+	DW 17, 16, -14, -3
+BURNS5:
+	DD BURNS5_IMG-_vs_anims
+	DW 20, 20, -11, -3
+BURNS6:
+	DD BURNS6_IMG-_vs_anims
+	DW 26, 26, -5, -3
+BURNS7:
+	DD BURNS7_IMG-_vs_anims
+	DW 22, 26, -9, -3
+BURNS8:
+	DD BURNS8_IMG-_vs_anims
+	DW 22, 26, -9, -3
+BURNS9:
+	DD BURNS9_IMG-_vs_anims
+	DW 22, 31, -9, -3
+_BURNS10:
+	DD BURNS10_IMG-_vs_anims
+	DW 22, 34, -9, -3
+_BURNS11:
+	DD BURNS11_IMG-_vs_anims
+	DW 22, 38, -9, -3
+_BURNS12:
+	DD BURNS12_IMG-_vs_anims
+	DW 22, 43, -9, -3
+_BURNS13:
+	DD BURNS13_IMG-_vs_anims
+	DW 25, 46, -6, -3
+_BURNS14:
+	DD BURNS14_IMG-_vs_anims
+	DW 28, 48, -3, -3
+_BURNS15:
+	DD BURNS15_IMG-_vs_anims
+	DW 31, 49, 0, -3
+
+
+;*************************************************************************
+	ALIGN 4
+	PUBLIC _a_vs_s
+_a_vs_s:
+	DD _BURNS1-_vs_anims
+	DD BURNS2-_vs_anims
+	DD BURNS3-_vs_anims
+	DD BURNS4-_vs_anims
+	DD BURNS5-_vs_anims
+	DD BURNS6-_vs_anims
+	DD BURNS7-_vs_anims
+	DD BURNS8-_vs_anims
+	DD BURNS9-_vs_anims
+	DD _BURNS10-_vs_anims
+	DD _BURNS11-_vs_anims
+	DD _BURNS12-_vs_anims
+	DD _BURNS13-_vs_anims
+	DD _BURNS14-_vs_anims
+	DD _BURNS15-_vs_anims
+	DD 0
+
+	PUBLIC _BURNV1
+_BURNV1:
+	DD BURNV1_IMG-_vs_anims
+	DW 14, 18, -1, -8
+	DD BURNVS_P
+BURNV2:
+	DD BURNV2_IMG-_vs_anims
+	DW 14, 20, 0, -10
+BURNV3:
+	DD BURNV3_IMG-_vs_anims
+	DW 12, 25, 0, -10
+BURNV4:
+	DD BURNV4_IMG-_vs_anims
+	DW 11, 31, -1, -10
+BURNV5:
+	DD BURNV5_IMG-_vs_anims
+	DW 12, 41, -1, -10
+BURNV6:
+	DD BURNV6_IMG-_vs_anims
+	DW 14, 39, -3, -10
+BURNV7:
+	DD BURNV7_IMG-_vs_anims
+	DW 18, 38, -3, -10
+BURNV8:
+	DD BURNV8_IMG-_vs_anims
+	DW 19, 38, -3, -10
+BURNV9:
+	DD BURNV9_IMG-_vs_anims
+	DW 22, 38, -3, -10
+_BURNV10:
+	DD BURNV10_IMG-_vs_anims
+	DW 27, 43, -3, -5
+_BURNV11:
+	DD BURNV11_IMG-_vs_anims
+	DW 29, 44, -3, -4
+_BURNV12:
+	DD BURNV12_IMG-_vs_anims
+	DW 30, 48, -3, 0
+_BURNV13:
+	DD BURNV13_IMG-_vs_anims
+	DW 31, 49, -3, 1
+;*************************************************************************
+	ALIGN 4
+	PUBLIC _battle_digits
+_battle_digits:
+	DD _BATTLE0
+	DD _BATTLE1
+	DD _BATTLE2
+	DD _BATTLE3
+	DD _BATTLE4
+	DD _BATTLE5
+	DD _BATTLE6
+	DD _BATTLE7
+	DD _BATTLE8
+	DD _BATTLE9
+
+
+	PUBLIC _BATTLE
+_BATTLE:
+	DD BATTLE_IMG-_vs_anims
+	DW 140, 16, 0, 0
+	DD   BATTLE_P
+
+	PUBLIC _BATTLE0
+_BATTLE0:
+	DD BATTLE0_IMG-_vs_anims
+	DW 28, 15, 14, -5
+	DD   BATTLE_P
+_BATTLE1:
+	DD BATTLE1_IMG-_vs_anims
+	DW 19, 15, 11, -5
+_BATTLE2:
+	DD BATTLE2_IMG-_vs_anims
+	DW 27, 15, 14, -5
+_BATTLE3:
+	DD BATTLE3_IMG-_vs_anims
+	DW 26, 16, 14, -5
+_BATTLE4:
+	DD BATTLE4_IMG-_vs_anims
+	DW 30, 15, 14, -5
+_BATTLE5:
+	DD BATTLE5_IMG-_vs_anims
+	DW 26, 15, 13, -5
+_BATTLE6:
+	DD BATTLE6_IMG-_vs_anims
+	DW 28, 15, 14, -5
+_BATTLE7:
+	DD BATTLE7_IMG-_vs_anims
+	DW 25, 15, 11, -5
+_BATTLE8:
+	DD BATTLE8_IMG-_vs_anims
+	DW 26, 15, 14, -5
+_BATTLE9:
+	DD BATTLE9_IMG-_vs_anims
+	DW 29, 15, 14, -5
+
+
+;*********************************
+;**		 MODULE DATA			**
+;*********************************
+	ALIGN 4
+	include attract\vs\steelvs.mod
+
+	ALIGN 4
+	PUBLIC _vs_module
+_vs_module:
+	DW 0		 		; autoerase color
+	DW 000h				; initial world y
+	DW 000h	     			; ground y
+	DW 000h				; initial worldx
+	DW -0500h 	  			; scroll left limit
+	DW 0500h	  			; scroll right limit
+
+	DD _calla_return
+	DD _no_scroll			; scroll table
+	DD _dlists_bogus
+	DD _bakmods
+
+	DD STEELMODBMOD
+	DW 0fffeh,007h
+	DD 0ffffffffh
+	DD 0				; no floor here !!
+
+
+	ALIGN 4
+	include attract\vs\mkbgvs.psi
+;**********************************************************************
+
+	PUBLIC _sonya_pieces
+_sonya_pieces:
+	DW 05eh,04fh,012dh,04fh
+	DD bgsonya1a-_sonya_pieces,0
+	DD bgsonya1b-_sonya_pieces,0
+	DD bgsonya1c-_sonya_pieces,0
+	DD bgsonya1d-_sonya_pieces,0
+	DD bgsonya1e-_sonya_pieces,0
+	DD bgsonya1f-_sonya_pieces,0
+	DD bgsonya2a-_sonya_pieces,BGSNBLU_P
+	DD bgsonya2b-_sonya_pieces,BGSNBLU_P
+	DD bgsonya2c-_sonya_pieces,BGSNBLU_P
+	DD bgsonya2d-_sonya_pieces,BGSNBLU_P
+	DD bgsonya3a-_sonya_pieces,0
+	DD bgsonya3b-_sonya_pieces,0
+	DD bgsonya3c-_sonya_pieces,0
+	DD bgsonya3d-_sonya_pieces,0
+	DD bgsonya3e-_sonya_pieces,0
+	DD bgsonya3f-_sonya_pieces,0
+	DD bgsonya3g-_sonya_pieces,0
+	DD 0
+
+bgsonya1a:
+	DD BGSONYA1A-_sonya_pieces,0
+bgsonya1b:
+	DD BGSONYA1B-_sonya_pieces,0
+bgsonya1c:
+	DD BGSONYA1C-_sonya_pieces,0
+bgsonya1d:
+	DD BGSONYA1D-_sonya_pieces,0
+bgsonya1e:
+	DD BGSONYA1E-_sonya_pieces,0
+bgsonya1f:
+	DD BGSONYA1F-_sonya_pieces,0
+bgsonya2a:
+	DD BGSONYA2A-_sonya_pieces,0
+bgsonya2b:
+	DD BGSONYA2B-_sonya_pieces,0
+bgsonya2c:
+	DD BGSONYA2C-_sonya_pieces,0
+bgsonya2d:
+	DD BGSONYA2D-_sonya_pieces,0
+bgsonya3a:
+	DD BGSONYA3A-_sonya_pieces,0
+bgsonya3b:
+	DD BGSONYA3B-_sonya_pieces,0
+bgsonya3c:
+	DD BGSONYA3C-_sonya_pieces,0
+bgsonya3d:
+	DD BGSONYA3D-_sonya_pieces,0
+bgsonya3e:
+	DD BGSONYA3E-_sonya_pieces,0
+bgsonya3f:
+	DD BGSONYA3F-_sonya_pieces,0
+bgsonya3g:
+	DD BGSONYA3G-_sonya_pieces,0
+
+BGSONYA1A:
+	DD BGSONYA1A_SUB-_sonya_pieces,0
+BGSONYA1A_SUB:
+	DD BGSONYA1A_IMG-_sonya_pieces
+	DW 64, 104, 75, -5
+	DD   BGSON1_P
+BGSONYA1B:
+	DD BGSONYA1B_SUB-_sonya_pieces,0
+BGSONYA1B_SUB:
+	DD BGSONYA1B_IMG-_sonya_pieces
+	DW 26, 70, 11, -2
+	DD   BGSON1_P
+BGSONYA1C:
+	DD BGSONYA1C_SUB-_sonya_pieces,0
+BGSONYA1C_SUB:
+	DD BGSONYA1C_IMG-_sonya_pieces
+	DW 20, 53, -13, -9
+	DD   BGSON1_P
+BGSONYA1D:
+	DD BGSONYA1D_SUB-_sonya_pieces,0
+BGSONYA1D_SUB:
+	DD BGSONYA1D_IMG-_sonya_pieces
+	DW 53, 31, 37, -124
+	DD   BGSON1_P
+BGSONYA1E:
+	DD BGSONYA1E_SUB-_sonya_pieces,0
+BGSONYA1E_SUB:
+	DD BGSONYA1E_IMG-_sonya_pieces
+	DW 34, 59, -16, -73
+	DD   BGSON1_P
+BGSONYA1F:
+	DD BGSONYA1F_SUB-_sonya_pieces,0
+BGSONYA1F_SUB:
+	DD BGSONYA1F_IMG-_sonya_pieces
+	DW 36, 39, -49, -93
+	DD   BGSON1_P
+BGSONYA2A:
+	DD BGSONYA2A_SUB-_sonya_pieces,0
+BGSONYA2A_SUB:
+	DD BGSONYA2A_IMG-_sonya_pieces
+	DW 6, 3, 51, -78
+	DD   BGSON2_P
+BGSONYA2B:
+	DD BGSONYA2B_SUB-_sonya_pieces,0
+BGSONYA2B_SUB:
+	DD BGSONYA2B_IMG-_sonya_pieces
+	DW 30, 37, 61, -136
+	DD   BGSON2_P
+BGSONYA2C:
+	DD BGSONYA2C_SUB-_sonya_pieces,0
+BGSONYA2C_SUB:
+	DD BGSONYA2C_IMG-_sonya_pieces
+	DW 34, 64, 22, -64
+	DD   BGSON2_P
+BGSONYA2D:
+	DD BGSONYA2D_SUB-_sonya_pieces,0
+BGSONYA2D_SUB:
+	DD BGSONYA2D_IMG-_sonya_pieces
+	DW 18, 59, -11, -70
+	DD   BGSON2_P
+BGSONYA3A:
+	DD BGSONYA3A_SUB-_sonya_pieces,0
+BGSONYA3A_SUB:
+	DD BGSONYA3A_IMG-_sonya_pieces
+	DW 7, 32, 34, -92
+	DD   BGSON3_P
+BGSONYA3B:
+	DD BGSONYA3B_SUB-_sonya_pieces,0
+BGSONYA3B_SUB:
+	DD BGSONYA3B_IMG-_sonya_pieces
+	DW 20, 70, 30, -57
+	DD   BGSON3_P
+BGSONYA3C:
+	DD BGSONYA3C_SUB-_sonya_pieces,0
+BGSONYA3C_SUB:
+	DD BGSONYA3C_IMG-_sonya_pieces
+	DW 38, 36, 43, -137
+	DD   BGSON3_P
+BGSONYA3D:
+	DD BGSONYA3D_SUB-_sonya_pieces,0
+BGSONYA3D_SUB:
+	DD BGSONYA3D_IMG-_sonya_pieces
+	DW 10, 21, 5, -151
+	DD   BGSON3_P
+BGSONYA3E:
+	DD BGSONYA3E_SUB-_sonya_pieces,0
+BGSONYA3E_SUB:
+	DD BGSONYA3E_IMG-_sonya_pieces
+	DW 16, 84, 10, -29
+	DD   BGSON3_P
+BGSONYA3F:
+	DD BGSONYA3F_SUB-_sonya_pieces,0
+BGSONYA3F_SUB:
+	DD BGSONYA3F_IMG-_sonya_pieces
+	DW 37, 91, -5, -24
+	DD   BGSON3_P
+BGSONYA3G:
+	DD BGSONYA3G_SUB-_sonya_pieces,0
+BGSONYA3G_SUB:
+	DD BGSONYA3G_IMG-_sonya_pieces
+	DW 15, 26, -72, -85
+	DD   BGSON3_P
+
+	ALIGN 4
+	include attract\vs\vssonya.psi
+
+;**********************************************************************
+
+	PUBLIC _kano_pieces
+_kano_pieces:
+	DW 05eh,04dh,012dh,04dh
+	DD bgkano1a-_kano_pieces,0
+	DD bgkano1b-_kano_pieces,0
+	DD bgkano1c-_kano_pieces,0
+	DD bgkano1d-_kano_pieces,0
+	DD bgkano2a-_kano_pieces,BGKNBLU_P
+	DD bgkano2b-_kano_pieces,BGKNBLU_P
+	DD bgkano2c-_kano_pieces,BGKNBLU_P
+	DD bgkano2d-_kano_pieces,BGKNBLU_P
+	DD bgkano2e-_kano_pieces,BGKNBLU_P
+	DD bgkano3a-_kano_pieces,0
+	DD bgkano3b-_kano_pieces,0
+	DD bgkano3c-_kano_pieces,0
+	DD bgkano3d-_kano_pieces,0
+	DD bgkano4a-_kano_pieces,0
+	DD 0
+
+bgkano1a:
+	DD BGKANO1A-_kano_pieces,0
+bgkano1b:
+	DD BGKANO1B-_kano_pieces,0
+bgkano1c:
+	DD BGKANO1C-_kano_pieces,0
+bgkano1d:
+	DD BGKANO1D-_kano_pieces,0
+bgkano2a:
+	DD BGKANO2A-_kano_pieces,0
+bgkano2b:
+	DD BGKANO2B-_kano_pieces,0
+bgkano2c:
+	DD BGKANO2C-_kano_pieces,0
+bgkano2d:
+	DD BGKANO2D-_kano_pieces,0
+bgkano2e:
+	DD BGKANO2E-_kano_pieces,0
+bgkano3a:
+	DD BGKANO3A-_kano_pieces,0
+bgkano3b:
+	DD BGKANO3B-_kano_pieces,0
+bgkano3c:
+	DD BGKANO3C-_kano_pieces,0
+bgkano3d:
+	DD BGKANO3D-_kano_pieces,0
+bgkano4a:
+	DD BGKANO4A-_kano_pieces,0
+
+
+BGKANO1A:
+	DD BGKANO1A_SUB-_kano_pieces,0
+BGKANO1A_SUB:
+	DD BGKANO1A_IMG-_kano_pieces
+	DW 45, 67, 66, -35
+	DD   BGKANO1_P
+BGKANO1B:
+	DD BGKANO1B_SUB-_kano_pieces,0
+BGKANO1B_SUB:
+	DD BGKANO1B_IMG-_kano_pieces
+	DW 43, 82, -2, -7
+	DD   BGKANO1_P
+BGKANO1C:
+	DD BGKANO1C_SUB-_kano_pieces,0
+BGKANO1C_SUB:
+	DD BGKANO1C_IMG-_kano_pieces
+	DW 12, 60, -45, -9
+	DD   BGKANO1_P
+BGKANO1D:
+	DD BGKANO1D_SUB-_kano_pieces,0
+BGKANO1D_SUB:
+	DD BGKANO1D_IMG-_kano_pieces
+	DW 38, 65, -31, -93
+	DD   BGKANO1_P
+BGKANO2A:
+	DD BGKANO2A_SUB-_kano_pieces,0
+BGKANO2A_SUB:
+	DD BGKANO2A_IMG-_kano_pieces
+	DW 28, 44, 70, -55
+	DD   BGKANO2_P
+BGKANO2B:
+	DD BGKANO2B_SUB-_kano_pieces,0
+BGKANO2B_SUB:
+	DD BGKANO2B_IMG-_kano_pieces
+	DW 22, 67, 24, -30
+	DD   BGKANO2_P
+BGKANO2C:
+	DD BGKANO2C_SUB-_kano_pieces,0
+BGKANO2C_SUB:
+	DD BGKANO2C_IMG-_kano_pieces
+	DW 2, 9, -1, -79
+	DD   BGKANO2_P
+BGKANO2D:
+	DD BGKANO2D_SUB-_kano_pieces,0
+BGKANO2D_SUB:
+	DD BGKANO2D_IMG-_kano_pieces
+	DW 16, 37, 68, -137
+	DD   BGKANO2_P
+BGKANO2E:
+	DD BGKANO2E_SUB-_kano_pieces,0
+BGKANO2E_SUB:
+	DD BGKANO2E_IMG-_kano_pieces
+	DW 78, 93, 3, -81
+	DD   BGKANO2_P
+BGKANO3A:
+	DD BGKANO3A_SUB-_kano_pieces,0
+BGKANO3A_SUB:
+	DD BGKANO3A_IMG-_kano_pieces
+	DW 25, 36, 68, -59
+	DD   BGKANO3_P
+BGKANO3B:
+	DD BGKANO3B_SUB-_kano_pieces,0
+BGKANO3B_SUB:
+	DD BGKANO3B_IMG-_kano_pieces
+	DW 77, 137, 64, -37
+	DD   BGKANO3_P
+BGKANO3C:
+	DD BGKANO3C_SUB-_kano_pieces,0
+BGKANO3C_SUB:
+	DD BGKANO3C_IMG-_kano_pieces
+	DW 28, 36, -44, -114
+	DD   BGKANO3_P
+BGKANO3D:
+	DD BGKANO3D_SUB-_kano_pieces,0
+BGKANO3D_SUB:
+	DD BGKANO3D_IMG-_kano_pieces
+	DW 46, 117, -12, -23
+	DD   BGKANO3_P
+BGKANO4A:
+	DD BGKANO4A_SUB-_kano_pieces,0
+BGKANO4A_SUB:
+	DD BGKANO4A_IMG-_kano_pieces
+	DW 63, 72, 10, -39
+	DD   BGKANO4_P
+
+	ALIGN 4
+	include attract\vs\vskano.psi
+
+;**********************************************************************
+
+	PUBLIC _ind_pieces
+_ind_pieces:
+	DW 063h,025h+19+8,0125h,025h+19+8
+	DD ingry1a-_ind_pieces,0
+	DD ingry1b-_ind_pieces,0
+	DD ingry1c-_ind_pieces,0
+	DD ingry1d-_ind_pieces,0
+	DD ingry1e-_ind_pieces,0
+	DD inblu1a-_ind_pieces,VINTAN_P
+	DD inblu1b-_ind_pieces,VINTAN_P
+	DD inblu1c-_ind_pieces,VINTAN_P
+	DD inblu1d-_ind_pieces,VINTAN_P
+	DD inskin1a-_ind_pieces,0
+	DD inskin1b-_ind_pieces,0
+	DD inskin1c-_ind_pieces,0
+	DD inskin1d-_ind_pieces,0
+	DD inskin1e-_ind_pieces,0
+	DD inskin1f-_ind_pieces,0
+	DD inskin1g-_ind_pieces,0
+	DD 0
+
+ingry1a:
+	DD INGRY1A-_ind_pieces,0
+ingry1b:
+	DD INGRY1B-_ind_pieces,0
+ingry1c:
+	DD INGRY1C-_ind_pieces,0
+ingry1d:
+	DD INGRY1D-_ind_pieces,0
+ingry1e:
+	DD INGRY1E-_ind_pieces,0
+inblu1a:
+	DD INBLU1A-_ind_pieces,0
+inblu1b:
+	DD INBLU1B-_ind_pieces,0
+inblu1c:
+	DD INBLU1C-_ind_pieces,0
+inblu1d:
+	DD INBLU1D-_ind_pieces,0
+inskin1a:
+	DD INSKIN1A-_ind_pieces,0
+inskin1b:
+	DD INSKIN1B-_ind_pieces,0
+inskin1c:
+	DD INSKIN1C-_ind_pieces,0
+inskin1d:
+	DD INSKIN1D-_ind_pieces,0
+inskin1e:
+	DD INSKIN1E-_ind_pieces,0
+inskin1f:
+	DD INSKIN1F-_ind_pieces,0
+inskin1g:
+	DD INSKIN1G-_ind_pieces,0
+
+INGRY1A:
+	DD INGRY1A_SUB-_ind_pieces,0
+INGRY1A_SUB:
+	DD INGRY1A_IMG-_ind_pieces
+	DW 21, 24, -62, -121
+	DD   VINGRY_P
+INGRY1B:
+	DD INGRY1B_SUB-_ind_pieces,0
+INGRY1B_SUB:
+	DD INGRY1B_IMG-_ind_pieces
+	DW 23, 81, 72, -103
+	DD   VINGRY_P
+INGRY1C:
+	DD INGRY1C_SUB-_ind_pieces,0
+INGRY1C_SUB:
+	DD INGRY1C_IMG-_ind_pieces
+	DW 41, 95, 49, -48
+	DD   VINGRY_P
+INGRY1D:
+	DD INGRY1D_SUB-_ind_pieces,0
+INGRY1D_SUB:
+	DD INGRY1D_IMG-_ind_pieces
+	DW 19, 105, -25, -16
+	DD   VINGRY_P
+INGRY1E:
+	DD INGRY1E_SUB-_ind_pieces,0
+INGRY1E_SUB:
+	DD INGRY1E_IMG-_ind_pieces
+	DW 64, 159, 38, -15
+	DD   VINGRY_P
+INBLU1A:
+	DD INBLU1A_SUB-_ind_pieces,0
+INBLU1A_SUB:
+	DD INBLU1A_IMG-_ind_pieces
+	DW 21, 23, 64, -76
+	DD   VINBLU_P
+INBLU1B:
+	DD INBLU1B_SUB-_ind_pieces,0
+INBLU1B_SUB:
+	DD INBLU1B_IMG-_ind_pieces
+	DW 38, 68, -2, -33
+	DD   VINBLU_P
+INBLU1C:
+	DD INBLU1C_SUB-_ind_pieces,0
+INBLU1C_SUB:
+	DD INBLU1C_IMG-_ind_pieces
+	DW 22, 26, -19, -120
+	DD   VINBLU_P
+INBLU1D:
+	DD INBLU1D_SUB-_ind_pieces,0
+INBLU1D_SUB:
+	DD INBLU1D_IMG-_ind_pieces
+	DW 64, 13, 56, -171
+	DD   VINBLU_P
+INSKIN1A:
+	DD INSKIN1A_SUB-_ind_pieces,0
+INSKIN1A_SUB:
+	DD INSKIN1A_IMG-_ind_pieces
+	DW 34, 77, 88, -69
+	DD   VINSKN_P
+INSKIN1B:
+	DD INSKIN1B_SUB-_ind_pieces,0
+INSKIN1B_SUB:
+	DD INSKIN1B_IMG-_ind_pieces
+	DW 33, 116, 58, -60
+	DD   VINSKN_P
+INSKIN1C:
+	DD INSKIN1C_SUB-_ind_pieces,0
+INSKIN1C_SUB:
+	DD INSKIN1C_IMG-_ind_pieces
+	DW 28, 41, -12, -42
+	DD   VINSKN_P
+INSKIN1D:
+	DD INSKIN1D_SUB-_ind_pieces,0
+INSKIN1D_SUB:
+	DD INSKIN1D_IMG-_ind_pieces
+	DW 18, 31, -67, -98
+	DD   VINSKN_P
+INSKIN1E:
+	DD INSKIN1E_SUB-_ind_pieces,0
+INSKIN1E_SUB:
+	DD INSKIN1E_IMG-_ind_pieces
+	DW 14, 24, -25, -99
+	DD   VINSKN_P
+INSKIN1F:
+	DD INSKIN1F_SUB-_ind_pieces,0
+INSKIN1F_SUB:
+	DD INSKIN1F_IMG-_ind_pieces
+	DW 54, 48, -19, -126
+	DD   VINSKN_P
+INSKIN1G:
+	DD INSKIN1G_SUB-_ind_pieces,0
+INSKIN1G_SUB:
+	DD INSKIN1G_IMG-_ind_pieces
+	DW 44, 89, 26, -69
+	DD   VINSKN_P
+
+	ALIGN 4
+	include attract\vs\vsindian.psi
+
+;**********************************************************************
+
+	PUBLIC _jax_pieces
+_jax_pieces:
+	DW 063h,020h+32,0125h,020h+32
+	DD jxflesh1a-_jax_pieces,0
+	DD jxpurp1a-_jax_pieces,VJXGRN_P
+	DD jxpurp1b-_jax_pieces,VJXGRN_P
+	DD jxgry1a-_jax_pieces,0
+	DD jxgry1b-_jax_pieces,0
+	DD jxgry1c-_jax_pieces,0
+	DD 0
+
+jxflesh1a:
+	DD JXFLESH1A-_jax_pieces,0
+jxpurp1a:
+	DD JXPURP1A-_jax_pieces,0
+jxpurp1b:
+	DD JXPURP1B-_jax_pieces,0
+jxgry1a:
+	DD JXGRY1A-_jax_pieces,0
+jxgry1b:
+	DD JXGRY1B-_jax_pieces,0
+jxgry1c:
+	DD JXGRY1C-_jax_pieces,0
+
+JXFLESH1A:
+	DD JXFLESH1A_SUB-_jax_pieces,0
+JXFLESH1A_SUB:
+	DD JXFLESH1A_IMG-_jax_pieces
+	DW 88, 158, 44, -13
+	DD   VJXFLSH_P
+JXPURP1A:
+	DD JXPURP1A_SUB-_jax_pieces,0
+JXPURP1A_SUB:
+	DD JXPURP1A_IMG-_jax_pieces
+	DW 27, 15, 57, -168
+	DD   VJXPURP_P
+JXPURP1B:
+	DD JXPURP1B_SUB-_jax_pieces,0
+JXPURP1B_SUB:
+	DD JXPURP1B_IMG-_jax_pieces
+	DW 6, 6, -16, -178
+	DD   VJXPURP_P
+JXGRY1A:
+	DD JXGRY1A_SUB-_jax_pieces,0
+JXGRY1A_SUB:
+	DD JXGRY1A_IMG-_jax_pieces
+	DW 77, 96, 84, -50
+	DD   VJXGRY_P
+JXGRY1B:
+	DD JXGRY1B_SUB-_jax_pieces,0
+JXGRY1B_SUB:
+	DD JXGRY1B_IMG-_jax_pieces
+	DW 72, 31, 50, -153
+	DD   VJXGRY_P
+JXGRY1C:
+	DD JXGRY1C_SUB-_jax_pieces,0
+JXGRY1C_SUB:
+	DD JXGRY1C_IMG-_jax_pieces
+	DW 34, 106, -32, -77
+	DD   VJXGRY_P
+
+	ALIGN 4
+	include attract\vs\vsjax.psi
+
+;**********************************************************************
+
+	PUBLIC _sz_pieces
+_sz_pieces:
+	DW 063h,02dh+27,0125h,02dh+27
+	DD szblue1a-_sz_pieces,VSZGRN_P
+	DD szblue1b-_sz_pieces,VSZGRN_P
+	DD szblue1c-_sz_pieces,VSZGRN_P
+	DD szblue1d-_sz_pieces,VSZGRN_P
+	DD szflesh1a-_sz_pieces,0
+	DD szflesh1b-_sz_pieces,0
+	DD szflesh1c-_sz_pieces,0
+	DD szflesh1d-_sz_pieces,0
+	DD szflesh1e-_sz_pieces,0
+	DD szflesh1f-_sz_pieces,0
+	DD szflesh1g-_sz_pieces,0
+	DD szflesh1h-_sz_pieces,0
+	DD szgrey1a-_sz_pieces,0
+	DD szgrey1b-_sz_pieces,0
+	DD szgrey1c-_sz_pieces,0
+	DD szgrey1d-_sz_pieces,0
+	DD szgrey1e-_sz_pieces,0
+	DD szgrey1f-_sz_pieces,0
+	DD szgrey1g-_sz_pieces,0
+	DD 0
+
+szblue1a:
+	DD SZBLUE1A-_sz_pieces,0
+szblue1b:
+	DD SZBLUE1B-_sz_pieces,0
+szblue1c:
+	DD SZBLUE1C-_sz_pieces,0
+szblue1d:
+	DD SZBLUE1D-_sz_pieces,0
+szflesh1a:
+	DD SZFLESH1A-_sz_pieces,0
+szflesh1b:
+	DD SZFLESH1B-_sz_pieces,0
+szflesh1c:
+	DD SZFLESH1C-_sz_pieces,0
+szflesh1d:
+	DD SZFLESH1D-_sz_pieces,0
+szflesh1e:
+	DD SZFLESH1E-_sz_pieces,0
+szflesh1f:
+	DD SZFLESH1F-_sz_pieces,0
+szflesh1g:
+	DD SZFLESH1G-_sz_pieces,0
+szflesh1h:
+	DD SZFLESH1H-_sz_pieces,0
+szgrey1a:
+	DD SZGREY1A-_sz_pieces,0
+szgrey1b:
+	DD SZGREY1B-_sz_pieces,0
+szgrey1c:
+	DD SZGREY1C-_sz_pieces,0
+szgrey1d:
+	DD SZGREY1D-_sz_pieces,0
+szgrey1e:
+	DD SZGREY1E-_sz_pieces,0
+szgrey1f:
+	DD SZGREY1F-_sz_pieces,0
+szgrey1g:
+	DD SZGREY1G-_sz_pieces,0
+
+SZBLUE1A:
+	DD SZBLUE1A_SUB-_sz_pieces,0
+SZBLUE1A_SUB:
+	DD SZBLUE1A_IMG-_sz_pieces
+	DW 30, 22, 60, -155
+	DD   VSZBLU_P
+SZBLUE1B:
+	DD SZBLUE1B_SUB-_sz_pieces,0
+SZBLUE1B_SUB:
+	DD SZBLUE1B_IMG-_sz_pieces
+	DW 50, 104, 52, -45
+	DD   VSZBLU_P
+SZBLUE1C:
+	DD SZBLUE1C_SUB-_sz_pieces,0
+SZBLUE1C_SUB:
+	DD SZBLUE1C_IMG-_sz_pieces
+	DW 8, 40, 2, -47
+	DD   VSZBLU_P
+SZBLUE1D:
+	DD SZBLUE1D_SUB-_sz_pieces,0
+SZBLUE1D_SUB:
+	DD SZBLUE1D_IMG-_sz_pieces
+	DW 36, 65, 2, -80
+	DD   VSZBLU_P
+SZFLESH1A:
+	DD SZFLESH1A_SUB-_sz_pieces,0
+SZFLESH1A_SUB:
+	DD SZFLESH1A_IMG-_sz_pieces
+	DW 31, 21, 36, -9
+	DD   VSZSKN_P
+SZFLESH1B:
+	DD SZFLESH1B_SUB-_sz_pieces,0
+SZFLESH1B_SUB:
+	DD SZFLESH1B_IMG-_sz_pieces
+	DW 28, 28, 34, -120
+	DD   VSZSKN_P
+SZFLESH1C:
+	DD SZFLESH1C_SUB-_sz_pieces,0
+SZFLESH1C_SUB:
+	DD SZFLESH1C_IMG-_sz_pieces
+	DW 75, 116, 88, -12
+	DD   VSZSKN_P
+SZFLESH1D:
+	DD SZFLESH1D_SUB-_sz_pieces,0
+SZFLESH1D_SUB:
+	DD SZFLESH1D_IMG-_sz_pieces
+	DW 2, 13, 13, -45
+	DD   VSZSKN_P
+SZFLESH1E:
+	DD SZFLESH1E_SUB-_sz_pieces,0
+SZFLESH1E_SUB:
+	DD SZFLESH1E_IMG-_sz_pieces
+	DW 15, 32, -62, -121
+	DD   VSZSKN_P
+SZFLESH1F:
+	DD SZFLESH1F_SUB-_sz_pieces,0
+SZFLESH1F_SUB:
+	DD SZFLESH1F_IMG-_sz_pieces
+	DW 33, 87, 11, -38
+	DD   VSZSKN_P
+SZFLESH1G:
+	DD SZFLESH1G_SUB-_sz_pieces,0
+SZFLESH1G_SUB:
+	DD SZFLESH1G_IMG-_sz_pieces
+	DW 45, 78, -13, -99
+	DD   VSZSKN_P
+SZFLESH1H:
+	DD SZFLESH1H_SUB-_sz_pieces,0
+SZFLESH1H_SUB:
+	DD SZFLESH1H_IMG-_sz_pieces
+	DW 29, 54, -21, -29
+	DD   VSZSKN_P
+SZGREY1A:
+	DD SZGREY1A_SUB-_sz_pieces,0
+SZGREY1A_SUB:
+	DD SZGREY1A_IMG-_sz_pieces
+	DW 51, 34, 83, -11
+	DD   VSZGRY_P
+SZGREY1B:
+	DD SZGREY1B_SUB-_sz_pieces,0
+SZGREY1B_SUB:
+	DD SZGREY1B_IMG-_sz_pieces
+	DW 38, 60, 94, -117
+	DD   VSZGRY_P
+SZGREY1C:
+	DD SZGREY1C_SUB-_sz_pieces,0
+SZGREY1C_SUB:
+	DD SZGREY1C_IMG-_sz_pieces
+	DW 54, 131, 56, -47
+	DD   VSZGRY_P
+SZGREY1D:
+	DD SZGREY1D_SUB-_sz_pieces,0
+SZGREY1D_SUB:
+	DD SZGREY1D_IMG-_sz_pieces
+	DW 46, 51, -3, -13
+	DD   VSZGRY_P
+SZGREY1E:
+	DD SZGREY1E_SUB-_sz_pieces,0
+SZGREY1E_SUB:
+	DD SZGREY1E_IMG-_sz_pieces
+	DW 6, 20, 2, -67
+	DD   VSZGRY_P
+SZGREY1F:
+	DD SZGREY1F_SUB-_sz_pieces,0
+SZGREY1F_SUB:
+	DD SZGREY1F_IMG-_sz_pieces
+	DW 36, 61, 2, -83
+	DD   VSZGRY_P
+SZGREY1G:
+	DD SZGREY1G_SUB-_sz_pieces,0
+SZGREY1G_SUB:
+	DD SZGREY1G_IMG-_sz_pieces
+	DW 46, 36, -23, -142
+	DD   VSZGRY_P
+
+	ALIGN 4
+	include attract\vs\vssz.psi
+
+;**********************************************************************
+
+	PUBLIC _swat_pieces
+_swat_pieces:
+	DW 063h,025h+29,0125h,025h+29
+	DD copblue1a-_swat_pieces,VCOPRED_P
+	DD copblue1b-_swat_pieces,VCOPRED_P
+	DD copblue1c-_swat_pieces,VCOPRED_P
+	DD copflesh1a-_swat_pieces,0
+	DD copflesh1b-_swat_pieces,0
+	DD copflesh1c-_swat_pieces,0
+	DD copflesh1d-_swat_pieces,0
+	DD copgrey1a-_swat_pieces,0
+	DD copgrey1b-_swat_pieces,0
+	DD copgrey1c-_swat_pieces,0
+	DD copgrey1d-_swat_pieces,0
+	DD 0
+
+copblue1a:
+	DD COPBLUE1A-_swat_pieces,0
+copblue1b:
+	DD COPBLUE1B-_swat_pieces,0
+copblue1c:
+	DD COPBLUE1C-_swat_pieces,0
+copflesh1a:
+	DD COPFLESH1A-_swat_pieces,0
+copflesh1b:
+	DD COPFLESH1B-_swat_pieces,0
+copflesh1c:
+	DD COPFLESH1C-_swat_pieces,0
+copflesh1d:
+	DD COPFLESH1D-_swat_pieces,0
+copgrey1a:
+	DD COPGREY1A-_swat_pieces,0
+copgrey1b:
+	DD COPGREY1B-_swat_pieces,0
+copgrey1c:
+	DD COPGREY1C-_swat_pieces,0
+copgrey1d:
+	DD COPGREY1D-_swat_pieces,0
+
+COPBLUE1A:
+	DD COPBLUE1A_SUB-_swat_pieces,0
+COPBLUE1A_SUB:
+	DD COPBLUE1A_IMG-_swat_pieces
+	DW 96, 72, 48, -66
+	DD   VCOPBLU_P
+COPBLUE1B:
+	DD COPBLUE1B_SUB-_swat_pieces,0
+COPBLUE1B_SUB:
+	DD COPBLUE1B_IMG-_swat_pieces
+	DW 10, 9, 42, -150
+	DD   VCOPBLU_P
+COPBLUE1C:
+	DD COPBLUE1C_SUB-_swat_pieces,0
+COPBLUE1C_SUB:
+	DD COPBLUE1C_IMG-_swat_pieces
+	DW 20, 14, 69, -171
+	DD   VCOPBLU_P
+COPFLESH1A:
+	DD COPFLESH1A_SUB-_swat_pieces,0
+COPFLESH1A_SUB:
+	DD COPFLESH1A_IMG-_swat_pieces
+	DW 44, 39, -1, -31
+	DD   VCOPSKN_P
+COPFLESH1B:
+	DD COPFLESH1B_SUB-_swat_pieces,0
+	DD   VCOPSKN_P
+COPFLESH1B_SUB:
+	DD COPFLESH1B_IMG-_swat_pieces
+	DW 55, 35, 69, -97
+	DD   VCOPSKN_P
+COPFLESH1C:
+	DD COPFLESH1C_SUB-_swat_pieces,0
+COPFLESH1C_SUB:
+	DD COPFLESH1C_IMG-_swat_pieces
+	DW 11, 16, 10, -127
+	DD   VCOPSKN_P
+COPFLESH1D:
+	DD COPFLESH1D_SUB-_swat_pieces,0
+COPFLESH1D_SUB:
+	DD COPFLESH1D_IMG-_swat_pieces
+	DW 40, 60, -34, -111
+	DD   VCOPSKN_P
+COPGREY1A:
+	DD COPGREY1A_SUB-_swat_pieces,0
+COPGREY1A_SUB:
+	DD COPGREY1A_IMG-_swat_pieces
+	DW 50, 33, 4, -13
+	DD   VCOPGRY_P
+COPGREY1B:
+	DD COPGREY1B_SUB-_swat_pieces,0
+COPGREY1B_SUB:
+	DD COPGREY1B_IMG-_swat_pieces
+	DW 77, 134, 75, -50
+	DD   VCOPGRY_P
+COPGREY1C:
+	DD COPGREY1C_SUB-_swat_pieces,0
+COPGREY1C_SUB:
+	DD COPGREY1C_IMG-_swat_pieces
+	DW 21, 31, -53, -139
+	DD   VCOPGRY_P
+COPGREY1D:
+	DD COPGREY1D_SUB-_swat_pieces,0
+COPGREY1D_SUB:
+	DD COPGREY1D_IMG-_swat_pieces
+	DW 46, 133, -1, -51
+	DD   VCOPGRY_P
+
+	ALIGN 4
+	include attract\vs\vsswat.psi
+
+;**********************************************************************
+
+	PUBLIC _lia_pieces
+_lia_pieces:
+	DW 05dh,035h+26,012ah,035h+26
+	DD liaflesh1a-_lia_pieces,0
+	DD liaflesh1b-_lia_pieces,0
+	DD liaflesh1c-_lia_pieces,0
+	DD liaflesh1d-_lia_pieces,0
+	DD liaflesh1e-_lia_pieces,0
+	DD liagrey1a-_lia_pieces,0
+	DD liagrey1b-_lia_pieces,0
+	DD liagrey1c-_lia_pieces,0
+	DD liapurp1a-_lia_pieces,VLIABLU_P
+	DD liapurp1b-_lia_pieces,VLIABLU_P
+	DD 0
+
+liaflesh1a:
+	DD LIAFLESH1A-_lia_pieces,0
+liaflesh1b:
+	DD LIAFLESH1B-_lia_pieces,0
+liaflesh1c:
+	DD LIAFLESH1C-_lia_pieces,0
+liaflesh1d:
+	DD LIAFLESH1D-_lia_pieces,0
+liaflesh1e:
+	DD LIAFLESH1E-_lia_pieces,0
+liagrey1a:
+	DD LIAGREY1A-_lia_pieces,0
+liagrey1b:
+	DD LIAGREY1B-_lia_pieces,0
+liagrey1c:
+	DD LIAGREY1C-_lia_pieces,0
+liapurp1a:
+	DD LIAPURP1A-_lia_pieces,0
+liapurp1b:
+	DD LIAPURP1B-_lia_pieces,0
+
+LIAFLESH1A:
+	DD LIAFLESH1A_SUB-_lia_pieces,0
+LIAFLESH1A_SUB:
+	DD LIAFLESH1A_IMG-_lia_pieces
+	DW 33, 53, 67, -79
+	DD   VLIASKN_P
+LIAFLESH1B:
+	DD LIAFLESH1B_SUB-_lia_pieces,0
+LIAFLESH1B_SUB:
+	DD LIAFLESH1B_IMG-_lia_pieces
+	DW 25, 72, 34, -61
+	DD   VLIASKN_P
+LIAFLESH1C:
+	DD LIAFLESH1C_SUB-_lia_pieces,0
+LIAFLESH1C_SUB:
+	DD LIAFLESH1C_IMG-_lia_pieces
+	DW 26, 26, -60, -55
+	DD   VLIASKN_P
+LIAFLESH1D:
+	DD LIAFLESH1D_SUB-_lia_pieces,0
+LIAFLESH1D_SUB:
+	DD LIAFLESH1D_IMG-_lia_pieces
+	DW 35, 51, -27, -81
+	DD   VLIASKN_P
+LIAFLESH1E:
+	DD LIAFLESH1E_SUB-_lia_pieces,0
+LIAFLESH1E_SUB:
+	DD LIAFLESH1E_IMG-_lia_pieces
+	DW 35, 115, 10, -36
+	DD   VLIASKN_P
+LIAGREY1A:
+	DD LIAGREY1A_SUB-_lia_pieces,0
+LIAGREY1A_SUB:
+	DD LIAGREY1A_IMG-_lia_pieces
+	DW 66, 166, 59, -8
+	DD   VLIAGRY_P
+LIAGREY1B:
+	DD LIAGREY1B_SUB-_lia_pieces,0
+LIAGREY1B_SUB:
+	DD LIAGREY1B_IMG-_lia_pieces
+	DW 25, 39, -49, -75
+	DD   VLIAGRY_P
+LIAGREY1C:
+	DD LIAGREY1C_SUB-_lia_pieces,0
+LIAGREY1C_SUB:
+	DD LIAGREY1C_IMG-_lia_pieces
+	DW 26, 166, -5, -8
+	DD   VLIAGRY_P
+LIAPURP1A:
+	DD LIAPURP1A_SUB-_lia_pieces,0
+LIAPURP1A_SUB:
+	DD LIAPURP1A_IMG-_lia_pieces
+	DW 15, 42, 38, -95
+	DD   VLIAPRP_P
+LIAPURP1B:
+	DD LIAPURP1B_SUB-_lia_pieces,0
+LIAPURP1B_SUB:
+	DD LIAPURP1B_IMG-_lia_pieces
+	DW 33, 77, 7, -97
+	DD   VLIAPRP_P
+
+	ALIGN 4
+	include attract\vs\vslia.psi
+
+;**********************************************************************
+
+	PUBLIC _robo1_pieces
+_robo1_pieces:
+	DW 055h,035h+01eh,0130h,035h+01eh
+	DD rb2grey1a-_robo1_pieces,0
+	DD rb2grey1b-_robo1_pieces,0
+	DD rb2grey1c-_robo1_pieces,0
+	DD rb2grey1d-_robo1_pieces,0
+	DD rb2grey1e-_robo1_pieces,0
+	DD rb2grey1f-_robo1_pieces,0
+	DD rb2red1a-_robo1_pieces,VRBDRED_P
+	DD rb2red1b-_robo1_pieces,VRBDRED_P
+	DD rb2red1c-_robo1_pieces,VRBDRED_P
+	DD rb2red1d-_robo1_pieces,VRBDRED_P
+	DD rb2red1e-_robo1_pieces,VRBDRED_P
+	DD rb2red1f-_robo1_pieces,VRBDRED_P
+	DD rb2red1g-_robo1_pieces,VRBDRED_P
+	DD 0
+
+rb2grey1a:
+	DD RB2GREY1A-_robo1_pieces,0
+rb2grey1b:
+	DD RB2GREY1B-_robo1_pieces,0
+rb2grey1c:
+	DD RB2GREY1C-_robo1_pieces,0
+rb2grey1d:
+	DD RB2GREY1D-_robo1_pieces,0
+rb2grey1e:
+	DD RB2GREY1E-_robo1_pieces,0
+rb2grey1f:
+	DD RB2GREY1F-_robo1_pieces,0
+rb2red1a:
+	DD RB2RED1A-_robo1_pieces,0
+rb2red1b:
+	DD RB2RED1B-_robo1_pieces,0
+rb2red1c:
+	DD RB2RED1C-_robo1_pieces,0
+rb2red1d:
+	DD RB2RED1D-_robo1_pieces,0
+rb2red1e:
+	DD RB2RED1E-_robo1_pieces,0
+rb2red1f:
+	DD RB2RED1F-_robo1_pieces,0
+rb2red1g:
+	DD RB2RED1G-_robo1_pieces,0
+
+RB2GREY1A:
+	DD RB2GREY1A_SUB-_robo1_pieces,0
+RB2GREY1A_SUB:
+	DD RB2GREY1A_IMG-_robo1_pieces
+	DW 37, 43, 4, -133
+	DD   VRB2GRY_P
+RB2GREY1B:
+	DD RB2GREY1B_SUB-_robo1_pieces,0
+RB2GREY1B_SUB:
+	DD RB2GREY1B_IMG-_robo1_pieces
+	DW 50, 66, 59, -50
+	DD   VRB2GRY_P
+RB2GREY1C:
+	DD RB2GREY1C_SUB-_robo1_pieces,0
+RB2GREY1C_SUB:
+	DD RB2GREY1C_IMG-_robo1_pieces
+	DW 50, 60, 54, -116
+	DD   VRB2GRY_P
+RB2GREY1D:
+	DD RB2GREY1D_SUB-_robo1_pieces,0
+RB2GREY1D_SUB:
+	DD RB2GREY1D_IMG-_robo1_pieces
+	DW 22, 52, -56, -70
+	DD   VRB2GRY_P
+RB2GREY1E:
+	DD RB2GREY1E_SUB-_robo1_pieces,0
+RB2GREY1E_SUB:
+	DD RB2GREY1E_IMG-_robo1_pieces
+	DW 38, 51, -16, -84
+	DD   VRB2GRY_P
+RB2GREY1F:
+	DD RB2GREY1F_SUB-_robo1_pieces,0
+RB2GREY1F_SUB:
+	DD RB2GREY1F_IMG-_robo1_pieces
+	DW 51, 82, 9, -7
+	DD   VRB2GRY_P
+RB2RED1A:
+	DD RB2RED1A_SUB-_robo1_pieces,0
+RB2RED1A_SUB:
+	DD RB2RED1A_IMG-_robo1_pieces
+	DW 54, 36, 82, -38
+	DD   VRB2RED_P
+RB2RED1B:
+	DD RB2RED1B_SUB-_robo1_pieces,0
+RB2RED1B_SUB:
+	DD RB2RED1B_IMG-_robo1_pieces
+	DW 12, 13, 42, -156
+	DD   VRB2RED_P
+RB2RED1C:
+	DD RB2RED1C_SUB-_robo1_pieces,0
+RB2RED1C_SUB:
+	DD RB2RED1C_IMG-_robo1_pieces
+	DW 50, 101, 40, -41
+	DD   VRB2RED_P
+RB2RED1D:
+	DD RB2RED1D_SUB-_robo1_pieces,0
+RB2RED1D_SUB:
+	DD RB2RED1D_IMG-_robo1_pieces
+	DW 10, 5, -9, -151
+	DD   VRB2RED_P
+RB2RED1E:
+	DD RB2RED1E_SUB-_robo1_pieces,0
+RB2RED1E_SUB:
+	DD RB2RED1E_IMG-_robo1_pieces
+	DW 24, 21, 21, -155
+	DD   VRB2RED_P
+RB2RED1F:
+	DD RB2RED1F_SUB-_robo1_pieces,0
+RB2RED1F_SUB:
+	DD RB2RED1F_IMG-_robo1_pieces
+	DW 19, 111, -9, -25
+	DD   VRB2RED_P
+RB2RED1G:
+	DD RB2RED1G_SUB-_robo1_pieces,0
+RB2RED1G_SUB:
+	DD RB2RED1G_IMG-_robo1_pieces
+	DW 46, 103, -28, -42
+	DD   VRB2RED_P
+
+	ALIGN 4
+	include attract\vs\vsrobo1.psi
+;**********************************************************************
+
+	PUBLIC _robo2_pieces
+_robo2_pieces:
+	DW 05ch,035h+01eh,0128h,035h+01eh
+	DD rb1gold1a-_robo2_pieces,VRBDYEL_P
+	DD rb1gold1b-_robo2_pieces,VRBDYEL_P
+	DD rb1gold1c-_robo2_pieces,VRBDYEL_P
+	DD rb1gold1d-_robo2_pieces,VRBDYEL_P
+	DD rb1gold1e-_robo2_pieces,VRBDYEL_P
+	DD rb1grey1a-_robo2_pieces,0
+	DD rb1grey1b-_robo2_pieces,0
+	DD rb1grey1c-_robo2_pieces,0
+	DD rb1grey1d-_robo2_pieces,0
+	DD rb1grey1e-_robo2_pieces,0
+	DD rb1grey1f-_robo2_pieces,0
+	DD rb1grey1g-_robo2_pieces,0
+	DD 0
+
+rb1gold1a:
+	DD RB1GOLD1A-_robo2_pieces,0
+rb1gold1b:
+	DD RB1GOLD1B-_robo2_pieces,0
+rb1gold1c:
+	DD RB1GOLD1C-_robo2_pieces,0
+rb1gold1d:
+	DD RB1GOLD1D-_robo2_pieces,0
+rb1gold1e:
+	DD RB1GOLD1E-_robo2_pieces,0
+
+rb1grey1a:
+	DD RB1GREY1A-_robo2_pieces,0
+rb1grey1b:
+	DD RB1GREY1B-_robo2_pieces,0
+rb1grey1c:
+	DD RB1GREY1C-_robo2_pieces,0
+rb1grey1d:
+	DD RB1GREY1D-_robo2_pieces,0
+rb1grey1e:
+	DD RB1GREY1E-_robo2_pieces,0
+rb1grey1f:
+	DD RB1GREY1F-_robo2_pieces,0
+rb1grey1g:
+	DD RB1GREY1G-_robo2_pieces,0
+
+RB1GREY1A:
+	DD RB1GREY1A_SUB-_robo2_pieces,0
+RB1GREY1A_SUB:
+	DD RB1GREY1A_IMG-_robo2_pieces
+	DW 54, 43, 56, -1
+	DD   VRB1GRY_P
+RB1GREY1B:
+	DD RB1GREY1B_SUB-_robo2_pieces,0
+RB1GREY1B_SUB:
+	DD RB1GREY1B_IMG-_robo2_pieces
+	DW 22, 27, 66, -47
+	DD   VRB1GRY_P
+RB1GREY1C:
+	DD RB1GREY1C_SUB-_robo2_pieces,0
+RB1GREY1C_SUB:
+	DD RB1GREY1C_IMG-_robo2_pieces
+	DW 54, 125, 59, -44
+	DD   VRB1GRY_P
+RB1GREY1D:
+	DD RB1GREY1D_SUB-_robo2_pieces,0
+RB1GREY1D_SUB:
+	DD RB1GREY1D_IMG-_robo2_pieces
+	DW 23, 27, 5, -142
+	DD   VRB1GRY_P
+RB1GREY1E:
+	DD RB1GREY1E_SUB-_robo2_pieces,0
+RB1GREY1E_SUB:
+	DD RB1GREY1E_IMG-_robo2_pieces
+	DW 54, 82, -4, -1
+	DD   VRB1GRY_P
+RB1GREY1F:
+	DD RB1GREY1F_SUB-_robo2_pieces,0
+RB1GREY1F_SUB:
+	DD RB1GREY1F_IMG-_robo2_pieces
+	DW 25, 41, -22, -87
+	DD   VRB1GRY_P
+RB1GREY1G:
+	DD RB1GREY1G_SUB-_robo2_pieces,0
+RB1GREY1G_SUB:
+	DD RB1GREY1G_IMG-_robo2_pieces
+	DW 67, 65, -29, -88
+	DD   VRB1GRY_P
+RB1GOLD1A:
+	DD RB1GOLD1A_SUB-_robo2_pieces,0
+RB1GOLD1A_SUB:
+	DD RB1GOLD1A_IMG-_robo2_pieces
+	DW 29, 48, 78, -25
+	DD   VRB1YEL_P
+RB1GOLD1B:
+	DD RB1GOLD1B_SUB-_robo2_pieces,0
+RB1GOLD1B_SUB:
+	DD RB1GOLD1B_IMG-_robo2_pieces
+	DW 27, 33, 50, -42
+	DD   VRB1YEL_P
+RB1GOLD1C:
+	DD RB1GOLD1C_SUB-_robo2_pieces,0
+RB1GOLD1C_SUB:
+	DD RB1GOLD1C_IMG-_robo2_pieces
+	DW 62, 16, 45, -153
+	DD   VRB1YEL_P
+RB1GOLD1D:
+	DD RB1GOLD1D_SUB-_robo2_pieces,0
+RB1GOLD1D_SUB:
+	DD RB1GOLD1D_IMG-_robo2_pieces
+	DW 66, 111, 38, -36
+	DD   VRB1YEL_P
+RB1GOLD1E:
+	DD RB1GOLD1E_SUB-_robo2_pieces,0
+RB1GOLD1E_SUB:
+	DD RB1GOLD1E_IMG-_robo2_pieces
+	DW 46, 139, -27, -23
+	DD   VRB1YEL_P
+
+	ALIGN 4
+	include attract\vs\vsrobo2.psi
+
+;**********************************************************************
+
+	PUBLIC _smoke_pieces
+_smoke_pieces:
+	DW 05ch,035h+01eh,0128h,035h+01eh
+	DD sm1gold1a-_smoke_pieces,VSMOK2_P
+	DD sm1gold1b-_smoke_pieces,VSMOK2_P
+	DD sm1gold1c-_smoke_pieces,VSMOK2_P
+	DD sm1gold1d-_smoke_pieces,VSMOK2_P
+	DD sm1gold1e-_smoke_pieces,VSMOK2_P
+	DD rb3grey1a-_smoke_pieces,0
+	DD rb3grey1b-_smoke_pieces,0
+	DD rb3grey1c-_smoke_pieces,0
+	DD rb3grey1d-_smoke_pieces,0
+	DD rb3grey1e-_smoke_pieces,0
+	DD rb3grey1f-_smoke_pieces,0
+	DD rb3grey1g-_smoke_pieces,0
+	DD 0
+
+sm1gold1a:
+	DD SM1GOLD1A-_smoke_pieces,0
+sm1gold1b:
+	DD SM1GOLD1B-_smoke_pieces,0
+sm1gold1c:
+	DD SM1GOLD1C-_smoke_pieces,0
+sm1gold1d:
+	DD SM1GOLD1D-_smoke_pieces,0
+sm1gold1e:
+	DD SM1GOLD1E-_smoke_pieces,0
+rb3grey1a:
+	DD RB3GREY1A-_smoke_pieces,0
+rb3grey1b:
+	DD RB3GREY1B-_smoke_pieces,0
+rb3grey1c:
+	DD RB3GREY1C-_smoke_pieces,0
+rb3grey1d:
+	DD RB3GREY1D-_smoke_pieces,0
+rb3grey1e:
+	DD RB3GREY1E-_smoke_pieces,0
+rb3grey1f:
+	DD RB3GREY1F-_smoke_pieces,0
+rb3grey1g:
+	DD RB3GREY1G-_smoke_pieces,0
+
+SM1GOLD1A:
+	DD SM1GOLD1A_SUB-_smoke_pieces,0
+SM1GOLD1A_SUB:
+	DD RB3GOLD1A_IMG-_smoke_pieces
+	DW 29, 48, 78, -25
+	DD   VSMOK1_P
+SM1GOLD1B:
+	DD SM1GOLD1B_SUB-_smoke_pieces,0
+SM1GOLD1B_SUB:
+	DD RB3GOLD1B_IMG-_smoke_pieces
+	DW 27, 33, 50, -42
+	DD   VSMOK1_P
+SM1GOLD1C:
+	DD SM1GOLD1C_SUB-_smoke_pieces,0
+SM1GOLD1C_SUB:
+	DD RB3GOLD1C_IMG-_smoke_pieces
+	DW 62, 16, 45, -153
+	DD   VSMOK1_P
+SM1GOLD1D:
+	DD SM1GOLD1D_SUB-_smoke_pieces,0
+SM1GOLD1D_SUB:
+	DD RB3GOLD1D_IMG-_smoke_pieces
+	DW 66, 111, 38, -36
+	DD   VSMOK1_P
+SM1GOLD1E:
+	DD SM1GOLD1E_SUB-_smoke_pieces,0
+SM1GOLD1E_SUB:
+	DD RB3GOLD1E_IMG-_smoke_pieces
+	DW 46, 139, -27, -23
+	DD   VSMOK1_P
+
+RB3GREY1A:
+	DD RB3GREY1A_SUB-_smoke_pieces,0
+RB3GREY1A_SUB:
+	DD RB3GREY1A_IMG-_smoke_pieces
+	DW 54, 43, 56, -1
+	DD   VRB1GRY_P
+RB3GREY1B:
+	DD RB3GREY1B_SUB-_smoke_pieces,0
+RB3GREY1B_SUB:
+	DD RB3GREY1B_IMG-_smoke_pieces
+	DW 22, 27, 66, -47
+	DD   VRB1GRY_P
+RB3GREY1C:
+	DD RB3GREY1C_SUB-_smoke_pieces,0
+RB3GREY1C_SUB:
+	DD RB3GREY1C_IMG-_smoke_pieces
+	DW 54, 125, 59, -44
+	DD   VRB1GRY_P
+RB3GREY1D:
+	DD RB3GREY1D_SUB-_smoke_pieces,0
+RB3GREY1D_SUB:
+	DD RB3GREY1D_IMG-_smoke_pieces
+	DW 23, 27, 5, -142
+	DD   VRB1GRY_P
+RB3GREY1E:
+	DD RB3GREY1E_SUB-_smoke_pieces,0
+RB3GREY1E_SUB:
+	DD RB3GREY1E_IMG-_smoke_pieces
+	DW 54, 82, -4, -1
+	DD   VRB1GRY_P
+RB3GREY1F:
+	DD RB3GREY1F_SUB-_smoke_pieces,0
+RB3GREY1F_SUB:
+	DD RB3GREY1F_IMG-_smoke_pieces
+	DW 25, 41, -22, -87
+	DD   VRB1GRY_P
+RB3GREY1G:
+	DD RB3GREY1G_SUB-_smoke_pieces,0
+RB3GREY1G_SUB:
+	DD RB3GREY1G_IMG-_smoke_pieces
+	DW 67, 65, -29, -88
+	DD   VRB1GRY_P
+
+	ALIGN 4
+	include attract\vs\vsrobo3.psi
+
+;**********************************************************************
+
+	PUBLIC _lao_pieces
+_lao_pieces:
+	DW 05ch,035h+14,0128h,035h+14
+	DD klflesh1a-_lao_pieces,0
+	DD klflesh1b-_lao_pieces,0
+	DD klflesh1c-_lao_pieces,0
+	DD klflesh1d-_lao_pieces,0
+	DD klflesh1e-_lao_pieces,0
+	DD klgrey1a-_lao_pieces,0
+	DD klgrey1b-_lao_pieces,0
+	DD klgrey1c-_lao_pieces,0
+	DD klgrey1d-_lao_pieces,0
+	DD klgrey1e-_lao_pieces,0
+	DD klgrey1f-_lao_pieces,0
+	DD klgrey1g-_lao_pieces,0
+	DD klpants1a-_lao_pieces,VKLBLU_P
+	DD klpants1b-_lao_pieces,VKLBLU_P
+	DD 0
+
+klflesh1a:
+	DD KLFLESH1A-_lao_pieces,0
+
+klflesh1b:
+	DD KLFLESH1B-_lao_pieces,0
+
+klflesh1c:
+	DD KLFLESH1C-_lao_pieces,0
+
+klflesh1d:
+	DD KLFLESH1D-_lao_pieces,0
+
+klflesh1e:
+	DD KLFLESH1E-_lao_pieces,0
+
+klgrey1a:
+	DD KLGREY1A-_lao_pieces,0
+
+klgrey1b:
+	DD KLGREY1B-_lao_pieces,0
+
+klgrey1c:
+	DD KLGREY1C-_lao_pieces,0
+
+klgrey1d:
+	DD KLGREY1D-_lao_pieces,0
+
+klgrey1e:
+	DD KLGREY1E-_lao_pieces,0
+
+klgrey1f:
+	DD KLGREY1F-_lao_pieces,0
+
+klgrey1g:
+	DD KLGREY1G-_lao_pieces,0
+
+klpants1a:
+	DD KLPANTS1A-_lao_pieces,0
+
+klpants1b:
+	DD KLPANTS1B-_lao_pieces,0
+
+
+KLFLESH1A:
+	DD KLFLESH1A_SUB-_lao_pieces,0
+KLFLESH1A_SUB:
+	DD KLFLESH1A_IMG-_lao_pieces
+	DW 66, 46, 84, -26
+	DD VKLSKIN_P
+KLFLESH1B:
+	DD KLFLESH1B_SUB-_lao_pieces,0
+KLFLESH1B_SUB:
+	DD KLFLESH1B_IMG-_lao_pieces
+	DW 10, 87, 42, -72
+	DD VKLSKIN_P
+KLFLESH1C:
+	DD KLFLESH1C_SUB-_lao_pieces,0
+KLFLESH1C_SUB:
+	DD KLFLESH1C_IMG-_lao_pieces
+	DW 51, 134, 31, -25
+	DD VKLSKIN_P
+KLFLESH1D:
+	DD KLFLESH1D_SUB-_lao_pieces,0
+KLFLESH1D_SUB:
+	DD KLFLESH1D_IMG-_lao_pieces
+	DW 39, 116, -19, -25
+	DD VKLSKIN_P
+KLFLESH1E:
+	DD KLFLESH1E_SUB-_lao_pieces,0
+KLFLESH1E_SUB:
+	DD KLFLESH1E_IMG-_lao_pieces
+	DW 33, 70, -58, -72
+	DD VKLSKIN_P
+KLGREY1A:
+	DD KLGREY1A_SUB-_lao_pieces,0
+KLGREY1A_SUB:
+	DD KLGREY1A_IMG-_lao_pieces
+	DW 26, 20, 70, -27
+	DD VKLGRAY_P
+KLGREY1B:
+	DD KLGREY1B_SUB-_lao_pieces,0
+KLGREY1B_SUB:
+	DD KLGREY1B_IMG-_lao_pieces
+	DW 47, 137, 42, -6
+	DD VKLGRAY_P
+KLGREY1C:
+	DD KLGREY1C_SUB-_lao_pieces,0
+KLGREY1C_SUB:
+	DD KLGREY1C_IMG-_lao_pieces
+	DW 22, 34, -61, -94
+	DD VKLGRAY_P
+KLGREY1D:
+	DD KLGREY1D_SUB-_lao_pieces,0
+KLGREY1D_SUB:
+	DD KLGREY1D_IMG-_lao_pieces
+	DW 27, 31, 0, -151
+	DD VKLGRAY_P
+KLGREY1E:
+	DD KLGREY1E_SUB-_lao_pieces,0
+KLGREY1E_SUB:
+	DD KLGREY1E_IMG-_lao_pieces
+	DW 59, 83, -4, -1
+	DD VKLGRAY_P
+KLGREY1F:
+	DD KLGREY1F_SUB-_lao_pieces,0
+KLGREY1F_SUB:
+	DD KLGREY1F_IMG-_lao_pieces
+	DW 18, 28, -4, -114
+	DD VKLGRAY_P
+KLGREY1G:
+	DD KLGREY1G_SUB-_lao_pieces,0
+KLGREY1G_SUB:
+	DD KLGREY1G_IMG-_lao_pieces
+	DW 46, 40, 51, -143
+	DD VKLGRAY_P
+KLPANTS1A:
+	DD KLPANTS1A_SUB-_lao_pieces,0
+KLPANTS1A_SUB:
+	DD KLPANTS1A_IMG-_lao_pieces
+	DW 9, 18, 37, -165
+	DD VKLTAN_P
+KLPANTS1B:
+	DD KLPANTS1B_SUB-_lao_pieces,0
+KLPANTS1B_SUB:
+	DD KLPANTS1B_IMG-_lao_pieces
+	DW 32, 25, 6, -158
+	DD VKLTAN_P
+
+	ALIGN 4
+	include attract\vs\vslao.psi
+
+;**********************************************************************
+
+	PUBLIC _tusk_pieces
+_tusk_pieces:
+	DW 05ch,035h+18,0128h,035h+18
+	DD kbflesh1a-_tusk_pieces,0
+	DD kbflesh1b-_tusk_pieces,0
+	DD kbflesh1c-_tusk_pieces,0
+	DD kbflesh1d-_tusk_pieces,0
+	DD kbflesh1e-_tusk_pieces,0
+	DD kbgrvest1a-_tusk_pieces,0
+	DD kbgrvest1b-_tusk_pieces,0
+	DD kbgrvest1c-_tusk_pieces,0
+	DD kbgrvest1d-_tusk_pieces,0
+	DD kbgrvest1e-_tusk_pieces,0
+	DD kbpants1a-_tusk_pieces,VKBBLU_P
+	DD kbpants1b-_tusk_pieces,VKBBLU_P
+	DD 0
+
+kbflesh1a:
+	DD KBFLESH1A-_tusk_pieces,0
+kbflesh1b:
+	DD KBFLESH1B-_tusk_pieces,0
+kbflesh1c:
+	DD KBFLESH1C-_tusk_pieces,0
+kbflesh1d:
+	DD KBFLESH1D-_tusk_pieces,0
+kbflesh1e:
+	DD KBFLESH1E-_tusk_pieces,0
+kbgrvest1a:
+	DD KBGRVEST1A-_tusk_pieces,0
+kbgrvest1b:
+	DD KBGRVEST1B-_tusk_pieces,0
+kbgrvest1c:
+	DD KBGRVEST1C-_tusk_pieces,0
+kbgrvest1d:
+	DD KBGRVEST1D-_tusk_pieces,0
+kbgrvest1e:
+	DD KBGRVEST1E-_tusk_pieces,0
+kbpants1a:
+	DD KBPANTS1A-_tusk_pieces,0
+kbpants1b:
+	DD KBPANTS1B-_tusk_pieces,0
+
+KBFLESH1A:
+	DD KBFLESH1A_SUB-_tusk_pieces,0
+KBFLESH1A_SUB:
+	DD KBFLESH1A_IMG-_tusk_pieces
+	DW 26, 62, 78, -64
+	DD   VKBSKIN_P
+KBFLESH1B:
+	DD KBFLESH1B_SUB-_tusk_pieces,0
+KBFLESH1B_SUB:
+	DD KBFLESH1B_IMG-_tusk_pieces
+	DW 26, 15, -7, -11
+	DD   VKBSKIN_P
+KBFLESH1C:
+	DD KBFLESH1C_SUB-_tusk_pieces,0
+KBFLESH1C_SUB:
+	DD KBFLESH1C_IMG-_tusk_pieces
+	DW 6, 13, -29, -70
+	DD   VKBSKIN_P
+KBFLESH1D:
+	DD KBFLESH1D_SUB-_tusk_pieces,0
+KBFLESH1D_SUB:
+	DD KBFLESH1D_IMG-_tusk_pieces
+	DW 47, 83, 19, -43
+	DD   VKBSKIN_P
+KBFLESH1E:
+	DD KBFLESH1E_SUB-_tusk_pieces,0
+KBFLESH1E_SUB:
+	DD KBFLESH1E_IMG-_tusk_pieces
+	DW 41, 51, -45, -85
+	DD   VKBSKIN_P
+KBGRVEST1A:
+	DD KBGRVEST1A_SUB-_tusk_pieces,0
+KBGRVEST1A_SUB:
+	DD KBGRVEST1A_IMG-_tusk_pieces
+	DW 21, 31, -68, -58
+	DD   VKBGRAY_P
+KBGRVEST1B:
+	DD KBGRVEST1B_SUB-_tusk_pieces,0
+KBGRVEST1B_SUB:
+	DD KBGRVEST1B_IMG-_tusk_pieces
+	DW 44, 140, 70, -39
+	DD   VKBGRAY_P
+KBGRVEST1C:
+	DD KBGRVEST1C_SUB-_tusk_pieces,0
+KBGRVEST1C_SUB:
+	DD KBGRVEST1C_IMG-_tusk_pieces
+	DW 38, 169, 8, -10
+	DD   VKBGRAY_P
+KBGRVEST1D:
+	DD KBGRVEST1D_SUB-_tusk_pieces,0
+KBGRVEST1D_SUB:
+	DD KBGRVEST1D_IMG-_tusk_pieces
+	DW 18, 152, 26, -27
+	DD   VKBGRAY_P
+KBGRVEST1E:
+	DD KBGRVEST1E_SUB-_tusk_pieces,0
+KBGRVEST1E_SUB:
+	DD KBGRVEST1E_IMG-_tusk_pieces
+	DW 33, 122, -29, -15
+	DD   VKBGRAY_P
+KBPANTS1A:
+	DD KBPANTS1A_SUB-_tusk_pieces,0
+KBPANTS1A_SUB:
+	DD KBPANTS1A_IMG-_tusk_pieces
+	DW 19, 11, 72, -168
+	DD   VKBTAN_P
+KBPANTS1B:
+	DD KBPANTS1B_SUB-_tusk_pieces,0
+KBPANTS1B_SUB:
+	DD KBPANTS1B_IMG-_tusk_pieces
+	DW 30, 27, 41, -152
+	DD   VKBTAN_P
+
+	ALIGN 4
+	include attract\vs\vstusk.psi
+
+;**********************************************************************
+
+	PUBLIC _sg_pieces
+_sg_pieces:
+	DW 05ch,033h+17,0128h,033h+17
+	DD shflesh1a-_sg_pieces,0
+	DD shflesh1b-_sg_pieces,0
+	DD shflesh1c-_sg_pieces,0
+	DD shflesh1d-_sg_pieces,0
+	DD shflesh1e-_sg_pieces,0
+	DD shflesh1f-_sg_pieces,0
+	DD shflesh1g-_sg_pieces,0
+	DD shflesh1h-_sg_pieces,0
+	DD shflesh1i-_sg_pieces,0
+	DD shgrey1a-_sg_pieces,0
+	DD shgrey1b-_sg_pieces,0
+	DD shgrey1c-_sg_pieces,0
+	DD shgrey1d-_sg_pieces,0
+	DD shgrey1e-_sg_pieces,0
+	DD shgrey1f-_sg_pieces,0
+	DD shgrey1g-_sg_pieces,0
+	DD shred1a-_sg_pieces,VSHBLU_P
+	DD shred1b-_sg_pieces,VSHBLU_P
+	DD shred1c-_sg_pieces,VSHBLU_P
+	DD shred1d-_sg_pieces,VSHBLU_P
+	DD 0
+
+shflesh1a:
+	DD SHFLESH1A-_sg_pieces,0
+shflesh1b:
+	DD SHFLESH1B-_sg_pieces,0
+shflesh1c:
+	DD SHFLESH1C-_sg_pieces,0
+shflesh1d:
+	DD SHFLESH1D-_sg_pieces,0
+shflesh1e:
+	DD SHFLESH1E-_sg_pieces,0
+shflesh1f:
+	DD SHFLESH1F-_sg_pieces,0
+shflesh1g:
+	DD SHFLESH1G-_sg_pieces,0
+shflesh1h:
+	DD SHFLESH1H-_sg_pieces,0
+shflesh1i:
+	DD SHFLESH1I-_sg_pieces,0
+shgrey1a:
+	DD SHGREY1A-_sg_pieces,0
+shgrey1b:
+	DD SHGREY1B-_sg_pieces,0
+shgrey1c:
+	DD SHGREY1C-_sg_pieces,0
+shgrey1d:
+	DD SHGREY1D-_sg_pieces,0
+shgrey1e:
+	DD SHGREY1E-_sg_pieces,0
+shgrey1f:
+	DD SHGREY1F-_sg_pieces,0
+shgrey1g:
+	DD SHGREY1G-_sg_pieces,0
+shred1a:
+	DD SHRED1A-_sg_pieces,0
+shred1b:
+	DD SHRED1B-_sg_pieces,0
+shred1c:
+	DD SHRED1C-_sg_pieces,0
+shred1d:
+	DD SHRED1D-_sg_pieces,0
+
+SHFLESH1A:
+	DD SHFLESH1A_SUB-_sg_pieces,0
+SHFLESH1A_SUB:
+	DD SHFLESH1A_IMG-_sg_pieces
+	DW 17, 27, 21, -155
+	DD   VSHESKIN_
+SHFLESH1B:
+	DD SHFLESH1B_SUB-_sg_pieces,0
+SHFLESH1B_SUB:
+	DD SHFLESH1B_IMG-_sg_pieces
+	DW 41, 43, 71, -139
+	DD   VSHESKIN_
+SHFLESH1C:
+	DD SHFLESH1C_SUB-_sg_pieces,0
+SHFLESH1C_SUB:
+	DD SHFLESH1C_IMG-_sg_pieces
+	DW 41, 65, -5, -13
+	DD   VSHESKIN_
+SHFLESH1D:
+	DD SHFLESH1D_SUB-_sg_pieces,0
+SHFLESH1D_SUB:
+	DD SHFLESH1D_IMG-_sg_pieces
+	DW 21, 41, 64, -8
+	DD   VSHESKIN_
+SHFLESH1E:
+	DD SHFLESH1E_SUB-_sg_pieces,0
+SHFLESH1E_SUB:
+	DD SHFLESH1E_IMG-_sg_pieces
+	DW 62, 85, 82, -62
+	DD   VSHESKIN_
+SHFLESH1F:
+	DD SHFLESH1F_SUB-_sg_pieces,0
+SHFLESH1F_SUB:
+	DD SHFLESH1F_IMG-_sg_pieces
+	DW 40, 96, -3, -77
+	DD   VSHESKIN_
+SHFLESH1G:
+	DD SHFLESH1G_SUB-_sg_pieces,0
+SHFLESH1G_SUB:
+	DD SHFLESH1G_IMG-_sg_pieces
+	DW 40, 85, -43, -93
+	DD   VSHESKIN_
+SHFLESH1H:
+	DD SHFLESH1H_SUB-_sg_pieces,0
+SHFLESH1H_SUB:
+	DD SHFLESH1H_IMG-_sg_pieces
+	DW 38, 88, 43, -15
+	DD   VSHESKIN_
+SHFLESH1I:
+	DD SHFLESH1I_SUB-_sg_pieces,0
+SHFLESH1I_SUB:
+	DD SHFLESH1I_IMG-_sg_pieces
+	DW 26, 105, 21, -44
+	DD   VSHESKIN_
+SHGREY1A:
+	DD SHGREY1A_SUB-_sg_pieces,0
+SHGREY1A_SUB:
+	DD SHGREY1A_IMG-_sg_pieces
+	DW 18, 20, 54, -10
+	DD   VSHEGRY_P
+SHGREY1B:
+	DD SHGREY1B_SUB-_sg_pieces,0
+SHGREY1B_SUB:
+	DD SHGREY1B_IMG-_sg_pieces
+	DW 21, 20, 82, -72
+	DD   VSHEGRY_P
+SHGREY1C:
+	DD SHGREY1C_SUB-_sg_pieces,0
+SHGREY1C_SUB:
+	DD SHGREY1C_IMG-_sg_pieces
+	DW 10, 14, 37, -59
+	DD   VSHEGRY_P
+SHGREY1D:
+	DD SHGREY1D_SUB-_sg_pieces,0
+SHGREY1D_SUB:
+	DD SHGREY1D_IMG-_sg_pieces
+	DW 58, 57, 17, 2
+	DD   VSHEGRY_P
+SHGREY1E:
+	DD SHGREY1E_SUB-_sg_pieces,0
+SHGREY1E_SUB:
+	DD SHGREY1E_IMG-_sg_pieces
+	DW 38, 23, 48, -134
+	DD   VSHEGRY_P
+SHGREY1F:
+	DD SHGREY1F_SUB-_sg_pieces,0
+SHGREY1F_SUB:
+	DD SHGREY1F_IMG-_sg_pieces
+	DW 18, 17, -31, -161
+	DD   VSHEGRY_P
+SHGREY1G:
+	DD SHGREY1G_SUB-_sg_pieces,0
+SHGREY1G_SUB:
+	DD SHGREY1G_IMG-_sg_pieces
+	DW 14, 27, -69, -121
+	DD   VSHEGRY_P
+SHRED1A:
+	DD SHRED1A_SUB-_sg_pieces,0
+SHRED1A_SUB:
+	DD SHRED1A_IMG-_sg_pieces
+	DW 18, 32, 32, -150
+	DD   VSHRED_P
+SHRED1B:
+	DD SHRED1B_SUB-_sg_pieces,0
+SHRED1B_SUB:
+	DD SHRED1B_IMG-_sg_pieces
+	DW 26, 61, -5, -76
+	DD   VSHRED_P
+SHRED1C:
+	DD SHRED1C_SUB-_sg_pieces,0
+SHRED1C_SUB:
+	DD SHRED1C_IMG-_sg_pieces
+	DW 22, 21, 16, -135
+	DD   VSHRED_P
+SHRED1D:
+	DD SHRED1D_SUB-_sg_pieces,0
+SHRED1D_SUB:
+	DD SHRED1D_IMG-_sg_pieces
+	DW 44, 94, 30, -52
+	DD   VSHRED_P
+
+	ALIGN 4
+	include attract\vs\vssg.psi
+
+;**********************************************************************
+
+	PUBLIC _lk_pieces
+_lk_pieces:
+	DW 060h,035h+30,012ch,035h+30
+	DD lkflesh1a-_lk_pieces,0
+	DD lkflesh1b-_lk_pieces,0
+	DD lkflesh1c-_lk_pieces,0
+	DD lkflesh1d-_lk_pieces,0
+	DD lkflesh1e-_lk_pieces,0
+	DD lkgrey1a-_lk_pieces,0
+	DD lkgrey1b-_lk_pieces,0
+	DD lkgrey1c-_lk_pieces,0
+	DD lkgrey1d-_lk_pieces,0
+	DD lkgrey1e-_lk_pieces,0
+	DD lkred1a-_lk_pieces,VLKYEL_P
+	DD lkred1b-_lk_pieces,VLKYEL_P
+	DD lkred1c-_lk_pieces,VLKYEL_P
+	DD 0
+
+lkflesh1a:
+	DD LKFLESH1A-_lk_pieces,0
+lkflesh1b:
+	DD LKFLESH1B-_lk_pieces,0
+lkflesh1c:
+	DD LKFLESH1C-_lk_pieces,0
+lkflesh1d:
+	DD LKFLESH1D-_lk_pieces,0
+lkflesh1e:
+	DD LKFLESH1E-_lk_pieces,0
+lkgrey1a:
+	DD LKGREY1A-_lk_pieces,0
+lkgrey1b:
+	DD LKGREY1B-_lk_pieces,0
+lkgrey1c:
+	DD LKGREY1C-_lk_pieces,0
+lkgrey1d:
+	DD LKGREY1D-_lk_pieces,0
+lkgrey1e:
+	DD LKGREY1E-_lk_pieces,0
+lkred1a:
+	DD LKRED1A-_lk_pieces,0
+lkred1b:
+	DD LKRED1B-_lk_pieces,0
+lkred1c:
+	DD LKRED1C-_lk_pieces,0
+
+LKFLESH1A:
+	DD LKFLESH1A_SUB-_lk_pieces,0
+LKFLESH1A_SUB:
+	DD LKFLESH1A_IMG-_lk_pieces
+	DW 28, 73, 73, -66
+	DD   VLKSKIN_P
+LKFLESH1B:
+	DD LKFLESH1B_SUB-_lk_pieces,0
+LKFLESH1B_SUB:
+	DD LKFLESH1B_IMG-_lk_pieces
+	DW 35, 98, 45, -57
+	DD   VLKSKIN_P
+LKFLESH1C:
+	DD LKFLESH1C_SUB-_lk_pieces,0
+LKFLESH1C_SUB:
+	DD LKFLESH1C_IMG-_lk_pieces
+	DW 15, 26, -65, -79
+	DD   VLKSKIN_P
+LKFLESH1D:
+	DD LKFLESH1D_SUB-_lk_pieces,0
+LKFLESH1D_SUB:
+	DD LKFLESH1D_IMG-_lk_pieces
+	DW 38, 78, -28, -76
+	DD   VLKSKIN_P
+LKFLESH1E:
+	DD LKFLESH1E_SUB-_lk_pieces,0
+LKFLESH1E_SUB:
+	DD LKFLESH1E_IMG-_lk_pieces
+	DW 38, 124, 10, -28
+	DD   VLKSKIN_P
+LKGREY1A:
+	DD LKGREY1A_SUB-_lk_pieces,0
+LKGREY1A_SUB:
+	DD LKGREY1A_IMG-_lk_pieces
+	DW 28, 80, 18, 0
+	DD   VLKGRAY_P
+LKGREY1B:
+	DD LKGREY1B_SUB-_lk_pieces,0
+LKGREY1B_SUB:
+	DD LKGREY1B_IMG-_lk_pieces
+	DW 18, 67, -9, 0
+	DD   VLKGRAY_P
+LKGREY1C:
+	DD LKGREY1C_SUB-_lk_pieces,0
+LKGREY1C_SUB:
+	DD LKGREY1C_IMG-_lk_pieces
+	DW 22, 36, -54, -98
+	DD   VLKGRAY_P
+LKGREY1D:
+	DD LKGREY1D_SUB-_lk_pieces,0
+LKGREY1D_SUB:
+	DD LKGREY1D_IMG-_lk_pieces
+	DW 51, 48, 56, -121
+	DD   VLKGRAY_P
+LKGREY1E:
+	DD LKGREY1E_SUB-_lk_pieces,0
+LKGREY1E_SUB:
+	DD LKGREY1E_IMG-_lk_pieces
+	DW 11, 18, 5, -152
+	DD   VLKGRAY_P
+LKRED1A:
+	DD LKRED1A_SUB-_lk_pieces,0
+LKRED1A_SUB:
+	DD LKRED1A_IMG-_lk_pieces
+	DW 53, 56, 24, -19
+	DD   VLKRED_P
+LKRED1B:
+	DD LKRED1B_SUB-_lk_pieces,0
+LKRED1B_SUB:
+	DD LKRED1B_IMG-_lk_pieces
+	DW 17, 27, 58, -143
+	DD   VLKRED_P
+LKRED1C:
+	DD LKRED1C_SUB-_lk_pieces,0
+LKRED1C_SUB:
+	DD LKRED1C_IMG-_lk_pieces
+	DW 51, 23, 38, -147
+	DD   VLKRED_P
+
+	ALIGN 4
+	include attract\vs\vslkang.psi
+;**********************************************************************
+
+	PUBLIC _st_pieces
+_st_pieces:
+	DW 058h,035h+30,0135h,035h+30
+TSFLESH1:
+	DD tsflesh1a-_st_pieces,0
+	DD tsflesh1b-_st_pieces,0
+	DD tsflesh1c-_st_pieces,0
+	DD tsflesh1d-_st_pieces,0
+	DD tsflesh1e-_st_pieces,0
+	DD tsgrey1a-_st_pieces,0
+	DD tsgrey1b-_st_pieces,0
+	DD tsgrey1c-_st_pieces,0
+	DD tsgrey1d-_st_pieces,0
+	DD tsgrey1e-_st_pieces,0
+	DD tspant1a-_st_pieces,VTSRED_P
+	DD tspant1b-_st_pieces,VTSRED_P
+	DD 0
+
+tsflesh1a:
+	DD TSFLESH1A-_st_pieces,0
+tsflesh1b:
+	DD TSFLESH1B-_st_pieces,0
+tsflesh1c:
+	DD TSFLESH1C-_st_pieces,0
+tsflesh1d:
+	DD TSFLESH1D-_st_pieces,0
+tsflesh1e:
+	DD TSFLESH1E-_st_pieces,0
+tsgrey1a:
+	DD TSGREY1A-_st_pieces,0
+tsgrey1b:
+	DD TSGREY1B-_st_pieces,0
+tsgrey1c:
+	DD TSGREY1C-_st_pieces,0
+tsgrey1d:
+	DD TSGREY1D-_st_pieces,0
+tsgrey1e:
+	DD TSGREY1E-_st_pieces,0
+tspant1a:
+	DD TSPANT1A-_st_pieces,0
+tspant1b:
+	DD TSPANT1B-_st_pieces,0
+
+TSFLESH1A:
+	DD TSFLESH1A_SUB-_st_pieces,0
+TSFLESH1A_SUB:
+	DD TSFLESH1A_IMG-_st_pieces
+	DW 18, 49, 13, -93
+	DD   VTSKIN_P
+TSFLESH1B:
+	DD TSFLESH1B_SUB-_st_pieces,0
+TSFLESH1B_SUB:
+	DD TSFLESH1B_IMG-_st_pieces
+	DW 63, 142, 64, -7
+	DD   VTSKIN_P
+TSFLESH1C:
+	DD TSFLESH1C_SUB-_st_pieces,0
+TSFLESH1C_SUB:
+	DD TSFLESH1C_IMG-_st_pieces
+	DW 6, 14, -4, -94
+	DD   VTSKIN_P
+TSFLESH1D:
+	DD TSFLESH1D_SUB-_st_pieces,0
+TSFLESH1D_SUB:
+	DD TSFLESH1D_IMG-_st_pieces
+	DW 31, 105, -3, -47
+	DD   VTSKIN_P
+TSFLESH1E:
+	DD TSFLESH1E_SUB-_st_pieces,0
+TSFLESH1E_SUB:
+	DD TSFLESH1E_IMG-_st_pieces
+	DW 59, 119, -34, -51
+	DD   VTSKIN_P
+TSGREY1A:
+	DD TSGREY1A_SUB-_st_pieces,0
+TSGREY1A_SUB:
+	DD TSGREY1A_IMG-_st_pieces
+	DW 18, 18, 44, -5
+	DD   VTSGRY_P
+TSGREY1B:
+	DD TSGREY1B_SUB-_st_pieces,0
+TSGREY1B_SUB:
+	DD TSGREY1B_IMG-_st_pieces
+	DW 18, 24, -60, -124
+	DD   VTSGRY_P
+TSGREY1C:
+	DD TSGREY1C_SUB-_st_pieces,0
+TSGREY1C_SUB:
+	DD TSGREY1C_IMG-_st_pieces
+	DW 60, 147, 43, -23
+	DD   VTSGRY_P
+TSGREY1D:
+	DD TSGREY1D_SUB-_st_pieces,0
+TSGREY1D_SUB:
+	DD TSGREY1D_IMG-_st_pieces
+	DW 42, 105, -16, -16
+	DD   VTSGRY_P
+TSGREY1E:
+	DD TSGREY1E_SUB-_st_pieces,0
+TSGREY1E_SUB:
+	DD TSGREY1E_IMG-_st_pieces
+	DW 10, 19, -16, -149
+	DD   VTSGRY_P
+TSPANT1A:
+	DD TSPANT1A_SUB-_st_pieces,0
+TSPANT1A_SUB:
+	DD TSPANT1A_IMG-_st_pieces
+	DW 18, 15, 39, -155
+	DD   VTSYEL_P
+TSPANT1B:
+	DD TSPANT1B_SUB-_st_pieces,0
+TSPANT1B_SUB:
+	DD TSPANT1B_IMG-_st_pieces
+	DW 17, 13, -13, -157
+	DD   VTSYEL_P
+
+	ALIGN 4
+	include attract\vs\vsst.psi
+
+
+	END_DATA
+	end
+

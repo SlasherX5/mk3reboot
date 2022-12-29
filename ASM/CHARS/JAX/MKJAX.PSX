@@ -1,0 +1,2658 @@
+_jax_anitab1:
+	DD a_stance-_jax_anitab1
+	DD a_walkf-_jax_anitab1
+	DD a_walkb-_jax_anitab1
+	DD a_turn-_jax_anitab1
+	DD a_duck-_jax_anitab1
+	DD a_duck_turn-_jax_anitab1
+	DD a_duck_block-_jax_anitab1
+	DD a_duck_hit-_jax_anitab1
+	DD a_duck_punch-_jax_anitab1
+	DD a_duck_kick_hi-_jax_anitab1
+	DD a_duck_kick_lo-_jax_anitab1
+	DD a_uppercut-_jax_anitab1
+	DD a_block-_jax_anitab1
+	DD a_victory-_jax_anitab1
+	DD a_hipunch-_jax_anitab1
+	DD a_lopunch-_jax_anitab1
+	DD a_elbow-_jax_anitab1
+	DD a_hikick-_jax_anitab1
+	DD a_lokick-_jax_anitab1
+	DD a_knee-_jax_anitab1
+	DD a_sweep_kick-_jax_anitab1
+	DD a_roundhouse-_jax_anitab1
+	DD a_jump-_jax_anitab1
+	DD a_jump_kick-_jax_anitab1
+	DD a_flip_punch-_jax_anitab1
+	DD a_flip_kick-_jax_anitab1
+	DD a_fflip-_jax_anitab1
+	DD a_bflip-_jax_anitab1
+	DD a_hit_hi-_jax_anitab1
+	DD a_hit_lo-_jax_anitab1
+	DD a_knockdown-_jax_anitab1
+	DD a_sweep_fall-_jax_anitab1
+	DD a_stumble-_jax_anitab1
+	DD a_getup-_jax_anitab1
+	DD a_sweepup-_jax_anitab1
+	DD a_throw-_jax_anitab1
+	DD a_zap-_jax_anitab1
+	DD a_dizzy-_jax_anitab1
+	DD a_fb_kano-_jax_anitab1
+	DD a_fb_sonya-_jax_anitab1
+	DD a_fb_jax-_jax_anitab1
+	DD a_fb_ind-_jax_anitab1
+	DD a_fb_sz-_jax_anitab1
+	DD a_fb_swat-_jax_anitab1
+	DD a_fb_lia-_jax_anitab1
+	DD a_fb_robo-_jax_anitab1
+	DD a_fb_robo2-_jax_anitab1
+	DD a_fb_lao-_jax_anitab1
+	DD a_fb_tusk-_jax_anitab1
+	DD a_fb_sg-_jax_anitab1
+	DD a_fb_st-_jax_anitab1
+	DD a_fb_lk-_jax_anitab1
+	DD a_fb_smoke-_jax_anitab1
+	DD a_afb_kano-_jax_anitab1
+	DD a_legged-_jax_anitab1
+	DD a_projectile-_jax_anitab1
+	DD a_shook-_jax_anitab1
+	DD a_afb_robo2-_jax_anitab1
+	DD a_zoomed-_jax_anitab1
+	DD 0
+	DD 0
+	DD a_back_broke-_jax_anitab1
+	DD a_run-_jax_anitab1
+	DD a_thudd-_jax_anitab1
+	DD a_scared-_jax_anitab1
+jax_anitab2:
+	DD a_quake-_jax_anitab1
+	DD a_noogy-_jax_anitab1
+	DD a_dash_punch-_jax_anitab1
+	DD 0
+	DD 0
+	DD a_back_breaker-_jax_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_stance:
+	DD JXSTANCE1-_jax_anitab1
+	DD JXSTANCE2-_jax_anitab1
+	DD JXSTANCE3-_jax_anitab1
+	DD JXSTANCE4-_jax_anitab1
+	DD JXSTANCE5-_jax_anitab1
+	DD JXSTANCE6-_jax_anitab1
+	DD JXSTANCE7-_jax_anitab1
+	DD JXSTANCE8-_jax_anitab1
+	DD ani_jump
+	DD a_stance-_jax_anitab1
+a_walkf:
+	DD JXWALK1-_jax_anitab1
+	DD JXWALK2-_jax_anitab1
+	DD JXWALK3-_jax_anitab1
+	DD JXWALK4-_jax_anitab1
+	DD JXWALK5-_jax_anitab1
+	DD JXWALK6-_jax_anitab1
+	DD JXWALK7-_jax_anitab1
+	DD JXWALK8-_jax_anitab1
+	DD JXWALK9-_jax_anitab1
+	DD ani_jump
+	DD a_walkf-_jax_anitab1
+a_walkb:
+	DD JXWALK9-_jax_anitab1
+	DD JXWALK8-_jax_anitab1
+	DD JXWALK7-_jax_anitab1
+	DD JXWALK6-_jax_anitab1
+	DD JXWALK5-_jax_anitab1
+	DD JXWALK4-_jax_anitab1
+	DD JXWALK3-_jax_anitab1
+	DD JXWALK2-_jax_anitab1
+	DD JXWALK1-_jax_anitab1
+	DD ani_jump
+	DD a_walkb-_jax_anitab1
+a_turn:
+	DD JXTURN1-_jax_anitab1
+	DD JXTURN2-_jax_anitab1
+	DD ani_flip
+	DD JXTURN1-_jax_anitab1
+	DD 0
+a_duck_turn:
+	DD JXDUCKTURN1-_jax_anitab1
+	DD JXDUCKTURN2-_jax_anitab1
+	DD ani_flip
+	DD JXDUCKTURN2-_jax_anitab1
+	DD JXDUCKTURN1-_jax_anitab1
+	DD JXDUCK3-_jax_anitab1
+	DD 0
+a_duck:
+	DD JXDUCK1-_jax_anitab1
+	DD JXDUCK2-_jax_anitab1
+	DD JXDUCK3-_jax_anitab1
+	DD 0
+a_duck_block:
+	DD JXDUCKBLOCK1-_jax_anitab1
+	DD JXDUCKBLOCK2-_jax_anitab1
+	DD JXDUCKBLOCK3-_jax_anitab1
+	DD 0
+a_duck_punch:
+	DD JXDUCKPUNCH1-_jax_anitab1
+	DD JXDUCKPUNCH2-_jax_anitab1
+	DD JXDUCKPUNCH3-_jax_anitab1
+	DD 0
+	DD JXDUCKPUNCH2-_jax_anitab1
+	DD JXDUCKPUNCH1-_jax_anitab1
+	DD JXDUCK3-_jax_anitab1
+	DD 0
+a_duck_hit:
+	DD JXDUCKHIT2-_jax_anitab1
+	DD JXDUCKHIT3-_jax_anitab1
+	DD JXDUCKHIT2-_jax_anitab1
+	DD JXDUCKHIT1-_jax_anitab1
+	DD 0
+a_duck_kick_hi:
+	DD JXDUCKHIKICK1-_jax_anitab1
+	DD JXDUCKHIKICK2-_jax_anitab1
+	DD JXDUCKHIKICK4-_jax_anitab1
+	DD 0
+	DD JXDUCKHIKICK3-_jax_anitab1
+	DD JXDUCKHIKICK2-_jax_anitab1
+	DD JXDUCKHIKICK1-_jax_anitab1
+	DD JXDUCK3-_jax_anitab1
+	DD 0
+a_duck_kick_lo:
+	DD JXDUCKLOKICK1-_jax_anitab1
+	DD JXDUCKLOKICK2-_jax_anitab1
+	DD JXDUCKLOKICK3-_jax_anitab1
+	DD JXDUCKLOKICK4-_jax_anitab1
+	DD 0
+	DD JXDUCKLOKICK3-_jax_anitab1
+	DD JXDUCKLOKICK2-_jax_anitab1
+	DD JXDUCKLOKICK1-_jax_anitab1
+	DD JXDUCK3-_jax_anitab1
+	DD 0
+a_uppercut:
+	DD JXUPPERCUT2-_jax_anitab1
+	DD JXUPPERCUT3-_jax_anitab1
+	DD JXUPPERCUT4-_jax_anitab1
+	DD JXUPPERCUT5-_jax_anitab1
+	DD ani_nosleep
+	DD JXUPPERCUT6-_jax_anitab1
+	DD 0
+	DD JXHIPUNCH1-_jax_anitab1
+	DD 0
+a_block:
+	DD JXHIBLOCK1-_jax_anitab1
+	DD JXHIBLOCK2-_jax_anitab1
+	DD JXHIBLOCK3-_jax_anitab1
+	DD 0
+a_elbow:
+	DD JXHEADBOP1-_jax_anitab1
+	DD JXHEADBOP2-_jax_anitab1
+	DD JXHEADBOP3-_jax_anitab1
+	DD JXHEADBOP4-_jax_anitab1
+	DD 0
+	DD JXHEADBOP3-_jax_anitab1
+	DD JXHEADBOP2-_jax_anitab1
+	DD JXHEADBOP1-_jax_anitab1
+	DD 0
+	DD JXCOMBO1-_jax_anitab1
+	DD JXCOMBO2-_jax_anitab1
+	DD JXCOMBO3-_jax_anitab1
+	DD JXCOMBO4-_jax_anitab1
+	DD 0
+	DD ani_adjustx
+	DD 008H
+	DD JXCOMBO5-_jax_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD JXCOMBO6-_jax_anitab1
+	DD JXCOMBO7-_jax_anitab1
+	DD JXHEADBOP4-_jax_anitab1
+	DD 0
+	DD JXCOMBO8-_jax_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD JXCOMBO9-_jax_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD JXCOMBO10-_jax_anitab1
+	DD JXCOMBO11-_jax_anitab1
+	DD 0
+	DD JXCOMBO11-_jax_anitab1
+	DD JXCOMBO12-_jax_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD JXCOMBO13-_jax_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD JXCOMBO14-_jax_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD JXCOMBO15-_jax_anitab1
+	DD ani_adjustx
+	DD 008H
+	DD JXCOMBO16-_jax_anitab1
+	DD 0
+	DD JXCOMBO17-_jax_anitab1
+	DD 0
+a_hipunch:
+	DD JXHIPUNCH1-_jax_anitab1
+	DD JXHIPUNCH2-_jax_anitab1
+	DD JXHIPUNCH3-_jax_anitab1
+	DD 0
+	DD JXHIPUNCH4-_jax_anitab1
+	DD JXHIPUNCH5-_jax_anitab1
+	DD JXHIPUNCH6-_jax_anitab1
+	DD 0
+	DD JXHIPUNCH5-_jax_anitab1
+	DD JXHIPUNCH4-_jax_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-_jax_anitab1
+	DD 0
+	DD JXHIPUNCH2-_jax_anitab1
+	DD JXHIPUNCH1-_jax_anitab1
+	DD 0
+	DD JXHIPUNCH7-_jax_anitab1
+	DD 0
+	DD JXHIPUNCH4-_jax_anitab1
+	DD JXLOPUNCH5-_jax_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*6)/8)-_jax_anitab1
+	DD 0
+	DD JXHIPUNCH5-_jax_anitab1
+	DD JXLOPUNCH2-_jax_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-_jax_anitab1
+	DD 0
+a_lopunch:
+	DD JXLOPUNCH1-_jax_anitab1
+	DD JXLOPUNCH2-_jax_anitab1
+	DD JXLOPUNCH3-_jax_anitab1
+	DD 0
+	DD JXLOPUNCH4-_jax_anitab1
+	DD JXLOPUNCH5-_jax_anitab1
+	DD JXLOPUNCH6-_jax_anitab1
+	DD 0
+	DD JXLOPUNCH5-_jax_anitab1
+	DD JXLOPUNCH4-_jax_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-_jax_anitab1
+	DD 0
+	DD JXLOPUNCH2-_jax_anitab1
+	DD JXLOPUNCH1-_jax_anitab1
+	DD 0
+	DD JXHIPUNCH7-_jax_anitab1
+	DD 0
+	DD JXLOPUNCH4-_jax_anitab1
+	DD JXLOPUNCH5-_jax_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*6)/8)-_jax_anitab1
+	DD 0
+	DD JXLOPUNCH4-_jax_anitab1
+	DD JXHIPUNCH5-_jax_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-_jax_anitab1
+a_jump:
+	DD JXJUMP1-_jax_anitab1
+	DD JXJUMP2-_jax_anitab1
+	DD JXJUMP3-_jax_anitab1
+	DD 0
+a_jump_kick:
+	DD JXJUMPKICK1-_jax_anitab1
+	DD JXJUMPKICK2-_jax_anitab1
+	DD JXJUMPKICK3-_jax_anitab1
+	DD 0
+	DD JXJUMPKICK2-_jax_anitab1
+	DD JXJUMPKICK1-_jax_anitab1
+	DD 0
+a_flip_kick:
+	DD JXFLIPKICK1-_jax_anitab1
+	DD JXFLIPKICK2-_jax_anitab1
+	DD JXFLIPKICK3-_jax_anitab1
+	DD 0
+	DD JXFLIPKICK2-_jax_anitab1
+	DD JXFLIPKICK1-_jax_anitab1
+	DD 0
+a_flip_punch:
+	DD JXFLIPUNCH1-_jax_anitab1
+	DD JXFLIPUNCH2-_jax_anitab1
+	DD JXFLIPUNCH3-_jax_anitab1
+	DD 0
+	DD JXFLIPUNCH2-_jax_anitab1
+	DD JXFLIPUNCH1-_jax_anitab1
+	DD 0
+a_fflip:
+	DD JXJUMPFLIP1-_jax_anitab1
+	DD JXJUMPFLIP2-_jax_anitab1
+	DD JXJUMPFLIP3-_jax_anitab1
+	DD JXJUMPFLIP4-_jax_anitab1
+	DD JXJUMPFLIP5-_jax_anitab1
+	DD JXJUMPFLIP6-_jax_anitab1
+	DD JXJUMPFLIP7-_jax_anitab1
+	DD JXJUMPFLIP8-_jax_anitab1
+	DD ani_jump
+	DD a_fflip+(32/8)-_jax_anitab1
+a_bflip:
+	DD JXJUMPFLIP1-_jax_anitab1
+	DD JXJUMPFLIP8-_jax_anitab1
+	DD JXJUMPFLIP7-_jax_anitab1
+	DD JXJUMPFLIP6-_jax_anitab1
+	DD JXJUMPFLIP5-_jax_anitab1
+	DD JXJUMPFLIP4-_jax_anitab1
+	DD JXJUMPFLIP3-_jax_anitab1
+	DD JXJUMPFLIP2-_jax_anitab1
+	DD ani_jump
+	DD a_bflip+(32/8)-_jax_anitab1
+a_stumble:
+	DD JXSTUMBLE1-_jax_anitab1
+	DD JXSTUMBLE2-_jax_anitab1
+	DD JXSTUMBLE3-_jax_anitab1
+	DD JXSTUMBLE4-_jax_anitab1
+	DD JXSTUMBLE5-_jax_anitab1
+	DD JXSTUMBLE6-_jax_anitab1
+	DD 0
+j_stumble:
+	DD JXSTUMBLE1-_jax_anitab1
+	DD JXSTUMBLE2-_jax_anitab1
+	DD JXSTUMBLE4-_jax_anitab1
+	DD JXSTUMBLE5-_jax_anitab1
+	DD JXSTUMBLE6-_jax_anitab1
+	DD ani_jump
+	DD j_stumble-_jax_anitab1
+a_dizzy:
+	DD JXSTUNNED1-_jax_anitab1
+	DD JXSTUNNED2-_jax_anitab1
+	DD JXSTUNNED3-_jax_anitab1
+	DD JXSTUNNED4-_jax_anitab1
+	DD JXSTUNNED5-_jax_anitab1
+	DD JXSTUNNED6-_jax_anitab1
+	DD JXSTUNNED7-_jax_anitab1
+	DD JXSTUNNED8-_jax_anitab1
+	DD JXSTUNNED9-_jax_anitab1
+	DD JXSTUNNED10-_jax_anitab1
+	DD ani_jump
+	DD a_dizzy-_jax_anitab1
+a_hit_hi:
+	DD JXHIHIT2-_jax_anitab1
+	DD JXHIHIT3-_jax_anitab1
+	DD JXHIHIT2-_jax_anitab1
+	DD JXHIHIT1-_jax_anitab1
+	DD 0
+a_hit_lo:
+	DD JXLOHIT2-_jax_anitab1
+	DD JXLOHIT3-_jax_anitab1
+	DD JXLOHIT2-_jax_anitab1
+	DD JXLOHIT1-_jax_anitab1
+	DD 0
+a_knockdown:
+	DD JXKNOCKDOWN1-_jax_anitab1
+	DD JXKNOCKDOWN2-_jax_anitab1
+	DD JXKNOCKDOWN3-_jax_anitab1
+	DD JXKNOCKDOWN4-_jax_anitab1
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD 0
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD JXKNOCKDOWN8-_jax_anitab1
+	DD 0
+a_getup:
+	DD JXGETUP1-_jax_anitab1
+	DD JXGETUP2-_jax_anitab1
+	DD JXGETUP3-_jax_anitab1
+	DD JXGETUP4-_jax_anitab1
+	DD JXGETUP5-_jax_anitab1
+	DD JXGETUP6-_jax_anitab1
+	DD 0
+a_throw:
+	DD JXFLIP1-_jax_anitab1
+	DD JXFLIP2-_jax_anitab1
+	DD 0
+	DD JXFLIP3-_jax_anitab1
+	DD JXFLIP4-_jax_anitab1
+	DD JXFLIP5-_jax_anitab1
+	DD JXFLIP6-_jax_anitab1
+	DD JXFLIP7-_jax_anitab1
+	DD JXFLIP8-_jax_anitab1
+	DD 0
+	DD JXFLIP7-_jax_anitab1
+	DD JXFLIP6-_jax_anitab1
+	DD 0
+a_afb_kano:
+	DD ani_offset_xy
+	DW -040H
+	DW -01bH
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW -00bH
+	DD JXKNOCKDOWN4-_jax_anitab1
+	DD ani_offset_xy
+	DW -059H
+	DW 022H
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD 0
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_fb_smoke:
+a_afb_robo2:
+	DD ani_offset_xy
+	DW -01eH
+	DW -038H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 008H
+	DW -048H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 02fH
+	DW -041H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 04aH
+	DW -026H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 057H
+	DW 002H
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD ani_offset_xy
+	DW 06bH
+	DW 030H
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD 0
+a_fb_lao:
+	DD ani_offset_xy
+	DW -034H
+	DW 013H
+	DD JXSTUMBLE1-_jax_anitab1
+	DD ani_offset_xy
+	DW -01eH
+	DW 02eH
+	DD JXSTUMBLE1-_jax_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -02bH
+	DW 020H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -054H
+	DW -012H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW -02cH
+	DW -057H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 014H
+	DW -06dH
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 019H
+	DW -074H
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW 054H
+	DW -070H
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW 060H
+	DW -056H
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW 077H
+	DW 002H
+	DD JXFLIPPED5-_jax_anitab1
+	DD 0
+a_fb_tusk:
+	DD ani_offset_xy
+	DW -06eH
+	DW -007H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -05dH
+	DW -04aH
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW -00cH
+	DW -081H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 040H
+	DW -057H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 044H
+	DW -015H
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW 00fH
+	DW 01eH
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW -031H
+	DW 001H
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD ani_offset_xy
+	DW -075H
+	DW -00cH
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -054H
+	DW -04fH
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 026H
+	DW -072H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 065H
+	DW -005H
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW 064H
+	DW 009H
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD 0
+a_fb_sg:
+	DD ani_offset_xy
+	DW -03dH
+	DW -030H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -008H
+	DW -052H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 001H
+	DW -059H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 018H
+	DW -04fH
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 01aH
+	DW -028H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -01bH
+	DW -011H
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_fb_st:
+	DD ani_offset_xy
+	DW -04cH
+	DW 000H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW 007H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -02aH
+	DW 001H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW -007H
+	DW 003H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 00eH
+	DW 025H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW -00fH
+	DW -004H
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD ani_offset_xy
+	DW -023H
+	DW -004H
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD ani_offset_xy
+	DW -038H
+	DW -004H
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD ani_offset_xy
+	DW -060H
+	DW 019H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -067H
+	DW -00bH
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW -04cH
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 02bH
+	DW -041H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 04cH
+	DW -018H
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW 05bH
+	DW -008H
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD 0
+a_fb_lk:
+	DD ani_offset_xy
+	DW -044H
+	DW -00eH
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -03bH
+	DW -00cH
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -013H
+	DW 002H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 010H
+	DW 000H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 037H
+	DW 001H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 088H
+	DW -01fH
+	DD JXFLIPPED4-_jax_anitab1
+	DD 0
+	DD JXFLIPPED5-_jax_anitab1
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_fb_kano:
+	DD ani_offset_xy
+	DW -03fH
+	DW -01bH
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -01bH
+	DW -031H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 04cH
+	DW -037H
+	DD JXFLIPPED3-_jax_anitab1
+	DD 0
+	DD JXFLIPPED4-_jax_anitab1
+	DD JXFLIPPED5-_jax_anitab1
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_fb_sonya:
+	DD ani_offset_xy
+	DW -031H
+	DW -00eH
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -01bH
+	DW 001H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 026H
+	DW -00aH
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 068H
+	DW -01bH
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 0a7H
+	DW -01fH
+	DD JXFLIPPED4-_jax_anitab1
+	DD 0
+	DD JXFLIPPED5-_jax_anitab1
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_fb_jax:
+	DD ani_offset_xy
+	DW -04bH
+	DW -027H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -030H
+	DW -03eH
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 018H
+	DW -04cH
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 040H
+	DW -03aH
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 053H
+	DW -003H
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW 048H
+	DW 000H
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_fb_ind:
+	DD ani_offset_xy
+	DW -058H
+	DW -01dH
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -042H
+	DW -03cH
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW -009H
+	DW -05cH
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 038H
+	DW -054H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 055H
+	DW -018H
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW 054H
+	DW 00cH
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD 0
+a_fb_sz:
+	DD ani_offset_xy
+	DW -04fH
+	DW -044H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW 04dH
+	DW -01fH
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 031H
+	DW 002H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW -016H
+	DW -005H
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD ani_offset_xy
+	DW -03fH
+	DW -02bH
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD ani_offset_xy
+	DW -075H
+	DW -055H
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD 0
+a_fb_swat:
+	DD ani_offset_xy
+	DW -04fH
+	DW -016H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -043H
+	DW -044H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 030H
+	DW -05bH
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 063H
+	DW -023H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 048H
+	DW -002H
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_fb_lia:
+	DD ani_offset_xy
+	DW -064H
+	DW -00dH
+	DD JXSTUMBLE1-_jax_anitab1
+	DD ani_offset_xy
+	DW -081H
+	DW -00dH
+	DD JXSTUMBLE1-_jax_anitab1
+	DD ani_offset_xy
+	DW -07fH
+	DW -029H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -05dH
+	DW -048H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -02eH
+	DW -054H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW 016H
+	DW -05aH
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW 0a8H
+	DW 012H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 08dH
+	DW 000H
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_fb_robo:
+	DD ani_offset_xy
+	DW -04eH
+	DW -016H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -051H
+	DW -036H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW -042H
+	DW -048H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 000H
+	DW -06eH
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 03bH
+	DW -073H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 064H
+	DW -061H
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 07fH
+	DW -01eH
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW 059H
+	DW -011H
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_fb_robo2:
+	DD ani_offset_xy
+	DW -036H
+	DW -00eH
+	DD JXSTUMBLE1-_jax_anitab1
+	DD ani_offset_xy
+	DW -032H
+	DW -028H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -015H
+	DW -029H
+	DD JXFLIPPED2-_jax_anitab1
+	DD ani_offset_xy
+	DW 01cH
+	DW -024H
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 022H
+	DW -00bH
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 009H
+	DW 005H
+	DD JXFLIPPED5-_jax_anitab1
+	DD ani_offset_xy
+	DW -018H
+	DW -012H
+	DD JXKNOCKDOWN8-_jax_anitab1
+	DD 0
+a_sweepup:
+	DD JXSWEEPUP1-_jax_anitab1
+	DD JXSWEEPUP2-_jax_anitab1
+	DD JXSWEEPUP3-_jax_anitab1
+	DD JXSWEEPUP4-_jax_anitab1
+	DD JXSWEEPUP5-_jax_anitab1
+	DD JXSWEEPUP6-_jax_anitab1
+	DD JXSWEEPUP7-_jax_anitab1
+	DD 0
+a_sweep_fall:
+	DD JXSWEEPFALL1-_jax_anitab1
+	DD JXSWEEPFALL2-_jax_anitab1
+	DD JXSWEEPFALL3-_jax_anitab1
+	DD JXSWEEPFALL4-_jax_anitab1
+	DD JXSWEEPFALL5-_jax_anitab1
+	DD 0
+	DD JXSWEEPFALL6-_jax_anitab1
+	DD JXSWEEPFALL6-_jax_anitab1
+	DD 0
+a_hikick:
+	DD JXLOKICK1-_jax_anitab1
+	DD JXLOKICK2-_jax_anitab1
+	DD JXLOKICK3-_jax_anitab1
+	DD JXLOKICK4-_jax_anitab1
+	DD JXLOKICK5-_jax_anitab1
+	DD JXHIKICK1-_jax_anitab1
+	DD 0
+	DD JXLOKICK5-_jax_anitab1
+	DD JXLOKICK4-_jax_anitab1
+	DD JXLOKICK3-_jax_anitab1
+	DD JXLOKICK2-_jax_anitab1
+	DD JXLOKICK1-_jax_anitab1
+	DD 0
+a_lokick:
+	DD JXLOKICK1-_jax_anitab1
+	DD JXLOKICK2-_jax_anitab1
+	DD JXLOKICK3-_jax_anitab1
+	DD JXLOKICK4-_jax_anitab1
+	DD JXLOKICK5-_jax_anitab1
+	DD JXLOKICK6-_jax_anitab1
+	DD 0
+	DD JXLOKICK5-_jax_anitab1
+	DD JXLOKICK4-_jax_anitab1
+	DD JXLOKICK3-_jax_anitab1
+	DD JXLOKICK2-_jax_anitab1
+	DD JXLOKICK1-_jax_anitab1
+	DD 0
+a_knee:
+	DD JXKNEE1-_jax_anitab1
+	DD JXKNEE2-_jax_anitab1
+	DD JXKNEE3-_jax_anitab1
+	DD 0
+	DD JXKNEE2-_jax_anitab1
+	DD JXKNEE1-_jax_anitab1
+	DD 0
+a_sweep_kick:
+	DD JXSWEEPKICK1-_jax_anitab1
+	DD JXSWEEPKICK2-_jax_anitab1
+	DD JXSWEEPKICK3-_jax_anitab1
+	DD ani_calla
+	DD sweep_sounds
+	DD JXSWEEPKICK4-_jax_anitab1
+	DD JXSWEEPKICK5-_jax_anitab1
+	DD 0
+	DD JXSWEEPKICK6-_jax_anitab1
+	DD JXSWEEPKICK7-_jax_anitab1
+	DD 0
+a_roundhouse:
+	DD JXROUNDKICK1-_jax_anitab1
+	DD JXROUNDKICK1-_jax_anitab1
+	DD JXROUNDKICK3-_jax_anitab1
+	DD JXROUNDKICK4-_jax_anitab1
+	DD ani_nosleep
+	DD JXROUNDKICK5-_jax_anitab1
+	DD 0
+	DD JXROUNDKICK6-_jax_anitab1
+	DD JXROUNDKICK7-_jax_anitab1
+	DD JXROUNDKICK8-_jax_anitab1
+	DD 0
+a_victory:
+	DD JXVICTORY1-_jax_anitab1
+	DD JXVICTORY2-_jax_anitab1
+	DD JXVICTORY3-_jax_anitab1
+	DD JXVICTORY4-_jax_anitab1
+	DD JXVICTORY5-_jax_anitab1
+	DD JXVICTORY5-_jax_anitab1
+	DD JXVICTORY5-_jax_anitab1
+	DD JXVICTORY6-_jax_anitab1
+	DD JXVICTORY7-_jax_anitab1
+	DD JXVICTORY8-_jax_anitab1
+	DD JXVICTORY9-_jax_anitab1
+	DD JXVICTORY10-_jax_anitab1
+	DD 0
+a_legged:
+	DD ani_offset_xy
+	DW -05dH
+	DW -007H
+	DD JXKNOCKDOWN1-_jax_anitab1
+	DD ani_offset_xy
+	DW -051H
+	DW -030H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -00cH
+	DW -04aH
+	DD JXFLIPPED3-_jax_anitab1
+	DD ani_offset_xy
+	DW 037H
+	DW -02dH
+	DD JXFLIPPED4-_jax_anitab1
+	DD ani_offset_xy
+	DW 05eH
+	DW 000H
+	DD JXFLIPPED5-_jax_anitab1
+	DD 0
+a_zap:
+	DD JXCANNON1-_jax_anitab1
+	DD ani_sladd
+	DD JAXZAP1-_jax_anitab1
+	DD JXCANNON1-_jax_anitab1
+	DD JXCANNON2-_jax_anitab1
+	DD JXCANNON4-_jax_anitab1
+	DD 0
+	DD ani_sladd
+	DD JAXZAP1-_jax_anitab1
+	DD ani_calla
+	DD lineup_number_2
+	DD JXCANNON5-_jax_anitab1
+	DD JXCANNON7-_jax_anitab1
+	DD 0
+a_projectile:
+	DD JAXZAP2-_jax_anitab1
+	DD JAXZAP3-_jax_anitab1
+	DD JAXZAP4-_jax_anitab1
+j_jaxzap:
+	DD JAXZAP5-_jax_anitab1
+	DD JAXZAP6-_jax_anitab1
+	DD JAXZAP7-_jax_anitab1
+	DD ani_jump
+	DD j_jaxzap-_jax_anitab1
+	DD 0
+	DD ani_swpal
+	DD JAXZAP8-_jax_anitab1
+	DD JAXZAP9-_jax_anitab1
+	DD JAXZAP10-_jax_anitab1
+	DD JAXZAP11-_jax_anitab1
+	DD JAXZAP12-_jax_anitab1
+	DD JAXZAP13-_jax_anitab1
+	DD 0
+a_quake:
+	DD ani_sladd
+	DD JXQAKPRO1-_jax_anitab1
+	DD JXSTANCE6-_jax_anitab1
+	DD ani_slani
+	DD JXQAKPRO2-_jax_anitab1
+	DD JXQUAKEPUNCH1-_jax_anitab1
+	DD 0
+	DD ani_slani
+	DD JXQAKPRO3-_jax_anitab1
+	DD JXQUAKEPUNCH2-_jax_anitab1
+	DD ani_slani
+	DD JXQAKPRO4-_jax_anitab1
+	DD JXQUAKEPUNCH3-_jax_anitab1
+	DD ani_slani
+	DD JXQAKPRO6-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD 0
+	DD ani_slani
+	DD JXQAKPRO8-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD ani_slani
+	DD JXQAKPRO9-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD ani_slani
+	DD JXQAKPRO11-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD ani_slani
+	DD JXQAKPRO13-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD ani_slani
+	DD JXQAKPRO14-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD JXQUAKEPUNCH5-_jax_anitab1
+	DD 0
+a_noogy:
+	DD JXGOTCHA1-_jax_anitab1
+	DD JXGOTCHA2-_jax_anitab1
+	DD 0
+	DD JXGOTCHA3-_jax_anitab1
+	DD JXGOTCHA4-_jax_anitab1
+j_noog:
+	DD JXGOTCHA5-_jax_anitab1
+	DD JXGOTCHA5-_jax_anitab1
+	DD JXGOTCHA6-_jax_anitab1
+	DD JXGOTCHA7-_jax_anitab1
+	DD 0
+	DD JXGOTCHA6-_jax_anitab1
+	DD ani_jump
+	DD j_noog-_jax_anitab1
+a_zoomed:
+	DD ani_offset_xy
+	DW 055H
+	DW -01cH
+	DD JXKNOCKDOWN3-_jax_anitab1
+	DD ani_offset_xy
+	DW 057H
+	DW 001H
+	DD JXKNOCKDOWN4-_jax_anitab1
+	DD ani_offset_xy
+	DW 020H
+	DW 016H
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD ani_offset_xy
+	DW -037H
+	DW 017H
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD ani_offset_xy
+	DW -08cH
+	DW -013H
+	DD JXFLIPPED1-_jax_anitab1
+	DD ani_offset_xy
+	DW -02eH
+	DW -05eH
+	DD JXFLIPPED3-_jax_anitab1
+	DD 0
+	DD JXFLIPPED3-_jax_anitab1
+	DD JXFLIPPED4-_jax_anitab1
+	DD JXFLIPPED5-_jax_anitab1
+	DD JXKNOCKDOWN5-_jax_anitab1
+	DD JXKNOCKDOWN6-_jax_anitab1
+	DD JXKNOCKDOWN7-_jax_anitab1
+	DD 0
+a_shook:
+	DD ani_offset_xy
+	DW -04aH
+	DW -00dH
+	DD JXSTUMBLE2-_jax_anitab1
+	DD ani_offset_xy
+	DW -031H
+	DW -026H
+	DD JXSTUMBLE2-_jax_anitab1
+	DD ani_offset_xy
+	DW -01bH
+	DW -024H
+	DD JXSTUMBLE2-_jax_anitab1
+	DD 0
+	DD ani_offset_xy
+	DW -01dH
+	DW -026H
+	DD JXSTUMBLE2-_jax_anitab1
+	DD ani_offset_xy
+	DW -02dH
+	DW -030H
+	DD JXSTUMBLE2-_jax_anitab1
+	DD ani_offset_xy
+	DW -03dH
+	DW -034H
+	DD JXSTUMBLE2-_jax_anitab1
+	DD ani_offset_xy
+	DW -02dH
+	DW -030H
+	DD JXSTUMBLE2-_jax_anitab1
+	DD 0
+a_dash_punch:
+	DD JXSUPERPOW1-_jax_anitab1
+	DD JXSUPERPOW2-_jax_anitab1
+	DD JXSUPERPOW3-_jax_anitab1
+	DD 0
+	DD JXSUPERPOW4-_jax_anitab1
+	DD JXSUPERPOW5-_jax_anitab1
+	DD JXSUPERPOW6-_jax_anitab1
+	DD JXHIPUNCH2-_jax_anitab1
+	DD JXHIPUNCH1-_jax_anitab1
+	DD 0
+a_run:
+	DD JXRUN1-_jax_anitab1
+	DD JXRUN3-_jax_anitab1
+	DD JXRUN4-_jax_anitab1
+	DD JXRUN5-_jax_anitab1
+	DD JXRUN7-_jax_anitab1
+	DD ani_calla
+	DD rsnd_footstep
+	DD JXRUN9-_jax_anitab1
+	DD JXRUN10-_jax_anitab1
+	DD JXRUN11-_jax_anitab1
+	DD ani_jump
+	DD a_run-_jax_anitab1
+a_scared:
+	DD JXSCARED1-_jax_anitab1
+	DD 0
+a_thudd:
+	DD JXTHUD1-_jax_anitab1
+	DD JXTHUD3-_jax_anitab1
+	DD JXTHUD5-_jax_anitab1
+	DD JXTHUD6-_jax_anitab1
+	DD JXTHUD7-_jax_anitab1
+	DD 0
+a_back_breaker:
+	DD JAXBAX1-_jax_anitab1
+	DD JAXBAX2-_jax_anitab1
+	DD 0
+a_back_broke:
+	DD JXBROKEN1-_jax_anitab1
+	DD	0
+
+ochar_broken_bax_by_jax:
+;	dw KNBROKEN1-_jax_anitab1
+;	dw SBBROKEN1-_jax_anitab1
+;	dw JXBROKEN1-_jax_anitab1
+;	dw INBROKEN1-_jax_anitab1
+;	dw SZBROKEN1-_jax_anitab1
+;	dw OBBACKBROKEN1-_jax_anitab1
+;	dw LIBACKBROKEN1-_jax_anitab1
+;	dw RBBACKBREAK1-_jax_anitab1
+;	dw RBBACKBREAK1-_jax_anitab1
+;	dw KLBACKBROKEN1-_jax_anitab1
+;	dw TRBACKBREAK1-_jax_anitab1
+;	dw SGBACKBREAK1-_jax_anitab1
+;	dw TSBACKBROKEN1-_jax_anitab1
+;	dw LUBACKBREAK1-_jax_anitab1
+;	dw RBBACKBREAK1-_jax_anitab1
+JXSTANCE1:
+	DD JXSTANCE1_SUB-_jax_anitab1, 0
+JXSTANCE1_SUB:
+	DD JXSTANCE1_IMG-_jax_anitab1
+	DW 60, 114, 28, -16
+	DD   _JAXPRP_P
+JXSTANCE2:
+	DD JXSTANCE2_SUB-_jax_anitab1, 0
+JXSTANCE2_SUB:
+	DD JXSTANCE2_IMG-_jax_anitab1
+	DW 58, 114, 27, -16
+JXSTANCE3:
+	DD JXSTANCE3_SUB-_jax_anitab1, 0
+JXSTANCE3_SUB:
+	DD JXSTANCE3_IMG-_jax_anitab1
+	DW 58, 114, 25, -16
+JXSTANCE4:
+	DD JXSTANCE4_SUB-_jax_anitab1, 0
+JXSTANCE4_SUB:
+	DD JXSTANCE4_IMG-_jax_anitab1
+	DW 58, 114, 26, -17
+JXSTANCE5:
+	DD JXSTANCE5_SUB-_jax_anitab1, 0
+JXSTANCE5_SUB:
+	DD JXSTANCE5_IMG-_jax_anitab1
+	DW 62, 114, 28, -17
+JXSTANCE6:
+	DD JXSTANCE6_SUB-_jax_anitab1, 0
+JXSTANCE6_SUB:
+	DD JXSTANCE6_IMG-_jax_anitab1
+	DW 62, 114, 30, -17
+JXSTANCE7:
+	DD JXSTANCE7_SUB-_jax_anitab1, 0
+JXSTANCE7_SUB:
+	DD JXSTANCE7_IMG-_jax_anitab1
+	DW 63, 113, 31, -16
+JXSTANCE8:
+	DD JXSTANCE8_SUB-_jax_anitab1, 0
+JXSTANCE8_SUB:
+	DD JXSTANCE8_IMG-_jax_anitab1
+	DW 62, 114, 31, -17
+JXWALK1:
+	DD JXWALK1_SUB-_jax_anitab1, 0
+JXWALK1_SUB:
+	DD JXWALK1_IMG-_jax_anitab1
+	DW 58, 118, 28, -13
+JXWALK2:
+	DD JXWALK2_SUB-_jax_anitab1, 0
+JXWALK2_SUB:
+	DD JXWALK2_IMG-_jax_anitab1
+	DW 58, 118, 28, -12
+JXWALK3:
+	DD JXWALK3_SUB-_jax_anitab1, 0
+JXWALK3_SUB:
+	DD JXWALK3_IMG-_jax_anitab1
+	DW 58, 120, 29, -13
+JXWALK4:
+	DD JXWALK4_SUB-_jax_anitab1, 0
+JXWALK4_SUB:
+	DD JXWALK4_IMG-_jax_anitab1
+	DW 58, 118, 30, -14
+JXWALK5:
+	DD JXWALK5_SUB-_jax_anitab1, 0
+JXWALK5_SUB:
+	DD JXWALK5_IMG-_jax_anitab1
+	DW 58, 117, 30, -16
+JXWALK6:
+	DD JXWALK6_SUB-_jax_anitab1, 0
+JXWALK6_SUB:
+	DD JXWALK6_IMG-_jax_anitab1
+	DW 58, 118, 30, -15
+JXWALK7:
+	DD JXWALK7_SUB-_jax_anitab1, 0
+JXWALK7_SUB:
+	DD JXWALK7_IMG-_jax_anitab1
+	DW 58, 120, 30, -13
+JXWALK8:
+	DD JXWALK8_SUB-_jax_anitab1, 0
+JXWALK8_SUB:
+	DD JXWALK8_IMG-_jax_anitab1
+	DW 58, 121, 30, -13
+JXWALK9:
+	DD JXWALK9_SUB-_jax_anitab1, 0
+JXWALK9_SUB:
+	DD JXWALK9_IMG-_jax_anitab1
+	DW 63, 120, 31, -13
+JXTURN1:
+	DD JXTURN1_SUB-_jax_anitab1, 0
+JXTURN1_SUB:
+	DD JXTURN1_IMG-_jax_anitab1
+	DW 57, 118, 26, -12
+JXTURN2:
+	DD JXTURN2_SUB-_jax_anitab1, 0
+JXTURN2_SUB:
+	DD JXTURN2_IMG-_jax_anitab1
+	DW 54, 119, 24, -11
+JXDUCK1:
+	DD JXDUCK1_SUB-_jax_anitab1, 0
+JXDUCK1_SUB:
+	DD JXDUCK1_IMG-_jax_anitab1
+	DW 57, 102, 22, -29
+JXDUCK2:
+	DD JXDUCK2_SUB-_jax_anitab1, 0
+JXDUCK2_SUB:
+	DD JXDUCK2_IMG-_jax_anitab1
+	DW 58, 84, 18, -47
+JXDUCK3:
+	DD JXDUCK3_SUB-_jax_anitab1, 0
+JXDUCK3_SUB:
+	DD JXDUCK3_IMG-_jax_anitab1
+	DW 56, 60, 17, -71
+JXDUCKTURN1:
+	DD JXDUCKTURN1_SUB-_jax_anitab1, 0
+JXDUCKTURN1_SUB:
+	DD JXDUCKTURN1_IMG-_jax_anitab1
+	DW 57, 69, 18, -59
+JXDUCKTURN2:
+	DD JXDUCKTURN2_SUB-_jax_anitab1, 0
+JXDUCKTURN2_SUB:
+	DD JXDUCKTURN2_IMG-_jax_anitab1
+	DW 53, 71, 17, -58
+JXDUCKBLOCK1:
+	DD JXDUCKBLOCK1_SUB-_jax_anitab1, 0
+JXDUCKBLOCK1_SUB:
+	DD JXDUCKBLOCK1_IMG-_jax_anitab1
+	DW 62, 77, 16, -56
+JXDUCKBLOCK2:
+	DD JXDUCKBLOCK2_SUB-_jax_anitab1, 0
+JXDUCKBLOCK2_SUB:
+	DD JXDUCKBLOCK2_IMG-_jax_anitab1
+	DW 53, 82, 16, -50
+JXDUCKBLOCK3:
+	DD JXDUCKBLOCK3_SUB-_jax_anitab1, 0
+JXDUCKBLOCK3_SUB:
+	DD JXDUCKBLOCK3_IMG-_jax_anitab1
+	DW 53, 87, 16, -46
+JXDUCKHIT2:
+	DD JXDUCKHIT2_SUB-_jax_anitab1, 0
+JXDUCKHIT2_SUB:
+	DD JXDUCKHIT2_IMG-_jax_anitab1
+	DW 53, 81, 19, -52
+JXDUCKHIT3:
+	DD JXDUCKHIT3_SUB-_jax_anitab1, 0
+JXDUCKHIT3_SUB:
+	DD JXDUCKHIT3_IMG-_jax_anitab1
+	DW 53, 82, 19, -50
+JXDUCKHIT1:
+	DD JXDUCKHIT1_SUB-_jax_anitab1, 0
+JXDUCKHIT1_SUB:
+	DD JXDUCKHIT1_IMG-_jax_anitab1
+	DW 53, 76, 19, -57
+JXDUCKPUNCH1:
+	DD JXDUCKPUNCH1_SUB-_jax_anitab1, 0
+JXDUCKPUNCH1_SUB:
+	DD JXDUCKPUNCH1_IMG-_jax_anitab1
+	DW 58, 73, 17, -59
+JXDUCKPUNCH2:
+	DD JXDUCKPUNCH2_SUB-_jax_anitab1, 0
+JXDUCKPUNCH2_SUB:
+	DD JXDUCKPUNCH2_IMG-_jax_anitab1
+	DW 74, 75, 17, -58
+JXDUCKPUNCH3:
+	DD JXDUCKPUNCH3_SUB-_jax_anitab1, 0
+JXDUCKPUNCH3_SUB:
+	DD JXDUCKPUNCH3_IMG-_jax_anitab1
+	DW 89, 75, 17, -58
+JXDUCKHIKICK1:
+	DD JXDUCKHIKICK1_SUB-_jax_anitab1, 0
+JXDUCKHIKICK1_SUB:
+	DD JXDUCKHIKICK1_IMG-_jax_anitab1
+	DW 69, 67, 18, -69
+JXDUCKHIKICK2:
+	DD JXDUCKHIKICK2_SUB-_jax_anitab1, 0
+JXDUCKHIKICK2_SUB:
+	DD JXDUCKHIKICK2_IMG-_jax_anitab1
+	DW 62, 73, 22, -65
+JXDUCKHIKICK4:
+	DD JXDUCKHIKICK4_SUB-_jax_anitab1, 0
+JXDUCKHIKICK4_SUB:
+	DD JXDUCKHIKICK4_IMG-_jax_anitab1
+	DW 76, 74, 22, -64
+JXDUCKHIKICK3:
+	DD JXDUCKHIKICK3_SUB-_jax_anitab1, 0
+JXDUCKHIKICK3_SUB:
+	DD JXDUCKHIKICK3_IMG-_jax_anitab1
+	DW 78, 73, 22, -65
+JXDUCKLOKICK1:
+	DD JXDUCKLOKICK1_SUB-_jax_anitab1, 0
+JXDUCKLOKICK1_SUB:
+	DD JXDUCKLOKICK1_IMG-_jax_anitab1
+	DW 62, 62, 15, -76
+JXDUCKLOKICK2:
+	DD JXDUCKLOKICK2_SUB-_jax_anitab1, 0
+JXDUCKLOKICK2_SUB:
+	DD JXDUCKLOKICK2_IMG-_jax_anitab1
+	DW 51, 66, -1, -72
+JXDUCKLOKICK3:
+	DD JXDUCKLOKICK3_SUB-_jax_anitab1, 0
+JXDUCKLOKICK3_SUB:
+	DD JXDUCKLOKICK3_IMG-_jax_anitab1
+	DW 65, 65, -1, -74
+JXDUCKLOKICK4:
+	DD JXDUCKLOKICK4_SUB-_jax_anitab1, 0
+JXDUCKLOKICK4_SUB:
+	DD JXDUCKLOKICK4_IMG-_jax_anitab1
+	DW 83, 56, -1, -82
+JXUPPERCUT2:
+	DD JXUPPERCUT2_SUB-_jax_anitab1, 0
+JXUPPERCUT2_SUB:
+	DD JXUPPERCUT2_IMG-_jax_anitab1
+	DW 72, 78, 20, -50
+JXUPPERCUT3:
+	DD JXUPPERCUT3_SUB-_jax_anitab1, 0
+JXUPPERCUT3_SUB:
+	DD JXUPPERCUT3_IMG-_jax_anitab1
+	DW 62, 88, 22, -41
+JXUPPERCUT4:
+	DD JXUPPERCUT4_SUB-_jax_anitab1, 0
+JXUPPERCUT4_SUB:
+	DD JXUPPERCUT4_IMG-_jax_anitab1
+	DW 94, 99, 24, -29
+JXUPPERCUT5:
+	DD JXUPPERCUT5_SUB-_jax_anitab1, 0
+JXUPPERCUT5_SUB:
+	DD JXUPPERCUT5_IMG-_jax_anitab1
+	DW 90, 111, 22, -19
+JXUPPERCUT6:
+	DD JXUPPERCUT6_SUB-_jax_anitab1, 0
+JXUPPERCUT6_SUB:
+	DD JXUPPERCUT6_IMG-_jax_anitab1
+	DW 55, 141, 13, 8
+JXHIPUNCH1:
+	DD JXHIPUNCH1_SUB-_jax_anitab1, 0
+JXHIPUNCH1_SUB:
+	DD JXHIPUNCH1_IMG-_jax_anitab1
+	DW 45, 115, 12, -17
+JXHIBLOCK1:
+	DD JXHIBLOCK1_SUB-_jax_anitab1, 0
+JXHIBLOCK1_SUB:
+	DD JXHIBLOCK1_IMG-_jax_anitab1
+	DW 52, 116, 15, -14
+JXHIBLOCK2:
+	DD JXHIBLOCK2_SUB-_jax_anitab1, 0
+JXHIBLOCK2_SUB:
+	DD JXHIBLOCK2_IMG-_jax_anitab1
+	DW 47, 116, 15, -13
+JXHIBLOCK3:
+	DD JXHIBLOCK3_SUB-_jax_anitab1, 0
+JXHIBLOCK3_SUB:
+	DD JXHIBLOCK3_IMG-_jax_anitab1
+	DW 47, 118, 15, -12
+JXVICTORY1:
+	DD JXVICTORY1_SUB-_jax_anitab1, 0
+JXVICTORY1_SUB:
+	DD JXVICTORY1_IMG-_jax_anitab1
+	DW 77, 123, 33, -7
+JXVICTORY2:
+	DD JXVICTORY2_SUB-_jax_anitab1, 0
+JXVICTORY2_SUB:
+	DD JXVICTORY2_IMG-_jax_anitab1
+	DW 82, 122, 34, -8
+JXVICTORY3:
+	DD JXVICTORY3_SUB-_jax_anitab1, 0
+JXVICTORY3_SUB:
+	DD JXVICTORY3_IMG-_jax_anitab1
+	DW 73, 121, 31, -9
+JXVICTORY4:
+	DD JXVICTORY4_SUB-_jax_anitab1, 0
+JXVICTORY4_SUB:
+	DD JXVICTORY4_IMG-_jax_anitab1
+	DW 49, 120, 20, -10
+JXVICTORY5:
+	DD JXVICTORY5_SUB-_jax_anitab1, 0
+JXVICTORY5_SUB:
+	DD JXVICTORY5_IMG-_jax_anitab1
+	DW 45, 121, 16, -8
+JXVICTORY6:
+	DD JXVICTORY6_SUB-_jax_anitab1, 0
+JXVICTORY6_SUB:
+	DD JXVICTORY6_IMG-_jax_anitab1
+	DW 79, 122, 35, -7
+JXVICTORY7:
+	DD JXVICTORY7_SUB-_jax_anitab1, 0
+JXVICTORY7_SUB:
+	DD JXVICTORY7_IMG-_jax_anitab1
+	DW 97, 122, 46, -7
+JXVICTORY8:
+	DD JXVICTORY8_SUB-_jax_anitab1, 0
+JXVICTORY8_SUB:
+	DD JXVICTORY8_IMG-_jax_anitab1
+	DW 68, 134, 31, 5
+JXVICTORY9:
+	DD JXVICTORY9_SUB-_jax_anitab1, 0
+JXVICTORY9_SUB:
+	DD JXVICTORY9_IMG-_jax_anitab1
+	DW 54, 135, 23, 6
+JXVICTORY10:
+	DD JXVICTORY10_SUB-_jax_anitab1, 0
+JXVICTORY10_SUB:
+	DD JXVICTORY10_IMG-_jax_anitab1
+	DW 58, 127, 25, -2
+JXHIPUNCH2:
+	DD JXHIPUNCH2_SUB-_jax_anitab1, 0
+JXHIPUNCH2_SUB:
+	DD JXHIPUNCH2_IMG-_jax_anitab1
+	DW 54, 115, 18, -17
+JXHIPUNCH3:
+	DD JXHIPUNCH3_SUB-_jax_anitab1, 0
+JXHIPUNCH3_SUB:
+	DD JXHIPUNCH3_IMG-_jax_anitab1
+	DW 86, 113, 21, -19
+JXHIPUNCH4:
+	DD JXHIPUNCH4_SUB-_jax_anitab1, 0
+JXHIPUNCH4_SUB:
+	DD JXHIPUNCH4_IMG-_jax_anitab1
+	DW 64, 118, 20, -14
+JXHIPUNCH5:
+	DD JXHIPUNCH5_SUB-_jax_anitab1, 0
+JXHIPUNCH5_SUB:
+	DD JXHIPUNCH5_IMG-_jax_anitab1
+	DW 65, 119, 16, -13
+JXHIPUNCH6:
+	DD JXHIPUNCH6_SUB-_jax_anitab1, 0
+JXHIPUNCH6_SUB:
+	DD JXHIPUNCH6_IMG-_jax_anitab1
+	DW 80, 116, 14, -16
+JXHIPUNCH7:
+	DD JXHIPUNCH7_SUB-_jax_anitab1, 0
+JXHIPUNCH7_SUB:
+	DD JXHIPUNCH7_IMG-_jax_anitab1
+	DW 72, 124, 16, -8
+JXLOPUNCH5:
+	DD JXLOPUNCH5_SUB-_jax_anitab1, 0
+JXLOPUNCH5_SUB:
+	DD JXLOPUNCH5_IMG-_jax_anitab1
+	DW 66, 112, 23, -19
+JXLOPUNCH2:
+	DD JXLOPUNCH2_SUB-_jax_anitab1, 0
+JXLOPUNCH2_SUB:
+	DD JXLOPUNCH2_IMG-_jax_anitab1
+	DW 62, 111, 22, -20
+JXLOPUNCH1:
+	DD JXLOPUNCH1_SUB-_jax_anitab1, 0
+JXLOPUNCH1_SUB:
+	DD JXLOPUNCH1_IMG-_jax_anitab1
+	DW 54, 112, 22, -19
+JXLOPUNCH3:
+	DD JXLOPUNCH3_SUB-_jax_anitab1, 0
+JXLOPUNCH3_SUB:
+	DD JXLOPUNCH3_IMG-_jax_anitab1
+	DW 86, 109, 23, -22
+JXLOPUNCH4:
+	DD JXLOPUNCH4_SUB-_jax_anitab1, 0
+JXLOPUNCH4_SUB:
+	DD JXLOPUNCH4_IMG-_jax_anitab1
+	DW 59, 112, 24, -19
+JXLOPUNCH6:
+	DD JXLOPUNCH6_SUB-_jax_anitab1, 0
+JXLOPUNCH6_SUB:
+	DD JXLOPUNCH6_IMG-_jax_anitab1
+	DW 85, 112, 21, -19
+JXHEADBOP1:
+	DD JXHEADBOP1_SUB-_jax_anitab1, 0
+JXHEADBOP1_SUB:
+	DD JXHEADBOP1_IMG-_jax_anitab1
+	DW 76, 118, 40, -14
+JXHEADBOP2:
+	DD JXHEADBOP2_SUB-_jax_anitab1, 0
+JXHEADBOP2_SUB:
+	DD JXHEADBOP2_IMG-_jax_anitab1
+	DW 51, 136, 16, 2
+JXHEADBOP3:
+	DD JXHEADBOP3_SUB-_jax_anitab1, 0
+JXHEADBOP3_SUB:
+	DD JXHEADBOP3_IMG-_jax_anitab1
+	DW 50, 134, 22, 3
+JXHEADBOP4:
+	DD JXHEADBOP4_SUB-_jax_anitab1, 0
+JXHEADBOP4_SUB:
+	DD JXHEADBOP4_IMG-_jax_anitab1
+	DW 69, 119, 24, -11
+JXCOMBO1:
+	DD JXCOMBO1_SUB-_jax_anitab1, 0
+JXCOMBO1_SUB:
+	DD JXCOMBO1_IMG-_jax_anitab1
+	DW 85, 111, 23, -19
+JXCOMBO2:
+	DD JXCOMBO2_SUB-_jax_anitab1, 0
+JXCOMBO2_SUB:
+	DD JXCOMBO2_IMG-_jax_anitab1
+	DW 64, 129, 22, -1
+JXCOMBO3:
+	DD JXCOMBO3_SUB-_jax_anitab1, 0
+JXCOMBO3_SUB:
+	DD JXCOMBO3_IMG-_jax_anitab1
+	DW 50, 142, 18, 11
+JXCOMBO4:
+	DD JXCOMBO4_SUB-_jax_anitab1, 0
+JXCOMBO4_SUB:
+	DD JXCOMBO4_IMG-_jax_anitab1
+	DW 87, 115, 28, -15
+JXCOMBO5:
+	DD JXCOMBO5_SUB-_jax_anitab1, 0
+JXCOMBO5_SUB:
+	DD JXCOMBO5_IMG-_jax_anitab1
+	DW 94, 116, 36, -14
+JXCOMBO6:
+	DD JXCOMBO6_SUB-_jax_anitab1, 0
+JXCOMBO6_SUB:
+	DD JXCOMBO6_IMG-_jax_anitab1
+	DW 66, 136, 19, 7
+JXCOMBO7:
+	DD JXCOMBO7_SUB-_jax_anitab1, 0
+JXCOMBO7_SUB:
+	DD JXCOMBO7_IMG-_jax_anitab1
+	DW 50, 140, 18, 2
+JXCOMBO8:
+	DD JXCOMBO8_SUB-_jax_anitab1, 0
+JXCOMBO8_SUB:
+	DD JXCOMBO8_IMG-_jax_anitab1
+	DW 72, 104, 34, -26
+JXCOMBO9:
+	DD JXCOMBO9_SUB-_jax_anitab1, 0
+JXCOMBO9_SUB:
+	DD JXCOMBO9_IMG-_jax_anitab1
+	DW 55, 102, 16, -29
+JXCOMBO10:
+	DD JXCOMBO10_SUB-_jax_anitab1, 0
+JXCOMBO10_SUB:
+	DD JXCOMBO10_IMG-_jax_anitab1
+	DW 70, 111, 16, -19
+JXCOMBO11:
+	DD JXCOMBO11_SUB-_jax_anitab1, 0
+JXCOMBO11_SUB:
+	DD JXCOMBO11_IMG-_jax_anitab1
+	DW 60, 136, 15, 6
+JXCOMBO12:
+	DD JXCOMBO12_SUB-_jax_anitab1, 0
+JXCOMBO12_SUB:
+	DD JXCOMBO12_IMG-_jax_anitab1
+	DW 69, 116, 18, -15
+JXCOMBO13:
+	DD JXCOMBO13_SUB-_jax_anitab1, 0
+JXCOMBO13_SUB:
+	DD JXCOMBO13_IMG-_jax_anitab1
+	DW 53, 112, 20, -19
+JXCOMBO14:
+	DD JXCOMBO14_SUB-_jax_anitab1, 0
+JXCOMBO14_SUB:
+	DD JXCOMBO14_IMG-_jax_anitab1
+	DW 53, 133, 18, 2
+JXCOMBO15:
+	DD JXCOMBO15_SUB-_jax_anitab1, 0
+JXCOMBO15_SUB:
+	DD JXCOMBO15_IMG-_jax_anitab1
+	DW 88, 112, 15, -18
+JXCOMBO16:
+	DD JXCOMBO16_SUB-_jax_anitab1, 0
+JXCOMBO16_SUB:
+	DD JXCOMBO16_IMG-_jax_anitab1
+	DW 60, 105, 11, -25
+JXCOMBO17:
+	DD JXCOMBO17_SUB-_jax_anitab1, 0
+JXCOMBO17_SUB:
+	DD JXCOMBO17_IMG-_jax_anitab1
+	DW 72, 114, 25, -15
+JXLOKICK1:
+	DD JXLOKICK1_SUB-_jax_anitab1, 0
+JXLOKICK1_SUB:
+	DD JXLOKICK1_IMG-_jax_anitab1
+	DW 62, 118, 24, -13
+JXLOKICK2:
+	DD JXLOKICK2_SUB-_jax_anitab1, 0
+JXLOKICK2_SUB:
+	DD JXLOKICK2_IMG-_jax_anitab1
+	DW 66, 118, 19, -9
+JXLOKICK3:
+	DD JXLOKICK3_SUB-_jax_anitab1, 0
+JXLOKICK3_SUB:
+	DD JXLOKICK3_IMG-_jax_anitab1
+	DW 72, 119, 25, -10
+JXLOKICK4:
+	DD JXLOKICK4_SUB-_jax_anitab1, 0
+JXLOKICK4_SUB:
+	DD JXLOKICK4_IMG-_jax_anitab1
+	DW 73, 118, 25, -12
+JXLOKICK5:
+	DD JXLOKICK5_SUB-_jax_anitab1, 0
+JXLOKICK5_SUB:
+	DD JXLOKICK5_IMG-_jax_anitab1
+	DW 86, 114, 24, -16
+JXHIKICK1:
+	DD JXHIKICK1_SUB-_jax_anitab1, 0
+JXHIKICK1_SUB:
+	DD JXHIKICK1_IMG-_jax_anitab1
+	DW 114, 102, 32, -24
+JXLOKICK6:
+	DD JXLOKICK6_SUB-_jax_anitab1, 0
+JXLOKICK6_SUB:
+	DD JXLOKICK6_IMG-_jax_anitab1
+	DW 115, 99, 25, -31
+JXKNEE1:
+	DD JXKNEE1_SUB-_jax_anitab1, 0
+JXKNEE1_SUB:
+	DD JXKNEE1_IMG-_jax_anitab1
+	DW 52, 118, 16, -13
+JXKNEE2:
+	DD JXKNEE2_SUB-_jax_anitab1, 0
+JXKNEE2_SUB:
+	DD JXKNEE2_IMG-_jax_anitab1
+	DW 35, 120, -4, -8
+JXKNEE3:
+	DD JXKNEE3_SUB-_jax_anitab1, 0
+JXKNEE3_SUB:
+	DD JXKNEE3_IMG-_jax_anitab1
+	DW 74, 113, 2, -15
+JXSWEEPKICK1:
+	DD JXSWEEPKICK1_SUB-_jax_anitab1, 0
+JXSWEEPKICK1_SUB:
+	DD JXSWEEPKICK1_IMG-_jax_anitab1
+	DW 72, 89, 21, -41
+JXSWEEPKICK2:
+	DD JXSWEEPKICK2_SUB-_jax_anitab1, 0
+JXSWEEPKICK2_SUB:
+	DD JXSWEEPKICK2_IMG-_jax_anitab1
+	DW 64, 65, 31, -70
+JXSWEEPKICK3:
+	DD JXSWEEPKICK3_SUB-_jax_anitab1, 0
+JXSWEEPKICK3_SUB:
+	DD JXSWEEPKICK3_IMG-_jax_anitab1
+	DW 60, 54, 18, -80
+JXSWEEPKICK4:
+	DD JXSWEEPKICK4_SUB-_jax_anitab1, 0
+JXSWEEPKICK4_SUB:
+	DD JXSWEEPKICK4_IMG-_jax_anitab1
+	DW 94, 50, 18, -83
+JXSWEEPKICK5:
+	DD JXSWEEPKICK5_SUB-_jax_anitab1, 0
+JXSWEEPKICK5_SUB:
+	DD JXSWEEPKICK5_IMG-_jax_anitab1
+	DW 106, 52, 19, -85
+JXSWEEPKICK6:
+	DD JXSWEEPKICK6_SUB-_jax_anitab1, 0
+JXSWEEPKICK6_SUB:
+	DD JXSWEEPKICK6_IMG-_jax_anitab1
+	DW 78, 68, 18, -83
+JXSWEEPKICK7:
+	DD JXSWEEPKICK7_SUB-_jax_anitab1, 0
+JXSWEEPKICK7_SUB:
+	DD JXSWEEPKICK7_IMG-_jax_anitab1
+	DW 61, 77, 18, -70
+JXROUNDKICK1:
+	DD JXROUNDKICK1_SUB-_jax_anitab1, 0
+JXROUNDKICK1_SUB:
+	DD JXROUNDKICK1_IMG-_jax_anitab1
+	DW 55, 118, 22, -13
+JXROUNDKICK2:
+	DD JXROUNDKICK2_SUB-_jax_anitab1, 0
+JXROUNDKICK2_SUB:
+	DD JXROUNDKICK2_IMG-_jax_anitab1
+	DW 58, 117, 14, -11
+JXROUNDKICK3:
+	DD JXROUNDKICK3_SUB-_jax_anitab1, 0
+JXROUNDKICK3_SUB:
+	DD JXROUNDKICK3_IMG-_jax_anitab1
+	DW 46, 119, -2, -9
+JXROUNDKICK4:
+	DD JXROUNDKICK4_SUB-_jax_anitab1, 0
+JXROUNDKICK4_SUB:
+	DD JXROUNDKICK4_IMG-_jax_anitab1
+	DW 52, 119, -1, -9
+JXROUNDKICK5:
+	DD JXROUNDKICK5_SUB-_jax_anitab1, 0
+JXROUNDKICK5_SUB:
+	DD JXROUNDKICK5_IMG-_jax_anitab1
+	DW 65, 122, -5, -5
+JXROUNDKICK6:
+	DD JXROUNDKICK6_SUB-_jax_anitab1, 0
+JXROUNDKICK6_SUB:
+	DD JXROUNDKICK6_IMG-_jax_anitab1
+	DW 46, 119, -5, -9
+JXROUNDKICK7:
+	DD JXROUNDKICK7_SUB-_jax_anitab1, 0
+JXROUNDKICK7_SUB:
+	DD JXROUNDKICK7_IMG-_jax_anitab1
+	DW 42, 122, 0, -8
+JXROUNDKICK8:
+	DD JXROUNDKICK8_SUB-_jax_anitab1, 0
+JXROUNDKICK8_SUB:
+	DD JXROUNDKICK8_IMG-_jax_anitab1
+	DW 62, 116, 20, -14
+JXJUMP1:
+	DD JXJUMP1_SUB-_jax_anitab1, 0
+JXJUMP1_SUB:
+	DD JXJUMP1_IMG-_jax_anitab1
+	DW 59, 106, 22, -24
+JXJUMP2:
+	DD JXJUMP2_SUB-_jax_anitab1, 0
+JXJUMP2_SUB:
+	DD JXJUMP2_IMG-_jax_anitab1
+	DW 62, 128, 23, -2
+JXJUMP3:
+	DD JXJUMP3_SUB-_jax_anitab1, 0
+JXJUMP3_SUB:
+	DD JXJUMP3_IMG-_jax_anitab1
+	DW 62, 99, 23, -3
+JXJUMPKICK1:
+	DD JXJUMPKICK1_SUB-_jax_anitab1, 0
+JXJUMPKICK1_SUB:
+	DD JXJUMPKICK1_IMG-_jax_anitab1
+	DW 49, 115, 14, -7
+JXJUMPKICK2:
+	DD JXJUMPKICK2_SUB-_jax_anitab1, 0
+JXJUMPKICK2_SUB:
+	DD JXJUMPKICK2_IMG-_jax_anitab1
+	DW 73, 107, 17, -9
+JXJUMPKICK3:
+	DD JXJUMPKICK3_SUB-_jax_anitab1, 0
+JXJUMPKICK3_SUB:
+	DD JXJUMPKICK3_IMG-_jax_anitab1
+	DW 83, 99, 21, -11
+JXFLIPUNCH1:
+	DD JXFLIPUNCH1_SUB-_jax_anitab1, 0
+JXFLIPUNCH1_SUB:
+	DD JXFLIPUNCH1_IMG-_jax_anitab1
+	DW 48, 88, 9, -5
+JXFLIPUNCH2:
+	DD JXFLIPUNCH2_SUB-_jax_anitab1, 0
+JXFLIPUNCH2_SUB:
+	DD JXFLIPUNCH2_IMG-_jax_anitab1
+	DW 60, 101, 11, 5
+JXFLIPUNCH3:
+	DD JXFLIPUNCH3_SUB-_jax_anitab1, 0
+JXFLIPUNCH3_SUB:
+	DD JXFLIPUNCH3_IMG-_jax_anitab1
+	DW 114, 89, 37, -3
+JXFLIPKICK1:
+	DD JXFLIPKICK1_SUB-_jax_anitab1, 0
+JXFLIPKICK1_SUB:
+	DD JXFLIPKICK1_IMG-_jax_anitab1
+	DW 59, 67, 9, -8
+JXFLIPKICK2:
+	DD JXFLIPKICK2_SUB-_jax_anitab1, 0
+JXFLIPKICK2_SUB:
+	DD JXFLIPKICK2_IMG-_jax_anitab1
+	DW 78, 72, 16, -4
+JXFLIPKICK3:
+	DD JXFLIPKICK3_SUB-_jax_anitab1, 0
+JXFLIPKICK3_SUB:
+	DD JXFLIPKICK3_IMG-_jax_anitab1
+	DW 101, 77, 23, 0
+JXJUMPFLIP1:
+	DD JXJUMPFLIP1_SUB-_jax_anitab1, 0
+JXJUMPFLIP1_SUB:
+	DD JXJUMPFLIP1_IMG-_jax_anitab1
+	DW 57, 104, 6, -13
+JXJUMPFLIP2:
+	DD JXJUMPFLIP2_SUB-_jax_anitab1, 0
+JXJUMPFLIP2_SUB:
+	DD JXJUMPFLIP2_IMG-_jax_anitab1
+	DW 42, 60, 5, -15
+JXJUMPFLIP3:
+	DD JXJUMPFLIP3_SUB-_jax_anitab1, 0
+JXJUMPFLIP3_SUB:
+	DD JXJUMPFLIP3_IMG-_jax_anitab1
+	DW 47, 60, 7, -19
+JXJUMPFLIP4:
+	DD JXJUMPFLIP4_SUB-_jax_anitab1, 0
+JXJUMPFLIP4_SUB:
+	DD JXJUMPFLIP4_IMG-_jax_anitab1
+	DW 56, 44, 21, -17
+JXJUMPFLIP5:
+	DD JXJUMPFLIP5_SUB-_jax_anitab1, 0
+JXJUMPFLIP5_SUB:
+	DD JXJUMPFLIP5_IMG-_jax_anitab1
+	DW 54, 51, 26, -13
+JXJUMPFLIP6:
+	DD JXJUMPFLIP6_SUB-_jax_anitab1, 0
+JXJUMPFLIP6_SUB:
+	DD JXJUMPFLIP6_IMG-_jax_anitab1
+	DW 42, 59, 11, 1
+JXJUMPFLIP7:
+	DD JXJUMPFLIP7_SUB-_jax_anitab1, 0
+JXJUMPFLIP7_SUB:
+	DD JXJUMPFLIP7_IMG-_jax_anitab1
+	DW 48, 60, 13, 6
+JXJUMPFLIP8:
+	DD JXJUMPFLIP8_SUB-_jax_anitab1, 0
+JXJUMPFLIP8_SUB:
+	DD JXJUMPFLIP8_IMG-_jax_anitab1
+	DW 53, 43, 5, -14
+JXHIHIT2:
+	DD JXHIHIT2_SUB-_jax_anitab1, 0
+JXHIHIT2_SUB:
+	DD JXHIHIT2_IMG-_jax_anitab1
+	DW 63, 120, 33, -10
+JXHIHIT3:
+	DD JXHIHIT3_SUB-_jax_anitab1, 0
+JXHIHIT3_SUB:
+	DD JXHIHIT3_IMG-_jax_anitab1
+	DW 68, 111, 38, -19
+JXHIHIT1:
+	DD JXHIHIT1_SUB-_jax_anitab1, 0
+JXHIHIT1_SUB:
+	DD JXHIHIT1_IMG-_jax_anitab1
+	DW 58, 119, 28, -11
+JXLOHIT2:
+	DD JXLOHIT2_SUB-_jax_anitab1, 0
+JXLOHIT2_SUB:
+	DD JXLOHIT2_IMG-_jax_anitab1
+	DW 50, 119, 18, -11
+JXLOHIT3:
+	DD JXLOHIT3_SUB-_jax_anitab1, 0
+JXLOHIT3_SUB:
+	DD JXLOHIT3_IMG-_jax_anitab1
+	DW 49, 118, 17, -12
+JXLOHIT1:
+	DD JXLOHIT1_SUB-_jax_anitab1, 0
+JXLOHIT1_SUB:
+	DD JXLOHIT1_IMG-_jax_anitab1
+	DW 56, 119, 24, -11
+JXKNOCKDOWN1:
+	DD JXKNOCKDOWN1_SUB-_jax_anitab1, 0
+JXKNOCKDOWN1_SUB:
+	DD JXKNOCKDOWN1_IMG-_jax_anitab1
+	DW 62, 105, 20, -19
+JXKNOCKDOWN2:
+	DD JXKNOCKDOWN2_SUB-_jax_anitab1, 0
+JXKNOCKDOWN2_SUB:
+	DD JXKNOCKDOWN2_IMG-_jax_anitab1
+	DW 86, 119, 20, -9
+JXKNOCKDOWN3:
+	DD JXKNOCKDOWN3_SUB-_jax_anitab1, 0
+JXKNOCKDOWN3_SUB:
+	DD JXKNOCKDOWN3_IMG-_jax_anitab1
+	DW 117, 105, 50, -6
+JXKNOCKDOWN4:
+	DD JXKNOCKDOWN4_SUB-_jax_anitab1, 0
+JXKNOCKDOWN4_SUB:
+	DD JXKNOCKDOWN4_IMG-_jax_anitab1
+	DW 113, 77, 47, -24
+JXKNOCKDOWN6:
+	DD JXKNOCKDOWN6_SUB-_jax_anitab1, 0
+JXKNOCKDOWN6_SUB:
+	DD JXKNOCKDOWN6_IMG-_jax_anitab1
+	DW 95, 56, 32, -58
+JXKNOCKDOWN7:
+	DD JXKNOCKDOWN7_SUB-_jax_anitab1, 0
+JXKNOCKDOWN7_SUB:
+	DD JXKNOCKDOWN7_IMG-_jax_anitab1
+	DW 101, 42, 34, -85
+JXKNOCKDOWN8:
+	DD JXKNOCKDOWN8_SUB-_jax_anitab1, 0
+JXKNOCKDOWN8_SUB:
+	DD JXKNOCKDOWN8_IMG-_jax_anitab1
+	DW 115, 28, 39, -106
+JXSWEEPFALL1:
+	DD JXSWEEPFALL1_SUB-_jax_anitab1, 0
+JXSWEEPFALL1_SUB:
+	DD JXSWEEPFALL1_IMG-_jax_anitab1
+	DW 66, 121, 25, -9
+JXSWEEPFALL2:
+	DD JXSWEEPFALL2_SUB-_jax_anitab1, 0
+JXSWEEPFALL2_SUB:
+	DD JXSWEEPFALL2_IMG-_jax_anitab1
+	DW 74, 115, 32, -13
+JXSWEEPFALL3:
+	DD JXSWEEPFALL3_SUB-_jax_anitab1, 0
+JXSWEEPFALL3_SUB:
+	DD JXSWEEPFALL3_IMG-_jax_anitab1
+	DW 59, 89, 33, -30
+JXSWEEPFALL4:
+	DD JXSWEEPFALL4_SUB-_jax_anitab1, 0
+JXSWEEPFALL4_SUB:
+	DD JXSWEEPFALL4_IMG-_jax_anitab1
+	DW 50, 70, 20, -37
+JXSWEEPFALL5:
+	DD JXSWEEPFALL5_SUB-_jax_anitab1, 0
+JXSWEEPFALL5_SUB:
+	DD JXSWEEPFALL5_IMG-_jax_anitab1
+	DW 50, 56, 21, -58
+JXSWEEPFALL6:
+	DD JXSWEEPFALL6_SUB-_jax_anitab1, 0
+JXSWEEPFALL6_SUB:
+	DD JXSWEEPFALL6_IMG-_jax_anitab1
+	DW 65, 45, 27, -98
+JXSTUMBLE1:
+	DD JXSTUMBLE1_SUB-_jax_anitab1, 0
+JXSTUMBLE1_SUB:
+	DD JXSTUMBLE1_IMG-_jax_anitab1
+	DW 54, 116, 18, -14
+JXSTUMBLE2:
+	DD JXSTUMBLE2_SUB-_jax_anitab1, 0
+JXSTUMBLE2_SUB:
+	DD JXSTUMBLE2_IMG-_jax_anitab1
+	DW 56, 122, 18, -8
+JXSTUMBLE3:
+	DD JXSTUMBLE3_SUB-_jax_anitab1, 0
+JXSTUMBLE3_SUB:
+	DD JXSTUMBLE3_IMG-_jax_anitab1
+	DW 56, 122, 18, -8
+JXSTUMBLE4:
+	DD JXSTUMBLE4_SUB-_jax_anitab1, 0
+JXSTUMBLE4_SUB:
+	DD JXSTUMBLE4_IMG-_jax_anitab1
+	DW 57, 122, 36, -8
+JXSTUMBLE5:
+	DD JXSTUMBLE5_SUB-_jax_anitab1, 0
+JXSTUMBLE5_SUB:
+	DD JXSTUMBLE5_IMG-_jax_anitab1
+	DW 73, 116, 42, -15
+JXSTUMBLE6:
+	DD JXSTUMBLE6_SUB-_jax_anitab1, 0
+JXSTUMBLE6_SUB:
+	DD JXSTUMBLE6_IMG-_jax_anitab1
+	DW 55, 115, 15, -16
+JXGETUP1:
+	DD JXGETUP1_SUB-_jax_anitab1, 0
+JXGETUP1_SUB:
+	DD JXGETUP1_IMG-_jax_anitab1
+	DW 89, 59, 36, -70
+JXGETUP2:
+	DD JXGETUP2_SUB-_jax_anitab1, 0
+JXGETUP2_SUB:
+	DD JXGETUP2_IMG-_jax_anitab1
+	DW 62, 75, 37, -55
+JXGETUP3:
+	DD JXGETUP3_SUB-_jax_anitab1, 0
+JXGETUP3_SUB:
+	DD JXGETUP3_IMG-_jax_anitab1
+	DW 90, 85, 40, -44
+JXGETUP4:
+	DD JXGETUP4_SUB-_jax_anitab1, 0
+JXGETUP4_SUB:
+	DD JXGETUP4_IMG-_jax_anitab1
+	DW 86, 54, 56, -78
+JXGETUP5:
+	DD JXGETUP5_SUB-_jax_anitab1, 0
+JXGETUP5_SUB:
+	DD JXGETUP5_IMG-_jax_anitab1
+	DW 50, 84, 18, -49
+JXGETUP6:
+	DD JXGETUP6_SUB-_jax_anitab1, 0
+JXGETUP6_SUB:
+	DD JXGETUP6_IMG-_jax_anitab1
+	DW 58, 91, 13, -39
+JXSWEEPUP1:
+	DD JXSWEEPUP1_SUB-_jax_anitab1, 0
+JXSWEEPUP1_SUB:
+	DD JXSWEEPUP1_IMG-_jax_anitab1
+	DW 43, 51, 19, -72
+JXSWEEPUP2:
+	DD JXSWEEPUP2_SUB-_jax_anitab1, 0
+JXSWEEPUP2_SUB:
+	DD JXSWEEPUP2_IMG-_jax_anitab1
+	DW 32, 74, 11, -50
+JXSWEEPUP3:
+	DD JXSWEEPUP3_SUB-_jax_anitab1, 0
+JXSWEEPUP3_SUB:
+	DD JXSWEEPUP3_IMG-_jax_anitab1
+	DW 41, 88, 20, -36
+JXSWEEPUP4:
+	DD JXSWEEPUP4_SUB-_jax_anitab1, 0
+JXSWEEPUP4_SUB:
+	DD JXSWEEPUP4_IMG-_jax_anitab1
+	DW 38, 57, 17, -65
+JXSWEEPUP5:
+	DD JXSWEEPUP5_SUB-_jax_anitab1, 0
+JXSWEEPUP5_SUB:
+	DD JXSWEEPUP5_IMG-_jax_anitab1
+	DW 58, 76, 18, -53
+JXSWEEPUP6:
+	DD JXSWEEPUP6_SUB-_jax_anitab1, 0
+JXSWEEPUP6_SUB:
+	DD JXSWEEPUP6_IMG-_jax_anitab1
+	DW 46, 81, 13, -48
+JXSWEEPUP7:
+	DD JXSWEEPUP7_SUB-_jax_anitab1, 0
+JXSWEEPUP7_SUB:
+	DD JXSWEEPUP7_IMG-_jax_anitab1
+	DW 60, 98, 12, -32
+JXFLIP1:
+	DD JXFLIP1_SUB-_jax_anitab1, 0
+JXFLIP1_SUB:
+	DD JXFLIP1_IMG-_jax_anitab1
+	DW 52, 116, 14, -13
+JXFLIP2:
+	DD JXFLIP2_SUB-_jax_anitab1, 0
+JXFLIP2_SUB:
+	DD JXFLIP2_IMG-_jax_anitab1
+	DW 68, 109, 14, -21
+JXFLIP3:
+	DD JXFLIP3_SUB-_jax_anitab1, 0
+JXFLIP3_SUB:
+	DD JXFLIP3_IMG-_jax_anitab1
+	DW 69, 120, 14, -10
+JXFLIP4:
+	DD JXFLIP4_SUB-_jax_anitab1, 0
+JXFLIP4_SUB:
+	DD JXFLIP4_IMG-_jax_anitab1
+	DW 54, 134, 14, 3
+JXFLIP5:
+	DD JXFLIP5_SUB-_jax_anitab1, 0
+JXFLIP5_SUB:
+	DD JXFLIP5_IMG-_jax_anitab1
+	DW 57, 138, 26, 7
+JXFLIP6:
+	DD JXFLIP6_SUB-_jax_anitab1, 0
+JXFLIP6_SUB:
+	DD JXFLIP6_IMG-_jax_anitab1
+	DW 66, 112, 35, -18
+JXFLIP7:
+	DD JXFLIP7_SUB-_jax_anitab1, 0
+JXFLIP7_SUB:
+	DD JXFLIP7_IMG-_jax_anitab1
+	DW 75, 82, 46, -47
+JXFLIP8:
+	DD JXFLIP8_SUB-_jax_anitab1, 0
+JXFLIP8_SUB:
+	DD JXFLIP8_IMG-_jax_anitab1
+	DW 68, 71, 38, -59
+JXCANNON1:
+	DD JXCANNON1_SUB-_jax_anitab1, 0
+JXCANNON1_SUB:
+	DD JXCANNON1_IMG-_jax_anitab1
+	DW 61, 124, 26, -6
+JAXZAP1:
+	DD JAXZAP1_SUB-_jax_anitab1, 0
+JAXZAP1_SUB:
+	DD JAXZAP1_IMG-_jax_anitab1
+	DW 36, 59, -17, -23
+	DD   _JXPROJT_P
+JXCANNON2:
+	DD JXCANNON2_SUB-_jax_anitab1, 0
+JXCANNON2_SUB:
+	DD JXCANNON2_IMG-_jax_anitab1
+	DW 48, 124, 21, -6
+JXCANNON4:
+	DD JXCANNON4_SUB-_jax_anitab1, 0
+JXCANNON4_SUB:
+	DD JXCANNON4_IMG-_jax_anitab1
+	DW 58, 117, 24, -13
+JXCANNON5:
+	DD JXCANNON5_SUB-_jax_anitab1, 0
+JXCANNON5_SUB:
+	DD JXCANNON5_IMG-_jax_anitab1
+	DW 37, 118, 23, -12
+JXCANNON7:
+	DD JXCANNON7_SUB-_jax_anitab1, 0
+JXCANNON7_SUB:
+	DD JXCANNON7_IMG-_jax_anitab1
+	DW 72, 122, 35, -8
+JXSTUNNED1:
+	DD JXSTUNNED1_SUB-_jax_anitab1, 0
+JXSTUNNED1_SUB:
+	DD JXSTUNNED1_IMG-_jax_anitab1
+	DW 52, 116, 21, -14
+JXSTUNNED2:
+	DD JXSTUNNED2_SUB-_jax_anitab1, 0
+JXSTUNNED2_SUB:
+	DD JXSTUNNED2_IMG-_jax_anitab1
+	DW 52, 116, 21, -12
+JXSTUNNED3:
+	DD JXSTUNNED3_SUB-_jax_anitab1, 0
+JXSTUNNED3_SUB:
+	DD JXSTUNNED3_IMG-_jax_anitab1
+	DW 46, 120, 13, -9
+JXSTUNNED4:
+	DD JXSTUNNED4_SUB-_jax_anitab1, 0
+JXSTUNNED4_SUB:
+	DD JXSTUNNED4_IMG-_jax_anitab1
+	DW 51, 120, 19, -9
+JXSTUNNED5:
+	DD JXSTUNNED5_SUB-_jax_anitab1, 0
+JXSTUNNED5_SUB:
+	DD JXSTUNNED5_IMG-_jax_anitab1
+	DW 51, 120, 26, -9
+JXSTUNNED6:
+	DD JXSTUNNED6_SUB-_jax_anitab1, 0
+JXSTUNNED6_SUB:
+	DD JXSTUNNED6_IMG-_jax_anitab1
+	DW 58, 116, 26, -13
+JXSTUNNED7:
+	DD JXSTUNNED7_SUB-_jax_anitab1, 0
+JXSTUNNED7_SUB:
+	DD JXSTUNNED7_IMG-_jax_anitab1
+	DW 50, 115, 18, -14
+JXSTUNNED8:
+	DD JXSTUNNED8_SUB-_jax_anitab1, 0
+JXSTUNNED8_SUB:
+	DD JXSTUNNED8_IMG-_jax_anitab1
+	DW 50, 115, 15, -14
+JXSTUNNED9:
+	DD JXSTUNNED9_SUB-_jax_anitab1, 0
+JXSTUNNED9_SUB:
+	DD JXSTUNNED9_IMG-_jax_anitab1
+	DW 50, 115, 14, -14
+JXSTUNNED10:
+	DD JXSTUNNED10_SUB-_jax_anitab1, 0
+JXSTUNNED10_SUB:
+	DD JXSTUNNED10_IMG-_jax_anitab1
+	DW 47, 115, 18, -15
+JXFLIPPED1:
+	DD JXFLIPPED1_SUB-_jax_anitab1, 0
+JXFLIPPED1_SUB:
+	DD JXFLIPPED1_IMG-_jax_anitab1
+	DW 37, 113, 10, -17
+JXFLIPPED2:
+	DD JXFLIPPED2_SUB-_jax_anitab1, 0
+JXFLIPPED2_SUB:
+	DD JXFLIPPED2_IMG-_jax_anitab1
+	DW 73, 81, 28, -30
+JXFLIPPED3:
+	DD JXFLIPPED3_SUB-_jax_anitab1, 0
+JXFLIPPED3_SUB:
+	DD JXFLIPPED3_IMG-_jax_anitab1
+	DW 70, 58, 52, -28
+JXFLIPPED4:
+	DD JXFLIPPED4_SUB-_jax_anitab1, 0
+JXFLIPPED4_SUB:
+	DD JXFLIPPED4_IMG-_jax_anitab1
+	DW 65, 93, 40, 4
+JXFLIPPED5:
+	DD JXFLIPPED5_SUB-_jax_anitab1, 0
+JXFLIPPED5_SUB:
+	DD JXFLIPPED5_IMG-_jax_anitab1
+	DW 84, 76, 34, -19
+JXKNOCKDOWN5:
+	DD	JXKNOCKDOWN5_SUB-_jax_anitab1,0
+JXKNOCKDOWN5_SUB:
+	DD JXKNOCKDOWN5_IMG-_jax_anitab1
+	DW 94, 65, 34, -42
+JAXZAP2:
+	DD JAXZAP2_SUB-_jax_anitab1, 0
+JAXZAP2_SUB:
+	DD JAXZAP2_IMG-_jax_anitab1
+	DW 54, 26, 2, -38
+JAXZAP3:
+	DD JAXZAP3_SUB-_jax_anitab1, 0
+JAXZAP3_SUB:
+	DD JAXZAP3_IMG-_jax_anitab1
+	DW 99, 13, 8, -46
+JAXZAP4:
+	DD JAXZAP4_SUB-_jax_anitab1, 0
+JAXZAP4_SUB:
+	DD JAXZAP4_IMG-_jax_anitab1
+	DW 130, 13, 39, -46
+JAXZAP5:
+	DD JAXZAP5_SUB-_jax_anitab1, 0
+JAXZAP5_SUB:
+	DD JAXZAP5_IMG-_jax_anitab1
+	DW 70, 13, -20, -46
+JAXZAP6:
+	DD JAXZAP6_SUB-_jax_anitab1, 0
+JAXZAP6_SUB:
+	DD JAXZAP6_IMG-_jax_anitab1
+	DW 67, 13, -23, -46
+JAXZAP7:
+	DD JAXZAP7_SUB-_jax_anitab1, 0
+JAXZAP7_SUB:
+	DD JAXZAP7_IMG-_jax_anitab1
+	DW 70, 13, -19, -46
+JAXZAP8:
+	DD JAXZAP8_SUB-_jax_anitab1, 0
+JAXZAP8_SUB:
+	DD JAXZAP8_IMG-_jax_anitab1
+	DW 51, 77, -129, -15
+	DD   _JXPREXP_P
+JAXZAP9:
+	DD JAXZAP9_SUB-_jax_anitab1, 0
+JAXZAP9_SUB:
+	DD JAXZAP9_IMG-_jax_anitab1
+	DW 52, 82, -128, -9
+JAXZAP10:
+	DD JAXZAP10_SUB-_jax_anitab1, 0
+JAXZAP10_SUB:
+	DD JAXZAP10_IMG-_jax_anitab1
+	DW 57, 86, -125, -8
+JAXZAP11:
+	DD JAXZAP11_SUB-_jax_anitab1, 0
+JAXZAP11_SUB:
+	DD JAXZAP11_IMG-_jax_anitab1
+	DW 58, 89, -125, -4
+JAXZAP12:
+	DD JAXZAP12_SUB-_jax_anitab1, 0
+JAXZAP12_SUB:
+	DD JAXZAP12_IMG-_jax_anitab1
+	DW 58, 94, -125, -2
+JAXZAP13:
+	DD JAXZAP13_SUB-_jax_anitab1, 0
+JAXZAP13_SUB:
+	DD JAXZAP13_IMG-_jax_anitab1
+	DW 60, 99, -125, 0
+JXRUN1:
+	DD JXRUN1_SUB-_jax_anitab1, 0
+JXRUN1_SUB:
+	DD JXRUN1_IMG-_jax_anitab1
+	DW 50, 115, 21, -15
+JXRUN3:
+	DD JXRUN3_SUB-_jax_anitab1, 0
+JXRUN3_SUB:
+	DD JXRUN3_IMG-_jax_anitab1
+	DW 74, 116, 42, -13
+JXRUN4:
+	DD JXRUN4_SUB-_jax_anitab1, 0
+JXRUN4_SUB:
+	DD JXRUN4_IMG-_jax_anitab1
+	DW 76, 115, 46, -15
+JXRUN5:
+	DD JXRUN5_SUB-_jax_anitab1, 0
+JXRUN5_SUB:
+	DD JXRUN5_IMG-_jax_anitab1
+	DW 66, 112, 43, -18
+JXRUN7:
+	DD JXRUN7_SUB-_jax_anitab1, 0
+JXRUN7_SUB:
+	DD JXRUN7_IMG-_jax_anitab1
+	DW 50, 116, 21, -14
+JXRUN9:
+	DD JXRUN9_SUB-_jax_anitab1, 0
+JXRUN9_SUB:
+	DD JXRUN9_IMG-_jax_anitab1
+	DW 70, 116, 38, -14
+JXRUN10:
+	DD JXRUN10_SUB-_jax_anitab1, 0
+JXRUN10_SUB:
+	DD JXRUN10_IMG-_jax_anitab1
+	DW 70, 114, 43, -17
+JXRUN11:
+	DD JXRUN11_SUB-_jax_anitab1, 0
+JXRUN11_SUB:
+	DD JXRUN11_IMG-_jax_anitab1
+	DW 59, 111, 38, -19
+JXTHUD1:
+	DD JXTHUD1_SUB-_jax_anitab1, 0
+JXTHUD1_SUB:
+	DD JXTHUD1_IMG-_jax_anitab1
+	DW 26, 119, 2, -13
+JXTHUD3:
+	DD JXTHUD3_SUB-_jax_anitab1, 0
+JXTHUD3_SUB:
+	DD JXTHUD3_IMG-_jax_anitab1
+	DW 51, 119, 17, -13
+JXTHUD5:
+	DD JXTHUD5_SUB-_jax_anitab1, 0
+JXTHUD5_SUB:
+	DD JXTHUD5_IMG-_jax_anitab1
+	DW 64, 109, 45, -24
+JXTHUD6:
+	DD JXTHUD6_SUB-_jax_anitab1, 0
+JXTHUD6_SUB:
+	DD JXTHUD6_IMG-_jax_anitab1
+	DW 90, 87, 70, -46
+JXTHUD7:
+	DD JXTHUD7_SUB-_jax_anitab1, 0
+JXTHUD7_SUB:
+	DD JXTHUD7_IMG-_jax_anitab1
+	DW 104, 41, 90, -92
+JXSCARED1:
+	DD JXSCARED1_SUB-_jax_anitab1, 0
+JXSCARED1_SUB:
+	DD JXSCARED1_IMG-_jax_anitab1
+	DW 66, 113, 28, -16
+JXQAKPRO1:
+	DD JXQAKPRO1_SUB-_jax_anitab1, 0
+JXQAKPRO1_SUB:
+	DD JXQAKPRO1_IMG-_jax_anitab1
+	DW 26, 17, 21, -12
+	DD   _JQAK_P
+JXQAKPRO2:
+	DD JXQAKPRO2_SUB-_jax_anitab1, 0
+JXQAKPRO2_SUB:
+	DD JXQAKPRO2_IMG-_jax_anitab1
+	DW 34, 26, 42, -25
+JXQUAKEPUNCH1:
+	DD JXQUAKEPUNCH1_SUB-_jax_anitab1, 0
+JXQUAKEPUNCH1_SUB:
+	DD JXQUAKEPUNCH1_IMG-_jax_anitab1
+	DW 66, 118, 38, -12
+JXQAKPRO3:
+	DD JXQAKPRO3_SUB-_jax_anitab1, 0
+JXQAKPRO3_SUB:
+	DD JXQAKPRO3_IMG-_jax_anitab1
+	DW 22, 53, 40, 9
+JXQUAKEPUNCH2:
+	DD JXQUAKEPUNCH2_SUB-_jax_anitab1, 0
+JXQUAKEPUNCH2_SUB:
+	DD JXQUAKEPUNCH2_IMG-_jax_anitab1
+	DW 81, 136, 29, 4
+JXQAKPRO4:
+	DD JXQAKPRO4_SUB-_jax_anitab1, 0
+JXQAKPRO4_SUB:
+	DD JXQAKPRO4_IMG-_jax_anitab1
+	DW 62, 37, 42, 11
+JXQUAKEPUNCH3:
+	DD JXQUAKEPUNCH3_SUB-_jax_anitab1, 0
+JXQUAKEPUNCH3_SUB:
+	DD JXQUAKEPUNCH3_IMG-_jax_anitab1
+	DW 78, 122, 25, -9
+JXQAKPRO6:
+	DD JXQAKPRO6_SUB-_jax_anitab1, 0
+JXQAKPRO6_SUB:
+	DD JXQAKPRO6_IMG-_jax_anitab1
+	DW 33, 119, -10, -18
+JXQUAKEPUNCH5:
+	DD JXQUAKEPUNCH5_SUB-_jax_anitab1, 0
+JXQUAKEPUNCH5_SUB:
+	DD JXQUAKEPUNCH5_IMG-_jax_anitab1
+	DW 63, 69, 18, -68
+JXQAKPRO8:
+	DD JXQAKPRO8_SUB-_jax_anitab1, 0
+JXQAKPRO8_SUB:
+	DD JXQAKPRO8_IMG-_jax_anitab1
+	DW 74, 54, 11, -88
+JXQAKPRO9:
+	DD JXQAKPRO9_SUB-_jax_anitab1, 0
+JXQAKPRO9_SUB:
+	DD JXQAKPRO9_IMG-_jax_anitab1
+	DW 104, 24, 23, -127
+JXQAKPRO11:
+	DD JXQAKPRO11_SUB-_jax_anitab1, 0
+JXQAKPRO11_SUB:
+	DD JXQAKPRO11_IMG-_jax_anitab1
+	DW 147, 27, 38, -127
+JXQAKPRO13:
+	DD JXQAKPRO13_SUB-_jax_anitab1, 0
+JXQAKPRO13_SUB:
+	DD JXQAKPRO13_IMG-_jax_anitab1
+	DW 148, 31, 38, -125
+JXQAKPRO14:
+	DD JXQAKPRO14_SUB-_jax_anitab1, 0
+JXQAKPRO14_SUB:
+	DD JXQAKPRO14_IMG-_jax_anitab1
+	DW 151, 30, 40, -126
+JXGOTCHA1:
+	DD JXGOTCHA1_SUB-_jax_anitab1, 0
+JXGOTCHA1_SUB:
+	DD JXGOTCHA1_IMG-_jax_anitab1
+	DW 60, 125, 14, -4
+JXGOTCHA2:
+	DD JXGOTCHA2_SUB-_jax_anitab1, 0
+JXGOTCHA2_SUB:
+	DD JXGOTCHA2_IMG-_jax_anitab1
+	DW 90, 129, 13, 0
+JXGOTCHA3:
+	DD JXGOTCHA3_SUB-_jax_anitab1, 0
+JXGOTCHA3_SUB:
+	DD JXGOTCHA3_IMG-_jax_anitab1
+	DW 73, 128, 14, -2
+JXGOTCHA4:
+	DD JXGOTCHA4_SUB-_jax_anitab1, 0
+JXGOTCHA4_SUB:
+	DD JXGOTCHA4_IMG-_jax_anitab1
+	DW 66, 117, 26, -13
+JXGOTCHA5:
+	DD JXGOTCHA5_SUB-_jax_anitab1, 0
+JXGOTCHA5_SUB:
+	DD JXGOTCHA5_IMG-_jax_anitab1
+	DW 81, 116, 40, -14
+JXGOTCHA6:
+	DD JXGOTCHA6_SUB-_jax_anitab1, 0
+JXGOTCHA6_SUB:
+	DD JXGOTCHA6_IMG-_jax_anitab1
+	DW 68, 118, 24, -12
+JXGOTCHA7:
+	DD JXGOTCHA7_SUB-_jax_anitab1, 0
+JXGOTCHA7_SUB:
+	DD JXGOTCHA7_IMG-_jax_anitab1
+	DW 59, 120, 14, -10
+JXSUPERPOW1:
+	DD JXSUPERPOW1_SUB-_jax_anitab1, 0
+JXSUPERPOW1_SUB:
+	DD JXSUPERPOW1_IMG-_jax_anitab1
+	DW 51, 110, 18, -20
+JXSUPERPOW2:
+	DD JXSUPERPOW2_SUB-_jax_anitab1, 0
+JXSUPERPOW2_SUB:
+	DD JXSUPERPOW2_IMG-_jax_anitab1
+	DW 68, 110, 29, -19
+JXSUPERPOW3:
+	DD JXSUPERPOW3_SUB-_jax_anitab1, 0
+JXSUPERPOW3_SUB:
+	DD JXSUPERPOW3_IMG-_jax_anitab1
+	DW 129, 101, 57, -25
+JXSUPERPOW4:
+	DD JXSUPERPOW4_SUB-_jax_anitab1, 0
+JXSUPERPOW4_SUB:
+	DD JXSUPERPOW4_IMG-_jax_anitab1
+	DW 129, 101, 57, -25
+JXSUPERPOW5:
+	DD JXSUPERPOW5_SUB-_jax_anitab1, 0
+JXSUPERPOW5_SUB:
+	DD JXSUPERPOW5_IMG-_jax_anitab1
+	DW 124, 101, 52, -25
+JXSUPERPOW6:
+	DD JXSUPERPOW6_SUB-_jax_anitab1, 0
+JXSUPERPOW6_SUB:
+	DD JXSUPERPOW6_IMG-_jax_anitab1
+	DW 120, 101, 48, -25
+JAXBAX1:
+	DD JAXBAX1_SUB-_jax_anitab1, 0
+JAXBAX1_SUB:
+	DD JAXBAX1_IMG-_jax_anitab1
+	DW 45, 158, 19, 29
+JAXBAX2:
+	DD JAXBAX2_SUB-_jax_anitab1, 0
+JAXBAX2_SUB:
+	DD JAXBAX2_IMG-_jax_anitab1
+	DW 53, 97, 22, -36
+;KNBROKEN1
+;	dw KNBROKEN1_SUB-_jax_anitab1, 0
+;KNBROKEN1_SUB
+;	dw KNBROKEN1_IMG-_jax_anitab1
+;	dh 90, 56, 54, -48
+;SBBROKEN1
+;	dw SBBROKEN1_SUB-_jax_anitab1, 0
+;SBBROKEN1_SUB
+;	dw SBBROKEN1_IMG-_jax_anitab1
+;	dh 70, 55, 32, -32
+JXBROKEN1:
+	DD JXBROKEN1_SUB-_jax_anitab1, 0
+JXBROKEN1_SUB:
+	DD JXBROKEN1_IMG-_jax_anitab1
+	DW 98, 54, 39, -35
+;INBROKEN1
+;	dw INBROKEN1_SUB-_jax_anitab1, 0
+;INBROKEN1_SUB
+;	dw INBROKEN1_IMG-_jax_anitab1
+;	dh 107, 49, 43, -30
+;SZBROKEN1
+;	dw SZBROKEN1_SUB-_jax_anitab1, 0
+;SZBROKEN1_SUB
+;	dw SZBROKEN1_IMG-_jax_anitab1
+;	dh 76, 50, 46, -30
+;OBBACKBROKEN1
+;	dw OBBACKBROKEN1_SUB-_jax_anitab1, 0
+;OBBACKBROKEN1_SUB
+;	dw OBBACKBROKEN1_IMG-_jax_anitab1
+;	dh 97, 55, 27, -48
+;LIBACKBROKEN1
+;	dw LIBACKBROKEN1_SUB-_jax_anitab1, 0
+;LIBACKBROKEN1_SUB
+;	dw LIBACKBROKEN1_IMG-_jax_anitab1
+;	dh 82, 68, 24, -56
+;RBBACKBREAK1
+;	dw RBBACKBREAK1_SUB-_jax_anitab1, 0
+;RBBACKBREAK1_SUB
+;	dw RBBACKBREAK1_IMG-_jax_anitab1
+;	dh 102, 53, 38, -60
+;KLBACKBROKEN1
+;	dw KLBACKBROKEN1_SUB-_jax_anitab1, 0
+;KLBACKBROKEN1_SUB
+;	dw KLBACKBROKEN1_IMG-_jax_anitab1
+;	dh 90, 52, 38, -47
+;TRBACKBREAK1
+;	dw TRBACKBREAK1_SUB-_jax_anitab1, 0
+;TRBACKBREAK1_SUB
+;	dw TRBACKBREAK1_IMG-_jax_anitab1
+;	dh 102, 37, 41, -42
+;SGBACKBREAK1
+;	dw SGBACKBREAK1_SUB-_jax_anitab1, 0
+;SGBACKBREAK1_SUB
+;	dw SGBACKBREAK1_IMG-_jax_anitab1
+;	dh 91, 60, 38, -36
+;TSBACKBROKEN1
+;	dw TSBACKBROKEN1_SUB-_jax_anitab1, 0
+;TSBACKBROKEN1_SUB
+;	dw TSBACKBROKEN1_IMG-_jax_anitab1
+;	dh 105, 52, 23, -42
+;LUBACKBREAK1
+;	dw LUBACKBREAK1_SUB-_jax_anitab1, 0
+;LUBACKBREAK1_SUB
+;	dw LUBACKBREAK1_IMG-_jax_anitab1
+;	dh 100, 42, 52, -48

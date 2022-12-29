@@ -1,0 +1,2512 @@
+tusk_anitab1:
+	DD a_stance-tusk_anitab1
+	DD a_walkf-tusk_anitab1
+	DD a_walkb-tusk_anitab1
+	DD a_turn-tusk_anitab1
+	DD a_duck-tusk_anitab1
+	DD a_duck_turn-tusk_anitab1
+	DD a_duck_block-tusk_anitab1
+	DD a_duck_hit-tusk_anitab1
+	DD a_duck_punch-tusk_anitab1
+	DD a_duck_kick_hi-tusk_anitab1
+	DD a_duck_kick_lo-tusk_anitab1
+	DD a_uppercut-tusk_anitab1
+	DD a_block-tusk_anitab1
+	DD a_victory-tusk_anitab1
+	DD a_hipunch-tusk_anitab1
+	DD a_lopunch-tusk_anitab1
+	DD a_elbow-tusk_anitab1
+	DD a_hikick-tusk_anitab1
+	DD a_lokick-tusk_anitab1
+	DD a_knee-tusk_anitab1
+	DD a_sweep_kick-tusk_anitab1
+	DD a_roundhouse-tusk_anitab1
+	DD a_jump-tusk_anitab1
+	DD a_jump_kick-tusk_anitab1
+	DD a_flip_punch-tusk_anitab1
+	DD a_flip_kick-tusk_anitab1
+	DD a_fflip-tusk_anitab1
+	DD a_bflip-tusk_anitab1
+	DD a_hit_hi-tusk_anitab1
+	DD a_hit_lo-tusk_anitab1
+	DD a_knockdown-tusk_anitab1
+	DD a_sweep_fall-tusk_anitab1
+	DD a_stumble-tusk_anitab1
+	DD a_getup-tusk_anitab1
+	DD a_sweepup-tusk_anitab1
+	DD a_throw-tusk_anitab1
+	DD a_zap-tusk_anitab1
+	DD a_dizzy-tusk_anitab1
+	DD a_fb_kano-tusk_anitab1
+	DD a_fb_sonya-tusk_anitab1
+	DD a_fb_jax-tusk_anitab1
+	DD a_fb_ind-tusk_anitab1
+	DD a_fb_sz-tusk_anitab1
+	DD a_fb_swat-tusk_anitab1
+	DD a_fb_lia-tusk_anitab1
+	DD a_fb_robo-tusk_anitab1
+	DD a_fb_robo2-tusk_anitab1
+	DD a_fb_lao-tusk_anitab1
+	DD a_fb_tusk-tusk_anitab1
+	DD a_fb_sg-tusk_anitab1
+	DD a_fb_st-tusk_anitab1
+	DD a_fb_lk-tusk_anitab1
+	DD a_fb_smoke-tusk_anitab1
+	DD a_afb_kano-tusk_anitab1
+	DD a_legged-tusk_anitab1
+	DD a_projectile-tusk_anitab1
+	DD a_shook-tusk_anitab1
+	DD a_afb_robo2-tusk_anitab1
+	DD a_zoomed-tusk_anitab1
+	DD 0
+	DD 0
+	DD a_back_broke-tusk_anitab1
+	DD a_run-tusk_anitab1
+	DD a_thudd-tusk_anitab1
+	DD a_scared-tusk_anitab1
+tusk_anitab2:
+	DD a_air_zap-tusk_anitab1
+	DD a_tusk_blur-tusk_anitab1
+	DD a_floor_blade-tusk_anitab1
+	DD a_glow-tusk_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_top-tusk_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_stance:
+	DD TRSTANCE1-tusk_anitab1
+	DD TRSTANCE2-tusk_anitab1
+	DD TRSTANCE3-tusk_anitab1
+	DD TRSTANCE5-tusk_anitab1
+	DD TRSTANCE6-tusk_anitab1
+	DD TRSTANCE7-tusk_anitab1
+	DD TRSTANCE9-tusk_anitab1
+	DD ani_jump
+	DD a_stance-tusk_anitab1
+a_turn:
+	DD TRTURN1-tusk_anitab1
+	DD ani_flip
+	DD TRTURN2-tusk_anitab1
+	DD TRTURN1-tusk_anitab1
+	DD 0
+a_walkb:
+	DD TRWALK9-tusk_anitab1
+	DD TRWALK8-tusk_anitab1
+	DD TRWALK7-tusk_anitab1
+	DD TRWALK6-tusk_anitab1
+	DD TRWALK5-tusk_anitab1
+	DD TRWALK4-tusk_anitab1
+	DD TRWALK3-tusk_anitab1
+	DD TRWALK2-tusk_anitab1
+	DD TRWALK1-tusk_anitab1
+	DD ani_jump
+	DD a_walkb-tusk_anitab1
+a_walkf:
+	DD TRWALK1-tusk_anitab1
+	DD TRWALK2-tusk_anitab1
+	DD TRWALK3-tusk_anitab1
+	DD TRWALK4-tusk_anitab1
+	DD TRWALK5-tusk_anitab1
+	DD TRWALK6-tusk_anitab1
+	DD TRWALK7-tusk_anitab1
+	DD TRWALK8-tusk_anitab1
+	DD TRWALK9-tusk_anitab1
+	DD ani_jump
+	DD a_walkf-tusk_anitab1
+a_duck:
+	DD TRDUCK1-tusk_anitab1
+	DD TRDUCK2-tusk_anitab1
+	DD TRDUCK3-tusk_anitab1
+	DD 0
+a_duck_block:
+	DD TRDUCKBLOCK1-tusk_anitab1
+	DD TRDUCKBLOCK2-tusk_anitab1
+	DD TRDUCKBLOCK3-tusk_anitab1
+	DD 0
+a_duck_punch:
+	DD TRDUCKPUNCH1-tusk_anitab1
+	DD TRDUCKPUNCH2-tusk_anitab1
+	DD TRDUCKPUNCH3-tusk_anitab1
+	DD 0
+	DD TRDUCKPUNCH2-tusk_anitab1
+	DD TRDUCKPUNCH1-tusk_anitab1
+	DD TRDUCK3-tusk_anitab1
+	DD 0
+a_duck_turn:
+	DD TRDUCKTURN1-tusk_anitab1
+	DD TRDUCKTURN2-tusk_anitab1
+	DD ani_flip
+	DD TRDUCKTURN2-tusk_anitab1
+	DD TRDUCK3-tusk_anitab1
+	DD 0
+a_duck_kick_lo:
+	DD TRDUCKLOKICK1-tusk_anitab1
+	DD TRDUCKLOKICK2-tusk_anitab1
+	DD TRDUCKLOKICK3-tusk_anitab1
+	DD 0
+	DD TRDUCKLOKICK2-tusk_anitab1
+	DD TRDUCKLOKICK1-tusk_anitab1
+	DD TRDUCK3-tusk_anitab1
+	DD 0
+a_duck_kick_hi:
+	DD TRDUCKHIKICK1-tusk_anitab1
+	DD TRDUCKHIKICK2-tusk_anitab1
+	DD TRDUCKHIKICK3-tusk_anitab1
+	DD TRDUCKHIKICK4-tusk_anitab1
+	DD 0
+	DD TRDUCKHIKICK3-tusk_anitab1
+	DD TRDUCKHIKICK2-tusk_anitab1
+	DD TRDUCKHIKICK1-tusk_anitab1
+	DD TRDUCK3-tusk_anitab1
+	DD 0
+a_uppercut:
+	DD TRUPPERCUT2-tusk_anitab1
+	DD TRUPPERCUT3-tusk_anitab1
+	DD TRUPPERCUT4-tusk_anitab1
+	DD TRUPPERCUT5-tusk_anitab1
+	DD ani_nosleep
+	DD TRUPPERCUT7-tusk_anitab1
+	DD 0
+	DD TRHIPUNCH2-tusk_anitab1
+	DD TRHIPUNCH1-tusk_anitab1
+	DD 0
+	DD TRUPPERCUT6-tusk_anitab1
+a_duck_hit:
+	DD TRDUCKHIT2-tusk_anitab1
+	DD TRDUCKHIT3-tusk_anitab1
+	DD TRDUCKHIT2-tusk_anitab1
+	DD TRDUCKHIT1-tusk_anitab1
+	DD 0
+a_block:
+	DD TRHIBLOCK1-tusk_anitab1
+	DD TRHIBLOCK2-tusk_anitab1
+	DD TRHIBLOCK3-tusk_anitab1
+	DD 0
+a_hipunch:
+	DD TRHIPUNCH1-tusk_anitab1
+	DD TRHIPUNCH2-tusk_anitab1
+	DD TRHIPUNCH3-tusk_anitab1
+	DD 0
+	DD TRHIPUNCH4-tusk_anitab1
+	DD TRHIPUNCH5-tusk_anitab1
+	DD TRHIPUNCH6-tusk_anitab1
+	DD 0
+	DD TRHIPUNCH5-tusk_anitab1
+	DD TRHIPUNCH4-tusk_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-tusk_anitab1
+	DD 0
+	DD TRHIPUNCH2-tusk_anitab1
+	DD TRHIPUNCH1-tusk_anitab1
+	DD 0
+	DD TRHIPUNCH7-tusk_anitab1
+	DD 0
+	DD TRHIPUNCH4-tusk_anitab1
+	DD TRLOPUNCH5-tusk_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*6)/8)-tusk_anitab1
+	DD 0
+	DD TRHIPUNCH5-tusk_anitab1
+	DD TRLOPUNCH2-tusk_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-tusk_anitab1
+	DD 0
+a_lopunch:
+	DD TRLOPUNCH1-tusk_anitab1
+	DD TRLOPUNCH2-tusk_anitab1
+	DD TRLOPUNCH3-tusk_anitab1
+	DD 0
+	DD TRLOPUNCH4-tusk_anitab1
+	DD TRLOPUNCH5-tusk_anitab1
+	DD TRLOPUNCH6-tusk_anitab1
+	DD 0
+	DD TRLOPUNCH5-tusk_anitab1
+	DD TRLOPUNCH4-tusk_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-tusk_anitab1
+	DD 0
+	DD TRLOPUNCH2-tusk_anitab1
+	DD TRLOPUNCH1-tusk_anitab1
+	DD 0
+	DD TRHIPUNCH7-tusk_anitab1
+	DD 0
+	DD TRLOPUNCH4-tusk_anitab1
+	DD TRLOPUNCH5-tusk_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*6)/8)-tusk_anitab1
+	DD 0
+	DD TRLOPUNCH4-tusk_anitab1
+	DD TRHIPUNCH5-tusk_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-tusk_anitab1
+a_elbow:
+	DD TRSWIPE1-tusk_anitab1
+	DD TRSWIPE2-tusk_anitab1
+	DD TRSWIPE3-tusk_anitab1
+	DD TRSWIPE4-tusk_anitab1
+	DD TRSWIPE5-tusk_anitab1
+	DD 0
+	DD TRSWIPE4-tusk_anitab1
+	DD TRSWIPE3-tusk_anitab1
+	DD TRSWIPE2-tusk_anitab1
+	DD TRSWIPE1-tusk_anitab1
+	DD 0
+	DD TRSWIPE6-tusk_anitab1
+	DD TRSWIPE7-tusk_anitab1
+	DD TRSWIPE8-tusk_anitab1
+	DD 0
+	DD TRSWIPE9-tusk_anitab1
+	DD TRSWIPE10-tusk_anitab1
+	DD TRSWIPE11-tusk_anitab1
+	DD TRSWIPE12-tusk_anitab1
+	DD TRSWIPE13-tusk_anitab1
+	DD 0
+	DD TRSWIPE14-tusk_anitab1
+	DD TRSWIPE15-tusk_anitab1
+	DD TRSWIPE16-tusk_anitab1
+	DD TRSWIPE17-tusk_anitab1
+	DD 0
+	DD TRSWIPE18-tusk_anitab1
+	DD TRSWIPE19-tusk_anitab1
+	DD TRSWIPE20-tusk_anitab1
+	DD 0
+a_lokick:
+	DD TRLOKICK1-tusk_anitab1
+	DD TRLOKICK2-tusk_anitab1
+	DD TRLOKICK3-tusk_anitab1
+	DD TRLOKICK4-tusk_anitab1
+	DD TRLOKICK5-tusk_anitab1
+	DD TRLOKICK6-tusk_anitab1
+	DD 0
+	DD TRLOKICK5-tusk_anitab1
+	DD TRLOKICK4-tusk_anitab1
+	DD TRLOKICK3-tusk_anitab1
+	DD TRLOKICK2-tusk_anitab1
+	DD TRLOKICK1-tusk_anitab1
+	DD 0
+a_hikick:
+	DD TRLOKICK1-tusk_anitab1
+	DD TRLOKICK2-tusk_anitab1
+	DD TRLOKICK3-tusk_anitab1
+	DD TRHIKICK1-tusk_anitab1
+	DD TRHIKICK2-tusk_anitab1
+	DD TRHIKICK3-tusk_anitab1
+	DD 0
+	DD TRHIKICK2-tusk_anitab1
+	DD TRHIKICK1-tusk_anitab1
+	DD TRLOKICK3-tusk_anitab1
+	DD TRLOKICK2-tusk_anitab1
+	DD TRLOKICK1-tusk_anitab1
+	DD 0
+a_knee:
+	DD TRKNEEKICK1-tusk_anitab1
+	DD TRKNEEKICK2-tusk_anitab1
+	DD TRKNEEKICK3-tusk_anitab1
+	DD 0
+	DD TRKNEEKICK2-tusk_anitab1
+	DD TRKNEEKICK1-tusk_anitab1
+	DD 0
+	DD TRKNEEKICK4-tusk_anitab1
+	DD ani_adjustx
+	DD 8
+	DD TRKNEEKICK5-tusk_anitab1
+	DD ani_adjustx
+	DD 8
+	DD TRKNEEKICK6-tusk_anitab1
+	DD TRKNEEKICK7-tusk_anitab1
+	DD 0
+	DD TRKNEEKICK6-tusk_anitab1
+	DD TRKNEEKICK5-tusk_anitab1
+	DD TRKNEEKICK4-tusk_anitab1
+	DD 0
+a_sweep_kick:
+	DD TRSWEEPKICK1-tusk_anitab1
+	DD TRSWEEPKICK2-tusk_anitab1
+	DD TRSWEEPKICK3-tusk_anitab1
+	DD ani_calla
+	DD sweep_sounds
+	DD TRSWEEPKICK4-tusk_anitab1
+	DD TRSWEEPKICK5-tusk_anitab1
+	DD 0
+	DD TRSWEEPKICK6-tusk_anitab1
+	DD TRSWEEPKICK7-tusk_anitab1
+	DD TRSWEEPKICK8-tusk_anitab1
+	DD 0
+a_roundhouse:
+	DD TRROUNDKICK1-tusk_anitab1
+	DD TRROUNDKICK2-tusk_anitab1
+	DD TRROUNDKICK3-tusk_anitab1
+	DD TRROUNDKICK4-tusk_anitab1
+	DD ani_nosleep
+	DD TRROUNDKICK5-tusk_anitab1
+	DD 0
+	DD TRROUNDKICK6-tusk_anitab1
+	DD TRROUNDKICK7-tusk_anitab1
+	DD TRROUNDKICK8-tusk_anitab1
+	DD 0
+a_jump:
+	DD TRJUMP1-tusk_anitab1
+	DD TRJUMP2-tusk_anitab1
+	DD TRJUMP3-tusk_anitab1
+	DD 0
+a_jump_kick:
+	DD TRJUMPKICK1-tusk_anitab1
+	DD TRJUMPKICK2-tusk_anitab1
+	DD TRJUMPKICK3-tusk_anitab1
+	DD 0
+	DD TRJUMPKICK2-tusk_anitab1
+	DD TRJUMPKICK1-tusk_anitab1
+	DD 0
+a_flip_kick:
+	DD TRFLIPKICK1-tusk_anitab1
+	DD TRFLIPKICK2-tusk_anitab1
+	DD TRFLIPKICK3-tusk_anitab1
+	DD 0
+	DD TRFLIPKICK2-tusk_anitab1
+	DD TRFLIPKICK1-tusk_anitab1
+	DD 0
+a_flip_punch:
+	DD TRFLIPUNCH1-tusk_anitab1
+	DD TRFLIPUNCH2-tusk_anitab1
+	DD TRFLIPUNCH3-tusk_anitab1
+	DD 0
+	DD TRFLIPUNCH2-tusk_anitab1
+	DD TRFLIPUNCH1-tusk_anitab1
+	DD 0
+a_fflip:
+	DD TRJUMPFLIP1-tusk_anitab1
+	DD TRJUMPFLIP2-tusk_anitab1
+	DD TRJUMPFLIP3-tusk_anitab1
+	DD TRJUMPFLIP4-tusk_anitab1
+	DD TRJUMPFLIP5-tusk_anitab1
+	DD TRJUMPFLIP6-tusk_anitab1
+	DD TRJUMPFLIP7-tusk_anitab1
+	DD TRJUMPFLIP8-tusk_anitab1
+	DD ani_jump
+	DD a_fflip+(32/8)-tusk_anitab1
+a_bflip:
+	DD TRJUMPFLIP1-tusk_anitab1
+	DD TRJUMPFLIP8-tusk_anitab1
+	DD TRJUMPFLIP7-tusk_anitab1
+	DD TRJUMPFLIP6-tusk_anitab1
+	DD TRJUMPFLIP5-tusk_anitab1
+	DD TRJUMPFLIP4-tusk_anitab1
+	DD TRJUMPFLIP3-tusk_anitab1
+	DD TRJUMPFLIP2-tusk_anitab1
+	DD ani_jump
+	DD a_bflip+(32/8)-tusk_anitab1
+a_air_zap:
+	DD TRAIRPROJ1-tusk_anitab1
+	DD TRAIRPROJ2-tusk_anitab1
+	DD 0
+	DD TRAIRPROJ1-tusk_anitab1
+	DD 0
+a_hit_hi:
+	DD TRHIHIT2-tusk_anitab1
+	DD TRHIHIT3-tusk_anitab1
+	DD TRHIHIT2-tusk_anitab1
+	DD TRHIHIT1-tusk_anitab1
+	DD 0
+a_hit_lo:
+	DD TRLOHIT2-tusk_anitab1
+	DD TRLOHIT3-tusk_anitab1
+	DD TRLOHIT2-tusk_anitab1
+	DD TRLOHIT1-tusk_anitab1
+	DD 0
+a_stumble:
+	DD TRSTUMBLE1-tusk_anitab1
+	DD TRSTUMBLE2-tusk_anitab1
+	DD TRSTUMBLE3-tusk_anitab1
+	DD TRSTUMBLE5-tusk_anitab1
+	DD TRSTUMBLE6-tusk_anitab1
+	DD TRSTUMBLE7-tusk_anitab1
+	DD 0
+j_stumble:
+	DD TRSTUMBLE1-tusk_anitab1
+	DD TRSTUMBLE2-tusk_anitab1
+	DD TRSTUMBLE3-tusk_anitab1
+	DD TRSTUMBLE5-tusk_anitab1
+	DD TRSTUMBLE6-tusk_anitab1
+	DD TRSTUMBLE7-tusk_anitab1
+	DD ani_jump
+	DD j_stumble-tusk_anitab1
+a_dizzy:
+	DD TRSTUNNED2-tusk_anitab1
+	DD TRSTUNNED4-tusk_anitab1
+	DD TRSTUNNED5-tusk_anitab1
+	DD TRSTUNNED7-tusk_anitab1
+	DD ani_jump
+	DD a_dizzy-tusk_anitab1
+a_sweepup:
+	DD TRSWEEPUP1-tusk_anitab1
+	DD TRSWEEPUP2-tusk_anitab1
+	DD TRSWEEPUP3-tusk_anitab1
+	DD TRSWEEPUP4-tusk_anitab1
+	DD TRSWEEPUP5-tusk_anitab1
+	DD TRSWEEPUP6-tusk_anitab1
+	DD TRSWEEPUP7-tusk_anitab1
+	DD 0
+a_knockdown:
+	DD TRKNOCKDOWN1-tusk_anitab1
+	DD TRKNOCKDOWN2-tusk_anitab1
+	DD TRKNOCKDOWN3-tusk_anitab1
+	DD TRKNOCKDOWN4-tusk_anitab1
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD 0
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD TRGETUP1-tusk_anitab1
+	DD 0
+a_sweep_fall:
+	DD TRSWEEPFALL1-tusk_anitab1
+	DD TRSWEEPFALL2-tusk_anitab1
+	DD TRSWEEPFALL3-tusk_anitab1
+	DD TRSWEEPFALL4-tusk_anitab1
+	DD 0
+	DD TRSWEEPFALL5-tusk_anitab1
+	DD TRSWEEPFALL6-tusk_anitab1
+	DD 0
+a_afb_kano:
+	DD ani_offset_xy
+	DW -040H
+	DW -01bH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW -00bH
+	DD TRKNOCKDOWN4-tusk_anitab1
+	DD ani_offset_xy
+	DW -059H
+	DW 022H
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD 0
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_smoke:
+a_afb_robo2:
+	DD ani_offset_xy
+	DW -01eH
+	DW -038H
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 001H
+	DW -048H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 030H
+	DW -038H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 049H
+	DW -01eH
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 058H
+	DW -015H
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD ani_offset_xy
+	DW 062H
+	DW 01aH
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD 0
+a_fb_sg:
+	DD ani_offset_xy
+	DW -015H
+	DW -04dH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -001H
+	DW -050H
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 00eH
+	DW -044H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 011H
+	DW -021H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW -017H
+	DW -011H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -026H
+	DW -009H
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_st:
+	DD ani_offset_xy
+	DW -048H
+	DW -008H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW 007H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -02aH
+	DW 00aH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW -007H
+	DW 003H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 01dH
+	DW 025H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW -00aH
+	DW 002H
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD ani_offset_xy
+	DW -029H
+	DW -001H
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD ani_offset_xy
+	DW -038H
+	DW -004H
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD ani_offset_xy
+	DW -05cH
+	DW 00aH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -067H
+	DW -00bH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW -04cH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 02bH
+	DW -041H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 04cH
+	DW -018H
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW 045H
+	DW -008H
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD 0
+a_fb_lk:
+	DD ani_offset_xy
+	DW -044H
+	DW -001H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -03bH
+	DW 007H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -01aH
+	DW 00eH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 010H
+	DW 006H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 042H
+	DW -001H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 088H
+	DW -01fH
+	DD TRFLIPPED4-tusk_anitab1
+	DD 0
+	DD TRFLIPPED5-tusk_anitab1
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_kano:
+	DD ani_offset_xy
+	DW -03fH
+	DW -01bH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -028H
+	DW -02eH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 035H
+	DW -037H
+	DD TRFLIPPED3-tusk_anitab1
+	DD 0
+	DD TRFLIPPED4-tusk_anitab1
+	DD TRFLIPPED5-tusk_anitab1
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_sonya:
+	DD ani_offset_xy
+	DW -02fH
+	DW 004H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -01fH
+	DW 00dH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 00eH
+	DW 006H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 05bH
+	DW -00cH
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 08cH
+	DW -021H
+	DD TRFLIPPED4-tusk_anitab1
+	DD 0
+	DD TRFLIPPED5-tusk_anitab1
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_jax:
+	DD ani_offset_xy
+	DW -043H
+	DW -01fH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -02bH
+	DW -036H
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 000H
+	DW -04bH
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 037H
+	DW -030H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 04eH
+	DW -00cH
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD ani_offset_xy
+	DW 042H
+	DW 007H
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_ind:
+	DD ani_offset_xy
+	DW -05cH
+	DW -018H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -048H
+	DW -03eH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW -013H
+	DW -058H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 02dH
+	DW -03eH
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 04eH
+	DW -00bH
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW 04dH
+	DW -002H
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_sz:
+	DD ani_offset_xy
+	DW -049H
+	DW -032H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW 051H
+	DW -01fH
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW 040H
+	DW 005H
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW -004H
+	DW -008H
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD ani_offset_xy
+	DW -047H
+	DW -033H
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD ani_offset_xy
+	DW -072H
+	DW -060H
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD 0
+a_fb_swat:
+	DD ani_offset_xy
+	DW -050H
+	DW -00dH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW -041H
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 023H
+	DW -050H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 056H
+	DW -013H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 04aH
+	DW 006H
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD 0
+a_fb_lia:
+	DD ani_offset_xy
+	DW -064H
+	DW 000H
+	DD TRSTUMBLE1-tusk_anitab1
+	DD ani_offset_xy
+	DW -073H
+	DW 003H
+	DD TRSTUMBLE1-tusk_anitab1
+	DD ani_offset_xy
+	DW -075H
+	DW -01eH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -057H
+	DW -03dH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -023H
+	DW -046H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW 01eH
+	DW -04eH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW 0a8H
+	DW 012H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 08dH
+	DW 000H
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_robo:
+	DD ani_offset_xy
+	DW -052H
+	DW -00bH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -04fH
+	DW -032H
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW -038H
+	DW -048H
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW -00aH
+	DW -06cH
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 038H
+	DW -062H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 05cH
+	DW -050H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 07bH
+	DW -013H
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW 05aH
+	DW -011H
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_robo2:
+	DD ani_offset_xy
+	DW -030H
+	DW -007H
+	DD TRSTUMBLE1-tusk_anitab1
+	DD ani_offset_xy
+	DW -02cH
+	DW -01dH
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -00eH
+	DW -02aH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 016H
+	DW -021H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 025H
+	DW 003H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 018H
+	DW 016H
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW -01eH
+	DW -01eH
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_fb_lao:
+	DD ani_offset_xy
+	DW -029H
+	DW 01aH
+	DD TRSTUMBLE1-tusk_anitab1
+	DD ani_offset_xy
+	DW -012H
+	DW 030H
+	DD TRSTUMBLE1-tusk_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -029H
+	DW 022H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -04aH
+	DW -00fH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW -032H
+	DW -04fH
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 010H
+	DW -067H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 053H
+	DW -06aH
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW 05eH
+	DW -051H
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW 077H
+	DW 002H
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW 077H
+	DW 052H
+	DD TRFLIPPED5-tusk_anitab1
+	DD 0
+a_fb_tusk:
+	DD ani_offset_xy
+	DW -06eH
+	DW 000H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -06cH
+	DW -04aH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW -018H
+	DW -078H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 040H
+	DW -057H
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 044H
+	DW -015H
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW 00fH
+	DW 01eH
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW -031H
+	DW 003H
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD ani_offset_xy
+	DW -068H
+	DW 001H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -058H
+	DW -05fH
+	DD TRFLIPPED2-tusk_anitab1
+	DD ani_offset_xy
+	DW 017H
+	DW -06cH
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 065H
+	DW -005H
+	DD TRFLIPPED5-tusk_anitab1
+	DD ani_offset_xy
+	DW 064H
+	DW 009H
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD 0
+a_legged:
+	DD ani_offset_xy
+	DW -064H
+	DW -001H
+	DD TRKNOCKDOWN1-tusk_anitab1
+	DD ani_offset_xy
+	DW -051H
+	DW -022H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -021H
+	DW -043H
+	DD TRFLIPPED3-tusk_anitab1
+	DD ani_offset_xy
+	DW 024H
+	DW -02dH
+	DD TRFLIPPED4-tusk_anitab1
+	DD ani_offset_xy
+	DW 05eH
+	DW 000H
+	DD TRFLIPPED5-tusk_anitab1
+	DD 0
+a_zoomed:
+	DD ani_offset_xy
+	DW 055H
+	DW -01cH
+	DD TRKNOCKDOWN3-tusk_anitab1
+	DD ani_offset_xy
+	DW 057H
+	DW 00fH
+	DD TRKNOCKDOWN4-tusk_anitab1
+	DD ani_offset_xy
+	DW 027H
+	DW 01eH
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD ani_offset_xy
+	DW -030H
+	DW 021H
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD ani_offset_xy
+	DW -08bH
+	DW -013H
+	DD TRFLIPPED1-tusk_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW -055H
+	DD TRFLIPPED3-tusk_anitab1
+	DD 0
+	DD TRFLIPPED3-tusk_anitab1
+	DD TRFLIPPED4-tusk_anitab1
+	DD TRFLIPPED5-tusk_anitab1
+	DD TRKNOCKDOWN5-tusk_anitab1
+	DD TRKNOCKDOWN6-tusk_anitab1
+	DD TRKNOCKDOWN7-tusk_anitab1
+	DD 0
+a_shook:
+	DD ani_offset_xy
+	DW -05aH
+	DW -006H
+	DD TRSTUMBLE2-tusk_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW -01cH
+	DD TRSTUMBLE2-tusk_anitab1
+	DD ani_offset_xy
+	DW -028H
+	DW -018H
+	DD TRSTUMBLE2-tusk_anitab1
+	DD 0
+	DD ani_offset_xy
+	DW -026H
+	DW -019H
+	DD TRSTUMBLE2-tusk_anitab1
+	DD ani_offset_xy
+	DW -042H
+	DW -027H
+	DD TRSTUMBLE2-tusk_anitab1
+	DD ani_offset_xy
+	DW -04eH
+	DW -02aH
+	DD TRSTUMBLE2-tusk_anitab1
+	DD ani_offset_xy
+	DW -03fH
+	DW -026H
+	DD TRSTUMBLE2-tusk_anitab1
+	DD 0
+a_getup:
+	DD TRGETUP1-tusk_anitab1
+	DD TRGETUP2-tusk_anitab1
+	DD TRGETUP3-tusk_anitab1
+	DD TRGETUP4-tusk_anitab1
+	DD TRGETUP5-tusk_anitab1
+	DD TRGETUP6-tusk_anitab1
+	DD TRGETUP7-tusk_anitab1
+	DD 0
+a_zap:
+	DD TREYESHOOT1-tusk_anitab1
+	DD TREYESHOOT2-tusk_anitab1
+	DD TREYESHOOT3-tusk_anitab1
+	DD 0
+	DD ani_sladd
+	DD HIGHL5-tusk_anitab1
+	DD TREYESHOOT5-tusk_anitab1
+	DD ani_calla
+	DD slave_inviso
+	DD TREYESHOOT5-tusk_anitab1
+	DD ani_calla
+	DD slave_viso
+	DD TREYESHOOT5-tusk_anitab1
+	DD ani_calla
+	DD slave_inviso
+	DD TREYESHOOT5-tusk_anitab1
+	DD ani_calla
+	DD slave_viso
+	DD TREYESHOOT5-tusk_anitab1
+	DD ani_calla
+	DD slave_inviso
+	DD TREYESHOOT5-tusk_anitab1
+	DD ani_calla
+	DD slave_viso
+	DD TREYESHOOT5-tusk_anitab1
+	DD 0
+	DD TREYESHOOT3-tusk_anitab1
+	DD TREYESHOOT2-tusk_anitab1
+	DD TREYESHOOT1-tusk_anitab1
+	DD 0
+a_projectile:
+	DD TORP1-tusk_anitab1
+	DD TORP2-tusk_anitab1
+j_torp:
+	DD TORP4-tusk_anitab1
+	DD TORP6-tusk_anitab1
+	DD TORP8-tusk_anitab1
+	DD TORP10-tusk_anitab1
+	DD TORP12-tusk_anitab1
+	DD TORP14-tusk_anitab1
+	DD ani_jump
+	DD j_torp-tusk_anitab1
+a_run:
+	DD TRRUN2-tusk_anitab1
+	DD TRRUN4-tusk_anitab1
+	DD TRRUN6-tusk_anitab1
+	DD ani_calla
+	DD rsnd_footstep
+	DD TRRUN8-tusk_anitab1
+	DD TRRUN10-tusk_anitab1
+	DD TRRUN12-tusk_anitab1
+	DD ani_jump
+	DD a_run-tusk_anitab1
+	DD 0
+a_victory:
+	DD TRVICTORY1-tusk_anitab1
+	DD TRVICTORY3-tusk_anitab1
+	DD TRVICTORY4-tusk_anitab1
+	DD TRVICTORY6-tusk_anitab1
+	DD TRVICTORY7-tusk_anitab1
+	DD TRVICTORY9-tusk_anitab1
+	DD TRVICTORY10-tusk_anitab1
+	DD TRVICTORY11-tusk_anitab1
+	DD 0
+a_throw:
+	DD TRFLIP1-tusk_anitab1
+	DD TRFLIP2-tusk_anitab1
+	DD 0
+	DD TRFLIP3-tusk_anitab1
+	DD TRFLIP4-tusk_anitab1
+	DD ani_ochar_sound
+	DD 3
+	DD TRFLIP5-tusk_anitab1
+	DD TRFLIP6-tusk_anitab1
+	DD TRFLIP7-tusk_anitab1
+	DD TRFLIP8-tusk_anitab1
+	DD TRFLIP2-tusk_anitab1
+	DD TRFLIP3-tusk_anitab1
+	DD ani_ochar_sound
+	DD 4
+	DD TRFLIP9-tusk_anitab1
+	DD TRFLIP10-tusk_anitab1
+	DD TRFLIP11-tusk_anitab1
+	DD TRFLIP12-tusk_anitab1
+	DD 0
+	DD ani_flip
+	DD TRFLIP1-tusk_anitab1
+	DD 0
+a_tusk_blur:
+	DD TRRUN2-tusk_anitab1
+	DD TRRUN4-tusk_anitab1
+	DD TRZOOM1-tusk_anitab1
+	DD TRZOOM3-tusk_anitab1
+	DD TRZOOM3-tusk_anitab1
+	DD TRZOOM3-tusk_anitab1
+	DD TRZOOM5-tusk_anitab1
+
+	DD TRZOOM5-tusk_anitab1
+	DD TRZOOM5-tusk_anitab1
+	DD TRZOOM5-tusk_anitab1
+	DD TRZOOM5-tusk_anitab1
+	DD TRZOOM5-tusk_anitab1
+	DD TRZOOM5-tusk_anitab1
+	DD TRZOOM5-tusk_anitab1
+
+	DD TRZOOM3-tusk_anitab1
+	DD TRZOOM3-tusk_anitab1
+	DD TRZOOM3-tusk_anitab1
+
+	DD TRZOOM3-tusk_anitab1
+	DD TRZOOM3-tusk_anitab1
+	DD TRZOOM3-tusk_anitab1
+	DD 0
+	DD TRZOOM3-tusk_anitab1
+	DD TRZOOM1-tusk_anitab1
+	DD TRZOOM1-tusk_anitab1
+	DD 0
+a_scared:
+	DD TRSCARED3-tusk_anitab1
+	DD 0
+a_thudd:
+	DD TRTHUD1-tusk_anitab1
+	DD TRTHUD3-tusk_anitab1
+	DD TRTHUD5-tusk_anitab1
+	DD TRTHUD6-tusk_anitab1
+	DD TRTHUD7-tusk_anitab1
+	DD 0
+a_glow:
+	DD TRDUCK1-tusk_anitab1
+	DD TRDUCK2-tusk_anitab1
+	DD TRDUCK3-tusk_anitab1
+	DD ani_sladd
+	DD GLOW1-tusk_anitab1
+	DD ani_slani
+	DD GLOW2-tusk_anitab1
+	DD TRUPPERCUT2-tusk_anitab1
+	DD ani_slani
+	DD GLOW3-tusk_anitab1
+	DD TRUPPERCUT3-tusk_anitab1
+	DD ani_slani
+	DD GLOW4-tusk_anitab1
+	DD TRUPPERCUT4-tusk_anitab1
+	DD 0
+	DD ani_slani
+	DD GLOW3-tusk_anitab1
+	DD TRUPPERCUT3-tusk_anitab1
+	DD ani_slani
+	DD GLOW2-tusk_anitab1
+	DD TRUPPERCUT2-tusk_anitab1
+	DD ani_calla
+	DD delete_slave
+	DD TRDUCK3-tusk_anitab1
+	DD TRDUCK2-tusk_anitab1
+	DD TRDUCK1-tusk_anitab1
+	DD 0
+a_floor_blade:
+	DD KLOOP1-tusk_anitab1
+	DD KLOOP2-tusk_anitab1
+	DD KLOOP3-tusk_anitab1
+	DD KLOOP4-tusk_anitab1
+	DD KLOOP5-tusk_anitab1
+	DD KLOOP6-tusk_anitab1
+	DD ani_jump
+	DD a_floor_blade-tusk_anitab1
+a_top:
+	DD ani_swpal
+	DD SPINNER1-tusk_anitab1
+	DD SPINNER3-tusk_anitab1
+	DD SPINNER5-tusk_anitab1
+	DD ani_jump
+	DD a_top-tusk_anitab1
+TRSTANCE1:
+	DD TRSTANCE1_SUB-tusk_anitab1, 0
+TRSTANCE1_SUB:
+	DD TRSTANCE1_IMG-tusk_anitab1
+	DW 47, 115, 16, -6
+	DD   _TSKTAN_P
+TRSTANCE2:
+	DD TRSTANCE2_SUB-tusk_anitab1, 0
+TRSTANCE2_SUB:
+	DD TRSTANCE2_IMG-tusk_anitab1
+	DW 45, 114, 14, -7
+TRSTANCE3:
+	DD TRSTANCE3_SUB-tusk_anitab1, 0
+TRSTANCE3_SUB:
+	DD TRSTANCE3_IMG-tusk_anitab1
+	DW 45, 112, 14, -9
+TRSTANCE5:
+	DD TRSTANCE5_SUB-tusk_anitab1, 0
+TRSTANCE5_SUB:
+	DD TRSTANCE5_IMG-tusk_anitab1
+	DW 50, 114, 19, -7
+TRSTANCE6:
+	DD TRSTANCE6_SUB-tusk_anitab1, 0
+TRSTANCE6_SUB:
+	DD TRSTANCE6_IMG-tusk_anitab1
+	DW 54, 113, 23, -8
+TRSTANCE7:
+	DD TRSTANCE7_SUB-tusk_anitab1, 0
+TRSTANCE7_SUB:
+	DD TRSTANCE7_IMG-tusk_anitab1
+	DW 56, 112, 25, -9
+TRSTANCE9:
+	DD TRSTANCE9_SUB-tusk_anitab1, 0
+TRSTANCE9_SUB:
+	DD TRSTANCE9_IMG-tusk_anitab1
+	DW 54, 113, 22, -8
+TRWALK1:
+	DD TRWALK1_SUB-tusk_anitab1, 0
+TRWALK1_SUB:
+	DD TRWALK1_IMG-tusk_anitab1
+	DW 46, 113, 18, -8
+TRWALK2:
+	DD TRWALK2_SUB-tusk_anitab1, 0
+TRWALK2_SUB:
+	DD TRWALK2_IMG-tusk_anitab1
+	DW 48, 112, 21, -8
+TRWALK3:
+	DD TRWALK3_SUB-tusk_anitab1, 0
+TRWALK3_SUB:
+	DD TRWALK3_IMG-tusk_anitab1
+	DW 43, 116, 15, -8
+TRWALK4:
+	DD TRWALK4_SUB-tusk_anitab1, 0
+TRWALK4_SUB:
+	DD TRWALK4_IMG-tusk_anitab1
+	DW 43, 115, 17, -8
+TRWALK5:
+	DD TRWALK5_SUB-tusk_anitab1, 0
+TRWALK5_SUB:
+	DD TRWALK5_IMG-tusk_anitab1
+	DW 50, 113, 16, -9
+TRWALK6:
+	DD TRWALK6_SUB-tusk_anitab1, 0
+TRWALK6_SUB:
+	DD TRWALK6_IMG-tusk_anitab1
+	DW 45, 113, 17, -9
+TRWALK7:
+	DD TRWALK7_SUB-tusk_anitab1, 0
+TRWALK7_SUB:
+	DD TRWALK7_IMG-tusk_anitab1
+	DW 43, 113, 16, -9
+TRWALK8:
+	DD TRWALK8_SUB-tusk_anitab1, 0
+TRWALK8_SUB:
+	DD TRWALK8_IMG-tusk_anitab1
+	DW 46, 111, 16, -11
+TRWALK9:
+	DD TRWALK9_SUB-tusk_anitab1, 0
+TRWALK9_SUB:
+	DD TRWALK9_IMG-tusk_anitab1
+	DW 57, 112, 17, -10
+TRTURN1:
+	DD TRTURN1_SUB-tusk_anitab1, 0
+TRTURN1_SUB:
+	DD TRTURN1_IMG-tusk_anitab1
+	DW 50, 113, 21, -8
+TRTURN2:
+	DD TRTURN2_SUB-tusk_anitab1, 0
+TRTURN2_SUB:
+	DD TRTURN2_IMG-tusk_anitab1
+	DW 46, 114, 16, -7
+TRDUCK1:
+	DD TRDUCK1_SUB-tusk_anitab1, 0
+TRDUCK1_SUB:
+	DD TRDUCK1_IMG-tusk_anitab1
+	DW 56, 102, 14, -19
+TRDUCK2:
+	DD TRDUCK2_SUB-tusk_anitab1, 0
+TRDUCK2_SUB:
+	DD TRDUCK2_IMG-tusk_anitab1
+	DW 56, 82, 14, -39
+TRDUCK3:
+	DD TRDUCK3_SUB-tusk_anitab1, 0
+TRDUCK3_SUB:
+	DD TRDUCK3_IMG-tusk_anitab1
+	DW 48, 64, 15, -57
+TRDUCKTURN1:
+	DD TRDUCKTURN1_SUB-tusk_anitab1, 0
+TRDUCKTURN1_SUB:
+	DD TRDUCKTURN1_IMG-tusk_anitab1
+	DW 50, 67, 14, -53
+TRDUCKTURN2:
+	DD TRDUCKTURN2_SUB-tusk_anitab1, 0
+TRDUCKTURN2_SUB:
+	DD TRDUCKTURN2_IMG-tusk_anitab1
+	DW 46, 68, 15, -52
+TRDUCKBLOCK1:
+	DD TRDUCKBLOCK1_SUB-tusk_anitab1, 0
+TRDUCKBLOCK1_SUB:
+	DD TRDUCKBLOCK1_IMG-tusk_anitab1
+	DW 59, 73, 15, -47
+TRDUCKBLOCK2:
+	DD TRDUCKBLOCK2_SUB-tusk_anitab1, 0
+TRDUCKBLOCK2_SUB:
+	DD TRDUCKBLOCK2_IMG-tusk_anitab1
+	DW 50, 82, 15, -40
+TRDUCKBLOCK3:
+	DD TRDUCKBLOCK3_SUB-tusk_anitab1, 0
+TRDUCKBLOCK3_SUB:
+	DD TRDUCKBLOCK3_IMG-tusk_anitab1
+	DW 47, 82, 15, -40
+TRDUCKHIT2:
+	DD TRDUCKHIT2_SUB-tusk_anitab1, 0
+TRDUCKHIT2_SUB:
+	DD TRDUCKHIT2_IMG-tusk_anitab1
+	DW 51, 77, 20, -43
+TRDUCKHIT3:
+	DD TRDUCKHIT3_SUB-tusk_anitab1, 0
+TRDUCKHIT3_SUB:
+	DD TRDUCKHIT3_IMG-tusk_anitab1
+	DW 51, 76, 21, -44
+TRDUCKHIT1:
+	DD TRDUCKHIT1_SUB-tusk_anitab1, 0
+TRDUCKHIT1_SUB:
+	DD TRDUCKHIT1_IMG-tusk_anitab1
+	DW 51, 72, 18, -47
+TRDUCKPUNCH1:
+	DD TRDUCKPUNCH1_SUB-tusk_anitab1, 0
+TRDUCKPUNCH1_SUB:
+	DD TRDUCKPUNCH1_IMG-tusk_anitab1
+	DW 56, 66, 17, -54
+TRDUCKPUNCH2:
+	DD TRDUCKPUNCH2_SUB-tusk_anitab1, 0
+TRDUCKPUNCH2_SUB:
+	DD TRDUCKPUNCH2_IMG-tusk_anitab1
+	DW 62, 70, 17, -50
+TRDUCKPUNCH3:
+	DD TRDUCKPUNCH3_SUB-tusk_anitab1, 0
+TRDUCKPUNCH3_SUB:
+	DD TRDUCKPUNCH3_IMG-tusk_anitab1
+	DW 79, 73, 17, -50
+TRDUCKHIKICK1:
+	DD TRDUCKHIKICK1_SUB-tusk_anitab1, 0
+TRDUCKHIKICK1_SUB:
+	DD TRDUCKHIKICK1_IMG-tusk_anitab1
+	DW 58, 53, 16, -72
+TRDUCKHIKICK2:
+	DD TRDUCKHIKICK2_SUB-tusk_anitab1, 0
+TRDUCKHIKICK2_SUB:
+	DD TRDUCKHIKICK2_IMG-tusk_anitab1
+	DW 60, 62, 15, -63
+TRDUCKHIKICK3:
+	DD TRDUCKHIKICK3_SUB-tusk_anitab1, 0
+TRDUCKHIKICK3_SUB:
+	DD TRDUCKHIKICK3_IMG-tusk_anitab1
+	DW 70, 63, 15, -61
+TRDUCKHIKICK4:
+	DD TRDUCKHIKICK4_SUB-tusk_anitab1, 0
+TRDUCKHIKICK4_SUB:
+	DD TRDUCKHIKICK4_IMG-tusk_anitab1
+	DW 78, 64, 15, -59
+TRDUCKLOKICK1:
+	DD TRDUCKLOKICK1_SUB-tusk_anitab1, 0
+TRDUCKLOKICK1_SUB:
+	DD TRDUCKLOKICK1_IMG-tusk_anitab1
+	DW 46, 62, 17, -64
+TRDUCKLOKICK2:
+	DD TRDUCKLOKICK2_SUB-tusk_anitab1, 0
+TRDUCKLOKICK2_SUB:
+	DD TRDUCKLOKICK2_IMG-tusk_anitab1
+	DW 63, 61, 17, -64
+TRDUCKLOKICK3:
+	DD TRDUCKLOKICK3_SUB-tusk_anitab1, 0
+TRDUCKLOKICK3_SUB:
+	DD TRDUCKLOKICK3_IMG-tusk_anitab1
+	DW 86, 60, 18, -65
+TRUPPERCUT2:
+	DD TRUPPERCUT2_SUB-tusk_anitab1, 0
+TRUPPERCUT2_SUB:
+	DD TRUPPERCUT2_IMG-tusk_anitab1
+	DW 46, 79, 16, -43
+TRUPPERCUT3:
+	DD TRUPPERCUT3_SUB-tusk_anitab1, 0
+TRUPPERCUT3_SUB:
+	DD TRUPPERCUT3_IMG-tusk_anitab1
+	DW 59, 85, 15, -36
+TRUPPERCUT4:
+	DD TRUPPERCUT4_SUB-tusk_anitab1, 0
+TRUPPERCUT4_SUB:
+	DD TRUPPERCUT4_IMG-tusk_anitab1
+	DW 73, 92, 17, -29
+TRUPPERCUT5:
+	DD TRUPPERCUT5_SUB-tusk_anitab1, 0
+TRUPPERCUT5_SUB:
+	DD TRUPPERCUT5_IMG-tusk_anitab1
+	DW 70, 105, 22, -16
+TRUPPERCUT7:
+	DD TRUPPERCUT7_SUB-tusk_anitab1, 0
+TRUPPERCUT7_SUB:
+	DD TRUPPERCUT7_IMG-tusk_anitab1
+	DW 51, 135, 20, 12
+TRHIPUNCH2:
+	DD TRHIPUNCH2_SUB-tusk_anitab1, 0
+TRHIPUNCH2_SUB:
+	DD TRHIPUNCH2_IMG-tusk_anitab1
+	DW 59, 115, 14, -6
+TRHIPUNCH1:
+	DD TRHIPUNCH1_SUB-tusk_anitab1, 0
+TRHIPUNCH1_SUB:
+	DD TRHIPUNCH1_IMG-tusk_anitab1
+	DW 50, 113, 13, -8
+TRUPPERCUT6:
+	DD TRUPPERCUT6_SUB-tusk_anitab1, 0
+TRUPPERCUT6_SUB:
+	DD TRUPPERCUT6_IMG-tusk_anitab1
+	DW 56, 124, 22, 2
+TRHIBLOCK1:
+	DD TRHIBLOCK1_SUB-tusk_anitab1, 0
+TRHIBLOCK1_SUB:
+	DD TRHIBLOCK1_IMG-tusk_anitab1
+	DW 48, 116, 13, -6
+TRHIBLOCK2:
+	DD TRHIBLOCK2_SUB-tusk_anitab1, 0
+TRHIBLOCK2_SUB:
+	DD TRHIBLOCK2_IMG-tusk_anitab1
+	DW 42, 116, 13, -6
+TRHIBLOCK3:
+	DD TRHIBLOCK3_SUB-tusk_anitab1, 0
+TRHIBLOCK3_SUB:
+	DD TRHIBLOCK3_IMG-tusk_anitab1
+	DW 42, 116, 14, -6
+TRVICTORY1:
+	DD TRVICTORY1_SUB-tusk_anitab1, 0
+TRVICTORY1_SUB:
+	DD TRVICTORY1_IMG-tusk_anitab1
+	DW 63, 114, 33, -8
+TRVICTORY3:
+	DD TRVICTORY3_SUB-tusk_anitab1, 0
+TRVICTORY3_SUB:
+	DD TRVICTORY3_IMG-tusk_anitab1
+	DW 158, 115, 82, -7
+TRVICTORY4:
+	DD TRVICTORY4_SUB-tusk_anitab1, 0
+TRVICTORY4_SUB:
+	DD TRVICTORY4_IMG-tusk_anitab1
+	DW 142, 134, 60, 12
+TRVICTORY6:
+	DD TRVICTORY6_SUB-tusk_anitab1, 0
+TRVICTORY6_SUB:
+	DD TRVICTORY6_IMG-tusk_anitab1
+	DW 66, 155, 25, 33
+TRVICTORY7:
+	DD TRVICTORY7_SUB-tusk_anitab1, 0
+TRVICTORY7_SUB:
+	DD TRVICTORY7_IMG-tusk_anitab1
+	DW 62, 136, 24, 14
+TRVICTORY9:
+	DD TRVICTORY9_SUB-tusk_anitab1, 0
+TRVICTORY9_SUB:
+	DD TRVICTORY9_IMG-tusk_anitab1
+	DW 53, 113, 21, -9
+TRVICTORY10:
+	DD TRVICTORY10_SUB-tusk_anitab1, 0
+TRVICTORY10_SUB:
+	DD TRVICTORY10_IMG-tusk_anitab1
+	DW 55, 113, 21, -9
+TRVICTORY11:
+	DD TRVICTORY11_SUB-tusk_anitab1, 0
+TRVICTORY11_SUB:
+	DD TRVICTORY11_IMG-tusk_anitab1
+	DW 66, 114, 26, -8
+TRHIPUNCH3:
+	DD TRHIPUNCH3_SUB-tusk_anitab1, 0
+TRHIPUNCH3_SUB:
+	DD TRHIPUNCH3_IMG-tusk_anitab1
+	DW 84, 111, 18, -10
+TRHIPUNCH4:
+	DD TRHIPUNCH4_SUB-tusk_anitab1, 0
+TRHIPUNCH4_SUB:
+	DD TRHIPUNCH4_IMG-tusk_anitab1
+	DW 64, 114, 15, -7
+TRHIPUNCH5:
+	DD TRHIPUNCH5_SUB-tusk_anitab1, 0
+TRHIPUNCH5_SUB:
+	DD TRHIPUNCH5_IMG-tusk_anitab1
+	DW 70, 114, 13, -7
+TRHIPUNCH6:
+	DD TRHIPUNCH6_SUB-tusk_anitab1, 0
+TRHIPUNCH6_SUB:
+	DD TRHIPUNCH6_IMG-tusk_anitab1
+	DW 82, 112, 13, -9
+TRHIPUNCH7:
+	DD TRHIPUNCH7_SUB-tusk_anitab1, 0
+TRHIPUNCH7_SUB:
+	DD TRHIPUNCH7_IMG-tusk_anitab1
+	DW 62, 116, 13, -5
+TRLOPUNCH5:
+	DD TRLOPUNCH5_SUB-tusk_anitab1, 0
+TRLOPUNCH5_SUB:
+	DD TRLOPUNCH5_IMG-tusk_anitab1
+	DW 70, 111, 17, -10
+TRLOPUNCH2:
+	DD TRLOPUNCH2_SUB-tusk_anitab1, 0
+TRLOPUNCH2_SUB:
+	DD TRLOPUNCH2_IMG-tusk_anitab1
+	DW 64, 111, 17, -10
+TRLOPUNCH1:
+	DD TRLOPUNCH1_SUB-tusk_anitab1, 0
+TRLOPUNCH1_SUB:
+	DD TRLOPUNCH1_IMG-tusk_anitab1
+	DW 55, 113, 14, -8
+TRLOPUNCH3:
+	DD TRLOPUNCH3_SUB-tusk_anitab1, 0
+TRLOPUNCH3_SUB:
+	DD TRLOPUNCH3_IMG-tusk_anitab1
+	DW 93, 108, 20, -13
+TRLOPUNCH4:
+	DD TRLOPUNCH4_SUB-tusk_anitab1, 0
+TRLOPUNCH4_SUB:
+	DD TRLOPUNCH4_IMG-tusk_anitab1
+	DW 83, 109, 19, -12
+TRLOPUNCH6:
+	DD TRLOPUNCH6_SUB-tusk_anitab1, 0
+TRLOPUNCH6_SUB:
+	DD TRLOPUNCH6_IMG-tusk_anitab1
+	DW 90, 108, 14, -13
+TRSWIPE1:
+	DD TRSWIPE1_SUB-tusk_anitab1, 0
+TRSWIPE1_SUB:
+	DD TRSWIPE1_IMG-tusk_anitab1
+	DW 44, 111, 14, -9
+TRSWIPE2:
+	DD TRSWIPE2_SUB-tusk_anitab1, 0
+TRSWIPE2_SUB:
+	DD TRSWIPE2_IMG-tusk_anitab1
+	DW 50, 110, 20, -12
+TRSWIPE3:
+	DD TRSWIPE3_SUB-tusk_anitab1, 0
+TRSWIPE3_SUB:
+	DD TRSWIPE3_IMG-tusk_anitab1
+	DW 74, 112, 17, -9
+TRSWIPE4:
+	DD TRSWIPE4_SUB-tusk_anitab1, 0
+TRSWIPE4_SUB:
+	DD TRSWIPE4_IMG-tusk_anitab1
+	DW 104, 112, 17, -9
+TRSWIPE5:
+	DD TRSWIPE5_SUB-tusk_anitab1, 0
+TRSWIPE5_SUB:
+	DD TRSWIPE5_IMG-tusk_anitab1
+	DW 60, 112, 30, -9
+TRSWIPE6:
+	DD TRSWIPE6_SUB-tusk_anitab1, 0
+TRSWIPE6_SUB:
+	DD TRSWIPE6_IMG-tusk_anitab1
+	DW 86, 111, 51, -10
+TRSWIPE7:
+	DD TRSWIPE7_SUB-tusk_anitab1, 0
+TRSWIPE7_SUB:
+	DD TRSWIPE7_IMG-tusk_anitab1
+	DW 126, 111, 38, -11
+TRSWIPE8:
+	DD TRSWIPE8_SUB-tusk_anitab1, 0
+TRSWIPE8_SUB:
+	DD TRSWIPE8_IMG-tusk_anitab1
+	DW 77, 111, 35, -11
+TRSWIPE9:
+	DD TRSWIPE9_SUB-tusk_anitab1, 0
+TRSWIPE9_SUB:
+	DD TRSWIPE9_IMG-tusk_anitab1
+	DW 63, 111, 34, -11
+TRSWIPE10:
+	DD TRSWIPE10_SUB-tusk_anitab1, 0
+TRSWIPE10_SUB:
+	DD TRSWIPE10_IMG-tusk_anitab1
+	DW 52, 110, 24, -13
+TRSWIPE11:
+	DD TRSWIPE11_SUB-tusk_anitab1, 0
+TRSWIPE11_SUB:
+	DD TRSWIPE11_IMG-tusk_anitab1
+	DW 57, 109, 21, -13
+TRSWIPE12:
+	DD TRSWIPE12_SUB-tusk_anitab1, 0
+TRSWIPE12_SUB:
+	DD TRSWIPE12_IMG-tusk_anitab1
+	DW 92, 124, 23, 2
+TRSWIPE13:
+	DD TRSWIPE13_SUB-tusk_anitab1, 0
+TRSWIPE13_SUB:
+	DD TRSWIPE13_IMG-tusk_anitab1
+	DW 68, 156, 38, 34
+TRSWIPE14:
+	DD TRSWIPE14_SUB-tusk_anitab1, 0
+TRSWIPE14_SUB:
+	DD TRSWIPE14_IMG-tusk_anitab1
+	DW 78, 104, 46, -18
+TRSWIPE15:
+	DD TRSWIPE15_SUB-tusk_anitab1, 0
+TRSWIPE15_SUB:
+	DD TRSWIPE15_IMG-tusk_anitab1
+	DW 65, 106, 34, -16
+TRSWIPE16:
+	DD TRSWIPE16_SUB-tusk_anitab1, 0
+TRSWIPE16_SUB:
+	DD TRSWIPE16_IMG-tusk_anitab1
+	DW 125, 113, 28, -10
+TRSWIPE17:
+	DD TRSWIPE17_SUB-tusk_anitab1, 0
+TRSWIPE17_SUB:
+	DD TRSWIPE17_IMG-tusk_anitab1
+	DW 99, 160, 28, 36
+TRSWIPE18:
+	DD TRSWIPE18_SUB-tusk_anitab1, 0
+TRSWIPE18_SUB:
+	DD TRSWIPE18_IMG-tusk_anitab1
+	DW 67, 162, 29, 37
+TRSWIPE19:
+	DD TRSWIPE19_SUB-tusk_anitab1, 0
+TRSWIPE19_SUB:
+	DD TRSWIPE19_IMG-tusk_anitab1
+	DW 67, 114, 23, -8
+TRSWIPE20:
+	DD TRSWIPE20_SUB-tusk_anitab1, 0
+TRSWIPE20_SUB:
+	DD TRSWIPE20_IMG-tusk_anitab1
+	DW 59, 114, 20, -8
+TRLOKICK1:
+	DD TRLOKICK1_SUB-tusk_anitab1, 0
+TRLOKICK1_SUB:
+	DD TRLOKICK1_IMG-tusk_anitab1
+	DW 42, 113, 13, -7
+TRLOKICK2:
+	DD TRLOKICK2_SUB-tusk_anitab1, 0
+TRLOKICK2_SUB:
+	DD TRLOKICK2_IMG-tusk_anitab1
+	DW 40, 114, 10, -7
+TRLOKICK3:
+	DD TRLOKICK3_SUB-tusk_anitab1, 0
+TRLOKICK3_SUB:
+	DD TRLOKICK3_IMG-tusk_anitab1
+	DW 42, 114, 9, -7
+TRHIKICK1:
+	DD TRHIKICK1_SUB-tusk_anitab1, 0
+TRHIKICK1_SUB:
+	DD TRHIKICK1_IMG-tusk_anitab1
+	DW 68, 108, 16, -13
+TRHIKICK2:
+	DD TRHIKICK2_SUB-tusk_anitab1, 0
+TRHIKICK2_SUB:
+	DD TRHIKICK2_IMG-tusk_anitab1
+	DW 82, 105, 18, -16
+TRHIKICK3:
+	DD TRHIKICK3_SUB-tusk_anitab1, 0
+TRHIKICK3_SUB:
+	DD TRHIKICK3_IMG-tusk_anitab1
+	DW 94, 105, 22, -16
+TRLOKICK4:
+	DD TRLOKICK4_SUB-tusk_anitab1, 0
+TRLOKICK4_SUB:
+	DD TRLOKICK4_IMG-tusk_anitab1
+	DW 44, 114, 11, -7
+TRLOKICK5:
+	DD TRLOKICK5_SUB-tusk_anitab1, 0
+TRLOKICK5_SUB:
+	DD TRLOKICK5_IMG-tusk_anitab1
+	DW 66, 113, 15, -8
+TRLOKICK6:
+	DD TRLOKICK6_SUB-tusk_anitab1, 0
+TRLOKICK6_SUB:
+	DD TRLOKICK6_IMG-tusk_anitab1
+	DW 98, 110, 18, -11
+TRKNEEKICK1:
+	DD TRKNEEKICK1_SUB-tusk_anitab1, 0
+TRKNEEKICK1_SUB:
+	DD TRKNEEKICK1_IMG-tusk_anitab1
+	DW 46, 113, 16, -9
+TRKNEEKICK2:
+	DD TRKNEEKICK2_SUB-tusk_anitab1, 0
+TRKNEEKICK2_SUB:
+	DD TRKNEEKICK2_IMG-tusk_anitab1
+	DW 42, 114, 0, -7
+TRKNEEKICK3:
+	DD TRKNEEKICK3_SUB-tusk_anitab1, 0
+TRKNEEKICK3_SUB:
+	DD TRKNEEKICK3_IMG-tusk_anitab1
+	DW 51, 113, 2, -8
+TRKNEEKICK4:
+	DD TRKNEEKICK4_SUB-tusk_anitab1, 0
+TRKNEEKICK4_SUB:
+	DD TRKNEEKICK4_IMG-tusk_anitab1
+	DW 42, 116, -6, -4
+TRKNEEKICK5:
+	DD TRKNEEKICK5_SUB-tusk_anitab1, 0
+TRKNEEKICK5_SUB:
+	DD TRKNEEKICK5_IMG-tusk_anitab1
+	DW 52, 119, 10, -3
+TRKNEEKICK6:
+	DD TRKNEEKICK6_SUB-tusk_anitab1, 0
+TRKNEEKICK6_SUB:
+	DD TRKNEEKICK6_IMG-tusk_anitab1
+	DW 70, 115, 9, -8
+TRKNEEKICK7:
+	DD TRKNEEKICK7_SUB-tusk_anitab1, 0
+TRKNEEKICK7_SUB:
+	DD TRKNEEKICK7_IMG-tusk_anitab1
+	DW 86, 111, 10, -12
+TRSWEEPKICK1:
+	DD TRSWEEPKICK1_SUB-tusk_anitab1, 0
+TRSWEEPKICK1_SUB:
+	DD TRSWEEPKICK1_IMG-tusk_anitab1
+	DW 68, 88, 16, -33
+TRSWEEPKICK2:
+	DD TRSWEEPKICK2_SUB-tusk_anitab1, 0
+TRSWEEPKICK2_SUB:
+	DD TRSWEEPKICK2_IMG-tusk_anitab1
+	DW 50, 65, 17, -56
+TRSWEEPKICK3:
+	DD TRSWEEPKICK3_SUB-tusk_anitab1, 0
+TRSWEEPKICK3_SUB:
+	DD TRSWEEPKICK3_IMG-tusk_anitab1
+	DW 54, 60, 18, -62
+TRSWEEPKICK4:
+	DD TRSWEEPKICK4_SUB-tusk_anitab1, 0
+TRSWEEPKICK4_SUB:
+	DD TRSWEEPKICK4_IMG-tusk_anitab1
+	DW 62, 54, 18, -69
+TRSWEEPKICK5:
+	DD TRSWEEPKICK5_SUB-tusk_anitab1, 0
+TRSWEEPKICK5_SUB:
+	DD TRSWEEPKICK5_IMG-tusk_anitab1
+	DW 110, 49, 27, -73
+TRSWEEPKICK6:
+	DD TRSWEEPKICK6_SUB-tusk_anitab1, 0
+TRSWEEPKICK6_SUB:
+	DD TRSWEEPKICK6_IMG-tusk_anitab1
+	DW 85, 55, 25, -70
+TRSWEEPKICK7:
+	DD TRSWEEPKICK7_SUB-tusk_anitab1, 0
+TRSWEEPKICK7_SUB:
+	DD TRSWEEPKICK7_IMG-tusk_anitab1
+	DW 50, 71, 19, -61
+TRSWEEPKICK8:
+	DD TRSWEEPKICK8_SUB-tusk_anitab1, 0
+TRSWEEPKICK8_SUB:
+	DD TRSWEEPKICK8_IMG-tusk_anitab1
+	DW 61, 86, 25, -34
+TRROUNDKICK1:
+	DD TRROUNDKICK1_SUB-tusk_anitab1, 0
+TRROUNDKICK1_SUB:
+	DD TRROUNDKICK1_IMG-tusk_anitab1
+	DW 62, 111, 19, -12
+TRROUNDKICK2:
+	DD TRROUNDKICK2_SUB-tusk_anitab1, 0
+TRROUNDKICK2_SUB:
+	DD TRROUNDKICK2_IMG-tusk_anitab1
+	DW 61, 101, 7, -19
+TRROUNDKICK3:
+	DD TRROUNDKICK3_SUB-tusk_anitab1, 0
+TRROUNDKICK3_SUB:
+	DD TRROUNDKICK3_IMG-tusk_anitab1
+	DW 62, 97, 17, -24
+TRROUNDKICK4:
+	DD TRROUNDKICK4_SUB-tusk_anitab1, 0
+TRROUNDKICK4_SUB:
+	DD TRROUNDKICK4_IMG-tusk_anitab1
+	DW 86, 91, 14, -30
+TRROUNDKICK5:
+	DD TRROUNDKICK5_SUB-tusk_anitab1, 0
+TRROUNDKICK5_SUB:
+	DD TRROUNDKICK5_IMG-tusk_anitab1
+	DW 85, 100, 6, -20
+TRROUNDKICK6:
+	DD TRROUNDKICK6_SUB-tusk_anitab1, 0
+TRROUNDKICK6_SUB:
+	DD TRROUNDKICK6_IMG-tusk_anitab1
+	DW 45, 90, -7, -30
+TRROUNDKICK7:
+	DD TRROUNDKICK7_SUB-tusk_anitab1, 0
+TRROUNDKICK7_SUB:
+	DD TRROUNDKICK7_IMG-tusk_anitab1
+	DW 42, 99, -7, -22
+TRROUNDKICK8:
+	DD TRROUNDKICK8_SUB-tusk_anitab1, 0
+TRROUNDKICK8_SUB:
+	DD TRROUNDKICK8_IMG-tusk_anitab1
+	DW 63, 106, 18, -15
+TRJUMP1:
+	DD TRJUMP1_SUB-tusk_anitab1, 0
+TRJUMP1_SUB:
+	DD TRJUMP1_IMG-tusk_anitab1
+	DW 43, 94, 15, -28
+TRJUMP2:
+	DD TRJUMP2_SUB-tusk_anitab1, 0
+TRJUMP2_SUB:
+	DD TRJUMP2_IMG-tusk_anitab1
+	DW 50, 124, 18, 0
+TRJUMP3:
+	DD TRJUMP3_SUB-tusk_anitab1, 0
+TRJUMP3_SUB:
+	DD TRJUMP3_IMG-tusk_anitab1
+	DW 46, 107, 17, 2
+TRJUMPKICK1:
+	DD TRJUMPKICK1_SUB-tusk_anitab1, 0
+TRJUMPKICK1_SUB:
+	DD TRJUMPKICK1_IMG-tusk_anitab1
+	DW 50, 104, 16, 4
+TRJUMPKICK2:
+	DD TRJUMPKICK2_SUB-tusk_anitab1, 0
+TRJUMPKICK2_SUB:
+	DD TRJUMPKICK2_IMG-tusk_anitab1
+	DW 64, 94, 23, 4
+TRJUMPKICK3:
+	DD TRJUMPKICK3_SUB-tusk_anitab1, 0
+TRJUMPKICK3_SUB:
+	DD TRJUMPKICK3_IMG-tusk_anitab1
+	DW 90, 86, 26, 8
+TRFLIPUNCH1:
+	DD TRFLIPUNCH1_SUB-tusk_anitab1, 0
+TRFLIPUNCH1_SUB:
+	DD TRFLIPUNCH1_IMG-tusk_anitab1
+	DW 38, 92, 6, 3
+TRFLIPUNCH2:
+	DD TRFLIPUNCH2_SUB-tusk_anitab1, 0
+TRFLIPUNCH2_SUB:
+	DD TRFLIPUNCH2_IMG-tusk_anitab1
+	DW 82, 88, 26, 0
+TRFLIPUNCH3:
+	DD TRFLIPUNCH3_SUB-tusk_anitab1, 0
+TRFLIPUNCH3_SUB:
+	DD TRFLIPUNCH3_IMG-tusk_anitab1
+	DW 122, 76, 52, -10
+TRFLIPKICK1:
+	DD TRFLIPKICK1_SUB-tusk_anitab1, 0
+TRFLIPKICK1_SUB:
+	DD TRFLIPKICK1_IMG-tusk_anitab1
+	DW 60, 73, 13, 0
+TRFLIPKICK2:
+	DD TRFLIPKICK2_SUB-tusk_anitab1, 0
+TRFLIPKICK2_SUB:
+	DD TRFLIPKICK2_IMG-tusk_anitab1
+	DW 75, 73, 15, -1
+TRFLIPKICK3:
+	DD TRFLIPKICK3_SUB-tusk_anitab1, 0
+TRFLIPKICK3_SUB:
+	DD TRFLIPKICK3_IMG-tusk_anitab1
+	DW 86, 71, 14, -2
+TRJUMPFLIP1:
+	DD TRJUMPFLIP1_SUB-tusk_anitab1, 0
+TRJUMPFLIP1_SUB:
+	DD TRJUMPFLIP1_IMG-tusk_anitab1
+	DW 46, 129, 9, 6
+TRJUMPFLIP2:
+	DD TRJUMPFLIP2_SUB-tusk_anitab1, 0
+TRJUMPFLIP2_SUB:
+	DD TRJUMPFLIP2_IMG-tusk_anitab1
+	DW 39, 76, 6, 0
+TRJUMPFLIP3:
+	DD TRJUMPFLIP3_SUB-tusk_anitab1, 0
+TRJUMPFLIP3_SUB:
+	DD TRJUMPFLIP3_IMG-tusk_anitab1
+	DW 48, 66, 9, -11
+TRJUMPFLIP4:
+	DD TRJUMPFLIP4_SUB-tusk_anitab1, 0
+TRJUMPFLIP4_SUB:
+	DD TRJUMPFLIP4_IMG-tusk_anitab1
+	DW 65, 41, 26, -13
+TRJUMPFLIP5:
+	DD TRJUMPFLIP5_SUB-tusk_anitab1, 0
+TRJUMPFLIP5_SUB:
+	DD TRJUMPFLIP5_IMG-tusk_anitab1
+	DW 62, 58, 30, -3
+TRJUMPFLIP6:
+	DD TRJUMPFLIP6_SUB-tusk_anitab1, 0
+TRJUMPFLIP6_SUB:
+	DD TRJUMPFLIP6_IMG-tusk_anitab1
+	DW 39, 76, 11, 14
+TRJUMPFLIP7:
+	DD TRJUMPFLIP7_SUB-tusk_anitab1, 0
+TRJUMPFLIP7_SUB:
+	DD TRJUMPFLIP7_IMG-tusk_anitab1
+	DW 64, 43, 18, -5
+TRJUMPFLIP8:
+	DD TRJUMPFLIP8_SUB-tusk_anitab1, 0
+TRJUMPFLIP8_SUB:
+	DD TRJUMPFLIP8_IMG-tusk_anitab1
+	DW 60, 57, 6, 1
+TRHIHIT2:
+	DD TRHIHIT2_SUB-tusk_anitab1, 0
+TRHIHIT2_SUB:
+	DD TRHIHIT2_IMG-tusk_anitab1
+	DW 54, 111, 25, -10
+TRHIHIT3:
+	DD TRHIHIT3_SUB-tusk_anitab1, 0
+TRHIHIT3_SUB:
+	DD TRHIHIT3_IMG-tusk_anitab1
+	DW 56, 108, 26, -13
+TRHIHIT1:
+	DD TRHIHIT1_SUB-tusk_anitab1, 0
+TRHIHIT1_SUB:
+	DD TRHIHIT1_IMG-tusk_anitab1
+	DW 52, 113, 22, -8
+TRLOHIT2:
+	DD TRLOHIT2_SUB-tusk_anitab1, 0
+TRLOHIT2_SUB:
+	DD TRLOHIT2_IMG-tusk_anitab1
+	DW 53, 109, 22, -12
+TRLOHIT3:
+	DD TRLOHIT3_SUB-tusk_anitab1, 0
+TRLOHIT3_SUB:
+	DD TRLOHIT3_IMG-tusk_anitab1
+	DW 66, 109, 35, -13
+TRLOHIT1:
+	DD TRLOHIT1_SUB-tusk_anitab1, 0
+TRLOHIT1_SUB:
+	DD TRLOHIT1_IMG-tusk_anitab1
+	DW 53, 111, 22, -9
+TRKNOCKDOWN1:
+	DD TRKNOCKDOWN1_SUB-tusk_anitab1, 0
+TRKNOCKDOWN1_SUB:
+	DD TRKNOCKDOWN1_IMG-tusk_anitab1
+	DW 62, 116, 22, -7
+TRKNOCKDOWN2:
+	DD TRKNOCKDOWN2_SUB-tusk_anitab1, 0
+TRKNOCKDOWN2_SUB:
+	DD TRKNOCKDOWN2_IMG-tusk_anitab1
+	DW 89, 94, 32, -15
+TRKNOCKDOWN3:
+	DD TRKNOCKDOWN3_SUB-tusk_anitab1, 0
+TRKNOCKDOWN3_SUB:
+	DD TRKNOCKDOWN3_IMG-tusk_anitab1
+	DW 90, 72, 34, -25
+TRKNOCKDOWN4:
+	DD TRKNOCKDOWN4_SUB-tusk_anitab1, 0
+TRKNOCKDOWN4_SUB:
+	DD TRKNOCKDOWN4_IMG-tusk_anitab1
+	DW 86, 53, 36, -36
+TRKNOCKDOWN5:
+	DD TRKNOCKDOWN5_SUB-tusk_anitab1, 0
+TRKNOCKDOWN5_SUB:
+	DD TRKNOCKDOWN5_IMG-tusk_anitab1
+	DW 83, 56, 36, -51
+TRKNOCKDOWN6:
+	DD TRKNOCKDOWN6_SUB-tusk_anitab1, 0
+TRKNOCKDOWN6_SUB:
+	DD TRKNOCKDOWN6_IMG-tusk_anitab1
+	DW 76, 77, 33, -48
+TRKNOCKDOWN7:
+	DD TRKNOCKDOWN7_SUB-tusk_anitab1, 0
+TRKNOCKDOWN7_SUB:
+	DD TRKNOCKDOWN7_IMG-tusk_anitab1
+	DW 93, 50, 31, -73
+TRGETUP1:
+	DD TRGETUP1_SUB-tusk_anitab1, 0
+TRGETUP1_SUB:
+	DD TRGETUP1_IMG-tusk_anitab1
+	DW 108, 28, 33, -96
+TRSWEEPFALL1:
+	DD TRSWEEPFALL1_SUB-tusk_anitab1, 0
+TRSWEEPFALL1_SUB:
+	DD TRSWEEPFALL1_IMG-tusk_anitab1
+	DW 50, 110, 16, -12
+TRSWEEPFALL2:
+	DD TRSWEEPFALL2_SUB-tusk_anitab1, 0
+TRSWEEPFALL2_SUB:
+	DD TRSWEEPFALL2_IMG-tusk_anitab1
+	DW 83, 71, 35, -23
+TRSWEEPFALL3:
+	DD TRSWEEPFALL3_SUB-tusk_anitab1, 0
+TRSWEEPFALL3_SUB:
+	DD TRSWEEPFALL3_IMG-tusk_anitab1
+	DW 80, 64, 31, -38
+TRSWEEPFALL4:
+	DD TRSWEEPFALL4_SUB-tusk_anitab1, 0
+TRSWEEPFALL4_SUB:
+	DD TRSWEEPFALL4_IMG-tusk_anitab1
+	DW 66, 67, 25, -37
+TRSWEEPFALL5:
+	DD TRSWEEPFALL5_SUB-tusk_anitab1, 0
+TRSWEEPFALL5_SUB:
+	DD TRSWEEPFALL5_IMG-tusk_anitab1
+	DW 66, 60, 23, -50
+TRSWEEPFALL6:
+	DD TRSWEEPFALL6_SUB-tusk_anitab1, 0
+TRSWEEPFALL6_SUB:
+	DD TRSWEEPFALL6_IMG-tusk_anitab1
+	DW 86, 33, 39, -84
+TRSTUMBLE1:
+	DD TRSTUMBLE1_SUB-tusk_anitab1, 0
+TRSTUMBLE1_SUB:
+	DD TRSTUMBLE1_IMG-tusk_anitab1
+	DW 51, 111, 13, -7
+TRSTUMBLE2:
+	DD TRSTUMBLE2_SUB-tusk_anitab1, 0
+TRSTUMBLE2_SUB:
+	DD TRSTUMBLE2_IMG-tusk_anitab1
+	DW 60, 111, 19, -10
+TRSTUMBLE3:
+	DD TRSTUMBLE3_SUB-tusk_anitab1, 0
+TRSTUMBLE3_SUB:
+	DD TRSTUMBLE3_IMG-tusk_anitab1
+	DW 51, 110, 12, -12
+TRSTUMBLE5:
+	DD TRSTUMBLE5_SUB-tusk_anitab1, 0
+TRSTUMBLE5_SUB:
+	DD TRSTUMBLE5_IMG-tusk_anitab1
+	DW 55, 110, 9, -9
+TRSTUMBLE6:
+	DD TRSTUMBLE6_SUB-tusk_anitab1, 0
+TRSTUMBLE6_SUB:
+	DD TRSTUMBLE6_IMG-tusk_anitab1
+	DW 64, 117, 26, -5
+TRSTUMBLE7:
+	DD TRSTUMBLE7_SUB-tusk_anitab1, 0
+TRSTUMBLE7_SUB:
+	DD TRSTUMBLE7_IMG-tusk_anitab1
+	DW 46, 105, 14, -15
+TRGETUP2:
+	DD TRGETUP2_SUB-tusk_anitab1, 0
+TRGETUP2_SUB:
+	DD TRGETUP2_IMG-tusk_anitab1
+	DW 71, 75, 30, -49
+TRGETUP3:
+	DD TRGETUP3_SUB-tusk_anitab1, 0
+TRGETUP3_SUB:
+	DD TRGETUP3_IMG-tusk_anitab1
+	DW 70, 62, 38, -62
+TRGETUP4:
+	DD TRGETUP4_SUB-tusk_anitab1, 0
+TRGETUP4_SUB:
+	DD TRGETUP4_IMG-tusk_anitab1
+	DW 74, 71, 33, -52
+TRGETUP5:
+	DD TRGETUP5_SUB-tusk_anitab1, 0
+TRGETUP5_SUB:
+	DD TRGETUP5_IMG-tusk_anitab1
+	DW 90, 50, 43, -70
+TRGETUP6:
+	DD TRGETUP6_SUB-tusk_anitab1, 0
+TRGETUP6_SUB:
+	DD TRGETUP6_IMG-tusk_anitab1
+	DW 54, 74, 6, -45
+TRGETUP7:
+	DD TRGETUP7_SUB-tusk_anitab1, 0
+TRGETUP7_SUB:
+	DD TRGETUP7_IMG-tusk_anitab1
+	DW 48, 109, 6, -10
+TRSWEEPUP1:
+	DD TRSWEEPUP1_SUB-tusk_anitab1, 0
+TRSWEEPUP1_SUB:
+	DD TRSWEEPUP1_IMG-tusk_anitab1
+	DW 73, 44, 32, -83
+TRSWEEPUP2:
+	DD TRSWEEPUP2_SUB-tusk_anitab1, 0
+TRSWEEPUP2_SUB:
+	DD TRSWEEPUP2_IMG-tusk_anitab1
+	DW 48, 67, 14, -48
+TRSWEEPUP3:
+	DD TRSWEEPUP3_SUB-tusk_anitab1, 0
+TRSWEEPUP3_SUB:
+	DD TRSWEEPUP3_IMG-tusk_anitab1
+	DW 45, 53, 13, -68
+TRSWEEPUP4:
+	DD TRSWEEPUP4_SUB-tusk_anitab1, 0
+TRSWEEPUP4_SUB:
+	DD TRSWEEPUP4_IMG-tusk_anitab1
+	DW 49, 74, 18, -44
+TRSWEEPUP5:
+	DD TRSWEEPUP5_SUB-tusk_anitab1, 0
+TRSWEEPUP5_SUB:
+	DD TRSWEEPUP5_IMG-tusk_anitab1
+	DW 52, 49, 17, -66
+TRSWEEPUP6:
+	DD TRSWEEPUP6_SUB-tusk_anitab1, 0
+TRSWEEPUP6_SUB:
+	DD TRSWEEPUP6_IMG-tusk_anitab1
+	DW 46, 60, 14, -60
+TRSWEEPUP7:
+	DD TRSWEEPUP7_SUB-tusk_anitab1, 0
+TRSWEEPUP7_SUB:
+	DD TRSWEEPUP7_IMG-tusk_anitab1
+	DW 37, 88, 10, -34
+TRFLIP1:
+	DD TRFLIP1_SUB-tusk_anitab1, 0
+TRFLIP1_SUB:
+	DD TRFLIP1_IMG-tusk_anitab1
+	DW 46, 102, 10, -19
+TRFLIP2:
+	DD TRFLIP2_SUB-tusk_anitab1, 0
+TRFLIP2_SUB:
+	DD TRFLIP2_IMG-tusk_anitab1
+	DW 63, 102, 10, -19
+TRFLIP3:
+	DD TRFLIP3_SUB-tusk_anitab1, 0
+TRFLIP3_SUB:
+	DD TRFLIP3_IMG-tusk_anitab1
+	DW 89, 115, 8, -7
+TRFLIP4:
+	DD TRFLIP4_SUB-tusk_anitab1, 0
+TRFLIP4_SUB:
+	DD TRFLIP4_IMG-tusk_anitab1
+	DW 68, 145, 8, 22
+TRFLIP5:
+	DD TRFLIP5_SUB-tusk_anitab1, 0
+TRFLIP5_SUB:
+	DD TRFLIP5_IMG-tusk_anitab1
+	DW 46, 164, 20, 42
+TRFLIP6:
+	DD TRFLIP6_SUB-tusk_anitab1, 0
+TRFLIP6_SUB:
+	DD TRFLIP6_IMG-tusk_anitab1
+	DW 91, 125, 42, 3
+TRFLIP7:
+	DD TRFLIP7_SUB-tusk_anitab1, 0
+TRFLIP7_SUB:
+	DD TRFLIP7_IMG-tusk_anitab1
+	DW 79, 114, 42, -8
+TRFLIP8:
+	DD TRFLIP8_SUB-tusk_anitab1, 0
+TRFLIP8_SUB:
+	DD TRFLIP8_IMG-tusk_anitab1
+	DW 50, 110, 18, -12
+TRFLIP9:
+	DD TRFLIP9_SUB-tusk_anitab1, 0
+TRFLIP9_SUB:
+	DD TRFLIP9_IMG-tusk_anitab1
+	DW 62, 155, 14, 30
+TRFLIP10:
+	DD TRFLIP10_SUB-tusk_anitab1, 0
+TRFLIP10_SUB:
+	DD TRFLIP10_IMG-tusk_anitab1
+	DW 74, 150, 37, 28
+TRFLIP11:
+	DD TRFLIP11_SUB-tusk_anitab1, 0
+TRFLIP11_SUB:
+	DD TRFLIP11_IMG-tusk_anitab1
+	DW 110, 118, 70, -9
+TRFLIP12:
+	DD TRFLIP12_SUB-tusk_anitab1, 0
+TRFLIP12_SUB:
+	DD TRFLIP12_IMG-tusk_anitab1
+	DW 97, 102, 58, -25
+TREYESHOOT1:
+	DD TREYESHOOT1_SUB-tusk_anitab1, 0
+TREYESHOOT1_SUB:
+	DD TREYESHOOT1_IMG-tusk_anitab1
+	DW 67, 105, 14, -15
+TREYESHOOT2:
+	DD TREYESHOOT2_SUB-tusk_anitab1, 0
+TREYESHOOT2_SUB:
+	DD TREYESHOOT2_IMG-tusk_anitab1
+	DW 71, 93, 14, -28
+TREYESHOOT3:
+	DD TREYESHOOT3_SUB-tusk_anitab1, 0
+TREYESHOOT3_SUB:
+	DD TREYESHOOT3_IMG-tusk_anitab1
+	DW 71, 83, 14, -37
+HIGHL5:
+	DD HIGHL5_SUB-tusk_anitab1, 0
+HIGHL5_SUB:
+	DD HIGHL5_IMG-tusk_anitab1
+	DW 34, 35, -13, -36
+	DD   _HILITE_P
+TREYESHOOT5:
+	DD TREYESHOOT5_SUB-tusk_anitab1, 0
+TREYESHOOT5_SUB:
+	DD TREYESHOOT5_IMG-tusk_anitab1
+	DW 72, 88, 15, -32
+TRSTUNNED2:
+	DD TRSTUNNED2_SUB-tusk_anitab1, 0
+TRSTUNNED2_SUB:
+	DD TRSTUNNED2_IMG-tusk_anitab1
+	DW 53, 105, 23, -15
+TRSTUNNED4:
+	DD TRSTUNNED4_SUB-tusk_anitab1, 0
+TRSTUNNED4_SUB:
+	DD TRSTUNNED4_IMG-tusk_anitab1
+	DW 45, 107, 15, -13
+TRSTUNNED5:
+	DD TRSTUNNED5_SUB-tusk_anitab1, 0
+TRSTUNNED5_SUB:
+	DD TRSTUNNED5_IMG-tusk_anitab1
+	DW 48, 106, 15, -14
+TRSTUNNED7:
+	DD TRSTUNNED7_SUB-tusk_anitab1, 0
+TRSTUNNED7_SUB:
+	DD TRSTUNNED7_IMG-tusk_anitab1
+	DW 45, 105, 15, -15
+TRFLIPPED1:
+	DD TRFLIPPED1_SUB-tusk_anitab1, 0
+TRFLIPPED1_SUB:
+	DD TRFLIPPED1_IMG-tusk_anitab1
+	DW 52, 97, 19, -12
+TRFLIPPED2:
+	DD TRFLIPPED2_SUB-tusk_anitab1, 0
+TRFLIPPED2_SUB:
+	DD TRFLIPPED2_IMG-tusk_anitab1
+	DW 77, 75, 27, -13
+TRFLIPPED3:
+	DD TRFLIPPED3_SUB-tusk_anitab1, 0
+TRFLIPPED3_SUB:
+	DD TRFLIPPED3_IMG-tusk_anitab1
+	DW 78, 60, 38, -15
+TRFLIPPED4:
+	DD TRFLIPPED4_SUB-tusk_anitab1, 0
+TRFLIPPED4_SUB:
+	DD TRFLIPPED4_IMG-tusk_anitab1
+	DW 54, 87, 26, 3
+TRFLIPPED5:
+	DD TRFLIPPED5_SUB-tusk_anitab1, 0
+TRFLIPPED5_SUB:
+	DD TRFLIPPED5_IMG-tusk_anitab1
+	DW 61, 75, 35, -10
+TORP1:
+	DD TORP1_SUB-tusk_anitab1, 0
+TORP1_SUB:
+	DD TORP1_IMG-tusk_anitab1
+	DW 25, 15, -6, 7
+	DD   _MAGENTA_P
+TORP2:
+	DD TORP2_SUB-tusk_anitab1, 0
+TORP2_SUB:
+	DD TORP2_IMG-tusk_anitab1
+	DW 28, 24, -5, 11
+TORP4:
+	DD TORP4_SUB-tusk_anitab1, 0
+TORP4_SUB:
+	DD TORP4_IMG-tusk_anitab1
+	DW 42, 37, 0, 18
+TORP6:
+	DD TORP6_SUB-tusk_anitab1, 0
+TORP6_SUB:
+	DD TORP6_IMG-tusk_anitab1
+	DW 40, 39, -1, 20
+TORP8:
+	DD TORP8_SUB-tusk_anitab1, 0
+TORP8_SUB:
+	DD TORP8_IMG-tusk_anitab1
+	DW 39, 35, -1, 17
+TORP10:
+	DD TORP10_SUB-tusk_anitab1, 0
+TORP10_SUB:
+	DD TORP10_IMG-tusk_anitab1
+	DW 39, 37, -1, 18
+TORP12:
+	DD TORP12_SUB-tusk_anitab1, 0
+TORP12_SUB:
+	DD TORP12_IMG-tusk_anitab1
+	DW 40, 38, -1, 18
+TORP14:
+	DD TORP14_SUB-tusk_anitab1, 0
+TORP14_SUB:
+	DD TORP14_IMG-tusk_anitab1
+	DW 39, 36, -1, 17
+TRRUN2:
+	DD TRRUN2_SUB-tusk_anitab1, 0
+TRRUN2_SUB:
+	DD TRRUN2_IMG-tusk_anitab1
+	DW 69, 113, 35, -8
+TRRUN4:
+	DD TRRUN4_SUB-tusk_anitab1, 0
+TRRUN4_SUB:
+	DD TRRUN4_IMG-tusk_anitab1
+	DW 60, 108, 30, -13
+TRRUN6:
+	DD TRRUN6_SUB-tusk_anitab1, 0
+TRRUN6_SUB:
+	DD TRRUN6_IMG-tusk_anitab1
+	DW 57, 111, 14, -11
+TRRUN8:
+	DD TRRUN8_SUB-tusk_anitab1, 0
+TRRUN8_SUB:
+	DD TRRUN8_IMG-tusk_anitab1
+	DW 72, 114, 30, -8
+TRRUN10:
+	DD TRRUN10_SUB-tusk_anitab1, 0
+TRRUN10_SUB:
+	DD TRRUN10_IMG-tusk_anitab1
+	DW 55, 111, 24, -11
+TRRUN12:
+	DD TRRUN12_SUB-tusk_anitab1, 0
+TRRUN12_SUB:
+	DD TRRUN12_IMG-tusk_anitab1
+	DW 51, 114, 14, -8
+TRTHUD1:
+	DD TRTHUD1_SUB-tusk_anitab1, 0
+TRTHUD1_SUB:
+	DD TRTHUD1_IMG-tusk_anitab1
+	DW 29, 120, 2, -2
+TRTHUD3:
+	DD TRTHUD3_SUB-tusk_anitab1, 0
+TRTHUD3_SUB:
+	DD TRTHUD3_IMG-tusk_anitab1
+	DW 33, 119, 12, -3
+TRTHUD5:
+	DD TRTHUD5_SUB-tusk_anitab1, 0
+TRTHUD5_SUB:
+	DD TRTHUD5_IMG-tusk_anitab1
+	DW 64, 105, 42, -17
+TRTHUD6:
+	DD TRTHUD6_SUB-tusk_anitab1, 0
+TRTHUD6_SUB:
+	DD TRTHUD6_IMG-tusk_anitab1
+	DW 90, 79, 69, -44
+TRTHUD7:
+	DD TRTHUD7_SUB-tusk_anitab1, 0
+TRTHUD7_SUB:
+	DD TRTHUD7_IMG-tusk_anitab1
+	DW 100, 45, 77, -79
+TRSCARED3:
+	DD TRSCARED3_SUB-tusk_anitab1, 0
+TRSCARED3_SUB:
+	DD TRSCARED3_IMG-tusk_anitab1
+	DW 34, 119, 18, -4
+TRAIRPROJ1:
+	DD TRAIRPROJ1_SUB-tusk_anitab1, 0
+TRAIRPROJ1_SUB:
+	DD TRAIRPROJ1_IMG-tusk_anitab1
+	DW 66, 71, 14, 0
+TRAIRPROJ2:
+	DD TRAIRPROJ2_SUB-tusk_anitab1, 0
+TRAIRPROJ2_SUB:
+	DD TRAIRPROJ2_IMG-tusk_anitab1
+	DW 100, 78, 30, -1
+TRZOOM1:
+	DD TRZOOM1_SUB-tusk_anitab1, 0
+TRZOOM1_SUB:
+	DD TRZOOM1_IMG-tusk_anitab1
+	DW 73, 107, 12, -14
+TRZOOM3:
+	DD TRZOOM3_SUB-tusk_anitab1, 0
+TRZOOM3_SUB:
+	DD TRZOOM3_IMG-tusk_anitab1
+	DW 150, 107, 90, -14
+TRZOOM5:
+	DD TRZOOM5_SUB-tusk_anitab1, 0
+TRZOOM5_SUB:
+	DD TRZOOM5_IMG-tusk_anitab1
+	DW 207, 107, 146, -14
+KLOOP1:
+	DD KLOOP1_SUB-tusk_anitab1, 0
+KLOOP1_SUB:
+	DD KLOOP1_IMG-tusk_anitab1
+	DW 130, 47, 81, 46
+	DD   _KABOK_P
+KLOOP2:
+	DD KLOOP2_SUB-tusk_anitab1, 0
+KLOOP2_SUB:
+	DD KLOOP2_IMG-tusk_anitab1
+	DW 118, 46, 80, 45
+KLOOP3:
+	DD KLOOP3_SUB-tusk_anitab1, 0
+KLOOP3_SUB:
+	DD KLOOP3_IMG-tusk_anitab1
+	DW 121, 45, 80, 44
+KLOOP4:
+	DD KLOOP4_SUB-tusk_anitab1, 0
+KLOOP4_SUB:
+	DD KLOOP4_IMG-tusk_anitab1
+	DW 124, 44, 80, 43
+KLOOP5:
+	DD KLOOP5_SUB-tusk_anitab1, 0
+KLOOP5_SUB:
+	DD KLOOP5_IMG-tusk_anitab1
+	DW 124, 45, 78, 44
+KLOOP6:
+	DD KLOOP6_SUB-tusk_anitab1, 0
+KLOOP6_SUB:
+	DD KLOOP6_IMG-tusk_anitab1
+	DW 127, 46, 80, 45
+GLOW1:
+	DD GLOW1_SUB-tusk_anitab1, 0
+GLOW1_SUB:
+	DD GLOW1_IMG-tusk_anitab1
+	DW 79, 76, 35, -47
+	DD   _KABGLOW_P
+GLOW2:
+	DD GLOW2_SUB-tusk_anitab1, 0
+GLOW2_SUB:
+	DD GLOW2_IMG-tusk_anitab1
+	DW 54, 87, 20, -38
+GLOW3:
+	DD GLOW3_SUB-tusk_anitab1, 0
+GLOW3_SUB:
+	DD GLOW3_IMG-tusk_anitab1
+	DW 67, 92, 19, -31
+GLOW4:
+	DD GLOW4_SUB-tusk_anitab1, 0
+GLOW4_SUB:
+	DD GLOW4_IMG-tusk_anitab1
+	DW 79, 98, 20, -25
+SPINNER1:
+	DD SPINNER1_SUB-tusk_anitab1, 0
+SPINNER1_SUB:
+	DD SPINNER1_IMG-tusk_anitab1
+	DW 56, 110, 28, 0
+	DD	_FLESH_P
+SPINNER3:
+	DD SPINNER3_SUB-tusk_anitab1, 0
+SPINNER3_SUB:
+	DD SPINNER3_IMG-tusk_anitab1
+	DW 56, 110, 29, 0
+SPINNER5:
+	DD SPINNER5_SUB-tusk_anitab1, 0
+SPINNER5_SUB:
+	DD SPINNER5_IMG-tusk_anitab1
+	DW 56, 110, 29, 0
+a_back_broke:
+	DD	TRBACKBREAK1-tusk_anitab1
+	DD	0
+TRBACKBREAK1:
+	DD TRBACKBREAK1_SUB-tusk_anitab1, 0
+TRBACKBREAK1_SUB:
+	DD TRBACKBREAK1_IMG-tusk_anitab1
+	DW 102, 37, 41, -42

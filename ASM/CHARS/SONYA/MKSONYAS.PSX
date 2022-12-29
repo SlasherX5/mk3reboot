@@ -1,0 +1,210 @@
+sonya_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+sonya_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_sonya_friend-sonya_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_sonya_friend:
+	DD SBFRIENDSHIP1-sonya_anitab1
+	DD SBFRIENDSHIP2-sonya_anitab1
+	DD SBFRIENDSHIP3-sonya_anitab1
+	DD SBFRIENDSHIP4-sonya_anitab1
+	DD SBFRIENDSHIP5-sonya_anitab1
+	DD SBFRIENDSHIP6-sonya_anitab1
+	DD SBFRIENDSHIP7-sonya_anitab1
+	DD 0
+j_sonyaf:
+	DD SBFRIENDSHIP8-sonya_anitab1
+	DD SBFRIENDSHIP9-sonya_anitab1
+	DD ani_calla
+	DD rsnd_whoosh
+	DD SBFRIENDSHIP10-sonya_anitab1
+	DD SBFRIENDSHIP11-sonya_anitab1
+	DD ani_calla
+	DD rsnd_whoosh
+	DD SBFRIENDSHIP10-sonya_anitab1
+	DD SBFRIENDSHIP9-sonya_anitab1
+	DD ani_calla
+	DD rsnd_whoosh
+	DD SBFRIENDSHIP8-sonya_anitab1
+	DD SBFRIENDSHIP7-sonya_anitab1
+	DD SBFRIENDSHIP6-sonya_anitab1
+	DD SBFRIENDSHIP5-sonya_anitab1
+	DD SBFRIENDSHIP4-sonya_anitab1
+	DD SBFRIENDSHIP5-sonya_anitab1
+	DD SBFRIENDSHIP6-sonya_anitab1
+	DD SBFRIENDSHIP7-sonya_anitab1
+	DD ani_jump
+	DD j_sonyaf-sonya_anitab1
+SBFRIENDSHIP1:
+	DD SBFRIENDSHIP1_SUB-sonya_anitab1, 0
+SBFRIENDSHIP1_SUB:
+	DD SBFRIENDSHIP1_IMG-sonya_anitab1
+	DW 46, 108, 19, -11
+SBFRIENDSHIP2:
+	DD SBFRIENDSHIP2_SUB-sonya_anitab1, 0
+SBFRIENDSHIP2_SUB:
+	DD SBFRIENDSHIP2_IMG-sonya_anitab1
+	DW 62, 110, 36, -9
+SBFRIENDSHIP3:
+	DD SBFRIENDSHIP3_SUB-sonya_anitab1, 0
+SBFRIENDSHIP3_SUB:
+	DD SBFRIENDSHIP3_IMG-sonya_anitab1
+	DW 86, 111, 44, -8
+SBFRIENDSHIP4:
+	DD SBFRIENDSHIP4_SUB-sonya_anitab1, 0
+SBFRIENDSHIP4_SUB:
+	DD SBFRIENDSHIP4_IMG-sonya_anitab1
+	DW 79, 111, 42, -8
+SBFRIENDSHIP5:
+	DD SBFRIENDSHIP5_SUB-sonya_anitab1, 0
+SBFRIENDSHIP5_SUB:
+	DD SBFRIENDSHIP5_IMG-sonya_anitab1
+	DW 65, 111, 38, -8
+SBFRIENDSHIP6:
+	DD SBFRIENDSHIP6_SUB-sonya_anitab1, 0
+SBFRIENDSHIP6_SUB:
+	DD SBFRIENDSHIP6_IMG-sonya_anitab1
+	DW 49, 111, 23, -8
+SBFRIENDSHIP7:
+	DD SBFRIENDSHIP7_SUB-sonya_anitab1, 0
+SBFRIENDSHIP7_SUB:
+	DD SBFRIENDSHIP7_IMG-sonya_anitab1
+	DW 45, 111, 19, -8
+SBFRIENDSHIP8:
+	DD SBFRIENDSHIP8_SUB-sonya_anitab1, 0
+SBFRIENDSHIP8_SUB:
+	DD SBFRIENDSHIP8_IMG-sonya_anitab1
+	DW 45, 111, 19, -8
+SBFRIENDSHIP9:
+	DD SBFRIENDSHIP9_SUB-sonya_anitab1, 0
+SBFRIENDSHIP9_SUB:
+	DD SBFRIENDSHIP9_IMG-sonya_anitab1
+	DW 45, 111, 19, -8
+SBFRIENDSHIP10:
+	DD SBFRIENDSHIP10_SUB-sonya_anitab1, 0
+SBFRIENDSHIP10_SUB:
+	DD SBFRIENDSHIP10_IMG-sonya_anitab1
+	DW 45, 111, 19, -8
+SBFRIENDSHIP11:
+	DD SBFRIENDSHIP11_SUB-sonya_anitab1, 0
+SBFRIENDSHIP11_SUB:
+	DD SBFRIENDSHIP11_IMG-sonya_anitab1
+	DW 46, 111, 20, -8

@@ -1,0 +1,32 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)jax/jaxb.bin  \
+     $(EXE)jax/jax.bin \
+	 $(EXE)jax/jaxa.bin \
+	 $(EXE)jax/jaxs.bin \
+	 $(EXE)jax/jaxf.bin \
+	 $(EXE)jax/jaxf1.bin \
+	 .SYMBOLIC
+
+
+jax.obj: jax.asm \
+
+# FRIENDSHIP 
+
+jaxs.obj: jaxs.asm \
+
+# BABALITY
+
+jaxb.obj: jaxb.asm \
+
+# ANIMALITY
+
+jaxa.: mkjaxa.s \
+
+# FATALITIES
+
+jaxf.obj: jaxf.asm \
+
+jaxf1.obj: jaxf1.asm \
+

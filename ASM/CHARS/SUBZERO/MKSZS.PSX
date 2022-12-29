@@ -1,0 +1,249 @@
+sz_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+sz_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_sz_friend-sz_anitab1
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+a_sz_friend:
+	DD SZSNOW1-sz_anitab1
+	DD SZSNOW2-sz_anitab1
+	DD ani_sladd
+	DD SWHITE3-sz_anitab1
+	DD SZSNOW3-sz_anitab1
+	DD ani_slani
+	DD SWHITE4-sz_anitab1
+	DD SZSNOW4-sz_anitab1
+	DD ani_slani
+	DD SWHITE5-sz_anitab1
+	DD SZSNOW5-sz_anitab1
+	DD ani_slani
+	DD SWHITE6-sz_anitab1
+	DD SZSNOW6-sz_anitab1
+	DD ani_slani
+	DD SWHITE7-sz_anitab1
+	DD SZSNOW7-sz_anitab1
+	DD ani_slani
+	DD SWHITE8-sz_anitab1
+	DD SZSNOW8-sz_anitab1
+	DD ani_slani
+	DD SWHITE9-sz_anitab1
+	DD SZSNOW9-sz_anitab1
+	DD ani_slani_sleep
+	DD SWHITE10-sz_anitab1
+	DD ani_slani_sleep
+	DD SWHITE11-sz_anitab1
+	DD ani_slani_sleep
+	DD SWHITE12-sz_anitab1
+	DD 0
+SZSNOW1:
+	DD SZSNOW1_SUB-sz_anitab1, 0
+SZSNOW1_SUB:
+	DD SZSNOW1_IMG-sz_anitab1
+	DW 36, 99, 14, -16
+SZSNOW2:
+	DD SZSNOW2_SUB-sz_anitab1, 0
+SZSNOW2_SUB:
+	DD SZSNOW2_IMG-sz_anitab1
+	DW 30, 77, 10, -39
+SWHITE3:
+	DD SWHITE3_SUB-sz_anitab1, 0
+SWHITE3_SUB:
+	DD SWHITE3_IMG-sz_anitab1
+	DW 45, 26, 18, -93
+	DD _SNOWMAN_P
+SZSNOW3:
+	DD SZSNOW3_SUB-sz_anitab1, 0
+SZSNOW3_SUB:
+	DD SZSNOW3_IMG-sz_anitab1
+	DW 30, 74, 10, -42
+SWHITE4:
+	DD SWHITE4_SUB-sz_anitab1, 0
+SWHITE4_SUB:
+	DD SWHITE4_IMG-sz_anitab1
+	DW 61, 32, 24, -87
+SZSNOW4:
+	DD SZSNOW4_SUB-sz_anitab1, 0
+SZSNOW4_SUB:
+	DD SZSNOW4_IMG-sz_anitab1
+	DW 30, 65, 10, -34
+SWHITE5:
+	DD SWHITE5_SUB-sz_anitab1, 0
+SWHITE5_SUB:
+	DD SWHITE5_IMG-sz_anitab1
+	DW 65, 54, 26, -65
+SZSNOW5:
+	DD SZSNOW5_SUB-sz_anitab1, 0
+SZSNOW5_SUB:
+	DD SZSNOW5_IMG-sz_anitab1
+	DW 31, 57, 11, -24
+SWHITE6:
+	DD SWHITE6_SUB-sz_anitab1, 0
+SWHITE6_SUB:
+	DD SWHITE6_IMG-sz_anitab1
+	DW 64, 75, 26, -44
+SZSNOW6:
+	DD SZSNOW6_SUB-sz_anitab1, 0
+SZSNOW6_SUB:
+	DD SZSNOW6_IMG-sz_anitab1
+	DW 38, 49, 14, -13
+SWHITE7:
+	DD SWHITE7_SUB-sz_anitab1, 0
+SWHITE7_SUB:
+	DD SWHITE7_IMG-sz_anitab1
+	DW 64, 86, 26, -33
+SZSNOW7:
+	DD SZSNOW7_SUB-sz_anitab1, 0
+SZSNOW7_SUB:
+	DD SZSNOW7_IMG-sz_anitab1
+	DW 44, 37, 17, -5
+SWHITE8:
+	DD SWHITE8_SUB-sz_anitab1, 0
+SWHITE8_SUB:
+	DD SWHITE8_IMG-sz_anitab1
+	DW 64, 109, 26, -10
+SZSNOW8:
+	DD SZSNOW8_SUB-sz_anitab1, 0
+SZSNOW8_SUB:
+	DD SZSNOW8_IMG-sz_anitab1
+	DW 40, 26, 14, 0
+SWHITE9:
+	DD SWHITE9_SUB-sz_anitab1, 0
+SWHITE9_SUB:
+	DD SWHITE9_IMG-sz_anitab1
+	DW 64, 119, 26, 0
+SZSNOW9:
+	DD SZSNOW9_SUB-sz_anitab1, 0
+SZSNOW9_SUB:
+	DD SZSNOW9_IMG-sz_anitab1
+	DW 40, 24, 14, 1
+SWHITE10:
+	DD SWHITE10_SUB-sz_anitab1, 0
+SWHITE10_SUB:
+	DD SWHITE10_IMG-sz_anitab1
+	DW 64, 127, 26, 8
+SWHITE11:
+	DD SWHITE11_SUB-sz_anitab1, 0
+SWHITE11_SUB:
+	DD SWHITE11_IMG-sz_anitab1
+	DW 64, 127, 26, 8
+SWHITE12:
+	DD SWHITE12_SUB-sz_anitab1, 0
+SWHITE12_SUB:
+	DD SWHITE12_IMG-sz_anitab1
+	DW 64, 119, 26, 0

@@ -1,0 +1,81 @@
+a_blood_explode:
+	DD BLDXPD1-base_anims
+	DD BLDXPD2-base_anims
+	DD BLDXPD3-base_anims
+	DD BLDXPD4-base_anims
+	DD BLDXPD5-base_anims
+	DD BLDXPD6-base_anims
+	DD BLDXPD7-base_anims
+	DD BLDXPD8-base_anims
+	DD BLDXPD9-base_anims
+;	DW BLDXPD10-base_anims
+;	DW BLDXPD11-base_anims
+;	DW BLDXPD12-base_anims
+;	DW BLDXPD13-base_anims
+	DD 0
+BLDXPD1:
+	DD BLDXPD1_SUB-base_anims, 0
+BLDXPD1_SUB:
+	DD BLDXPD1_IMG-base_anims
+	DW 42, 38, 21, 19
+	DD _BLDXPD_P
+BLDXPD2:
+	DD BLDXPD2_SUB-base_anims, 0
+BLDXPD2_SUB:
+	DD BLDXPD2_IMG-base_anims
+	DW 53, 46, 26, 23
+BLDXPD3:
+	DD BLDXPD3_SUB-base_anims, 0
+BLDXPD3_SUB:
+	DD BLDXPD3_IMG-base_anims
+	DW 63, 55, 32, 27
+BLDXPD4:
+	DD BLDXPD4_SUB-base_anims, 0
+BLDXPD4_SUB:
+	DD BLDXPD4_IMG-base_anims
+	DW 72, 62, 36, 31
+BLDXPD5:
+	DD BLDXPD5_SUB-base_anims, 0
+BLDXPD5_SUB:
+	DD BLDXPD5_IMG-base_anims
+	DW 80, 73, 40, 35
+BLDXPD6:
+	DD BLDXPD6_SUB-base_anims, 0
+BLDXPD6_SUB:
+	DD BLDXPD6_IMG-base_anims
+	DW 90, 81, 45, 38
+BLDXPD7:
+	DD BLDXPD7_SUB-base_anims, 0
+BLDXPD7_SUB:
+	DD BLDXPD7_IMG-base_anims
+	DW 101, 91, 50, 44
+BLDXPD8:
+	DD BLDXPD8_SUB-base_anims, 0
+BLDXPD8_SUB:
+	DD BLDXPD8_IMG-base_anims
+	DW 111, 100, 56, 48
+BLDXPD9:
+	DD BLDXPD9_SUB-base_anims, 0
+BLDXPD9_SUB:
+	DD BLDXPD9_IMG-base_anims
+	DW 122, 110, 61, 52
+BLDXPD10:
+	DD BLDXPD10_SUB-base_anims, 0
+BLDXPD10_SUB:
+	DD BLDXPD10_IMG-base_anims
+	DW 135, 119, 68, 58
+BLDXPD11:
+	DD BLDXPD11_SUB-base_anims, 0
+BLDXPD11_SUB:
+	DD BLDXPD11_IMG-base_anims
+	DW 152, 130, 76, 64
+BLDXPD12:
+	DD BLDXPD12_SUB-base_anims, 0
+BLDXPD12_SUB:
+	DD BLDXPD12_IMG-base_anims
+	DW 171, 134, 86, 65
+BLDXPD13:
+	DD BLDXPD13_SUB-base_anims, 0
+BLDXPD13_SUB:
+	DD BLDXPD13_IMG-base_anims
+	DW 147, 141, 74, 72

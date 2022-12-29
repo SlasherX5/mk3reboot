@@ -1,0 +1,200 @@
+st_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+st_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+
+	DD a_snake-st_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_blood_explode-base_anims	;34
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_snake:
+	DD SNAKE1-st_anitab1
+	DD SNAKE3-st_anitab1
+	DD SNAKE4-st_anitab1
+	DD SNAKE5-st_anitab1
+	DD SNAKE6-st_anitab1
+	DD 0
+	DD SNAKE8-st_anitab1
+	DD SNAKE9-st_anitab1
+	DD SNAKE10-st_anitab1
+	DD SNAKE11-st_anitab1
+	DD 0
+	DD SNAKE12-st_anitab1
+	DD SNAKE13-st_anitab1
+	DD SNAKE8-st_anitab1
+	DD SNAKE6-st_anitab1
+	DD 0
+SNAKE1:
+	DD SNAKE1_SUB-st_anitab1, 0
+SNAKE1_SUB:
+	DD SNAKE1_IMG-st_anitab1
+	DW 50, 105, 15, -5
+	DD	_SNAKE_P
+SNAKE3:
+	DD SNAKE3_SUB-st_anitab1, 0
+SNAKE3_SUB:
+	DD SNAKE3_IMG-st_anitab1
+	DW 62, 115, 24, 0
+SNAKE4:
+	DD SNAKE4_SUB-st_anitab1, 0
+SNAKE4_SUB:
+	DD SNAKE4_IMG-st_anitab1
+	DW 73, 116, 31, 4
+SNAKE5:
+	DD SNAKE5_SUB-st_anitab1, 0
+SNAKE5_SUB:
+	DD SNAKE5_IMG-st_anitab1
+	DW 88, 122, 38, 9
+SNAKE6:
+	DD SNAKE6_SUB-st_anitab1, 0
+SNAKE6_SUB:
+	DD SNAKE6_IMG-st_anitab1
+	DW 103, 129, 45, 13
+SNAKE8:
+	DD SNAKE8_SUB-st_anitab1, 0
+SNAKE8_SUB:
+	DD SNAKE8_IMG-st_anitab1
+	DW 135, 137, 45, 20
+SNAKE9:
+	DD SNAKE9_SUB-st_anitab1, 0
+SNAKE9_SUB:
+	DD SNAKE9_IMG-st_anitab1
+	DW 165, 136, 45, 20
+SNAKE10:
+	DD SNAKE10_SUB-st_anitab1, 0
+SNAKE10_SUB:
+	DD SNAKE10_IMG-st_anitab1
+	DW 180, 132, 45, 15
+SNAKE11:
+	DD SNAKE11_SUB-st_anitab1, 0
+SNAKE11_SUB:
+	DD SNAKE11_IMG-st_anitab1
+	DW 180, 144, 45, 16
+SNAKE12:
+	DD SNAKE12_SUB-st_anitab1, 0
+SNAKE12_SUB:
+	DD SNAKE12_IMG-st_anitab1
+	DW 157, 137, 44, 20
+SNAKE13:
+	DD SNAKE13_SUB-st_anitab1, 0
+SNAKE13_SUB:
+	DD SNAKE13_IMG-st_anitab1
+	DW 135, 137, 45, 20

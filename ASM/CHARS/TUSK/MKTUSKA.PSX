@@ -1,0 +1,200 @@
+tusk_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+tusk_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+
+	DD a_skeleton-tusk_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_dummy:
+a_skeleton:
+	DD SKELETN1-tusk_anitab1
+	DD SKELETN2-tusk_anitab1
+	DD SKELETN3-tusk_anitab1
+	DD SKELETN4-tusk_anitab1
+	DD SKELETN5-tusk_anitab1
+	DD 0
+	DD SKELETN9-tusk_anitab1
+	DD SKELETN10-tusk_anitab1
+	DD SKELETN11-tusk_anitab1
+	DD ani_nosleep
+	DD SKELETN12-tusk_anitab1
+	DD 0
+	DD SKELETN13-tusk_anitab1
+	DD SKELETN14-tusk_anitab1
+	DD 0
+SKELETN1:
+	DD SKELETN1_SUB-tusk_anitab1, 0
+SKELETN1_SUB:
+	DD SKELETN1_IMG-tusk_anitab1
+	DW 52, 120, 19, -4
+	DD _HORSE_P
+SKELETN2:
+	DD SKELETN2_SUB-tusk_anitab1, 0
+SKELETN2_SUB:
+	DD SKELETN2_IMG-tusk_anitab1
+	DW 59, 107, 14, -19
+SKELETN3:
+	DD SKELETN3_SUB-tusk_anitab1, 0
+SKELETN3_SUB:
+	DD SKELETN3_IMG-tusk_anitab1
+	DW 79, 102, 10, -25
+SKELETN4:
+	DD SKELETN4_SUB-tusk_anitab1, 0
+SKELETN4_SUB:
+	DD SKELETN4_IMG-tusk_anitab1
+	DW 116, 100, 30, -25
+SKELETN5:
+	DD SKELETN5_SUB-tusk_anitab1, 0
+SKELETN5_SUB:
+	DD SKELETN5_IMG-tusk_anitab1
+	DW 142, 98, 41, -26
+SKELETN9:
+	DD SKELETN9_SUB-tusk_anitab1, 0
+SKELETN9_SUB:
+	DD SKELETN9_IMG-tusk_anitab1
+	DW 143, 84, 47, -41
+SKELETN10:
+	DD SKELETN10_SUB-tusk_anitab1, 0
+SKELETN10_SUB:
+	DD SKELETN10_IMG-tusk_anitab1
+	DW 135, 118, 51, -6
+SKELETN11:
+	DD SKELETN11_SUB-tusk_anitab1, 0
+SKELETN11_SUB:
+	DD SKELETN11_IMG-tusk_anitab1
+	DW 129, 150, 54, 26
+SKELETN12:
+	DD SKELETN12_SUB-tusk_anitab1, 0
+SKELETN12_SUB:
+	DD SKELETN12_IMG-tusk_anitab1
+	DW 113, 150, 54, 26
+SKELETN13:
+	DD SKELETN13_SUB-tusk_anitab1, 0
+SKELETN13_SUB:
+	DD SKELETN13_IMG-tusk_anitab1
+	DW 135, 120, 52, -4
+SKELETN14:
+	DD SKELETN14_SUB-tusk_anitab1, 0
+SKELETN14_SUB:
+	DD SKELETN14_IMG-tusk_anitab1
+	DW 142, 92, 46, -34

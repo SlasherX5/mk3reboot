@@ -1,0 +1,205 @@
+ind_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+ind_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_ind_friend-ind_anitab1
+
+	DD a_mkgame-ind_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_ind_friend:
+	DD ani_swpal
+	DD RNBEAMUP3-ind_anitab1
+	DD RNBEAMUP4-ind_anitab1
+	DD RNBEAMUP5-ind_anitab1
+	DD RNBEAMUP6-ind_anitab1
+	DD RNBEAMUP7-ind_anitab1
+	DD ani_swpal
+	DD RNVICTORY1-ind_anitab1
+	DD RNVICTORY2-ind_anitab1
+	DD RNVICTORY3-ind_anitab1
+	DD RNVICTORY5-ind_anitab1
+	DD RNVICTORY6-ind_anitab1
+	DD RNVICTORY7-ind_anitab1
+	DD 0
+a_mkgame:
+	DD MK2GAME-ind_anitab1
+	DD 0
+RNBEAMUP3:
+	DD RNBEAMUP3_SUB-ind_anitab1, 0
+RNBEAMUP3_SUB:
+	DD RNBEAMUP3_IMG-ind_anitab1
+	DW 50, 57, 19, -67
+	DD _ELEC_P
+RNBEAMUP4:
+	DD RNBEAMUP4_SUB-ind_anitab1, 0
+RNBEAMUP4_SUB:
+	DD RNBEAMUP4_IMG-ind_anitab1
+	DW 53, 76, 22, -48
+RNBEAMUP5:
+	DD RNBEAMUP5_SUB-ind_anitab1, 0
+RNBEAMUP5_SUB:
+	DD RNBEAMUP5_IMG-ind_anitab1
+	DW 52, 88, 22, -36
+RNBEAMUP6:
+	DD RNBEAMUP6_SUB-ind_anitab1, 0
+RNBEAMUP6_SUB:
+	DD RNBEAMUP6_IMG-ind_anitab1
+	DW 51, 100, 22, -24
+RNBEAMUP7:
+	DD RNBEAMUP7_SUB-ind_anitab1, 0
+RNBEAMUP7_SUB:
+	DD RNBEAMUP7_IMG-ind_anitab1
+	DW 54, 122, 20, -2
+RNVICTORY1:
+	DD RNVICTORY1_SUB-ind_anitab1, 0
+RNVICTORY1_SUB:
+	DD RNVICTORY1_IMG-ind_anitab1
+	DW 86, 105, 37, -19
+	DD _RADBLU_P
+RNVICTORY2:
+	DD RNVICTORY2_SUB-ind_anitab1, 0
+RNVICTORY2_SUB:
+	DD RNVICTORY2_IMG-ind_anitab1
+	DW 80, 85, 41, -38
+RNVICTORY3:
+	DD RNVICTORY3_SUB-ind_anitab1, 0
+RNVICTORY3_SUB:
+	DD RNVICTORY3_IMG-ind_anitab1
+	DW 48, 72, 21, -51
+RNVICTORY5:
+	DD RNVICTORY5_SUB-ind_anitab1, 0
+RNVICTORY5_SUB:
+	DD RNVICTORY5_IMG-ind_anitab1
+	DW 50, 105, 22, -19
+RNVICTORY6:
+	DD RNVICTORY6_SUB-ind_anitab1, 0
+RNVICTORY6_SUB:
+	DD RNVICTORY6_IMG-ind_anitab1
+	DW 61, 123, 27, 0
+RNVICTORY7:
+	DD RNVICTORY7_SUB-ind_anitab1, 0
+RNVICTORY7_SUB:
+	DD RNVICTORY7_IMG-ind_anitab1
+	DW 79, 133, 38, 9
+MK2GAME:
+	DD MK2GAME_IMG-ind_anitab1
+	DW 94, 167, 0, 0
+	DD _MK2GAME_P

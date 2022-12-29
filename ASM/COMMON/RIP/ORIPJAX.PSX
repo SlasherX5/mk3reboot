@@ -1,0 +1,88 @@
+ochar_ripped_anis:
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_normal_skel-base_anims
+	DD 0
+a_jax_rip:
+	DD JXRIP1-base_anims
+	DD JXRIP2-base_anims
+	DD JXRIP3-base_anims
+	DD JXRIP4-base_anims
+	DD JXRIP5-base_anims
+	DD JXRIP6-base_anims
+	DD JXRIP7-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+JXRIP1:
+	DD JXRIP1_SUB-base_anims, 0
+JXRIP1_SUB:
+	DD JXRIP1_IMG-base_anims
+	DW 62, 102, 34, -28
+	DD   _JAXFLA_P
+JXRIP2:
+	DD JXRIP2_SUB-base_anims, 0
+JXRIP2_SUB:
+	DD JXRIP2_IMG-base_anims
+	DW 77, 102, 50, -28
+JXRIP3:
+	DD JXRIP3_SUB-base_anims, 0
+JXRIP3_SUB:
+	DD JXRIP3_IMG-base_anims
+	DW 98, 102, 71, -28
+JXRIP4:
+	DD JXRIP4_SUB-base_anims, 0
+JXRIP4_SUB:
+	DD JXRIP4_IMG-base_anims
+	DW 138, 102, 114, -28
+	DD   _JAXFLB_P
+JXRIP5:
+	DD JXRIP5_SUB-base_anims, 0
+JXRIP5_SUB:
+	DD JXRIP5_IMG-base_anims
+	DW 144, 100, 125, -28
+JXRIP6:
+	DD JXRIP6_SUB-base_anims, 0
+JXRIP6_SUB:
+	DD JXRIP6_IMG-base_anims
+	DW 146, 100, 129, -28
+JXRIP7:
+	DD JXRIP7_SUB-base_anims, 0
+JXRIP7_SUB:
+	DD JXRIP7_IMG-base_anims
+	DW 88, 62, 130, -28

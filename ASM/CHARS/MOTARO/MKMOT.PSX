@@ -1,0 +1,692 @@
+mot_anitab1:
+	DD a_stance-mot_anitab1
+	DD a_walkf-mot_anitab1
+	DD a_walkb-mot_anitab1
+	DD a_turn-mot_anitab1
+	DD a_grab_hit-mot_anitab1
+	DD a_mist_tele-mot_anitab1
+	DD a_mot_zap-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_block-mot_anitab1
+	DD a_victory-mot_anitab1
+	DD a_punch-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_kick-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_sweep_kick-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_hop-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_hit-mot_anitab1
+	DD a_hit-mot_anitab1
+	DD a_knockdown-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_stumble-mot_anitab1
+	DD a_getup-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_throw-mot_anitab1
+	DD a_zap-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+	DD a_dummy-mot_anitab1
+mot_anitab2:
+	DD a_stance2-mot_anitab1
+a_throw:
+a_zap:
+a_dummy:
+a_stance:
+	DD MOSTANCE1-mot_anitab1
+	DD ani_calla
+	DD motaro_leg_stance
+	DD MOSTANCE3-mot_anitab1
+j_stan5:
+	DD MOSTANCE5-mot_anitab1
+	DD MOSTANCE6-mot_anitab1
+	DD MOSTANCE7-mot_anitab1
+	DD MOSTANCE9-mot_anitab1
+	DD MOSTANCE11-mot_anitab1
+	DD ani_jump
+	DD a_stance-mot_anitab1
+a_stance2:
+	DD MOLEG21-mot_anitab1
+	DD MOLEG22-mot_anitab1
+	DD MOLEG23-mot_anitab1
+	DD ani_jump
+	DD j_stan5-mot_anitab1
+a_walkf:
+	DD MOWALK1-mot_anitab1
+	DD MOWALK3-mot_anitab1
+	DD MOWALK5-mot_anitab1
+	DD MOWALK6-mot_anitab1
+	DD MOWALK8-mot_anitab1
+	DD MOWALK9-mot_anitab1
+	DD MOWALK10-mot_anitab1
+	DD MOWALK11-mot_anitab1
+	DD ani_jump
+	DD a_walkf-mot_anitab1
+a_walkb:
+	DD MOWALK11-mot_anitab1
+	DD MOWALK10-mot_anitab1
+	DD MOWALK9-mot_anitab1
+	DD MOWALK8-mot_anitab1
+	DD MOWALK6-mot_anitab1
+	DD MOWALK5-mot_anitab1
+	DD MOWALK3-mot_anitab1
+	DD MOWALK1-mot_anitab1
+	DD ani_jump
+	DD a_walkb-mot_anitab1
+a_turn:
+	DD MOTURN1-mot_anitab1
+	DD MOTURN3-mot_anitab1
+	DD MOTURN5-mot_anitab1
+	DD MOTURN7-mot_anitab1
+	DD ani_flip
+	DD ani_nosleep
+	DD MOSTANCE1-mot_anitab1
+	DD 0
+a_punch:
+	DD MOPUNCH1-mot_anitab1
+	DD MOPUNCH2-mot_anitab1
+	DD MOPUNCH3-mot_anitab1
+	DD MOPUNCH5-mot_anitab1
+	DD 0
+	DD MOPUNCH3-mot_anitab1
+	DD MOPUNCH2-mot_anitab1
+	DD MOPUNCH1-mot_anitab1
+	DD 0
+a_grab_hit:
+	DD MOGRABHIT1-mot_anitab1
+	DD MOGRABHIT1-mot_anitab1
+	DD MOGRABHIT3-mot_anitab1
+	DD 0
+	DD MOGRABHIT4-mot_anitab1
+	DD MOGRABHIT5-mot_anitab1
+	DD MOGRABHIT6-mot_anitab1
+	DD 0
+	DD MOGRABHIT8-mot_anitab1
+	DD MOGRABHIT9-mot_anitab1
+	DD 0
+	DD MOGRABHIT10-mot_anitab1
+	DD MOGRABHIT10-mot_anitab1
+	DD MOGRABHIT10-mot_anitab1
+	DD MOGRABHIT10-mot_anitab1
+	DD MOGRABHIT10-mot_anitab1
+	DD MOGRABHIT10-mot_anitab1
+	DD MOGRABHIT9-mot_anitab1
+	DD MOGRABHIT8-mot_anitab1
+	DD 0
+a_hit:
+	DD MOHIT2-mot_anitab1
+	DD MOHIT3-mot_anitab1
+	DD MOHIT2-mot_anitab1
+	DD MOHIT1-mot_anitab1
+	DD 0
+a_block:
+	DD MOBLOCK1-mot_anitab1
+	DD MOBLOCK3-mot_anitab1
+	DD 0
+a_stumble:
+	DD MOSTUMBLE2-mot_anitab1
+	DD MOSTUMBLE2-mot_anitab1
+	DD MOSTUMBLE3-mot_anitab1
+	DD MOSTUMBLE5-mot_anitab1
+	DD MOSTUMBLE5-mot_anitab1
+	DD MOSTUMBLE6-mot_anitab1
+	DD 0
+j_stumble:
+	DD MOSTUMBLE2-mot_anitab1
+	DD MOSTUMBLE2-mot_anitab1
+	DD MOSTUMBLE3-mot_anitab1
+	DD MOSTUMBLE5-mot_anitab1
+	DD MOSTUMBLE5-mot_anitab1
+	DD MOSTUMBLE6-mot_anitab1
+	DD ani_jump
+	DD j_stumble-mot_anitab1
+a_knockdown:
+	DD MODEAD1-mot_anitab1
+	DD MODEAD2-mot_anitab1
+	DD MODEAD4-mot_anitab1
+	DD MODEAD6-mot_anitab1
+	DD MODEAD8-mot_anitab1
+	DD 0
+	DD MODEAD8-mot_anitab1
+	DD 0
+a_getup:
+	DD MOGETUP1-mot_anitab1
+	DD MOGETUP2-mot_anitab1
+	DD MOGETUP2-mot_anitab1
+	DD MOGETUP4-mot_anitab1
+	DD MOGETUP4-mot_anitab1
+	DD MOGETUP6-mot_anitab1
+	DD MOGETUP7-mot_anitab1
+	DD MOGETUP8-mot_anitab1
+;	DW MOGETUP9-mot_anitab1
+	DD MOSTANCE1-mot_anitab1
+	DD 0
+a_mot_zap:
+	DD MOTAILSHOOT1-mot_anitab1
+	DD MOTAILSHOOT2-mot_anitab1
+	DD MOTAILSHOOT3-mot_anitab1
+	DD ani_sladd
+	DD MOBLAST1-mot_anitab1
+	DD 0
+	DD MOTAILSHOOT2-mot_anitab1
+	DD MOTAILSHOOT1-mot_anitab1
+	DD 0
+j_motzap:
+	DD MOBLAST2-mot_anitab1
+	DD MOBLAST3-mot_anitab1
+	DD ani_jump
+	DD j_motzap-mot_anitab1
+a_mist_tele:
+	DD ani_swpal
+	DD MOMIST1-mot_anitab1
+	DD MOMIST2-mot_anitab1
+	DD MOMIST3-mot_anitab1
+	DD MOMIST4-mot_anitab1
+	DD 0
+	DD MOMIST4-mot_anitab1
+	DD MOMIST3-mot_anitab1
+	DD MOMIST2-mot_anitab1
+	DD MOMIST1-mot_anitab1
+	DD 0
+a_sweep_kick:
+	DD MOTURN1-mot_anitab1
+	DD MOTURN3-mot_anitab1
+	DD MOSWEEP1-mot_anitab1
+	DD MOSWEEP2-mot_anitab1
+	DD 0
+	DD MOSWEEP4-mot_anitab1
+	DD MOSWEEP5-mot_anitab1
+	DD 0
+	DD MOSWEEP4-mot_anitab1
+	DD MOSWEEP2-mot_anitab1
+	DD MOSWEEP1-mot_anitab1
+	DD MOTURN3-mot_anitab1
+	DD MOTURN1-mot_anitab1
+	DD 0
+a_victory:
+	DD MOVICTORY1-mot_anitab1
+	DD MOVICTORY3-mot_anitab1
+	DD MOVICTORY5-mot_anitab1
+	DD 0
+a_hop:
+	DD MOHOP1-mot_anitab1
+	DD MOHOP4-mot_anitab1
+	DD MOHOP4-mot_anitab1
+	DD MOHOP5-mot_anitab1
+	DD MOHOP6-mot_anitab1
+	DD 0
+	DD MOHOP7-mot_anitab1
+	DD MOHOP9-mot_anitab1
+	DD MOHOP11-mot_anitab1
+	DD 0
+a_kick:
+	DD MOTURN1-mot_anitab1
+	DD MOTURN3-mot_anitab1
+	DD MOTURN3-mot_anitab1
+	DD MOTURN5-mot_anitab1
+	DD MOTURN5-mot_anitab1
+	DD ani_flip
+	DD 0
+	DD MOKICK1-mot_anitab1
+	DD MOKICK3-mot_anitab1
+	DD MOKICK4-mot_anitab1
+	DD MOKICK6-mot_anitab1
+	DD 0
+	DD MOKICK4-mot_anitab1
+	DD MOKICK3-mot_anitab1
+	DD 0
+MOSTANCE1:
+	DD MOSTANCE1_SUB-mot_anitab1, 0
+MOSTANCE1_SUB:
+	DD MOSTANCE1_IMG-mot_anitab1
+	DW 132, 156, 102, 8
+	DD   _MOTARO_P
+MOSTANCE3:
+	DD MOSTANCE3_SUB-mot_anitab1, 0
+MOSTANCE3_SUB:
+	DD MOSTANCE3_IMG-mot_anitab1
+	DW 122, 145, 96, -3
+MOSTANCE5:
+	DD MOSTANCE5_SUB-mot_anitab1, 0
+MOSTANCE5_SUB:
+	DD MOSTANCE5_IMG-mot_anitab1
+	DW 127, 140, 96, -8
+MOSTANCE6:
+	DD MOSTANCE6_SUB-mot_anitab1, 0
+MOSTANCE6_SUB:
+	DD MOSTANCE6_IMG-mot_anitab1
+	DW 136, 142, 103, -6
+MOSTANCE7:
+	DD MOSTANCE7_SUB-mot_anitab1, 0
+MOSTANCE7_SUB:
+	DD MOSTANCE7_IMG-mot_anitab1
+	DW 138, 167, 108, 19
+MOSTANCE9:
+	DD MOSTANCE9_SUB-mot_anitab1, 0
+MOSTANCE9_SUB:
+	DD MOSTANCE9_IMG-mot_anitab1
+	DW 144, 158, 111, 10
+MOSTANCE11:
+	DD MOSTANCE11_SUB-mot_anitab1, 0
+MOSTANCE11_SUB:
+	DD MOSTANCE11_IMG-mot_anitab1
+	DW 138, 145, 106, -3
+MOWALK1:
+	DD MOWALK1_SUB-mot_anitab1, 0
+MOWALK1_SUB:
+	DD MOWALK1_IMG-mot_anitab1
+	DW 134, 142, 106, -5
+MOWALK3:
+	DD MOWALK3_SUB-mot_anitab1, 0
+MOWALK3_SUB:
+	DD MOWALK3_IMG-mot_anitab1
+	DW 169, 145, 131, -2
+MOWALK5:
+	DD MOWALK5_SUB-mot_anitab1, 0
+MOWALK5_SUB:
+	DD MOWALK5_IMG-mot_anitab1
+	DW 170, 148, 139, 1
+MOWALK6:
+	DD MOWALK6_SUB-mot_anitab1, 0
+MOWALK6_SUB:
+	DD MOWALK6_IMG-mot_anitab1
+	DW 159, 147, 126, 0
+MOWALK8:
+	DD MOWALK8_SUB-mot_anitab1, 0
+MOWALK8_SUB:
+	DD MOWALK8_IMG-mot_anitab1
+	DW 141, 138, 110, -9
+MOWALK9:
+	DD MOWALK9_SUB-mot_anitab1, 0
+MOWALK9_SUB:
+	DD MOWALK9_IMG-mot_anitab1
+	DW 154, 141, 119, -6
+MOWALK10:
+	DD MOWALK10_SUB-mot_anitab1, 0
+MOWALK10_SUB:
+	DD MOWALK10_IMG-mot_anitab1
+	DW 138, 145, 106, -2
+MOWALK11:
+	DD MOWALK11_SUB-mot_anitab1, 0
+MOWALK11_SUB:
+	DD MOWALK11_IMG-mot_anitab1
+	DW 137, 142, 106, -5
+MOTURN1:
+	DD MOTURN1_SUB-mot_anitab1, 0
+MOTURN1_SUB:
+	DD MOTURN1_IMG-mot_anitab1
+	DW 136, 147, 96, -2
+MOTURN3:
+	DD MOTURN3_SUB-mot_anitab1, 0
+MOTURN3_SUB:
+	DD MOTURN3_IMG-mot_anitab1
+	DW 128, 145, 86, -3
+MOTURN5:
+	DD MOTURN5_SUB-mot_anitab1, 0
+MOTURN5_SUB:
+	DD MOTURN5_IMG-mot_anitab1
+	DW 107, 142, 26, -5
+MOTURN7:
+	DD MOTURN7_SUB-mot_anitab1, 0
+MOTURN7_SUB:
+	DD MOTURN7_IMG-mot_anitab1
+	DW 131, 143, 26, -4
+MOGRABHIT1:
+	DD MOGRABHIT1_SUB-mot_anitab1, 0
+MOGRABHIT1_SUB:
+	DD MOGRABHIT1_IMG-mot_anitab1
+	DW 164, 166, 98, 17
+MOGRABHIT3:
+	DD MOGRABHIT3_SUB-mot_anitab1, 0
+MOGRABHIT3_SUB:
+	DD MOGRABHIT3_IMG-mot_anitab1
+	DW 162, 153, 91, 4
+MOGRABHIT4:
+	DD MOGRABHIT4_SUB-mot_anitab1, 0
+MOGRABHIT4_SUB:
+	DD MOGRABHIT4_IMG-mot_anitab1
+	DW 152, 140, 102, -8
+MOGRABHIT5:
+	DD MOGRABHIT5_SUB-mot_anitab1, 0
+MOGRABHIT5_SUB:
+	DD MOGRABHIT5_IMG-mot_anitab1
+	DW 137, 158, 113, 9
+MOGRABHIT6:
+	DD MOGRABHIT6_SUB-mot_anitab1, 0
+MOGRABHIT6_SUB:
+	DD MOGRABHIT6_IMG-mot_anitab1
+	DW 141, 165, 117, 15
+MOGRABHIT8:
+	DD MOGRABHIT8_SUB-mot_anitab1, 0
+MOGRABHIT8_SUB:
+	DD MOGRABHIT8_IMG-mot_anitab1
+	DW 152, 164, 107, 14
+MOGRABHIT9:
+	DD MOGRABHIT9_SUB-mot_anitab1, 0
+MOGRABHIT9_SUB:
+	DD MOGRABHIT9_IMG-mot_anitab1
+	DW 151, 150, 106, 1
+MOGRABHIT10:
+	DD MOGRABHIT10_SUB-mot_anitab1, 0
+MOGRABHIT10_SUB:
+	DD MOGRABHIT10_IMG-mot_anitab1
+	DW 150, 146, 105, -2
+MOMIST1:
+	DD MOMIST1_SUB-mot_anitab1, 0
+MOMIST1_SUB:
+	DD MOMIST1_IMG-mot_anitab1
+	DW 140, 146, 117, -2
+	DD _MOMIST_P
+MOMIST2:
+	DD MOMIST2_SUB-mot_anitab1, 0
+MOMIST2_SUB:
+	DD MOMIST2_IMG-mot_anitab1
+	DW 145, 157, 114, 3
+MOMIST3:
+	DD MOMIST3_SUB-mot_anitab1, 0
+MOMIST3_SUB:
+	DD MOMIST3_IMG-mot_anitab1
+	DW 167, 163, 117, 8
+MOMIST4:
+	DD MOMIST4_SUB-mot_anitab1, 0
+MOMIST4_SUB:
+	DD MOMIST4_IMG-mot_anitab1
+	DW 153, 168, 110, 11
+MOTAILSHOOT1:
+	DD MOTAILSHOOT1_SUB-mot_anitab1, 0
+MOTAILSHOOT1_SUB:
+	DD MOTAILSHOOT1_IMG-mot_anitab1
+	DW 130, 168, 91, 21
+MOTAILSHOOT2:
+	DD MOTAILSHOOT2_SUB-mot_anitab1, 0
+MOTAILSHOOT2_SUB:
+	DD MOTAILSHOOT2_IMG-mot_anitab1
+	DW 131, 164, 81, 16
+MOTAILSHOOT3:
+	DD MOTAILSHOOT3_SUB-mot_anitab1, 0
+MOTAILSHOOT3_SUB:
+	DD MOTAILSHOOT3_IMG-mot_anitab1
+	DW 137, 168, 88, 20
+MOBLAST1:
+	DD MOBLAST1_SUB-mot_anitab1, 0
+MOBLAST1_SUB:
+	DD MOBLAST1_IMG-mot_anitab1
+	DW 66, 85, 42, 37
+	DD   _BLAST_P
+MOBLAST2:
+	DD MOBLAST2_SUB-mot_anitab1, 0
+MOBLAST2_SUB:
+	DD MOBLAST2_IMG-mot_anitab1
+	DW 40, 33, 19, 16
+MOBLAST3:
+	DD MOBLAST3_SUB-mot_anitab1, 0
+MOBLAST3_SUB:
+	DD MOBLAST3_IMG-mot_anitab1
+	DW 34, 28, 17, 14
+MOBLOCK1:
+	DD MOBLOCK1_SUB-mot_anitab1, 0
+MOBLOCK1_SUB:
+	DD MOBLOCK1_IMG-mot_anitab1
+	DW 132, 154, 106, 6
+MOBLOCK3:
+	DD MOBLOCK3_SUB-mot_anitab1, 0
+MOBLOCK3_SUB:
+	DD MOBLOCK3_IMG-mot_anitab1
+	DW 138, 140, 114, -7
+MOVICTORY1:
+	DD MOVICTORY1_SUB-mot_anitab1, 0
+MOVICTORY1_SUB:
+	DD MOVICTORY1_IMG-mot_anitab1
+	DW 143, 140, 115, -8
+MOVICTORY3:
+	DD MOVICTORY3_SUB-mot_anitab1, 0
+MOVICTORY3_SUB:
+	DD MOVICTORY3_IMG-mot_anitab1
+	DW 138, 149, 119, 0
+MOVICTORY5:
+	DD MOVICTORY5_SUB-mot_anitab1, 0
+MOVICTORY5_SUB:
+	DD MOVICTORY5_IMG-mot_anitab1
+	DW 143, 166, 124, 17
+MOPUNCH1:
+	DD MOPUNCH1_SUB-mot_anitab1, 0
+MOPUNCH1_SUB:
+	DD MOPUNCH1_IMG-mot_anitab1
+	DW 143, 143, 110, -4
+MOPUNCH2:
+	DD MOPUNCH2_SUB-mot_anitab1, 0
+MOPUNCH2_SUB:
+	DD MOPUNCH2_IMG-mot_anitab1
+	DW 156, 144, 114, -3
+MOPUNCH3:
+	DD MOPUNCH3_SUB-mot_anitab1, 0
+MOPUNCH3_SUB:
+	DD MOPUNCH3_IMG-mot_anitab1
+	DW 132, 148, 110, 0
+MOPUNCH5:
+	DD MOPUNCH5_SUB-mot_anitab1, 0
+MOPUNCH5_SUB:
+	DD MOPUNCH5_IMG-mot_anitab1
+	DW 168, 165, 82, 16
+MOKICK1:
+	DD MOKICK1_SUB-mot_anitab1, 0
+MOKICK1_SUB:
+	DD MOKICK1_IMG-mot_anitab1
+	DW 146, 161, 110, 14
+MOKICK3:
+	DD MOKICK3_SUB-mot_anitab1, 0
+MOKICK3_SUB:
+	DD MOKICK3_IMG-mot_anitab1
+	DW 140, 164, 110, 17
+MOKICK4:
+	DD MOKICK4_SUB-mot_anitab1, 0
+MOKICK4_SUB:
+	DD MOKICK4_IMG-mot_anitab1
+	DW 121, 157, 74, 10
+MOKICK6:
+	DD MOKICK6_SUB-mot_anitab1, 0
+MOKICK6_SUB:
+	DD MOKICK6_IMG-mot_anitab1
+	DW 143, 165, 104, 18
+MOSWEEP1:
+	DD MOSWEEP1_SUB-mot_anitab1, 0
+MOSWEEP1_SUB:
+	DD MOSWEEP1_IMG-mot_anitab1
+	DW 132, 145, 29, -2
+MOSWEEP2:
+	DD MOSWEEP2_SUB-mot_anitab1, 0
+MOSWEEP2_SUB:
+	DD MOSWEEP2_IMG-mot_anitab1
+	DW 161, 146, 27, -2
+MOSWEEP4:
+	DD MOSWEEP4_SUB-mot_anitab1, 0
+MOSWEEP4_SUB:
+	DD MOSWEEP4_IMG-mot_anitab1
+	DW 231, 146, 27, -2
+MOSWEEP5:
+	DD MOSWEEP5_SUB-mot_anitab1, 0
+MOSWEEP5_SUB:
+	DD MOSWEEP5_IMG-mot_anitab1
+	DW 194, 146, 27, -2
+MOHOP1:
+	DD MOHOP1_SUB-mot_anitab1, 0
+MOHOP1_SUB:
+	DD MOHOP1_IMG-mot_anitab1
+	DW 131, 144, 107, -2
+MOHOP4:
+	DD MOHOP4_SUB-mot_anitab1, 0
+MOHOP4_SUB:
+	DD MOHOP4_IMG-mot_anitab1
+	DW 169, 152, 138, 14
+MOHOP5:
+	DD MOHOP5_SUB-mot_anitab1, 0
+MOHOP5_SUB:
+	DD MOHOP5_IMG-mot_anitab1
+	DW 186, 122, 156, 3
+MOHOP6:
+	DD MOHOP6_SUB-mot_anitab1, 0
+MOHOP6_SUB:
+	DD MOHOP6_IMG-mot_anitab1
+	DW 228, 121, 198, -9
+MOHOP7:
+	DD MOHOP7_SUB-mot_anitab1, 0
+MOHOP7_SUB:
+	DD MOHOP7_IMG-mot_anitab1
+	DW 195, 137, 168, -11
+MOHOP9:
+	DD MOHOP9_SUB-mot_anitab1, 0
+MOHOP9_SUB:
+	DD MOHOP9_IMG-mot_anitab1
+	DW 170, 141, 145, -8
+MOHOP11:
+	DD MOHOP11_SUB-mot_anitab1, 0
+MOHOP11_SUB:
+	DD MOHOP11_IMG-mot_anitab1
+	DW 150, 141, 126, -8
+MOHIT2:
+	DD MOHIT2_SUB-mot_anitab1, 0
+MOHIT2_SUB:
+	DD MOHIT2_IMG-mot_anitab1
+	DW 120, 162, 98, 14
+MOHIT3:
+	DD MOHIT3_SUB-mot_anitab1, 0
+MOHIT3_SUB:
+	DD MOHIT3_IMG-mot_anitab1
+	DW 119, 162, 97, 14
+MOHIT1:
+	DD MOHIT1_SUB-mot_anitab1, 0
+MOHIT1_SUB:
+	DD MOHIT1_IMG-mot_anitab1
+	DW 124, 156, 98, 8
+MODEAD1:
+	DD MODEAD1_SUB-mot_anitab1, 0
+MODEAD1_SUB:
+	DD MODEAD1_IMG-mot_anitab1
+	DW 118, 136, 91, -10
+MODEAD2:
+	DD MODEAD2_SUB-mot_anitab1, 0
+MODEAD2_SUB:
+	DD MODEAD2_IMG-mot_anitab1
+	DW 130, 126, 86, -21
+MODEAD4:
+	DD MODEAD4_SUB-mot_anitab1, 0
+MODEAD4_SUB:
+	DD MODEAD4_IMG-mot_anitab1
+	DW 146, 118, 89, -30
+MODEAD6:
+	DD MODEAD6_SUB-mot_anitab1, 0
+MODEAD6_SUB:
+	DD MODEAD6_IMG-mot_anitab1
+	DW 149, 113, 89, -36
+MODEAD8:
+	DD MODEAD8_SUB-mot_anitab1, 0
+MODEAD8_SUB:
+	DD MODEAD8_IMG-mot_anitab1
+	DW 146, 114, 90, -38
+MOSTUMBLE2:
+	DD MOSTUMBLE2_SUB-mot_anitab1, 0
+MOSTUMBLE2_SUB:
+	DD MOSTUMBLE2_IMG-mot_anitab1
+	DW 137, 142, 101, -6
+MOSTUMBLE3:
+	DD MOSTUMBLE3_SUB-mot_anitab1, 0
+MOSTUMBLE3_SUB:
+	DD MOSTUMBLE3_IMG-mot_anitab1
+	DW 131, 140, 102, -6
+MOSTUMBLE5:
+	DD MOSTUMBLE5_SUB-mot_anitab1, 0
+MOSTUMBLE5_SUB:
+	DD MOSTUMBLE5_IMG-mot_anitab1
+	DW 134, 142, 104, -5
+MOSTUMBLE6:
+	DD MOSTUMBLE6_SUB-mot_anitab1, 0
+MOSTUMBLE6_SUB:
+	DD MOSTUMBLE6_IMG-mot_anitab1
+	DW 133, 144, 102, -3
+MOGETUP1:
+	DD MOGETUP1_SUB-mot_anitab1, 0
+MOGETUP1_SUB:
+	DD MOGETUP1_IMG-mot_anitab1
+	DW 150, 120, 90, -34
+MOGETUP2:
+	DD MOGETUP2_SUB-mot_anitab1, 0
+MOGETUP2_SUB:
+	DD MOGETUP2_IMG-mot_anitab1
+	DW 145, 128, 90, -26
+MOGETUP4:
+	DD MOGETUP4_SUB-mot_anitab1, 0
+MOGETUP4_SUB:
+	DD MOGETUP4_IMG-mot_anitab1
+	DW 144, 128, 90, -26
+MOGETUP6:
+	DD MOGETUP6_SUB-mot_anitab1, 0
+MOGETUP6_SUB:
+	DD MOGETUP6_IMG-mot_anitab1
+	DW 145, 130, 92, -19
+MOGETUP7:
+	DD MOGETUP7_SUB-mot_anitab1, 0
+MOGETUP7_SUB:
+	DD MOGETUP7_IMG-mot_anitab1
+	DW 155, 145, 102, -4
+MOGETUP8:
+	DD MOGETUP8_SUB-mot_anitab1, 0
+MOGETUP8_SUB:
+	DD MOGETUP8_IMG-mot_anitab1
+	DW 156, 145, 106, -2
+;MOGETUP9
+;	DW MOGETUP9_SUB-mot_anitab1, 0
+;MOGETUP9_SUB
+;	DW MOGETUP9_IMG-mot_anitab1
+;	DH 136, 146, 106, -1
+MOLEG21:
+	DD MOLEG21_SUB-mot_anitab1, 0
+MOLEG21_SUB:
+	DD MOLEG21_IMG-mot_anitab1
+	DW 123, 152, 98, 4
+MOLEG22:
+	DD MOLEG22_SUB-mot_anitab1, 0
+MOLEG22_SUB:
+	DD MOLEG22_IMG-mot_anitab1
+	DW 118, 145, 95, -3
+MOLEG23:
+	DD MOLEG23_SUB-mot_anitab1, 0
+MOLEG23_SUB:
+	DD MOLEG23_IMG-mot_anitab1
+	DW 119, 141, 95, -7

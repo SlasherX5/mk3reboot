@@ -1,0 +1,278 @@
+#include "win_port.h"
+#include "winddsnd.h"
+
+#include "psxlib.h"
+#include "psxcd.h"
+#include "psxsnd.h"
+#include "mk3snd.h"
+
+static int  mem_size = WMD_SIZE;
+static char mem_pntr[WMD_SIZE];
+
+// SRAM buffer management
+static SampleBlock fighter1blk;
+static SampleBlock fighter2blk;
+static SampleBlock generaldatablk;
+
+static void InitSoundBlocks(void);
+static int  CheckSoundBlock(SampleBlock *sampblk, SampleBlock *chkblk);
+static void DoSoundBlockClear(SampleBlock *sampblk);
+
+typedef struct LcdList {
+    char *lcdname;
+}LcdList;
+
+#define WESS_WMD_FILE "SNDDATA\\MK3SND.WMD"
+
+LcdList lcdfightlist_arr[] = {
+    {"KANO\\KANO.LCD"          },
+    {"SONYA\\SONYA.LCD"        },
+    {"JAX\\JAX.LCD"            },
+    {"INDIAN\\INDIAN.LCD"      },
+    {"SUBZERO\\SUBZERO.LCD"    },
+    {"SWAT\\SWAT.LCD"          },
+    {"LIA\\LIA.LCD"            },
+    {"ROBO1\\ROBO1.LCD"        },
+    {"ROBO2\\ROBO2.LCD"        },
+    {"LAO\\KUNGLAO.LCD"        },
+    {"TUSK\\TUSK.LCD"          },
+    {"SHEEVA\\SHEEVA.LCD"      },
+    {"SHANG\\SHANG.LCD"        },
+    {"LKANG\\LIUKANG.LCD"      },
+    {"ROBO3\\SMOKE.LCD"        },
+    {"MOTARO\\MOTARO.LCD"      },
+    {"SHAOKAHN\\SKFIGHT.LCD"   },
+    {"KANO\\NOOB.LCD"          },
+    {0}
+};
+
+LcdList lcdbaballist_arr[] = {
+    {"KANO\\BKANO.LCD"         },
+    {"SONYA\\BSONYA.LCD"       },
+    {"JAX\\BJAX.LCD"           },
+    {"INDIAN\\BINDIAN.LCD"     },
+    {"SUBZERO\\BSUBZERO.LCD"   },
+    {"SWAT\\BSWAT.LCD"         },
+    {"LIA\\BLIA.LCD"           },
+    {"ROBO1\\BROBO1.LCD"       },
+    {"ROBO2\\BROBO2.LCD"       },
+    {"LAO\\BKUNGLAO.LCD"       },
+    {"TUSK\\BTUSK.LCD"         },
+    {"SHEEVA\\BSHEEVA.LCD"     },
+    {"SHANG\\BSHANG.LCD"       },
+    {"LKANG\\BLIUKANG.LCD"     },
+    {"ROBO3\\BSMOKE.LCD"       },
+    {0},
+    {0},
+    {0},
+    {0}
+};
+
+LcdList lcdanimalist_arr[] = {
+    {"KANO\\AKANO.LCD"         },
+    {"SONYA\\ASONYA.LCD"       },
+    {"JAX\\AJAX.LCD"           },
+    {"INDIAN\\AINDIAN.LCD"     },
+    {"SUBZERO\\ASUBZERO.LCD"   },
+    {"SWAT\\ASWAT.LCD"         },
+    {"LIA\\ALIA.LCD"           },
+    {"ROBO1\\AROBO1.LCD"       },
+    {"ROBO2\\AROBO2.LCD"       },
+    {"LAO\\AKUNGLAO.LCD"       },
+    {"TUSK\\ATUSK.LCD"         },
+    {"SHEEVA\\ASHEEVA.LCD"     },
+    {"SHANG\\ASHANG.LCD"       },
+    {"LKANG\\ALIUKANG.LCD"     },
+    {"ROBO3\\ASMOKE.LCD"       },
+    {0},
+    {0},
+    {0},
+    {0}
+};
+
+LcdList lcdfatallist_arr[] = {
+    {"KANO\\FKANO.LCD"         },
+    {"SONYA\\FSONYA.LCD"       },
+    {"JAX\\FJAX.LCD"           },
+    {"INDIAN\\FINDIAN.LCD"     },
+    {"SUBZERO\\FSUBZERO.LCD"   },
+    {"SWAT\\FSWAT.LCD"         },
+    {"LIA\\FLIA.LCD"           },
+    {"ROBO1\\FROBO1.LCD"       },
+    {"ROBO2\\FROBO2.LCD"       },
+    {"LAO\\FKUNGLAO.LCD"       },
+    {"TUSK\\FTUSK.LCD"         },
+    {"SHEEVA\\FSHEEVA.LCD"     },
+    {"SHANG\\FSHANG.LCD"       },
+    {"LKANG\\FLIUKANG.LCD"     },
+    {"ROBO3\\FSMOKE.LCD"       },
+    {0},
+    {0},
+    {0},
+    {0}
+};
+
+LcdList lcddatalist_arr[] = {
+    {"SNDDATA\\SELECT.LCD"     },
+    {"SNDDATA\\HIDGAME.LCD"    },
+    {"SNDDATA\\RAND.LCD"       },
+    {"SNDDATA\\SMOKECOD.LCD"   },
+    {"SNDDATA\\LADDER.LCD"     },
+    {"SNDDATA\\GAMEOVER.LCD"   },
+    {"SNDDATA\\BUYIN.LCD"      },
+    {"SNDDATA\\VS.LCD"         },
+    {"SNDDATA\\SKSPCIAL.LCD"   },
+    {"SNDDATA\\SKPIT.LCD"      },
+    {"SNDDATA\\SKBELL.LCD"     },
+    {"SNDDATA\\SKTRAIN.LCD"    },
+    {"SNDDATA\\SKSTREET.LCD"   },
+    {"SNDDATA\\SKBRIDGE.LCD"   },
+    {"SNDDATA\\SKBANK.LCD"     },
+    {"SNDDATA\\SKROOF.LCD"     },
+    {"SNDDATA\\SKSOUL.LCD"     },
+    {"SNDDATA\\SKCHURCH.LCD"   },
+    {"SNDDATA\\SKGRAVE.LCD"    },
+    {"SNDDATA\\SKHID.LCD"      },
+    {"SNDDATA\\WIN95GLB.LCD"   },
+    {0}
+};
+
+static int psxsettings[SNDHW_TAG_MAX*2] = {
+        SNDHW_TAG_DRIVER_ID, PSX_ID,
+        SNDHW_TAG_SOUND_EFFECTS, 1,
+        SNDHW_TAG_MUSIC, 1,
+        SNDHW_TAG_DRUMS, 1,
+        SNDHW_TAG_END, 0
+    };
+
+static int *settings_list[2] = {
+        psxsettings,
+        0
+    };
+
+void InitSoundBlocks(void)
+{
+    fighter1blk.numsamps = 0;
+    fighter2blk.numsamps = 0;
+    generaldatablk.numsamps = 0;
+}
+
+int CheckSoundBlock(SampleBlock *sampblk, SampleBlock *chkblk)
+{
+#ifndef BLOCK_SOUND_WESS
+    int numtochk;
+
+    if(sampblk!=chkblk)
+    {
+        numtochk = chkblk->numsamps;
+
+        while(numtochk--)
+        {
+            if(sampblk->sampindx[sampblk->numsamps]==
+               chkblk->sampindx[numtochk])
+            {
+                wess_dig_set_sample_position(chkblk->sampindx[numtochk], (char *)((unsigned long)chkblk->samppos[numtochk]<<3));
+                return(1);
+            }
+        }
+    }
+#endif 
+
+    return(0);
+}
+
+void DoSoundBlockClear(SampleBlock *sampblk)
+{
+#ifndef BLOCK_SOUND_WESS
+    while(sampblk->numsamps)
+    {
+        sampblk->numsamps--;
+
+        if(CheckSoundBlock(sampblk,&fighter1blk)) continue;
+
+        if(CheckSoundBlock(sampblk,&fighter2blk)) continue;
+
+        if(CheckSoundBlock(sampblk,&generaldatablk)) continue;
+
+        //if no other buffers have the sound, clear position
+        wess_dig_set_sample_position(sampblk->sampindx[sampblk->numsamps],
+                                     (char *)0);
+    }
+#endif 
+}
+
+void PsxSoundLoadClear(void)
+{
+    DoSoundBlockClear(&fighter1blk);
+    DoSoundBlockClear(&fighter2blk);
+    DoSoundBlockClear(&generaldatablk);
+}
+
+void PsxSoundLoadData(int lcdnum)
+{
+	Win95_Load_LCD_File(lcddatalist_arr[lcdnum]);
+}
+							 		
+void PsxSoundLoadFighter1(int lcdnum)
+{
+    DoSoundBlockClear(&fighter1blk);
+	Win95_Load_LCD_File(lcdfightlist_arr[lcdnum]);
+}
+
+void PsxSoundLoadFighter2(int lcdnum)
+{
+    DoSoundBlockClear(&fighter2blk);
+	Win95_Load_LCD_File(lcdfightlist_arr[lcdnum]);
+}
+
+void PsxSoundLoadFighter1Babality(int lcdnum)
+{
+    DoSoundBlockClear(&fighter1blk);
+	Win95_Load_LCD_File(lcdbaballist_arr[lcdnum]);
+}
+
+void PsxSoundLoadFighter2Babality(int lcdnum)
+{
+    DoSoundBlockClear(&fighter2blk);
+	Win95_Load_LCD_File(lcdbaballist_arr[lcdnum]);
+}
+
+void PsxSoundLoadFighter1Animality(int lcdnum)
+{
+    DoSoundBlockClear(&fighter1blk);
+	Win95_Load_LCD_File(lcdanimalist_arr[lcdnum]);
+}
+
+void PsxSoundLoadFighter2Animality(int lcdnum)
+{
+    DoSoundBlockClear(&fighter2blk);
+	Win95_Load_LCD_File(lcdanimalist_arr[lcdnum]);
+}
+
+void PsxSoundLoadFighter1Fatality(int lcdnum)
+{
+    DoSoundBlockClear(&fighter1blk);
+	Win95_Load_LCD_File(lcdfatallist_arr[lcdnum]);
+}
+
+void PsxSoundLoadFighter2Fatality(int lcdnum)
+{
+    DoSoundBlockClear(&fighter2blk);
+	Win95_Load_LCD_File(lcdfatallist_arr[lcdnum]);
+}
+
+unsigned long PsxSoundInit(char *ptrtowmd)
+{
+    InitSoundBlocks();
+	Win95_InitDirectSound();
+
+	return(0);
+}
+
+void PsxSoundExit(void)
+{
+	// Cleanup Direct Sound
+	Win95_DeinitDirectSound();
+}
+
+

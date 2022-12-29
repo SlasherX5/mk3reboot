@@ -1,0 +1,61 @@
+#include ../../mk3.mif
+
+all:   $(EXE)bio\szbio.bin \
+    $(EXE)bio\liabio.bin \
+    $(EXE)bio\lkangbio.bin \
+    $(EXE)bio\shangbio.bin \
+    $(EXE)bio\shevabio.bin \
+    $(EXE)bio\tuskbio.bin \
+    $(EXE)bio\robo1bio.bin \
+    $(EXE)bio\swatbio.bin \
+    $(EXE)bio\kanobio.bin \
+    $(EXE)bio\sonyabio.bin \
+    $(EXE)bio\indybio.bin \
+    $(EXE)bio\robo2bio.bin \
+    $(EXE)bio\jaxbio.bin \
+    $(EXE)bio\laobio.bin \
+	 .SYMBOLIC
+
+
+szbio.obj: szbio.asm $(OVLARTI) \
+    ../attract/bio/subzero/subbio.$(TP)
+
+liabio.obj: liabio.asm $(OVLARTI) \
+    ../attract/bio/lia/sinbio.$(TP)
+
+lkangbio.obj: lkangbio.asm $(OVLARTI) \
+    ../attract/bio/lkang/kangbio.$(TP)
+
+shangbio.obj: shangbio.asm $(OVLARTI) \
+    ../attract/bio/shang/shangbio.$(TP)
+
+shevabio.obj: shevabio.asm $(OVLARTI) \
+    ../attract/bio/femgoro/shevabio.$(TP)
+
+tuskbio.obj: tuskbio.asm $(OVLARTI) \
+    ../attract/bio/tusk/kabbio.$(TP)
+
+robo1bio.obj: robo1bio.asm $(OVLARTI) \
+    ../attract/bio/robo1/sekbio.$(TP)
+
+watbio.obj: swatbio.asm $(OVLARTI) \
+    ../attract/bio/swat/copbio.$(TP)
+
+kanobio.obj: kanobio.asm $(OVLARTI) \
+    ../attract/bio/kano/kanobio.$(TP)
+
+sonyabio.obj: sonyabio.asm $(OVLARTI) \
+    ../attract/bio/sonya/sonyabio.$(TP)
+
+indybio.obj: indybio.asm $(OVLARTI) \
+    ../attract/bio/indian/indibio.$(TP)
+
+robo2bio.obj: robo2bio.asm $(OVLARTI) \
+    ../attract/bio/robo2/cyraxbio.$(TP)
+
+jaxbio.obj: jaxbio.asm $(OVLARTI) \
+    ../attract/bio/jax/jaxbio.$(TP)
+
+laobio.obj: laobio.asm $(OVLARTI) \
+    ../attract/bio/lao/kungbio.$(TP)
+

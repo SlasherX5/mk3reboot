@@ -1,0 +1,2656 @@
+swat_anitab1:
+	DD a_stance-swat_anitab1
+	DD a_walkf-swat_anitab1
+	DD a_walkb-swat_anitab1
+	DD a_turn-swat_anitab1
+	DD a_duck-swat_anitab1
+	DD a_duck_turn-swat_anitab1
+	DD a_duck_block-swat_anitab1
+	DD a_duck_hit-swat_anitab1
+	DD a_duck_punch-swat_anitab1
+	DD a_duck_kick_hi-swat_anitab1
+	DD a_duck_kick_lo-swat_anitab1
+	DD a_uppercut-swat_anitab1
+	DD a_block-swat_anitab1
+	DD a_victory-swat_anitab1
+	DD a_hipunch-swat_anitab1
+	DD a_lopunch-swat_anitab1
+	DD a_elbow-swat_anitab1
+	DD a_hikick-swat_anitab1
+	DD a_lokick-swat_anitab1
+	DD a_knee-swat_anitab1
+	DD a_sweep_kick-swat_anitab1
+	DD a_roundhouse-swat_anitab1
+	DD a_jump-swat_anitab1
+	DD a_jump_kick-swat_anitab1
+	DD a_flip_punch-swat_anitab1
+	DD a_flip_kick-swat_anitab1
+	DD a_fflip-swat_anitab1
+	DD a_bflip-swat_anitab1
+	DD a_hit_hi-swat_anitab1
+	DD a_hit_lo-swat_anitab1
+	DD a_knockdown-swat_anitab1
+	DD a_sweep_fall-swat_anitab1
+	DD a_stumble-swat_anitab1
+	DD a_getup-swat_anitab1
+	DD a_sweepup-swat_anitab1
+	DD a_throw-swat_anitab1
+	DD a_zap-swat_anitab1
+	DD a_dizzy-swat_anitab1
+	DD a_fb_kano-swat_anitab1
+	DD a_fb_sonya-swat_anitab1
+	DD a_fb_jax-swat_anitab1
+	DD a_fb_ind-swat_anitab1
+	DD a_fb_sz-swat_anitab1
+	DD a_fb_swat-swat_anitab1
+	DD a_fb_lia-swat_anitab1
+	DD a_fb_robo-swat_anitab1
+	DD a_fb_robo2-swat_anitab1
+	DD a_fb_lao-swat_anitab1
+	DD a_fb_tusk-swat_anitab1
+	DD a_fb_sg-swat_anitab1
+	DD a_fb_st-swat_anitab1
+	DD a_fb_lk-swat_anitab1
+	DD a_fb_smoke-swat_anitab1
+	DD a_afb_kano-swat_anitab1
+	DD a_legged-swat_anitab1
+	DD a_projectile-swat_anitab1
+	DD a_shook-swat_anitab1
+	DD a_afb_robo2-swat_anitab1
+	DD a_zoomed-swat_anitab1
+	DD 0
+	DD 0
+	DD a_back_broke-swat_anitab1
+	DD a_run-swat_anitab1
+	DD a_thudd-swat_anitab1
+	DD a_scared-swat_anitab1
+swat_anitab2:
+	DD a_throw_bomb-swat_anitab1
+	DD a_zoom-swat_anitab1
+	DD a_stick_sweep-swat_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+a_stance:
+	DD OBSTANCE1-swat_anitab1
+	DD OBSTANCE2-swat_anitab1
+	DD OBSTANCE3-swat_anitab1
+	DD OBSTANCE4-swat_anitab1
+	DD OBSTANCE5-swat_anitab1
+	DD OBSTANCE6-swat_anitab1
+	DD OBSTANCE7-swat_anitab1
+	DD ani_jump
+	DD a_stance-swat_anitab1
+a_run:
+	DD OBRUN1-swat_anitab1
+	DD OBRUN2-swat_anitab1
+	DD OBRUN3-swat_anitab1
+	DD OBRUN4-swat_anitab1
+	DD ani_calla
+	DD rsnd_footstep
+	DD OBRUN5-swat_anitab1
+	DD OBRUN6-swat_anitab1
+	DD OBRUN7-swat_anitab1
+	DD OBRUN8-swat_anitab1
+	DD OBRUN9-swat_anitab1
+	DD OBRUN10-swat_anitab1
+	DD ani_calla
+	DD rsnd_footstep
+	DD OBRUN11-swat_anitab1
+	DD OBRUN12-swat_anitab1
+	DD ani_jump
+	DD a_run-swat_anitab1
+	DD 0
+a_walkf:
+	DD OBWALK1-swat_anitab1
+	DD OBWALK2-swat_anitab1
+	DD OBWALK3-swat_anitab1
+	DD OBWALK4-swat_anitab1
+	DD OBWALK5-swat_anitab1
+	DD OBWALK6-swat_anitab1
+	DD OBWALK7-swat_anitab1
+	DD OBWALK8-swat_anitab1
+	DD OBWALK9-swat_anitab1
+	DD ani_jump
+	DD a_walkf-swat_anitab1
+a_walkb:
+	DD OBWALK9-swat_anitab1
+	DD OBWALK8-swat_anitab1
+	DD OBWALK7-swat_anitab1
+	DD OBWALK6-swat_anitab1
+	DD OBWALK5-swat_anitab1
+	DD OBWALK4-swat_anitab1
+	DD OBWALK3-swat_anitab1
+	DD OBWALK2-swat_anitab1
+	DD OBWALK1-swat_anitab1
+	DD ani_jump
+	DD a_walkb-swat_anitab1
+a_turn:
+	DD OBTURN1-swat_anitab1
+	DD OBTURN2-swat_anitab1
+	DD ani_flip
+	DD OBTURN1-swat_anitab1
+	DD 0
+a_duck:
+	DD OBDUCK1-swat_anitab1
+	DD OBDUCK2-swat_anitab1
+	DD OBDUCK3-swat_anitab1
+	DD 0
+a_duck_turn:
+	DD OBDUCKTURN1-swat_anitab1
+	DD OBDUCKTURN2-swat_anitab1
+	DD ani_flip
+	DD OBDUCKTURN2-swat_anitab1
+	DD OBDUCKTURN1-swat_anitab1
+	DD OBDUCK3-swat_anitab1
+	DD 0
+a_duck_block:
+	DD OBDUCKBLOCK1-swat_anitab1
+	DD OBDUCKBLOCK2-swat_anitab1
+	DD OBDUCKBLOCK3-swat_anitab1
+	DD 0
+a_duck_hit:
+	DD OBDUCKHIT2-swat_anitab1
+	DD OBDUCKHIT3-swat_anitab1
+	DD OBDUCKHIT2-swat_anitab1
+	DD OBDUCKHIT1-swat_anitab1
+	DD 0
+a_duck_punch:
+	DD OBDUCKPUNCH1-swat_anitab1
+	DD OBDUCKPUNCH2-swat_anitab1
+	DD OBDUCKPUNCH3-swat_anitab1
+	DD 0
+	DD OBDUCKPUNCH2-swat_anitab1
+	DD OBDUCKPUNCH1-swat_anitab1
+	DD OBDUCK3-swat_anitab1
+	DD 0
+a_duck_kick_lo:
+	DD OBDUCKLOKICK1-swat_anitab1
+	DD OBDUCKLOKICK2-swat_anitab1
+	DD OBDUCKLOKICK3-swat_anitab1
+	DD 0
+	DD OBDUCKLOKICK2-swat_anitab1
+	DD OBDUCKLOKICK1-swat_anitab1
+	DD OBDUCK3-swat_anitab1
+	DD 0
+a_duck_kick_hi:
+	DD OBDUCKLOKICK1-swat_anitab1
+	DD OBDUCKLOKICK2-swat_anitab1
+	DD OBDUCKHIKICK1-swat_anitab1
+	DD OBDUCKHIKICK2-swat_anitab1
+	DD 0
+	DD OBDUCKHIKICK1-swat_anitab1
+	DD OBDUCKLOKICK2-swat_anitab1
+	DD OBDUCKLOKICK1-swat_anitab1
+	DD OBDUCK3-swat_anitab1
+	DD 0
+a_uppercut:
+	DD OBUPPERCUT1-swat_anitab1
+	DD OBUPPERCUT2-swat_anitab1
+	DD OBUPPERCUT4-swat_anitab1
+	DD OBUPPERCUT5-swat_anitab1
+	DD ani_nosleep
+	DD OBUPPERCUT7-swat_anitab1
+	DD 0
+	DD OBUPPERCUT5-swat_anitab1
+	DD 0
+a_hipunch:
+	DD OBHIPUNCH1-swat_anitab1
+	DD OBHIPUNCH2-swat_anitab1
+	DD OBHIPUNCH3-swat_anitab1
+	DD 0
+	DD OBHIPUNCH4-swat_anitab1
+	DD OBHIPUNCH5-swat_anitab1
+	DD OBHIPUNCH6-swat_anitab1
+	DD 0
+	DD OBHIPUNCH5-swat_anitab1
+	DD OBHIPUNCH4-swat_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-swat_anitab1
+	DD 0
+	DD OBHIPUNCH2-swat_anitab1
+	DD OBHIPUNCH1-swat_anitab1
+	DD 0
+	DD OBHIPUNCH7-swat_anitab1
+	DD 0
+	DD OBHIPUNCH4-swat_anitab1
+	DD OBLOPUNCH5-swat_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*6)/8)-swat_anitab1
+	DD 0
+	DD OBHIPUNCH5-swat_anitab1
+	DD OBLOPUNCH2-swat_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-swat_anitab1
+	DD 0
+a_lopunch:
+	DD OBLOPUNCH1-swat_anitab1
+	DD OBLOPUNCH2-swat_anitab1
+	DD OBLOPUNCH3-swat_anitab1
+	DD 0
+	DD OBLOPUNCH4-swat_anitab1
+	DD OBLOPUNCH5-swat_anitab1
+	DD OBLOPUNCH6-swat_anitab1
+	DD 0
+	DD OBLOPUNCH5-swat_anitab1
+	DD OBLOPUNCH4-swat_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-swat_anitab1
+	DD 0
+	DD OBLOPUNCH2-swat_anitab1
+	DD OBLOPUNCH1-swat_anitab1
+	DD 0
+	DD OBHIPUNCH7-swat_anitab1
+	DD 0
+	DD OBLOPUNCH4-swat_anitab1
+	DD OBLOPUNCH5-swat_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*6)/8)-swat_anitab1
+	DD 0
+	DD OBLOPUNCH4-swat_anitab1
+	DD OBHIPUNCH5-swat_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-swat_anitab1
+a_block:
+	DD OBHIBLOCK1-swat_anitab1
+	DD OBHIBLOCK2-swat_anitab1
+	DD OBHIBLOCK3-swat_anitab1
+	DD 0
+a_elbow:
+	DD OBELBOCOMBO1-swat_anitab1
+	DD OBELBOCOMBO2-swat_anitab1
+	DD OBELBOCOMBO3-swat_anitab1
+	DD 0
+	DD OBELBOCOMBO2-swat_anitab1
+	DD OBELBOCOMBO1-swat_anitab1
+	DD 0
+	DD OBELBOCOMBO4-swat_anitab1
+	DD OBELBOCOMBO5-swat_anitab1
+	DD OBELBOCOMBO6-swat_anitab1
+	DD OBELBOCOMBO7-swat_anitab1
+	DD 0
+	DD OBELBOCOMBO8-swat_anitab1
+	DD OBELBOCOMBO9-swat_anitab1
+	DD OBELBOCOMBO10-swat_anitab1
+	DD OBWHACK1-swat_anitab1
+	DD OBWHACK2-swat_anitab1
+	DD OBWHACK3-swat_anitab1
+	DD OBWHACK4-swat_anitab1
+	DD 0
+	DD OBWHACK5-swat_anitab1
+	DD OBWHACK6-swat_anitab1
+	DD OBWHACK7-swat_anitab1
+	DD OBWHACK8-swat_anitab1
+	DD 0
+a_lokick:
+	DD OBLOKICK1-swat_anitab1
+	DD OBLOKICK2-swat_anitab1
+	DD OBLOKICK3-swat_anitab1
+	DD OBLOKICK4-swat_anitab1
+	DD OBLOKICK5-swat_anitab1
+	DD OBLOKICK6-swat_anitab1
+	DD 0
+	DD OBLOKICK5-swat_anitab1
+	DD OBLOKICK4-swat_anitab1
+	DD OBLOKICK3-swat_anitab1
+	DD OBLOKICK2-swat_anitab1
+	DD OBLOKICK1-swat_anitab1
+	DD 0
+a_hikick:
+	DD OBLOKICK1-swat_anitab1
+	DD OBLOKICK2-swat_anitab1
+	DD OBLOKICK3-swat_anitab1
+	DD OBLOKICK4-swat_anitab1
+	DD OBHIKICK1-swat_anitab1
+	DD OBHIKICK2-swat_anitab1
+	DD 0
+	DD OBHIKICK1-swat_anitab1
+	DD OBLOKICK4-swat_anitab1
+	DD OBLOKICK3-swat_anitab1
+	DD OBLOKICK2-swat_anitab1
+	DD OBLOKICK1-swat_anitab1
+	DD 0
+a_knee:
+	DD OBKNEEKICK1-swat_anitab1
+	DD OBKNEEKICK2-swat_anitab1
+	DD OBKNEEKICK3-swat_anitab1
+	DD 0
+	DD OBKNEEKICK2-swat_anitab1
+	DD OBKNEEKICK1-swat_anitab1
+	DD 0
+a_sweep_kick:
+	DD OBSWEEPKICK1-swat_anitab1
+	DD OBSWEEPKICK2-swat_anitab1
+	DD OBSWEEPKICK3-swat_anitab1
+	DD ani_calla
+	DD sweep_sounds
+	DD OBSWEEPKICK4-swat_anitab1
+	DD OBSWEEPKICK5-swat_anitab1
+	DD 0
+	DD OBSWEEPKICK6-swat_anitab1
+	DD OBSWEEPKICK7-swat_anitab1
+	DD OBSWEEPKICK8-swat_anitab1
+	DD 0
+a_roundhouse:
+	DD OBROUNDHOUSE1-swat_anitab1
+	DD OBROUNDHOUSE2-swat_anitab1
+	DD OBROUNDHOUSE3-swat_anitab1
+	DD OBROUNDHOUSE4-swat_anitab1
+	DD OBROUNDHOUSE5-swat_anitab1
+	DD 0
+	DD OBROUNDHOUSE6-swat_anitab1
+	DD OBROUNDHOUSE7-swat_anitab1
+	DD OBROUNDHOUSE8-swat_anitab1
+	DD OBROUNDHOUSE9-swat_anitab1
+	DD 0
+a_jump:
+	DD OBJUMP1-swat_anitab1
+	DD OBJUMP2-swat_anitab1
+	DD OBJUMP3-swat_anitab1
+	DD 0
+a_jump_kick:
+	DD OBJUMPKICK1-swat_anitab1
+	DD OBJUMPKICK2-swat_anitab1
+	DD OBJUMPKICK3-swat_anitab1
+	DD 0
+	DD OBJUMPKICK2-swat_anitab1
+	DD OBJUMPKICK1-swat_anitab1
+	DD 0
+a_fflip:
+	DD OBJUMPFLIP1-swat_anitab1
+	DD OBJUMPFLIP2-swat_anitab1
+	DD OBJUMPFLIP3-swat_anitab1
+	DD OBJUMPFLIP4-swat_anitab1
+	DD OBJUMPFLIP5-swat_anitab1
+	DD OBJUMPFLIP6-swat_anitab1
+	DD OBJUMPFLIP7-swat_anitab1
+	DD OBJUMPFLIP8-swat_anitab1
+	DD ani_jump
+	DD a_fflip+(32/8)-swat_anitab1
+a_bflip:
+	DD OBJUMPFLIP1-swat_anitab1
+	DD OBJUMPFLIP8-swat_anitab1
+	DD OBJUMPFLIP7-swat_anitab1
+	DD OBJUMPFLIP6-swat_anitab1
+	DD OBJUMPFLIP5-swat_anitab1
+	DD OBJUMPFLIP4-swat_anitab1
+	DD OBJUMPFLIP3-swat_anitab1
+	DD OBJUMPFLIP2-swat_anitab1
+	DD ani_jump
+	DD a_bflip+(32/8)-swat_anitab1
+a_flip_kick:
+	DD OBFLIPKICK1-swat_anitab1
+	DD OBFLIPKICK2-swat_anitab1
+	DD OBFLIPKICK3-swat_anitab1
+	DD 0
+	DD OBFLIPKICK2-swat_anitab1
+	DD OBFLIPKICK1-swat_anitab1
+	DD 0
+a_flip_punch:
+	DD OBFLIPUNCH1-swat_anitab1
+	DD OBFLIPUNCH2-swat_anitab1
+	DD OBFLIPUNCH3-swat_anitab1
+	DD 0
+	DD OBFLIPUNCH2-swat_anitab1
+	DD OBFLIPUNCH1-swat_anitab1
+	DD 0
+a_hit_hi:
+	DD OBHIHIT2-swat_anitab1
+	DD OBHIHIT3-swat_anitab1
+	DD OBHIHIT2-swat_anitab1
+	DD OBHIHIT1-swat_anitab1
+	DD 0
+a_hit_lo:
+	DD OBLOHIT2-swat_anitab1
+	DD OBLOHIT3-swat_anitab1
+	DD OBLOHIT2-swat_anitab1
+	DD OBLOHIT1-swat_anitab1
+	DD 0
+a_stumble:
+	DD OBSTUMBLE1-swat_anitab1
+	DD OBSTUMBLE2-swat_anitab1
+	DD OBSTUMBLE3-swat_anitab1
+	DD OBSTUMBLE4-swat_anitab1
+	DD OBSTUMBLE5-swat_anitab1
+	DD OBSTUMBLE6-swat_anitab1
+	DD OBSTUMBLE7-swat_anitab1
+	DD 0
+j_stumble:
+	DD OBSTUMBLE1-swat_anitab1
+	DD OBSTUMBLE2-swat_anitab1
+	DD OBSTUMBLE3-swat_anitab1
+	DD OBSTUMBLE4-swat_anitab1
+	DD OBSTUMBLE5-swat_anitab1
+	DD OBSTUMBLE6-swat_anitab1
+	DD OBSTUMBLE7-swat_anitab1
+	DD ani_jump
+	DD j_stumble-swat_anitab1
+a_dizzy:
+	DD OBSTUNNED1-swat_anitab1
+	DD OBSTUNNED2-swat_anitab1
+	DD OBSTUNNED3-swat_anitab1
+	DD OBSTUNNED4-swat_anitab1
+	DD OBSTUNNED5-swat_anitab1
+	DD OBSTUNNED6-swat_anitab1
+	DD OBSTUNNED7-swat_anitab1
+	DD OBSTUNNED8-swat_anitab1
+	DD ani_jump
+	DD a_dizzy-swat_anitab1
+a_knockdown:
+	DD OBKNOCKDOWN1-swat_anitab1
+	DD OBKNOCKDOWN2-swat_anitab1
+	DD OBKNOCKDOWN3-swat_anitab1
+	DD OBKNOCKDOWN4-swat_anitab1
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD 0
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD OBKNOCKDOWN7-swat_anitab1
+	DD 0
+a_getup:
+	DD OBGETUP1-swat_anitab1
+	DD OBGETUP2-swat_anitab1
+	DD OBGETUP3-swat_anitab1
+	DD OBGETUP4-swat_anitab1
+	DD OBGETUP5-swat_anitab1
+	DD OBGETUP6-swat_anitab1
+	DD 0
+a_sweep_fall:
+	DD OBSWEEPFALL1-swat_anitab1
+	DD OBSWEEPFALL2-swat_anitab1
+	DD OBSWEEPFALL3-swat_anitab1
+	DD OBSWEEPFALL4-swat_anitab1
+	DD 0
+	DD OBSWEEPFALL5-swat_anitab1
+	DD OBSWEEPFALL6-swat_anitab1
+	DD 0
+a_sweepup:
+	DD OBSWEEPUP1-swat_anitab1
+	DD OBSWEEPUP2-swat_anitab1
+	DD OBSWEEPUP3-swat_anitab1
+	DD OBSWEEPUP4-swat_anitab1
+	DD OBSWEEPUP5-swat_anitab1
+	DD OBSWEEPUP6-swat_anitab1
+	DD 0
+a_legged:
+	DD ani_offset_xy
+	DW -05dH
+	DW 002H
+	DD OBKNOCKDOWN1-swat_anitab1
+	DD ani_offset_xy
+	DW -056H
+	DW -02dH
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -01cH
+	DW -042H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 029H
+	DW -038H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 056H
+	DW -016H
+	DD OBFLIPPED5-swat_anitab1
+	DD 0
+a_zoomed:
+	DD ani_offset_xy
+	DW 055H
+	DW -01cH
+	DD OBKNOCKDOWN3-swat_anitab1
+	DD ani_offset_xy
+	DW 057H
+	DW 001H
+	DD OBKNOCKDOWN4-swat_anitab1
+	DD ani_offset_xy
+	DW 027H
+	DW 009H
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD ani_offset_xy
+	DW -030H
+	DW 012H
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD ani_offset_xy
+	DW -0a4H
+	DW -013H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW -055H
+	DD OBFLIPPED3-swat_anitab1
+	DD 0
+	DD OBFLIPPED3-swat_anitab1
+	DD OBFLIPPED4-swat_anitab1
+	DD OBFLIPPED5-swat_anitab1
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD OBKNOCKDOWN7-swat_anitab1
+	DD 0
+a_shook:
+	DD ani_offset_xy
+	DW -051H
+	DW -008H
+	DD OBSTUMBLE2-swat_anitab1
+	DD ani_offset_xy
+	DW -030H
+	DW -01fH
+	DD OBSTUMBLE2-swat_anitab1
+	DD ani_offset_xy
+	DW -017H
+	DW -016H
+	DD OBSTUMBLE2-swat_anitab1
+	DD 0
+	DD ani_offset_xy
+	DW -017H
+	DW -016H
+	DD OBSTUMBLE2-swat_anitab1
+	DD ani_offset_xy
+	DW -019H
+	DW -017H
+	DD OBSTUMBLE2-swat_anitab1
+	DD ani_offset_xy
+	DW -02dH
+	DW -020H
+	DD OBSTUMBLE2-swat_anitab1
+	DD ani_offset_xy
+	DW -039H
+	DW -022H
+	DD OBSTUMBLE2-swat_anitab1
+	DD 0
+a_afb_kano:
+	DD ani_offset_xy
+	DW -03eH
+	DW 000H
+	DD OBKNOCKDOWN1-swat_anitab1
+	DD ani_offset_xy
+	DW -040H
+	DW -00cH
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD ani_offset_xy
+	DW -069H
+	DW 026H
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD 0
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD OBKNOCKDOWN7-swat_anitab1
+	DD 0
+a_fb_smoke:
+a_afb_robo2:
+	DD ani_offset_xy
+	DW -026H
+	DW -032H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW -003H
+	DW -03fH
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 026H
+	DW -04eH
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 048H
+	DW -02dH
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 05dH
+	DW -00fH
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD ani_offset_xy
+	DW 06cH
+	DW 01cH
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD 0
+a_fb_lao:
+	DD ani_offset_xy
+	DW -01dH
+	DW 01aH
+	DD OBSTUMBLE1-swat_anitab1
+	DD ani_offset_xy
+	DW 000H
+	DW 033H
+	DD OBSTUMBLE1-swat_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -038H
+	DW 014H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -058H
+	DW -016H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW -03bH
+	DW -04cH
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 014H
+	DW -079H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 053H
+	DW -07aH
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW 061H
+	DW -065H
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW 077H
+	DW 002H
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW 077H
+	DW 052H
+	DD OBFLIPPED5-swat_anitab1
+	DD 0
+a_fb_tusk:
+	DD ani_offset_xy
+	DW -08dH
+	DW -006H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -06cH
+	DW -04aH
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW -01eH
+	DW -077H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 039H
+	DW -06dH
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 044H
+	DW -02aH
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW 00fH
+	DW 009H
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW -031H
+	DW -014H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD ani_offset_xy
+	DW -078H
+	DW -007H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -061H
+	DW -044H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW 010H
+	DW -066H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 065H
+	DW -018H
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW 060H
+	DW 002H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD 0
+a_fb_sg:
+	DD ani_offset_xy
+	DW -03dH
+	DW -030H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -008H
+	DW -052H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW -002H
+	DW -052H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 013H
+	DW -04aH
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 015H
+	DW -02fH
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -025H
+	DW -00fH
+	DD OBKNOCKDOWN7-swat_anitab1
+	DD 0
+a_fb_st:
+	DD ani_offset_xy
+	DW -04cH
+	DW -012H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW -003H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -02aH
+	DW 001H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW -016H
+	DW 009H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 00eH
+	DW 014H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW -00fH
+	DW -004H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD ani_offset_xy
+	DW -023H
+	DW -004H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD ani_offset_xy
+	DW -038H
+	DW -004H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD ani_offset_xy
+	DW -060H
+	DW 019H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -076H
+	DW -01aH
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW -04cH
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW 02bH
+	DW -056H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 046H
+	DW -030H
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW 05bH
+	DW -008H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD 0
+a_fb_lk:
+	DD ani_offset_xy
+	DW -044H
+	DW -009H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -03bH
+	DW -004H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -021H
+	DW 002H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW 010H
+	DW 005H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 03bH
+	DW -008H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 088H
+	DW -026H
+	DD OBFLIPPED4-swat_anitab1
+	DD 0
+	DD OBFLIPPED5-swat_anitab1
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD OBKNOCKDOWN7-swat_anitab1
+	DD 0
+a_fb_kano:
+	DD ani_offset_xy
+	DW -03aH
+	DW -022H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -026H
+	DW -02fH
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW 038H
+	DW -02fH
+	DD OBFLIPPED3-swat_anitab1
+	DD 0
+	DD OBFLIPPED4-swat_anitab1
+	DD OBFLIPPED5-swat_anitab1
+	DD OBKNOCKDOWN4-swat_anitab1
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD 0
+a_fb_sonya:
+	DD ani_offset_xy
+	DW -031H
+	DW -008H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -01eH
+	DW 001H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW 017H
+	DW -005H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 061H
+	DW -02eH
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 094H
+	DW -031H
+	DD OBFLIPPED4-swat_anitab1
+	DD 0
+	DD OBFLIPPED5-swat_anitab1
+	DD OBKNOCKDOWN4-swat_anitab1
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD 0
+a_fb_jax:
+	DD ani_offset_xy
+	DW -04dH
+	DW -024H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -030H
+	DW -037H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW 004H
+	DW -049H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 03aH
+	DW -043H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 045H
+	DW -00dH
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 047H
+	DW 009H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD 0
+a_fb_ind:
+	DD ani_offset_xy
+	DW -067H
+	DW -01dH
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -050H
+	DW -03cH
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW -021H
+	DW -057H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 02cH
+	DW -057H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 053H
+	DW -034H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD ani_offset_xy
+	DW 042H
+	DW -003H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD 0
+a_fb_sz:
+	DD ani_offset_xy
+	DW -04cH
+	DW -03cH
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW 04cH
+	DW -034H
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW 036H
+	DW -010H
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW -008H
+	DW -00dH
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD ani_offset_xy
+	DW -04aH
+	DW -037H
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD ani_offset_xy
+	DW -081H
+	DW -064H
+	DD OBKNOCKDOWN5-swat_anitab1
+	DD 0
+a_fb_swat:
+	DD ani_offset_xy
+	DW -05fH
+	DW -017H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -045H
+	DW -045H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW 01dH
+	DW -04fH
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 05aH
+	DW -025H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 04bH
+	DW 006H
+	DD OBKNOCKDOWN6-swat_anitab1
+	DD 0
+a_fb_lia:
+	DD ani_offset_xy
+	DW -064H
+	DW 000H
+	DD OBSTUMBLE1-swat_anitab1
+	DD ani_offset_xy
+	DW -073H
+	DW 003H
+	DD OBSTUMBLE1-swat_anitab1
+	DD ani_offset_xy
+	DW -07fH
+	DW -028H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -062H
+	DW -04aH
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -02fH
+	DW -04eH
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW 018H
+	DW -053H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW 09aH
+	DW 006H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 08dH
+	DW 000H
+	DD OBKNOCKDOWN7-swat_anitab1
+	DD 0
+a_fb_robo:
+	DD ani_offset_xy
+	DW -062H
+	DW -014H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -05bH
+	DW -031H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW -043H
+	DW -048H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW -015H
+	DW -065H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 036H
+	DW -079H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 05aH
+	DW -064H
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 076H
+	DW -02aH
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW 057H
+	DW -00dH
+	DD OBKNOCKDOWN7-swat_anitab1
+	DD 0
+a_fb_robo2:
+	DD ani_offset_xy
+	DW -02eH
+	DW -00aH
+	DD OBSTUMBLE1-swat_anitab1
+	DD ani_offset_xy
+	DW -035H
+	DW -027H
+	DD OBFLIPPED1-swat_anitab1
+	DD ani_offset_xy
+	DW -01fH
+	DW -025H
+	DD OBFLIPPED2-swat_anitab1
+	DD ani_offset_xy
+	DW 005H
+	DW -016H
+	DD OBFLIPPED3-swat_anitab1
+	DD ani_offset_xy
+	DW 01bH
+	DW -00cH
+	DD OBFLIPPED4-swat_anitab1
+	DD ani_offset_xy
+	DW 009H
+	DW -007H
+	DD OBFLIPPED5-swat_anitab1
+	DD ani_offset_xy
+	DW -01aH
+	DW -011H
+	DD OBKNOCKDOWN7-swat_anitab1
+	DD 0
+a_zap:
+	DD OBSHOOT1-swat_anitab1
+	DD OBSHOOT2-swat_anitab1
+	DD OBSHOOT3-swat_anitab1
+	DD ani_sladd
+	DD BANG1-swat_anitab1
+	DD ani_slani_sleep
+	DD BANG1-swat_anitab1
+	DD 0
+	DD BANG2-swat_anitab1
+	DD BANG3-swat_anitab1
+	DD BANG4-swat_anitab1
+j_bang:
+	DD BANG5-swat_anitab1
+	DD BANG6-swat_anitab1
+	DD BANG7-swat_anitab1
+	DD BANG8-swat_anitab1
+	DD ani_jump
+	DD j_bang-swat_anitab1
+	DD 0
+	DD BANGHIT1-swat_anitab1
+	DD BANGHIT2-swat_anitab1
+	DD BANGHIT3-swat_anitab1
+	DD BANGHIT4-swat_anitab1
+	DD BANGHIT5-swat_anitab1
+	DD BANGHIT6-swat_anitab1
+	DD BANGHIT7-swat_anitab1
+	DD BANGHIT8-swat_anitab1
+	DD BANGHIT9-swat_anitab1
+	DD 0
+a_throw:
+	DD OBSTICKFLIP1-swat_anitab1
+	DD OBSTICKFLIP2-swat_anitab1
+	DD OBSTICKFLIP3-swat_anitab1
+	DD 0
+	DD OBSTICKFLIP4-swat_anitab1
+	DD OBSTICKFLIP5-swat_anitab1
+	DD OBSTICKFLIP6-swat_anitab1
+	DD OBSTICKFLIP7-swat_anitab1
+	DD OBSTICKFLIP8-swat_anitab1
+	DD 0
+	DD OBSTICKFLIP7-swat_anitab1
+	DD 0
+a_throw_bomb:
+	DD OBTHROWBOMB1-swat_anitab1
+	DD OBTHROWBOMB2-swat_anitab1
+	DD OBTHROWBOMB3-swat_anitab1
+	DD OBTHROWBOMB4-swat_anitab1
+	DD OBTHROWBOMB5-swat_anitab1
+	DD OBTHROWBOMB6-swat_anitab1
+	DD 0
+j_bomb:
+	DD MBOMB1-swat_anitab1
+	DD MBOMB2-swat_anitab1
+	DD MBOMB3-swat_anitab1
+	DD MBOMB4-swat_anitab1
+	DD MBOMB5-swat_anitab1
+	DD MBOMB6-swat_anitab1
+	DD MBOMB7-swat_anitab1
+	DD MBOMB8-swat_anitab1
+	DD MBOMB9-swat_anitab1
+	DD MBOMB10-swat_anitab1
+	DD MBOMB11-swat_anitab1
+	DD MBOMB12-swat_anitab1
+	DD ani_jump
+	DD j_bomb-swat_anitab1
+a_zoom:
+	DD OBAIRSTICK1-swat_anitab1
+	DD 0
+	DD OBAIRSTICK2-swat_anitab1
+	DD OBAIRSTICK3-swat_anitab1
+	DD OBAIRSTICK4-swat_anitab1
+	DD OBAIRSTICK5-swat_anitab1
+	DD OBAIRSTICK6-swat_anitab1
+	DD OBAIRSTICK7-swat_anitab1
+	DD 0
+	DD OBAIRSTICK8-swat_anitab1
+	DD OBAIRSTICK7-swat_anitab1
+	DD OBAIRSTICK6-swat_anitab1
+	DD OBAIRSTICK5-swat_anitab1
+	DD OBAIRSTICK4-swat_anitab1
+	DD OBAIRSTICK3-swat_anitab1
+	DD 0
+a_stick_sweep:
+	DD OBSTIKSWEEP1-swat_anitab1
+	DD OBSTIKSWEEP2-swat_anitab1
+	DD ani_calla
+	DD stsw_sound
+	DD OBSTIKSWEEP3-swat_anitab1
+	DD OBSTIKSWEEP4-swat_anitab1
+	DD 0
+	DD OBSTIKSWEEP5-swat_anitab1
+	DD OBSTIKSWEEP4-swat_anitab1
+	DD OBSTIKSWEEP3-swat_anitab1
+	DD OBSTIKSWEEP2-swat_anitab1
+	DD OBSTIKSWEEP1-swat_anitab1
+	DD 0
+a_victory:
+	DD OBVICTORY1-swat_anitab1
+	DD OBVICTORY2-swat_anitab1
+	DD OBVICTORY3-swat_anitab1
+	DD OBVICTORY4-swat_anitab1
+	DD OBVICTORY5-swat_anitab1
+	DD ani_nosleep
+	DD OBVICTORY6-swat_anitab1
+	DD ani_sladd
+	DD BLASTVIC1-swat_anitab1
+	DD 0
+	DD ani_slani_sleep
+	DD BLASTVIC1-swat_anitab1
+	DD ani_ochar_sound
+	DD 5
+	DD ani_slani_sleep
+	DD BLASTVIC2-swat_anitab1
+	DD ani_ochar_sound
+	DD 5
+	DD ani_slani_sleep
+	DD BLASTVIC3-swat_anitab1
+	DD ani_ochar_sound
+	DD 5
+	DD ani_slani_sleep
+	DD BLASTVIC4-swat_anitab1
+	DD ani_ochar_sound
+	DD 5
+	DD 0
+	DD OBVICTORY7-swat_anitab1
+	DD OBVICTORY8-swat_anitab1
+	DD OBVICTORY91-swat_anitab1
+	DD OBVICTORY92-swat_anitab1
+	DD OBVICTORY93-swat_anitab1
+	DD OBVICTORY94-swat_anitab1
+	DD OBVICTORY95-swat_anitab1
+	DD OBVICTORY96-swat_anitab1
+	DD OBVICTORY10-swat_anitab1
+	DD OBVICTORY11-swat_anitab1
+	DD OBVICTORY12-swat_anitab1
+	DD OBVICTORY13-swat_anitab1
+	DD OBVICTORY14-swat_anitab1
+	DD 0
+a_victory_bolts:
+	DD 0
+	DD 0
+a_scared:
+	DD OBSCARED3-swat_anitab1
+	DD 0
+a_thudd:
+	DD OBTHUD1-swat_anitab1
+	DD OBTHUD2-swat_anitab1
+	DD OBTHUD3-swat_anitab1
+	DD OBTHUD4-swat_anitab1
+	DD OBTHUD5-swat_anitab1
+	DD OBTHUD6-swat_anitab1
+	DD OBTHUD7-swat_anitab1
+	DD 0
+OBSTANCE1:
+	DD OBSTANCE1_SUB-swat_anitab1, 0
+OBSTANCE1_SUB:
+	DD OBSTANCE1_IMG-swat_anitab1
+	DW 45, 112, 14, -7
+	DD   _OLTBLU_P
+OBSTANCE2:
+	DD OBSTANCE2_SUB-swat_anitab1, 0
+OBSTANCE2_SUB:
+	DD OBSTANCE2_IMG-swat_anitab1
+	DW 45, 112, 14, -7
+OBSTANCE3:
+	DD OBSTANCE3_SUB-swat_anitab1, 0
+OBSTANCE3_SUB:
+	DD OBSTANCE3_IMG-swat_anitab1
+	DW 46, 111, 14, -8
+OBSTANCE4:
+	DD OBSTANCE4_SUB-swat_anitab1, 0
+OBSTANCE4_SUB:
+	DD OBSTANCE4_IMG-swat_anitab1
+	DW 46, 111, 14, -8
+OBSTANCE5:
+	DD OBSTANCE5_SUB-swat_anitab1, 0
+OBSTANCE5_SUB:
+	DD OBSTANCE5_IMG-swat_anitab1
+	DW 45, 112, 14, -7
+OBSTANCE6:
+	DD OBSTANCE6_SUB-swat_anitab1, 0
+OBSTANCE6_SUB:
+	DD OBSTANCE6_IMG-swat_anitab1
+	DW 48, 112, 17, -7
+OBSTANCE7:
+	DD OBSTANCE7_SUB-swat_anitab1, 0
+OBSTANCE7_SUB:
+	DD OBSTANCE7_IMG-swat_anitab1
+	DW 49, 112, 18, -7
+OBWALK1:
+	DD OBWALK1_SUB-swat_anitab1, 0
+OBWALK1_SUB:
+	DD OBWALK1_IMG-swat_anitab1
+	DW 50, 114, 20, -7
+OBWALK2:
+	DD OBWALK2_SUB-swat_anitab1, 0
+OBWALK2_SUB:
+	DD OBWALK2_IMG-swat_anitab1
+	DW 41, 116, 10, -5
+OBWALK3:
+	DD OBWALK3_SUB-swat_anitab1, 0
+OBWALK3_SUB:
+	DD OBWALK3_IMG-swat_anitab1
+	DW 42, 115, 12, -5
+OBWALK4:
+	DD OBWALK4_SUB-swat_anitab1, 0
+OBWALK4_SUB:
+	DD OBWALK4_IMG-swat_anitab1
+	DW 42, 115, 13, -6
+OBWALK5:
+	DD OBWALK5_SUB-swat_anitab1, 0
+OBWALK5_SUB:
+	DD OBWALK5_IMG-swat_anitab1
+	DW 44, 113, 14, -8
+OBWALK6:
+	DD OBWALK6_SUB-swat_anitab1, 0
+OBWALK6_SUB:
+	DD OBWALK6_IMG-swat_anitab1
+	DW 41, 114, 12, -7
+OBWALK7:
+	DD OBWALK7_SUB-swat_anitab1, 0
+OBWALK7_SUB:
+	DD OBWALK7_IMG-swat_anitab1
+	DW 41, 114, 13, -6
+OBWALK8:
+	DD OBWALK8_SUB-swat_anitab1, 0
+OBWALK8_SUB:
+	DD OBWALK8_IMG-swat_anitab1
+	DW 41, 115, 14, -5
+OBWALK9:
+	DD OBWALK9_SUB-swat_anitab1, 0
+OBWALK9_SUB:
+	DD OBWALK9_IMG-swat_anitab1
+	DW 46, 115, 14, -7
+OBTURN1:
+	DD OBTURN1_SUB-swat_anitab1, 0
+OBTURN1_SUB:
+	DD OBTURN1_IMG-swat_anitab1
+	DW 42, 111, 14, -8
+OBTURN2:
+	DD OBTURN2_SUB-swat_anitab1, 0
+OBTURN2_SUB:
+	DD OBTURN2_IMG-swat_anitab1
+	DW 42, 112, 15, -7
+OBDUCK1:
+	DD OBDUCK1_SUB-swat_anitab1, 0
+OBDUCK1_SUB:
+	DD OBDUCK1_IMG-swat_anitab1
+	DW 47, 99, 14, -20
+OBDUCK2:
+	DD OBDUCK2_SUB-swat_anitab1, 0
+OBDUCK2_SUB:
+	DD OBDUCK2_IMG-swat_anitab1
+	DW 58, 78, 17, -41
+OBDUCK3:
+	DD OBDUCK3_SUB-swat_anitab1, 0
+OBDUCK3_SUB:
+	DD OBDUCK3_IMG-swat_anitab1
+	DW 62, 58, 18, -61
+OBDUCKTURN1:
+	DD OBDUCKTURN1_SUB-swat_anitab1, 0
+OBDUCKTURN1_SUB:
+	DD OBDUCKTURN1_IMG-swat_anitab1
+	DW 56, 62, 18, -59
+OBDUCKTURN2:
+	DD OBDUCKTURN2_SUB-swat_anitab1, 0
+OBDUCKTURN2_SUB:
+	DD OBDUCKTURN2_IMG-swat_anitab1
+	DW 50, 62, 16, -59
+OBDUCKBLOCK1:
+	DD OBDUCKBLOCK1_SUB-swat_anitab1, 0
+OBDUCKBLOCK1_SUB:
+	DD OBDUCKBLOCK1_IMG-swat_anitab1
+	DW 58, 63, 15, -56
+OBDUCKBLOCK2:
+	DD OBDUCKBLOCK2_SUB-swat_anitab1, 0
+OBDUCKBLOCK2_SUB:
+	DD OBDUCKBLOCK2_IMG-swat_anitab1
+	DW 51, 67, 15, -52
+OBDUCKBLOCK3:
+	DD OBDUCKBLOCK3_SUB-swat_anitab1, 0
+OBDUCKBLOCK3_SUB:
+	DD OBDUCKBLOCK3_IMG-swat_anitab1
+	DW 45, 69, 12, -50
+OBDUCKHIT2:
+	DD OBDUCKHIT2_SUB-swat_anitab1, 0
+OBDUCKHIT2_SUB:
+	DD OBDUCKHIT2_IMG-swat_anitab1
+	DW 52, 71, 14, -50
+OBDUCKHIT3:
+	DD OBDUCKHIT3_SUB-swat_anitab1, 0
+OBDUCKHIT3_SUB:
+	DD OBDUCKHIT3_IMG-swat_anitab1
+	DW 50, 71, 15, -49
+OBDUCKHIT1:
+	DD OBDUCKHIT1_SUB-swat_anitab1, 0
+OBDUCKHIT1_SUB:
+	DD OBDUCKHIT1_IMG-swat_anitab1
+	DW 51, 68, 13, -53
+OBDUCKPUNCH1:
+	DD OBDUCKPUNCH1_SUB-swat_anitab1, 0
+OBDUCKPUNCH1_SUB:
+	DD OBDUCKPUNCH1_IMG-swat_anitab1
+	DW 46, 68, 13, -52
+OBDUCKPUNCH2:
+	DD OBDUCKPUNCH2_SUB-swat_anitab1, 0
+OBDUCKPUNCH2_SUB:
+	DD OBDUCKPUNCH2_IMG-swat_anitab1
+	DW 63, 70, 14, -50
+OBDUCKPUNCH3:
+	DD OBDUCKPUNCH3_SUB-swat_anitab1, 0
+OBDUCKPUNCH3_SUB:
+	DD OBDUCKPUNCH3_IMG-swat_anitab1
+	DW 79, 74, 14, -49
+OBDUCKLOKICK1:
+	DD OBDUCKLOKICK1_SUB-swat_anitab1, 0
+OBDUCKLOKICK1_SUB:
+	DD OBDUCKLOKICK1_IMG-swat_anitab1
+	DW 49, 64, 18, -66
+OBDUCKLOKICK2:
+	DD OBDUCKLOKICK2_SUB-swat_anitab1, 0
+OBDUCKLOKICK2_SUB:
+	DD OBDUCKLOKICK2_IMG-swat_anitab1
+	DW 54, 65, 3, -64
+OBDUCKHIKICK1:
+	DD OBDUCKHIKICK1_SUB-swat_anitab1, 0
+OBDUCKHIKICK1_SUB:
+	DD OBDUCKHIKICK1_IMG-swat_anitab1
+	DW 77, 65, 11, -65
+OBDUCKHIKICK2:
+	DD OBDUCKHIKICK2_SUB-swat_anitab1, 0
+OBDUCKHIKICK2_SUB:
+	DD OBDUCKHIKICK2_IMG-swat_anitab1
+	DW 81, 81, 12, -49
+OBDUCKLOKICK3:
+	DD OBDUCKLOKICK3_SUB-swat_anitab1, 0
+OBDUCKLOKICK3_SUB:
+	DD OBDUCKLOKICK3_IMG-swat_anitab1
+	DW 80, 65, 2, -64
+OBUPPERCUT1:
+	DD OBUPPERCUT1_SUB-swat_anitab1, 0
+OBUPPERCUT1_SUB:
+	DD OBUPPERCUT1_IMG-swat_anitab1
+	DW 53, 76, 18, -43
+OBUPPERCUT2:
+	DD OBUPPERCUT2_SUB-swat_anitab1, 0
+OBUPPERCUT2_SUB:
+	DD OBUPPERCUT2_IMG-swat_anitab1
+	DW 54, 91, 21, -28
+OBUPPERCUT4:
+	DD OBUPPERCUT4_SUB-swat_anitab1, 0
+OBUPPERCUT4_SUB:
+	DD OBUPPERCUT4_IMG-swat_anitab1
+	DW 78, 105, 20, -14
+OBUPPERCUT5:
+	DD OBUPPERCUT5_SUB-swat_anitab1, 0
+OBUPPERCUT5_SUB:
+	DD OBUPPERCUT5_IMG-swat_anitab1
+	DW 75, 108, 18, -11
+OBUPPERCUT7:
+	DD OBUPPERCUT7_SUB-swat_anitab1, 0
+OBUPPERCUT7_SUB:
+	DD OBUPPERCUT7_IMG-swat_anitab1
+	DW 48, 131, 15, 11
+OBHIBLOCK1:
+	DD OBHIBLOCK1_SUB-swat_anitab1, 0
+OBHIBLOCK1_SUB:
+	DD OBHIBLOCK1_IMG-swat_anitab1
+	DW 42, 111, 12, -8
+OBHIBLOCK2:
+	DD OBHIBLOCK2_SUB-swat_anitab1, 0
+OBHIBLOCK2_SUB:
+	DD OBHIBLOCK2_IMG-swat_anitab1
+	DW 42, 111, 12, -8
+OBHIBLOCK3:
+	DD OBHIBLOCK3_SUB-swat_anitab1, 0
+OBHIBLOCK3_SUB:
+	DD OBHIBLOCK3_IMG-swat_anitab1
+	DW 42, 111, 12, -8
+OBVICTORY1:
+	DD OBVICTORY1_SUB-swat_anitab1, 0
+OBVICTORY1_SUB:
+	DD OBVICTORY1_IMG-swat_anitab1
+	DW 38, 115, 13, -4
+OBVICTORY2:
+	DD OBVICTORY2_SUB-swat_anitab1, 0
+OBVICTORY2_SUB:
+	DD OBVICTORY2_IMG-swat_anitab1
+	DW 40, 116, 8, -2
+OBVICTORY3:
+	DD OBVICTORY3_SUB-swat_anitab1, 0
+OBVICTORY3_SUB:
+	DD OBVICTORY3_IMG-swat_anitab1
+	DW 41, 116, 10, -2
+OBVICTORY4:
+	DD OBVICTORY4_SUB-swat_anitab1, 0
+OBVICTORY4_SUB:
+	DD OBVICTORY4_IMG-swat_anitab1
+	DW 45, 132, 15, 12
+OBVICTORY5:
+	DD OBVICTORY5_SUB-swat_anitab1, 0
+OBVICTORY5_SUB:
+	DD OBVICTORY5_IMG-swat_anitab1
+	DW 38, 155, 10, 35
+OBVICTORY6:
+	DD OBVICTORY6_SUB-swat_anitab1, 0
+OBVICTORY6_SUB:
+	DD OBVICTORY6_IMG-swat_anitab1
+	DW 38, 151, 10, 31
+BLASTVIC1:
+	DD BLASTVIC1_SUB-swat_anitab1, 0
+BLASTVIC1_SUB:
+	DD BLASTVIC1_IMG-swat_anitab1
+	DW 26, 48, 21, 60
+	DD   _GFIRE_P
+BLASTVIC2:
+	DD BLASTVIC2_SUB-swat_anitab1, 0
+BLASTVIC2_SUB:
+	DD BLASTVIC2_IMG-swat_anitab1
+	DW 14, 46, 14, 59
+BLASTVIC3:
+	DD BLASTVIC3_SUB-swat_anitab1, 0
+BLASTVIC3_SUB:
+	DD BLASTVIC3_IMG-swat_anitab1
+	DW 25, 45, 20, 58
+BLASTVIC4:
+	DD BLASTVIC4_SUB-swat_anitab1, 0
+BLASTVIC4_SUB:
+	DD BLASTVIC4_IMG-swat_anitab1
+	DW 15, 42, 14, 54
+OBVICTORY7:
+	DD OBVICTORY7_SUB-swat_anitab1, 0
+OBVICTORY7_SUB:
+	DD OBVICTORY7_IMG-swat_anitab1
+	DW 44, 141, 18, 21
+OBVICTORY8:
+	DD OBVICTORY8_SUB-swat_anitab1, 0
+OBVICTORY8_SUB:
+	DD OBVICTORY8_IMG-swat_anitab1
+	DW 53, 118, 26, -1
+OBVICTORY91:
+	DD OBVICTORY91_SUB-swat_anitab1, 0
+OBVICTORY91_SUB:
+	DD OBVICTORY91_IMG-swat_anitab1
+	DW 58, 118, 32, -1
+OBVICTORY92:
+	DD OBVICTORY92_SUB-swat_anitab1, 0
+OBVICTORY92_SUB:
+	DD OBVICTORY92_IMG-swat_anitab1
+	DW 50, 118, 25, -1
+OBVICTORY93:
+	DD OBVICTORY93_SUB-swat_anitab1, 0
+OBVICTORY93_SUB:
+	DD OBVICTORY93_IMG-swat_anitab1
+	DW 52, 118, 26, -1
+OBVICTORY94:
+	DD OBVICTORY94_SUB-swat_anitab1, 0
+OBVICTORY94_SUB:
+	DD OBVICTORY94_IMG-swat_anitab1
+	DW 49, 118, 23, -1
+OBVICTORY95:
+	DD OBVICTORY95_SUB-swat_anitab1, 0
+OBVICTORY95_SUB:
+	DD OBVICTORY95_IMG-swat_anitab1
+	DW 50, 118, 25, -1
+OBVICTORY96:
+	DD OBVICTORY96_SUB-swat_anitab1, 0
+OBVICTORY96_SUB:
+	DD OBVICTORY96_IMG-swat_anitab1
+	DW 46, 118, 20, -1
+OBVICTORY10:
+	DD OBVICTORY10_SUB-swat_anitab1, 0
+OBVICTORY10_SUB:
+	DD OBVICTORY10_IMG-swat_anitab1
+	DW 43, 114, 16, -5
+OBVICTORY11:
+	DD OBVICTORY11_SUB-swat_anitab1, 0
+OBVICTORY11_SUB:
+	DD OBVICTORY11_IMG-swat_anitab1
+	DW 36, 117, 8, -2
+OBVICTORY12:
+	DD OBVICTORY12_SUB-swat_anitab1, 0
+OBVICTORY12_SUB:
+	DD OBVICTORY12_IMG-swat_anitab1
+	DW 42, 116, 10, -2
+OBVICTORY13:
+	DD OBVICTORY13_SUB-swat_anitab1, 0
+OBVICTORY13_SUB:
+	DD OBVICTORY13_IMG-swat_anitab1
+	DW 38, 116, 14, -2
+OBVICTORY14:
+	DD OBVICTORY14_SUB-swat_anitab1, 0
+OBVICTORY14_SUB:
+	DD OBVICTORY14_IMG-swat_anitab1
+	DW 38, 116, 14, -3
+OBHIPUNCH1:
+	DD OBHIPUNCH1_SUB-swat_anitab1, 0
+OBHIPUNCH1_SUB:
+	DD OBHIPUNCH1_IMG-swat_anitab1
+	DW 44, 111, 13, -8
+OBHIPUNCH2:
+	DD OBHIPUNCH2_SUB-swat_anitab1, 0
+OBHIPUNCH2_SUB:
+	DD OBHIPUNCH2_IMG-swat_anitab1
+	DW 64, 111, 12, -8
+OBHIPUNCH3:
+	DD OBHIPUNCH3_SUB-swat_anitab1, 0
+OBHIPUNCH3_SUB:
+	DD OBHIPUNCH3_IMG-swat_anitab1
+	DW 83, 111, 14, -8
+OBHIPUNCH4:
+	DD OBHIPUNCH4_SUB-swat_anitab1, 0
+OBHIPUNCH4_SUB:
+	DD OBHIPUNCH4_IMG-swat_anitab1
+	DW 64, 111, 15, -9
+OBHIPUNCH5:
+	DD OBHIPUNCH5_SUB-swat_anitab1, 0
+OBHIPUNCH5_SUB:
+	DD OBHIPUNCH5_IMG-swat_anitab1
+	DW 63, 111, 13, -9
+OBHIPUNCH6:
+	DD OBHIPUNCH6_SUB-swat_anitab1, 0
+OBHIPUNCH6_SUB:
+	DD OBHIPUNCH6_IMG-swat_anitab1
+	DW 84, 110, 12, -9
+OBHIPUNCH7:
+	DD OBHIPUNCH7_SUB-swat_anitab1, 0
+OBHIPUNCH7_SUB:
+	DD OBHIPUNCH7_IMG-swat_anitab1
+	DW 68, 111, 13, -8
+OBLOPUNCH5:
+	DD OBLOPUNCH5_SUB-swat_anitab1, 0
+OBLOPUNCH5_SUB:
+	DD OBLOPUNCH5_IMG-swat_anitab1
+	DW 65, 107, 19, -12
+OBLOPUNCH2:
+	DD OBLOPUNCH2_SUB-swat_anitab1, 0
+OBLOPUNCH2_SUB:
+	DD OBLOPUNCH2_IMG-swat_anitab1
+	DW 70, 110, 17, -9
+OBLOPUNCH1:
+	DD OBLOPUNCH1_SUB-swat_anitab1, 0
+OBLOPUNCH1_SUB:
+	DD OBLOPUNCH1_IMG-swat_anitab1
+	DW 49, 109, 17, -10
+OBLOPUNCH3:
+	DD OBLOPUNCH3_SUB-swat_anitab1, 0
+OBLOPUNCH3_SUB:
+	DD OBLOPUNCH3_IMG-swat_anitab1
+	DW 86, 108, 18, -11
+OBLOPUNCH4:
+	DD OBLOPUNCH4_SUB-swat_anitab1, 0
+OBLOPUNCH4_SUB:
+	DD OBLOPUNCH4_IMG-swat_anitab1
+	DW 64, 108, 19, -11
+OBLOPUNCH6:
+	DD OBLOPUNCH6_SUB-swat_anitab1, 0
+OBLOPUNCH6_SUB:
+	DD OBLOPUNCH6_IMG-swat_anitab1
+	DW 86, 107, 18, -12
+OBELBOCOMBO1:
+	DD OBELBOCOMBO1_SUB-swat_anitab1, 0
+OBELBOCOMBO1_SUB:
+	DD OBELBOCOMBO1_IMG-swat_anitab1
+	DW 44, 110, 14, -10
+OBELBOCOMBO2:
+	DD OBELBOCOMBO2_SUB-swat_anitab1, 0
+OBELBOCOMBO2_SUB:
+	DD OBELBOCOMBO2_IMG-swat_anitab1
+	DW 47, 111, 14, -8
+OBELBOCOMBO3:
+	DD OBELBOCOMBO3_SUB-swat_anitab1, 0
+OBELBOCOMBO3_SUB:
+	DD OBELBOCOMBO3_IMG-swat_anitab1
+	DW 58, 113, 14, -7
+OBELBOCOMBO4:
+	DD OBELBOCOMBO4_SUB-swat_anitab1, 0
+OBELBOCOMBO4_SUB:
+	DD OBELBOCOMBO4_IMG-swat_anitab1
+	DW 60, 110, 11, -9
+OBELBOCOMBO5:
+	DD OBELBOCOMBO5_SUB-swat_anitab1, 0
+OBELBOCOMBO5_SUB:
+	DD OBELBOCOMBO5_IMG-swat_anitab1
+	DW 62, 114, 11, -5
+OBELBOCOMBO6:
+	DD OBELBOCOMBO6_SUB-swat_anitab1, 0
+OBELBOCOMBO6_SUB:
+	DD OBELBOCOMBO6_IMG-swat_anitab1
+	DW 55, 115, 10, -4
+OBELBOCOMBO7:
+	DD OBELBOCOMBO7_SUB-swat_anitab1, 0
+OBELBOCOMBO7_SUB:
+	DD OBELBOCOMBO7_IMG-swat_anitab1
+	DW 54, 110, 14, -9
+OBELBOCOMBO8:
+	DD OBELBOCOMBO8_SUB-swat_anitab1, 0
+OBELBOCOMBO8_SUB:
+	DD OBELBOCOMBO8_IMG-swat_anitab1
+	DW 56, 102, 19, -16
+OBELBOCOMBO9:
+	DD OBELBOCOMBO9_SUB-swat_anitab1, 0
+OBELBOCOMBO9_SUB:
+	DD OBELBOCOMBO9_IMG-swat_anitab1
+	DW 62, 89, 12, -29
+OBELBOCOMBO10:
+	DD OBELBOCOMBO10_SUB-swat_anitab1, 0
+OBELBOCOMBO10_SUB:
+	DD OBELBOCOMBO10_IMG-swat_anitab1
+	DW 51, 78, 20, -40
+OBWHACK1:
+	DD OBWHACK1_SUB-swat_anitab1, 0
+OBWHACK1_SUB:
+	DD OBWHACK1_IMG-swat_anitab1
+	DW 48, 92, 18, -28
+OBWHACK2:
+	DD OBWHACK2_SUB-swat_anitab1, 0
+OBWHACK2_SUB:
+	DD OBWHACK2_IMG-swat_anitab1
+	DW 46, 102, 16, -18
+OBWHACK3:
+	DD OBWHACK3_SUB-swat_anitab1, 0
+OBWHACK3_SUB:
+	DD OBWHACK3_IMG-swat_anitab1
+	DW 101, 106, 15, -13
+OBWHACK4:
+	DD OBWHACK4_SUB-swat_anitab1, 0
+OBWHACK4_SUB:
+	DD OBWHACK4_IMG-swat_anitab1
+	DW 63, 154, 14, 34
+OBWHACK5:
+	DD OBWHACK5_SUB-swat_anitab1, 0
+OBWHACK5_SUB:
+	DD OBWHACK5_IMG-swat_anitab1
+	DW 61, 135, 20, 15
+OBWHACK6:
+	DD OBWHACK6_SUB-swat_anitab1, 0
+OBWHACK6_SUB:
+	DD OBWHACK6_IMG-swat_anitab1
+	DW 89, 114, 49, -6
+OBWHACK7:
+	DD OBWHACK7_SUB-swat_anitab1, 0
+OBWHACK7_SUB:
+	DD OBWHACK7_IMG-swat_anitab1
+	DW 48, 115, 14, -5
+OBWHACK8:
+	DD OBWHACK8_SUB-swat_anitab1, 0
+OBWHACK8_SUB:
+	DD OBWHACK8_IMG-swat_anitab1
+	DW 45, 115, 14, -4
+OBLOKICK1:
+	DD OBLOKICK1_SUB-swat_anitab1, 0
+OBLOKICK1_SUB:
+	DD OBLOKICK1_IMG-swat_anitab1
+	DW 44, 112, 6, -7
+OBLOKICK2:
+	DD OBLOKICK2_SUB-swat_anitab1, 0
+OBLOKICK2_SUB:
+	DD OBLOKICK2_IMG-swat_anitab1
+	DW 40, 114, -1, -6
+OBLOKICK3:
+	DD OBLOKICK3_SUB-swat_anitab1, 0
+OBLOKICK3_SUB:
+	DD OBLOKICK3_IMG-swat_anitab1
+	DW 42, 113, 0, -7
+OBLOKICK4:
+	DD OBLOKICK4_SUB-swat_anitab1, 0
+OBLOKICK4_SUB:
+	DD OBLOKICK4_IMG-swat_anitab1
+	DW 46, 112, 2, -8
+OBHIKICK1:
+	DD OBHIKICK1_SUB-swat_anitab1, 0
+OBHIKICK1_SUB:
+	DD OBHIKICK1_IMG-swat_anitab1
+	DW 86, 104, 13, -17
+OBHIKICK2:
+	DD OBHIKICK2_SUB-swat_anitab1, 0
+OBHIKICK2_SUB:
+	DD OBHIKICK2_IMG-swat_anitab1
+	DW 92, 107, 13, -13
+OBLOKICK5:
+	DD OBLOKICK5_SUB-swat_anitab1, 0
+OBLOKICK5_SUB:
+	DD OBLOKICK5_IMG-swat_anitab1
+	DW 63, 110, 2, -10
+OBLOKICK6:
+	DD OBLOKICK6_SUB-swat_anitab1, 0
+OBLOKICK6_SUB:
+	DD OBLOKICK6_IMG-swat_anitab1
+	DW 86, 106, 3, -13
+OBKNEEKICK1:
+	DD OBKNEEKICK1_SUB-swat_anitab1, 0
+OBKNEEKICK1_SUB:
+	DD OBKNEEKICK1_IMG-swat_anitab1
+	DW 46, 111, 13, -9
+OBKNEEKICK2:
+	DD OBKNEEKICK2_SUB-swat_anitab1, 0
+OBKNEEKICK2_SUB:
+	DD OBKNEEKICK2_IMG-swat_anitab1
+	DW 44, 114, -2, -5
+OBKNEEKICK3:
+	DD OBKNEEKICK3_SUB-swat_anitab1, 0
+OBKNEEKICK3_SUB:
+	DD OBKNEEKICK3_IMG-swat_anitab1
+	DW 69, 109, 2, -9
+OBSWEEPKICK1:
+	DD OBSWEEPKICK1_SUB-swat_anitab1, 0
+OBSWEEPKICK1_SUB:
+	DD OBSWEEPKICK1_IMG-swat_anitab1
+	DW 52, 91, 17, -29
+OBSWEEPKICK2:
+	DD OBSWEEPKICK2_SUB-swat_anitab1, 0
+OBSWEEPKICK2_SUB:
+	DD OBSWEEPKICK2_IMG-swat_anitab1
+	DW 58, 64, 20, -55
+OBSWEEPKICK3:
+	DD OBSWEEPKICK3_SUB-swat_anitab1, 0
+OBSWEEPKICK3_SUB:
+	DD OBSWEEPKICK3_IMG-swat_anitab1
+	DW 50, 57, 6, -67
+OBSWEEPKICK4:
+	DD OBSWEEPKICK4_SUB-swat_anitab1, 0
+OBSWEEPKICK4_SUB:
+	DD OBSWEEPKICK4_IMG-swat_anitab1
+	DW 58, 54, 4, -72
+OBSWEEPKICK5:
+	DD OBSWEEPKICK5_SUB-swat_anitab1, 0
+OBSWEEPKICK5_SUB:
+	DD OBSWEEPKICK5_IMG-swat_anitab1
+	DW 90, 59, 0, -67
+OBSWEEPKICK6:
+	DD OBSWEEPKICK6_SUB-swat_anitab1, 0
+OBSWEEPKICK6_SUB:
+	DD OBSWEEPKICK6_IMG-swat_anitab1
+	DW 66, 86, -5, -50
+OBSWEEPKICK7:
+	DD OBSWEEPKICK7_SUB-swat_anitab1, 0
+OBSWEEPKICK7_SUB:
+	DD OBSWEEPKICK7_IMG-swat_anitab1
+	DW 53, 98, 5, -43
+OBSWEEPKICK8:
+	DD OBSWEEPKICK8_SUB-swat_anitab1, 0
+OBSWEEPKICK8_SUB:
+	DD OBSWEEPKICK8_IMG-swat_anitab1
+	DW 69, 106, 20, -22
+OBROUNDHOUSE1:
+	DD OBROUNDHOUSE1_SUB-swat_anitab1, 0
+OBROUNDHOUSE1_SUB:
+	DD OBROUNDHOUSE1_IMG-swat_anitab1
+	DW 53, 108, 15, -11
+OBROUNDHOUSE2:
+	DD OBROUNDHOUSE2_SUB-swat_anitab1, 0
+OBROUNDHOUSE2_SUB:
+	DD OBROUNDHOUSE2_IMG-swat_anitab1
+	DW 46, 111, 13, -8
+OBROUNDHOUSE3:
+	DD OBROUNDHOUSE3_SUB-swat_anitab1, 0
+OBROUNDHOUSE3_SUB:
+	DD OBROUNDHOUSE3_IMG-swat_anitab1
+	DW 41, 113, -1, -6
+OBROUNDHOUSE4:
+	DD OBROUNDHOUSE4_SUB-swat_anitab1, 0
+OBROUNDHOUSE4_SUB:
+	DD OBROUNDHOUSE4_IMG-swat_anitab1
+	DW 81, 114, 0, -5
+OBROUNDHOUSE5:
+	DD OBROUNDHOUSE5_SUB-swat_anitab1, 0
+OBROUNDHOUSE5_SUB:
+	DD OBROUNDHOUSE5_IMG-swat_anitab1
+	DW 81, 117, 2, -2
+OBROUNDHOUSE6:
+	DD OBROUNDHOUSE6_SUB-swat_anitab1, 0
+OBROUNDHOUSE6_SUB:
+	DD OBROUNDHOUSE6_IMG-swat_anitab1
+	DW 69, 109, 4, -10
+OBROUNDHOUSE7:
+	DD OBROUNDHOUSE7_SUB-swat_anitab1, 0
+OBROUNDHOUSE7_SUB:
+	DD OBROUNDHOUSE7_IMG-swat_anitab1
+	DW 52, 105, 11, -13
+OBROUNDHOUSE8:
+	DD OBROUNDHOUSE8_SUB-swat_anitab1, 0
+OBROUNDHOUSE8_SUB:
+	DD OBROUNDHOUSE8_IMG-swat_anitab1
+	DW 47, 103, 13, -15
+OBROUNDHOUSE9:
+	DD OBROUNDHOUSE9_SUB-swat_anitab1, 0
+OBROUNDHOUSE9_SUB:
+	DD OBROUNDHOUSE9_IMG-swat_anitab1
+	DW 39, 95, 12, -22
+OBJUMP1:
+	DD OBJUMP1_SUB-swat_anitab1, 0
+OBJUMP1_SUB:
+	DD OBJUMP1_IMG-swat_anitab1
+	DW 53, 99, 12, -21
+OBJUMP2:
+	DD OBJUMP2_SUB-swat_anitab1, 0
+OBJUMP2_SUB:
+	DD OBJUMP2_IMG-swat_anitab1
+	DW 48, 121, 11, 0
+OBJUMP3:
+	DD OBJUMP3_SUB-swat_anitab1, 0
+OBJUMP3_SUB:
+	DD OBJUMP3_IMG-swat_anitab1
+	DW 51, 99, 15, 2
+OBJUMPKICK1:
+	DD OBJUMPKICK1_SUB-swat_anitab1, 0
+OBJUMPKICK1_SUB:
+	DD OBJUMPKICK1_IMG-swat_anitab1
+	DW 43, 115, 6, 9
+OBJUMPKICK2:
+	DD OBJUMPKICK2_SUB-swat_anitab1, 0
+OBJUMPKICK2_SUB:
+	DD OBJUMPKICK2_IMG-swat_anitab1
+	DW 46, 97, 6, 7
+OBJUMPKICK3:
+	DD OBJUMPKICK3_SUB-swat_anitab1, 0
+OBJUMPKICK3_SUB:
+	DD OBJUMPKICK3_IMG-swat_anitab1
+	DW 66, 109, 0, 8
+OBFLIPUNCH1:
+	DD OBFLIPUNCH1_SUB-swat_anitab1, 0
+OBFLIPUNCH1_SUB:
+	DD OBFLIPUNCH1_IMG-swat_anitab1
+	DW 34, 69, 1, 0
+OBFLIPUNCH2:
+	DD OBFLIPUNCH2_SUB-swat_anitab1, 0
+OBFLIPUNCH2_SUB:
+	DD OBFLIPUNCH2_IMG-swat_anitab1
+	DW 72, 81, 18, 1
+OBFLIPUNCH3:
+	DD OBFLIPUNCH3_SUB-swat_anitab1, 0
+OBFLIPUNCH3_SUB:
+	DD OBFLIPUNCH3_IMG-swat_anitab1
+	DW 113, 76, 37, -3
+OBFLIPKICK1:
+	DD OBFLIPKICK1_SUB-swat_anitab1, 0
+OBFLIPKICK1_SUB:
+	DD OBFLIPKICK1_IMG-swat_anitab1
+	DW 39, 65, 0, -2
+OBFLIPKICK2:
+	DD OBFLIPKICK2_SUB-swat_anitab1, 0
+OBFLIPKICK2_SUB:
+	DD OBFLIPKICK2_IMG-swat_anitab1
+	DW 79, 76, 11, 3
+OBFLIPKICK3:
+	DD OBFLIPKICK3_SUB-swat_anitab1, 0
+OBFLIPKICK3_SUB:
+	DD OBFLIPKICK3_IMG-swat_anitab1
+	DW 98, 76, 19, 3
+OBJUMPFLIP1:
+	DD OBJUMPFLIP1_SUB-swat_anitab1, 0
+OBJUMPFLIP1_SUB:
+	DD OBJUMPFLIP1_IMG-swat_anitab1
+	DW 40, 122, 0, 3
+OBJUMPFLIP2:
+	DD OBJUMPFLIP2_SUB-swat_anitab1, 0
+OBJUMPFLIP2_SUB:
+	DD OBJUMPFLIP2_IMG-swat_anitab1
+	DW 40, 54, 3, -6
+OBJUMPFLIP3:
+	DD OBJUMPFLIP3_SUB-swat_anitab1, 0
+OBJUMPFLIP3_SUB:
+	DD OBJUMPFLIP3_IMG-swat_anitab1
+	DW 46, 52, 6, -11
+OBJUMPFLIP4:
+	DD OBJUMPFLIP4_SUB-swat_anitab1, 0
+OBJUMPFLIP4_SUB:
+	DD OBJUMPFLIP4_IMG-swat_anitab1
+	DW 50, 43, 18, -8
+OBJUMPFLIP5:
+	DD OBJUMPFLIP5_SUB-swat_anitab1, 0
+OBJUMPFLIP5_SUB:
+	DD OBJUMPFLIP5_IMG-swat_anitab1
+	DW 49, 48, 18, -2
+OBJUMPFLIP6:
+	DD OBJUMPFLIP6_SUB-swat_anitab1, 0
+OBJUMPFLIP6_SUB:
+	DD OBJUMPFLIP6_IMG-swat_anitab1
+	DW 45, 53, 9, 8
+OBJUMPFLIP7:
+	DD OBJUMPFLIP7_SUB-swat_anitab1, 0
+OBJUMPFLIP7_SUB:
+	DD OBJUMPFLIP7_IMG-swat_anitab1
+	DW 50, 43, 5, -2
+OBJUMPFLIP8:
+	DD OBJUMPFLIP8_SUB-swat_anitab1, 0
+OBJUMPFLIP8_SUB:
+	DD OBJUMPFLIP8_IMG-swat_anitab1
+	DW 46, 48, 2, 1
+OBHIHIT2:
+	DD OBHIHIT2_SUB-swat_anitab1, 0
+OBHIHIT2_SUB:
+	DD OBHIHIT2_IMG-swat_anitab1
+	DW 49, 109, 17, -11
+OBHIHIT3:
+	DD OBHIHIT3_SUB-swat_anitab1, 0
+OBHIHIT3_SUB:
+	DD OBHIHIT3_IMG-swat_anitab1
+	DW 54, 107, 22, -13
+OBHIHIT1:
+	DD OBHIHIT1_SUB-swat_anitab1, 0
+OBHIHIT1_SUB:
+	DD OBHIHIT1_IMG-swat_anitab1
+	DW 45, 110, 13, -10
+OBLOHIT2:
+	DD OBLOHIT2_SUB-swat_anitab1, 0
+OBLOHIT2_SUB:
+	DD OBLOHIT2_IMG-swat_anitab1
+	DW 46, 110, 14, -9
+OBLOHIT3:
+	DD OBLOHIT3_SUB-swat_anitab1, 0
+OBLOHIT3_SUB:
+	DD OBLOHIT3_IMG-swat_anitab1
+	DW 54, 108, 22, -10
+OBLOHIT1:
+	DD OBLOHIT1_SUB-swat_anitab1, 0
+OBLOHIT1_SUB:
+	DD OBLOHIT1_IMG-swat_anitab1
+	DW 44, 109, 13, -10
+OBKNOCKDOWN1:
+	DD OBKNOCKDOWN1_SUB-swat_anitab1, 0
+OBKNOCKDOWN1_SUB:
+	DD OBKNOCKDOWN1_IMG-swat_anitab1
+	DW 61, 106, 22, -12
+OBKNOCKDOWN2:
+	DD OBKNOCKDOWN2_SUB-swat_anitab1, 0
+OBKNOCKDOWN2_SUB:
+	DD OBKNOCKDOWN2_IMG-swat_anitab1
+	DW 83, 82, 31, -26
+OBKNOCKDOWN3:
+	DD OBKNOCKDOWN3_SUB-swat_anitab1, 0
+OBKNOCKDOWN3_SUB:
+	DD OBKNOCKDOWN3_IMG-swat_anitab1
+	DW 101, 57, 33, -40
+OBKNOCKDOWN4:
+	DD OBKNOCKDOWN4_SUB-swat_anitab1, 0
+OBKNOCKDOWN4_SUB:
+	DD OBKNOCKDOWN4_IMG-swat_anitab1
+	DW 104, 35, 33, -58
+OBKNOCKDOWN5:
+	DD OBKNOCKDOWN5_SUB-swat_anitab1, 0
+OBKNOCKDOWN5_SUB:
+	DD OBKNOCKDOWN5_IMG-swat_anitab1
+	DW 98, 53, 32, -61
+OBKNOCKDOWN6:
+	DD OBKNOCKDOWN6_SUB-swat_anitab1, 0
+OBKNOCKDOWN6_SUB:
+	DD OBKNOCKDOWN6_IMG-swat_anitab1
+	DW 107, 42, 32, -82
+OBKNOCKDOWN7:
+	DD OBKNOCKDOWN7_SUB-swat_anitab1, 0
+OBKNOCKDOWN7_SUB:
+	DD OBKNOCKDOWN7_IMG-swat_anitab1
+	DW 105, 26, 31, -97
+OBSWEEPFALL1:
+	DD OBSWEEPFALL1_SUB-swat_anitab1, 0
+OBSWEEPFALL1_SUB:
+	DD OBSWEEPFALL1_IMG-swat_anitab1
+	DW 66, 110, 15, -8
+OBSWEEPFALL2:
+	DD OBSWEEPFALL2_SUB-swat_anitab1, 0
+OBSWEEPFALL2_SUB:
+	DD OBSWEEPFALL2_IMG-swat_anitab1
+	DW 72, 85, 20, -21
+OBSWEEPFALL3:
+	DD OBSWEEPFALL3_SUB-swat_anitab1, 0
+OBSWEEPFALL3_SUB:
+	DD OBSWEEPFALL3_IMG-swat_anitab1
+	DW 87, 53, 34, -43
+OBSWEEPFALL4:
+	DD OBSWEEPFALL4_SUB-swat_anitab1, 0
+OBSWEEPFALL4_SUB:
+	DD OBSWEEPFALL4_IMG-swat_anitab1
+	DW 94, 33, 38, -60
+OBSWEEPFALL5:
+	DD OBSWEEPFALL5_SUB-swat_anitab1, 0
+OBSWEEPFALL5_SUB:
+	DD OBSWEEPFALL5_IMG-swat_anitab1
+	DW 84, 53, 33, -59
+OBSWEEPFALL6:
+	DD OBSWEEPFALL6_SUB-swat_anitab1, 0
+OBSWEEPFALL6_SUB:
+	DD OBSWEEPFALL6_IMG-swat_anitab1
+	DW 55, 44, 20, -81
+OBSTUMBLE1:
+	DD OBSTUMBLE1_SUB-swat_anitab1, 0
+OBSTUMBLE1_SUB:
+	DD OBSTUMBLE1_IMG-swat_anitab1
+	DW 50, 110, 15, -10
+OBSTUMBLE2:
+	DD OBSTUMBLE2_SUB-swat_anitab1, 0
+OBSTUMBLE2_SUB:
+	DD OBSTUMBLE2_IMG-swat_anitab1
+	DW 50, 112, 16, -8
+OBSTUMBLE3:
+	DD OBSTUMBLE3_SUB-swat_anitab1, 0
+OBSTUMBLE3_SUB:
+	DD OBSTUMBLE3_IMG-swat_anitab1
+	DW 53, 112, 29, -8
+OBSTUMBLE4:
+	DD OBSTUMBLE4_SUB-swat_anitab1, 0
+OBSTUMBLE4_SUB:
+	DD OBSTUMBLE4_IMG-swat_anitab1
+	DW 50, 109, 30, -11
+OBSTUMBLE5:
+	DD OBSTUMBLE5_SUB-swat_anitab1, 0
+OBSTUMBLE5_SUB:
+	DD OBSTUMBLE5_IMG-swat_anitab1
+	DW 46, 106, 17, -13
+OBSTUMBLE6:
+	DD OBSTUMBLE6_SUB-swat_anitab1, 0
+OBSTUMBLE6_SUB:
+	DD OBSTUMBLE6_IMG-swat_anitab1
+	DW 49, 105, 22, -11
+OBSTUMBLE7:
+	DD OBSTUMBLE7_SUB-swat_anitab1, 0
+OBSTUMBLE7_SUB:
+	DD OBSTUMBLE7_IMG-swat_anitab1
+	DW 51, 108, 26, -8
+OBGETUP1:
+	DD OBGETUP1_SUB-swat_anitab1, 0
+OBGETUP1_SUB:
+	DD OBGETUP1_IMG-swat_anitab1
+	DW 66, 60, 30, -61
+OBGETUP2:
+	DD OBGETUP2_SUB-swat_anitab1, 0
+OBGETUP2_SUB:
+	DD OBGETUP2_IMG-swat_anitab1
+	DW 52, 67, 37, -54
+OBGETUP3:
+	DD OBGETUP3_SUB-swat_anitab1, 0
+OBGETUP3_SUB:
+	DD OBGETUP3_IMG-swat_anitab1
+	DW 72, 53, 31, -67
+OBGETUP4:
+	DD OBGETUP4_SUB-swat_anitab1, 0
+OBGETUP4_SUB:
+	DD OBGETUP4_IMG-swat_anitab1
+	DW 58, 56, 13, -65
+OBGETUP5:
+	DD OBGETUP5_SUB-swat_anitab1, 0
+OBGETUP5_SUB:
+	DD OBGETUP5_IMG-swat_anitab1
+	DW 54, 87, 10, -35
+OBGETUP6:
+	DD OBGETUP6_SUB-swat_anitab1, 0
+OBGETUP6_SUB:
+	DD OBGETUP6_IMG-swat_anitab1
+	DW 46, 105, 8, -17
+OBSWEEPUP1:
+	DD OBSWEEPUP1_SUB-swat_anitab1, 0
+OBSWEEPUP1_SUB:
+	DD OBSWEEPUP1_IMG-swat_anitab1
+	DW 38, 59, 14, -50
+OBSWEEPUP2:
+	DD OBSWEEPUP2_SUB-swat_anitab1, 0
+OBSWEEPUP2_SUB:
+	DD OBSWEEPUP2_IMG-swat_anitab1
+	DW 38, 69, 13, -40
+OBSWEEPUP3:
+	DD OBSWEEPUP3_SUB-swat_anitab1, 0
+OBSWEEPUP3_SUB:
+	DD OBSWEEPUP3_IMG-swat_anitab1
+	DW 40, 33, 14, -74
+OBSWEEPUP4:
+	DD OBSWEEPUP4_SUB-swat_anitab1, 0
+OBSWEEPUP4_SUB:
+	DD OBSWEEPUP4_IMG-swat_anitab1
+	DW 41, 63, 12, -54
+OBSWEEPUP5:
+	DD OBSWEEPUP5_SUB-swat_anitab1, 0
+OBSWEEPUP5_SUB:
+	DD OBSWEEPUP5_IMG-swat_anitab1
+	DW 46, 80, 15, -37
+OBSWEEPUP6:
+	DD OBSWEEPUP6_SUB-swat_anitab1, 0
+OBSWEEPUP6_SUB:
+	DD OBSWEEPUP6_IMG-swat_anitab1
+	DW 50, 105, 16, -16
+OBSTICKFLIP1:
+	DD OBSTICKFLIP1_SUB-swat_anitab1, 0
+OBSTICKFLIP1_SUB:
+	DD OBSTICKFLIP1_IMG-swat_anitab1
+	DW 60, 112, 11, -8
+OBSTICKFLIP2:
+	DD OBSTICKFLIP2_SUB-swat_anitab1, 0
+OBSTICKFLIP2_SUB:
+	DD OBSTICKFLIP2_IMG-swat_anitab1
+	DW 77, 113, 10, -7
+OBSTICKFLIP3:
+	DD OBSTICKFLIP3_SUB-swat_anitab1, 0
+OBSTICKFLIP3_SUB:
+	DD OBSTICKFLIP3_IMG-swat_anitab1
+	DW 71, 111, 14, -8
+OBSTICKFLIP4:
+	DD OBSTICKFLIP4_SUB-swat_anitab1, 0
+OBSTICKFLIP4_SUB:
+	DD OBSTICKFLIP4_IMG-swat_anitab1
+	DW 66, 117, 15, -2
+OBSTICKFLIP5:
+	DD OBSTICKFLIP5_SUB-swat_anitab1, 0
+OBSTICKFLIP5_SUB:
+	DD OBSTICKFLIP5_IMG-swat_anitab1
+	DW 51, 136, 14, 14
+OBSTICKFLIP6:
+	DD OBSTICKFLIP6_SUB-swat_anitab1, 0
+OBSTICKFLIP6_SUB:
+	DD OBSTICKFLIP6_IMG-swat_anitab1
+	DW 79, 129, 42, 8
+OBSTICKFLIP7:
+	DD OBSTICKFLIP7_SUB-swat_anitab1, 0
+OBSTICKFLIP7_SUB:
+	DD OBSTICKFLIP7_IMG-swat_anitab1
+	DW 98, 94, 62, -26
+OBSTICKFLIP8:
+	DD OBSTICKFLIP8_SUB-swat_anitab1, 0
+OBSTICKFLIP8_SUB:
+	DD OBSTICKFLIP8_IMG-swat_anitab1
+	DW 69, 73, 34, -47
+OBSHOOT1:
+	DD OBSHOOT1_SUB-swat_anitab1, 0
+OBSHOOT1_SUB:
+	DD OBSHOOT1_IMG-swat_anitab1
+	DW 57, 106, 22, -14
+OBSHOOT2:
+	DD OBSHOOT2_SUB-swat_anitab1, 0
+OBSHOOT2_SUB:
+	DD OBSHOOT2_IMG-swat_anitab1
+	DW 79, 94, 25, -25
+OBSHOOT3:
+	DD OBSHOOT3_SUB-swat_anitab1, 0
+OBSHOOT3_SUB:
+	DD OBSHOOT3_IMG-swat_anitab1
+	DW 85, 88, 22, -35
+BANG1:
+	DD BANG1_SUB-swat_anitab1, 0
+BANG1_SUB:
+	DD BANG1_IMG-swat_anitab1
+	DW 65, 20, -43, -35
+	DD   _CPBLAST_P
+BANG2:
+	DD BANG2_SUB-swat_anitab1, 0
+BANG2_SUB:
+	DD BANG2_IMG-swat_anitab1
+	DW 82, 20, -36, -35
+BANG3:
+	DD BANG3_SUB-swat_anitab1, 0
+BANG3_SUB:
+	DD BANG3_IMG-swat_anitab1
+	DW 98, 18, -41, -36
+BANG4:
+	DD BANG4_SUB-swat_anitab1, 0
+BANG4_SUB:
+	DD BANG4_IMG-swat_anitab1
+	DW 135, 18, -41, -36
+BANG5:
+	DD BANG5_SUB-swat_anitab1, 0
+BANG5_SUB:
+	DD BANG5_IMG-swat_anitab1
+	DW 121, 16, -74, -36
+BANG6:
+	DD BANG6_SUB-swat_anitab1, 0
+BANG6_SUB:
+	DD BANG6_IMG-swat_anitab1
+	DW 115, 16, -80, -36
+BANG7:
+	DD BANG7_SUB-swat_anitab1, 0
+BANG7_SUB:
+	DD BANG7_IMG-swat_anitab1
+	DW 111, 16, -84, -36
+BANG8:
+	DD BANG8_SUB-swat_anitab1, 0
+BANG8_SUB:
+	DD BANG8_IMG-swat_anitab1
+	DW 115, 16, -80, -36
+BANGHIT1:
+	DD BANGHIT1_SUB-swat_anitab1, 0
+BANGHIT1_SUB:
+	DD BANGHIT1_IMG-swat_anitab1
+	DW 109, 19, -87, -33
+BANGHIT2:
+	DD BANGHIT2_SUB-swat_anitab1, 0
+BANGHIT2_SUB:
+	DD BANGHIT2_IMG-swat_anitab1
+	DW 98, 37, -101, -22
+BANGHIT3:
+	DD BANGHIT3_SUB-swat_anitab1, 0
+BANGHIT3_SUB:
+	DD BANGHIT3_IMG-swat_anitab1
+	DW 85, 57, -114, -8
+BANGHIT4:
+	DD BANGHIT4_SUB-swat_anitab1, 0
+BANGHIT4_SUB:
+	DD BANGHIT4_IMG-swat_anitab1
+	DW 74, 81, -127, 5
+BANGHIT5:
+	DD BANGHIT5_SUB-swat_anitab1, 0
+BANGHIT5_SUB:
+	DD BANGHIT5_IMG-swat_anitab1
+	DW 67, 104, -134, 19
+BANGHIT6:
+	DD BANGHIT6_SUB-swat_anitab1, 0
+BANGHIT6_SUB:
+	DD BANGHIT6_IMG-swat_anitab1
+	DW 87, 125, -115, 29
+BANGHIT7:
+	DD BANGHIT7_SUB-swat_anitab1, 0
+BANGHIT7_SUB:
+	DD BANGHIT7_IMG-swat_anitab1
+	DW 107, 141, -96, 32
+BANGHIT8:
+	DD BANGHIT8_SUB-swat_anitab1, 0
+BANGHIT8_SUB:
+	DD BANGHIT8_IMG-swat_anitab1
+	DW 118, 146, -88, 43
+BANGHIT9:
+	DD BANGHIT9_SUB-swat_anitab1, 0
+BANGHIT9_SUB:
+	DD BANGHIT9_IMG-swat_anitab1
+	DW 78, 126, -124, 14
+OBSTUNNED1:
+	DD OBSTUNNED1_SUB-swat_anitab1, 0
+OBSTUNNED1_SUB:
+	DD OBSTUNNED1_IMG-swat_anitab1
+	DW 38, 111, 14, -8
+OBSTUNNED2:
+	DD OBSTUNNED2_SUB-swat_anitab1, 0
+OBSTUNNED2_SUB:
+	DD OBSTUNNED2_IMG-swat_anitab1
+	DW 38, 112, 14, -7
+OBSTUNNED3:
+	DD OBSTUNNED3_SUB-swat_anitab1, 0
+OBSTUNNED3_SUB:
+	DD OBSTUNNED3_IMG-swat_anitab1
+	DW 38, 112, 14, -7
+OBSTUNNED4:
+	DD OBSTUNNED4_SUB-swat_anitab1, 0
+OBSTUNNED4_SUB:
+	DD OBSTUNNED4_IMG-swat_anitab1
+	DW 39, 111, 15, -8
+OBSTUNNED5:
+	DD OBSTUNNED5_SUB-swat_anitab1, 0
+OBSTUNNED5_SUB:
+	DD OBSTUNNED5_IMG-swat_anitab1
+	DW 39, 109, 15, -10
+OBSTUNNED6:
+	DD OBSTUNNED6_SUB-swat_anitab1, 0
+OBSTUNNED6_SUB:
+	DD OBSTUNNED6_IMG-swat_anitab1
+	DW 38, 107, 14, -12
+OBSTUNNED7:
+	DD OBSTUNNED7_SUB-swat_anitab1, 0
+OBSTUNNED7_SUB:
+	DD OBSTUNNED7_IMG-swat_anitab1
+	DW 38, 107, 14, -12
+OBSTUNNED8:
+	DD OBSTUNNED8_SUB-swat_anitab1, 0
+OBSTUNNED8_SUB:
+	DD OBSTUNNED8_IMG-swat_anitab1
+	DW 38, 109, 14, -10
+OBFLIPPED1:
+	DD OBFLIPPED1_SUB-swat_anitab1, 0
+OBFLIPPED1_SUB:
+	DD OBFLIPPED1_IMG-swat_anitab1
+	DW 57, 91, 10, -28
+OBFLIPPED2:
+	DD OBFLIPPED2_SUB-swat_anitab1, 0
+OBFLIPPED2_SUB:
+	DD OBFLIPPED2_IMG-swat_anitab1
+	DW 67, 78, 17, -24
+OBFLIPPED3:
+	DD OBFLIPPED3_SUB-swat_anitab1, 0
+OBFLIPPED3_SUB:
+	DD OBFLIPPED3_IMG-swat_anitab1
+	DW 68, 56, 36, -22
+OBFLIPPED4:
+	DD OBFLIPPED4_SUB-swat_anitab1, 0
+OBFLIPPED4_SUB:
+	DD OBFLIPPED4_IMG-swat_anitab1
+	DW 57, 77, 32, -17
+OBFLIPPED5:
+	DD OBFLIPPED5_SUB-swat_anitab1, 0
+OBFLIPPED5_SUB:
+	DD OBFLIPPED5_IMG-swat_anitab1
+	DW 50, 81, 26, -24
+OBRUN1:
+	DD OBRUN1_SUB-swat_anitab1, 0
+OBRUN1_SUB:
+	DD OBRUN1_IMG-swat_anitab1
+	DW 53, 113, 18, -9+4
+OBRUN2:
+	DD OBRUN2_SUB-swat_anitab1, 0
+OBRUN2_SUB:
+	DD OBRUN2_IMG-swat_anitab1
+	DW 57, 112, 28, -8+4
+OBRUN3:
+	DD OBRUN3_SUB-swat_anitab1, 0
+OBRUN3_SUB:
+	DD OBRUN3_IMG-swat_anitab1
+	DW 67, 114, 31, -8+4
+OBRUN4:
+	DD OBRUN4_SUB-swat_anitab1, 0
+OBRUN4_SUB:
+	DD OBRUN4_IMG-swat_anitab1
+	DW 62, 113, 30, -9+4
+OBRUN5:
+	DD OBRUN5_SUB-swat_anitab1, 0
+OBRUN5_SUB:
+	DD OBRUN5_IMG-swat_anitab1
+	DW 45, 110, 20, -13+4
+OBRUN6:
+	DD OBRUN6_SUB-swat_anitab1, 0
+OBRUN6_SUB:
+	DD OBRUN6_IMG-swat_anitab1
+	DW 40, 111, 9, -12+4
+OBRUN7:
+	DD OBRUN7_SUB-swat_anitab1, 0
+OBRUN7_SUB:
+	DD OBRUN7_IMG-swat_anitab1
+	DW 52, 115, 15, -8+4
+OBRUN8:
+	DD OBRUN8_SUB-swat_anitab1, 0
+OBRUN8_SUB:
+	DD OBRUN8_IMG-swat_anitab1
+	DW 63, 111, 28, -12+4
+OBRUN9:
+	DD OBRUN9_SUB-swat_anitab1, 0
+OBRUN9_SUB:
+	DD OBRUN9_IMG-swat_anitab1
+	DW 71, 111, 37, -13+4
+OBRUN10:
+	DD OBRUN10_SUB-swat_anitab1, 0
+OBRUN10_SUB:
+	DD OBRUN10_IMG-swat_anitab1
+	DW 64, 110, 34, -13+4
+OBRUN11:
+	DD OBRUN11_SUB-swat_anitab1, 0
+OBRUN11_SUB:
+	DD OBRUN11_IMG-swat_anitab1
+	DW 49, 108, 25, -15+4
+OBRUN12:
+	DD OBRUN12_SUB-swat_anitab1, 0
+OBRUN12_SUB:
+	DD OBRUN12_IMG-swat_anitab1
+	DW 41, 109, 13, -14+4
+OBTHUD1:
+	DD OBTHUD1_SUB-swat_anitab1, 0
+OBTHUD1_SUB:
+	DD OBTHUD1_IMG-swat_anitab1
+	DW 18, 121, 3, 0
+OBTHUD2:
+	DD OBTHUD2_SUB-swat_anitab1, 0
+OBTHUD2_SUB:
+	DD OBTHUD2_IMG-swat_anitab1
+	DW 25, 121, 10, 0
+OBTHUD3:
+	DD OBTHUD3_SUB-swat_anitab1, 0
+OBTHUD3_SUB:
+	DD OBTHUD3_IMG-swat_anitab1
+	DW 30, 119, 17, -2
+OBTHUD4:
+	DD OBTHUD4_SUB-swat_anitab1, 0
+OBTHUD4_SUB:
+	DD OBTHUD4_IMG-swat_anitab1
+	DW 38, 118, 25, -2
+OBTHUD5:
+	DD OBTHUD5_SUB-swat_anitab1, 0
+OBTHUD5_SUB:
+	DD OBTHUD5_IMG-swat_anitab1
+	DW 55, 111, 42, -9
+OBTHUD6:
+	DD OBTHUD6_SUB-swat_anitab1, 0
+OBTHUD6_SUB:
+	DD OBTHUD6_IMG-swat_anitab1
+	DW 81, 91, 68, -29
+OBTHUD7:
+	DD OBTHUD7_SUB-swat_anitab1, 0
+OBTHUD7_SUB:
+	DD OBTHUD7_IMG-swat_anitab1
+	DW 99, 53, 94, -67
+OBSCARED3:
+	DD OBSCARED3_SUB-swat_anitab1, 0
+OBSCARED3_SUB:
+	DD OBSCARED3_IMG-swat_anitab1
+	DW 49, 116, 14, -4
+OBTHROWBOMB1:
+	DD OBTHROWBOMB1_SUB-swat_anitab1, 0
+OBTHROWBOMB1_SUB:
+	DD OBTHROWBOMB1_IMG-swat_anitab1
+	DW 49, 107, 18, -11
+OBTHROWBOMB2:
+	DD OBTHROWBOMB2_SUB-swat_anitab1, 0
+OBTHROWBOMB2_SUB:
+	DD OBTHROWBOMB2_IMG-swat_anitab1
+	DW 48, 107, 17, -13
+OBTHROWBOMB3:
+	DD OBTHROWBOMB3_SUB-swat_anitab1, 0
+OBTHROWBOMB3_SUB:
+	DD OBTHROWBOMB3_IMG-swat_anitab1
+	DW 46, 111, 14, -9
+OBTHROWBOMB4:
+	DD OBTHROWBOMB4_SUB-swat_anitab1, 0
+OBTHROWBOMB4_SUB:
+	DD OBTHROWBOMB4_IMG-swat_anitab1
+	DW 46, 117, 11, -2
+OBTHROWBOMB5:
+	DD OBTHROWBOMB5_SUB-swat_anitab1, 0
+OBTHROWBOMB5_SUB:
+	DD OBTHROWBOMB5_IMG-swat_anitab1
+	DW 42, 110, 11, -10
+OBTHROWBOMB6:
+	DD OBTHROWBOMB6_SUB-swat_anitab1, 0
+OBTHROWBOMB6_SUB:
+	DD OBTHROWBOMB6_IMG-swat_anitab1
+	DW 55, 107, 23, -13
+MBOMB1:
+	DD MBOMB1_SUB-swat_anitab1, 0
+MBOMB1_SUB:
+	DD MBOMB1_IMG-swat_anitab1
+	DW 14, 13, 6, 6
+	DD   _BOMB_P
+MBOMB2:
+	DD MBOMB2_SUB-swat_anitab1, 0
+MBOMB2_SUB:
+	DD MBOMB2_IMG-swat_anitab1
+	DW 14, 13, 6, 6
+MBOMB3:
+	DD MBOMB3_SUB-swat_anitab1, 0
+MBOMB3_SUB:
+	DD MBOMB3_IMG-swat_anitab1
+	DW 16, 12, 7, 6
+MBOMB4:
+	DD MBOMB4_SUB-swat_anitab1, 0
+MBOMB4_SUB:
+	DD MBOMB4_IMG-swat_anitab1
+	DW 14, 12, 6, 6
+MBOMB5:
+	DD MBOMB5_SUB-swat_anitab1, 0
+MBOMB5_SUB:
+	DD MBOMB5_IMG-swat_anitab1
+	DW 14, 12, 7, 6
+MBOMB6:
+	DD MBOMB6_SUB-swat_anitab1, 0
+MBOMB6_SUB:
+	DD MBOMB6_IMG-swat_anitab1
+	DW 15, 13, 7, 7
+MBOMB7:
+	DD MBOMB7_SUB-swat_anitab1, 0
+MBOMB7_SUB:
+	DD MBOMB7_IMG-swat_anitab1
+	DW 14, 13, 7, 7
+MBOMB8:
+	DD MBOMB8_SUB-swat_anitab1, 0
+MBOMB8_SUB:
+	DD MBOMB8_IMG-swat_anitab1
+	DW 16, 13, 7, 7
+MBOMB9:
+	DD MBOMB9_SUB-swat_anitab1, 0
+MBOMB9_SUB:
+	DD MBOMB9_IMG-swat_anitab1
+	DW 15, 12, 7, 6
+MBOMB10:
+	DD MBOMB10_SUB-swat_anitab1, 0
+MBOMB10_SUB:
+	DD MBOMB10_IMG-swat_anitab1
+	DW 14, 12, 6, 6
+MBOMB11:
+	DD MBOMB11_SUB-swat_anitab1, 0
+MBOMB11_SUB:
+	DD MBOMB11_IMG-swat_anitab1
+	DW 14, 12, 6, 6
+MBOMB12:
+	DD MBOMB12_SUB-swat_anitab1, 0
+MBOMB12_SUB:
+	DD MBOMB12_IMG-swat_anitab1
+	DW 14, 12, 6, 6
+OBAIRSTICK1:
+	DD OBAIRSTICK1_SUB-swat_anitab1, 0
+OBAIRSTICK1_SUB:
+	DD OBAIRSTICK1_IMG-swat_anitab1
+	DW 110, 81, 44, -24
+OBAIRSTICK2:
+	DD OBAIRSTICK2_SUB-swat_anitab1, 0
+OBAIRSTICK2_SUB:
+	DD OBAIRSTICK2_IMG-swat_anitab1
+	DW 114, 98, 51, -21
+OBAIRSTICK3:
+	DD OBAIRSTICK3_SUB-swat_anitab1, 0
+OBAIRSTICK3_SUB:
+	DD OBAIRSTICK3_IMG-swat_anitab1
+	DW 117, 97, 57, -22
+OBAIRSTICK4:
+	DD OBAIRSTICK4_SUB-swat_anitab1, 0
+OBAIRSTICK4_SUB:
+	DD OBAIRSTICK4_IMG-swat_anitab1
+	DW 78, 98, 19, -22
+OBAIRSTICK5:
+	DD OBAIRSTICK5_SUB-swat_anitab1, 0
+OBAIRSTICK5_SUB:
+	DD OBAIRSTICK5_IMG-swat_anitab1
+	DW 78, 99, 14, -20
+OBAIRSTICK6:
+	DD OBAIRSTICK6_SUB-swat_anitab1, 0
+OBAIRSTICK6_SUB:
+	DD OBAIRSTICK6_IMG-swat_anitab1
+	DW 110, 105, 10, -14
+OBAIRSTICK7:
+	DD OBAIRSTICK7_SUB-swat_anitab1, 0
+OBAIRSTICK7_SUB:
+	DD OBAIRSTICK7_IMG-swat_anitab1
+	DW 71, 133, 10, 12
+OBAIRSTICK8:
+	DD OBAIRSTICK8_SUB-swat_anitab1, 0
+OBAIRSTICK8_SUB:
+	DD OBAIRSTICK8_IMG-swat_anitab1
+	DW 71, 99, 9, -21
+OBSTIKSWEEP1:
+	DD OBSTIKSWEEP1_SUB-swat_anitab1, 0
+OBSTIKSWEEP1_SUB:
+	DD OBSTIKSWEEP1_IMG-swat_anitab1
+	DW 49, 92, 27, -27
+OBSTIKSWEEP2:
+	DD OBSTIKSWEEP2_SUB-swat_anitab1, 0
+OBSTIKSWEEP2_SUB:
+	DD OBSTIKSWEEP2_IMG-swat_anitab1
+	DW 94, 88, 48, -30
+OBSTIKSWEEP3:
+	DD OBSTIKSWEEP3_SUB-swat_anitab1, 0
+OBSTIKSWEEP3_SUB:
+	DD OBSTIKSWEEP3_IMG-swat_anitab1
+	DW 71, 75, 28, -42
+OBSTIKSWEEP4:
+	DD OBSTIKSWEEP4_SUB-swat_anitab1, 0
+OBSTIKSWEEP4_SUB:
+	DD OBSTIKSWEEP4_IMG-swat_anitab1
+	DW 142, 75, 26, -42
+OBSTIKSWEEP5:
+	DD OBSTIKSWEEP5_SUB-swat_anitab1, 0
+OBSTIKSWEEP5_SUB:
+	DD OBSTIKSWEEP5_IMG-swat_anitab1
+	DW 77, 84, 23, -32
+
+a_back_broke:
+	DD	OBBACKBROKEN1-swat_anitab1
+	DD	0
+
+OBBACKBROKEN1:
+	DD OBBACKBROKEN1_SUB-swat_anitab1, 0
+OBBACKBROKEN1_SUB:
+	DD OBBACKBROKEN1_IMG-swat_anitab1
+	DW 97, 55, 27, -48

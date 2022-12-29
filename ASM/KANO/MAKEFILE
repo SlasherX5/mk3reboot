@@ -1,0 +1,188 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)kano/kanob.bin  \
+     $(EXE)kano/kano.bin \
+	 $(EXE)kano/kanoa.bin \
+	 $(EXE)kano/kanos.bin \
+	 $(EXE)kano/kanof.bin \
+	 $(EXE)kano/kanof1in.bin \
+	 $(EXE)kano/kanof1jx.bin \
+	 $(EXE)kano/kanof1kl.bin \
+	 $(EXE)kano/kanof1kn.bin \
+	 $(EXE)kano/kanof1li.bin \
+	 $(EXE)kano/kanof1lk.bin \
+	 $(EXE)kano/kanof1rb.bin \
+	 $(EXE)kano/kanof1sg.bin \
+	 $(EXE)kano/kanof1sn.bin \
+	 $(EXE)kano/kanof1st.bin \
+	 $(EXE)kano/kanof1sw.bin \
+	 $(EXE)kano/kanof1sz.bin \
+	 $(EXE)kano/kanof1ts.bin \
+	 .SYMBOLIC
+
+# MAIN GAME PLAY
+
+kano.obj: kano.asm \
+    ..\chars\kano\mkkano.psx \
+	..\chars\kano\mkkano.psi \
+	..\chars\kano\knb.psi
+
+# FRIENDSHIP
+
+kanos.obj: kanos.asm  \
+	..\chars\kano\mkkanos.psx \
+	..\chars\kano\mkkanos.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+# BABALITY
+
+kanob.obj: kanob.asm  \
+	..\chars\kano\mkkanob.psx \
+	..\common\baby\babykano.psx \
+	..\common\baby\babykano.psi \
+	..\common\baby\babyxpld.psi
+
+# ANIMALITY
+
+kanoa.obj: kanoa.asm  \
+	..\chars\kano\mkkanoa.psx \
+	..\chars\kano\mkkanoa.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+
+# FATALITIES
+
+kanof.obj: kanof.asm \
+	..\chars\kano\mkkanof.psx \
+	..\chars\kano\mkkanof.psi \
+	..\common\common\arm2.psx \
+	..\common\common\arm2.psi \
+	..\common\common\leg.psx \
+	..\common\common\leg.psi \
+	..\common\common\bone.psx \
+	..\common\common\bone.psi \
+	..\common\common\cage.psx \
+	..\common\common\cage.psi \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi \
+
+
+mkknf1kn.obj: mkknf1kn.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orkano.psx \
+	..\common\reach\orkano.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+mkknf1sn.obj: mkknf1sn.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orsonya.psx \
+	..\common\reach\orsonya.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+mkknf1jx.obj: mkknf1jx.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orjax.psx \
+	..\common\reach\orjax.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+mkknf1in.obj: mkknf1in.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orind.psx \
+	..\common\reach\orind.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+	$(ASM)
+
+mkknf1sz.obj: mkknf1sz.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orsz.psx \
+	..\common\reach\orsz.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+	$(ASM)
+
+mkknf1sw.obj: mkknf1sw.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orswat.psx \
+	..\common\reach\orswat.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+mkknf1li.obj: mkknf1li.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orlia.psx \
+	..\common\reach\orlia.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+mkknf1rb.obj: mkknf1rb.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orrobo.psx \
+	..\common\reach\orrobo.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+mkknf1kl.obj: mkknf1kl.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orlao.psx \
+	..\common\reach\orlao.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+mkknf1ts.obj: mkknf1ts.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\ortusk.psx \
+	..\common\reach\ortusk.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+mkknf1sg.obj: mkknf1sg.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orsg.psx \
+	..\common\reach\orsg.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+mkknf1st.obj: mkknf1st.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orst.psx \
+	..\common\reach\orst.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+mkknf1lk.obj: mkknf1lk.asm \
+	..\chars\kano\mkkanof1.psx \
+	..\chars\kano\mkkanof1.psi \
+	..\common\reach\orlk.psx \
+	..\common\reach\orlk.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+

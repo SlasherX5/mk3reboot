@@ -1,0 +1,131 @@
+ochar_ripped_anis:
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo2_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo3_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_normal_skel-base_anims
+	DD 0
+a_robo_rip:
+	DD RBRIP1-base_anims
+	DD RBRIP2-base_anims
+	DD RBRIP3-base_anims
+	DD RBRIP4-base_anims
+	DD RBRIP5-base_anims
+	DD RBRIP6-base_anims
+	DD RBRIP7-base_anims
+	DD 0
+a_robo2_rip:
+	DD CYRAX_RBRIP1-base_anims
+	DD RBRIP2-base_anims
+	DD RBRIP3-base_anims
+	DD CYRAX_RBRIP4-base_anims
+	DD RBRIP5-base_anims
+	DD RBRIP6-base_anims
+	DD RBRIP7-base_anims
+	DD 0
+a_robo3_rip:
+	DD SMOKE_RBRIP1-base_anims
+	DD RBRIP2-base_anims
+	DD RBRIP3-base_anims
+	DD SMOKE_RBRIP4-base_anims
+	DD RBRIP5-base_anims
+	DD RBRIP6-base_anims
+	DD RBRIP7-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+RBRIP1:
+	DD RBRIP1_SUB-base_anims, 0
+RBRIP1_SUB:
+	DD RBRIP1_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBRDFLA_P
+RBRIP2:
+	DD RBRIP2_SUB-base_anims, 0
+RBRIP2_SUB:
+	DD RBRIP2_IMG-base_anims
+	DW 82, 104, 54, -17
+RBRIP3:
+	DD RBRIP3_SUB-base_anims, 0
+RBRIP3_SUB:
+	DD RBRIP3_IMG-base_anims
+	DW 86, 104, 57, -17
+RBRIP4:
+	DD RBRIP4_SUB-base_anims, 0
+RBRIP4_SUB:
+	DD RBRIP4_IMG-base_anims
+	DW 129, 104, 102, -17
+	DD   _RBRDFLB_P
+RBRIP5:
+	DD RBRIP5_SUB-base_anims, 0
+RBRIP5_SUB:
+	DD RBRIP5_IMG-base_anims
+	DW 143, 104, 118, -17
+RBRIP6:
+	DD RBRIP6_SUB-base_anims, 0
+RBRIP6_SUB:
+	DD RBRIP6_IMG-base_anims
+	DW 139, 103, 121, -17
+RBRIP7:
+	DD RBRIP7_SUB-base_anims, 0
+RBRIP7_SUB:
+	DD RBRIP7_IMG-base_anims
+	DW 83, 103, 122, -17
+CYRAX_RBRIP1:
+	DD CYRAX_RBRIP1_SUB-base_anims, 0
+CYRAX_RBRIP1_SUB:
+	DD CYRAX_RBRIP1_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBYLFLA_P
+CYRAX_RBRIP4:
+	DD CYRAX_RBRIP4_SUB-base_anims, 0
+CYRAX_RBRIP4_SUB:
+	DD CYRAX_RBRIP4_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBYLFLB_P
+SMOKE_RBRIP1:
+	DD SMOKE_RBRIP1_SUB-base_anims, 0
+SMOKE_RBRIP1_SUB:
+	DD SMOKE_RBRIP1_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBBLFLA_P
+SMOKE_RBRIP4:
+	DD SMOKE_RBRIP4_SUB-base_anims, 0
+SMOKE_RBRIP4_SUB:
+	DD SMOKE_RBRIP4_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBBLFLB_P
+

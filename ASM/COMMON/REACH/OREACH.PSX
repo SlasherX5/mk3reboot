@@ -1,0 +1,551 @@
+ochar_reached:
+	DD a_reached_kano-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_ind-base_anims
+	DD a_reached_sz-base_anims
+	DD a_reached_swat-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_robo1-base_anims
+	DD a_reached_robo2-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_st-base_anims
+	DD a_reached_lk-base_anims
+	DD a_reached_robo1-base_anims
+	DD 0
+a_reached_kano:
+	DD ani_adjustxy
+	DW -9
+	DW 10
+	DD KNMOUTH3-base_anims
+	DD KNMOUTH4-base_anims
+	DD KNMOUTH5-base_anims
+	DD KNMOUTH6-base_anims
+	DD KNMOUTH7-base_anims
+	DD KNMOUTH8-base_anims
+	DD 0
+a_reached_sonya:
+	DD ani_adjustxy
+	DW -5
+	DW 000H
+	DD SBMOUTH3-base_anims
+	DD SBMOUTH4-base_anims
+	DD SBMOUTH5-base_anims
+	DD SBMOUTH6-base_anims
+	DD SBMOUTH7-base_anims
+	DD SBMOUTH8-base_anims
+	DD 0
+a_reached_jax:
+	DD ani_adjustxy
+	DW -9
+	DW 10
+	DD JXMOUTH3-base_anims
+	DD JXMOUTH4-base_anims
+	DD JXMOUTH5-base_anims
+	DD JXMOUTH6-base_anims
+	DD JXMOUTH7-base_anims
+	DD JXMOUTH8-base_anims
+	DD 0
+a_reached_ind:
+	DD ani_adjustxy
+	DW -10
+	DW 000H
+	DD INMOUTH3-base_anims
+	DD INMOUTH4-base_anims
+	DD INMOUTH5-base_anims
+	DD INMOUTH6-base_anims
+	DD INMOUTH7-base_anims
+	DD INMOUTH8-base_anims
+	DD 0
+a_reached_sz:
+	DD ani_adjustxy
+	DW 000H
+	DW 00aH
+	DD SZMOUTH3-base_anims
+	DD SZMOUTH4-base_anims
+	DD SZMOUTH5-base_anims
+	DD SZMOUTH6-base_anims
+	DD SZMOUTH7-base_anims
+	DD SZMOUTH8-base_anims
+	DD 0
+a_reached_swat:
+	DD ani_adjustxy
+	DW -9
+	DW 10
+	DD OBMOUTH3-base_anims
+	DD OBMOUTH4-base_anims
+	DD OBMOUTH5-base_anims
+	DD OBMOUTH6-base_anims
+	DD OBMOUTH7-base_anims
+	DD OBMOUTH8-base_anims
+	DD 0
+a_reached_lia:
+	DD ani_adjustxy
+	DW -9
+	DW 0
+	DD LIMOUTH3-base_anims
+	DD LIMOUTH4-base_anims
+	DD LIMOUTH5-base_anims
+	DD LIMOUTH6-base_anims
+	DD LIMOUTH7-base_anims
+	DD LIMOUTH8-base_anims
+	DD 0
+a_reached_robo1:
+a_reached_robo2:
+	DD ani_adjustxy
+	DW -9
+	DW 4
+	DD RBMOUTH3-base_anims
+	DD RBMOUTH4-base_anims
+	DD RBMOUTH5-base_anims
+	DD RBMOUTH6-base_anims
+	DD RBMOUTH7-base_anims
+	DD RBMOUTH8-base_anims
+	DD 0
+a_reached_lao:
+	DD ani_adjustxy
+	DW 9
+	DW 0
+	DD KLMOUTH3-base_anims
+	DD KLMOUTH4-base_anims
+	DD KLMOUTH5-base_anims
+	DD KLMOUTH6-base_anims
+	DD KLMOUTH7-base_anims
+	DD KLMOUTH8-base_anims
+	DD 0
+a_reached_tusk:
+	DD ani_adjustxy
+	DW 001H
+	DW 00aH
+	DD TRMOUTH3-base_anims
+	DD TRMOUTH4-base_anims
+	DD TRMOUTH5-base_anims
+	DD TRMOUTH6-base_anims
+	DD TRMOUTH7-base_anims
+	DD TRMOUTH8-base_anims
+	DD 0
+a_reached_sg:
+	DD ani_adjustxy
+	DW 01bH
+	DW 00aH
+	DD SGMOUTH3-base_anims
+	DD SGMOUTH4-base_anims
+	DD SGMOUTH5-base_anims
+	DD SGMOUTH6-base_anims
+	DD SGMOUTH7-base_anims
+	DD SGMOUTH8-base_anims
+	DD 0
+a_reached_st:
+	DD ani_adjustxy
+	DW -00cH
+	DW 7
+	DD TSMOUTH3-base_anims
+	DD TSMOUTH4-base_anims
+	DD TSMOUTH5-base_anims
+	DD TSMOUTH6-base_anims
+	DD TSMOUTH7-base_anims
+	DD TSMOUTH8-base_anims
+	DD 0
+a_reached_lk:
+	DD ani_adjustxy
+	DW 0
+	DW 0
+	DD LUMOUTH3-base_anims
+	DD LUMOUTH4-base_anims
+	DD LUMOUTH5-base_anims
+	DD LUMOUTH6-base_anims
+	DD LUMOUTH7-base_anims
+	DD LUMOUTH8-base_anims
+	DD 0
+KNMOUTH3:
+	DD KNMOUTH3_SUB-base_anims, 0
+KNMOUTH3_SUB:
+	DD KNMOUTH3_IMG-base_anims
+	DW 58, 97, 26, -20
+KNMOUTH4:
+	DD KNMOUTH4_SUB-base_anims, 0
+KNMOUTH4_SUB:
+	DD KNMOUTH4_IMG-base_anims
+	DW 62, 97, 30, -20
+KNMOUTH5:
+	DD KNMOUTH5_SUB-base_anims, 0
+KNMOUTH5_SUB:
+	DD KNMOUTH5_IMG-base_anims
+	DW 66, 97, 34, -20
+KNMOUTH6:
+	DD KNMOUTH6_SUB-base_anims, 0
+KNMOUTH6_SUB:
+	DD KNMOUTH6_IMG-base_anims
+	DW 80, 64, 41, -53
+KNMOUTH7:
+	DD KNMOUTH7_SUB-base_anims, 0
+KNMOUTH7_SUB:
+	DD KNMOUTH7_IMG-base_anims
+	DW 105, 25, 59, -93
+KNMOUTH8:
+	DD KNMOUTH8_SUB-base_anims, 0
+KNMOUTH8_SUB:
+	DD KNMOUTH8_IMG-base_anims
+	DW 98, 34, 55, -84
+SBMOUTH3:
+	DD SBMOUTH3_SUB-base_anims, 0
+SBMOUTH3_SUB:
+	DD SBMOUTH3_IMG-base_anims
+	DW 56, 96, 30, -23
+SBMOUTH4:
+	DD SBMOUTH4_SUB-base_anims, 0
+SBMOUTH4_SUB:
+	DD SBMOUTH4_IMG-base_anims
+	DW 62, 93, 35, -26
+SBMOUTH5:
+	DD SBMOUTH5_SUB-base_anims, 0
+SBMOUTH5_SUB:
+	DD SBMOUTH5_IMG-base_anims
+	DW 62, 93, 35, -26
+SBMOUTH6:
+	DD SBMOUTH6_SUB-base_anims, 0
+SBMOUTH6_SUB:
+	DD SBMOUTH6_IMG-base_anims
+	DW 90, 60, 55, -59
+SBMOUTH7:
+	DD SBMOUTH7_SUB-base_anims, 0
+SBMOUTH7_SUB:
+	DD SBMOUTH7_IMG-base_anims
+	DW 114, 25, 61, -94
+SBMOUTH8:
+	DD SBMOUTH8_SUB-base_anims, 0
+SBMOUTH8_SUB:
+	DD SBMOUTH8_IMG-base_anims
+	DW 112, 28, 60, -90
+JXMOUTH3:
+	DD JXMOUTH3_SUB-base_anims, 0
+JXMOUTH3_SUB:
+	DD JXMOUTH3_IMG-base_anims
+	DW 54, 102, 25, -28
+JXMOUTH4:
+	DD JXMOUTH4_SUB-base_anims, 0
+JXMOUTH4_SUB:
+	DD JXMOUTH4_IMG-base_anims
+	DW 55, 103, 26, -27
+JXMOUTH5:
+	DD JXMOUTH5_SUB-base_anims, 0
+JXMOUTH5_SUB:
+	DD JXMOUTH5_IMG-base_anims
+	DW 57, 105, 28, -25
+JXMOUTH6:
+	DD JXMOUTH6_SUB-base_anims, 0
+JXMOUTH6_SUB:
+	DD JXMOUTH6_IMG-base_anims
+	DW 78, 66, 46, -63
+JXMOUTH7:
+	DD JXMOUTH7_SUB-base_anims, 0
+JXMOUTH7_SUB:
+	DD JXMOUTH7_IMG-base_anims
+	DW 98, 30, 59, -100
+JXMOUTH8:
+	DD JXMOUTH8_SUB-base_anims, 0
+JXMOUTH8_SUB:
+	DD JXMOUTH8_IMG-base_anims
+	DW 87, 38, 50, -92
+INMOUTH3:
+	DD INMOUTH3_SUB-base_anims, 0
+INMOUTH3_SUB:
+	DD INMOUTH3_IMG-base_anims
+	DW 62, 91, 30, -25
+INMOUTH4:
+	DD INMOUTH4_SUB-base_anims, 0
+INMOUTH4_SUB:
+	DD INMOUTH4_IMG-base_anims
+	DW 62, 93, 30, -24
+INMOUTH5:
+	DD INMOUTH5_SUB-base_anims, 0
+INMOUTH5_SUB:
+	DD INMOUTH5_IMG-base_anims
+	DW 62, 94, 30, -23
+INMOUTH6:
+	DD INMOUTH6_SUB-base_anims, 0
+INMOUTH6_SUB:
+	DD INMOUTH6_IMG-base_anims
+	DW 83, 60, 43, -54
+INMOUTH7:
+	DD INMOUTH7_SUB-base_anims, 0
+INMOUTH7_SUB:
+	DD INMOUTH7_IMG-base_anims
+	DW 106, 19, 63, -100
+INMOUTH8:
+	DD INMOUTH8_SUB-base_anims, 0
+INMOUTH8_SUB:
+	DD INMOUTH8_IMG-base_anims
+	DW 94, 33, 55, -88
+SZMOUTH3:
+	DD SZMOUTH3_SUB-base_anims, 0
+SZMOUTH3_SUB:
+	DD SZMOUTH3_IMG-base_anims
+	DW 66, 96, 35, -19
+SZMOUTH4:
+	DD SZMOUTH4_SUB-base_anims, 0
+SZMOUTH4_SUB:
+	DD SZMOUTH4_IMG-base_anims
+	DW 70, 94, 38, -20
+SZMOUTH5:
+	DD SZMOUTH5_SUB-base_anims, 0
+SZMOUTH5_SUB:
+	DD SZMOUTH5_IMG-base_anims
+	DW 74, 94, 43, -21
+SZMOUTH6:
+	DD SZMOUTH6_SUB-base_anims, 0
+SZMOUTH6_SUB:
+	DD SZMOUTH6_IMG-base_anims
+	DW 90, 68, 54, -47
+SZMOUTH7:
+	DD SZMOUTH7_SUB-base_anims, 0
+SZMOUTH7_SUB:
+	DD SZMOUTH7_IMG-base_anims
+	DW 120, 20, 70, -95
+SZMOUTH8:
+	DD SZMOUTH8_SUB-base_anims, 0
+SZMOUTH8_SUB:
+	DD SZMOUTH8_IMG-base_anims
+	DW 114, 25, 66, -90
+OBMOUTH3:
+	DD OBMOUTH3_SUB-base_anims, 0
+OBMOUTH3_SUB:
+	DD OBMOUTH3_IMG-base_anims
+	DW 54, 96, 26, -24
+OBMOUTH4:
+	DD OBMOUTH4_SUB-base_anims, 0
+OBMOUTH4_SUB:
+	DD OBMOUTH4_IMG-base_anims
+	DW 60, 94, 33, -25
+OBMOUTH5:
+	DD OBMOUTH5_SUB-base_anims, 0
+OBMOUTH5_SUB:
+	DD OBMOUTH5_IMG-base_anims
+	DW 64, 95, 37, -25
+OBMOUTH6:
+	DD OBMOUTH6_SUB-base_anims, 0
+OBMOUTH6_SUB:
+	DD OBMOUTH6_IMG-base_anims
+	DW 82, 66, 46, -53
+OBMOUTH7:
+	DD OBMOUTH7_SUB-base_anims, 0
+OBMOUTH7_SUB:
+	DD OBMOUTH7_IMG-base_anims
+	DW 120, 22, 66, -98
+OBMOUTH8:
+	DD OBMOUTH8_SUB-base_anims, 0
+OBMOUTH8_SUB:
+	DD OBMOUTH8_IMG-base_anims
+	DW 114, 32, 59, -88
+LIMOUTH3:
+	DD LIMOUTH3_SUB-base_anims, 0
+LIMOUTH3_SUB:
+	DD LIMOUTH3_IMG-base_anims
+	DW 66, 93, 34, -25
+LIMOUTH4:
+	DD LIMOUTH4_SUB-base_anims, 0
+LIMOUTH4_SUB:
+	DD LIMOUTH4_IMG-base_anims
+	DW 73, 94, 40, -24
+LIMOUTH5:
+	DD LIMOUTH5_SUB-base_anims, 0
+LIMOUTH5_SUB:
+	DD LIMOUTH5_IMG-base_anims
+	DW 75, 95, 42, -22
+LIMOUTH6:
+	DD LIMOUTH6_SUB-base_anims, 0
+LIMOUTH6_SUB:
+	DD LIMOUTH6_IMG-base_anims
+	DW 91, 68, 54, -49
+LIMOUTH7:
+	DD LIMOUTH7_SUB-base_anims, 0
+LIMOUTH7_SUB:
+	DD LIMOUTH7_IMG-base_anims
+	DW 115, 31, 66, -93
+LIMOUTH8:
+	DD LIMOUTH8_SUB-base_anims, 0
+LIMOUTH8_SUB:
+	DD LIMOUTH8_IMG-base_anims
+	DW 106, 40, 61, -84
+RBMOUTH3:
+	DD RBMOUTH3_SUB-base_anims, 0
+RBMOUTH3_SUB:
+	DD RBMOUTH3_IMG-base_anims
+	DW 56, 96, 23, -25
+RBMOUTH4:
+	DD RBMOUTH4_SUB-base_anims, 0
+RBMOUTH4_SUB:
+	DD RBMOUTH4_IMG-base_anims
+	DW 60, 91, 27, -30
+RBMOUTH5:
+	DD RBMOUTH5_SUB-base_anims, 0
+RBMOUTH5_SUB:
+	DD RBMOUTH5_IMG-base_anims
+	DW 62, 88, 29, -32
+RBMOUTH6:
+	DD RBMOUTH6_SUB-base_anims, 0
+RBMOUTH6_SUB:
+	DD RBMOUTH6_IMG-base_anims
+	DW 73, 64, 29, -58
+RBMOUTH7:
+	DD RBMOUTH7_SUB-base_anims, 0
+RBMOUTH7_SUB:
+	DD RBMOUTH7_IMG-base_anims
+	DW 86, 34, 30, -88
+RBMOUTH8:
+	DD RBMOUTH8_SUB-base_anims, 0
+RBMOUTH8_SUB:
+	DD RBMOUTH8_IMG-base_anims
+	DW 86, 39, 30, -83
+KLMOUTH3:
+	DD KLMOUTH3_SUB-base_anims, 0
+KLMOUTH3_SUB:
+	DD KLMOUTH3_IMG-base_anims
+	DW 73, 94, 44, -19
+KLMOUTH4:
+	DD KLMOUTH4_SUB-base_anims, 0
+KLMOUTH4_SUB:
+	DD KLMOUTH4_IMG-base_anims
+	DW 76, 93, 47, -20
+KLMOUTH5:
+	DD KLMOUTH5_SUB-base_anims, 0
+KLMOUTH5_SUB:
+	DD KLMOUTH5_IMG-base_anims
+	DW 79, 92, 50, -21
+KLMOUTH6:
+	DD KLMOUTH6_SUB-base_anims, 0
+KLMOUTH6_SUB:
+	DD KLMOUTH6_IMG-base_anims
+	DW 100, 64, 63, -49
+KLMOUTH7:
+	DD KLMOUTH7_SUB-base_anims, 0
+KLMOUTH7_SUB:
+	DD KLMOUTH7_IMG-base_anims
+	DW 110, 33, 66, -90
+KLMOUTH8:
+	DD KLMOUTH8_SUB-base_anims, 0
+KLMOUTH8_SUB:
+	DD KLMOUTH8_IMG-base_anims
+	DW 104, 40, 65, -82
+TRMOUTH3:
+	DD TRMOUTH3_SUB-base_anims, 0
+TRMOUTH3_SUB:
+	DD TRMOUTH3_IMG-base_anims
+	DW 66, 98, 36, -23
+TRMOUTH4:
+	DD TRMOUTH4_SUB-base_anims, 0
+TRMOUTH4_SUB:
+	DD TRMOUTH4_IMG-base_anims
+	DW 73, 97, 43, -24
+TRMOUTH5:
+	DD TRMOUTH5_SUB-base_anims, 0
+TRMOUTH5_SUB:
+	DD TRMOUTH5_IMG-base_anims
+	DW 78, 98, 49, -23
+TRMOUTH6:
+	DD TRMOUTH6_SUB-base_anims, 0
+TRMOUTH6_SUB:
+	DD TRMOUTH6_IMG-base_anims
+	DW 102, 64, 64, -57
+TRMOUTH7:
+	DD TRMOUTH7_SUB-base_anims, 0
+TRMOUTH7_SUB:
+	DD TRMOUTH7_IMG-base_anims
+	DW 119, 21, 75, -101
+TRMOUTH8:
+	DD TRMOUTH8_SUB-base_anims, 0
+TRMOUTH8_SUB:
+	DD TRMOUTH8_IMG-base_anims
+	DW 111, 33, 71, -90
+SGMOUTH3:
+	DD SGMOUTH3_SUB-base_anims, 0
+SGMOUTH3_SUB:
+	DD SGMOUTH3_IMG-base_anims
+	DW 78, 96, 56, -29
+SGMOUTH4:
+	DD SGMOUTH4_SUB-base_anims, 0
+SGMOUTH4_SUB:
+	DD SGMOUTH4_IMG-base_anims
+	DW 79, 98, 58, -27
+SGMOUTH5:
+	DD SGMOUTH5_SUB-base_anims, 0
+SGMOUTH5_SUB:
+	DD SGMOUTH5_IMG-base_anims
+	DW 81, 99, 59, -26
+SGMOUTH6:
+	DD SGMOUTH6_SUB-base_anims, 0
+SGMOUTH6_SUB:
+	DD SGMOUTH6_IMG-base_anims
+	DW 95, 71, 69, -54
+SGMOUTH7:
+	DD SGMOUTH7_SUB-base_anims, 0
+SGMOUTH7_SUB:
+	DD SGMOUTH7_IMG-base_anims
+	DW 124, 24, 84, -103
+SGMOUTH8:
+	DD SGMOUTH8_SUB-base_anims, 0
+SGMOUTH8_SUB:
+	DD SGMOUTH8_IMG-base_anims
+	DW 114, 35, 80, -93
+TSMOUTH3:
+	DD TSMOUTH3_SUB-base_anims, 0
+TSMOUTH3_SUB:
+	DD TSMOUTH3_IMG-base_anims
+	DW 55, 93, 22, -16
+TSMOUTH4:
+	DD TSMOUTH4_SUB-base_anims, 0
+TSMOUTH4_SUB:
+	DD TSMOUTH4_IMG-base_anims
+	DW 58, 93, 25, -16
+TSMOUTH5:
+	DD TSMOUTH5_SUB-base_anims, 0
+TSMOUTH5_SUB:
+	DD TSMOUTH5_IMG-base_anims
+	DW 64, 94, 31, -15
+TSMOUTH6:
+	DD TSMOUTH6_SUB-base_anims, 0
+TSMOUTH6_SUB:
+	DD TSMOUTH6_IMG-base_anims
+	DW 76, 59, 37, -50
+TSMOUTH7:
+	DD TSMOUTH7_SUB-base_anims, 0
+TSMOUTH7_SUB:
+	DD TSMOUTH7_IMG-base_anims
+	DW 103, 20, 50, -93
+TSMOUTH8:
+	DD TSMOUTH8_SUB-base_anims, 0
+TSMOUTH8_SUB:
+	DD TSMOUTH8_IMG-base_anims
+	DW 93, 31, 46, -86
+LUMOUTH3:
+	DD LUMOUTH3_SUB-base_anims, 0
+LUMOUTH3_SUB:
+	DD LUMOUTH3_IMG-base_anims
+	DW 70, 90, 46, -23
+LUMOUTH4:
+	DD LUMOUTH4_SUB-base_anims, 0
+LUMOUTH4_SUB:
+	DD LUMOUTH4_IMG-base_anims
+	DW 70, 91, 47, -22
+LUMOUTH5:
+	DD LUMOUTH5_SUB-base_anims, 0
+LUMOUTH5_SUB:
+	DD LUMOUTH5_IMG-base_anims
+	DW 75, 93, 52, -20
+LUMOUTH6:
+	DD LUMOUTH6_SUB-base_anims, 0
+LUMOUTH6_SUB:
+	DD LUMOUTH6_IMG-base_anims
+	DW 94, 65, 63, -48
+LUMOUTH7:
+	DD LUMOUTH7_SUB-base_anims, 0
+LUMOUTH7_SUB:
+	DD LUMOUTH7_IMG-base_anims
+	DW 123, 23, 75, -93
+LUMOUTH8:
+	DD LUMOUTH8_SUB-base_anims, 0
+LUMOUTH8_SUB:
+	DD LUMOUTH8_IMG-base_anims
+	DW 120, 27, 73, -89

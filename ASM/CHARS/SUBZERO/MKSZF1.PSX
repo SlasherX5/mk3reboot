@@ -1,0 +1,422 @@
+sz_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+sz_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0	;a_blow_ice-sz_anitab1
+	DD 0	;a_ice_thudd-sz_anitab1
+
+	DD a_lift_n_freeze-sz_anitab1
+	DD a_boomer-sz_anitab1
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD a_blood_explode-base_anims	;34
+	DD 0
+	DD a_arm2-base_anims
+	DD a_leg-base_anims
+	DD 0
+	DD a_bone-base_anims
+	DD 0
+	DD a_rib_cage-base_anims
+	DD a_skull-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+;a_ice_thudd
+;	DW ICETHUD1-sz_anitab1
+;	DW ICETHUD2-sz_anitab1
+;	DW ICETHUD3-sz_anitab1
+;	DW ICETHUD4-sz_anitab1
+;	DW ICETHUD5-sz_anitab1
+;	DW ICETHUD6-sz_anitab1
+;	DW ICETHUD7-sz_anitab1
+;	DW ICETHUD8-sz_anitab1
+;	DW ICETHUD9-sz_anitab1
+;	DW 0
+;a_blow_ice
+;	DW SZBLOWICE1-sz_anitab1
+;	DW SZBLOWICE2-sz_anitab1
+;	DW ani_sladd
+;	DW ICEBLOW1-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW1-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW2-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW3-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW4-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW5-sz_anitab1
+;	DW 0
+;	DW ani_slani_sleep
+;	DW ICEBLOW6-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW7-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW8-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW9-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW10-sz_anitab1
+;	DW ani_slani_sleep
+;	DW ICEBLOW11-sz_anitab1
+;	DW 0
+a_lift_n_freeze:
+	DD SZICEBREAK1-sz_anitab1
+	DD SZICEBREAK2-sz_anitab1
+	DD SZICEBREAK3-sz_anitab1
+	DD SZICEBREAK4-sz_anitab1
+	DD SZICEBREAK5-sz_anitab1
+	DD 0
+	DD ani_sladd
+	DD ICEMAN1-sz_anitab1
+	DD SZICEBREAK6-sz_anitab1
+	DD ani_slani
+	DD ICEMAN2-sz_anitab1
+	DD SZICEBREAK7-sz_anitab1
+	DD ani_slani
+	DD ICEMAN3-sz_anitab1
+	DD SZICEBREAK8-sz_anitab1
+	DD ani_slani_sleep
+	DD ICEMAN4-sz_anitab1
+	DD 0
+	DD ani_slani_sleep
+	DD ICEMANHIT1-sz_anitab1
+	DD ani_slani_sleep
+	DD ICEMANHIT2-sz_anitab1
+	DD ani_slani_sleep
+	DD ICEMANHIT3-sz_anitab1
+	DD ani_slani_sleep
+	DD ICEMANHIT4-sz_anitab1
+	DD 0
+	DD ICEMANHIT1-sz_anitab1
+	DD ICEMANHIT2-sz_anitab1
+	DD ICEMANHIT3-sz_anitab1
+	DD ICEMANHIT4-sz_anitab1
+	DD 0
+a_boomer:
+	DD ICEMAN1-sz_anitab1
+	DD BOOM1-sz_anitab1
+	DD BOOM2-sz_anitab1
+	DD BOOM3-sz_anitab1
+	DD BOOM4-sz_anitab1
+	DD BOOM3-sz_anitab1
+	DD BOOM2-sz_anitab1
+	DD BOOM3-sz_anitab1
+	DD BOOM4-sz_anitab1
+	DD 0
+;ICETHUD1
+;	DW ICETHUD1_SUB-sz_anitab1, 0
+;ICETHUD1_SUB
+;	DW ICETHUD1_IMG-sz_anitab1
+;	DH 120, 26, 59, -14
+;	dw   _SZICE_P
+;ICETHUD2
+;	DW ICETHUD2_SUB-sz_anitab1, 0
+;ICETHUD2_SUB
+;	DW ICETHUD2_IMG-sz_anitab1
+;	DH 135, 31, 68, -12
+;ICETHUD3
+;	DW ICETHUD3_SUB-sz_anitab1, 0
+;ICETHUD3_SUB
+;	DW ICETHUD3_IMG-sz_anitab1
+;	DH 143, 37, 74, -8
+;ICETHUD4
+;	DW ICETHUD4_SUB-sz_anitab1, 0
+;ICETHUD4_SUB
+;	DW ICETHUD4_IMG-sz_anitab1
+;	DH 147, 32, 78, -13
+;ICETHUD5
+;	DW ICETHUD5_SUB-sz_anitab1, 0
+;ICETHUD5_SUB
+;	DW ICETHUD5_IMG-sz_anitab1
+;	DH 154, 28, 82, -18
+;ICETHUD6
+;	DW ICETHUD6_SUB-sz_anitab1, 0
+;ICETHUD6_SUB
+;	DW ICETHUD6_IMG-sz_anitab1
+;	DH 160, 26, 88, -20
+;ICETHUD7
+;	DW ICETHUD7_SUB-sz_anitab1, 0
+;ICETHUD7_SUB
+;	DW ICETHUD7_IMG-sz_anitab1
+;	DH 164, 28, 90, -20
+;ICETHUD8
+;	DW ICETHUD8_SUB-sz_anitab1, 0
+;ICETHUD8_SUB
+;	DW ICETHUD8_IMG-sz_anitab1
+;	DH 166, 29, 92, -20
+;ICETHUD9
+;	DW ICETHUD9_SUB-sz_anitab1, 0
+;ICETHUD9_SUB
+;	DW ICETHUD9_IMG-sz_anitab1
+;	DH 167, 29, 94, -20
+SZICEBREAK1:
+	DD SZICEBREAK1_SUB-sz_anitab1, 0
+SZICEBREAK1_SUB:
+	DD SZICEBREAK1_IMG-sz_anitab1
+	DW 55, 107, 17, -8
+SZICEBREAK2:
+	DD SZICEBREAK2_SUB-sz_anitab1, 0
+SZICEBREAK2_SUB:
+	DD SZICEBREAK2_IMG-sz_anitab1
+	DW 70, 100, 17, -15
+SZICEBREAK3:
+	DD SZICEBREAK3_SUB-sz_anitab1, 0
+SZICEBREAK3_SUB:
+	DD SZICEBREAK3_IMG-sz_anitab1
+	DW 64, 121, 17, 4
+SZICEBREAK4:
+	DD SZICEBREAK4_SUB-sz_anitab1, 0
+SZICEBREAK4_SUB:
+	DD SZICEBREAK4_IMG-sz_anitab1
+	DW 44, 134, 18, 18
+SZICEBREAK5:
+	DD SZICEBREAK5_SUB-sz_anitab1, 0
+SZICEBREAK5_SUB:
+	DD SZICEBREAK5_IMG-sz_anitab1
+	DW 43, 133, 17, 17
+ICEMAN1:
+	DD ICEMAN1_SUB-sz_anitab1, 0
+ICEMAN1_SUB:
+	DD ICEMAN1_IMG-sz_anitab1
+	DW 134, 34, 58, 37
+	DD   _SZICE_P
+SZICEBREAK6:
+	DD SZICEBREAK6_SUB-sz_anitab1, 0
+SZICEBREAK6_SUB:
+	DD SZICEBREAK6_IMG-sz_anitab1
+	DW 48, 133, 22, 17
+ICEMAN2:
+	DD ICEMAN2_SUB-sz_anitab1, 0
+ICEMAN2_SUB:
+	DD ICEMAN2_IMG-sz_anitab1
+	DW 150, 39, 69, 33
+SZICEBREAK7:
+	DD SZICEBREAK7_SUB-sz_anitab1, 0
+SZICEBREAK7_SUB:
+	DD SZICEBREAK7_IMG-sz_anitab1
+	DW 90, 107, 42, -8
+ICEMAN3:
+	DD ICEMAN3_SUB-sz_anitab1, 0
+ICEMAN3_SUB:
+	DD ICEMAN3_IMG-sz_anitab1
+	DW 175, 65, 85, 9
+SZICEBREAK8:
+	DD SZICEBREAK8_SUB-sz_anitab1, 0
+SZICEBREAK8_SUB:
+	DD SZICEBREAK8_IMG-sz_anitab1
+	DW 53, 99, 22, -16
+ICEMAN4:
+	DD ICEMAN4_SUB-sz_anitab1, 0
+ICEMAN4_SUB:
+	DD ICEMAN4_IMG-sz_anitab1
+	DW 167, 77, 88, -26
+ICEMANHIT1:
+	DD ICEMANHIT1_SUB-sz_anitab1, 0
+ICEMANHIT1_SUB:
+	DD ICEMANHIT1_IMG-sz_anitab1
+	DW 46, 65, -46, -48
+ICEMANHIT2:
+	DD ICEMANHIT2_SUB-sz_anitab1, 0
+ICEMANHIT2_SUB:
+	DD ICEMANHIT2_IMG-sz_anitab1
+	DW 70, 45, -36, -74
+ICEMANHIT3:
+	DD ICEMANHIT3_SUB-sz_anitab1, 0
+ICEMANHIT3_SUB:
+	DD ICEMANHIT3_IMG-sz_anitab1
+	DW 100, 27, -21, -96
+ICEMANHIT4:
+	DD ICEMANHIT4_SUB-sz_anitab1, 0
+ICEMANHIT4_SUB:
+	DD ICEMANHIT4_IMG-sz_anitab1
+	DW 113, 24, -13, -100
+BOOM1:
+	DD BOOM1_SUB-sz_anitab1, 0
+BOOM1_SUB:
+	DD BOOM1_IMG-sz_anitab1
+	DW 119, 28, 54, 34
+BOOM2:
+	DD BOOM2_SUB-sz_anitab1, 0
+BOOM2_SUB:
+	DD BOOM2_IMG-sz_anitab1
+	DW 121, 32, 55, 37
+BOOM3:
+	DD BOOM3_SUB-sz_anitab1, 0
+BOOM3_SUB:
+	DD BOOM3_IMG-sz_anitab1
+	DW 122, 35, 58, 37
+BOOM4:
+	DD BOOM4_SUB-sz_anitab1, 0
+BOOM4_SUB:
+	DD BOOM4_IMG-sz_anitab1
+	DW 123, 38, 58, 38
+;SZBLOWICE1
+;	DW SZBLOWICE1_SUB-sz_anitab1, 0
+;SZBLOWICE1_SUB
+;	DW SZBLOWICE1_IMG-sz_anitab1
+;	DH 50, 110, 18, -7
+;SZBLOWICE2
+;	DW SZBLOWICE2_SUB-sz_anitab1, 0
+;SZBLOWICE2_SUB
+;	DW SZBLOWICE2_IMG-sz_anitab1
+;	DH 51, 108, 18, -8
+;ICEBLOW1
+;	DW ICEBLOW1_SUB-sz_anitab1, 0
+;ICEBLOW1_SUB
+;	DW ICEBLOW1_IMG-sz_anitab1
+;	DH 31, 11, -27, -14
+;	dw   _ICEBLOW_P
+;ICEBLOW2
+;	DW ICEBLOW2_SUB-sz_anitab1, 0
+;ICEBLOW2_SUB
+;	DW ICEBLOW2_IMG-sz_anitab1
+;	DH 72, 25, -26, -8
+;ICEBLOW3
+;	DW ICEBLOW3_SUB-sz_anitab1, 0
+;ICEBLOW3_SUB
+;	DW ICEBLOW3_IMG-sz_anitab1
+;	DH 128, 48, -26, 0
+;ICEBLOW4
+;	DW ICEBLOW4_SUB-sz_anitab1, 0
+;ICEBLOW4_SUB
+;	DW ICEBLOW4_IMG-sz_anitab1
+;	DH 132, 65, -35, 3
+;ICEBLOW5
+;	DW ICEBLOW5_SUB-sz_anitab1, 0
+;ICEBLOW5_SUB
+;	DW ICEBLOW5_IMG-sz_anitab1
+;	DH 122, 90, -58, 6
+;ICEBLOW6
+;	DW ICEBLOW6_SUB-sz_anitab1, 0
+;ICEBLOW6_SUB
+;	DW ICEBLOW6_IMG-sz_anitab1
+;	DH 88, 111, -98, 9
+;ICEBLOW7
+;	DW ICEBLOW7_SUB-sz_anitab1, 0
+;ICEBLOW7_SUB
+;	DW ICEBLOW7_IMG-sz_anitab1
+;	DH 86, 140, -105, 16
+;ICEBLOW8
+;	DW ICEBLOW8_SUB-sz_anitab1, 0
+;ICEBLOW8_SUB
+;	DW ICEBLOW8_IMG-sz_anitab1
+;	DH 87, 159, -115, 31
+;ICEBLOW9
+;	DW ICEBLOW9_SUB-sz_anitab1, 0
+;ICEBLOW9_SUB
+;	DW ICEBLOW9_IMG-sz_anitab1
+;	DH 91, 166, -119, 40
+;ICEBLOW10
+;	DW ICEBLOW10_SUB-sz_anitab1, 0
+;ICEBLOW10_SUB
+;	DW ICEBLOW10_IMG-sz_anitab1
+;	DH 96, 169, -124, 41
+;ICEBLOW11
+;	DW ICEBLOW11_SUB-sz_anitab1, 0
+;ICEBLOW11_SUB
+;	DW ICEBLOW11_IMG-sz_anitab1
+;	DH 82, 167, -139, 39
+
+
+

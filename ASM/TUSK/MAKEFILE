@@ -1,0 +1,74 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)tusk/tuskb.bin  \
+     $(EXE)tusk/tusk.bin   \
+	 $(EXE)tusk/tuska.bin  \
+	 $(EXE)tusk/tusks.bin  \
+	 $(EXE)tusk/tuskf.bin  \
+	 $(EXE)tusk/tuskf1.bin \
+	 .SYMBOLIC
+
+# MAIN GAME	PLAY
+
+tusk.obj: tusk.asm  $(OVLARTI) \
+	..\chars\tusk\mktusk.psx \
+	..\chars\tusk\mktusk.psi \
+	..\chars\tusk\trb.psi
+
+
+# FRIENDSHIP 
+
+tusks.obj: tusks.asm $(OVLARTI) \
+	..\chars\tusk\mktusks.psx \
+	..\chars\tusk\mktusks.psi \
+	..\common\baby\baby.psx \
+	..\common\baby\baby.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+# BABALITY
+
+tuskb.obj: tuskb.asm $(OVLARTI) \
+	..\chars\tusk\mktuskb.psx \
+	..\common\baby\babytusk.psx \
+	..\common\baby\babytusk.psi \
+	..\common\baby\babyxpld.psi 
+
+
+# ANIMALITY
+
+tuska.obj: tuska.asm $(OVLARTI) \
+	..\chars\tusk\mktuska.psx \
+	..\chars\tusk\mktuska.psi \
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+# FATALITIES
+
+tuskf.obj: tuskf.asm $(OVLARTI) \
+	..\chars\tusk\mktuskf.psx \
+	..\chars\tusk\mktuskf.psi \
+	..\common\common\arm2.psx \
+	..\common\common\arm2.psi \
+	..\common\common\leg.psx	\
+	..\common\common\leg.psi	\
+	..\common\common\bone.psx \
+	..\common\common\bone.psi \
+	..\common\common\cage.psx \
+	..\common\common\cage.psi \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\float\ofloat.psx \
+	..\common\float\ofloat.psi  \
+	..\common\bighead\obighead.psx \
+	..\common\bighead\obighead.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+tuskf1.obj: tuskf1.asm $(OVLARTI) \
+	..\chars\tusk\mktuskf1.psx \
+	..\chars\tusk\mktuskf1.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+

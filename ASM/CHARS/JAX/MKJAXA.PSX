@@ -1,0 +1,203 @@
+jax_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+jax_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+	DD a_jax_lion-jax_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_jax_lion:
+	DD LIONMORF1-jax_anitab1
+	DD LIONMORF3-jax_anitab1
+	DD LIONMORF4-jax_anitab1
+	DD LIONMORF5-jax_anitab1
+	DD LIONMORF6-jax_anitab1
+	DD 0
+	DD LIONMORF7-jax_anitab1
+	DD LIONMORF8-jax_anitab1
+	DD 0
+	DD LIONMORF10-jax_anitab1
+	DD LIONMORF13-jax_anitab1
+	DD LIONMORF14-jax_anitab1
+a_lion:
+	DD LIONMORF15-jax_anitab1
+	DD LIONMORF16-jax_anitab1
+	DD LIONMORF17-jax_anitab1
+	DD ani_jump
+	DD a_lion-jax_anitab1
+LIONMORF1:
+	DD LIONMORF1_SUB-jax_anitab1, 0
+LIONMORF1_SUB:
+	DD LIONMORF1_IMG-jax_anitab1
+	DW 60, 115, 28, -15
+	DD   _LION_P
+LIONMORF3:
+	DD LIONMORF3_SUB-jax_anitab1, 0
+LIONMORF3_SUB:
+	DD LIONMORF3_IMG-jax_anitab1
+	DW 56, 108, 23, -25
+LIONMORF4:
+	DD LIONMORF4_SUB-jax_anitab1, 0
+LIONMORF4_SUB:
+	DD LIONMORF4_IMG-jax_anitab1
+	DW 74, 92, 36, -42
+LIONMORF5:
+	DD LIONMORF5_SUB-jax_anitab1, 0
+LIONMORF5_SUB:
+	DD LIONMORF5_IMG-jax_anitab1
+	DW 100, 82, 56, -51
+LIONMORF6:
+	DD LIONMORF6_SUB-jax_anitab1, 0
+LIONMORF6_SUB:
+	DD LIONMORF6_IMG-jax_anitab1
+	DW 119, 70, 59, -64
+LIONMORF7:
+	DD LIONMORF7_SUB-jax_anitab1, 0
+LIONMORF7_SUB:
+	DD LIONMORF7_IMG-jax_anitab1
+	DW 114, 90, 70, -45
+LIONMORF8:
+	DD LIONMORF8_SUB-jax_anitab1, 0
+LIONMORF8_SUB:
+	DD LIONMORF8_IMG-jax_anitab1
+	DW 150, 92, 86, -31
+LIONMORF10:
+	DD LIONMORF10_SUB-jax_anitab1, 0
+LIONMORF10_SUB:
+	DD LIONMORF10_IMG-jax_anitab1
+	DW 122, 129, 84, -2
+LIONMORF13:
+	DD LIONMORF13_SUB-jax_anitab1, 0
+LIONMORF13_SUB:
+	DD LIONMORF13_IMG-jax_anitab1
+	DW 91, 92, 52, -47
+LIONMORF14:
+	DD LIONMORF14_SUB-jax_anitab1, 0
+LIONMORF14_SUB:
+	DD LIONMORF14_IMG-jax_anitab1
+	DW 126, 66, 78, -72
+LIONMORF15:
+	DD LIONMORF15_SUB-jax_anitab1, 0
+LIONMORF15_SUB:
+	DD LIONMORF15_IMG-jax_anitab1
+	DW 116, 74, 68, -63
+LIONMORF16:
+	DD LIONMORF16_SUB-jax_anitab1, 0
+LIONMORF16_SUB:
+	DD LIONMORF16_IMG-jax_anitab1
+	DW 116, 70, 73, -64
+LIONMORF17:
+	DD LIONMORF17_SUB-jax_anitab1, 0
+LIONMORF17_SUB:
+	DD LIONMORF17_IMG-jax_anitab1
+	DW 126, 68, 78, -66

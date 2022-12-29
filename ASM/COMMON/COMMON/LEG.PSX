@@ -1,0 +1,52 @@
+a_leg:
+	DD LEG01-base_anims
+	DD LEG02-base_anims
+	DD LEG03-base_anims
+	DD LEG04-base_anims
+	DD LEG05-base_anims
+	DD LEG06-base_anims
+	DD LEG07-base_anims
+	DD LEG08-base_anims
+	DD LEG09-base_anims
+	DD LEG10-base_anims
+	DD LEG11-base_anims
+;	DW LEG12-base_anims
+	DD ani_jump
+	DD a_leg-base_anims
+LEG01:
+	DD LEG01_IMG-base_anims
+	DW 15, 29, 7, 11
+	DD   _BODY_P
+LEG02:
+	DD LEG02_IMG-base_anims
+	DW 19, 30, 9, 11
+LEG03:
+	DD LEG03_IMG-base_anims
+	DW 21, 31, 10, 11
+LEG04:
+	DD LEG04_IMG-base_anims
+	DW 19, 32, 10, 12
+LEG05:
+	DD LEG05_IMG-base_anims
+	DW 19, 32, 10, 12
+LEG06:
+	DD LEG06_IMG-base_anims
+	DW 14, 32, 7, 12
+LEG07:
+	DD LEG07_IMG-base_anims
+	DW 14, 33, 8, 13
+LEG08:
+	DD LEG08_IMG-base_anims
+	DW 18, 31, 11, 12
+LEG09:
+	DD LEG09_IMG-base_anims
+	DW 20, 31, 11, 12
+LEG10:
+	DD LEG10_IMG-base_anims
+	DW 20, 31, 12, 12
+LEG11:
+	DD LEG11_IMG-base_anims
+	DW 19, 29, 11, 11
+;LEG12
+;	DW LEG12_IMG-base_anims
+;	DH 14, 29, 8, 11

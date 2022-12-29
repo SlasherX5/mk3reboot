@@ -1,0 +1,98 @@
+a_friend:
+    DD FRIEN1-base_anims
+    DD FRIEN2-base_anims
+    DD FRIEN3-base_anims
+    DD FRIEN4-base_anims
+    DD FRIEN5-base_anims
+    DD FRIEN4-base_anims
+    DD FRIEN3-base_anims
+    DD FRIEN2-base_anims
+    DD FRIEN1-base_anims
+    DD FRIEN2-base_anims
+    DD FRIEN3-base_anims
+    DD FRIEN4-base_anims
+    DD FRIEN5-base_anims
+    DD FRIEN4-base_anims
+    DD FRIEN3-base_anims
+    DD FRIEN2-base_anims
+    DD FRIEN1-base_anims
+    DD FRIEN2-base_anims
+    DD FRIEN3-base_anims
+    DD FRIEN4-base_anims
+    DD FRIEN5-base_anims
+    DD 0
+a_ship:
+    DD DSHIP1-base_anims
+    DD DSHIP2-base_anims
+    DD DSHIP3-base_anims
+    DD DSHIP4-base_anims
+    DD DSHIP5-base_anims
+    DD DSHIP4-base_anims
+    DD DSHIP3-base_anims
+    DD DSHIP2-base_anims
+    DD DSHIP1-base_anims
+    DD DSHIP2-base_anims
+    DD DSHIP3-base_anims
+    DD DSHIP4-base_anims
+    DD DSHIP5-base_anims
+    DD DSHIP4-base_anims
+    DD DSHIP3-base_anims
+    DD DSHIP2-base_anims
+    DD DSHIP1-base_anims
+    DD DSHIP2-base_anims
+    DD DSHIP3-base_anims
+    DD DSHIP4-base_anims
+    DD DSHIP5-base_anims
+    DD 0
+FRIEN1:
+    DD FRIEN1_SUB-base_anims, 0
+FRIEN1_SUB:
+    DD FRIEN1_IMG-base_anims
+    DW 102, 49, 102, 11
+    DD   _FRIEN_P
+FRIEN2:
+    DD FRIEN2_SUB-base_anims, 0
+FRIEN2_SUB:
+    DD FRIEN2_IMG-base_anims
+    DW 101, 45, 101, 9
+FRIEN3:
+    DD FRIEN3_SUB-base_anims, 0
+FRIEN3_SUB:
+    DD FRIEN3_IMG-base_anims
+    DW 98, 35, 98, 4
+FRIEN4:
+    DD FRIEN4_SUB-base_anims, 0
+FRIEN4_SUB:
+    DD FRIEN4_IMG-base_anims
+    DW 95, 26, 96, 0
+FRIEN5:
+    DD FRIEN5_SUB-base_anims, 0
+FRIEN5_SUB:
+    DD FRIEN5_IMG-base_anims
+    DW 94, 23, 95, -1
+DSHIP1:
+    DD DSHIP1_SUB-base_anims, 0
+DSHIP1_SUB:
+    DD DSHIP1_IMG-base_anims
+    DW 98, 51, 0, 12
+    DD   _DSHIP_P
+DSHIP2:
+    DD DSHIP2_SUB-base_anims, 0
+DSHIP2_SUB:
+    DD DSHIP2_IMG-base_anims
+    DW 98, 46, 0, 9
+DSHIP3:
+    DD DSHIP3_SUB-base_anims, 0
+DSHIP3_SUB:
+    DD DSHIP3_IMG-base_anims
+    DW 98, 37, 0, 5
+DSHIP4:
+    DD DSHIP4_SUB-base_anims, 0
+DSHIP4_SUB:
+    DD DSHIP4_IMG-base_anims
+    DW 98, 26, 0, 0
+DSHIP5:
+    DD DSHIP5_SUB-base_anims, 0
+DSHIP5_SUB:
+    DD DSHIP5_IMG-base_anims
+    DW 101, 23, 1, -1

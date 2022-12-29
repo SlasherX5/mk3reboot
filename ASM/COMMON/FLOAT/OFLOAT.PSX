@@ -1,0 +1,92 @@
+ochar_floaters:
+	DD KNFLOAT-base_anims
+	DD SBFLOAT-base_anims
+	DD JXFLOAT-base_anims
+	DD INFLOAT-base_anims
+	DD SZFLOAT-base_anims
+	DD OBFLOAT-base_anims
+	DD LIFLOAT-base_anims
+	DD RBFLOAT-base_anims
+	DD RB2FLOAT-base_anims
+	DD KLFLOAT-base_anims
+	DD TRFLOAT-base_anims
+	DD SHFLOAT-base_anims
+	DD TSFLOAT-base_anims
+	DD LUFLOAT-base_anims
+	DD RB3FLOAT-base_anims
+	DD 0
+KNFLOAT:
+	DD KNFLOAT_SUB-base_anims, 0
+KNFLOAT_SUB:
+	DD KNFLOAT_IMG-base_anims
+	DW 46, 113, 17, -5
+SBFLOAT:
+	DD SBFLOAT_SUB-base_anims, 0
+SBFLOAT_SUB:
+	DD SBFLOAT_IMG-base_anims
+	DW 39, 110, 14, -9
+JXFLOAT:
+	DD JXFLOAT_SUB-base_anims, 0
+JXFLOAT_SUB:
+	DD JXFLOAT_IMG-base_anims
+	DW 47, 118, 15, -12
+INFLOAT:
+	DD INFLOAT_SUB-base_anims, 0
+INFLOAT_SUB:
+	DD INFLOAT_IMG-base_anims
+	DW 41, 109, 16, -8
+SZFLOAT:
+	DD SZFLOAT_SUB-base_anims, 0
+SZFLOAT_SUB:
+	DD SZFLOAT_IMG-base_anims
+	DW 46, 108, 22, -6
+OBFLOAT:
+	DD OBFLOAT_SUB-base_anims, 0
+OBFLOAT_SUB:
+	DD OBFLOAT_IMG-base_anims
+	DW 37, 110, 17, -9
+LIFLOAT:
+	DD LIFLOAT_SUB-base_anims, 0
+LIFLOAT_SUB:
+	DD LIFLOAT_IMG-base_anims
+	DW 40, 114, 21, -2
+RBFLOAT:
+	DD RBFLOAT_SUB-base_anims, 0
+RBFLOAT_SUB:
+	DD RBFLOAT_IMG-base_anims
+	DW 55, 113, 23, -8
+RB2FLOAT:
+	DD RB2FLOAT_SUB-base_anims, 0
+RB2FLOAT_SUB:
+	DD RB2FLOAT_IMG-base_anims
+	DW 55, 113, 23, -8
+KLFLOAT:
+	DD KLFLOAT_SUB-base_anims, 0
+KLFLOAT_SUB:
+	DD KLFLOAT_IMG-base_anims
+	DW 43, 116, 21, 3
+TRFLOAT:
+	DD TRFLOAT_SUB-base_anims, 0
+TRFLOAT_SUB:
+	DD TRFLOAT_IMG-base_anims
+	DW 46, 109, 13, -13
+SHFLOAT:
+	DD SHFLOAT_SUB-base_anims, 0
+SHFLOAT_SUB:
+	DD SHFLOAT_IMG-base_anims
+	DW 49, 124, 22, -5
+TSFLOAT:
+	DD TSFLOAT_SUB-base_anims, 0
+TSFLOAT_SUB:
+	DD TSFLOAT_IMG-base_anims
+	DW 36, 112, 15, 3
+LUFLOAT:
+	DD LUFLOAT_SUB-base_anims, 0
+LUFLOAT_SUB:
+	DD LUFLOAT_IMG-base_anims
+	DW 42, 110, 14, -3
+RB3FLOAT:
+	DD RB3FLOAT_SUB-base_anims, 0
+RB3FLOAT_SUB:
+	DD RB3FLOAT_IMG-base_anims
+	DW 55, 113, 23, -8

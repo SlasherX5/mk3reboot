@@ -1,0 +1,78 @@
+
+#include ../../mk3.mif
+
+
+all: $(EXE)swat/swatb.bin  \
+     $(EXE)swat/swat.bin \
+	 $(EXE)swat/swata.bin \
+	 $(EXE)swat/swats.bin \
+	 $(EXE)swat/swatf.bin \
+	 $(EXE)swat/swatf1.bin \
+	 .SYMBOLIC
+
+# MAIN GAME	PLAY
+
+swat.obj: swat.asm $(OVLARTI) \
+	..\chars\swat\mkswat.psx \
+	..\chars\swat\mkswat.psi \
+	..\chars\swat\swb.psi
+
+# FRIENDSHIP 
+
+swats.obj: swats.asm $(OVLARTI) \
+	..\chars\swat\mkswats.psx \
+	..\chars\swat\mkswats.psi \
+	..\common\baby\baby.psx \
+	..\common\baby\baby.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+
+# BABALITY
+
+swatb.obj: swatb.asm $(OVLARTI) \
+	..\chars\swat\mkswatb.psx \
+	..\common\baby\babyswat.psx \
+	..\common\baby\babyswat.psi \
+	..\common\baby\babyxpld.psi 
+
+
+# ANIMALITY
+
+swata.obj: swata.asm $(OVLARTI) \
+	..\chars\swat\mkswata.psx \
+	..\chars\swat\mkswata.psi \
+	..\common\half\ohalf.psx \
+	..\common\half\ohalf.psi \
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+
+# FATALITIES
+
+swatf.obj: swatf.asm $(OVLARTI) \
+	..\chars\swat\mkswatf.psx \
+	..\chars\swat\mkswatf.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+swatf1.obj: swatf1.asm $(OVLARTI) \
+	..\chars\swat\mkswatf1.psx \
+	..\chars\swat\mkswatf1.psi \
+	..\common\common\arm2.psx \
+	..\common\common\arm2.psi \
+	..\common\common\leg.psx	\
+	..\common\common\leg.psi	\
+	..\common\common\bone.psx \
+	..\common\common\bone.psi \
+	..\common\common\cage.psx \
+	..\common\common\cage.psi \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+

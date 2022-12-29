@@ -1,0 +1,257 @@
+robo_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+robo_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+	
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_robo1_friend-robo_anitab1
+	DD a_dinger-robo_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_zap:
+a_dummy:
+a_robo1_friend:
+	DD RBHAMMER1-robo_anitab1
+	DD RBHAMMER2-robo_anitab1
+	DD RBHAMMER3-robo_anitab1
+	DD RBHAMMER4-robo_anitab1
+	DD RBHAMMER5-robo_anitab1
+	DD RBHAMMER6-robo_anitab1
+	DD 0
+a_dinger:
+	DD RBDINGER1-robo_anitab1
+	DD RBDINGER2-robo_anitab1
+	DD RBDINGER3-robo_anitab1
+	DD RBDINGER4-robo_anitab1
+	DD RBDINGER5-robo_anitab1
+	DD RBDINGER6-robo_anitab1
+	DD RBDINGER7-robo_anitab1
+	DD RBDINGER8-robo_anitab1
+	DD RBDINGER9-robo_anitab1
+	DD RBDINGER10-robo_anitab1
+	DD RBDINGER11-robo_anitab1
+	DD RBDINGER12-robo_anitab1
+	DD 0
+	DD RBDINGER13-robo_anitab1
+	DD RBDINGER14-robo_anitab1
+	DD RBDINGER15-robo_anitab1
+	DD 0
+RBHAMMER1:
+	DD RBHAMMER1_SUB-robo_anitab1, 0
+RBHAMMER1_SUB:
+	DD RBHAMMER1_IMG-robo_anitab1
+	DW 33, 121, 14, -1
+RBHAMMER2:
+	DD RBHAMMER2_SUB-robo_anitab1, 0
+RBHAMMER2_SUB:
+	DD RBHAMMER2_IMG-robo_anitab1
+	DW 58, 114, 36, -8
+RBHAMMER3:
+	DD RBHAMMER3_SUB-robo_anitab1, 0
+RBHAMMER3_SUB:
+	DD RBHAMMER3_IMG-robo_anitab1
+	DW 68, 121, 42, -1
+RBHAMMER4:
+	DD RBHAMMER4_SUB-robo_anitab1, 0
+RBHAMMER4_SUB:
+	DD RBHAMMER4_IMG-robo_anitab1
+	DW 46, 141, 12, 19
+RBHAMMER5:
+	DD RBHAMMER5_SUB-robo_anitab1, 0
+RBHAMMER5_SUB:
+	DD RBHAMMER5_IMG-robo_anitab1
+	DW 78, 120, 13, -2
+RBHAMMER6:
+	DD RBHAMMER6_SUB-robo_anitab1, 0
+RBHAMMER6_SUB:
+	DD RBHAMMER6_IMG-robo_anitab1
+	DW 90, 82, 12, -40
+RBDINGER1:
+	DD RBDINGER1_SUB-robo_anitab1, 0
+RBDINGER1_SUB:
+	DD RBDINGER1_IMG-robo_anitab1
+	DW 43, 23, -57, -105
+	DD   _RBHAMM_P
+RBDINGER2:
+	DD RBDINGER2_SUB-robo_anitab1, 0
+RBDINGER2_SUB:
+	DD RBDINGER2_IMG-robo_anitab1
+	DW 36, 27, -62, -98
+RBDINGER3:
+	DD RBDINGER3_SUB-robo_anitab1, 0
+RBDINGER3_SUB:
+	DD RBDINGER3_IMG-robo_anitab1
+	DW 33, 55, -62, -68
+RBDINGER4:
+	DD RBDINGER4_SUB-robo_anitab1, 0
+RBDINGER4_SUB:
+	DD RBDINGER4_IMG-robo_anitab1
+	DW 34, 88, -62, -35
+RBDINGER5:
+	DD RBDINGER5_SUB-robo_anitab1, 0
+RBDINGER5_SUB:
+	DD RBDINGER5_IMG-robo_anitab1
+	DW 34, 116, -62, -8
+RBDINGER6:
+	DD RBDINGER6_SUB-robo_anitab1, 0
+RBDINGER6_SUB:
+	DD RBDINGER6_IMG-robo_anitab1
+	DW 34, 155, -62, 31
+RBDINGER7:
+	DD RBDINGER7_SUB-robo_anitab1, 0
+RBDINGER7_SUB:
+	DD RBDINGER7_IMG-robo_anitab1
+	DW 31, 159, -62, 35
+RBDINGER8:
+	DD RBDINGER8_SUB-robo_anitab1, 0
+RBDINGER8_SUB:
+	DD RBDINGER8_IMG-robo_anitab1
+	DW 30, 158, -62, 34
+RBDINGER9:
+	DD RBDINGER9_SUB-robo_anitab1, 0
+RBDINGER9_SUB:
+	DD RBDINGER9_IMG-robo_anitab1
+	DW 30, 158, -62, 34
+RBDINGER10:
+	DD RBDINGER10_SUB-robo_anitab1, 0
+RBDINGER10_SUB:
+	DD RBDINGER10_IMG-robo_anitab1
+	DW 30, 158, -62, 34
+RBDINGER11:
+	DD RBDINGER11_SUB-robo_anitab1, 0
+RBDINGER11_SUB:
+	DD RBDINGER11_IMG-robo_anitab1
+	DW 30, 158, -62, 34
+RBDINGER12:
+	DD RBDINGER12_SUB-robo_anitab1, 0
+RBDINGER12_SUB:
+	DD RBDINGER12_IMG-robo_anitab1
+	DW 30, 158, -62, 34
+RBDINGER13:
+	DD RBDINGER13_SUB-robo_anitab1, 0
+RBDINGER13_SUB:
+	DD RBDINGER13_IMG-robo_anitab1
+	DW 30, 158, -62, 34
+RBDINGER14:
+	DD RBDINGER14_SUB-robo_anitab1, 0
+RBDINGER14_SUB:
+	DD RBDINGER14_IMG-robo_anitab1
+	DW 30, 159, -62, 35
+RBDINGER15:
+	DD RBDINGER15_SUB-robo_anitab1, 0
+RBDINGER15_SUB:
+	DD RBDINGER15_IMG-robo_anitab1
+	DW 30, 158, -62, 34

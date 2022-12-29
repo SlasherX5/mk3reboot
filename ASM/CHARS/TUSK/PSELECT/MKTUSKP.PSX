@@ -1,0 +1,111 @@
+_tusk_panitab1:
+	DD a__tusk_stance-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_dummy-_tusk_panitab1
+	DD a__tusk_victory-_tusk_panitab1
+a__tusk_dummy:
+a__tusk_stance:
+	DD TRSTANCE1-_tusk_panitab1
+	DD TRSTANCE2-_tusk_panitab1
+	DD TRSTANCE3-_tusk_panitab1
+	DD TRSTANCE5-_tusk_panitab1
+	DD TRSTANCE6-_tusk_panitab1
+	DD TRSTANCE7-_tusk_panitab1
+	DD TRSTANCE9-_tusk_panitab1
+	DD ani_jump
+	DD a__tusk_stance-_tusk_panitab1
+a__tusk_victory:
+	DD TRVICTORY1-_tusk_panitab1
+	DD TRVICTORY3-_tusk_panitab1
+	DD TRVICTORY4-_tusk_panitab1
+	DD TRVICTORY6-_tusk_panitab1
+	DD TRVICTORY7-_tusk_panitab1
+	DD TRVICTORY9-_tusk_panitab1
+	DD TRVICTORY10-_tusk_panitab1
+	DD TRVICTORY11-_tusk_panitab1
+	DD 0
+TRSTANCE1:
+	DD TRSTANCE1_SUB-_tusk_panitab1, 0
+TRSTANCE1_SUB:
+	DD TRSTANCE1_IMG-_tusk_panitab1
+	DW 47, 115, 16, -6
+TRSTANCE2:
+	DD TRSTANCE2_SUB-_tusk_panitab1, 0
+TRSTANCE2_SUB:
+	DD TRSTANCE2_IMG-_tusk_panitab1
+	DW 45, 114, 14, -7
+TRSTANCE3:
+	DD TRSTANCE3_SUB-_tusk_panitab1, 0
+TRSTANCE3_SUB:
+	DD TRSTANCE3_IMG-_tusk_panitab1
+	DW 45, 112, 14, -9
+TRSTANCE5:
+	DD TRSTANCE5_SUB-_tusk_panitab1, 0
+TRSTANCE5_SUB:
+	DD TRSTANCE5_IMG-_tusk_panitab1
+	DW 50, 114, 19, -7
+TRSTANCE6:
+	DD TRSTANCE6_SUB-_tusk_panitab1, 0
+TRSTANCE6_SUB:
+	DD TRSTANCE6_IMG-_tusk_panitab1
+	DW 54, 113, 23, -8
+TRSTANCE7:
+	DD TRSTANCE7_SUB-_tusk_panitab1, 0
+TRSTANCE7_SUB:
+	DD TRSTANCE7_IMG-_tusk_panitab1
+	DW 56, 112, 25, -9
+TRSTANCE9:
+	DD TRSTANCE9_SUB-_tusk_panitab1, 0
+TRSTANCE9_SUB:
+	DD TRSTANCE9_IMG-_tusk_panitab1
+	DW 54, 113, 22, -8
+TRVICTORY1:
+	DD TRVICTORY1_SUB-_tusk_panitab1, 0
+TRVICTORY1_SUB:
+	DD TRVICTORY1_IMG-_tusk_panitab1
+	DW 63, 114, 33, -8
+TRVICTORY3:
+	DD TRVICTORY3_SUB-_tusk_panitab1, 0
+TRVICTORY3_SUB:
+	DD TRVICTORY3_IMG-_tusk_panitab1
+	DW 158, 115, 82, -7
+TRVICTORY4:
+	DD TRVICTORY4_SUB-_tusk_panitab1, 0
+TRVICTORY4_SUB:
+	DD TRVICTORY4_IMG-_tusk_panitab1
+	DW 142, 134, 60, 12
+TRVICTORY6:
+	DD TRVICTORY6_SUB-_tusk_panitab1, 0
+TRVICTORY6_SUB:
+	DD TRVICTORY6_IMG-_tusk_panitab1
+	DW 66, 155, 25, 33
+TRVICTORY7:
+	DD TRVICTORY7_SUB-_tusk_panitab1, 0
+TRVICTORY7_SUB:
+	DD TRVICTORY7_IMG-_tusk_panitab1
+	DW 62, 136, 24, 14
+TRVICTORY9:
+	DD TRVICTORY9_SUB-_tusk_panitab1, 0
+TRVICTORY9_SUB:
+	DD TRVICTORY9_IMG-_tusk_panitab1
+	DW 53, 113, 21, -9
+TRVICTORY10:
+	DD TRVICTORY10_SUB-_tusk_panitab1, 0
+TRVICTORY10_SUB:
+	DD TRVICTORY10_IMG-_tusk_panitab1
+	DW 55, 113, 21, -9
+TRVICTORY11:
+	DD TRVICTORY11_SUB-_tusk_panitab1, 0
+TRVICTORY11_SUB:
+	DD TRVICTORY11_IMG-_tusk_panitab1
+	DW 66, 114, 26, -8

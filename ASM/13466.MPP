@@ -1,0 +1,556 @@
+
+
+MAKETYPE = $(%MAKETYPE)
+
+P = \\
+
+MAKE = make $(MAKEFLAGS)
+
+
+o = obj
+
+
+.EXTENSIONS:
+.EXTENSIONS: .i .ic .exe .bin .obj .lst .asm .cpp .c
+
+
+
+
+HDIR = \mk3p\\
+
+I = $(HDIR)asm\\
+
+IL = $(HDIR)emulator\inc\\
+
+EXE = $(HDIR)exe\\
+
+AS = $(AFLAGS) 386asm
+APF = -NOLIST -TWOCASE -i $(I) -i $(IL) $(EXTAPF) 
+
+.asm.obj:
+	$(AS) $* $(APF)
+
+ASM = $(AS) $* $(APF)
+
+
+CFLAGS =
+CC = wpp386 $(CFLAGS)
+CPF = -d1 -I$(I) $(EXTCPPF) 
+
+
+.c.obj:
+	$(CC) $*.c $(CPF) 
+
+
+.cpp.obj:
+	$(CC) $*.cpp $(CPF) 
+
+
+.cpp.lst:
+	$(CC) $*.cpp $(CPF) -d1
+	wdisasm $*.obj -l -s -a
+	del $*.obj
+
+
+.obj.bin:
+	386link $[*.obj -NOMAP -RELEXE $*.bin 
+
+
+.obj.exe:
+   wlink option stack=20k name $* FILE $^*.obj
+
+.ic.i:
+	$(CC) $^*.ic $(CPF)
+    wlink option stack=20k name $* FILE $^*.obj
+	$*  $*.i
+	del $*.exe
+	del $*.obj
+
+
+
+
+
+
+
+
+
+OVLARTI = $(I)compress.i $(I)overlay.i $(I)ovlextrn.i $(IL)win95.i $(I)mkchar.i
+
+
+TP = tpg
+
+
+
+
+all: bkgdbin attractbin objs characters backgrounds \
+    .SYMBOLIC
+
+ovlextrn.i: ovlextrn.ic ovlextrn.h
+
+
+
+bkgdbin: \
+	$(EXE)bkgds/artbell.bin \
+	$(EXE)bkgds/artbrig.bin \
+	$(EXE)bkgds/artcity.bin \
+	$(EXE)bkgds/artgrav.bin \
+	$(EXE)bkgds/artmock.bin \
+	$(EXE)bkgds/artpit.bin \
+	$(EXE)bkgds/artporta.bin \
+	$(EXE)bkgds/artsbst.bin \
+	$(EXE)bkgds/artskend.bin \
+	$(EXE)bkgds/artsoul.bin \
+	$(EXE)bkgds/arttemp.bin \
+	$(EXE)bkgds/font.bin \
+	$(EXE)bkgds/loading.bin \
+ .SYMBOLIC
+
+
+artbell.obj: artbell.asm $(OVLBKGI) bkgd/bell/multi.$(TP)
+
+artbrig.obj: artbrig.asm $(OVLBKGI) bkgd/bridge/multi.$(TP)
+
+artcity.obj: artcity.asm $(OVLBKGI) bkgd/city/multi.$(TP)
+
+artgrav.obj: artgrav.asm $(OVLBKGI) bkgd/grave/multi.$(TP)
+
+artmock.obj: artmock.asm $(OVLBKGI) bkgd/mockpit/multi.$(TP)
+
+artpit.obj: artpit.asm $(OVLBKGI) bkgd/throne/multi.$(TP)
+
+artporta.obj: artporta.asm $(OVLBKGI) bkgd/hidden/multi.$(TP)
+
+artsbst.obj: artsbst.asm $(OVLBKGI) bkgd/subway/multi.$(TP)
+
+artskend.obj: artskend.asm $(OVLBKGI) bkgd/shao/multi.$(TP)
+
+artsoul.obj: artsoul.asm $(OVLBKGI) bkgd/soul/multi.$(TP)
+
+arttemp.obj: arttemp.asm $(OVLBKGI) bkgd/temple/multi.$(TP)
+
+font.obj: font.asm $(OVLBKGI) bkgd/font/mkfonts.asm
+
+loading.obj: loading.asm $(OVLBKGI) attract/loading/loading.asm
+
+
+
+
+attractbin: \
+	$(EXE)attract/artbuyin.bin \
+	$(EXE)attract/artcoin.bin \
+	$(EXE)attract/artladdr.bin \
+	$(EXE)attract/artopt.bin \
+	$(EXE)attract/artpsel.bin \
+	$(EXE)attract/artstry2.bin \
+	$(EXE)attract/artstry3.bin \
+	$(EXE)attract/artstryk.bin \
+	$(EXE)attract/artstryl.bin \
+	$(EXE)attract/artstrys.bin \
+	$(EXE)attract/arttitle.bin \
+	$(EXE)attract/controlp.bin \
+	$(EXE)attract/opttext.bin \
+	$(EXE)attract/arthscor.bin \
+	$(EXE)vs/artverse.bin \
+ .SYMBOLIC
+
+artopt.obj: artopt.asm $(OVLBKGI) attract/options/multi.$(TP)
+
+artcoin.obj: artcoin.asm $(OVLBKGI) attract/coin/mk3coin.$(TP)
+
+artladdr.obj: artladdr.asm $(OVLBKGI) attract/ladder/multi.$(TP)
+
+artpsel.obj: artpsel.asm $(OVLBKGI) attract/select/multi.$(TP)
+
+artbuyin.obj: artbuyin.asm $(OVLBKGI) attract/buyin/mkbuyin.$(TP)
+
+arthscor.obj: arthscor.asm $(OVLBKGI) attract/vs/steelvs.$(TP)
+
+artstry2.obj: artstry2.asm $(OVLBKGI) attract/story/story2/multi.$(TP)
+
+artstry3.obj: artstry3.asm $(OVLBKGI) attract/story/story3/multi.$(TP)
+
+artstryk.obj: artstryk.asm $(OVLBKGI) attract/story/kanostor/escape.$(TP)
+
+artstryl.obj: artstryl.asm $(OVLBKGI) attract/story/lkstory/kangkung.$(TP)
+
+artstrys.obj: artstrys.asm $(OVLBKGI) attract/story/szstory/subrobo.$(TP)
+
+arttitle.obj: arttitle.asm $(OVLBKGI) attract/title/multi.$(TP)
+
+controlp.obj: controlp.asm $(OVLBKGI) attract/misc/tpages/cptpage.asm
+
+opttext.obj: opttext.asm $(OVLBKGI) attract/options/optextbg.asm
+
+artverse.obj: artverse.asm $(OVLBKGI) attract/vs/steelvs.$(TP)
+
+
+
+objs: \
+    context.obj     \
+	loading.obj		\
+	mkbiodt.obj		\
+	mkbloodt.obj	\
+    mkbt.obj        \
+	mkbuydt.obj		\
+	mkcoin.obj      \
+	mkdteam.obj		\
+	mkenddt.obj	    \
+	mkexplod.obj	\
+	mkfight.obj		\
+	mkgrad.obj		\
+	mkhscore.obj	\
+	mkknstry.obj	\
+	mklkstry.obj	\
+	mkszstry.obj	\
+	mkmarkdt.obj	\
+    mknames.obj     \
+    mkoption.obj    \
+    mkpalrgb.obj    \
+    mkpalnts.obj    \
+    mkpsel.obj      \
+    mkscombo.obj    \
+    mkselvic.obj    \
+    mkskend.obj     \
+    mkstk.obj       \
+    mkstry2.obj     \
+    mkstry3.obj     \
+    mktextdt.obj    \
+    mktitle.obj     \
+	mkverse.obj		\
+    .SYMBOLIC
+
+
+context.obj: context.asm $(IL)win95.i 
+
+loading.obj: loading.asm mkchar.i mkbkgd.i \
+	 attract\loading\loading.asm
+
+mkbt.obj: mkbt.asm $(IL)win95.i mkbkgd.i
+
+mkbiodt.obj: mkbiodt.asm $(IL)win95.i compress.i mkbkgd.i \
+	attract\bio\subzero\subbio.mod \
+	attract\bio\subzero\subbio.$(TP) \
+	attract\bio\lia\sinbio.mod \
+	attract\bio\lia\sinbio.$(TP) \
+	attract\bio\lkang\kangbio.mod \
+	attract\bio\lkang\kangbio.$(TP) \
+	attract\bio\shang\shangbio.mod \
+	attract\bio\shang\shangbio.$(TP) \
+	attract\bio\femgoro\shevabio.mod \
+	attract\bio\femgoro\shevabio.$(TP) \
+	attract\bio\tusk\kabbio.mod \
+	attract\bio\tusk\kabbio.$(TP) \
+	attract\bio\robo1\sekbio.mod \
+	attract\bio\robo1\sekbio.$(TP) \
+	attract\bio\swat\copbio.mod \
+	attract\bio\swat\copbio.$(TP) \
+	attract\bio\kano\kanobio.mod \
+	attract\bio\kano\kanobio.$(TP) \
+	attract\bio\sonya\sonyabio.mod \
+	attract\bio\sonya\sonyabio.$(TP) \
+	attract\bio\indian\indibio.mod \
+	attract\bio\indian\indibio.$(TP) \
+	attract\bio\robo2\cyraxbio.mod \
+	attract\bio\robo2\cyraxbio.$(TP) \
+	attract\bio\jax\jaxbio.mod \
+	attract\bio\jax\jaxbio.$(TP) \
+	attract\bio\lao\kungbio.mod \
+	attract\bio\lao\kungbio.$(TP) 
+
+
+
+mkbloodt.obj: mkbloodt.asm $(IL)win95.i mkchar.i \
+	chars\blood\mkblood.psi
+
+mkbuydt.obj: mkbuydt.asm $(IL)win95.i mkbkgd.i mkchar.i \
+    attract\buyin\mkbuyin.mod
+
+mkcoin.obj: mkcoin.asm $(IL)win95.i mkchar.i \
+    palsrc\coinpal.mas \
+    attract\coin\mk3coin.mod
+
+mkdteam.obj: mkdteam.asm $(IL)win95.i mkchar.i \
+    attract\faces\mk3team.psi \
+    attract\chicteam\mkteam.psi 
+
+mkenddt.obj: mkenddt.asm $(IL)win95.i compress.i mkbkgd.i mkchar.i \
+    palsrc\endkano.mas	\
+    attract\end\kano\kanoend.mod	\
+    attract\end\kano\kanoend.$(TP)	\
+    palsrc\endsonya.mas	\
+    attract\end\sonya\sonyaend.mod	\
+    attract\end\sonya\sonyaend.$(TP)	\
+    palsrc\endjax.mas	\
+    attract\end\jax\jaxend.mod	\
+    attract\end\jax\jaxend.$(TP)	\
+    palsrc\endindy.mas	\
+    attract\end\indian\indyend.mod	\
+    attract\end\indian\indyend.$(TP)	\
+    palsrc\endszero.mas	\
+    attract\end\subzero\subend.mod	\
+    attract\end\subzero\subend.$(TP)	\
+    palsrc\endswat.mas	\
+    attract\end\stryker\copend.mod	\
+    attract\end\stryker\copend.$(TP)	\
+    palsrc\endlia.mas	\
+    attract\end\sindel\sinend.mod	\
+    attract\end\sindel\sinend.$(TP)	\
+    palsrc\endrobo1.mas	\
+    attract\end\sektor\sekend.mod	\
+    attract\end\sektor\sekend.$(TP)	\
+    palsrc\endrobo2.mas	\
+    attract\end\cyrax\cyraxend.mod	\
+    attract\end\cyrax\cyraxend.$(TP)	\
+    palsrc\endlao.mas	\
+    attract\end\kung\kungend.mod	\
+    attract\end\kung\kungend.$(TP)	\
+    palsrc\endtusk.mas	\
+    attract\end\kabal\kabalend.mod	\
+    attract\end\kabal\kabalend.$(TP)	\
+    palsrc\endsg.mas	\
+    attract\end\sheeva\shevaend.mod	\
+    attract\end\sheeva\shevaend.$(TP)	\
+    palsrc\endshang.mas	\
+    attract\end\shang\shangend.mod	\
+    attract\end\shang\shangend.$(TP)	\
+    palsrc\endlkang.mas	\
+    attract\end\kang\kangend.mod	\
+    attract\end\kang\kangend.$(TP)	\
+    palsrc\endsmoke.mas	\
+    attract\end\smoke\smokeend.mod	\
+    attract\end\smoke\smokeend.$(TP)	\
+    palsrc\endgods.mas	\
+    attract\gods\gods.mod	\
+    attract\gods\gods.$(TP)	
+
+mkexplod.obj: mkexplod.asm $(IL)win95.i mkchar.i \
+	chars\explode\mkexp.psx \
+	chars\explode\mkexp.psi 
+
+mkfight.obj: mkfight.asm $(IL)win95.i mkchar.i \
+	chars\intros\fight\mkbfghtf.psi \
+	chars\intros\finhim\mkbhimf.psi \
+	chars\intros\finher\mkbherf.psi \
+	chars\intros\mercy\mercyf.psi
+
+mkgrad.obj: mkgrad.asm $(IL)win95.i mkchar.i \
+    attract\gradient\gradient.mod  \
+    attract\gradient\gradient.tpg  \
+    attract\end\mksymbol.psi  
+
+mkhscore.obj: mkhscore.asm $(IL)win95.i mkbkgd.i mkchar.i 
+
+mkknstry.obj: mkknstry.asm $(IL)win95.i mkchar.i \
+    palsrc\strykpal.mas \
+    attract\story\kanostor\escape.mod 
+
+mklkstry.obj: mklkstry.asm $(IL)win95.i mkchar.i \
+    palsrc\strylpal.mas  \
+    attract\story\lkstory\kangkung.mod
+
+mkszstry.obj: mkszstry.asm $(IL)win95.i mkchar.i \
+    palsrc\stryspal.mas \
+    attract\story\szstory\subrobo.mod
+
+mkmarkdt.obj: mkmarkdt.asm $(IL)win95.i mkchar.i \
+    attract\arcade\arcade.psi
+
+
+mknames.obj: mknames.asm $(IL)win95.i mkchar.i \
+    attract\misc\mkbgname.psi
+
+mkoption.obj: mkoption.asm $(IL)win95.i mkchar.i mkbkgd.i \
+    palsrc\option.mas \
+    attract\options\mk33dlog.psi \
+    attract\options\logobg.mod \
+    palsrc\coinpal.mas \
+    attract\options\mk3coin.mod 
+
+mkpalrgb.obj: mkpalrgb.asm $(IL)win95.i \
+    palsrc/imgpal.rgb \
+    palsrc/mkbkpal.rgb
+
+mkpalnts.obj: mkpalnts.asm $(IL)win95.i \
+    palsrc/imgpal.nts \
+    palsrc/mkbkpal.nts
+
+
+mkpsel.obj: mkpsel.asm $(IL)win95.i mkchar.i mkbkgd.i \
+    palsrc/selpal.mas \
+    palsrc/laddrpal.mas
+
+mkselvic.obj: mkselvic.asm  \
+    chars/sonya/pselect/mksonyap.psx     \
+    chars/sonya/pselect/mksonyap.psi     \
+    chars/kano/pselect/mkkanop.psx       \
+    chars/kano/pselect/mkkanop.psi       \
+    chars/jax/pselect/mkjaxp.psx         \
+    chars/jax/pselect/mkjaxp.psi         \
+    chars/lia/pselect/mkliap.psx         \
+    chars/lia/pselect/mkliap.psi         \
+    chars/lkang/pselect/mklkp.psx        \
+    chars/lkang/pselect/mklkp.psi        \
+    chars/shang/pselect/mkstp.psx        \
+    chars/shang/pselect/mkstp.psi        \
+    chars/indian/pselect/mkindp.psx      \
+    chars/indian/pselect/mkindp.psi      \
+    chars/femgoro/pselect/mksgp.psx      \
+    chars/femgoro/pselect/mksgp.psi      \
+    chars/robo1/pselect/mkrobo1p.psx     \
+    chars/robo1/pselect/mkrobo1p.psi     \
+    chars/robo2/pselect/mkrobo2p.psx     \
+    chars/robo2/pselect/mkrobo2p.psi     \
+    chars/lao/pselect/mklaop.psx         \
+    chars/lao/pselect/mklaop.psi         \
+    chars/subzero/pselect/mkszp.psx      \
+    chars/subzero/pselect/mkszp.psi      \
+    chars/swat/pselect/mkswatp.psx       \
+    chars/swat/pselect/mkswatp.psi       \
+    chars/tusk/pselect/mktuskp.psx       \
+    chars/tusk/pselect/mktuskp.psi
+
+mkscombo.obj: mkscombo.asm $(IL)win95.i
+
+
+mkskend.obj: mkskend.asm $(IL)win95.i mkchar.i mkbkgd.i \
+   palsrc\skend.mas \
+   bkgd\shao\mkshao1.mod \
+   bkgd\shao\shaodie.mod
+
+mkstk.obj: mkstk.asm $(IL)win95.i
+
+mkstry2.obj: mkstry2.asm mkbkgd.i mkchar.i $(IL)win95.i \
+    palsrc\stry2pal.mas  \
+    attract\story\story2\grnkahn.mod \
+    attract\story\story2\lia.mod \
+    attract\story\story2\earth.mod
+
+mkstry3.obj: mkstry3.asm mkbkgd.i mkchar.i $(IL)win95.i \
+    palsrc\stry3pal.mas  \
+    attract\story\story3\city.mod  \
+    attract\story\story3\souls.mod  \
+    attract\story\story3\heroes.mod  \
+    attract\story\story3\centaurs.mod
+
+mktextdt.obj: mktextdt.asm mkbkgd.i mkchar.i $(IL)win95.i \
+    bkgd\temple\mktemple.mod \
+    bkgd\floors\temple\tempfl.asm
+
+mktextdt.obj: mktextdt.asm mkbkgd.i mkchar.i $(IL)win95.i
+
+mktitle.obj: mktitle.asm $(IL)win95.i mkchar.i mkbkgd.i \
+    palsrc\titlepal.mas \
+    attract\title\titlepg.mod \
+    attract\title\raidfly.mod \
+    attract\title\legal.mod
+
+mkverse.obj: mkverse.asm $(IL)win95.i mkchar.i mkbkgd.i \
+	palsrc\mkvspal.mas			\
+	attract\vs\steelvs.mod		\
+	attract\vs\mkbgvs.psi		
+
+
+
+backgrounds: 	\
+    mkbell.obj  \
+    mkbrig.obj  \
+	mkcity.obj	\
+	mkgrav.obj	\
+	mkmock.obj	\
+	mkpit.obj	\
+	mkportal.obj\
+	mksbst.obj	\
+	mksoul.obj	\
+    mktemp.obj  .SYMBOLIC
+    cd $(HDIR)asm\end
+    make
+    cd $(HDIR)asm
+
+
+mkbell.obj: mkbell.asm $(IL)win95.i mkchar.i mkbkgd.i \
+    bkgd\BELL\mkBELL.mod \
+    bkgd\BELL\mkBELL2.mod \
+    bkgd\floors\bell\bellflor.asm
+
+mkbrig.obj: mkbrig.asm $(MKCHAR) mkbkgd.i \
+    bkgd/bridge/bridge.mod \
+    bkgd/floors/bridge/brgroad.asm
+
+mkcity.obj: mkcity.asm $(IL)win95.i mkchar.i mkbkgd.i \
+    bkgd\city\mkcity.mod		\
+    bkgd\bank\mkbank80.mod		\
+    bkgd\floors\city\ruuf.asm
+
+mkgrav.obj: mkgrav.asm $(MKCHAR) mkbkgd.i \
+    bkgd/grave/mkgrave.mod \
+    bkgd/floors/grave/cemflr.asm \
+
+mkmock.obj: mkmock.asm $(IL)win95.i mkchar.i \
+    bkgd\mockpit\mockpit.mod
+
+mkpit.obj: mkpit.asm $(IL)win95.i mkchar.i mkbkgd.i \
+    chars/blood/mkguts.psi \
+    bkgd/throne/saw7075.psi \
+    bkgd/bgani/pit/wall80.psi \
+    bkgd/throne/mkthrone.mod
+
+mkportal.obj: mkportal.asm $(IL)win95.i mkchar.i mkbkgd.i \
+    bkgd\hidden\mkhidden.mod
+
+mksbst.obj: mksbst.asm $(IL)win95.i mkchar.i mkbkgd.i \
+    bkgd/subway/mksubway.mod \
+    bkgd/street/mkstreet.mod \
+    bkgd/floors/subway/subflor.asm \
+    bkgd/floors/street/street.asm
+
+mksoul.obj: mksoul.asm $(IL)win95.i mkchar.i mkbkgd.i \
+	bkgd/soul/mksoul.mod 		\
+	bkgd/floors/soul/soflor.asm \
+	bkgd/balcony2/mkbalc2.mod 	\
+	bkgd/floors/balcony2/balcflr.asm
+
+mktemp.obj: mktemp.asm $(IL)win95.i mkchar.i mkbkgd.i \
+    bkgd\temple\mktemple.mod \
+    bkgd\floors\temple\tempfl.asm
+
+
+characters: .SYMBOLIC
+    cd $(HDIR)asm\sonya
+    make
+    cd $(HDIR)asm\jax
+	make
+    cd $(HDIR)asm\kano
+    make
+    cd $(HDIR)asm\indian
+    make
+    cd $(HDIR)asm\subzero
+    make
+    cd $(HDIR)asm\swat
+    make
+    cd $(HDIR)asm\lao
+    make
+    cd $(HDIR)asm\lia
+    make
+    cd $(HDIR)asm\robo1
+    make
+    cd $(HDIR)asm\robo2
+    make
+    cd $(HDIR)asm\robo3
+    make
+    cd $(HDIR)asm\tusk
+    make
+    cd $(HDIR)asm\shang
+    make
+    cd $(HDIR)asm\lkang
+    make
+    cd $(HDIR)asm\shaokahn
+    make
+    cd $(HDIR)asm\sheeva
+    make
+    cd $(HDIR)asm\vs
+    make
+    cd $(HDIR)asm\fxdata
+    make
+    cd $(HDIR)asm
+
+

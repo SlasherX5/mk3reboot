@@ -1,0 +1,88 @@
+ochar_ripped_anis:
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_normal_skel-base_anims
+	DD 0
+a_lk_rip:
+	DD LURIP1-base_anims
+	DD LURIP2-base_anims
+	DD LURIP3-base_anims
+	DD LURIP4-base_anims
+	DD LURIP5-base_anims
+	DD LURIP6-base_anims
+	DD LURIP7-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+LURIP1:
+	DD LURIP1_SUB-base_anims, 0
+LURIP1_SUB:
+	DD LURIP1_IMG-base_anims
+	DW 66, 99, 44, -13
+	DD   _LUFLA_P
+LURIP2:
+	DD LURIP2_SUB-base_anims, 0
+LURIP2_SUB:
+	DD LURIP2_IMG-base_anims
+	DW 84, 99, 62, -13
+LURIP3:
+	DD LURIP3_SUB-base_anims, 0
+LURIP3_SUB:
+	DD LURIP3_IMG-base_anims
+	DW 110, 99, 88, -13
+LURIP4:
+	DD LURIP4_SUB-base_anims, 0
+LURIP4_SUB:
+	DD LURIP4_IMG-base_anims
+	DW 146, 99, 127, -13
+	DD   _LUFLA_P
+LURIP5:
+	DD LURIP5_SUB-base_anims, 0
+LURIP5_SUB:
+	DD LURIP5_IMG-base_anims
+	DW 162, 97, 146, -15
+LURIP6:
+	DD LURIP6_SUB-base_anims, 0
+LURIP6_SUB:
+	DD LURIP6_IMG-base_anims
+	DW 163, 97, 151, -15
+LURIP7:
+	DD LURIP7_SUB-base_anims, 0
+LURIP7_SUB:
+	DD LURIP7_IMG-base_anims
+	DW 86, 93, 152, -15

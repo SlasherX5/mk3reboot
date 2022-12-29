@@ -1,0 +1,51 @@
+a_animality:
+    DD ANIMALITY01-base_anims
+    DD ANIMALITY02-base_anims
+    DD ANIMALITY03-base_anims
+    DD ANIMALITY04-base_anims
+    DD ANIMALITY05-base_anims
+    DD ANIMALITY06-base_anims
+    DD ANIMALITY07-base_anims
+    DD ANIMALITY08-base_anims
+    DD ANIMALITY09-base_anims
+    DD ANIMALITY10-base_anims
+    DD ANIMALITY11-base_anims
+    DD ANIMALITY12-base_anims
+    DD 0
+ANIMALITY01:
+    DD ANIMALITY01_IMG-base_anims
+    DW 48, 31, -1, -3
+    DD _ANIMAL_P
+ANIMALITY02:
+    DD ANIMALITY02_IMG-base_anims
+    DW 85, 34, -1, 0
+ANIMALITY03:
+    DD ANIMALITY03_IMG-base_anims
+    DW 130, 34, -1, 0
+ANIMALITY04:
+    DD ANIMALITY04_IMG-base_anims
+    DW 168, 34, -1, 0
+ANIMALITY05:
+    DD ANIMALITY05_IMG-base_anims
+    DW 199, 35, -1, 0
+ANIMALITY06:
+    DD ANIMALITY06_IMG-base_anims
+    DW 200, 35, -1, 0
+ANIMALITY07:
+    DD ANIMALITY07_IMG-base_anims
+    DW 200, 35, -1, 0
+ANIMALITY08:
+    DD ANIMALITY08_IMG-base_anims
+    DW 200, 35, -1, 0
+ANIMALITY09:
+    DD ANIMALITY09_IMG-base_anims
+    DW 200, 35, -1, 0
+ANIMALITY10:
+    DD ANIMALITY10_IMG-base_anims
+    DW 201, 35, 0, 0
+ANIMALITY11:
+    DD ANIMALITY11_IMG-base_anims
+    DW 201, 35, 0, 0
+ANIMALITY12:
+    DD ANIMALITY12_IMG-base_anims
+    DW 202, 35, 1, 0

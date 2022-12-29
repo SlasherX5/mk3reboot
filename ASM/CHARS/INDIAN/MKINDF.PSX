@@ -1,0 +1,784 @@
+ind_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+ind_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD a_sky_light-ind_anitab1
+	DD a_sky_zap-ind_anitab1
+	DD 0	;a_overhead_chop-ind_anitab1
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0	;a_kano_shocked-ind_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_sky_light:
+	DD INSKYLIGHT2-ind_anitab1
+	DD INSKYLIGHT4-ind_anitab1
+	DD 0
+	DD INSKYLIGHT5-ind_anitab1
+	DD INSKYLIGHT6-ind_anitab1
+	DD INSKYLIGHT7-ind_anitab1
+	DD INSKYLIGHT8-ind_anitab1
+	DD INSKYLIGHT9-ind_anitab1
+	DD 0
+a_sky_zap:
+	DD ZAP2-ind_anitab1
+	DD ZAP3-ind_anitab1
+	DD ZAP4-ind_anitab1
+	DD ZAP5-ind_anitab1
+	DD ZAP6-ind_anitab1
+	DD ZAP7-ind_anitab1
+	DD ZAP8-ind_anitab1
+	DD ZAP9-ind_anitab1
+	DD ZAP8-ind_anitab1
+	DD ZAP7-ind_anitab1
+	DD ZAP8-ind_anitab1
+	DD ZAP9-ind_anitab1
+	DD ZAP8-ind_anitab1
+	DD ZAP7-ind_anitab1
+	DD ZAP8-ind_anitab1
+	DD ZAP9-ind_anitab1
+	DD ZAP8-ind_anitab1
+	DD ZAP7-ind_anitab1
+	DD ZAP8-ind_anitab1
+	DD ZAP9-ind_anitab1
+	DD ZAP10-ind_anitab1
+	DD ZAP11-ind_anitab1
+	DD ZAP12-ind_anitab1
+	DD ZAP13-ind_anitab1
+	DD ZAP14-ind_anitab1
+	DD ZAP15-ind_anitab1
+	DD 0
+;a_overhead_chop
+;	DW INAXEFATAL1-ind_anitab1
+;	DW INAXEFATAL2-ind_anitab1
+;	DW INAXEFATAL3-ind_anitab1
+;	DW INAXEFATAL4-ind_anitab1
+;	DW ani_ochar_sound
+;	DW $0d
+;	DW ani_sladd
+;	DW INLIGHTNG1-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG1-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG2-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG3-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG4-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG5-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG6-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG7-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG8-ind_anitab1
+;	DW 0
+;	DW ani_ochar_sound
+;	DW $0d
+;	DW ani_slani
+;	DW INLIGHTNG9-ind_anitab1
+;	DW INAXEFATAL5-ind_anitab1
+;	DW ani_slani
+;	DW INLIGHTNG10-ind_anitab1
+;	DW INAXEFATAL6-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG11-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG12-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG13-ind_anitab1
+;	DW ani_slani_sleep
+;	DW INLIGHTNG14-ind_anitab1
+;	DW 0
+;a_kano_shocked
+;a_KNBZZ
+;	DW KNBZZ1-ind_anitab1
+;	DW KNBZZ2-ind_anitab1
+;	DW KNBZZ3-ind_anitab1
+;	DW KNBZZ4-ind_anitab1
+;	DW 0
+;a_SBBZZ
+;	DW SBBZZ1-ind_anitab1
+;	DW SBBZZ2-ind_anitab1
+;	DW SBBZZ3-ind_anitab1
+;	DW SBBZZ4-ind_anitab1
+;	DW 0
+;a_JXBZZ
+;	DW JXBZZ1-ind_anitab1
+;	DW JXBZZ2-ind_anitab1
+;	DW JXBZZ3-ind_anitab1
+;	DW JXBZZ4-ind_anitab1
+;	DW 0
+;a_INBZZ
+;	DW INBZZ1-ind_anitab1
+;	DW INBZZ2-ind_anitab1
+;	DW INBZZ3-ind_anitab1
+;	DW INBZZ4-ind_anitab1
+;	DW 0
+;a_SZBZZ
+;	DW SZBZZ1-ind_anitab1
+;	DW SZBZZ2-ind_anitab1
+;	DW SZBZZ3-ind_anitab1
+;	DW SZBZZ4-ind_anitab1
+;	DW 0
+;a_OBBZZ
+;	DW OBBZZ1-ind_anitab1
+;	DW OBBZZ2-ind_anitab1
+;	DW OBBZZ3-ind_anitab1
+;	DW OBBZZ4-ind_anitab1
+;	DW 0
+;a_LIBZZ
+;	DW LIBZZ1-ind_anitab1
+;	DW LIBZZ2-ind_anitab1
+;	DW LIBZZ3-ind_anitab1
+;	DW LIBZZ4-ind_anitab1
+;	DW 0
+;a_RBBZZ2
+;	DW RBBZZ1-ind_anitab1
+;	DW RBBZZ2-ind_anitab1
+;	DW RBBZZ3-ind_anitab1
+;	DW RBBZZ4-ind_anitab1
+;	DW 0
+;a_RBBZZ
+;	DW RBBZZ1-ind_anitab1
+;	DW RBBZZ2-ind_anitab1
+;	DW RBBZZ3-ind_anitab1
+;	DW RBBZZ4-ind_anitab1
+;	DW 0
+;a_KLBZZ
+;	DW KLBZZ1-ind_anitab1
+;	DW KLBZZ2-ind_anitab1
+;	DW KLBZZ3-ind_anitab1
+;	DW KLBZZ4-ind_anitab1
+;	DW 0
+;a_TRBZZ
+;	DW TRBZZ1-ind_anitab1
+;	DW TRBZZ2-ind_anitab1
+;	DW TRBZZ3-ind_anitab1
+;	DW TRBZZ4-ind_anitab1
+;	DW 0
+;a_SGBZZ
+;	DW SGBZZ1-ind_anitab1
+;	DW SGBZZ2-ind_anitab1
+;	DW SGBZZ3-ind_anitab1
+;	DW SGBZZ4-ind_anitab1
+;	DW 0
+;a_TSBZZ
+;	DW TSBZZ1-ind_anitab1
+;	DW TSBZZ2-ind_anitab1
+;	DW TSBZZ3-ind_anitab1
+;	DW TSBZZ4-ind_anitab1
+;	DW 0
+;a_LUBZZ
+;	DW LUBZZ1-ind_anitab1
+;	DW LUBZZ2-ind_anitab1
+;	DW LUBZZ3-ind_anitab1
+;	DW LUBZZ4-ind_anitab1
+;	DW 0
+;	DW RBBZZ1-ind_anitab1
+;	DW RBBZZ2-ind_anitab1
+;	DW RBBZZ3-ind_anitab1
+;	DW RBBZZ4-ind_anitab1
+;	DW 0
+INSKYLIGHT2:
+	DD INSKYLIGHT2_SUB-ind_anitab1, 0
+INSKYLIGHT2_SUB:
+	DD INSKYLIGHT2_IMG-ind_anitab1
+	DW 50, 111, 16, -5
+INSKYLIGHT4:
+	DD INSKYLIGHT4_SUB-ind_anitab1, 0
+INSKYLIGHT4_SUB:
+	DD INSKYLIGHT4_IMG-ind_anitab1
+	DW 54, 138, 18, 20
+INSKYLIGHT5:
+	DD INSKYLIGHT5_SUB-ind_anitab1, 0
+INSKYLIGHT5_SUB:
+	DD INSKYLIGHT5_IMG-ind_anitab1
+	DW 63, 124, 18, 7
+INSKYLIGHT6:
+	DD INSKYLIGHT6_SUB-ind_anitab1, 0
+INSKYLIGHT6_SUB:
+	DD INSKYLIGHT6_IMG-ind_anitab1
+	DW 74, 102, 18, -14
+INSKYLIGHT7:
+	DD INSKYLIGHT7_SUB-ind_anitab1, 0
+INSKYLIGHT7_SUB:
+	DD INSKYLIGHT7_IMG-ind_anitab1
+	DW 79, 81, 18, -36
+INSKYLIGHT8:
+	DD INSKYLIGHT8_SUB-ind_anitab1, 0
+INSKYLIGHT8_SUB:
+	DD INSKYLIGHT8_IMG-ind_anitab1
+	DW 77, 67, 17, -49
+INSKYLIGHT9:
+	DD INSKYLIGHT9_SUB-ind_anitab1, 0
+INSKYLIGHT9_SUB:
+	DD INSKYLIGHT9_IMG-ind_anitab1
+	DW 65, 56, 16, -60
+ZAP2:
+	DD ZAP2_SUB-ind_anitab1, 0
+ZAP2_SUB:
+	DD ZAP2_IMG-ind_anitab1
+	DW 6, 144, 2, 222
+	DD _ZAP_P
+ZAP3:
+	DD ZAP3_SUB-ind_anitab1, 0
+ZAP3_SUB:
+	DD ZAP3_IMG-ind_anitab1
+	DW 48, 206, 23, 207
+ZAP4:
+	DD ZAP4_SUB-ind_anitab1, 0
+ZAP4_SUB:
+	DD ZAP4_IMG-ind_anitab1
+	DW 88, 221, 42, 222
+	DD _ZAP_P
+ZAP5:
+	DD ZAP5_SUB-ind_anitab1, 0
+ZAP5_SUB:
+	DD ZAP5_IMG-ind_anitab1
+	DW 124, 224, 62, 223
+ZAP6:
+	DD ZAP6_SUB-ind_anitab1, 0
+ZAP6_SUB:
+	DD ZAP6_IMG-ind_anitab1
+	DW 116, 222, 57, 223
+ZAP7:
+	DD ZAP7_SUB-ind_anitab1, 0
+ZAP7_SUB:
+	DD ZAP7_IMG-ind_anitab1
+	DW 74, 222, 36, 223
+ZAP8:
+	DD ZAP8_SUB-ind_anitab1, 0
+ZAP8_SUB:
+	DD ZAP8_IMG-ind_anitab1
+	DW 74, 222, 36, 223
+ZAP9:
+	DD ZAP9_SUB-ind_anitab1, 0
+ZAP9_SUB:
+	DD ZAP9_IMG-ind_anitab1
+	DW 74, 222, 36, 223
+ZAP10:
+	DD ZAP10_SUB-ind_anitab1, 0
+ZAP10_SUB:
+	DD ZAP10_IMG-ind_anitab1
+	DW 74, 222, 36, 223
+ZAP11:
+	DD ZAP11_SUB-ind_anitab1, 0
+ZAP11_SUB:
+	DD ZAP11_IMG-ind_anitab1
+	DW 74, 222, 36, 223
+ZAP12:
+	DD ZAP12_SUB-ind_anitab1, 0
+ZAP12_SUB:
+	DD ZAP12_IMG-ind_anitab1
+	DW 74, 222, 36, 223
+ZAP13:
+	DD ZAP13_SUB-ind_anitab1, 0
+ZAP13_SUB:
+	DD ZAP13_IMG-ind_anitab1
+	DW 39, 221, 18, 222
+ZAP14:
+	DD ZAP14_SUB-ind_anitab1, 0
+ZAP14_SUB:
+	DD ZAP14_IMG-ind_anitab1
+	DW 23, 190, 10, 207
+ZAP15:
+	DD ZAP15_SUB-ind_anitab1, 0
+ZAP15_SUB:
+	DD ZAP15_IMG-ind_anitab1
+	DW 6, 144, 2, 222
+;INAXEFATAL1
+;	DW INAXEFATAL1_SUB-ind_anitab1, 0
+;INAXEFATAL1_SUB
+;	DW INAXEFATAL1_IMG-ind_anitab1
+;	DH 59, 105, 18, -13
+;INAXEFATAL2
+;	DW INAXEFATAL2_SUB-ind_anitab1, 0
+;INAXEFATAL2_SUB
+;	DW INAXEFATAL2_IMG-ind_anitab1
+;	DH 46, 128, 18, 10
+;INAXEFATAL3
+;	DW INAXEFATAL3_SUB-ind_anitab1, 0
+;INAXEFATAL3_SUB
+;	DW INAXEFATAL3_IMG-ind_anitab1
+;	DH 52, 113, 24, -4
+;INAXEFATAL4
+;	DW INAXEFATAL4_SUB-ind_anitab1, 0
+;INAXEFATAL4_SUB
+;	DW INAXEFATAL4_IMG-ind_anitab1
+;	DH 56, 114, 28, -3
+;INLIGHTNG1
+;	DW INLIGHTNG1_SUB-ind_anitab1, 0
+;INLIGHTNG1_SUB
+;	DW INLIGHTNG1_IMG-ind_anitab1
+;	DH 80, 82, -15, 105
+;	dw   _LIGHTNG_P
+;INLIGHTNG2
+;	DW INLIGHTNG2_SUB-ind_anitab1, 0
+;INLIGHTNG2_SUB
+;	DW INLIGHTNG2_IMG-ind_anitab1
+;	DH 117, 88, 18, 105
+;INLIGHTNG3
+;	DW INLIGHTNG3_SUB-ind_anitab1, 0
+;INLIGHTNG3_SUB
+;	DW INLIGHTNG3_IMG-ind_anitab1
+;	DH 94, 93, 22, 105
+;INLIGHTNG4
+;	DW INLIGHTNG4_SUB-ind_anitab1, 0
+;INLIGHTNG4_SUB
+;	DW INLIGHTNG4_IMG-ind_anitab1
+;	DH 85, 133, 39, 105
+;INLIGHTNG5
+;	DW INLIGHTNG5_SUB-ind_anitab1, 0
+;INLIGHTNG5_SUB
+;	DW INLIGHTNG5_IMG-ind_anitab1
+;	DH 89, 144, 49, 105
+;INLIGHTNG6
+;	DW INLIGHTNG6_SUB-ind_anitab1, 0
+;INLIGHTNG6_SUB
+;	DW INLIGHTNG6_IMG-ind_anitab1
+;	DH 87, 150, 43, 105
+;INLIGHTNG7
+;	DW INLIGHTNG7_SUB-ind_anitab1, 0
+;INLIGHTNG7_SUB
+;	DW INLIGHTNG7_IMG-ind_anitab1
+;	DH 89, 147, 40, 105
+;INLIGHTNG8
+;	DW INLIGHTNG8_SUB-ind_anitab1, 0
+;INLIGHTNG8_SUB
+;	DW INLIGHTNG8_IMG-ind_anitab1
+;	DH 50, 144, 44, 105
+;INLIGHTNG9
+;	DW INLIGHTNG9_SUB-ind_anitab1, 0
+;INLIGHTNG9_SUB
+;	DW INLIGHTNG9_IMG-ind_anitab1
+;	DH 30, 43, 27, 12
+;INAXEFATAL5
+;	DW INAXEFATAL5_SUB-ind_anitab1, 0
+;INAXEFATAL5_SUB
+;	DW INAXEFATAL5_IMG-ind_anitab1
+;	DH 46, 128, 18, 9
+;INLIGHTNG10
+;	DW INLIGHTNG10_SUB-ind_anitab1, 0
+;INLIGHTNG10_SUB
+;	DW INLIGHTNG10_IMG-ind_anitab1
+;	DH 50, 26, -10, 11
+;INAXEFATAL6
+;	DW INAXEFATAL6_SUB-ind_anitab1, 0
+;INAXEFATAL6_SUB
+;	DW INAXEFATAL6_IMG-ind_anitab1
+;	DH 79, 115, 19, -2
+;INLIGHTNG11
+;	DW INLIGHTNG11_SUB-ind_anitab1, 0
+;INLIGHTNG11_SUB
+;	DW INLIGHTNG11_IMG-ind_anitab1
+;	DH 34, 30, -36, 2
+;INLIGHTNG12
+;	DW INLIGHTNG12_SUB-ind_anitab1, 0
+;INLIGHTNG12_SUB
+;	DW INLIGHTNG12_IMG-ind_anitab1
+;	DH 105, 36, -40, -1
+;INLIGHTNG13
+;	DW INLIGHTNG13_SUB-ind_anitab1, 0
+;INLIGHTNG13_SUB
+;	DW INLIGHTNG13_IMG-ind_anitab1
+;	DH 125, 47, -47, -4
+;INLIGHTNG14
+;	DW INLIGHTNG14_SUB-ind_anitab1, 0
+;INLIGHTNG14_SUB
+;	DW INLIGHTNG14_IMG-ind_anitab1
+;	DH 113, 49, -69, -15
+;KNBZZ1
+;	DW KNBZZ1_SUB-ind_anitab1, 0
+;KNBZZ1_SUB
+;	DW KNBZZ1_IMG-ind_anitab1
+;	DH 42, 129, 18, 3
+;KNBZZ2
+;	DW KNBZZ2_SUB-ind_anitab1, 0
+;KNBZZ2_SUB
+;	DW KNBZZ2_IMG-ind_anitab1
+;	DH 32, 118, 13, -1
+;KNBZZ3
+;	DW KNBZZ3_SUB-ind_anitab1, 0
+;KNBZZ3_SUB
+;	DW KNBZZ3_IMG-ind_anitab1
+;	DH 42, 129, 18, 3
+;KNBZZ4
+;	DW KNBZZ4_SUB-ind_anitab1, 0
+;KNBZZ4_SUB
+;	DW KNBZZ4_IMG-ind_anitab1
+;	DH 32, 118, 13, -1
+;SBBZZ1
+;	DW SBBZZ1_SUB-ind_anitab1, 0
+;SBBZZ1_SUB
+;	DW SBBZZ1_IMG-ind_anitab1
+;	DH 43, 125, 21, 1
+;SBBZZ2
+;	DW SBBZZ2_SUB-ind_anitab1, 0
+;SBBZZ2_SUB
+;	DW SBBZZ2_IMG-ind_anitab1
+;	DH 32, 113, 15, -5
+;SBBZZ3
+;	DW SBBZZ3_SUB-ind_anitab1, 0
+;SBBZZ3_SUB
+;	DW SBBZZ3_IMG-ind_anitab1
+;	DH 43, 124, 21, 0
+;SBBZZ4
+;	DW SBBZZ4_SUB-ind_anitab1, 0
+;SBBZZ4_SUB
+;	DW SBBZZ4_IMG-ind_anitab1
+;	DH 32, 113, 15, -5
+;JXBZZ1
+;	DW JXBZZ1_SUB-ind_anitab1, 0
+;JXBZZ1_SUB
+;	DW JXBZZ1_IMG-ind_anitab1
+;	DH 78, 127, 34, -8
+;JXBZZ2
+;	DW JXBZZ2_SUB-ind_anitab1, 0
+;JXBZZ2_SUB
+;	DW JXBZZ2_IMG-ind_anitab1
+;	DH 66, 113, 28, -15
+;JXBZZ3
+;	DW JXBZZ3_SUB-ind_anitab1, 0
+;JXBZZ3_SUB
+;	DW JXBZZ3_IMG-ind_anitab1
+;	DH 78, 127, 34, -8
+;JXBZZ4
+;	DW JXBZZ4_SUB-ind_anitab1, 0
+;JXBZZ4_SUB
+;	DW JXBZZ4_IMG-ind_anitab1
+;	DH 66, 113, 28, -15
+;INBZZ1
+;	DW INBZZ1_SUB-ind_anitab1, 0
+;INBZZ1_SUB
+;	DW INBZZ1_IMG-ind_anitab1
+;	DH 59, 125, 32, 1
+;INBZZ2
+;	DW INBZZ2_SUB-ind_anitab1, 0
+;INBZZ2_SUB
+;	DW INBZZ2_IMG-ind_anitab1
+;	DH 48, 114, 26, -3
+;INBZZ3
+;	DW INBZZ3_SUB-ind_anitab1, 0
+;INBZZ3_SUB
+;	DW INBZZ3_IMG-ind_anitab1
+;	DH 59, 125, 32, 1
+;INBZZ4
+;	DW INBZZ4_SUB-ind_anitab1, 0
+;INBZZ4_SUB
+;	DW INBZZ4_IMG-ind_anitab1
+;	DH 48, 114, 26, -3
+;SZBZZ1
+;	DW SZBZZ1_SUB-ind_anitab1, 0
+;SZBZZ1_SUB
+;	DW SZBZZ1_IMG-ind_anitab1
+;	DH 45, 128, -9, -11
+;SZBZZ2
+;	DW SZBZZ2_SUB-ind_anitab1, 0
+;SZBZZ2_SUB
+;	DW SZBZZ2_IMG-ind_anitab1
+;	DH 34, 116, 18, 1
+;SZBZZ3
+;	DW SZBZZ3_SUB-ind_anitab1, 0
+;SZBZZ3_SUB
+;	DW SZBZZ3_IMG-ind_anitab1
+;	DH 45, 128, -9, -11
+;SZBZZ4
+;	DW SZBZZ4_SUB-ind_anitab1, 0
+;SZBZZ4_SUB
+;	DW SZBZZ4_IMG-ind_anitab1
+;	DH 34, 116, -14, -18
+;OBBZZ1
+;	DW OBBZZ1_SUB-ind_anitab1, 0
+;OBBZZ1_SUB
+;	DW OBBZZ1_IMG-ind_anitab1
+;	DH 62, 130, 12, 11
+;OBBZZ2
+;	DW OBBZZ2_SUB-ind_anitab1, 0
+;OBBZZ2_SUB
+;	DW OBBZZ2_IMG-ind_anitab1
+;	DH 49, 115, 14, -4
+;OBBZZ3
+;	DW OBBZZ3_SUB-ind_anitab1, 0
+;OBBZZ3_SUB
+;	DW OBBZZ3_IMG-ind_anitab1
+;	DH 62, 129, 12, 10
+;OBBZZ4
+;	DW OBBZZ4_SUB-ind_anitab1, 0
+;OBBZZ4_SUB
+;	DW OBBZZ4_IMG-ind_anitab1
+;	DH 49, 115, 6, 3
+;LIBZZ1
+;	DW LIBZZ1_SUB-ind_anitab1, 0
+;LIBZZ1_SUB
+;	DW LIBZZ1_IMG-ind_anitab1
+;	DH 47, 118, 14, -7
+;LIBZZ2
+;	DW LIBZZ2_SUB-ind_anitab1, 0
+;LIBZZ2_SUB
+;	DW LIBZZ2_IMG-ind_anitab1
+;	DH 37, 106, 8, -13
+;LIBZZ3
+;	DW LIBZZ3_SUB-ind_anitab1, 0
+;LIBZZ3_SUB
+;	DW LIBZZ3_IMG-ind_anitab1
+;	DH 47, 118, 14, -7
+;LIBZZ4
+;	DW LIBZZ4_SUB-ind_anitab1, 0
+;LIBZZ4_SUB
+;	DW LIBZZ4_IMG-ind_anitab1
+;	DH 37, 106, 8, -13
+;RBBZZ1
+;	DW RBBZZ1_SUB-ind_anitab1, 0
+;RBBZZ1_SUB
+;	DW RBBZZ1_IMG-ind_anitab1
+;	DH 66, 134, 31, 5
+;RBBZZ2
+;	DW RBBZZ2_SUB-ind_anitab1, 0
+;RBBZZ2_SUB
+;	DW RBBZZ2_IMG-ind_anitab1
+;	DH 53, 119, 25, -2
+;RBBZZ3
+;	DW RBBZZ3_SUB-ind_anitab1, 0
+;RBBZZ3_SUB
+;	DW RBBZZ3_IMG-ind_anitab1
+;	DH 65, 134, 31, 5
+;RBBZZ4
+;	DW RBBZZ4_SUB-ind_anitab1, 0
+;RBBZZ4_SUB
+;	DW RBBZZ4_IMG-ind_anitab1
+;	DH 53, 119, 25, -2
+;KLBZZ1
+;	DW KLBZZ1_SUB-ind_anitab1, 0
+;KLBZZ1_SUB
+;	DW KLBZZ1_IMG-ind_anitab1
+;	DH 57, 128, 36, 10
+;KLBZZ2
+;	DW KLBZZ2_SUB-ind_anitab1, 0
+;KLBZZ2_SUB
+;	DW KLBZZ2_IMG-ind_anitab1
+;	DH 45, 117, 30, 4
+;KLBZZ3
+;	DW KLBZZ3_SUB-ind_anitab1, 0
+;KLBZZ3_SUB
+;	DW KLBZZ3_IMG-ind_anitab1
+;	DH 57, 128, 36, 10
+;KLBZZ4
+;	DW KLBZZ4_SUB-ind_anitab1, 0
+;KLBZZ4_SUB
+;	DW KLBZZ4_IMG-ind_anitab1
+;	DH 44, 117, 30, 4
+;TRBZZ1
+;	DW TRBZZ1_SUB-ind_anitab1, 0
+;TRBZZ1_SUB
+;	DW TRBZZ1_IMG-ind_anitab1
+;	DH 46, 132, 25, 1
+;TRBZZ2
+;	DW TRBZZ2_SUB-ind_anitab1, 0
+;TRBZZ2_SUB
+;	DW TRBZZ2_IMG-ind_anitab1
+;	DH 34, 119, 18, -4
+;TRBZZ3
+;	DW TRBZZ3_SUB-ind_anitab1, 0
+;TRBZZ3_SUB
+;	DW TRBZZ3_IMG-ind_anitab1
+;	DH 46, 132, 25, 1
+;TRBZZ4
+;	DW TRBZZ4_SUB-ind_anitab1, 0
+;TRBZZ4_SUB
+;	DW TRBZZ4_IMG-ind_anitab1
+;	DH 34, 119, 18, -4
+;SGBZZ1
+;	DW SGBZZ1_SUB-ind_anitab1, 0
+;SGBZZ1_SUB
+;	DW SGBZZ1_IMG-ind_anitab1
+;	DH 66, 138, 52, 5
+;SGBZZ2
+;	DW SGBZZ2_SUB-ind_anitab1, 0
+;SGBZZ2_SUB
+;	DW SGBZZ2_IMG-ind_anitab1
+;	DH 54, 125, 46, -1
+;SGBZZ3
+;	DW SGBZZ3_SUB-ind_anitab1, 0
+;SGBZZ3_SUB
+;	DW SGBZZ3_IMG-ind_anitab1
+;	DH 66, 138, 52, 5
+;SGBZZ4
+;	DW SGBZZ4_SUB-ind_anitab1, 0
+;SGBZZ4_SUB
+;	DW SGBZZ4_IMG-ind_anitab1
+;	DH 54, 125, 46, -1
+;TSBZZ1
+;	DW TSBZZ1_SUB-ind_anitab1, 0
+;TSBZZ1_SUB
+;	DW TSBZZ1_IMG-ind_anitab1
+;	DH 49, 127, 15, 11
+;TSBZZ2
+;	DW TSBZZ2_SUB-ind_anitab1, 0
+;TSBZZ2_SUB
+;	DW TSBZZ2_IMG-ind_anitab1
+;	DH 38, 114, 10, 4
+;TSBZZ3
+;	DW TSBZZ3_SUB-ind_anitab1, 0
+;TSBZZ3_SUB
+;	DW TSBZZ3_IMG-ind_anitab1
+;	DH 38, 114, 10, 4
+;TSBZZ4
+;	DW TSBZZ4_SUB-ind_anitab1, 0
+;TSBZZ4_SUB
+;	DW TSBZZ4_IMG-ind_anitab1
+;	DH 49, 127, 15, 11
+;LUBZZ1
+;	DW LUBZZ1_SUB-ind_anitab1, 0
+;LUBZZ1_SUB
+;	DW LUBZZ1_IMG-ind_anitab1
+;	DH 50, 128, 30, 6
+;LUBZZ2
+;	DW LUBZZ2_SUB-ind_anitab1, 0
+;LUBZZ2_SUB
+;	DW LUBZZ2_IMG-ind_anitab1
+;	DH 36, 115, 24, 0
+;LUBZZ3
+;	DW LUBZZ3_SUB-ind_anitab1, 0
+;LUBZZ3_SUB
+;	DW LUBZZ3_IMG-ind_anitab1
+;	DH 50, 128, 30, 6
+;LUBZZ4
+;	DW LUBZZ4_SUB-ind_anitab1, 0
+;LUBZZ4_SUB
+;	DW LUBZZ4_IMG-ind_anitab1
+;	DH 36, 115, 23, 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

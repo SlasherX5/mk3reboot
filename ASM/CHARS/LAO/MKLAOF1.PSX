@@ -1,0 +1,255 @@
+lao_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+lao_anitab2:
+	DD 0
+	DD 0
+	DD 0	;a_spin-lao_anitab1
+	DD 0	;a_lao_top-lao_anitab1
+	DD a_hat_slice_throw-lao_anitab1
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD ochar_cutups-base_anims
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0				; 30
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD 0	;a_blood_explode-base_anims	;34
+	DD 0
+	DD 0	;a_arm2-base_anims
+	DD 0	;a_leg-base_anims
+	DD 0
+	DD 0	;a_bone-base_anims
+	DD 0
+	DD 0	;a_rib_cage-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+;a_spin
+;	DW KLSPIN1-lao_anitab1
+;	DW KLSPIN2-lao_anitab1
+;	DW KLSPIN3-lao_anitab1
+;	DW KLSPIN4-lao_anitab1
+;	DW KLSPIN5-lao_anitab1
+;	DW KLSPIN6-lao_anitab1
+;	DW KLSPIN7-lao_anitab1
+;	DW KLSPIN8-lao_anitab1
+;	DW ani_jump
+;	DW a_spin-lao_anitab1
+;a_lao_top
+;	DW ani_swpal
+;j_top
+;	DW LAOTOP1-lao_anitab1
+;	DW LAOTOP2-lao_anitab1
+;	DW LAOTOP3-lao_anitab1
+;	DW LAOTOP4-lao_anitab1
+;	DW LAOTOP5-lao_anitab1
+;	DW LAOTOP6-lao_anitab1
+;	DW ani_jump
+;	DW j_top-lao_anitab1
+a_hat_slice_throw:
+	DD KLHATSLICE1-lao_anitab1
+	DD KLHATSLICE2-lao_anitab1
+	DD KLHATSLICE3-lao_anitab1
+	DD KLHATSLICE4-lao_anitab1
+	DD KLHATSLICE6-lao_anitab1
+	DD 0
+	DD SLICEHAT-lao_anitab1
+	DD 0
+;KLSPIN1
+;	DW KLSPIN1_SUB-lao_anitab1, 0
+;KLSPIN1_SUB
+;	DW KLSPIN1_IMG-lao_anitab1
+;	DH 46, 122, 22, 7
+;KLSPIN2
+;	DW KLSPIN2_SUB-lao_anitab1, 0
+;KLSPIN2_SUB
+;	DW KLSPIN2_IMG-lao_anitab1
+;	DH 48, 122, 20, 7
+;KLSPIN3
+;	DW KLSPIN3_SUB-lao_anitab1, 0
+;KLSPIN3_SUB
+;	DW KLSPIN3_IMG-lao_anitab1
+;	DH 43, 122, 15, 7
+;KLSPIN4
+;	DW KLSPIN4_SUB-lao_anitab1, 0
+;KLSPIN4_SUB
+;	DW KLSPIN4_IMG-lao_anitab1
+;	DH 38, 122, 10, 7
+;KLSPIN5
+;	DW KLSPIN5_SUB-lao_anitab1, 0
+;KLSPIN5_SUB
+;	DW KLSPIN5_IMG-lao_anitab1
+;	DH 46, 121, 18, 7
+;KLSPIN6
+;	DW KLSPIN6_SUB-lao_anitab1, 0
+;KLSPIN6_SUB
+;	DW KLSPIN6_IMG-lao_anitab1
+;	DH 46, 120, 22, 6
+;KLSPIN7
+;	DW KLSPIN7_SUB-lao_anitab1, 0
+;KLSPIN7_SUB
+;	DW KLSPIN7_IMG-lao_anitab1
+;	DH 39, 120, 22, 6
+;KLSPIN8
+;	DW KLSPIN8_SUB-lao_anitab1, 0
+;KLSPIN8_SUB
+;	DW KLSPIN8_IMG-lao_anitab1
+;	DH 38, 122, 22, 7
+;LAOTOP1
+;	DW LAOTOP1_SUB-lao_anitab1, 0
+;LAOTOP1_SUB
+;	DW LAOTOP1_IMG-lao_anitab1
+;	DH 78, 109, 37, -4
+;	dw	LAOTOP_P
+;LAOTOP2
+;	DW LAOTOP2_SUB-lao_anitab1, 0
+;LAOTOP2_SUB
+;	DW LAOTOP2_IMG-lao_anitab1
+;	DH 78, 109, 37, -3
+;LAOTOP3
+;	DW LAOTOP3_SUB-lao_anitab1, 0
+;LAOTOP3_SUB
+;	DW LAOTOP3_IMG-lao_anitab1
+;	DH 78, 110, 37, -3
+;LAOTOP4
+;	DW LAOTOP4_SUB-lao_anitab1, 0
+;LAOTOP4_SUB
+;	DW LAOTOP4_IMG-lao_anitab1
+;	DH 78, 110, 38, -3
+;LAOTOP5
+;	DW LAOTOP5_SUB-lao_anitab1, 0
+;LAOTOP5_SUB
+;	DW LAOTOP5_IMG-lao_anitab1
+;	DH 78, 110, 37, -3
+;LAOTOP6
+;	DW LAOTOP6_SUB-lao_anitab1, 0
+;LAOTOP6_SUB
+;	DW LAOTOP6_IMG-lao_anitab1
+;	DH 78, 110, 37, -3
+KLHATSLICE1:
+	DD KLHATSLICE1_SUB-lao_anitab1, 0
+KLHATSLICE1_SUB:
+	DD KLHATSLICE1_IMG-lao_anitab1
+	DW 74, 104, 38, -9
+KLHATSLICE2:
+	DD KLHATSLICE2_SUB-lao_anitab1, 0
+KLHATSLICE2_SUB:
+	DD KLHATSLICE2_IMG-lao_anitab1
+	DW 79, 79, 41, -34
+KLHATSLICE3:
+	DD KLHATSLICE3_SUB-lao_anitab1, 0
+KLHATSLICE3_SUB:
+	DD KLHATSLICE3_IMG-lao_anitab1
+	DW 74, 63, 35, -50
+KLHATSLICE4:
+	DD KLHATSLICE4_SUB-lao_anitab1, 0
+KLHATSLICE4_SUB:
+	DD KLHATSLICE4_IMG-lao_anitab1
+	DW 79, 43, 39, -70
+KLHATSLICE6:
+	DD KLHATSLICE6_SUB-lao_anitab1, 0
+KLHATSLICE6_SUB:
+	DD KLHATSLICE6_IMG-lao_anitab1
+	DW 76, 56, 27, -56
+SLICEHAT:
+	DD SLICEHAT_SUB-lao_anitab1, 0
+SLICEHAT_SUB:
+	DD SLICEHAT_IMG-lao_anitab1
+	DW 43, 24, 23, 13
+	DD _SHAT_P

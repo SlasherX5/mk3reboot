@@ -1,0 +1,207 @@
+robo3_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+robo3_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+
+	DD a_bull-robo3_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_zap:
+a_dummy:
+a_bull:
+	DD BULL1-robo3_anitab1
+	DD BULL3-robo3_anitab1
+	DD BULL4-robo3_anitab1
+	DD BULL5-robo3_anitab1
+	DD BULL6-robo3_anitab1
+	DD 0
+j_bull:
+	DD BULL7-robo3_anitab1
+	DD BULL8-robo3_anitab1
+	DD BULL9-robo3_anitab1
+	DD BULL10-robo3_anitab1
+	DD BULL11-robo3_anitab1
+	DD BULL12-robo3_anitab1
+	DD BULL13-robo3_anitab1
+	DD ani_jump
+	DD j_bull-robo3_anitab1
+BULL1:
+	DD BULL1_SUB-robo3_anitab1, 0
+BULL1_SUB:
+	DD BULL1_IMG-robo3_anitab1
+	DW 55, 113, 26, -8
+	DD   _BULL_P
+BULL3:
+	DD BULL3_SUB-robo3_anitab1, 0
+BULL3_SUB:
+	DD BULL3_IMG-robo3_anitab1
+	DW 92, 97, 39, -28
+BULL4:
+	DD BULL4_SUB-robo3_anitab1, 0
+BULL4_SUB:
+	DD BULL4_IMG-robo3_anitab1
+	DW 102, 90, 39, -35
+BULL5:
+	DD BULL5_SUB-robo3_anitab1, 0
+BULL5_SUB:
+	DD BULL5_IMG-robo3_anitab1
+	DW 135, 87, 53, -36
+BULL6:
+	DD BULL6_SUB-robo3_anitab1, 0
+BULL6_SUB:
+	DD BULL6_IMG-robo3_anitab1
+	DW 156, 88, 55, -30
+BULL7:
+	DD BULL7_SUB-robo3_anitab1, 0
+BULL7_SUB:
+	DD BULL7_IMG-robo3_anitab1
+	DW 173, 94, 67, -27
+BULL8:
+	DD BULL8_SUB-robo3_anitab1, 0
+BULL8_SUB:
+	DD BULL8_IMG-robo3_anitab1
+	DW 162, 91, 66, -31
+BULL9:
+	DD BULL9_SUB-robo3_anitab1, 0
+BULL9_SUB:
+	DD BULL9_IMG-robo3_anitab1
+	DW 168, 88, 78, -33
+BULL10:
+	DD BULL10_SUB-robo3_anitab1, 0
+BULL10_SUB:
+	DD BULL10_IMG-robo3_anitab1
+	DW 170, 92, 78, -30
+BULL11:
+	DD BULL11_SUB-robo3_anitab1, 0
+BULL11_SUB:
+	DD BULL11_IMG-robo3_anitab1
+	DW 173, 86, 82, -35
+BULL12:
+	DD BULL12_SUB-robo3_anitab1, 0
+BULL12_SUB:
+	DD BULL12_IMG-robo3_anitab1
+	DW 171, 86, 76, -35
+BULL13:
+	DD BULL13_SUB-robo3_anitab1, 0
+BULL13_SUB:
+	DD BULL13_IMG-robo3_anitab1
+	DW 166, 88, 68, -33

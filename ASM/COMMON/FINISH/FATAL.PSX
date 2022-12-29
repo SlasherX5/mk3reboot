@@ -1,0 +1,65 @@
+a_fatality_drip:
+    DD FATALITY01-base_anims
+    DD FATALITY02-base_anims
+    DD FATALITY03-base_anims
+    DD FATALITY04-base_anims
+    DD FATALITY05-base_anims
+    DD FATALITY06-base_anims
+    DD FATALITY07-base_anims
+    DD FATALITY08-base_anims
+j_fatal:
+    DD FATALITY09-base_anims
+    DD FATALITY10-base_anims
+    DD FATALITY11-base_anims
+    DD FATALITY12-base_anims
+    DD FATALITY13-base_anims
+    DD FATALITY14-base_anims
+    DD FATALITY15-base_anims
+    DD ani_jump
+    DD j_fatal-base_anims
+FATALITY01:
+    DD FATALITY01_IMG-base_anims
+    DW 102, 1, -1, 0
+    DD _FATAL_P
+FATALITY02:
+    DD FATALITY02_IMG-base_anims
+    DW 102, 8, -1, 0
+FATALITY03:
+    DD FATALITY03_IMG-base_anims
+    DW 102, 11, -1, 0
+FATALITY04:
+    DD FATALITY04_IMG-base_anims
+    DW 102, 14, -1, 0
+FATALITY05:
+    DD FATALITY05_IMG-base_anims
+    DW 102, 18, -1, 0
+FATALITY06:
+    DD FATALITY06_IMG-base_anims
+    DW 103, 27, 0, 0
+FATALITY07:
+    DD FATALITY07_IMG-base_anims
+    DW 103, 31, 0, 0
+FATALITY08:
+    DD FATALITY08_IMG-base_anims
+    DW 104, 31, 1, 0
+FATALITY09:
+    DD FATALITY09_IMG-base_anims
+    DW 104, 36, 1, 0
+FATALITY10:
+    DD FATALITY10_IMG-base_anims
+    DW 104, 31, 1, 0
+FATALITY11:
+    DD FATALITY11_IMG-base_anims
+    DW 104, 31, 1, 0
+FATALITY12:
+    DD FATALITY12_IMG-base_anims
+    DW 104, 34, 1, 0
+FATALITY13:
+    DD FATALITY13_IMG-base_anims
+    DW 104, 34, 1, 0
+FATALITY14:
+    DD FATALITY14_IMG-base_anims
+    DW 104, 31, 1, 0
+FATALITY15:
+    DD FATALITY15_IMG-base_anims
+    DW 104, 35, 1, 0

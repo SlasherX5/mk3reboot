@@ -1,0 +1,89 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)sonya/sonyab.bin  \
+     $(EXE)sonya/sonya.bin \
+	 $(EXE)sonya/sonyaa.bin \
+	 $(EXE)sonya/sonyas.bin \
+	 $(EXE)sonya/sonyaf.bin \
+	 $(EXE)sonya/sonyaf1.bin \
+	 .SYMBOLIC
+
+# MAIN GAME	PLAY
+
+sonya.obj: sonya.asm $(OVLARTI) \
+	../chars/sonya/mksonya.psx \
+	../chars/sonya/mksonya.psi \
+	../chars/sonya/sbb.psi
+
+# BABALITY
+
+sonyab.obj: sonyab.asm $(OVLARTI) \
+ 	../chars/sonya/mksonyab.psx    \
+ 	../common/baby/babyson.psx  \
+ 	../common/baby/babyson.psi  \
+ 	../common/baby/babyxpld.psi 
+
+
+# FRIENDSHIP 
+
+sonyas.obj: sonyas.asm $(OVLARTI) \
+	../chars/sonya/mksonyas.psx \
+	../chars/sonya/mksonyas.psi \
+	../common/common/friend.psx \
+	../common/common/friend.psi
+
+
+
+# ANIMALITY
+
+sonyaa.obj: sonyaa.asm $(OVLARTI)  \
+	../chars/sonya/mksonyaa.psx   \
+	../chars/sonya/mksonyaa.psi   \
+	../common/common/arm2.psx     \
+	../common/common/arm2.psi     \
+	../common/common/leg.psx	  \
+	../common/common/leg.psi	  \
+	../common/common/bone.psx     \
+	../common/common/bone.psi     \
+	../common/common/cage.psx     \
+	../common/common/cage.psi     \
+	../common/common/skull.psx    \
+	../common/common/skull.psi    \
+	../common/common/bloodxp.psx  \
+	../common/common/bloodxp.psi  \
+	../common/common/animal.psx   \
+	../common/common/animal.psi
+
+
+# FATALITIES
+
+sonyaf.obj: sonyaf.asm $(OVLARTI) \
+	../chars/sonya/mksonyaf.psx	  \
+	../chars/sonya/mksonyaf.psi	  \
+	../common/common/skelfire.psx \
+	../common/common/skelfire.psi \
+	../common/common/fatal.psx    \
+	../common/common/fatal.psi
+
+
+
+sonyaf1.obj: sonyaf1.asm $(OVLARTI)     \
+	../chars/sonya/mksonyf1.psx	 \
+	../chars/sonya/mksonyf1.psi	 \
+	../common/common/arm2.psx	 \
+	../common/common/arm2.psi	 \
+	../common/common/leg.psx	 \
+	../common/common/leg.psi	 \
+	../common/common/bone.psx	 \
+	../common/common/bone.psi	 \
+	../common/common/cage.psx	 \
+	../common/common/cage.psi	 \
+	../common/common/skull.psx	 \
+	../common/common/skull.psi	 \
+	../common/common/bloodxp.psx \
+	../common/common/bloodxp.psi \
+	../common/common/fatal.psx   \
+	../common/common/fatal.psi
+
+

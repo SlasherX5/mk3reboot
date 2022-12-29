@@ -1,0 +1,118 @@
+_sonya_panitab1:
+	DD a__sonya_stance-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_dummy-_sonya_panitab1
+	DD a__sonya_victory-_sonya_panitab1
+a__sonya_dummy:
+a__sonya_stance:
+	DD SBSTANCE1-_sonya_panitab1
+	DD SBSTANCE2-_sonya_panitab1
+	DD SBSTANCE3-_sonya_panitab1
+	DD SBSTANCE4-_sonya_panitab1
+	DD SBSTANCE5-_sonya_panitab1
+	DD SBSTANCE6-_sonya_panitab1
+	DD SBSTANCE7-_sonya_panitab1
+	DD SBSTANCE8-_sonya_panitab1
+	DD ani_jump
+	DD a__sonya_stance-_sonya_panitab1
+a__sonya_victory:
+	DD SBVICTORY1-_sonya_panitab1
+	DD SBVICTORY2-_sonya_panitab1
+	DD SBVICTORY3-_sonya_panitab1
+	DD 0
+	DD SBVICTORY4-_sonya_panitab1
+	DD SBVICTORY5-_sonya_panitab1
+	DD SBVICTORY6-_sonya_panitab1
+	DD SBVICTORY7-_sonya_panitab1
+	DD SBVICTORY8-_sonya_panitab1
+	DD 0
+SBSTANCE1:
+	DD SBSTANCE1_SUB-_sonya_panitab1, 0
+SBSTANCE1_SUB:
+	DD SBSTANCE1_IMG-_sonya_panitab1
+	DW 51, 108, 18, -10
+SBSTANCE2:
+	DD SBSTANCE2_SUB-_sonya_panitab1, 0
+SBSTANCE2_SUB:
+	DD SBSTANCE2_IMG-_sonya_panitab1
+	DW 47, 107, 18, -11
+SBSTANCE3:
+	DD SBSTANCE3_SUB-_sonya_panitab1, 0
+SBSTANCE3_SUB:
+	DD SBSTANCE3_IMG-_sonya_panitab1
+	DW 46, 106, 18, -12
+SBSTANCE4:
+	DD SBSTANCE4_SUB-_sonya_panitab1, 0
+SBSTANCE4_SUB:
+	DD SBSTANCE4_IMG-_sonya_panitab1
+	DW 46, 106, 18, -12
+SBSTANCE5:
+	DD SBSTANCE5_SUB-_sonya_panitab1, 0
+SBSTANCE5_SUB:
+	DD SBSTANCE5_IMG-_sonya_panitab1
+	DW 46, 108, 18, -10
+SBSTANCE6:
+	DD SBSTANCE6_SUB-_sonya_panitab1, 0
+SBSTANCE6_SUB:
+	DD SBSTANCE6_IMG-_sonya_panitab1
+	DW 52, 109, 18, -9
+SBSTANCE7:
+	DD SBSTANCE7_SUB-_sonya_panitab1, 0
+SBSTANCE7_SUB:
+	DD SBSTANCE7_IMG-_sonya_panitab1
+	DW 55, 109, 18, -9
+SBSTANCE8:
+	DD SBSTANCE8_SUB-_sonya_panitab1, 0
+SBSTANCE8_SUB:
+	DD SBSTANCE8_IMG-_sonya_panitab1
+	DW 55, 109, 18, -9
+SBVICTORY1:
+	DD SBVICTORY1_SUB-_sonya_panitab1, 0
+SBVICTORY1_SUB:
+	DD SBVICTORY1_IMG-_sonya_panitab1
+	DW 58, 110, 32, -8
+SBVICTORY2:
+	DD SBVICTORY2_SUB-_sonya_panitab1, 0
+SBVICTORY2_SUB:
+	DD SBVICTORY2_IMG-_sonya_panitab1
+	DW 48, 113, 34, -5
+SBVICTORY3:
+	DD SBVICTORY3_SUB-_sonya_panitab1, 0
+SBVICTORY3_SUB:
+	DD SBVICTORY3_IMG-_sonya_panitab1
+	DW 41, 111, 35, -5
+SBVICTORY4:
+	DD SBVICTORY4_SUB-_sonya_panitab1, 0
+SBVICTORY4_SUB:
+	DD SBVICTORY4_IMG-_sonya_panitab1
+	DW 65, 112, 54, -4
+SBVICTORY5:
+	DD SBVICTORY5_SUB-_sonya_panitab1, 0
+SBVICTORY5_SUB:
+	DD SBVICTORY5_IMG-_sonya_panitab1
+	DW 51, 112, 45, -6
+SBVICTORY6:
+	DD SBVICTORY6_SUB-_sonya_panitab1, 0
+SBVICTORY6_SUB:
+	DD SBVICTORY6_IMG-_sonya_panitab1
+	DW 42, 112, 26, -6
+SBVICTORY7:
+	DD SBVICTORY7_SUB-_sonya_panitab1, 0
+SBVICTORY7_SUB:
+	DD SBVICTORY7_IMG-_sonya_panitab1
+	DW 45, 111, 19, -8
+SBVICTORY8:
+	DD SBVICTORY8_SUB-_sonya_panitab1, 0
+SBVICTORY8_SUB:
+	DD SBVICTORY8_IMG-_sonya_panitab1
+	DW 43, 111, 18, -8

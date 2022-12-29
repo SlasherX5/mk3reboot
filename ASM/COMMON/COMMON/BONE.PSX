@@ -1,0 +1,52 @@
+a_bone:
+	DD BONE01-base_anims
+	DD BONE02-base_anims
+	DD BONE03-base_anims
+	DD BONE04-base_anims
+	DD BONE05-base_anims
+	DD BONE06-base_anims
+	DD BONE07-base_anims
+	DD BONE08-base_anims
+	DD BONE09-base_anims
+	DD BONE10-base_anims
+	DD BONE11-base_anims
+	DD BONE12-base_anims
+	DD ani_jump
+	DD a_bone-base_anims
+BONE01:
+	DD BONE01_IMG-base_anims
+	DW 8, 21, 5, 12
+	DD   _BODY_P
+BONE02:
+	DD BONE02_IMG-base_anims
+	DW 11, 14, 5, 8
+BONE03:
+	DD BONE03_IMG-base_anims
+	DW 19, 5, 9, 3
+BONE04:
+	DD BONE04_IMG-base_anims
+	DW 23, 15, 11, 8
+BONE05:
+	DD BONE05_IMG-base_anims
+	DW 22, 22, 10, 11
+BONE06:
+	DD BONE06_IMG-base_anims
+	DW 17, 23, 8, 12
+BONE07:
+	DD BONE07_IMG-base_anims
+	DW 9, 21, 4, 11
+BONE08:
+	DD BONE08_IMG-base_anims
+	DW 11, 13, 6, 7
+BONE09:
+	DD BONE09_IMG-base_anims
+	DW 18, 6, 9, 3
+BONE10:
+	DD BONE10_IMG-base_anims
+	DW 22, 15, 11, 8
+BONE11:
+	DD BONE11_IMG-base_anims
+	DW 22, 22, 11, 11
+BONE12:
+	DD BONE12_IMG-base_anims
+	DW 17, 25, 9, 13

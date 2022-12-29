@@ -1,0 +1,203 @@
+robo3_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+robo3_anitab2:
+	DD a_chest_open-robo3_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+	
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_smoke_friend-robo3_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_zap:
+a_dummy:
+a_chest_open:
+	DD RBCHEST1-robo3_anitab1
+	DD RBCHEST2-robo3_anitab1
+	DD 0
+a_smoke_friend:
+	DD ani_sladd
+	DD HORN1-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN1-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN2-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN3-robo3_anitab1
+	DD 0
+	DD ani_slani_sleep
+	DD HORN4-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN5-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN4-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN5-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN4-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN5-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN4-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN5-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN4-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN5-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN3-robo3_anitab1
+	DD 0
+	DD ani_slani_sleep
+	DD HORN2-robo3_anitab1
+	DD ani_slani_sleep
+	DD HORN1-robo3_anitab1
+	DD 0
+RBCHEST1:
+	DD RBCHEST1_SUB-robo3_anitab1, 0
+RBCHEST1_SUB:
+	DD RBCHEST1_IMG-robo3_anitab1
+	DW 46, 115, 19, -5
+RBCHEST2:
+	DD RBCHEST2_SUB-robo3_anitab1, 0
+RBCHEST2_SUB:
+	DD RBCHEST2_IMG-robo3_anitab1
+	DW 47, 113, 20, -7
+HORN1:
+	DD HORN1_SUB-robo3_anitab1, 0
+HORN1_SUB:
+	DD HORN1_IMG-robo3_anitab1
+	DW 12, 21, -5, -28
+	DD   _BIGHORN_P
+HORN2:
+	DD HORN2_SUB-robo3_anitab1, 0
+HORN2_SUB:
+	DD HORN2_IMG-robo3_anitab1
+	DW 33, 21, -5, -28
+HORN3:
+	DD HORN3_SUB-robo3_anitab1, 0
+HORN3_SUB:
+	DD HORN3_IMG-robo3_anitab1
+	DW 77, 61, -5, -8
+HORN4:
+	DD HORN4_SUB-robo3_anitab1, 0
+HORN4_SUB:
+	DD HORN4_IMG-robo3_anitab1
+	DW 78, 62, -5, -8
+HORN5:
+	DD HORN5_SUB-robo3_anitab1, 0
+HORN5_SUB:
+	DD HORN5_IMG-robo3_anitab1
+	DW 79, 62, -4, -8

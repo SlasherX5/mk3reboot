@@ -1,0 +1,179 @@
+lk_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+lk_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD ochar_half_bodies-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+	DD a_dragon-lk_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_dragon:
+	DD DRAGON1-lk_anitab1
+	DD DRAGON3-lk_anitab1
+	DD DRAGON4-lk_anitab1
+	DD DRAGON5-lk_anitab1
+	DD DRAGON6-lk_anitab1
+	DD DRAGON7-lk_anitab1
+	DD 0
+	DD DRAGON9-lk_anitab1
+	DD DRAGON13-lk_anitab1
+	DD DRAGON15-lk_anitab1
+	DD 0
+	DD DRAGON13-lk_anitab1
+	DD DRAGON9-lk_anitab1
+	DD 0
+DRAGON1:
+	DD DRAGON1_SUB-lk_anitab1, 0
+DRAGON1_SUB:
+	DD DRAGON1_IMG-lk_anitab1
+	DW 52, 109, 25, -4
+	DD _DRAGON_P
+DRAGON3:
+	DD DRAGON3_SUB-lk_anitab1, 0
+DRAGON3_SUB:
+	DD DRAGON3_IMG-lk_anitab1
+	DW 64, 119, 33, 1
+DRAGON4:
+	DD DRAGON4_SUB-lk_anitab1, 0
+DRAGON4_SUB:
+	DD DRAGON4_IMG-lk_anitab1
+	DW 80, 122, 47, 3
+DRAGON5:
+	DD DRAGON5_SUB-lk_anitab1, 0
+DRAGON5_SUB:
+	DD DRAGON5_IMG-lk_anitab1
+	DW 108, 123, 60, 5
+DRAGON6:
+	DD DRAGON6_SUB-lk_anitab1, 0
+DRAGON6_SUB:
+	DD DRAGON6_IMG-lk_anitab1
+	DW 137, 131, 71, 13
+DRAGON7:
+	DD DRAGON7_SUB-lk_anitab1, 0
+DRAGON7_SUB:
+	DD DRAGON7_IMG-lk_anitab1
+	DW 170, 142, 86, 22
+DRAGON9:
+	DD DRAGON9_SUB-lk_anitab1, 0
+DRAGON9_SUB:
+	DD DRAGON9_IMG-lk_anitab1
+	DW 143, 162, 86, 43
+DRAGON13:
+	DD DRAGON13_SUB-lk_anitab1, 0
+DRAGON13_SUB:
+	DD DRAGON13_IMG-lk_anitab1
+	DW 148, 169, 86, 61
+DRAGON15:
+	DD DRAGON15_SUB-lk_anitab1, 0
+DRAGON15_SUB:
+	DD DRAGON15_IMG-lk_anitab1
+	DW 182, 155, 86, 35

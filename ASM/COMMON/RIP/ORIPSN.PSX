@@ -1,0 +1,88 @@
+ochar_ripped_anis:
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_normal_skel-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+a_sonya_rip:
+	DD SNRIP1-base_anims
+	DD SNRIP2-base_anims
+	DD SNRIP3-base_anims
+	DD SNRIP4-base_anims
+	DD SNRIP5-base_anims
+	DD SNRIP6-base_anims
+	DD SNRIP7-base_anims
+	DD 0
+SNRIP1:
+	DD SNRIP1_SUB-base_anims, 0
+SNRIP1_SUB:
+	DD SNRIP1_IMG-base_anims
+	DW 63, 96, 37, -23
+	DD   _SBFLA_P
+SNRIP2:
+	DD SNRIP2_SUB-base_anims, 0
+SNRIP2_SUB:
+	DD SNRIP2_IMG-base_anims
+	DW 79, 96, 53, -23
+SNRIP3:
+	DD SNRIP3_SUB-base_anims, 0
+SNRIP3_SUB:
+	DD SNRIP3_IMG-base_anims
+	DW 106, 96, 80, -23
+SNRIP4:
+	DD SNRIP4_SUB-base_anims, 0
+SNRIP4_SUB:
+	DD SNRIP4_IMG-base_anims
+	DW 148, 96, 126, -23
+	DD   _SBFLB_P
+SNRIP5:
+	DD SNRIP5_SUB-base_anims, 0
+SNRIP5_SUB:
+	DD SNRIP5_IMG-base_anims
+	DW 162, 96, 140, -23
+SNRIP6:
+	DD SNRIP6_SUB-base_anims, 0
+SNRIP6_SUB:
+	DD SNRIP6_IMG-base_anims
+	DW 164, 96, 146, -23
+SNRIP7:
+	DD SNRIP7_SUB-base_anims, 0
+SNRIP7_SUB:
+	DD SNRIP7_IMG-base_anims
+	DW 104, 96, 146, -23

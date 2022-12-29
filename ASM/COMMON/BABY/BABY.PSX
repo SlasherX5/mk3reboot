@@ -1,0 +1,194 @@
+ochar_babies:
+	DD BABKANO-base_anims
+	DD BABSONYA-base_anims
+	DD BABJAX-base_anims
+	DD BABINDIAN-base_anims
+	DD BABZERO-base_anims
+	DD BABSWAT-base_anims
+	DD BABWITCH-base_anims
+	DD BABKETCH-base_anims
+	DD BABMUST-base_anims
+	DD BABLAO-base_anims
+	DD BABTUSKEN-base_anims
+	DD BABGORO-base_anims
+	DD BABTSUNG-base_anims
+	DD BABKANG-base_anims
+	DD BABSMOKE-base_anims
+	DD 0
+baby_text:
+;	DW BABALITY1-base_anims
+;	DW BABALITY2-base_anims
+;	DW BABALITY3-base_anims
+;	DW BABALITY4-base_anims
+;	DW BABALITY5-base_anims
+;	DW BABALITY6-base_anims
+;	DW BABALITY7-base_anims
+;	DW BABALITY8-base_anims
+;	DW 0
+BABKANO:
+	DD BABKANO_IMG-base_anims
+	DW 22, 37, 0, 0
+	DD   _BABY1_P
+BABSONYA:
+	DD BABSONYA_IMG-base_anims
+	DW 28, 46, 0, 0
+	DD   _BABY4_P
+BABJAX:
+	DD BABJAX_IMG-base_anims
+	DW 25, 41, 0, 0
+	DD   _BABY6_P
+BABINDIAN:
+	DD BABINDIAN_IMG-base_anims
+	DW 27, 43, 0, 0
+	DD   _BABY10_P
+BABZERO:
+	DD BABZERO_IMG-base_anims
+	DW 22, 37, 0, 0
+	DD   _BABY8_P
+BABSWAT:
+	DD BABSWAT_IMG-base_anims
+	DW 26, 43, 0, 0
+	DD   _BABY13_P
+BABWITCH:
+	DD BABWITCH_IMG-base_anims
+	DW 29, 51, 0, 0
+	DD   _BABY2_P
+BABKETCH:
+	DD BABKETCH_IMG-base_anims
+	DW 22, 41, 0, 0
+	DD   _BABY9_P
+BABMUST:
+	DD BABMUST_IMG-base_anims
+	DW 22, 41, 0, 0
+	DD   _BABY9B_P
+BABLAO:
+	DD BABLAO_IMG-base_anims
+	DW 31, 41, 0, 0
+	DD   _BABY5_P
+BABTUSKEN:
+	DD BABTUSKEN_IMG-base_anims
+	DW 23, 39, 0, 0
+	DD   _BABY3_P
+BABGORO:
+	DD BABGORO_IMG-base_anims
+	DW 26, 44, 0,0
+	DD   _BABY12_P
+BABTSUNG:
+	DD BABTSUNG_IMG-base_anims
+	DW 22, 41, 0, 0
+	DD   _BABY11_P
+BABKANG:
+	DD BABKANG_IMG-base_anims
+	DW 26, 43, 0, 0
+	DD   _BABY7_P
+BABSMOKE:
+	DD BABSMOKE_IMG-base_anims
+	DW 22, 41, 0, 0
+	DD   _BABY9C_P
+;BABALITY1
+;	DW BABALITY1_IMG-base_anims
+;	DH 33, 29, 0, 0
+;	dw   BABYB_P
+;BABALITY2
+;	DW BABALITY2_IMG-base_anims
+;	DH 31, 29, 0, 0
+;	dw   BABYA_P
+;BABALITY3
+;	DW BABALITY3_IMG-base_anims
+;	DH 29, 29, 0, 0
+;	dw   BABYB_P
+;BABALITY4
+;	DW BABALITY4_IMG-base_anims
+;	DH 27, 29, 0, 0
+;	dw   BABYA_P
+;BABALITY5
+;	DW BABALITY5_IMG-base_anims
+;	DH 28, 29, 0, 0
+;	dw   BABYL_P
+;BABALITY6
+;	DW BABALITY6_IMG-base_anims
+;	DH 30, 30, 0, 0
+;	dw   BABYI_P
+;BABALITY7
+;	DW BABALITY7_IMG-base_anims
+;	DH 32, 29, 0, 0
+;	dw   BABYT_P
+;BABALITY8
+;	DW BABALITY8_IMG-base_anims
+;	DH 34, 29, 0, 0
+;	dw   BABYY_P
+a_ground_explode:
+	DD FLOORXPD1-base_anims
+	DD FLOORXPD3-base_anims
+	DD FLOORXPD5-base_anims
+	DD FLOORXPD7-base_anims
+	DD FLOORXPD9-base_anims
+	DD FLOORXPD11-base_anims
+	DD FLOORXPD13-base_anims
+	DD FLOORXPD15-base_anims
+	DD FLOORXPD17-base_anims
+	DD FLOORXPD19-base_anims
+	DD FLOORXPD20-base_anims
+	DD FLOORXPD21-base_anims
+	DD 0
+FLOORXPD1:
+	DD FLOORXPD1_SUB-base_anims, 0
+FLOORXPD1_SUB:
+	DD FLOORXPD1_IMG-base_anims
+	DW 68, 69, 33, 66
+	DD _FXFIRE_P
+FLOORXPD3:
+	DD FLOORXPD3_SUB-base_anims, 0
+FLOORXPD3_SUB:
+	DD FLOORXPD3_IMG-base_anims
+	DW 75, 79, 35, 76
+FLOORXPD5:
+	DD FLOORXPD5_SUB-base_anims, 0
+FLOORXPD5_SUB:
+	DD FLOORXPD5_IMG-base_anims
+	DW 75, 92, 35, 89
+FLOORXPD7:
+	DD FLOORXPD7_SUB-base_anims, 0
+FLOORXPD7_SUB:
+	DD FLOORXPD7_IMG-base_anims
+	DW 79, 104, 37, 102
+FLOORXPD9:
+	DD FLOORXPD9_SUB-base_anims, 0
+FLOORXPD9_SUB:
+	DD FLOORXPD9_IMG-base_anims
+	DW 84, 114, 37, 112
+FLOORXPD11:
+	DD FLOORXPD11_SUB-base_anims, 0
+FLOORXPD11_SUB:
+	DD FLOORXPD11_IMG-base_anims
+	DW 89, 121, 40, 119
+FLOORXPD13:
+	DD FLOORXPD13_SUB-base_anims, 0
+FLOORXPD13_SUB:
+	DD FLOORXPD13_IMG-base_anims
+	DW 90, 124, 40, 122
+FLOORXPD15:
+	DD FLOORXPD15_SUB-base_anims, 0
+FLOORXPD15_SUB:
+	DD FLOORXPD15_IMG-base_anims
+	DW 91, 126, 39, 123
+FLOORXPD17:
+	DD FLOORXPD17_SUB-base_anims, 0
+FLOORXPD17_SUB:
+	DD FLOORXPD17_IMG-base_anims
+	DW 91, 105, 40, 102
+FLOORXPD19:
+	DD FLOORXPD19_SUB-base_anims, 0
+FLOORXPD19_SUB:
+	DD FLOORXPD19_IMG-base_anims
+	DW 42, 39, 22, 37
+FLOORXPD20:
+	DD FLOORXPD20_SUB-base_anims, 0
+FLOORXPD20_SUB:
+	DD FLOORXPD20_IMG-base_anims
+	DW 41, 28, 21, 25
+FLOORXPD21:
+	DD FLOORXPD21_SUB-base_anims, 0
+FLOORXPD21_SUB:
+	DD FLOORXPD21_IMG-base_anims
+	DW 24, 17, 7, 15

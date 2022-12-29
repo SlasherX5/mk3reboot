@@ -1,0 +1,120 @@
+_jax2_panitab1:
+	DD a__jax2_stance-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_dummy-_jax2_panitab1
+	DD a__jax2_victory-_jax2_panitab1
+a__jax2_dummy:
+a__jax2_stance:
+	DD JX2STANCE1-_jax2_panitab1
+	DD JX2STANCE2-_jax2_panitab1
+	DD JX2STANCE3-_jax2_panitab1
+	DD JX2STANCE4-_jax2_panitab1
+	DD JX2STANCE5-_jax2_panitab1
+	DD JX2STANCE6-_jax2_panitab1
+	DD JX2STANCE7-_jax2_panitab1
+	DD ani_jump
+	DD a__jax2_stance-_jax2_panitab1
+a__jax2_victory:
+	DD JX2VICTORY1-_jax2_panitab1
+	DD JX2VICTORY2-_jax2_panitab1
+	DD JX2VICTORY3-_jax2_panitab1
+	DD JX2VICTORY4-_jax2_panitab1
+	DD JX2VICTORY5-_jax2_panitab1
+	DD JX2VICTORY6-_jax2_panitab1
+	DD JX2VICTORY7-_jax2_panitab1
+	DD 0
+JX2STANCE1:
+	DD JX2STANCE1_SUB-_jax2_panitab1, 0
+JX2STANCE1_SUB:
+	DD JX2STANCE1_IMG-_jax2_panitab1
+	DW 60, 114, 28, -10
+JX2STANCE2:
+	DD JX2STANCE2_SUB-_jax2_panitab1, 0
+JX2STANCE2_SUB:
+	DD JX2STANCE2_IMG-_jax2_panitab1
+	DW 58, 114, 28, -10
+JX2STANCE3:
+	DD JX2STANCE3_SUB-_jax2_panitab1, 0
+JX2STANCE3_SUB:
+	DD JX2STANCE3_IMG-_jax2_panitab1
+	DW 58, 114, 28, -10
+JX2STANCE4:
+	DD JX2STANCE4_SUB-_jax2_panitab1, 0
+JX2STANCE4_SUB:
+	DD JX2STANCE4_IMG-_jax2_panitab1
+	DW 58, 114, 28, -10
+JX2STANCE5:
+	DD JX2STANCE5_SUB-_jax2_panitab1, 0
+JX2STANCE5_SUB:
+	DD JX2STANCE5_IMG-_jax2_panitab1
+	DW 62, 114, 28, -10
+JX2STANCE6:
+	DD JX2STANCE6_SUB-_jax2_panitab1, 0
+JX2STANCE6_SUB:
+	DD JX2STANCE6_IMG-_jax2_panitab1
+	DW 62, 114, 28, -10
+JX2STANCE7:
+	DD JX2STANCE7_SUB-_jax2_panitab1, 0
+JX2STANCE7_SUB:
+	DD JX2STANCE7_IMG-_jax2_panitab1
+	DW 62, 114, 28, -10
+JX2VICTORY1:
+	DD JX2VICTORY1_SUB-_jax2_panitab1, 0
+JX2VICTORY1_SUB:
+	DD JX2VICTORY1_IMG-_jax2_panitab1
+	DW 77, 123, 19, -15
+JX2VICTORY2:
+	DD JX2VICTORY2_SUB-_jax2_panitab1, 0
+JX2VICTORY2_SUB:
+	DD JX2VICTORY2_IMG-_jax2_panitab1
+	DW 82, 122, 15, -10
+JX2VICTORY3:
+	DD JX2VICTORY3_SUB-_jax2_panitab1, 0
+JX2VICTORY3_SUB:
+	DD JX2VICTORY3_IMG-_jax2_panitab1
+	DW 73, 121, 22, -8
+JX2VICTORY4:
+	DD JX2VICTORY4_SUB-_jax2_panitab1, 0
+JX2VICTORY4_SUB:
+	DD JX2VICTORY4_IMG-_jax2_panitab1
+	DW 49, 120, 45, -7
+JX2VICTORY5:
+	DD JX2VICTORY5_SUB-_jax2_panitab1, 0
+JX2VICTORY5_SUB:
+	DD JX2VICTORY5_IMG-_jax2_panitab1
+	DW 45, 121, 36, 4
+JX2VICTORY6:
+	DD JX2VICTORY6_SUB-_jax2_panitab1, 0
+JX2VICTORY6_SUB:
+	DD JX2VICTORY6_IMG-_jax2_panitab1
+	DW 79, 122, 23, 11
+JX2VICTORY7:
+	DD JX2VICTORY7_SUB-_jax2_panitab1, 0
+JX2VICTORY7_SUB:
+	DD JX2VICTORY7_IMG-_jax2_panitab1
+	DW 97, 122, 25, 0
+JX2VICTORY8:
+	DD JX2VICTORY8_SUB-_jax2_panitab1, 0
+JX2VICTORY8_SUB:
+	DD JX2VICTORY8_IMG-_jax2_panitab1
+	DW 97, 122, 19, 17
+JX2VICTORY9:
+	DD JX2VICTORY9_SUB-_jax2_panitab1, 0
+JX2VICTORY9_SUB:
+	DD JX2VICTORY9_IMG-_jax2_panitab1
+	DW 79, 122, 25, 12
+JX2VICTORY10:
+	DD JX2VICTORY10_SUB-_jax2_panitab1, 0
+JX2VICTORY10_SUB:
+	DD JX2VICTORY10_IMG-_jax2_panitab1
+	DW 79, 122, 24, 13

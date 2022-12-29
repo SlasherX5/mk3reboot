@@ -1,0 +1,52 @@
+a_skull:
+	DD SKULL01-base_anims
+	DD SKULL02-base_anims
+	DD SKULL03-base_anims
+	DD SKULL04-base_anims
+	DD SKULL05-base_anims
+	DD SKULL06-base_anims
+	DD SKULL07-base_anims
+	DD SKULL08-base_anims
+	DD SKULL09-base_anims
+	DD SKULL10-base_anims
+	DD SKULL11-base_anims
+	DD SKULL12-base_anims
+	DD ani_jump
+	DD a_skull-base_anims
+SKULL01:
+	DD SKULL01_IMG-base_anims
+	DW 15, 14, 8, 8
+	DD   _BODY_P
+SKULL02:
+	DD SKULL02_IMG-base_anims
+	DW 17, 14, 9, 8
+SKULL03:
+	DD SKULL03_IMG-base_anims
+	DW 16, 14, 8, 7
+SKULL04:
+	DD SKULL04_IMG-base_anims
+	DW 14, 15, 6, 8
+SKULL05:
+	DD SKULL05_IMG-base_anims
+	DW 14, 17, 6, 9
+SKULL06:
+	DD SKULL06_IMG-base_anims
+	DW 15, 16, 8, 8
+SKULL07:
+	DD SKULL07_IMG-base_anims
+	DW 15, 13, 9, 4
+SKULL08:
+	DD SKULL08_IMG-base_anims
+	DW 17, 14, 9, 5
+SKULL09:
+	DD SKULL09_IMG-base_anims
+	DW 16, 14, 9, 7
+SKULL10:
+	DD SKULL10_IMG-base_anims
+	DW 14, 15, 9, 7
+SKULL11:
+	DD SKULL11_IMG-base_anims
+	DW 14, 17, 9, 8
+SKULL12:
+	DD SKULL12_IMG-base_anims
+	DW 15, 16, 8, 8

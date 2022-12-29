@@ -1,0 +1,189 @@
+sg_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+sg_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD a_rip_flesh-sg_anitab1
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD ochar_ripped_anis-base_anims
+	DD 0
+	DD ochar_reached-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0				; 30
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_projectile:
+a_dummy:
+a_rip_flesh:
+	DD SGRIPFLESH1-sg_anitab1
+	DD SGRIPFLESH2-sg_anitab1
+	DD SGRIPFLESH3-sg_anitab1
+	DD SGRIPFLESH4-sg_anitab1
+	DD SGRIPFLESH5-sg_anitab1
+	DD 0
+	DD SGRIPFLESH6-sg_anitab1
+	DD SGRIPFLESH7-sg_anitab1
+	DD SGRIPFLESH8-sg_anitab1
+	DD 0
+;SHBODYSLAM3
+;	dw	SHBODYSLAM3_SUB-sg_anitab1
+;SHBODYSLAM3_SUB
+;	DW SHBODYSLAM3_IMG-sg_anitab1
+;	DH 82, 112, 20, -17
+;SHBODYSLAM2
+;	dw	SHBODYSLAM2_SUB-sg_anitab1
+;SHBODYSLAM2_SUB
+;	DW SHBODYSLAM2_IMG-sg_anitab1
+;	DH 78, 121, 22, -8
+;SHBODYSLAM1
+;	dw	SHBODYSLAM1_SUB-sg_anitab1
+;SHBODYSLAM1_SUB
+;	DW SHBODYSLAM1_IMG-sg_anitab1
+;	DH 69, 122, 20, -7
+SGRIPFLESH1:
+	DD SGRIPFLESH1_SUB-sg_anitab1, 0
+SGRIPFLESH1_SUB:
+	DD SGRIPFLESH1_IMG-sg_anitab1
+	DW 54, 126, 37, -2
+SGRIPFLESH2:
+	DD SGRIPFLESH2_SUB-sg_anitab1, 0
+SGRIPFLESH2_SUB:
+	DD SGRIPFLESH2_IMG-sg_anitab1
+	DW 62, 124, 45, -3
+SGRIPFLESH3:
+	DD SGRIPFLESH3_SUB-sg_anitab1, 0
+SGRIPFLESH3_SUB:
+	DD SGRIPFLESH3_IMG-sg_anitab1
+	DW 60, 128, 36, 0
+SGRIPFLESH4:
+	DD SGRIPFLESH4_SUB-sg_anitab1, 0
+SGRIPFLESH4_SUB:
+	DD SGRIPFLESH4_IMG-sg_anitab1
+	DW 79, 121, 37, -7
+SGRIPFLESH5:
+	DD SGRIPFLESH5_SUB-sg_anitab1, 0
+SGRIPFLESH5_SUB:
+	DD SGRIPFLESH5_IMG-sg_anitab1
+	DW 91, 115, 37, -13
+SGRIPFLESH6:
+	DD SGRIPFLESH6_SUB-sg_anitab1, 0
+SGRIPFLESH6_SUB:
+	DD SGRIPFLESH6_IMG-sg_anitab1
+	DW 95, 97, 37, -30
+SGRIPFLESH7:
+	DD SGRIPFLESH7_SUB-sg_anitab1, 0
+SGRIPFLESH7_SUB:
+	DD SGRIPFLESH7_IMG-sg_anitab1
+	DW 92, 85, 35, -42
+SGRIPFLESH8:
+	DD SGRIPFLESH8_SUB-sg_anitab1, 0
+SGRIPFLESH8_SUB:
+	DD SGRIPFLESH8_IMG-sg_anitab1
+	DW 82, 75, 34, -54

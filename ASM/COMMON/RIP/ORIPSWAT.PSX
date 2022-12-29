@@ -1,0 +1,88 @@
+ochar_ripped_anis:
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_normal_skel-base_anims
+	DD 0
+a_swat_rip:
+	DD OBRIP1-base_anims
+	DD OBRIP2-base_anims
+	DD OBRIP3-base_anims
+	DD OBRIP4-base_anims
+	DD OBRIP5-base_anims
+	DD OBRIP6-base_anims
+	DD OBRIP7-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+OBRIP1:
+	DD OBRIP1_SUB-base_anims, 0
+OBRIP1_SUB:
+	DD OBRIP1_IMG-base_anims
+	DW 51, 104, 24, -16
+	DD   _OBFLA_P
+OBRIP2:
+	DD OBRIP2_SUB-base_anims, 0
+OBRIP2_SUB:
+	DD OBRIP2_IMG-base_anims
+	DW 65, 104, 38, -16
+OBRIP3:
+	DD OBRIP3_SUB-base_anims, 0
+OBRIP3_SUB:
+	DD OBRIP3_IMG-base_anims
+	DW 104, 104, 77, -16
+OBRIP4:
+	DD OBRIP4_SUB-base_anims, 0
+OBRIP4_SUB:
+	DD OBRIP4_IMG-base_anims
+	DW 143, 104, 125, -16
+	DD   _OBFLB_P
+OBRIP5:
+	DD OBRIP5_SUB-base_anims, 0
+OBRIP5_SUB:
+	DD OBRIP5_IMG-base_anims
+	DW 156, 103, 142, -16
+OBRIP6:
+	DD OBRIP6_SUB-base_anims, 0
+OBRIP6_SUB:
+	DD OBRIP6_IMG-base_anims
+	DW 158, 95, 146, -16
+OBRIP7:
+	DD OBRIP7_SUB-base_anims, 0
+OBRIP7_SUB:
+	DD OBRIP7_IMG-base_anims
+	DW 94, 48, 146, -16

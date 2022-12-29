@@ -1,0 +1,191 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)lia\lia.bin \
+	$(EXE)lia\liaa.bin \
+	$(EXE)lia\liab.bin \
+	$(EXE)lia\liaf1.bin \
+	$(EXE)lia\liafin.bin \
+	$(EXE)lia\liafjx.bin \
+	$(EXE)lia\liafkl.bin \
+	$(EXE)lia\liafkn.bin \
+	$(EXE)lia\liafli.bin \
+	$(EXE)lia\liaflk.bin \
+	$(EXE)lia\liafrb.bin \
+	$(EXE)lia\liafsg.bin \
+	$(EXE)lia\liafsn.bin \
+	$(EXE)lia\liafst.bin \
+	$(EXE)lia\liafsw.bin \
+	$(EXE)lia\liafsz.bin \
+	$(EXE)lia\liafts.bin \
+	$(EXE)lia\lias.bin \
+	 .SYMBOLIC
+
+# MAIN GAME	PLAY
+
+lia.obj: lia.asm $(OVLARTI) \
+	..\chars\lia\mklia.psx \
+	..\chars\lia\mklia.psi \
+	..\chars\lia\liab.psi
+
+
+# FRIENDSHIP & BABALITY
+
+lias.obj: lias.asm $(OVLARTI) \
+	..\chars\lia\mklias.psx \
+	..\chars\lia\mklias.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+# BABALITY
+
+liab.obj: liab.asm $(OVLARTI) \
+	..\chars\lia\mkliab.psx \
+	..\common\baby\babylia.psx \
+	..\common\baby\babylia.psi \
+	..\common\baby\babyxpld.psi
+
+# ANIMALITY
+
+liaa.obj: liaa.asm $(OVLARTI) \
+	..\chars\lia\mkliaa.psx \
+	..\chars\lia\mkliaa.psi \
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+# FATALITIES
+
+liafsn.obj: liafsn.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oripsn.psx	\
+	..\common\rip\oripsn.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafkn.obj: liafkn.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oripkn.psx	\
+	..\common\rip\oripkn.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafsz.obj: liafsz.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oripsz.psx	\
+	..\common\rip\oripsz.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafsw.obj: liafsw.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oripswat.psx	\
+	..\common\rip\oripswat.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafin.obj: liafin.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oripind.psx	\
+	..\common\rip\oripind.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafjx.obj: liafjx.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oripjax.psx	\
+	..\common\rip\oripjax.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liaflk.obj: liaflk.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oriplk.psx	\
+	..\common\rip\oriplk.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafrb.obj: liafrb.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oriprobo.psx	\
+	..\common\rip\oriprobo.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafkl.obj: liafkl.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oriplao.psx	\
+	..\common\rip\oriplao.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafli.obj: liafli.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oriplia.psx	\
+	..\common\rip\oriplia.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafsg.obj: liafsg.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oripsg.psx	\
+	..\common\rip\oripsg.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafts.obj: liafts.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oriptusk.psx	\
+	..\common\rip\oriptusk.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+liafst.obj: liafst.asm $(OVLARTI) \
+	..\chars\lia\mkliaf.psx \
+	..\chars\lia\mkliaf.psi \
+	..\common\rip\oripst.psx	\
+	..\common\rip\oripst.psi	\
+	..\common\rip\oripskel.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+liaf1.obj: liaf1.asm $(OVLARTI) \
+	..\chars\lia\mkliaf1.psx \
+	..\chars\lia\mkliaf1.psi \
+	..\common\common\arm2.psx \
+	..\common\common\arm2.psi \
+	..\common\common\leg.psx	\
+	..\common\common\leg.psi	\
+	..\common\common\bone.psx \
+	..\common\common\bone.psi \
+	..\common\common\pork.psx \
+	..\common\common\pork.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+

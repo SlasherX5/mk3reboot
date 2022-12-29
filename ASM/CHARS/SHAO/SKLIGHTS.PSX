@@ -1,0 +1,140 @@
+a_deathg1:
+	DD TOPBEAM1-sk_anitab1
+	DD TOPBEAM2-sk_anitab1
+	DD 0
+j_deathg1:
+	DD TOPBEAM1-sk_anitab1
+	DD TOPBEAM2-sk_anitab1
+	DD ani_jump,j_deathg1-sk_anitab1
+
+a_deatha1:
+	DD DEATHA1-sk_anitab1
+	DD DEATHA2-sk_anitab1
+	DD DEATHA3-sk_anitab1
+	DD DEATHA4-sk_anitab1
+	DD 0
+j_deatha1:
+	DD DEATHA5-sk_anitab1
+	DD DEATHA6-sk_anitab1
+	DD ani_jump,j_deatha1-sk_anitab1
+
+a_deathb1:
+	DD DEATHB1-sk_anitab1
+	DD DEATHB2-sk_anitab1
+	DD 0
+j_deathb1:
+	DD DEATHB1-sk_anitab1
+	DD DEATHB2-sk_anitab1
+	DD ani_jump,j_deathb1-sk_anitab1
+
+a_deathc1:
+	DD DEATHC1-sk_anitab1
+	DD 0
+j_deathc1:
+	DD DEATHC2-sk_anitab1
+	DD DEATHC3-sk_anitab1
+	DD ani_jump,j_deathc1-sk_anitab1
+
+a_deathd1:
+	DD DEATHD1-sk_anitab1
+	DD 0
+j_deathd1:
+	DD DEATHD2-sk_anitab1
+	DD DEATHD3-sk_anitab1
+	DD ani_jump,j_deathd1-sk_anitab1
+
+a_deathe1:
+	DD DEATHE1-sk_anitab1
+	DD DEATHE2-sk_anitab1
+	DD 0
+j_deathe1:
+	DD DEATHE3-sk_anitab1
+	DD DEATHE4-sk_anitab1
+	DD ani_jump,j_deathe1-sk_anitab1
+
+a_deathf1:
+	DD DEATHF1-sk_anitab1
+	DD DEATHF2-sk_anitab1
+	DD 0
+j_deathf1:
+	DD DEATHF1-sk_anitab1
+	DD DEATHF2-sk_anitab1
+	DD ani_jump,j_deathf1-sk_anitab1
+
+DEATHA1:
+	DD DEATHA1_IMG-sk_anitab1
+	DW 100, 106, -55, 81
+	DD _DEATHA1P
+DEATHA2:
+	DD DEATHA2_IMG-sk_anitab1
+	DW 84, 90, -59, 64
+DEATHA3:
+	DD DEATHA3_IMG-sk_anitab1
+	DW 83, 89, -58, 67
+DEATHA4:
+	DD DEATHA4_IMG-sk_anitab1
+	DW 77, 88, -59, 67
+DEATHA5:
+	DD DEATHA5_IMG-sk_anitab1
+	DW 83, 92, 0, 0
+	DD _DEATHA1P
+DEATHA6:
+	DD DEATHA6_IMG-sk_anitab1
+	DW 84, 92, 0, 0
+DEATHB1:
+	DD DEATHB1_IMG-sk_anitab1
+	DW 110, 5, 0, 0
+	DD _DEATHA1P
+DEATHB2:
+	DD DEATHB2_IMG-sk_anitab1
+	DW 109, 3, 0, 0
+DEATHC1:
+	DD DEATHC1_IMG-sk_anitab1
+	DW 58, 60, -37, -110
+	DD _DEATHA1P
+DEATHC2:
+	DD DEATHC2_IMG-sk_anitab1
+	DW 59, 66, 0, 0
+	DD _DEATHA1P
+DEATHC3:
+	DD DEATHC3_IMG-sk_anitab1
+	DW 60, 66, 0, 0
+DEATHD1:
+	DD DEATHD1_IMG-sk_anitab1
+	DW 100, 58, 158, -92
+	DD _DEATHA1P
+DEATHD2:
+	DD DEATHD2_IMG-sk_anitab1
+	DW 105, 60, 0, 0
+	DD _DEATHA1P
+DEATHD3:
+	DD DEATHD3_IMG-sk_anitab1
+	DW 104, 58, 0, 0
+DEATHE1:
+	DD DEATHE1_IMG-sk_anitab1
+	DW 107, 45, 166, -4
+	DD _DEATHA1P
+DEATHE2:
+	DD DEATHE2_IMG-sk_anitab1
+	DW 100, 31, 158, -19
+DEATHE3:
+	DD DEATHE3_IMG-sk_anitab1
+	DW 104, 31, 0, 0
+	DD _DEATHA1P
+DEATHE4:
+	DD DEATHE4_IMG-sk_anitab1
+	DW 104, 31, 0, 0
+DEATHF1:
+	DD DEATHF1_IMG-sk_anitab1
+	DW 57, 64, 0, 0
+	DD _DEATHA1P
+DEATHF2:
+	DD DEATHF2_IMG-sk_anitab1
+	DW 57, 64, 0, 0
+TOPBEAM1:
+	DD TOPBEAM1_IMG-sk_anitab1
+	DW 13, 46, 0, 0
+	DD _DEATHA1P
+TOPBEAM2:
+	DD TOPBEAM2_IMG-sk_anitab1
+	DW 14, 45, 0, 0

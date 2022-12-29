@@ -1,0 +1,53 @@
+a_limb:
+	DD XLIMB01-base_anims
+	DD XLIMB02-base_anims
+	DD XLIMB03-base_anims
+	DD XLIMB04-base_anims
+	DD XLIMB05-base_anims
+	DD XLIMB06-base_anims
+	DD XLIMB07-base_anims
+	DD XLIMB08-base_anims
+	DD XLIMB09-base_anims
+	DD XLIMB10-base_anims
+	DD XLIMB11-base_anims
+	DD XLIMB12-base_anims
+	DD ani_jump
+	DD a_limb-base_anims
+	DD 0
+XLIMB01:
+	DD XLIMB01_IMG-base_anims
+	DW 25, 23, 12, 9
+	DD   _BODY_P
+XLIMB02:
+	DD XLIMB02_IMG-base_anims
+	DW 31, 15, 16, 7
+XLIMB03:
+	DD XLIMB03_IMG-base_anims
+	DW 30, 9, 16, 3
+XLIMB04:
+	DD XLIMB04_IMG-base_anims
+	DW 24, 16, 14, 8
+XLIMB05:
+	DD XLIMB05_IMG-base_anims
+	DW 13, 21, 8, 10
+XLIMB06:
+	DD XLIMB06_IMG-base_anims
+	DW 16, 24, 9, 11
+XLIMB07:
+	DD XLIMB07_IMG-base_anims
+	DW 26, 20, 14, 9
+XLIMB08:
+	DD XLIMB08_IMG-base_anims
+	DW 32, 13, 17, 5
+XLIMB09:
+	DD XLIMB09_IMG-base_anims
+	DW 31, 10, 17, 4
+XLIMB10:
+	DD XLIMB10_IMG-base_anims
+	DW 25, 18, 14, 7
+XLIMB11:
+	DD XLIMB11_IMG-base_anims
+	DW 14, 24, 7, 10
+XLIMB12:
+	DD XLIMB12_IMG-base_anims
+	DW 15, 26, 8, 11

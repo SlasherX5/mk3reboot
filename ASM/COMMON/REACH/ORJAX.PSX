@@ -1,0 +1,58 @@
+ochar_reached:
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD a_reached_jax-base_anims
+	DD 0
+a_reached_jax:
+	DD ani_adjustxy
+	DW -9
+	DW 10
+	DD JXMOUTH3-base_anims
+	DD JXMOUTH4-base_anims
+	DD JXMOUTH5-base_anims
+	DD JXMOUTH6-base_anims
+	DD JXMOUTH7-base_anims
+	DD JXMOUTH8-base_anims
+	DD 0
+JXMOUTH3:
+	DD JXMOUTH3_SUB-base_anims, 0
+JXMOUTH3_SUB:
+	DD JXMOUTH3_IMG-base_anims
+	DW 54, 102, 25, -28
+JXMOUTH4:
+	DD JXMOUTH4_SUB-base_anims, 0
+JXMOUTH4_SUB:
+	DD JXMOUTH4_IMG-base_anims
+	DW 55, 103, 26, -27
+JXMOUTH5:
+	DD JXMOUTH5_SUB-base_anims, 0
+JXMOUTH5_SUB:
+	DD JXMOUTH5_IMG-base_anims
+	DW 57, 105, 28, -25
+JXMOUTH6:
+	DD JXMOUTH6_SUB-base_anims, 0
+JXMOUTH6_SUB:
+	DD JXMOUTH6_IMG-base_anims
+	DW 78, 66, 46, -63
+JXMOUTH7:
+	DD JXMOUTH7_SUB-base_anims, 0
+JXMOUTH7_SUB:
+	DD JXMOUTH7_IMG-base_anims
+	DW 98, 30, 59, -100
+JXMOUTH8:
+	DD JXMOUTH8_SUB-base_anims, 0
+JXMOUTH8_SUB:
+	DD JXMOUTH8_IMG-base_anims
+	DW 87, 38, 50, -92

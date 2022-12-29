@@ -1,0 +1,263 @@
+lia_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+lia_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+	
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_lia_friend-lia_anitab1
+	DD a_football-lia_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_lia_friend:
+	DD ani_sladd
+	DD FBALL1-lia_anitab1
+	DD ani_slani_sleep
+	DD FBALL1-lia_anitab1
+	DD ani_slani_sleep
+	DD FBALL2-lia_anitab1
+	DD ani_slani_sleep
+	DD FBALL3-lia_anitab1
+	DD ani_slani_sleep
+	DD FBALL4-lia_anitab1
+	DD ani_slani_sleep
+	DD FBALL5-lia_anitab1
+	DD ani_slani_sleep
+	DD FBALL6-lia_anitab1
+	DD ani_slani_sleep
+	DD FBALL7-lia_anitab1
+	DD LIFRIENDSHIP1-lia_anitab1
+	DD LIFRIENDSHIP1-lia_anitab1
+	DD LIFRIENDSHIP2-lia_anitab1
+	DD 0
+	DD LIFRIENDSHIP3-lia_anitab1
+	DD LIFRIENDSHIP4-lia_anitab1
+	DD LIFRIENDSHIP5-lia_anitab1
+	DD LIFRIENDSHIP6-lia_anitab1
+	DD LIFRIENDSHIP7-lia_anitab1
+	DD LIFRIENDSHIP8-lia_anitab1
+	DD 0
+a_football:
+	DD FBALL1-lia_anitab1
+	DD FBALL2-lia_anitab1
+	DD FBALL3-lia_anitab1
+	DD FBALL4-lia_anitab1
+	DD FBALL5-lia_anitab1
+	DD FBALL6-lia_anitab1
+	DD FBALL7-lia_anitab1
+	DD 0
+j_footb:
+	DD FBALL8-lia_anitab1
+	DD FBALL9-lia_anitab1
+	DD FBALL10-lia_anitab1
+	DD FBALL11-lia_anitab1
+	DD ani_jump
+	DD j_footb-lia_anitab1
+FBALL1:
+	DD FBALL1_SUB-lia_anitab1, 0
+FBALL1_SUB:
+	DD FBALL1_IMG-lia_anitab1
+	DW 29, 10, -38, -110
+	DD _FUTBALL2
+FBALL2:
+	DD FBALL2_SUB-lia_anitab1, 0
+FBALL2_SUB:
+	DD FBALL2_IMG-lia_anitab1
+	DW 18, 9, -45, -110
+FBALL3:
+	DD FBALL3_SUB-lia_anitab1, 0
+FBALL3_SUB:
+	DD FBALL3_IMG-lia_anitab1
+	DW 17, 10, -45, -108
+FBALL4:
+	DD FBALL4_SUB-lia_anitab1, 0
+FBALL4_SUB:
+	DD FBALL4_IMG-lia_anitab1
+	DW 14, 13, -46, -105
+FBALL5:
+	DD FBALL5_SUB-lia_anitab1, 0
+FBALL5_SUB:
+	DD FBALL5_IMG-lia_anitab1
+	DW 12, 15, -48, -103
+FBALL6:
+	DD FBALL6_SUB-lia_anitab1, 0
+FBALL6_SUB:
+	DD FBALL6_IMG-lia_anitab1
+	DW 12, 18, -48, -99
+FBALL7:
+	DD FBALL7_SUB-lia_anitab1, 0
+FBALL7_SUB:
+	DD FBALL7_IMG-lia_anitab1
+	DW 12, 17, -48, -99
+LIFRIENDSHIP1:
+	DD LIFRIENDSHIP1_SUB-lia_anitab1, 0
+LIFRIENDSHIP1_SUB:
+	DD LIFRIENDSHIP1_IMG-lia_anitab1
+	DW 67, 109, 32, -8
+LIFRIENDSHIP2:
+	DD LIFRIENDSHIP2_SUB-lia_anitab1, 0
+LIFRIENDSHIP2_SUB:
+	DD LIFRIENDSHIP2_IMG-lia_anitab1
+	DW 47, 111, -4, -7
+LIFRIENDSHIP3:
+	DD LIFRIENDSHIP3_SUB-lia_anitab1, 0
+LIFRIENDSHIP3_SUB:
+	DD LIFRIENDSHIP3_IMG-lia_anitab1
+	DW 72, 105, 1, -12
+LIFRIENDSHIP4:
+	DD LIFRIENDSHIP4_SUB-lia_anitab1, 0
+LIFRIENDSHIP4_SUB:
+	DD LIFRIENDSHIP4_IMG-lia_anitab1
+	DW 63, 108, -2, -9
+LIFRIENDSHIP5:
+	DD LIFRIENDSHIP5_SUB-lia_anitab1, 0
+LIFRIENDSHIP5_SUB:
+	DD LIFRIENDSHIP5_IMG-lia_anitab1
+	DW 33, 109, -2, -8
+LIFRIENDSHIP6:
+	DD LIFRIENDSHIP6_SUB-lia_anitab1, 0
+LIFRIENDSHIP6_SUB:
+	DD LIFRIENDSHIP6_IMG-lia_anitab1
+	DW 58, 111, 11, -8
+LIFRIENDSHIP7:
+	DD LIFRIENDSHIP7_SUB-lia_anitab1, 0
+LIFRIENDSHIP7_SUB:
+	DD LIFRIENDSHIP7_IMG-lia_anitab1
+	DW 83, 111, 32, -8
+LIFRIENDSHIP8:
+	DD LIFRIENDSHIP8_SUB-lia_anitab1, 0
+LIFRIENDSHIP8_SUB:
+	DD LIFRIENDSHIP8_IMG-lia_anitab1
+	DW 54, 114, 21, -4
+FBALL8:
+	DD FBALL8_SUB-lia_anitab1, 0
+FBALL8_SUB:
+	DD FBALL8_IMG-lia_anitab1
+	DW 12, 16, -48, -99
+FBALL9:
+	DD FBALL9_SUB-lia_anitab1, 0
+FBALL9_SUB:
+	DD FBALL9_IMG-lia_anitab1
+	DW 13, 14, -48, -101
+FBALL10:
+	DD FBALL10_SUB-lia_anitab1, 0
+FBALL10_SUB:
+	DD FBALL10_IMG-lia_anitab1
+	DW 18, 12, -45, -102
+FBALL11:
+	DD FBALL11_SUB-lia_anitab1, 0
+FBALL11_SUB:
+	DD FBALL11_IMG-lia_anitab1
+	DW 13, 14, -48, -101

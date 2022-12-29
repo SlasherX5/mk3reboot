@@ -1,0 +1,131 @@
+_jax_panitab1:
+	DD a__jax_stance-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_dummy-_jax_panitab1
+	DD a__jax_victory-_jax_panitab1
+a__jax_dummy:
+a__jax_stance:
+	DD JXSTANCE1-_jax_panitab1
+	DD JXSTANCE2-_jax_panitab1
+	DD JXSTANCE3-_jax_panitab1
+	DD JXSTANCE4-_jax_panitab1
+	DD JXSTANCE5-_jax_panitab1
+	DD JXSTANCE6-_jax_panitab1
+	DD JXSTANCE7-_jax_panitab1
+	DD JXSTANCE8-_jax_panitab1
+	DD ani_jump
+	DD a__jax_stance-_jax_panitab1
+a__jax_victory:
+	DD JXVICTORY1-_jax_panitab1
+	DD JXVICTORY2-_jax_panitab1
+	DD JXVICTORY3-_jax_panitab1
+	DD JXVICTORY4-_jax_panitab1
+	DD JXVICTORY5-_jax_panitab1	
+	DD JXVICTORY5-_jax_panitab1	
+	DD JXVICTORY5-_jax_panitab1	
+	DD JXVICTORY6-_jax_panitab1
+	DD JXVICTORY7-_jax_panitab1
+	DD JXVICTORY8-_jax_panitab1
+	DD JXVICTORY9-_jax_panitab1
+	DD JXVICTORY10-_jax_panitab1
+	DD 0
+JXSTANCE1:
+	DD JXSTANCE1_SUB-_jax_panitab1, 0
+JXSTANCE1_SUB:
+	DD JXSTANCE1_IMG-_jax_panitab1
+	DW 60, 114, 28, -16
+JXSTANCE2:
+	DD JXSTANCE2_SUB-_jax_panitab1, 0
+JXSTANCE2_SUB:
+	DD JXSTANCE2_IMG-_jax_panitab1
+	DW 58, 114, 27, -16
+JXSTANCE3:
+	DD JXSTANCE3_SUB-_jax_panitab1, 0
+JXSTANCE3_SUB:
+	DD JXSTANCE3_IMG-_jax_panitab1
+	DW 58, 114, 25, -16
+JXSTANCE4:
+	DD JXSTANCE4_SUB-_jax_panitab1, 0
+JXSTANCE4_SUB:
+	DD JXSTANCE4_IMG-_jax_panitab1
+	DW 58, 114, 26, -17
+JXSTANCE5:
+	DD JXSTANCE5_SUB-_jax_panitab1, 0
+JXSTANCE5_SUB:
+	DD JXSTANCE5_IMG-_jax_panitab1
+	DW 62, 114, 28, -17
+JXSTANCE6:
+	DD JXSTANCE6_SUB-_jax_panitab1, 0
+JXSTANCE6_SUB:
+	DD JXSTANCE6_IMG-_jax_panitab1
+	DW 62, 114, 30, -17
+JXSTANCE7:
+	DD JXSTANCE7_SUB-_jax_panitab1, 0
+JXSTANCE7_SUB:
+	DD JXSTANCE7_IMG-_jax_panitab1
+	DW 63, 113, 31, -16
+JXSTANCE8:
+	DD JXSTANCE8_SUB-_jax_panitab1, 0
+JXSTANCE8_SUB:
+	DD JXSTANCE8_IMG-_jax_panitab1
+	DW 62, 114, 31, -17
+JXVICTORY1:
+	DD JXVICTORY1_SUB-_jax_panitab1, 0
+JXVICTORY1_SUB:
+	DD JXVICTORY1_IMG-_jax_panitab1
+	DW 77, 123, 33, -7
+JXVICTORY2:
+	DD JXVICTORY2_SUB-_jax_panitab1, 0
+JXVICTORY2_SUB:
+	DD JXVICTORY2_IMG-_jax_panitab1
+	DW 82, 122, 34, -8
+JXVICTORY3:
+	DD JXVICTORY3_SUB-_jax_panitab1, 0
+JXVICTORY3_SUB:
+	DD JXVICTORY3_IMG-_jax_panitab1
+	DW 73, 121, 31, -9
+JXVICTORY4:
+	DD JXVICTORY4_SUB-_jax_panitab1, 0
+JXVICTORY4_SUB:
+	DD JXVICTORY4_IMG-_jax_panitab1
+	DW 49, 120, 20, -10
+JXVICTORY5:
+	DD JXVICTORY5_SUB-_jax_panitab1, 0
+JXVICTORY5_SUB:
+	DD JXVICTORY5_IMG-_jax_panitab1
+	DW 45, 121, 16, -8
+JXVICTORY6:
+	DD JXVICTORY6_SUB-_jax_panitab1, 0
+JXVICTORY6_SUB:
+	DD JXVICTORY6_IMG-_jax_panitab1
+	DW 79, 122, 35, -7
+JXVICTORY7:
+	DD JXVICTORY7_SUB-_jax_panitab1, 0
+JXVICTORY7_SUB:
+	DD JXVICTORY7_IMG-_jax_panitab1
+	DW 97, 122, 46, -7
+JXVICTORY8:
+	DD JXVICTORY8_SUB-_jax_panitab1, 0
+JXVICTORY8_SUB:
+	DD JXVICTORY8_IMG-_jax_panitab1
+	DW 68, 134, 31, 5
+JXVICTORY9:
+	DD JXVICTORY9_SUB-_jax_panitab1, 0
+JXVICTORY9_SUB:
+	DD JXVICTORY9_IMG-_jax_panitab1
+	DW 54, 135, 23, 6
+JXVICTORY10:
+	DD JXVICTORY10_SUB-_jax_panitab1, 0
+JXVICTORY10_SUB:
+	DD JXVICTORY10_IMG-_jax_panitab1
+	DW 58, 127, 25, -2

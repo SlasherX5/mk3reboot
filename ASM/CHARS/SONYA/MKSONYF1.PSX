@@ -1,0 +1,376 @@
+sonya_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+sonya_anitab2:
+	DD 0
+	DD 0
+	DD a_death_kiss-sonya_anitab1
+	DD 0
+	DD a_sonya_energy_ball-sonya_anitab1
+
+	DD a_gutz-sonya_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;a_sb_skeleton_burn-base_anims
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0				; 30
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD a_blood_explode-base_anims	;34
+	DD 0
+	DD a_arm2-base_anims
+	DD a_leg-base_anims
+	DD 0
+	DD a_bone-base_anims
+	DD 0
+	DD a_rib_cage-base_anims
+	DD a_skull-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_death_kiss:
+	DD SBDEATHKISS1-sonya_anitab1
+	DD SBDEATHKISS2-sonya_anitab1
+	DD SBDEATHKISS3-sonya_anitab1
+	DD SBDEATHKISS4-sonya_anitab1
+	DD SBDEATHKISS5-sonya_anitab1
+	DD SBDEATHKISS6-sonya_anitab1
+	DD SBDEATHKISS7-sonya_anitab1
+	DD SBDEATHKISS8-sonya_anitab1
+	DD SBDEATHKISS9-sonya_anitab1
+	DD SBDEATHKISS10-sonya_anitab1
+	DD SBDEATHKISS11-sonya_anitab1
+	DD 0
+	DD SPARKISS1-sonya_anitab1
+	DD SPARKISS2-sonya_anitab1
+	DD KISSORB1-sonya_anitab1
+	DD KISSORB2-sonya_anitab1
+	DD KISSORB3-sonya_anitab1
+	DD KISSORB4-sonya_anitab1
+	DD KISSORB5-sonya_anitab1
+	DD KISSORB6-sonya_anitab1
+	DD KISSORB7-sonya_anitab1
+	DD KISSORB8-sonya_anitab1
+	DD KISSORB9-sonya_anitab1
+j_orb:
+	DD KISSORB10-sonya_anitab1
+	DD KISSORB11-sonya_anitab1
+	DD KISSORB12-sonya_anitab1
+	DD KISSORB13-sonya_anitab1
+	DD KISSORB14-sonya_anitab1
+	DD KISSORB15-sonya_anitab1
+	DD KISSORB16-sonya_anitab1
+	DD ani_jump
+	DD j_orb-sonya_anitab1
+	DD 0
+a_sonya_energy_ball:
+	DD SBALL1-sonya_anitab1
+	DD SBALL2-sonya_anitab1
+	DD SBALL3-sonya_anitab1
+	DD SBALL4-sonya_anitab1
+	DD SBALL5-sonya_anitab1
+	DD SBALL6-sonya_anitab1
+	DD SBALL7-sonya_anitab1
+	DD 0
+j_sball:
+	DD SBALL8-sonya_anitab1
+	DD SBALL9-sonya_anitab1
+	DD SBALL10-sonya_anitab1
+	DD SBALL11-sonya_anitab1
+	DD ani_jump
+	DD j_sball-sonya_anitab1
+	DD 0
+	DD SBALL12-sonya_anitab1
+	DD SBALL13-sonya_anitab1
+	DD SBALL14-sonya_anitab1
+	DD 0
+	DD SBALL15-sonya_anitab1
+	DD 0
+a_gutz:
+	DD ani_swpal
+	DD SGUTZ-sonya_anitab1
+	DD 0
+SBDEATHKISS1:
+	DD SBDEATHKISS1_SUB-sonya_anitab1, 0
+SBDEATHKISS1_SUB:
+	DD SBDEATHKISS1_IMG-sonya_anitab1
+	DW 50, 107, 22, -11
+SBDEATHKISS2:
+	DD SBDEATHKISS2_SUB-sonya_anitab1, 0
+SBDEATHKISS2_SUB:
+	DD SBDEATHKISS2_IMG-sonya_anitab1
+	DW 51, 107, 22, -11
+SBDEATHKISS3:
+	DD SBDEATHKISS3_SUB-sonya_anitab1, 0
+SBDEATHKISS3_SUB:
+	DD SBDEATHKISS3_IMG-sonya_anitab1
+	DW 50, 106, 21, -12
+SBDEATHKISS4:
+	DD SBDEATHKISS4_SUB-sonya_anitab1, 0
+SBDEATHKISS4_SUB:
+	DD SBDEATHKISS4_IMG-sonya_anitab1
+	DW 49, 106, 20, -12
+SBDEATHKISS5:
+	DD SBDEATHKISS5_SUB-sonya_anitab1, 0
+SBDEATHKISS5_SUB:
+	DD SBDEATHKISS5_IMG-sonya_anitab1
+	DW 48, 106, 19, -12
+SBDEATHKISS6:
+	DD SBDEATHKISS6_SUB-sonya_anitab1, 0
+SBDEATHKISS6_SUB:
+	DD SBDEATHKISS6_IMG-sonya_anitab1
+	DW 48, 106, 19, -12
+SBDEATHKISS7:
+	DD SBDEATHKISS7_SUB-sonya_anitab1, 0
+SBDEATHKISS7_SUB:
+	DD SBDEATHKISS7_IMG-sonya_anitab1
+	DW 50, 107, 22, -11
+SBDEATHKISS8:
+	DD SBDEATHKISS8_SUB-sonya_anitab1, 0
+SBDEATHKISS8_SUB:
+	DD SBDEATHKISS8_IMG-sonya_anitab1
+	DW 52, 107, 23, -11
+SBDEATHKISS9:
+	DD SBDEATHKISS9_SUB-sonya_anitab1, 0
+SBDEATHKISS9_SUB:
+	DD SBDEATHKISS9_IMG-sonya_anitab1
+	DW 53, 107, 22, -11
+SBDEATHKISS10:
+	DD SBDEATHKISS10_SUB-sonya_anitab1, 0
+SBDEATHKISS10_SUB:
+	DD SBDEATHKISS10_IMG-sonya_anitab1
+	DW 56, 101, 22, -17
+SBDEATHKISS11:
+	DD SBDEATHKISS11_SUB-sonya_anitab1, 0
+SBDEATHKISS11_SUB:
+	DD SBDEATHKISS11_IMG-sonya_anitab1
+	DW 62, 94, 22, -25
+SPARKISS1:
+	DD SPARKISS1_IMG-sonya_anitab1
+	DW 48, 53, 14, 1
+	DD   _SPARKIS_P
+SPARKISS2:
+	DD SPARKISS2_IMG-sonya_anitab1
+	DW 48, 53, 14, 1
+KISSORB1:
+	DD KISSORB1_IMG-sonya_anitab1
+	DW 6, 5, -11, -19
+	DD   _KISSORB_P
+KISSORB2:
+	DD KISSORB2_IMG-sonya_anitab1
+	DW 10, 8, -16, -19
+KISSORB3:
+	DD KISSORB3_IMG-sonya_anitab1
+	DW 10, 9, -17, -17
+KISSORB4:
+	DD KISSORB4_IMG-sonya_anitab1
+	DW 15, 14, -15, -13
+KISSORB5:
+	DD KISSORB5_IMG-sonya_anitab1
+	DW 17, 16, -15, -11
+KISSORB6:
+	DD KISSORB6_IMG-sonya_anitab1
+	DW 18, 17, -20, -13
+KISSORB7:
+	DD KISSORB7_IMG-sonya_anitab1
+	DW 23, 21, -28, -19
+KISSORB8:
+	DD KISSORB8_IMG-sonya_anitab1
+	DW 25, 21, -26, -19
+KISSORB9:
+	DD KISSORB9_IMG-sonya_anitab1
+	DW 23, 21, -28, -19
+KISSORB10:
+	DD KISSORB10_IMG-sonya_anitab1
+	DW 23, 20, -28, -19
+KISSORB11:
+	DD KISSORB11_IMG-sonya_anitab1
+	DW 24, 20, -27, -19
+KISSORB12:
+	DD KISSORB12_IMG-sonya_anitab1
+	DW 23, 21, -28, -19
+KISSORB13:
+	DD KISSORB13_IMG-sonya_anitab1
+	DW 24, 20, -27, -19
+KISSORB14:
+	DD KISSORB14_IMG-sonya_anitab1
+	DW 24, 22, -27, -19
+KISSORB15:
+	DD KISSORB15_IMG-sonya_anitab1
+	DW 23, 20, -28, -19
+KISSORB16:
+	DD KISSORB16_IMG-sonya_anitab1
+	DW 23, 21, -28, -19
+SBALL1:
+	DD SBALL1_SUB-sonya_anitab1, 0
+SBALL1_SUB:
+	DD SBALL1_IMG-sonya_anitab1
+	DW 25, 23, -56, -39
+	DD _ENGPINK_P
+SBALL2:
+	DD SBALL2_SUB-sonya_anitab1, 0
+SBALL2_SUB:
+	DD SBALL2_IMG-sonya_anitab1
+	DW 15, 13, -69, -43
+SBALL3:
+	DD SBALL3_SUB-sonya_anitab1, 0
+SBALL3_SUB:
+	DD SBALL3_IMG-sonya_anitab1
+	DW 22, 13, -77, -43
+SBALL4:
+	DD SBALL4_SUB-sonya_anitab1, 0
+SBALL4_SUB:
+	DD SBALL4_IMG-sonya_anitab1
+	DW 52, 12, -77, -44
+SBALL5:
+	DD SBALL5_SUB-sonya_anitab1, 0
+SBALL5_SUB:
+	DD SBALL5_IMG-sonya_anitab1
+	DW 16, 14, -129, -43
+SBALL6:
+	DD SBALL6_SUB-sonya_anitab1, 0
+SBALL6_SUB:
+	DD SBALL6_IMG-sonya_anitab1
+	DW 40, 54, -117, -23
+SBALL7:
+	DD SBALL7_SUB-sonya_anitab1, 0
+SBALL7_SUB:
+	DD SBALL7_IMG-sonya_anitab1
+	DW 66, 94, -104, -3
+SBALL8:
+	DD SBALL8_SUB-sonya_anitab1, 0
+SBALL8_SUB:
+	DD SBALL8_IMG-sonya_anitab1
+	DW 91, 133, -91, 15
+SBALL9:
+	DD SBALL9_SUB-sonya_anitab1, 0
+SBALL9_SUB:
+	DD SBALL9_IMG-sonya_anitab1
+	DW 91, 134, -91, 15
+SBALL10:
+	DD SBALL10_SUB-sonya_anitab1, 0
+SBALL10_SUB:
+	DD SBALL10_IMG-sonya_anitab1
+	DW 91, 134, -91, 15
+SBALL11:
+	DD SBALL11_SUB-sonya_anitab1, 0
+SBALL11_SUB:
+	DD SBALL11_IMG-sonya_anitab1
+	DW 91, 134, -91, 15
+SBALL12:
+	DD SBALL12_SUB-sonya_anitab1, 0
+SBALL12_SUB:
+	DD SBALL12_IMG-sonya_anitab1
+	DW 91, 114, -91, -4
+SBALL13:
+	DD SBALL13_SUB-sonya_anitab1, 0
+SBALL13_SUB:
+	DD SBALL13_IMG-sonya_anitab1
+	DW 91, 89, -91, -30
+SBALL14:
+	DD SBALL14_SUB-sonya_anitab1, 0
+SBALL14_SUB:
+	DD SBALL14_IMG-sonya_anitab1
+	DW 91, 62, -91, -58
+SBALL15:
+	DD SBALL15_SUB-sonya_anitab1, 0
+SBALL15_SUB:
+	DD SBALL15_IMG-sonya_anitab1
+	DW 99, 43, -86, -82
+SGUTZ:
+	DD SGUTZ_SUB-sonya_anitab1, 0
+SGUTZ_SUB:
+	DD SGUTZ_IMG-sonya_anitab1
+	DW 70, 31, -101, -95
+	DD _GUTS_P

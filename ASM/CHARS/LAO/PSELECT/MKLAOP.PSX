@@ -1,0 +1,177 @@
+_lao_panitab1:
+	DD a__lao_stance-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_dummy-_lao_panitab1
+	DD a__lao_victory-_lao_panitab1
+a__lao_dummy:
+a__lao_stance:
+	DD KLSTANCE1-_lao_panitab1
+	DD KLSTANCE2-_lao_panitab1
+	DD KLSTANCE3-_lao_panitab1
+	DD KLSTANCE4-_lao_panitab1
+	DD KLSTANCE5-_lao_panitab1
+	DD KLSTANCE6-_lao_panitab1
+	DD KLSTANCE7-_lao_panitab1
+	DD KLSTANCE8-_lao_panitab1
+	DD KLSTANCE9-_lao_panitab1
+	DD ani_jump
+	DD a__lao_stance-_lao_panitab1
+a__lao_victory:
+	DD KLVICTORY1-_lao_panitab1
+	DD KLVICTORY2-_lao_panitab1
+	DD KLVICTORY3-_lao_panitab1
+	DD KLVICTORY4-_lao_panitab1
+	DD KLVICTORY5-_lao_panitab1
+	DD KLVICTORY6-_lao_panitab1
+	DD KLVICTORY7-_lao_panitab1
+	DD KLVICTORY8-_lao_panitab1
+	DD KLVICTORY9-_lao_panitab1
+	DD KLVICTORY10-_lao_panitab1
+	DD KLVICTORY11-_lao_panitab1
+	DD KLVICTORY12-_lao_panitab1
+	DD KLVICTORY13-_lao_panitab1
+	DD KLVICTORY14-_lao_panitab1
+	DD KLVICTORY15-_lao_panitab1
+	DD KLVICTORY17-_lao_panitab1
+	DD KLVICTORY18-_lao_panitab1
+	DD 0
+KLSTANCE1:
+	DD KLSTANCE1_SUB-_lao_panitab1, 0
+KLSTANCE1_SUB:
+	DD KLSTANCE1_IMG-_lao_panitab1
+	DW 50, 106, 21, -6
+KLSTANCE2:
+	DD KLSTANCE2_SUB-_lao_panitab1, 0
+KLSTANCE2_SUB:
+	DD KLSTANCE2_IMG-_lao_panitab1
+	DW 50, 108, 21, -4
+KLSTANCE3:
+	DD KLSTANCE3_SUB-_lao_panitab1, 0
+KLSTANCE3_SUB:
+	DD KLSTANCE3_IMG-_lao_panitab1
+	DW 48, 109, 22, -3
+KLSTANCE4:
+	DD KLSTANCE4_SUB-_lao_panitab1, 0
+KLSTANCE4_SUB:
+	DD KLSTANCE4_IMG-_lao_panitab1
+	DW 48, 110, 22, -2
+KLSTANCE5:
+	DD KLSTANCE5_SUB-_lao_panitab1, 0
+KLSTANCE5_SUB:
+	DD KLSTANCE5_IMG-_lao_panitab1
+	DW 47, 109, 21, -3
+KLSTANCE6:
+	DD KLSTANCE6_SUB-_lao_panitab1, 0
+KLSTANCE6_SUB:
+	DD KLSTANCE6_IMG-_lao_panitab1
+	DW 47, 108, 21, -4
+KLSTANCE7:
+	DD KLSTANCE7_SUB-_lao_panitab1, 0
+KLSTANCE7_SUB:
+	DD KLSTANCE7_IMG-_lao_panitab1
+	DW 47, 107, 21, -5
+KLSTANCE8:
+	DD KLSTANCE8_SUB-_lao_panitab1, 0
+KLSTANCE8_SUB:
+	DD KLSTANCE8_IMG-_lao_panitab1
+	DW 47, 106, 21, -6
+KLSTANCE9:
+	DD KLSTANCE9_SUB-_lao_panitab1, 0
+KLSTANCE9_SUB:
+	DD KLSTANCE9_IMG-_lao_panitab1
+	DW 50, 106, 21, -6
+KLVICTORY1:
+	DD KLVICTORY1_SUB-_lao_panitab1, 0
+KLVICTORY1_SUB:
+	DD KLVICTORY1_IMG-_lao_panitab1
+	DW 57, 112, 21, 0
+KLVICTORY2:
+	DD KLVICTORY2_SUB-_lao_panitab1, 0
+KLVICTORY2_SUB:
+	DD KLVICTORY2_IMG-_lao_panitab1
+	DW 39, 111, 22, -7
+KLVICTORY3:
+	DD KLVICTORY3_SUB-_lao_panitab1, 0
+KLVICTORY3_SUB:
+	DD KLVICTORY3_IMG-_lao_panitab1
+	DW 39, 107, 30, -6
+KLVICTORY4:
+	DD KLVICTORY4_SUB-_lao_panitab1, 0
+KLVICTORY4_SUB:
+	DD KLVICTORY4_IMG-_lao_panitab1
+	DW 38, 107, 32, -9
+KLVICTORY5:
+	DD KLVICTORY5_SUB-_lao_panitab1, 0
+KLVICTORY5_SUB:
+	DD KLVICTORY5_IMG-_lao_panitab1
+	DW 42, 107, 33, -16
+KLVICTORY6:
+	DD KLVICTORY6_SUB-_lao_panitab1, 0
+KLVICTORY6_SUB:
+	DD KLVICTORY6_IMG-_lao_panitab1
+	DW 34, 99, 31, -26
+KLVICTORY7:
+	DD KLVICTORY7_SUB-_lao_panitab1, 0
+KLVICTORY7_SUB:
+	DD KLVICTORY7_IMG-_lao_panitab1
+	DW 50, 99, 39, -14
+KLVICTORY8:
+	DD KLVICTORY8_SUB-_lao_panitab1, 0
+KLVICTORY8_SUB:
+	DD KLVICTORY8_IMG-_lao_panitab1
+	DW 45, 107, 34, -6
+KLVICTORY9:
+	DD KLVICTORY9_SUB-_lao_panitab1, 0
+KLVICTORY9_SUB:
+	DD KLVICTORY9_IMG-_lao_panitab1
+	DW 38, 111, 23, -3
+KLVICTORY10:
+	DD KLVICTORY10_SUB-_lao_panitab1, 0
+KLVICTORY10_SUB:
+	DD KLVICTORY10_IMG-_lao_panitab1
+	DW 41, 110, 17, -5
+KLVICTORY11:
+	DD KLVICTORY11_SUB-_lao_panitab1, 0
+KLVICTORY11_SUB:
+	DD KLVICTORY11_IMG-_lao_panitab1
+	DW 49, 109, 17, -5
+KLVICTORY12:
+	DD KLVICTORY12_SUB-_lao_panitab1, 0
+KLVICTORY12_SUB:
+	DD KLVICTORY12_IMG-_lao_panitab1
+	DW 49, 109, 17, -5
+KLVICTORY13:
+	DD KLVICTORY13_SUB-_lao_panitab1, 0
+KLVICTORY13_SUB:
+	DD KLVICTORY13_IMG-_lao_panitab1
+	DW 49, 109, 17, -5
+KLVICTORY14:
+	DD KLVICTORY14_SUB-_lao_panitab1, 0
+KLVICTORY14_SUB:
+	DD KLVICTORY14_IMG-_lao_panitab1
+	DW 49, 109, 17, -5
+KLVICTORY15:
+	DD KLVICTORY15_SUB-_lao_panitab1, 0
+KLVICTORY15_SUB:
+	DD KLVICTORY15_IMG-_lao_panitab1
+	DW 49, 109, 17, -5
+KLVICTORY17:
+	DD KLVICTORY17_SUB-_lao_panitab1, 0
+KLVICTORY17_SUB:
+	DD KLVICTORY17_IMG-_lao_panitab1
+	DW 50, 109, 18, -5
+KLVICTORY18:
+	DD KLVICTORY18_SUB-_lao_panitab1, 0
+KLVICTORY18_SUB:
+	DD KLVICTORY18_IMG-_lao_panitab1
+	DW 50, 108, 18, -6

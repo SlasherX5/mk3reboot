@@ -1,0 +1,213 @@
+ind_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+ind_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+
+	DD a_indiam_wolf-ind_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_blood_explode-base_anims
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_indiam_wolf:
+	DD WOLF1-ind_anitab1
+	DD WOLF3-ind_anitab1
+	DD WOLF4-ind_anitab1
+	DD WOLF5-ind_anitab1
+	DD WOLF6-ind_anitab1
+	DD 0
+	DD WOLF11-ind_anitab1
+	DD WOLF12-ind_anitab1
+	DD WOLF13-ind_anitab1
+	DD 0
+	DD WOLF14-ind_anitab1
+j_wolf:
+	DD WOLF15-ind_anitab1
+	DD WOLF16-ind_anitab1
+	DD WOLF18-ind_anitab1
+	DD ani_jump
+	DD j_wolf-ind_anitab1
+	DD 0
+	DD WOLF20-ind_anitab1
+	DD 0
+WOLF1:
+	DD WOLF1_SUB-ind_anitab1, 0
+WOLF1_SUB:
+	DD WOLF1_IMG-ind_anitab1
+	DW 52, 106, 21, -10
+	DD   _WOLF_P
+WOLF3:
+	DD WOLF3_SUB-ind_anitab1, 0
+WOLF3_SUB:
+	DD WOLF3_IMG-ind_anitab1
+	DW 50, 105, 20, -15
+WOLF4:
+	DD WOLF4_SUB-ind_anitab1, 0
+WOLF4_SUB:
+	DD WOLF4_IMG-ind_anitab1
+	DW 44, 94, 19, -26
+WOLF5:
+	DD WOLF5_SUB-ind_anitab1, 0
+WOLF5_SUB:
+	DD WOLF5_IMG-ind_anitab1
+	DW 49, 84, 14, -36
+WOLF6:
+	DD WOLF6_SUB-ind_anitab1, 0
+WOLF6_SUB:
+	DD WOLF6_IMG-ind_anitab1
+	DW 63, 72, 18, -51
+WOLF11:
+	DD WOLF11_SUB-ind_anitab1, 0
+WOLF11_SUB:
+	DD WOLF11_IMG-ind_anitab1
+	DW 103, 73, 40, -46
+WOLF12:
+	DD WOLF12_SUB-ind_anitab1, 0
+WOLF12_SUB:
+	DD WOLF12_IMG-ind_anitab1
+	DW 104, 69, 36, -17
+WOLF13:
+	DD WOLF13_SUB-ind_anitab1, 0
+WOLF13_SUB:
+	DD WOLF13_IMG-ind_anitab1
+	DW 78, 65, 38, -8
+WOLF14:
+	DD WOLF14_SUB-ind_anitab1, 0
+WOLF14_SUB:
+	DD WOLF14_IMG-ind_anitab1
+	DW 85, 52, 42, -36
+WOLF15:
+	DD WOLF15_SUB-ind_anitab1, 0
+WOLF15_SUB:
+	DD WOLF15_IMG-ind_anitab1
+	DW 82, 57, 34, -69
+WOLF16:
+	DD WOLF16_SUB-ind_anitab1, 0
+WOLF16_SUB:
+	DD WOLF16_IMG-ind_anitab1
+	DW 83, 55, 30, -70
+WOLF18:
+	DD WOLF18_SUB-ind_anitab1, 0
+WOLF18_SUB:
+	DD WOLF18_IMG-ind_anitab1
+	DW 76, 59, 27, -68
+WOLF20:
+	DD WOLF20_SUB-ind_anitab1, 0
+WOLF20_SUB:
+	DD WOLF20_IMG-ind_anitab1
+	DW 66, 72, 17, -53

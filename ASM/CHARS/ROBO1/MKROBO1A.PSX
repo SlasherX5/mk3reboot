@@ -1,0 +1,198 @@
+robo_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+robo_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD ochar_cutups-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+	DD a_bat-robo_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_zap:
+a_dummy:
+a_bat:
+	DD BAT1-robo_anitab1
+	DD BAT3-robo_anitab1
+	DD BAT4-robo_anitab1
+	DD BAT5-robo_anitab1
+	DD BAT6-robo_anitab1
+	DD 0
+	DD BAT7-robo_anitab1
+j_bat:
+	DD BAT8-robo_anitab1
+	DD BAT9-robo_anitab1
+	DD BAT10-robo_anitab1
+	DD BAT11-robo_anitab1
+	DD BAT12-robo_anitab1
+	DD BAT13-robo_anitab1
+	DD ani_jump
+	DD j_bat-robo_anitab1
+	DD 0
+BAT1:
+	DD BAT1_SUB-robo_anitab1, 0
+BAT1_SUB:
+	DD BAT1_IMG-robo_anitab1
+	DW 55, 113, 26, -8
+	DD   _BAT_P
+BAT3:
+	DD BAT3_SUB-robo_anitab1, 0
+BAT3_SUB:
+	DD BAT3_IMG-robo_anitab1
+	DW 83, 100, 39, -18
+BAT4:
+	DD BAT4_SUB-robo_anitab1, 0
+BAT4_SUB:
+	DD BAT4_IMG-robo_anitab1
+	DW 103, 84, 51, -14
+BAT5:
+	DD BAT5_SUB-robo_anitab1, 0
+BAT5_SUB:
+	DD BAT5_IMG-robo_anitab1
+	DW 121, 83, 61, 1
+BAT6:
+	DD BAT6_SUB-robo_anitab1, 0
+BAT6_SUB:
+	DD BAT6_IMG-robo_anitab1
+	DW 146, 101, 81, 17
+BAT7:
+	DD BAT7_SUB-robo_anitab1, 0
+BAT7_SUB:
+	DD BAT7_IMG-robo_anitab1
+	DW 177, 54, 67, -33
+BAT8:
+	DD BAT8_SUB-robo_anitab1, 0
+BAT8_SUB:
+	DD BAT8_IMG-robo_anitab1
+	DW 118, 73, 26, -34
+BAT9:
+	DD BAT9_SUB-robo_anitab1, 0
+BAT9_SUB:
+	DD BAT9_IMG-robo_anitab1
+	DW 114, 76, 29, -19
+BAT10:
+	DD BAT10_SUB-robo_anitab1, 0
+BAT10_SUB:
+	DD BAT10_IMG-robo_anitab1
+	DW 102, 82, 38, -1
+BAT11:
+	DD BAT11_SUB-robo_anitab1, 0
+BAT11_SUB:
+	DD BAT11_IMG-robo_anitab1
+	DW 146, 106, 82, 17
+BAT12:
+	DD BAT12_SUB-robo_anitab1, 0
+BAT12_SUB:
+	DD BAT12_IMG-robo_anitab1
+	DW 177, 60, 67, -33
+BAT13:
+	DD BAT13_SUB-robo_anitab1, 0
+BAT13_SUB:
+	DD BAT13_IMG-robo_anitab1
+	DW 118, 73, 25, -34

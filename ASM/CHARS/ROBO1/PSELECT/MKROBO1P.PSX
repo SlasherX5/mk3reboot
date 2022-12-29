@@ -1,0 +1,111 @@
+_robo1_panitab1:
+	DD a_r1_stance-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_dummy-_robo1_panitab1
+	DD a_r1_victory-_robo1_panitab1
+a_r1_dummy:
+a_r1_stance:
+	DD RBSTANCE1-_robo1_panitab1
+	DD RBSTANCE2-_robo1_panitab1
+	DD RBSTANCE3-_robo1_panitab1
+	DD RBSTANCE4-_robo1_panitab1
+	DD RBSTANCE5-_robo1_panitab1
+	DD RBSTANCE6-_robo1_panitab1
+	DD RBSTANCE7-_robo1_panitab1
+	DD RBSTANCE8-_robo1_panitab1
+	DD RBSTANCE9-_robo1_panitab1
+	DD ani_jump
+	DD a_r1_stance-_robo1_panitab1
+a_r1_victory:
+	DD RB1VICTORY1-_robo1_panitab1
+	DD RB1VICTORY2-_robo1_panitab1
+	DD RB1VICTORY3-_robo1_panitab1
+	DD RB1VICTORY4-_robo1_panitab1
+	DD RB1VICTORY5-_robo1_panitab1
+	DD RB1VICTORY6-_robo1_panitab1
+	DD 0
+RBSTANCE1:
+	DD RBSTANCE1_SUB-_robo1_panitab1, 0
+RBSTANCE1_SUB:
+	DD RBSTANCE1_IMG-_robo1_panitab1
+	DW 55, 113, 26, -8
+RBSTANCE2:
+	DD RBSTANCE2_SUB-_robo1_panitab1, 0
+RBSTANCE2_SUB:
+	DD RBSTANCE2_IMG-_robo1_panitab1
+	DW 53, 113, 24, -8
+RBSTANCE3:
+	DD RBSTANCE3_SUB-_robo1_panitab1, 0
+RBSTANCE3_SUB:
+	DD RBSTANCE3_IMG-_robo1_panitab1
+	DW 50, 113, 22, -8
+RBSTANCE4:
+	DD RBSTANCE4_SUB-_robo1_panitab1, 0
+RBSTANCE4_SUB:
+	DD RBSTANCE4_IMG-_robo1_panitab1
+	DW 50, 113, 20, -8
+RBSTANCE5:
+	DD RBSTANCE5_SUB-_robo1_panitab1, 0
+RBSTANCE5_SUB:
+	DD RBSTANCE5_IMG-_robo1_panitab1
+	DW 53, 113, 21, -8
+RBSTANCE6:
+	DD RBSTANCE6_SUB-_robo1_panitab1, 0
+RBSTANCE6_SUB:
+	DD RBSTANCE6_IMG-_robo1_panitab1
+	DW 54, 113, 22, -8
+RBSTANCE7:
+	DD RBSTANCE7_SUB-_robo1_panitab1, 0
+RBSTANCE7_SUB:
+	DD RBSTANCE7_IMG-_robo1_panitab1
+	DW 58, 113, 26, -8
+RBSTANCE8:
+	DD RBSTANCE8_SUB-_robo1_panitab1, 0
+RBSTANCE8_SUB:
+	DD RBSTANCE8_IMG-_robo1_panitab1
+	DW 58, 113, 27, -8
+RBSTANCE9:
+	DD RBSTANCE9_SUB-_robo1_panitab1, 0
+RBSTANCE9_SUB:
+	DD RBSTANCE9_IMG-_robo1_panitab1
+	DW 57, 113, 27, -8
+RB1VICTORY1:
+	DD RB1VICTORY1_SUB-_robo1_panitab1, 0
+RB1VICTORY1_SUB:
+	DD RB1VICTORY1_IMG-_robo1_panitab1
+	DW 62, 116, 27, -5
+RB1VICTORY2:
+	DD RB1VICTORY2_SUB-_robo1_panitab1, 0
+RB1VICTORY2_SUB:
+	DD RB1VICTORY2_IMG-_robo1_panitab1
+	DW 58, 122, 30, 1
+RB1VICTORY3:
+	DD RB1VICTORY3_SUB-_robo1_panitab1, 0
+RB1VICTORY3_SUB:
+	DD RB1VICTORY3_IMG-_robo1_panitab1
+	DW 59, 118, 34, -3
+RB1VICTORY4:
+	DD RB1VICTORY4_SUB-_robo1_panitab1, 0
+RB1VICTORY4_SUB:
+	DD RB1VICTORY4_IMG-_robo1_panitab1
+	DW 50, 116, 24, -5
+RB1VICTORY5:
+	DD RB1VICTORY5_SUB-_robo1_panitab1, 0
+RB1VICTORY5_SUB:
+	DD RB1VICTORY5_IMG-_robo1_panitab1
+	DW 48, 116, 21, -5
+RB1VICTORY6:
+	DD RB1VICTORY6_SUB-_robo1_panitab1, 0
+RB1VICTORY6_SUB:
+	DD RB1VICTORY6_IMG-_robo1_panitab1
+	DW 42, 116, 17, -5

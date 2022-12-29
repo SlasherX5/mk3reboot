@@ -1,0 +1,86 @@
+_explode_anims:
+	DD _a_puff-_explode_anims
+	DD _a_dave_explode-_explode_anims
+_a_puff:
+	DD _PUFF1-_explode_anims
+	DD PUFF2-_explode_anims
+	DD PUFF3-_explode_anims
+	DD PUFF4-_explode_anims
+	DD PUFF5-_explode_anims
+	DD 0
+_a_dave_explode:
+	DD BIGXPLOD1-_explode_anims
+	DD BIGXPLOD3-_explode_anims
+	DD BIGXPLOD5-_explode_anims
+	DD BIGXPLOD7-_explode_anims
+	DD BIGXPLOD9-_explode_anims
+	DD BIGXPLOD11-_explode_anims
+	DD BIGXPLOD13-_explode_anims
+	DD BIGXPLOD15-_explode_anims
+	DD 0
+	DD BIGXPLOD15-_explode_anims
+	DD BIGXPLOD13-_explode_anims
+	DD BIGXPLOD11-_explode_anims
+	DD BIGXPLOD9-_explode_anims
+	DD BIGXPLOD7-_explode_anims
+	DD BIGXPLOD5-_explode_anims
+	DD BIGXPLOD3-_explode_anims
+	DD BIGXPLOD1-_explode_anims
+	DD 0
+_PUFF1:
+	DD PUFF1_IMG-_explode_anims
+	DW 14, 16, 6, 8
+	DD _PUFF_P
+PUFF2:
+	DD PUFF2_IMG-_explode_anims
+	DW 16, 22, 7, 11
+PUFF3:
+	DD PUFF3_IMG-_explode_anims
+	DW 22, 27, 10, 14
+PUFF4:
+	DD PUFF4_IMG-_explode_anims
+	DW 27, 32, 13, 15
+PUFF5:
+	DD PUFF5_IMG-_explode_anims
+	DW 30, 36, 14, 18
+BIGXPLOD1:
+	DD BIGXPLOD1_SUB-_explode_anims, 0
+BIGXPLOD1_SUB:
+	DD BIGXPLOD1_IMG-_explode_anims
+	DW 54, 46, 27, 22
+	DD _XPLODZ_P
+BIGXPLOD3:
+	DD BIGXPLOD3_SUB-_explode_anims, 0
+BIGXPLOD3_SUB:
+	DD BIGXPLOD3_IMG-_explode_anims
+	DW 66, 60, 35, 29
+BIGXPLOD5:
+	DD BIGXPLOD5_SUB-_explode_anims, 0
+BIGXPLOD5_SUB:
+	DD BIGXPLOD5_IMG-_explode_anims
+	DW 72, 64, 40, 32
+BIGXPLOD7:
+	DD BIGXPLOD7_SUB-_explode_anims, 0
+BIGXPLOD7_SUB:
+	DD BIGXPLOD7_IMG-_explode_anims
+	DW 74, 59, 43, 27
+BIGXPLOD9:
+	DD BIGXPLOD9_SUB-_explode_anims, 0
+BIGXPLOD9_SUB:
+	DD BIGXPLOD9_IMG-_explode_anims
+	DW 73, 56, 40, 29
+BIGXPLOD11:
+	DD BIGXPLOD11_SUB-_explode_anims, 0
+BIGXPLOD11_SUB:
+	DD BIGXPLOD11_IMG-_explode_anims
+	DW 68, 58, 36, 30
+BIGXPLOD13:
+	DD BIGXPLOD13_SUB-_explode_anims, 0
+BIGXPLOD13_SUB:
+	DD BIGXPLOD13_IMG-_explode_anims
+	DW 62, 57, 37, 32
+BIGXPLOD15:
+	DD BIGXPLOD15_SUB-_explode_anims, 0
+BIGXPLOD15_SUB:
+	DD BIGXPLOD15_IMG-_explode_anims
+	DW 58, 45, 37, 23

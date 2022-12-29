@@ -1,0 +1,88 @@
+ochar_ripped_anis:
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD 0
+	DD a_sg_skel-base_anims
+	DD a_sg_skel-base_anims
+	DD 0
+a_sg_rip:
+	DD SGRIP1-base_anims
+	DD SGRIP2-base_anims
+	DD SGRIP3-base_anims
+	DD SGRIP4-base_anims
+	DD SGRIP5-base_anims
+	DD SGRIP6-base_anims
+	DD SGRIP7-base_anims
+	DD 0
+a_sg_skel:
+	DD SGOROSKEL1-base_anims
+	DD SGOROSKEL2-base_anims
+	DD SGOROSKEL3-base_anims
+	DD 0
+SGOROSKEL1:
+	DD SGOROSKEL1_SUB-base_anims, 0
+SGOROSKEL1_SUB:
+	DD SGOROSKEL1_IMG-base_anims
+	DW 95, 110, 75, -15
+	DD   _SKELRIP_P
+SGOROSKEL2:
+	DD SGOROSKEL2_SUB-base_anims, 0
+SGOROSKEL2_SUB:
+	DD SGOROSKEL2_IMG-base_anims
+	DW 81, 110, 61, -15
+SGOROSKEL3:
+	DD SGOROSKEL3_SUB-base_anims, 0
+SGOROSKEL3_SUB:
+	DD SGOROSKEL3_IMG-base_anims
+	DW 69, 110, 49, -15
+SGRIP1:
+	DD SGRIP1_SUB-base_anims, 0
+SGRIP1_SUB:
+	DD SGRIP1_IMG-base_anims
+	DW 80, 109, 59, -16
+	DD   _SGFLA_P
+SGRIP2:
+	DD SGRIP2_SUB-base_anims, 0
+SGRIP2_SUB:
+	DD SGRIP2_IMG-base_anims
+	DW 88, 109, 67, -16
+SGRIP3:
+	DD SGRIP3_SUB-base_anims, 0
+SGRIP3_SUB:
+	DD SGRIP3_IMG-base_anims
+	DW 110, 109, 90, -16
+SGRIP4:
+	DD SGRIP4_SUB-base_anims, 0
+SGRIP4_SUB:
+	DD SGRIP4_IMG-base_anims
+	DW 131, 109, 124, -16
+	DD   _SGFLB_P
+SGRIP5:
+	DD SGRIP5_SUB-base_anims, 0
+SGRIP5_SUB:
+	DD SGRIP5_IMG-base_anims
+	DW 139, 108, 134, -16
+SGRIP6:
+	DD SGRIP6_SUB-base_anims, 0
+SGRIP6_SUB:
+	DD SGRIP6_IMG-base_anims
+	DW 136, 102, 139, -16
+SGRIP7:
+	DD SGRIP7_SUB-base_anims, 0
+SGRIP7_SUB:
+	DD SGRIP7_IMG-base_anims
+	DW 96, 69, 139, -16

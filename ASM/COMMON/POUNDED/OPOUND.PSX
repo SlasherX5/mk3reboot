@@ -1,0 +1,95 @@
+ochar_pounded:
+	DD KNNAIL1-base_anims
+	DD SBNAIL1-base_anims
+	DD JXNAIL1-base_anims
+	DD INNAIL1-base_anims
+	DD SZNAIL1-base_anims
+	DD OBNAIL1-base_anims
+	DD LINAIL1-base_anims
+	DD RBNAIL1-base_anims
+	DD RBNAIL1-base_anims
+	DD KLNAIL1-base_anims
+	DD TRNAIL1-base_anims
+	DD SGNAIL1-base_anims
+	DD TSNAIL1-base_anims
+	DD LUNAIL1-base_anims
+	DD RBNAIL1-base_anims
+	DD 0
+KNPOUND:
+	DD KNNAIL1-base_anims
+	DD 0
+SBPOUND:
+	DD SBNAIL1-base_anims
+	DD 0
+JXPOUND:
+	DD JXNAIL1-base_anims
+	DD 0
+INPOUND:
+	DD INNAIL1-base_anims
+	DD 0
+SZPOUND:
+	DD SZNAIL1-base_anims
+	DD 0
+OBPOUND:
+	DD OBNAIL1-base_anims
+	DD 0
+LIPOUND:
+	DD LINAIL1-base_anims
+	DD 0
+RBPOUND:
+	DD RBNAIL1-base_anims
+	DD 0
+KLPOUND:
+	DD KLNAIL1-base_anims
+	DD 0
+TRPOUND:
+	DD TRNAIL1-base_anims
+	DD 0
+SGPOUND:
+	DD SGNAIL1-base_anims
+	DD 0
+TSPOUND:
+	DD TSNAIL1-base_anims
+	DD 0
+LUPOUND:
+	DD LUNAIL1-base_anims
+	DD 0
+KNNAIL1:
+	DD KNNAIL1_IMG-base_anims
+	DW 20, 120, -41, -10
+SBNAIL1:
+	DD SBNAIL1_IMG-base_anims
+	DW 18, 110, -41, -16
+JXNAIL1:
+	DD JXNAIL1_IMG-base_anims
+	DW 26, 119, -33, -7
+INNAIL1:
+	DD INNAIL1_IMG-base_anims
+	DW 23, 116, -41, -11
+SZNAIL1:
+	DD SZNAIL1_IMG-base_anims
+	DW 23, 113, -42, -13
+OBNAIL1:
+	DD OBNAIL1_IMG-base_anims
+	DW 18, 121, -40, -6
+LINAIL1:
+	DD LINAIL1_IMG-base_anims
+	DW 26, 112, -36, -11
+RBNAIL1:
+	DD RBNAIL1_IMG-base_anims
+	DW 22, 114, -41, -13
+KLNAIL1:
+	DD KLNAIL1_IMG-base_anims
+	DW 28, 118, -37, -8
+TRNAIL1:
+	DD TRNAIL1_IMG-base_anims
+	DW 29, 120, -38, -9
+SGNAIL1:
+	DD SGNAIL1_IMG-base_anims
+	DW 22, 126, -41, 1
+TSNAIL1:
+	DD TSNAIL1_IMG-base_anims
+	DW 22, 110, -39, -17
+LUNAIL1:
+	DD LUNAIL1_IMG-base_anims
+	DW 21, 116, -41, -9

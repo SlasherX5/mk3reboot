@@ -1,0 +1,172 @@
+swat_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+swat_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD ochar_half_bodies-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+	DD a_swat_dino-swat_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+a_swat_dino:
+	DD DINO1-swat_anitab1
+	DD DINO3-swat_anitab1
+	DD DINO4-swat_anitab1
+	DD DINO5-swat_anitab1
+	DD DINO6-swat_anitab1
+	DD 0
+	DD DINO9-swat_anitab1
+	DD DINO10-swat_anitab1
+	DD 0
+	DD DINO11-swat_anitab1
+	DD 0
+DINO1:
+	DD DINO1_SUB-swat_anitab1, 0
+DINO1_SUB:
+	DD DINO1_IMG-swat_anitab1
+	DW 46, 111, 13, -8
+	DD _DINO_P
+DINO3:
+	DD DINO3_SUB-swat_anitab1, 0
+DINO3_SUB:
+	DD DINO3_IMG-swat_anitab1
+	DW 82, 124, 35, 1
+DINO4:
+	DD DINO4_SUB-swat_anitab1, 0
+DINO4_SUB:
+	DD DINO4_IMG-swat_anitab1
+	DW 126, 128, 60, 5
+DINO5:
+	DD DINO5_SUB-swat_anitab1, 0
+DINO5_SUB:
+	DD DINO5_IMG-swat_anitab1
+	DW 170, 135, 77, 9
+DINO6:
+	DD DINO6_SUB-swat_anitab1, 0
+DINO6_SUB:
+	DD DINO6_IMG-swat_anitab1
+	DW 221, 143, 101, 15
+DINO9:
+	DD DINO9_SUB-swat_anitab1, 0
+DINO9_SUB:
+	DD DINO9_IMG-swat_anitab1
+	DW 214, 114, 101, -14
+DINO10:
+	DD DINO10_SUB-swat_anitab1, 0
+DINO10_SUB:
+	DD DINO10_IMG-swat_anitab1
+	DW 202, 110, 101, -18
+DINO11:
+	DD DINO11_SUB-swat_anitab1, 0
+DINO11_SUB:
+	DD DINO11_IMG-swat_anitab1
+	DW 203, 122, 101, -6

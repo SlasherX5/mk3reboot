@@ -1,0 +1,52 @@
+a_rib_cage:
+	DD CAGE01-base_anims
+	DD CAGE02-base_anims
+	DD CAGE03-base_anims
+	DD CAGE04-base_anims
+	DD CAGE05-base_anims
+	DD CAGE06-base_anims
+	DD CAGE07-base_anims
+	DD CAGE08-base_anims
+	DD CAGE09-base_anims
+	DD CAGE10-base_anims
+	DD CAGE11-base_anims
+;	DW CAGE12-base_anims
+	DD ani_jump
+	DD a_rib_cage-base_anims
+CAGE01:
+	DD CAGE01_IMG-base_anims
+	DW 21, 21, 12, 8
+	DD _CAGE_P
+CAGE02:
+	DD CAGE02_IMG-base_anims
+	DW 23, 20, 14, 7
+CAGE03:
+	DD CAGE03_IMG-base_anims
+	DW 23, 17, 14, 8
+CAGE04:
+	DD CAGE04_IMG-base_anims
+	DW 22, 20, 13, 9
+CAGE05:
+	DD CAGE05_IMG-base_anims
+	DW 19, 21, 11, 9
+CAGE06:
+	DD CAGE06_IMG-base_anims
+	DW 19, 20, 9, 11
+CAGE07:
+	DD CAGE07_IMG-base_anims
+	DW 23, 21, 11, 12
+CAGE08:
+	DD CAGE08_IMG-base_anims
+	DW 24, 19, 11, 10
+CAGE09:
+	DD CAGE09_IMG-base_anims
+	DW 22, 17, 10, 8
+CAGE10:
+	DD CAGE10_IMG-base_anims
+	DW 22, 20, 10, 10
+CAGE11:
+	DD CAGE11_IMG-base_anims
+	DW 18, 21, 9, 10
+;CAGE12
+;	DW CAGE12_IMG-base_anims
+;	DH 18, 21, 10, 9

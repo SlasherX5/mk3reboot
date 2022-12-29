@@ -1,0 +1,407 @@
+lia_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+lia_anitab2:
+	DD 0	;a_lia_scream-lia_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD a_top-lia_anitab1
+	DD 0
+
+	DD a_hair_wrap-lia_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;ochar_ripped_anis-base_anims
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD a_blood_explode-base_anims	;34
+	DD 0
+	DD a_arm2-base_anims
+	DD a_leg-base_anims
+	DD 0
+	DD a_bone-base_anims
+	DD a_pork-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_hair_wrap:
+	DD LILGHAIR1-lia_anitab1
+	DD LILGHAIR2-lia_anitab1
+	DD LILGHAIR3-lia_anitab1
+	DD LILGHAIR4-lia_anitab1
+	DD LILGHAIR5-lia_anitab1
+	DD LILGHAIR6-lia_anitab1
+	DD LILGHAIR7-lia_anitab1
+	DD LILGHAIR8-lia_anitab1
+	DD LILGHAIR9-lia_anitab1
+	DD LILGHAIR10-lia_anitab1
+	DD LILGHAIR11-lia_anitab1
+	DD LILGHAIR12-lia_anitab1
+	DD LILGHAIR13-lia_anitab1
+	DD 0
+	DD LILGHAIR14-lia_anitab1
+	DD LILGHAIR15-lia_anitab1
+	DD LILGHAIR16-lia_anitab1
+	DD LILGHAIR17-lia_anitab1
+	DD LILGHAIR18-lia_anitab1
+	DD LILGHAIR19-lia_anitab1
+	DD LILGHAIR20-lia_anitab1
+	DD 0
+;a_lia_scream
+;	DW LIMOUTHPRO1-lia_anitab1
+;	DW LIMOUTHPRO2-lia_anitab1
+;	DW LIMOUTHPRO3-lia_anitab1
+;	DW LIMOUTHPRO5-lia_anitab1
+;	DW 0
+;j_scream
+;	DW LIMOUTHPRO6-lia_anitab1
+;	DW LIMOUTHPRO7-lia_anitab1
+;	DW LIMOUTHPRO8-lia_anitab1
+;	DW LIMOUTHPRO9-lia_anitab1
+;	DW LIMOUTHPRO10-lia_anitab1
+;	DW LIMOUTHPRO11-lia_anitab1
+;	DW LIMOUTHPRO12-lia_anitab1
+;	DW LIMOUTHPRO5-lia_anitab1
+;	DW ani_jump
+;	DW j_scream-lia_anitab1
+;	DW 0
+;	DW LIMOUTHPRO3-lia_anitab1
+;	DW LIMOUTHPRO2-lia_anitab1
+;	DW LIMOUTHPRO1-lia_anitab1
+;	DW 0
+a_top:
+	DD ani_swpal
+	DD SPINNER1-lia_anitab1
+	DD SPINNER2-lia_anitab1
+	DD SPINNER3-lia_anitab1
+	DD SPINNER4-lia_anitab1
+	DD SPINNER5-lia_anitab1
+	DD SPINNER6-lia_anitab1
+	DD ani_jump
+	DD a_top-lia_anitab1
+	DD 0
+	DD TOPGONE1-lia_anitab1
+	DD TOPGONE2-lia_anitab1
+	DD TOPGONE3-lia_anitab1
+	DD TOPGONE4-lia_anitab1
+	DD TOPGONE5-lia_anitab1
+	DD TOPGONE6-lia_anitab1
+	DD TOPGONE7-lia_anitab1
+	DD 0
+;LIMOUTHPRO1
+;	DW LIMOUTHPRO1_SUB-lia_anitab1, 0
+;LIMOUTHPRO1_SUB
+;	DW LIMOUTHPRO1_IMG-lia_anitab1
+;	DH 48, 109, 22, -8
+;LIMOUTHPRO2
+;	DW LIMOUTHPRO2_SUB-lia_anitab1, 0
+;LIMOUTHPRO2_SUB
+;	DW LIMOUTHPRO2_IMG-lia_anitab1
+;	DH 66, 107, 22, -9
+;LIMOUTHPRO3
+;	DW LIMOUTHPRO3_SUB-lia_anitab1, 0
+;LIMOUTHPRO3_SUB
+;	DW LIMOUTHPRO3_IMG-lia_anitab1
+;	DH 63, 96, 24, -20
+;LIMOUTHPRO5
+;	DW LIMOUTHPRO5_SUB-lia_anitab1, 0
+;LIMOUTHPRO5_SUB
+;	DW LIMOUTHPRO5_IMG-lia_anitab1
+;	DH 61, 89, 24, -27
+;LIMOUTHPRO6
+;	DW LIMOUTHPRO6_SUB-lia_anitab1, 0
+;LIMOUTHPRO6_SUB
+;	DW LIMOUTHPRO6_IMG-lia_anitab1
+;	DH 61, 89, 24, -27
+;LIMOUTHPRO7
+;	DW LIMOUTHPRO7_SUB-lia_anitab1, 0
+;LIMOUTHPRO7_SUB
+;	DW LIMOUTHPRO7_IMG-lia_anitab1
+;	DH 61, 89, 24, -27
+;LIMOUTHPRO8
+;	DW LIMOUTHPRO8_SUB-lia_anitab1, 0
+;LIMOUTHPRO8_SUB
+;	DW LIMOUTHPRO8_IMG-lia_anitab1
+;	DH 61, 89, 24, -27
+;LIMOUTHPRO9
+;	DW LIMOUTHPRO9_SUB-lia_anitab1, 0
+;LIMOUTHPRO9_SUB
+;	DW LIMOUTHPRO9_IMG-lia_anitab1
+;	DH 61, 89, 24, -27
+;LIMOUTHPRO10
+;	DW LIMOUTHPRO10_SUB-lia_anitab1, 0
+;LIMOUTHPRO10_SUB
+;	DW LIMOUTHPRO10_IMG-lia_anitab1
+;	DH 61, 89, 24, -27
+;LIMOUTHPRO11
+;	DW LIMOUTHPRO11_SUB-lia_anitab1, 0
+;LIMOUTHPRO11_SUB
+;	DW LIMOUTHPRO11_IMG-lia_anitab1
+;	DH 61, 89, 24, -27
+;LIMOUTHPRO12
+;	DW LIMOUTHPRO12_SUB-lia_anitab1, 0
+;LIMOUTHPRO12_SUB
+;	DW LIMOUTHPRO12_IMG-lia_anitab1
+;	DH 61, 89, 24, -27
+LILGHAIR1:
+	DD LILGHAIR1_SUB-lia_anitab1, 0
+LILGHAIR1_SUB:
+	DD LILGHAIR1_IMG-lia_anitab1
+	DW 117, 76, 14, -40
+LILGHAIR2:
+	DD LILGHAIR2_SUB-lia_anitab1, 0
+LILGHAIR2_SUB:
+	DD LILGHAIR2_IMG-lia_anitab1
+	DW 163, 72, 14, -44
+LILGHAIR3:
+	DD LILGHAIR3_SUB-lia_anitab1, 0
+LILGHAIR3_SUB:
+	DD LILGHAIR3_IMG-lia_anitab1
+	DW 163, 73, 14, -44
+LILGHAIR4:
+	DD LILGHAIR4_SUB-lia_anitab1, 0
+LILGHAIR4_SUB:
+	DD LILGHAIR4_IMG-lia_anitab1
+	DW 166, 73, 14, -44
+LILGHAIR5:
+	DD LILGHAIR5_SUB-lia_anitab1, 0
+LILGHAIR5_SUB:
+	DD LILGHAIR5_IMG-lia_anitab1
+	DW 166, 73, 14, -44
+LILGHAIR6:
+	DD LILGHAIR6_SUB-lia_anitab1, 0
+LILGHAIR6_SUB:
+	DD LILGHAIR6_IMG-lia_anitab1
+	DW 169, 73, 14, -44
+LILGHAIR7:
+	DD LILGHAIR7_SUB-lia_anitab1, 0
+LILGHAIR7_SUB:
+	DD LILGHAIR7_IMG-lia_anitab1
+	DW 169, 73, 14, -44
+LILGHAIR8:
+	DD LILGHAIR8_SUB-lia_anitab1, 0
+LILGHAIR8_SUB:
+	DD LILGHAIR8_IMG-lia_anitab1
+	DW 169, 73, 14, -44
+LILGHAIR9:
+	DD LILGHAIR9_SUB-lia_anitab1, 0
+LILGHAIR9_SUB:
+	DD LILGHAIR9_IMG-lia_anitab1
+	DW 169, 75, 14, -42
+LILGHAIR10:
+	DD LILGHAIR10_SUB-lia_anitab1, 0
+LILGHAIR10_SUB:
+	DD LILGHAIR10_IMG-lia_anitab1
+	DW 169, 88, 14, -29
+LILGHAIR11:
+	DD LILGHAIR11_SUB-lia_anitab1, 0
+LILGHAIR11_SUB:
+	DD LILGHAIR11_IMG-lia_anitab1
+	DW 169, 107, 14, -10
+LILGHAIR12:
+	DD LILGHAIR12_SUB-lia_anitab1, 0
+LILGHAIR12_SUB:
+	DD LILGHAIR12_IMG-lia_anitab1
+	DW 169, 114, 14, -3
+LILGHAIR13:
+	DD LILGHAIR13_SUB-lia_anitab1, 0
+LILGHAIR13_SUB:
+	DD LILGHAIR13_IMG-lia_anitab1
+	DW 169, 124, 14, 7
+LILGHAIR14:
+	DD LILGHAIR14_SUB-lia_anitab1, 0
+LILGHAIR14_SUB:
+	DD LILGHAIR14_IMG-lia_anitab1
+	DW 172, 107, 17, -10
+LILGHAIR15:
+	DD LILGHAIR15_SUB-lia_anitab1, 0
+LILGHAIR15_SUB:
+	DD LILGHAIR15_IMG-lia_anitab1
+	DW 176, 108, 21, -9
+LILGHAIR16:
+	DD LILGHAIR16_SUB-lia_anitab1, 0
+LILGHAIR16_SUB:
+	DD LILGHAIR16_IMG-lia_anitab1
+	DW 180, 119, 25, 2
+LILGHAIR17:
+	DD LILGHAIR17_SUB-lia_anitab1, 0
+LILGHAIR17_SUB:
+	DD LILGHAIR17_IMG-lia_anitab1
+	DW 190, 148, 37, 31
+LILGHAIR18:
+	DD LILGHAIR18_SUB-lia_anitab1, 0
+LILGHAIR18_SUB:
+	DD LILGHAIR18_IMG-lia_anitab1
+	DW 79, 159, 47, 42
+LILGHAIR19:
+	DD LILGHAIR19_SUB-lia_anitab1, 0
+LILGHAIR19_SUB:
+	DD LILGHAIR19_IMG-lia_anitab1
+	DW 82, 135, 50, 18
+LILGHAIR20:
+	DD LILGHAIR20_SUB-lia_anitab1, 0
+LILGHAIR20_SUB:
+	DD LILGHAIR20_IMG-lia_anitab1
+	DW 82, 98, 54, -19
+TOPGONE1:
+	DD TOPGONE1_SUB-lia_anitab1, 0
+TOPGONE1_SUB:
+	DD TOPGONE1_IMG-lia_anitab1
+	DW 54, 104, 29, -8
+TOPGONE2:
+	DD TOPGONE2_SUB-lia_anitab1, 0
+TOPGONE2_SUB:
+	DD TOPGONE2_IMG-lia_anitab1
+	DW 55, 86, 29, -25
+TOPGONE3:
+	DD TOPGONE3_SUB-lia_anitab1, 0
+TOPGONE3_SUB:
+	DD TOPGONE3_IMG-lia_anitab1
+	DW 54, 76, 28, -36
+TOPGONE4:
+	DD TOPGONE4_SUB-lia_anitab1, 0
+TOPGONE4_SUB:
+	DD TOPGONE4_IMG-lia_anitab1
+	DW 56, 65, 30, -46
+TOPGONE5:
+	DD TOPGONE5_SUB-lia_anitab1, 0
+TOPGONE5_SUB:
+	DD TOPGONE5_IMG-lia_anitab1
+	DW 56, 54, 31, -59
+TOPGONE6:
+	DD TOPGONE6_SUB-lia_anitab1, 0
+TOPGONE6_SUB:
+	DD TOPGONE6_IMG-lia_anitab1
+	DW 51, 48, 29, -71
+TOPGONE7:
+	DD TOPGONE7_SUB-lia_anitab1, 0
+TOPGONE7_SUB:
+	DD TOPGONE7_IMG-lia_anitab1
+	DW 47, 17, 26, -101
+SPINNER1:
+	DD SPINNER1_SUB-lia_anitab1, 0
+SPINNER1_SUB:
+	DD SPINNER1_IMG-lia_anitab1
+	DW 56, 110, 28, 0
+	DD   _FLESH_P
+SPINNER2:
+	DD SPINNER2_SUB-lia_anitab1, 0
+SPINNER2_SUB:
+	DD SPINNER2_IMG-lia_anitab1
+	DW 57, 110, 28, 0
+SPINNER3:
+	DD SPINNER3_SUB-lia_anitab1, 0
+SPINNER3_SUB:
+	DD SPINNER3_IMG-lia_anitab1
+	DW 56, 110, 29, 0
+SPINNER4:
+	DD SPINNER4_SUB-lia_anitab1, 0
+SPINNER4_SUB:
+	DD SPINNER4_IMG-lia_anitab1
+	DW 56, 110, 29, 0
+SPINNER5:
+	DD SPINNER5_SUB-lia_anitab1, 0
+SPINNER5_SUB:
+	DD SPINNER5_IMG-lia_anitab1
+	DW 56, 110, 29, 0
+SPINNER6:
+	DD SPINNER6_SUB-lia_anitab1, 0
+SPINNER6_SUB:
+	DD SPINNER6_IMG-lia_anitab1
+	DW 55, 110, 28, 0
+

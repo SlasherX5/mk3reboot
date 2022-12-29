@@ -1,0 +1,190 @@
+sonya_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+sonya_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+
+	DD a_sonya_hawk-sonya_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0				; 30
+	DD 0
+	DD 0
+	DD 0
+	DD a_blood_explode-base_anims	;34
+	DD 0
+	DD a_arm2-base_anims
+	DD a_leg-base_anims
+	DD 0
+	DD a_bone-base_anims
+	DD 0
+	DD a_rib_cage-base_anims
+	DD a_skull-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_sonya_hawk:
+	DD HAWKMORF1-sonya_anitab1
+	DD HAWKMORF3-sonya_anitab1
+	DD HAWKMORF4-sonya_anitab1
+	DD HAWKMORF5-sonya_anitab1
+	DD HAWKFLY5-sonya_anitab1
+	DD 0
+j_hawk:
+	DD HAWKFLY6-sonya_anitab1
+	DD HAWKFLY7-sonya_anitab1
+	DD HAWKFLY2-sonya_anitab1
+	DD HAWKFLY3-sonya_anitab1
+	DD HAWKFLY4-sonya_anitab1
+	DD HAWKFLY5-sonya_anitab1
+	DD ani_jump
+	DD j_hawk-sonya_anitab1
+HAWKMORF1:
+	DD HAWKMORF1_SUB-sonya_anitab1, 0
+HAWKMORF1_SUB:
+	DD HAWKMORF1_IMG-sonya_anitab1
+	DW 51, 108, 18, -10
+	DD   _HAWK_P
+HAWKMORF3:
+	DD HAWKMORF3_SUB-sonya_anitab1, 0
+HAWKMORF3_SUB:
+	DD HAWKMORF3_IMG-sonya_anitab1
+	DW 59, 105, 27, -8
+HAWKMORF4:
+	DD HAWKMORF4_SUB-sonya_anitab1, 0
+HAWKMORF4_SUB:
+	DD HAWKMORF4_IMG-sonya_anitab1
+	DW 66, 116, 36, 7
+HAWKMORF5:
+	DD HAWKMORF5_SUB-sonya_anitab1, 0
+HAWKMORF5_SUB:
+	DD HAWKMORF5_IMG-sonya_anitab1
+	DW 84, 131, 46, 32
+HAWKFLY5:
+	DD HAWKFLY5_SUB-sonya_anitab1, 0
+HAWKFLY5_SUB:
+	DD HAWKFLY5_IMG-sonya_anitab1
+	DW 102, 148, 55, 59
+HAWKFLY6:
+	DD HAWKFLY6_SUB-sonya_anitab1, 0
+HAWKFLY6_SUB:
+	DD HAWKFLY6_IMG-sonya_anitab1
+	DW 113, 98, 52, 9
+HAWKFLY7:
+	DD HAWKFLY7_SUB-sonya_anitab1, 0
+HAWKFLY7_SUB:
+	DD HAWKFLY7_IMG-sonya_anitab1
+	DW 117, 64, 34, -22
+HAWKFLY2:
+	DD HAWKFLY2_SUB-sonya_anitab1, 0
+HAWKFLY2_SUB:
+	DD HAWKFLY2_IMG-sonya_anitab1
+	DW 132, 71, 34, -18
+HAWKFLY3:
+	DD HAWKFLY3_SUB-sonya_anitab1, 0
+HAWKFLY3_SUB:
+	DD HAWKFLY3_IMG-sonya_anitab1
+	DW 105, 92, 40, 3
+HAWKFLY4:
+	DD HAWKFLY4_SUB-sonya_anitab1, 0
+HAWKFLY4_SUB:
+	DD HAWKFLY4_IMG-sonya_anitab1
+	DW 105, 138, 59, 49

@@ -1,0 +1,53 @@
+a_arm2:
+	DD ARM_B01-base_anims
+	DD ARM_B02-base_anims
+	DD ARM_B03-base_anims
+	DD ARM_B04-base_anims
+	DD ARM_B05-base_anims
+	DD ARM_B06-base_anims
+	DD ARM_B07-base_anims
+	DD ARM_B08-base_anims
+	DD ARM_B09-base_anims
+	DD ARM_B10-base_anims
+	DD ARM_B11-base_anims
+	DD ARM_B12-base_anims
+	DD ani_jump
+	DD a_arm2-base_anims
+	DD 0
+ARM_B01:
+	DD ARM_B01_IMG-base_anims
+	DW 13, 25, 6, 14
+	DD   _BODY_P
+ARM_B02:
+	DD ARM_B02_IMG-base_anims
+	DW 23, 18, 11, 10
+ARM_B03:
+	DD ARM_B03_IMG-base_anims
+	DW 28, 10, 15, 6
+ARM_B04:
+	DD ARM_B04_IMG-base_anims
+	DW 26, 12, 15, 6
+ARM_B05:
+	DD ARM_B05_IMG-base_anims
+	DW 20, 23, 13, 9
+ARM_B06:
+	DD ARM_B06_IMG-base_anims
+	DW 11, 29, 8, 11
+ARM_B07:
+	DD ARM_B07_IMG-base_anims
+	DW 14, 27, 6, 9
+ARM_B08:
+	DD ARM_B08_IMG-base_anims
+	DW 26, 19, 10, 6
+ARM_B09:
+	DD ARM_B09_IMG-base_anims
+	DW 30, 10, 11, 3
+ARM_B10:
+	DD ARM_B10_IMG-base_anims
+	DW 26, 12, 10, 5
+ARM_B11:
+	DD ARM_B11_IMG-base_anims
+	DW 19, 21, 7, 11
+ARM_B12:
+	DD ARM_B12_IMG-base_anims
+	DW 10, 26, 4, 14

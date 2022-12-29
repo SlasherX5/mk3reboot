@@ -1,0 +1,73 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)subzero/subzerob.bin  \
+     $(EXE)subzero/subzero.bin \
+	 $(EXE)subzero/subzeroa.bin \
+	 $(EXE)subzero/subzeros.bin \
+	 $(EXE)subzero/subzerof.bin \
+	 $(EXE)subzero/subzerf1.bin \
+	 .SYMBOLIC
+
+# MAIN GAME	PLAY
+
+subzero.obj: subzero.asm $(OVLARTI) \
+	..\chars\subzero\mksz.psx \
+	..\chars\subzero\mksz.psi \
+	..\chars\subzero\szb.psi
+
+# FRIENDSHIP 
+
+subzeros.obj: subzeros.asm $(OVLARTI) \
+	..\chars\subzero\mkszs.psx \
+	..\chars\subzero\mkszs.psi \
+	..\common\baby\baby.psx \
+	..\common\baby\baby.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+# BABALITY
+
+subzerob.obj: subzerob.asm $(OVLARTI) \
+	..\chars\subzero\mkszb.psx \
+	..\common\baby\babysz.psx \
+	..\common\baby\babysz.psi \
+	..\common\baby\babyxpld.psi 
+
+
+# ANIMALITY
+
+subzeroa.obj: subzeroa.asm $(OVLARTI) \
+	..\chars\subzero\mksza.psx \
+	..\chars\subzero\mksza.psi \
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+
+# FATALITIES
+
+subzerof.obj: subzerof.asm $(OVLARTI) \
+	..\chars\subzero\mkszf.psx \
+	..\chars\subzero\mkszf.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+subzerf1.obj: subzerf1.asm $(OVLARTI) \
+	..\chars\subzero\mkszf1.psx \
+	..\chars\subzero\mkszf1.psi \
+	..\common\common\arm2.psx \
+	..\common\common\arm2.psi \
+	..\common\common\leg.psx	\
+	..\common\common\leg.psi	\
+	..\common\common\bone.psx \
+	..\common\common\bone.psi \
+	..\common\common\cage.psx \
+	..\common\common\cage.psi \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+

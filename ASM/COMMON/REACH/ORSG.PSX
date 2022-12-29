@@ -1,0 +1,58 @@
+ochar_reached:
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD a_reached_sg-base_anims
+	DD 0
+a_reached_sg:
+	DD ani_adjustxy
+	DW 01bH
+	DW 00aH
+	DD SGMOUTH3-base_anims
+	DD SGMOUTH4-base_anims
+	DD SGMOUTH5-base_anims
+	DD SGMOUTH6-base_anims
+	DD SGMOUTH7-base_anims
+	DD SGMOUTH8-base_anims
+	DD 0
+SGMOUTH3:
+	DD SGMOUTH3_SUB-base_anims, 0
+SGMOUTH3_SUB:
+	DD SGMOUTH3_IMG-base_anims
+	DW 78, 96, 56, -29
+SGMOUTH4:
+	DD SGMOUTH4_SUB-base_anims, 0
+SGMOUTH4_SUB:
+	DD SGMOUTH4_IMG-base_anims
+	DW 79, 98, 58, -27
+SGMOUTH5:
+	DD SGMOUTH5_SUB-base_anims, 0
+SGMOUTH5_SUB:
+	DD SGMOUTH5_IMG-base_anims
+	DW 81, 99, 59, -26
+SGMOUTH6:
+	DD SGMOUTH6_SUB-base_anims, 0
+SGMOUTH6_SUB:
+	DD SGMOUTH6_IMG-base_anims
+	DW 95, 71, 69, -54
+SGMOUTH7:
+	DD SGMOUTH7_SUB-base_anims, 0
+SGMOUTH7_SUB:
+	DD SGMOUTH7_IMG-base_anims
+	DW 124, 24, 84, -103
+SGMOUTH8:
+	DD SGMOUTH8_SUB-base_anims, 0
+SGMOUTH8_SUB:
+	DD SGMOUTH8_IMG-base_anims
+	DW 114, 35, 80, -93

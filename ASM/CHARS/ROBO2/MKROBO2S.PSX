@@ -1,0 +1,160 @@
+robo2_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+robo2_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_robo2_friend-robo2_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_zap:
+a_dummy:
+a_robo2_friend:
+	DD RBCHACHA1-robo2_anitab1
+	DD RBCHACHA2-robo2_anitab1
+	DD RBCHACHA3-robo2_anitab1
+	DD RBCHACHA4-robo2_anitab1
+	DD RBCHACHA5-robo2_anitab1
+	DD RBCHACHA4-robo2_anitab1
+	DD RBCHACHA3-robo2_anitab1
+	DD RBCHACHA2-robo2_anitab1
+	DD ani_jump
+	DD a_robo2_friend-robo2_anitab1
+RBCHACHA1:
+	DD RBCHACHA1_SUB-robo2_anitab1, 0
+RBCHACHA1_SUB:
+	DD RBCHACHA1_IMG-robo2_anitab1
+	DW 46, 88, 20, -32
+RBCHACHA2:
+	DD RBCHACHA2_SUB-robo2_anitab1, 0
+RBCHACHA2_SUB:
+	DD RBCHACHA2_IMG-robo2_anitab1
+	DW 42, 89, 15, -31
+RBCHACHA3:
+	DD RBCHACHA3_SUB-robo2_anitab1, 0
+RBCHACHA3_SUB:
+	DD RBCHACHA3_IMG-robo2_anitab1
+	DW 39, 89, 14, -30
+RBCHACHA4:
+	DD RBCHACHA4_SUB-robo2_anitab1, 0
+RBCHACHA4_SUB:
+	DD RBCHACHA4_IMG-robo2_anitab1
+	DW 42, 88, 16, -32
+RBCHACHA5:
+	DD RBCHACHA5_SUB-robo2_anitab1, 0
+RBCHACHA5_SUB:
+	DD RBCHACHA5_IMG-robo2_anitab1
+	DW 43, 86, 16, -35

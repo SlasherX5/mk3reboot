@@ -1,0 +1,60 @@
+ochar_reached:
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD a_reached_tusk-base_anims
+	DD 0
+a_reached_tusk:
+	DD ani_adjustxy
+	DW 001H
+	DW 00aH
+	DD TRMOUTH3-base_anims
+	DD TRMOUTH4-base_anims
+	DD TRMOUTH5-base_anims
+	DD TRMOUTH6-base_anims
+	DD TRMOUTH7-base_anims
+	DD TRMOUTH8-base_anims
+	DD 0
+TRMOUTH3:
+	DD TRMOUTH3_SUB-base_anims, 0
+TRMOUTH3_SUB:
+	DD TRMOUTH3_IMG-base_anims
+	DW 66, 98, 36, -23
+TRMOUTH4:
+	DD TRMOUTH4_SUB-base_anims, 0
+TRMOUTH4_SUB:
+	DD TRMOUTH4_IMG-base_anims
+	DW 73, 97, 43, -24
+TRMOUTH5:
+	DD TRMOUTH5_SUB-base_anims, 0
+TRMOUTH5_SUB:
+	DD TRMOUTH5_IMG-base_anims
+	DW 78, 98, 49, -23
+TRMOUTH6:
+	DD TRMOUTH6_SUB-base_anims, 0
+TRMOUTH6_SUB:
+	DD TRMOUTH6_IMG-base_anims
+	DW 102, 64, 64, -57
+TRMOUTH7:
+	DD TRMOUTH7_SUB-base_anims, 0
+TRMOUTH7_SUB:
+	DD TRMOUTH7_IMG-base_anims
+	DW 119, 21, 75, -101
+TRMOUTH8:
+	DD TRMOUTH8_SUB-base_anims, 0
+TRMOUTH8_SUB:
+	DD TRMOUTH8_IMG-base_anims
+	DW 111, 33, 71, -90
+
+

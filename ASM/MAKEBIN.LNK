@@ -1,0 +1,6 @@
+debug all
+option map
+option stack=20k
+name makebin
+FILE makebin.obj
+FILE bindata.obj

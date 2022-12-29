@@ -1,0 +1,58 @@
+ochar_reached:
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD a_reached_lia-base_anims
+	DD 0
+a_reached_lia:
+	DD ani_adjustxy
+	DW -9
+	DW 0
+	DD LIMOUTH3-base_anims
+	DD LIMOUTH4-base_anims
+	DD LIMOUTH5-base_anims
+	DD LIMOUTH6-base_anims
+	DD LIMOUTH7-base_anims
+	DD LIMOUTH8-base_anims
+	DD 0
+LIMOUTH3:
+	DD LIMOUTH3_SUB-base_anims, 0
+LIMOUTH3_SUB:
+	DD LIMOUTH3_IMG-base_anims
+	DW 66, 93, 34, -25
+LIMOUTH4:
+	DD LIMOUTH4_SUB-base_anims, 0
+LIMOUTH4_SUB:
+	DD LIMOUTH4_IMG-base_anims
+	DW 73, 94, 40, -24
+LIMOUTH5:
+	DD LIMOUTH5_SUB-base_anims, 0
+LIMOUTH5_SUB:
+	DD LIMOUTH5_IMG-base_anims
+	DW 75, 95, 42, -22
+LIMOUTH6:
+	DD LIMOUTH6_SUB-base_anims, 0
+LIMOUTH6_SUB:
+	DD LIMOUTH6_IMG-base_anims
+	DW 91, 68, 54, -49
+LIMOUTH7:
+	DD LIMOUTH7_SUB-base_anims, 0
+LIMOUTH7_SUB:
+	DD LIMOUTH7_IMG-base_anims
+	DW 115, 31, 66, -93
+LIMOUTH8:
+	DD LIMOUTH8_SUB-base_anims, 0
+LIMOUTH8_SUB:
+	DD LIMOUTH8_IMG-base_anims
+	DW 106, 40, 61, -84

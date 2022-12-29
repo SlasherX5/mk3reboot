@@ -1,0 +1,88 @@
+ochar_ripped_anis:
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD a_kano_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_normal_skel-base_anims
+	DD 0
+a_kano_rip:
+	DD KARIP1-base_anims
+	DD KARIP2-base_anims
+	DD KARIP3-base_anims
+	DD KARIP4-base_anims
+	DD KARIP5-base_anims
+	DD KARIP6-base_anims
+	DD KARIP7-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+KARIP1:
+	DD KARIP1_SUB-base_anims, 0
+KARIP1_SUB:
+	DD KARIP1_IMG-base_anims
+	DW 66, 108, 34, -10
+	DD   _KANOFLA_P
+KARIP2:
+	DD KARIP2_SUB-base_anims, 0
+KARIP2_SUB:
+	DD KARIP2_IMG-base_anims
+	DW 101, 108, 69, -10
+KARIP3:
+	DD KARIP3_SUB-base_anims, 0
+KARIP3_SUB:
+	DD KARIP3_IMG-base_anims
+	DW 105, 107, 77, -10
+KARIP4:
+	DD KARIP4_SUB-base_anims, 0
+KARIP4_SUB:
+	DD KARIP4_IMG-base_anims
+	DW 137, 107, 112, -10
+	DD   _KANOFLB_P
+KARIP5:
+	DD KARIP5_SUB-base_anims, 0
+KARIP5_SUB:
+	DD KARIP5_IMG-base_anims
+	DW 146, 106, 125, -10
+KARIP6:
+	DD KARIP6_SUB-base_anims, 0
+KARIP6_SUB:
+	DD KARIP6_IMG-base_anims
+	DW 147, 106, 128, -10
+KARIP7:
+	DD KARIP7_SUB-base_anims, 0
+KARIP7_SUB:
+	DD KARIP7_IMG-base_anims
+	DW 86, 58, 128, -10

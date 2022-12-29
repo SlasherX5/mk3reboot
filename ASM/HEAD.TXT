@@ -1,0 +1,6 @@
+
+	include overlay.i
+	include mkchar.i
+
+	BEGIN_OVERLAY
+

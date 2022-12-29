@@ -1,0 +1,135 @@
+_kano_panitab1:
+	DD a_stance-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_dummy-_kano_panitab1
+	DD a_victory-_kano_panitab1
+a_dummy:
+a_stance:
+	DD KNSTANCE1-_kano_panitab1
+	DD KNSTANCE2-_kano_panitab1
+	DD KNSTANCE3-_kano_panitab1
+	DD KNSTANCE4-_kano_panitab1
+	DD KNSTANCE5-_kano_panitab1
+	DD KNSTANCE6-_kano_panitab1
+	DD KNSTANCE7-_kano_panitab1
+	DD KNSTANCE8-_kano_panitab1
+	DD KNSTANCE9-_kano_panitab1
+	DD ani_jump
+	DD a_stance-_kano_panitab1
+a_victory:
+	DD KNVICTORY1-_kano_panitab1
+	DD KNVICTORY2-_kano_panitab1
+	DD KNVICTORY3-_kano_panitab1
+	DD KNVICTORY4-_kano_panitab1
+	DD KNVICTORY5-_kano_panitab1
+	DD KNVICTORY6-_kano_panitab1
+	DD KNVICTORY7-_kano_panitab1
+	DD KNVICTORY8-_kano_panitab1
+	DD KNVICTORY9-_kano_panitab1
+	DD KNVICTORY10-_kano_panitab1
+	DD 0
+KNSTANCE1:
+	DD KNSTANCE1_SUB-_kano_panitab1, 0
+KNSTANCE1_SUB:
+	DD KNSTANCE1_IMG-_kano_panitab1
+	DW 57, 109, 25, -8
+KNSTANCE2:
+	DD KNSTANCE2_SUB-_kano_panitab1, 0
+KNSTANCE2_SUB:
+	DD KNSTANCE2_IMG-_kano_panitab1
+	DW 56, 111, 24, -7
+KNSTANCE3:
+	DD KNSTANCE3_SUB-_kano_panitab1, 0
+KNSTANCE3_SUB:
+	DD KNSTANCE3_IMG-_kano_panitab1
+	DW 54, 111, 22, -7
+KNSTANCE4:
+	DD KNSTANCE4_SUB-_kano_panitab1, 0
+KNSTANCE4_SUB:
+	DD KNSTANCE4_IMG-_kano_panitab1
+	DW 54, 111, 22, -7
+KNSTANCE5:
+	DD KNSTANCE5_SUB-_kano_panitab1, 0
+KNSTANCE5_SUB:
+	DD KNSTANCE5_IMG-_kano_panitab1
+	DW 54, 110, 22, -8
+KNSTANCE6:
+	DD KNSTANCE6_SUB-_kano_panitab1, 0
+KNSTANCE6_SUB:
+	DD KNSTANCE6_IMG-_kano_panitab1
+	DW 54, 110, 22, -8
+KNSTANCE7:
+	DD KNSTANCE7_SUB-_kano_panitab1, 0
+KNSTANCE7_SUB:
+	DD KNSTANCE7_IMG-_kano_panitab1
+	DW 55, 110, 23, -8
+KNSTANCE8:
+	DD KNSTANCE8_SUB-_kano_panitab1, 0
+KNSTANCE8_SUB:
+	DD KNSTANCE8_IMG-_kano_panitab1
+	DW 57, 110, 25, -8
+KNSTANCE9:
+	DD KNSTANCE9_SUB-_kano_panitab1, 0
+KNSTANCE9_SUB:
+	DD KNSTANCE9_IMG-_kano_panitab1
+	DW 58, 108, 26, -9
+KNVICTORY1:
+	DD KNVICTORY1_SUB-_kano_panitab1, 0
+KNVICTORY1_SUB:
+	DD KNVICTORY1_IMG-_kano_panitab1
+	DW 58, 108, 25, -10
+KNVICTORY2:
+	DD KNVICTORY2_SUB-_kano_panitab1, 0
+KNVICTORY2_SUB:
+	DD KNVICTORY2_IMG-_kano_panitab1
+	DW 46, 111, 15, -8
+KNVICTORY3:
+	DD KNVICTORY3_SUB-_kano_panitab1, 0
+KNVICTORY3_SUB:
+	DD KNVICTORY3_IMG-_kano_panitab1
+	DW 46, 119, 15, 0
+KNVICTORY4:
+	DD KNVICTORY4_SUB-_kano_panitab1, 0
+KNVICTORY4_SUB:
+	DD KNVICTORY4_IMG-_kano_panitab1
+	DW 46, 136, 15, 17
+KNVICTORY5:
+	DD KNVICTORY5_SUB-_kano_panitab1, 0
+KNVICTORY5_SUB:
+	DD KNVICTORY5_IMG-_kano_panitab1
+	DW 80, 120, 32, 1
+KNVICTORY6:
+	DD KNVICTORY6_SUB-_kano_panitab1, 0
+KNVICTORY6_SUB:
+	DD KNVICTORY6_IMG-_kano_panitab1
+	DW 96, 114, 42, -4
+KNVICTORY7:
+	DD KNVICTORY7_SUB-_kano_panitab1, 0
+KNVICTORY7_SUB:
+	DD KNVICTORY7_IMG-_kano_panitab1
+	DW 94, 113, 41, -5
+KNVICTORY8:
+	DD KNVICTORY8_SUB-_kano_panitab1, 0
+KNVICTORY8_SUB:
+	DD KNVICTORY8_IMG-_kano_panitab1
+	DW 66, 120, 27, 1
+KNVICTORY9:
+	DD KNVICTORY9_SUB-_kano_panitab1, 0
+KNVICTORY9_SUB:
+	DD KNVICTORY9_IMG-_kano_panitab1
+	DW 54, 128, 22, 8
+KNVICTORY10:
+	DD KNVICTORY10_SUB-_kano_panitab1, 0
+KNVICTORY10_SUB:
+	DD KNVICTORY10_IMG-_kano_panitab1
+	DW 58, 118, 22, 0

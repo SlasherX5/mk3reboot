@@ -1,0 +1,339 @@
+ochar_big_head:
+	DD KNBHEAD-base_anims
+	DD SBBHEAD-base_anims
+	DD JXBHEAD-base_anims
+	DD INBHEAD-base_anims
+	DD SZBHEAD-base_anims
+	DD OBBHEAD-base_anims
+	DD LIBHEAD-base_anims
+	DD RBBHEAD-base_anims
+	DD RB2BHEAD-base_anims
+	DD KLBHEAD-base_anims
+	DD TRBHEAD-base_anims
+	DD SHBHEAD-base_anims
+	DD TSBHEAD-base_anims
+	DD LUBHEAD-base_anims
+	DD RB3BHEAD-base_anims
+	DD 0
+KNBHEAD:
+	DD BHKANO1-base_anims
+	DD BHKANO2-base_anims
+	DD BHKANO3-base_anims
+	DD BHKANO4-base_anims
+	DD BHKANO5-base_anims
+	DD 0
+SBBHEAD:
+	DD BHBLADE1-base_anims
+	DD BHBLADE2-base_anims
+	DD BHBLADE3-base_anims
+	DD BHBLADE4-base_anims
+	DD BHBLADE5-base_anims
+	DD 0
+JXBHEAD:
+	DD BHJAX1-base_anims
+	DD BHJAX2-base_anims
+	DD BHJAX3-base_anims
+	DD BHJAX4-base_anims
+	DD BHJAX5-base_anims
+	DD 0
+INBHEAD:
+	DD BHIND1-base_anims
+	DD BHIND2-base_anims
+	DD BHIND3-base_anims
+	DD BHIND4-base_anims
+	DD BHIND5-base_anims
+	DD 0
+SZBHEAD:
+	DD BHSZERO1-base_anims
+	DD BHSZERO2-base_anims
+	DD BHSZERO3-base_anims
+	DD BHSZERO4-base_anims
+	DD BHSZERO5-base_anims
+	DD 0
+OBBHEAD:
+	DD BHSWAT1-base_anims
+	DD BHSWAT2-base_anims
+	DD BHSWAT3-base_anims
+	DD BHSWAT4-base_anims
+	DD BHSWAT5-base_anims
+	DD 0
+LIBHEAD:
+	DD BHLIA1-base_anims
+	DD BHLIA2-base_anims
+	DD BHLIA3-base_anims
+	DD BHLIA4-base_anims
+	DD BHLIA5-base_anims
+	DD 0
+RBBHEAD:
+	DD BHROBO1-base_anims
+	DD BHROBO2-base_anims
+	DD BHROBO3-base_anims
+	DD BHROBO4-base_anims
+	DD BHROBO5-base_anims
+	DD 0
+RB2BHEAD:
+	DD BHROBO21-base_anims
+	DD BHROBO2-base_anims
+	DD BHROBO3-base_anims
+	DD BHROBO4-base_anims
+	DD BHROBO5-base_anims
+	DD 0
+RB3BHEAD:
+	DD BHROBO31-base_anims
+	DD BHROBO2-base_anims
+	DD BHROBO3-base_anims
+	DD BHROBO4-base_anims
+	DD BHROBO5-base_anims
+	DD 0
+KLBHEAD:
+	DD BHLAO1-base_anims
+	DD BHLAO2-base_anims
+	DD BHLAO3-base_anims
+	DD BHLAO4-base_anims
+	DD BHLAO5-base_anims
+	DD 0
+TRBHEAD:
+	DD BHTUSK1-base_anims
+	DD BHTUSK2-base_anims
+	DD BHTUSK3-base_anims
+	DD BHTUSK4-base_anims
+	DD BHTUSK5-base_anims
+	DD 0
+SHBHEAD:
+	DD BHSHGOR1-base_anims
+	DD BHSHGOR2-base_anims
+	DD BHSHGOR3-base_anims
+	DD BHSHGOR4-base_anims
+	DD BHSHGOR5-base_anims
+	DD 0
+TSBHEAD:
+	DD BHTSANG1-base_anims
+	DD BHTSANG2-base_anims
+	DD BHTSANG3-base_anims
+	DD BHTSANG4-base_anims
+	DD BHTSANG5-base_anims
+	DD 0
+LUBHEAD:
+	DD BHLIU1-base_anims
+	DD BHLIU2-base_anims
+	DD BHLIU3-base_anims
+	DD BHLIU4-base_anims
+	DD BHLIU5-base_anims
+	DD 0
+BHKANO1:
+	DD BHKANO1_IMG-base_anims
+	DW 16, 24, 5, -2
+	DD   _BHKANO_P
+BHKANO2:
+	DD BHKANO2_IMG-base_anims
+	DW 22, 32, 8, 6
+BHKANO3:
+	DD BHKANO3_IMG-base_anims
+	DW 30, 39, 12, 13
+BHKANO4:
+	DD BHKANO4_IMG-base_anims
+	DW 37, 42, 15, 15
+BHKANO5:
+	DD BHKANO5_IMG-base_anims
+	DW 54, 60, 23, 33
+BHBLADE1:
+	DD BHBLADE1_IMG-base_anims
+	DW 19, 25, 2, -9
+	DD   _BHBLADE_P
+BHBLADE2:
+	DD BHBLADE2_IMG-base_anims
+	DW 26, 32, 6, -2
+BHBLADE3:
+	DD BHBLADE3_IMG-base_anims
+	DW 33, 38, 9, 3
+BHBLADE4:
+	DD BHBLADE4_IMG-base_anims
+	DW 38, 42, 10, 7
+BHBLADE5:
+	DD BHBLADE5_IMG-base_anims
+	DW 59, 62, 19, 25
+BHJAX1:
+	DD BHJAX1_IMG-base_anims
+	DW 14, 23, 6, -5
+	DD   _BHJAX_P
+BHJAX2:
+	DD BHJAX2_IMG-base_anims
+	DW 21, 32, 10, 3
+BHJAX3:
+	DD BHJAX3_IMG-base_anims
+	DW 30, 38, 14, 9
+BHJAX4:
+	DD BHJAX4_IMG-base_anims
+	DW 36, 42, 18, 13
+BHJAX5:
+	DD BHJAX5_IMG-base_anims
+	DW 58, 62, 30, 33
+BHIND1:
+	DD BHIND1_IMG-base_anims
+	DW 18, 24, 7, -3
+	DD   _BHINDIA_P
+BHIND2:
+	DD BHIND2_IMG-base_anims
+	DW 25, 33, 11, 5
+BHIND3:
+	DD BHIND3_IMG-base_anims
+	DW 32, 40, 16, 12
+BHIND4:
+	DD BHIND4_IMG-base_anims
+	DW 37, 43, 18, 14
+BHIND5:
+	DD BHIND5_IMG-base_anims
+	DW 55, 62, 25, 34
+BHSZERO1:
+	DD BHSZERO1_IMG-base_anims
+	DW 14, 21, 10, -4
+	DD   _BHSZERO_P
+BHSZERO2:
+	DD BHSZERO2_IMG-base_anims
+	DW 19, 30, 13, 3
+BHSZERO3:
+	DD BHSZERO3_IMG-base_anims
+	DW 27, 37, 17, 10
+BHSZERO4:
+	DD BHSZERO4_IMG-base_anims
+	DW 35, 41, 21, 14
+BHSZERO5:
+	DD BHSZERO5_IMG-base_anims
+	DW 56, 60, 30, 34
+BHSWAT1:
+	DD BHSWAT1_IMG-base_anims
+	DW 18, 23, 6, -3
+	DD   _BHSWAT_P
+BHSWAT2:
+	DD BHSWAT2_IMG-base_anims
+	DW 26, 32, 9, 5
+BHSWAT3:
+	DD BHSWAT3_IMG-base_anims
+	DW 34, 40, 13, 13
+BHSWAT4:
+	DD BHSWAT4_IMG-base_anims
+	DW 38, 43, 14, 15
+BHSWAT5:
+	DD BHSWAT5_IMG-base_anims
+	DW 55, 61, 22, 34
+BHLIA1:
+	DD BHLIA1_IMG-base_anims
+	DW 20, 28, 18, 1
+	DD   _BHLIA_P
+BHLIA2:
+	DD BHLIA2_IMG-base_anims
+	DW 28, 36, 22, 9
+BHLIA3:
+	DD BHLIA3_IMG-base_anims
+	DW 35, 41, 25, 14
+BHLIA4:
+	DD BHLIA4_IMG-base_anims
+	DW 38, 41, 26, 14
+BHLIA5:
+	DD BHLIA5_IMG-base_anims
+	DW 58, 59, 35, 31
+BHROBO1:
+	DD BHROBO1_IMG-base_anims
+	DW 17, 22, 2, -7
+	DD   _BHRDROB_P
+BHROBO21:
+	DD BHROBO1_IMG-base_anims
+	DW 17, 22, 2, -7
+	DD   _BHYLROB_P
+BHROBO31:
+	DD BHROBO1_IMG-base_anims
+	DW 17, 22, 2, -7
+	DD   _BHSMROB_P
+
+BHROBO2:
+	DD BHROBO2_IMG-base_anims
+	DW 22, 28, 5, -1
+BHROBO3:
+	DD BHROBO3_IMG-base_anims
+	DW 30, 35, 9, 5
+BHROBO4:
+	DD BHROBO4_IMG-base_anims
+	DW 38, 43, 14, 14
+BHROBO5:
+	DD BHROBO5_IMG-base_anims
+	DW 50, 54, 19, 25
+BHLAO1:
+	DD BHLAO1_IMG-base_anims
+	DW 30, 26, 23, 4
+	DD   _BHLAO_P
+BHLAO2:
+	DD BHLAO2_IMG-base_anims
+	DW 30, 37, 23, 15
+BHLAO3:
+	DD BHLAO3_IMG-base_anims
+	DW 31, 43, 25, 22
+BHLAO4:
+	DD BHLAO4_IMG-base_anims
+	DW 38, 48, 27, 27
+BHLAO5:
+	DD BHLAO5_IMG-base_anims
+	DW 58, 66, 37, 45
+BHTUSK1:
+	DD BHTUSK1_IMG-base_anims
+	DW 24, 34, 2, -8
+	DD   _BHTUSK_P
+BHTUSK2:
+	DD BHTUSK2_IMG-base_anims
+	DW 32, 39, 6, -3
+BHTUSK3:
+	DD BHTUSK3_IMG-base_anims
+	DW 38, 40, 10, -2
+BHTUSK4:
+	DD BHTUSK4_IMG-base_anims
+	DW 39, 42, 10, -1
+BHTUSK5:
+	DD BHTUSK5_IMG-base_anims
+	DW 54, 57, 19, 14
+BHSHGOR1:
+	DD BHSHGOR1_IMG-base_anims
+	DW 18, 29, 8, 3
+	DD   _BHSHGOR_P
+BHSHGOR2:
+	DD BHSHGOR2_IMG-base_anims
+	DW 26, 36, 12, 10
+BHSHGOR3:
+	DD BHSHGOR3_IMG-base_anims
+	DW 33, 40, 15, 14
+BHSHGOR4:
+	DD BHSHGOR4_IMG-base_anims
+	DW 38, 42, 18, 16
+BHSHGOR5:
+	DD BHSHGOR5_IMG-base_anims
+	DW 54, 60, 24, 35
+BHTSANG1:
+	DD BHTSANG1_IMG-base_anims
+	DW 15, 21, 9, 3
+	DD   _BHTSANG_P
+BHTSANG2:
+	DD BHTSANG2_IMG-base_anims
+	DW 23, 29, 14, 11
+BHTSANG3:
+	DD BHTSANG3_IMG-base_anims
+	DW 31, 35, 18, 17
+BHTSANG4:
+	DD BHTSANG4_IMG-base_anims
+	DW 38, 39, 23, 21
+BHTSANG5:
+	DD BHTSANG5_IMG-base_anims
+	DW 58, 54, 33, 37
+BHLIU1:
+	DD BHLIU1_IMG-base_anims
+	DW 16, 24, 11, 0
+	DD   _BHLIU_P
+BHLIU2:
+	DD BHLIU2_IMG-base_anims
+	DW 22, 33, 15, 9
+BHLIU3:
+	DD BHLIU3_IMG-base_anims
+	DW 30, 39, 18, 15
+BHLIU4:
+	DD BHLIU4_IMG-base_anims
+	DW 37, 43, 21, 19
+BHLIU5:
+	DD BHLIU5_IMG-base_anims
+	DW 54, 61, 30, 37

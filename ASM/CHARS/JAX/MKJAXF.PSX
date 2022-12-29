@@ -1,0 +1,234 @@
+jax_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+jax_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD a_jax_slicer-jax_anitab1
+	DD 0	;a_jax_grow-jax_anitab1
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0	;a_jax_boot-jax_anitab1	;9
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD ochar_cutups-base_anims		; 17
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD a_blood_explode-base_anims	;34
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_dummy:
+a_jax_slicer:
+	DD JXSLICER1-jax_anitab1
+	DD JXSLICER3-jax_anitab1
+	DD JXSLICER4-jax_anitab1
+	DD JXSLICER5-jax_anitab1
+	DD 0
+	DD JXSLICER6-jax_anitab1
+j_slice:
+	DD JXSLICER7-jax_anitab1
+	DD JXSLICER8-jax_anitab1
+	DD JXSLICER9-jax_anitab1
+	DD JXSLICER10-jax_anitab1
+	DD JXSLICER11-jax_anitab1
+	DD JXSLICER12-jax_anitab1
+	DD JXSLICER13-jax_anitab1
+	DD JXSLICER14-jax_anitab1
+	DD ani_jump
+	DD j_slice-jax_anitab1
+	DD 0
+	DD JXSLICER5-jax_anitab1
+	DD JXSLICER4-jax_anitab1
+	DD JXSLICER3-jax_anitab1
+	DD JXSLICER1-jax_anitab1
+	DD 0
+;a_jax_grow
+;	DW JAXGROWFIN-jax_anitab1
+;	DW 0
+;
+;a_jax_boot
+;	DW JAXBIGBOOT-jax_anitab1
+;	DW 0
+;
+JXSLICER1:
+	DD JXSLICER1_SUB-jax_anitab1, 0
+JXSLICER1_SUB:
+	DD JXSLICER1_IMG-jax_anitab1
+	DW 45, 114, 16, -16
+JXSLICER3:
+	DD JXSLICER3_SUB-jax_anitab1, 0
+JXSLICER3_SUB:
+	DD JXSLICER3_IMG-jax_anitab1
+	DW 72, 117, 34, -13
+JXSLICER4:
+	DD JXSLICER4_SUB-jax_anitab1, 0
+JXSLICER4_SUB:
+	DD JXSLICER4_IMG-jax_anitab1
+	DW 87, 133, 39, 2
+JXSLICER5:
+	DD JXSLICER5_SUB-jax_anitab1, 0
+JXSLICER5_SUB:
+	DD JXSLICER5_IMG-jax_anitab1
+	DW 94, 142, 43, 11
+JXSLICER6:
+	DD JXSLICER6_SUB-jax_anitab1, 0
+JXSLICER6_SUB:
+	DD JXSLICER6_IMG-jax_anitab1
+	DW 54, 138, 18, 7
+JXSLICER7:
+	DD JXSLICER7_SUB-jax_anitab1, 0
+JXSLICER7_SUB:
+	DD JXSLICER7_IMG-jax_anitab1
+	DW 81, 131, 17, 0
+JXSLICER8:
+	DD JXSLICER8_SUB-jax_anitab1, 0
+JXSLICER8_SUB:
+	DD JXSLICER8_IMG-jax_anitab1
+	DW 85, 122, 18, -8
+JXSLICER9:
+	DD JXSLICER9_SUB-jax_anitab1, 0
+JXSLICER9_SUB:
+	DD JXSLICER9_IMG-jax_anitab1
+	DW 93, 121, 20, -9
+JXSLICER10:
+	DD JXSLICER10_SUB-jax_anitab1, 0
+JXSLICER10_SUB:
+	DD JXSLICER10_IMG-jax_anitab1
+	DW 80, 138, 21, 7
+JXSLICER11:
+	DD JXSLICER11_SUB-jax_anitab1, 0
+JXSLICER11_SUB:
+	DD JXSLICER11_IMG-jax_anitab1
+	DW 90, 132, 21, 1
+JXSLICER12:
+	DD JXSLICER12_SUB-jax_anitab1, 0
+JXSLICER12_SUB:
+	DD JXSLICER12_IMG-jax_anitab1
+	DW 86, 105, 21, -25
+JXSLICER13:
+	DD JXSLICER13_SUB-jax_anitab1, 0
+JXSLICER13_SUB:
+	DD JXSLICER13_IMG-jax_anitab1
+	DW 97, 105, 22, -25
+JXSLICER14:
+	DD JXSLICER14_SUB-jax_anitab1, 0
+JXSLICER14_SUB:
+	DD JXSLICER14_IMG-jax_anitab1
+	DW 77, 132, 48, 1
+;JAXGROWFIN
+;	DW JAXGROWFIN_SUB-jax_anitab1, 0
+;JAXGROWFIN_SUB
+;	DW JAXGROWFIN_IMG-jax_anitab1
+;	DH 60, 163, 21, 30
+;JAXBIGBOOT
+;	DW JAXBOOT_IMG-jax_anitab1
+;	DH 86, 211, 0, 0
+

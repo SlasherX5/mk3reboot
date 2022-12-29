@@ -1,0 +1,58 @@
+ochar_reached:
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD a_reached_lao-base_anims
+	DD 0
+a_reached_lao:
+	DD ani_adjustxy
+	DW 9
+	DW 0
+	DD KLMOUTH3-base_anims
+	DD KLMOUTH4-base_anims
+	DD KLMOUTH5-base_anims
+	DD KLMOUTH6-base_anims
+	DD KLMOUTH7-base_anims
+	DD KLMOUTH8-base_anims
+	DD 0
+KLMOUTH3:
+	DD KLMOUTH3_SUB-base_anims, 0
+KLMOUTH3_SUB:
+	DD KLMOUTH3_IMG-base_anims
+	DW 73, 94, 44, -19
+KLMOUTH4:
+	DD KLMOUTH4_SUB-base_anims, 0
+KLMOUTH4_SUB:
+	DD KLMOUTH4_IMG-base_anims
+	DW 76, 93, 47, -20
+KLMOUTH5:
+	DD KLMOUTH5_SUB-base_anims, 0
+KLMOUTH5_SUB:
+	DD KLMOUTH5_IMG-base_anims
+	DW 79, 92, 50, -21
+KLMOUTH6:
+	DD KLMOUTH6_SUB-base_anims, 0
+KLMOUTH6_SUB:
+	DD KLMOUTH6_IMG-base_anims
+	DW 100, 64, 63, -49
+KLMOUTH7:
+	DD KLMOUTH7_SUB-base_anims, 0
+KLMOUTH7_SUB:
+	DD KLMOUTH7_IMG-base_anims
+	DW 110, 33, 66, -90
+KLMOUTH8:
+	DD KLMOUTH8_SUB-base_anims, 0
+KLMOUTH8_SUB:
+	DD KLMOUTH8_IMG-base_anims
+	DW 104, 40, 65, -82

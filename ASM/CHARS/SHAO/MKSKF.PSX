@@ -1,0 +1,193 @@
+sk_anitab1:
+sk_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_dying-sk_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_deatha1-sk_anitab1
+	DD a_deathb1-sk_anitab1
+	DD a_deathc1-sk_anitab1
+	DD a_deathd1-sk_anitab1
+	DD a_deathe1-sk_anitab1
+	DD a_deathf1-sk_anitab1
+	DD a_deathg1-sk_anitab1
+a_dying:
+	DD SHADEAD3-sk_anitab1
+	DD SHADEAD4-sk_anitab1
+	DD SHADEAD5-sk_anitab1
+	DD SHADEAD4-sk_anitab1
+	DD ani_jump
+	DD a_dying-sk_anitab1
+	DD 0
+
+	DD SHADEAD5-sk_anitab1
+	DD ani_sladd
+	DD SHDEATH1-sk_anitab1
+	DD ani_slani_sleep
+	DD SHDEATH1-sk_anitab1
+	DD ani_slani_sleep
+	DD SHDEATH2-sk_anitab1
+	DD ani_slani_sleep
+	DD SHDEATH3-sk_anitab1
+	DD ani_slani_sleep
+	DD SHDEATH4-sk_anitab1
+	DD ani_calla,sk_ray1
+	DD ani_slani_sleep
+	DD SHDEATH6-sk_anitab1
+	DD ani_slani_sleep
+	DD SHDEATH7-sk_anitab1
+	DD ani_calla,sk_ray2
+	DD ani_slani_sleep
+	DD SHDEATH9-sk_anitab1
+	DD ani_calla,sk_ray3
+	DD 0
+	DD ani_swpal
+	DD SHDEATH1-sk_anitab1
+j_skcycle:
+	DD SHACYCLE1-sk_anitab1
+	DD SHACYCLE2-sk_anitab1
+	DD SHACYCLE3-sk_anitab1
+	DD SHACYCLE4-sk_anitab1
+	DD SHACYCLE5-sk_anitab1
+	DD SHACYCLE6-sk_anitab1
+	DD SHACYCLE7-sk_anitab1
+	DD SHACYCLE8-sk_anitab1
+	DD SHACYCLE9-sk_anitab1
+	DD SHACYCLE10-sk_anitab1
+	DD ani_jump
+	DD j_skcycle-sk_anitab1
+SHADEAD3:
+	DD SHADEAD3_SUB-sk_anitab1, 0
+SHADEAD3_SUB:
+	DD SHADEAD3_IMG-sk_anitab1
+	DW 72, 146, 36, 2
+SHADEAD4:
+	DD SHADEAD4_SUB-sk_anitab1, 0
+SHADEAD4_SUB:
+	DD SHADEAD4_IMG-sk_anitab1
+	DW 100, 133, 49, -11
+SHADEAD5:
+	DD SHADEAD5_SUB-sk_anitab1, 0
+SHADEAD5_SUB:
+	DD SHADEAD5_IMG-sk_anitab1
+	DW 110, 130, 54, -13
+SHDEATH1:
+	DD SHDEATH1_SUB-sk_anitab1, 0
+SHDEATH1_SUB:
+	DD SHDEATH1_IMG-sk_anitab1
+	DW 12, 17, 6, -19
+	DD   _SHAEND_P
+SHDEATH2:
+	DD SHDEATH2_SUB-sk_anitab1, 0
+SHDEATH2_SUB:
+	DD SHDEATH2_IMG-sk_anitab1
+	DW 55, 105, 48, -3
+SHDEATH3:
+	DD SHDEATH3_SUB-sk_anitab1, 0
+SHDEATH3_SUB:
+	DD SHDEATH3_IMG-sk_anitab1
+	DW 91, 134, 52, 26
+SHDEATH4:
+	DD SHDEATH4_SUB-sk_anitab1, 0
+SHDEATH4_SUB:
+	DD SHDEATH4_IMG-sk_anitab1
+	DW 52, 70, 55, -38
+SHDEATH6:
+	DD SHDEATH6_SUB-sk_anitab1, 0
+SHDEATH6_SUB:
+	DD SHDEATH6_IMG-sk_anitab1
+	DW 117, 169, 58, 59
+SHDEATH7:
+	DD SHDEATH7_SUB-sk_anitab1, 0
+SHDEATH7_SUB:
+	DD SHDEATH7_IMG-sk_anitab1
+	DW 116, 169, 58, 60
+SHDEATH9:
+	DD SHDEATH9_SUB-sk_anitab1, 0
+SHDEATH9_SUB:
+	DD SHDEATH9_IMG-sk_anitab1
+	DW 118, 169, 58, 59
+SHACYCLE1:
+	DD SHACYCLE1_SUB-sk_anitab1, 0
+SHACYCLE1_SUB:
+	DD SHACYCLE1_IMG-sk_anitab1
+	DW 117, 169, 58, 25
+SHACYCLE2:
+	DD SHACYCLE2_SUB-sk_anitab1, 0
+SHACYCLE2_SUB:
+	DD SHACYCLE2_IMG-sk_anitab1
+	DW 117, 169, 58, 25
+SHACYCLE3:
+	DD SHACYCLE3_SUB-sk_anitab1, 0
+SHACYCLE3_SUB:
+	DD SHACYCLE3_IMG-sk_anitab1
+	DW 117, 169, 58, 25
+SHACYCLE4:
+	DD SHACYCLE4_SUB-sk_anitab1, 0
+SHACYCLE4_SUB:
+	DD SHACYCLE4_IMG-sk_anitab1
+	DW 117, 169, 58, 25
+SHACYCLE5:
+	DD SHACYCLE5_SUB-sk_anitab1, 0
+SHACYCLE5_SUB:
+	DD SHACYCLE5_IMG-sk_anitab1
+	DW 117, 169, 58, 25
+SHACYCLE6:
+	DD SHACYCLE6_SUB-sk_anitab1, 0
+SHACYCLE6_SUB:
+	DD SHACYCLE6_IMG-sk_anitab1
+	DW 117, 169, 58, 25
+SHACYCLE7:
+	DD SHACYCLE7_SUB-sk_anitab1, 0
+SHACYCLE7_SUB:
+	DD SHACYCLE7_IMG-sk_anitab1
+	DW 117, 169, 58, 25
+SHACYCLE8:
+	DD SHACYCLE8_SUB-sk_anitab1, 0
+SHACYCLE8_SUB:
+	DD SHACYCLE8_IMG-sk_anitab1
+	DW 117, 169, 58, 25
+SHACYCLE9:
+	DD SHACYCLE9_SUB-sk_anitab1, 0
+SHACYCLE9_SUB:
+	DD SHACYCLE9_IMG-sk_anitab1
+	DW 117, 169, 58, 25
+SHACYCLE10:
+	DD SHACYCLE10_SUB-sk_anitab1, 0
+SHACYCLE10_SUB:
+	DD SHACYCLE10_IMG-sk_anitab1
+	DW 117, 169, 58, 25

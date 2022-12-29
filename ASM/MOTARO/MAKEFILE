@@ -1,0 +1,14 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)motaro/motaro.bin \
+	.SYMBOLIC
+
+
+motaro.obj: motaro.asm $(OVLARTI) \
+	..\chars\motaro\mkmot.psx \
+	..\chars\motaro\mkmot.psi
+
+
+
+

@@ -1,0 +1,88 @@
+ochar_ripped_anis:
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_normal_skel-base_anims
+	DD 0
+a_tusk_rip:
+	DD TRRIP1-base_anims
+	DD TRRIP2-base_anims
+	DD TRRIP3-base_anims
+	DD TRRIP4-base_anims
+	DD TRRIP5-base_anims
+	DD TRRIP6-base_anims
+	DD TRRIP7-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+TRRIP1:
+	DD TRRIP1_SUB-base_anims, 0
+TRRIP1_SUB:
+	DD TRRIP1_IMG-base_anims
+	DW 62, 107, 33, -13
+	DD   _TRFLA_P
+TRRIP2:
+	DD TRRIP2_SUB-base_anims, 0
+TRRIP2_SUB:
+	DD TRRIP2_IMG-base_anims
+	DW 82, 107, 52, -13
+TRRIP3:
+	DD TRRIP3_SUB-base_anims, 0
+TRRIP3_SUB:
+	DD TRRIP3_IMG-base_anims
+	DW 95, 107, 66, -13
+TRRIP4:
+	DD TRRIP4_SUB-base_anims, 0
+TRRIP4_SUB:
+	DD TRRIP4_IMG-base_anims
+	DW 130, 107, 100, -13
+	DD   _TRFLB_P
+TRRIP5:
+	DD TRRIP5_SUB-base_anims, 0
+TRRIP5_SUB:
+	DD TRRIP5_IMG-base_anims
+	DW 140, 107, 119, -13
+TRRIP6:
+	DD TRRIP6_SUB-base_anims, 0
+TRRIP6_SUB:
+	DD TRRIP6_IMG-base_anims
+	DW 146, 107, 126, -13
+TRRIP7:
+	DD TRRIP7_SUB-base_anims, 0
+TRRIP7_SUB:
+	DD TRRIP7_IMG-base_anims
+	DW 124, 107, 128, -13

@@ -1,0 +1,724 @@
+ochar_ripped_anis:
+	DD a_kano_rip-base_anims
+	DD a_sonya_rip-base_anims
+	DD a_jax_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_sz_rip-base_anims
+	DD a_swat_rip-base_anims
+	DD a_lia_rip-base_anims
+	DD a_robo_rip-base_anims
+	DD a_robo2_rip-base_anims
+	DD a_lao_rip-base_anims
+	DD a_tusk_rip-base_anims
+	DD a_sg_rip-base_anims
+	DD a_st_rip-base_anims
+	DD a_lk_rip-base_anims
+	DD a_robo3_rip-base_anims
+	DD a_lia_p2_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_sg_skel-base_anims
+	DD 0
+a_robo_rip:
+	DD RBRIP1-base_anims
+	DD RBRIP2-base_anims
+	DD RBRIP3-base_anims
+	DD RBRIP4-base_anims
+	DD RBRIP5-base_anims
+	DD RBRIP6-base_anims
+	DD RBRIP7-base_anims
+	DD 0
+a_robo2_rip:
+	DD CYRAX_RBRIP1-base_anims
+	DD RBRIP2-base_anims
+	DD RBRIP3-base_anims
+	DD CYRAX_RBRIP4-base_anims
+	DD RBRIP5-base_anims
+	DD RBRIP6-base_anims
+	DD RBRIP7-base_anims
+	DD 0
+a_robo3_rip:
+	DD SMOKE_RBRIP1-base_anims
+	DD RBRIP2-base_anims
+	DD RBRIP3-base_anims
+	DD SMOKE_RBRIP4-base_anims
+	DD RBRIP5-base_anims
+	DD RBRIP6-base_anims
+	DD RBRIP7-base_anims
+	DD 0
+a_lia_p2_rip:
+	DD LIA2_LARIP1-base_anims
+	DD LARIP2-base_anims
+	DD LARIP3-base_anims
+	DD LIA2_LARIP4-base_anims
+	DD LARIP5-base_anims
+	DD LARIP6-base_anims
+	DD LARIP7-base_anims
+	DD 0
+a_lao_rip:
+	DD KLRIP1-base_anims
+	DD KLRIP2-base_anims
+	DD KLRIP3-base_anims
+	DD KLRIP4-base_anims
+	DD KLRIP5-base_anims
+	DD KLRIP6-base_anims
+	DD KLRIP7-base_anims
+	DD 0
+a_swat_rip:
+	DD OBRIP1-base_anims
+	DD OBRIP2-base_anims
+	DD OBRIP3-base_anims
+	DD OBRIP4-base_anims
+	DD OBRIP5-base_anims
+	DD OBRIP6-base_anims
+	DD OBRIP7-base_anims
+	DD 0
+a_lia_rip:
+	DD LARIP1-base_anims
+	DD LARIP2-base_anims
+	DD LARIP3-base_anims
+	DD LARIP4-base_anims
+	DD LARIP5-base_anims
+	DD LARIP6-base_anims
+	DD LARIP7-base_anims
+	DD 0
+a_sonya_rip:
+	DD SNRIP1-base_anims
+	DD SNRIP2-base_anims
+	DD SNRIP3-base_anims
+	DD SNRIP4-base_anims
+	DD SNRIP5-base_anims
+	DD SNRIP6-base_anims
+	DD SNRIP7-base_anims
+	DD 0
+a_kano_rip:
+	DD KARIP1-base_anims
+	DD KARIP2-base_anims
+	DD KARIP3-base_anims
+	DD KARIP4-base_anims
+	DD KARIP5-base_anims
+	DD KARIP6-base_anims
+	DD KARIP7-base_anims
+	DD 0
+a_sg_rip:
+	DD SGRIP1-base_anims
+	DD SGRIP2-base_anims
+	DD SGRIP3-base_anims
+	DD SGRIP4-base_anims
+	DD SGRIP5-base_anims
+	DD SGRIP6-base_anims
+	DD SGRIP7-base_anims
+	DD 0
+a_jax_rip:
+	DD JXRIP1-base_anims
+	DD JXRIP2-base_anims
+	DD JXRIP3-base_anims
+	DD JXRIP4-base_anims
+	DD JXRIP5-base_anims
+	DD JXRIP6-base_anims
+	DD JXRIP7-base_anims
+	DD 0
+a_lk_rip:
+	DD LURIP1-base_anims
+	DD LURIP2-base_anims
+	DD LURIP3-base_anims
+	DD LURIP4-base_anims
+	DD LURIP5-base_anims
+	DD LURIP6-base_anims
+	DD LURIP7-base_anims
+	DD 0
+a_st_rip:
+	DD TSRIP1-base_anims
+	DD TSRIP2-base_anims
+	DD TSRIP3-base_anims
+	DD TSRIP4-base_anims
+	DD TSRIP5-base_anims
+	DD TSRIP6-base_anims
+	DD TSRIP7-base_anims
+	DD 0
+a_tusk_rip:
+	DD TRRIP1-base_anims
+	DD TRRIP2-base_anims
+	DD TRRIP3-base_anims
+	DD TRRIP4-base_anims
+	DD TRRIP5-base_anims
+	DD TRRIP6-base_anims
+	DD TRRIP7-base_anims
+	DD 0
+a_ind_rip:
+	DD INRIP1-base_anims
+	DD INRIP2-base_anims
+	DD INRIP3-base_anims
+	DD INRIP4-base_anims
+	DD INRIP5-base_anims
+	DD INRIP6-base_anims
+	DD INRIP7-base_anims
+	DD 0
+a_sz_rip:
+	DD SZRIP1-base_anims
+	DD SZRIP2-base_anims
+	DD SZRIP3-base_anims
+	DD SZRIP4-base_anims
+	DD SZRIP5-base_anims
+	DD SZRIP6-base_anims
+	DD SZRIP7-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+a_sg_skel:
+	DD SGOROSKEL1-base_anims
+	DD SGOROSKEL2-base_anims
+	DD SGOROSKEL3-base_anims
+	DD 0
+KARIP1:
+	DD KARIP1_SUB-base_anims, 0
+KARIP1_SUB:
+	DD KARIP1_IMG-base_anims
+	DW 66, 108, 34, -10
+	DD   _KANOFLA_P
+KARIP2:
+	DD KARIP2_SUB-base_anims, 0
+KARIP2_SUB:
+	DD KARIP2_IMG-base_anims
+	DW 101, 108, 69, -10
+KARIP3:
+	DD KARIP3_SUB-base_anims, 0
+KARIP3_SUB:
+	DD KARIP3_IMG-base_anims
+	DW 105, 107, 77, -10
+KARIP4:
+	DD KARIP4_SUB-base_anims, 0
+KARIP4_SUB:
+	DD KARIP4_IMG-base_anims
+	DW 137, 107, 112, -10
+	DD   _KANOFLB_P
+KARIP5:
+	DD KARIP5_SUB-base_anims, 0
+KARIP5_SUB:
+	DD KARIP5_IMG-base_anims
+	DW 146, 106, 125, -10
+KARIP6:
+	DD KARIP6_SUB-base_anims, 0
+KARIP6_SUB:
+	DD KARIP6_IMG-base_anims
+	DW 147, 106, 128, -10
+KARIP7:
+	DD KARIP7_SUB-base_anims, 0
+KARIP7_SUB:
+	DD KARIP7_IMG-base_anims
+	DW 86, 58, 128, -10
+SNRIP1:
+	DD SNRIP1_SUB-base_anims, 0
+SNRIP1_SUB:
+	DD SNRIP1_IMG-base_anims
+	DW 63, 96, 37, -23
+	DD   _SBFLA_P
+SNRIP2:
+	DD SNRIP2_SUB-base_anims, 0
+SNRIP2_SUB:
+	DD SNRIP2_IMG-base_anims
+	DW 79, 96, 53, -23
+SNRIP3:
+	DD SNRIP3_SUB-base_anims, 0
+SNRIP3_SUB:
+	DD SNRIP3_IMG-base_anims
+	DW 106, 96, 80, -23
+SNRIP4:
+	DD SNRIP4_SUB-base_anims, 0
+SNRIP4_SUB:
+	DD SNRIP4_IMG-base_anims
+	DW 148, 96, 126, -23
+	DD   _SBFLB_P
+SNRIP5:
+	DD SNRIP5_SUB-base_anims, 0
+SNRIP5_SUB:
+	DD SNRIP5_IMG-base_anims
+	DW 162, 96, 140, -23
+SNRIP6:
+	DD SNRIP6_SUB-base_anims, 0
+SNRIP6_SUB:
+	DD SNRIP6_IMG-base_anims
+	DW 164, 96, 146, -23
+SNRIP7:
+	DD SNRIP7_SUB-base_anims, 0
+SNRIP7_SUB:
+	DD SNRIP7_IMG-base_anims
+	DW 104, 96, 146, -23
+JXRIP1:
+	DD JXRIP1_SUB-base_anims, 0
+JXRIP1_SUB:
+	DD JXRIP1_IMG-base_anims
+	DW 62, 102, 34, -28
+	DD   _JAXFLA_P
+JXRIP2:
+	DD JXRIP2_SUB-base_anims, 0
+JXRIP2_SUB:
+	DD JXRIP2_IMG-base_anims
+	DW 77, 102, 50, -28
+JXRIP3:
+	DD JXRIP3_SUB-base_anims, 0
+JXRIP3_SUB:
+	DD JXRIP3_IMG-base_anims
+	DW 98, 102, 71, -28
+JXRIP4:
+	DD JXRIP4_SUB-base_anims, 0
+JXRIP4_SUB:
+	DD JXRIP4_IMG-base_anims
+	DW 138, 102, 114, -28
+	DD   _JAXFLB_P
+JXRIP5:
+	DD JXRIP5_SUB-base_anims, 0
+JXRIP5_SUB:
+	DD JXRIP5_IMG-base_anims
+	DW 144, 100, 125, -28
+JXRIP6:
+	DD JXRIP6_SUB-base_anims, 0
+JXRIP6_SUB:
+	DD JXRIP6_IMG-base_anims
+	DW 146, 100, 129, -28
+JXRIP7:
+	DD JXRIP7_SUB-base_anims, 0
+JXRIP7_SUB:
+	DD JXRIP7_IMG-base_anims
+	DW 88, 62, 130, -28
+INRIP1:
+	DD INRIP1_SUB-base_anims, 0
+INRIP1_SUB:
+	DD INRIP1_IMG-base_anims
+	DW 63, 100, 35, -16
+	DD   _INFLA_P
+INRIP2:
+	DD INRIP2_SUB-base_anims, 0
+INRIP2_SUB:
+	DD INRIP2_IMG-base_anims
+	DW 73, 100, 45, -16
+INRIP3:
+	DD INRIP3_SUB-base_anims, 0
+INRIP3_SUB:
+	DD INRIP3_IMG-base_anims
+	DW 98, 99, 71, -16
+INRIP4:
+	DD INRIP4_SUB-base_anims, 0
+INRIP4_SUB:
+	DD INRIP4_IMG-base_anims
+	DW 110, 88, 83, -16
+	DD   _INFLB_P
+INRIP5:
+	DD INRIP5_SUB-base_anims, 0
+INRIP5_SUB:
+	DD INRIP5_IMG-base_anims
+	DW 142, 88, 119, -16
+INRIP6:
+	DD INRIP6_SUB-base_anims, 0
+INRIP6_SUB:
+	DD INRIP6_IMG-base_anims
+	DW 146, 84, 130, -16
+INRIP7:
+	DD INRIP7_SUB-base_anims, 0
+INRIP7_SUB:
+	DD INRIP7_IMG-base_anims
+	DW 126, 64, 134, -16
+SZRIP1:
+	DD SZRIP1_SUB-base_anims, 0
+SZRIP1_SUB:
+	DD SZRIP1_IMG-base_anims
+	DW 60, 101, 30, -13
+	DD   _SUBFL_P
+SZRIP2:
+	DD SZRIP2_SUB-base_anims, 0
+SZRIP2_SUB:
+	DD SZRIP2_IMG-base_anims
+	DW 81, 101, 53, -13
+SZRIP3:
+	DD SZRIP3_SUB-base_anims, 0
+SZRIP3_SUB:
+	DD SZRIP3_IMG-base_anims
+	DW 109, 101, 81, -13
+SZRIP4:
+	DD SZRIP4_SUB-base_anims, 0
+SZRIP4_SUB:
+	DD SZRIP4_IMG-base_anims
+	DW 141, 101, 114, -13
+	DD   _SUBFLB_P
+SZRIP5:
+	DD SZRIP5_SUB-base_anims, 0
+SZRIP5_SUB:
+	DD SZRIP5_IMG-base_anims
+	DW 142, 82, 125, -13
+SZRIP6:
+	DD SZRIP6_SUB-base_anims, 0
+SZRIP6_SUB:
+	DD SZRIP6_IMG-base_anims
+	DW 143, 79, 130, -13
+SZRIP7:
+	DD SZRIP7_SUB-base_anims, 0
+SZRIP7_SUB:
+	DD SZRIP7_IMG-base_anims
+	DW 107, 65, 131, -13
+OBRIP1:
+	DD OBRIP1_SUB-base_anims, 0
+OBRIP1_SUB:
+	DD OBRIP1_IMG-base_anims
+	DW 51, 104, 24, -16
+	DD   _OBFLA_P
+OBRIP2:
+	DD OBRIP2_SUB-base_anims, 0
+OBRIP2_SUB:
+	DD OBRIP2_IMG-base_anims
+	DW 65, 104, 38, -16
+OBRIP3:
+	DD OBRIP3_SUB-base_anims, 0
+OBRIP3_SUB:
+	DD OBRIP3_IMG-base_anims
+	DW 104, 104, 77, -16
+OBRIP4:
+	DD OBRIP4_SUB-base_anims, 0
+OBRIP4_SUB:
+	DD OBRIP4_IMG-base_anims
+	DW 143, 104, 125, -16
+	DD   _OBFLB_P
+OBRIP5:
+	DD OBRIP5_SUB-base_anims, 0
+OBRIP5_SUB:
+	DD OBRIP5_IMG-base_anims
+	DW 156, 103, 142, -16
+OBRIP6:
+	DD OBRIP6_SUB-base_anims, 0
+OBRIP6_SUB:
+	DD OBRIP6_IMG-base_anims
+	DW 158, 95, 146, -16
+OBRIP7:
+	DD OBRIP7_SUB-base_anims, 0
+OBRIP7_SUB:
+	DD OBRIP7_IMG-base_anims
+	DW 94, 48, 146, -16
+LARIP1:
+	DD LARIP1_SUB-base_anims, 0
+LARIP1_SUB:
+	DD LARIP1_IMG-base_anims
+	DW 78, 96, 46, -21
+	DD   _LIAFLA_P
+LARIP2:
+	DD LARIP2_SUB-base_anims, 0
+LARIP2_SUB:
+	DD LARIP2_IMG-base_anims
+	DW 97, 96, 65, -21
+LARIP3:
+	DD LARIP3_SUB-base_anims, 0
+LARIP3_SUB:
+	DD LARIP3_IMG-base_anims
+	DW 126, 96, 94, -21
+LARIP4:
+	DD LARIP4_SUB-base_anims, 0
+LARIP4_SUB:
+	DD LARIP4_IMG-base_anims
+	DW 151, 96, 123, -21
+	DD   _LIAFLA_P
+LARIP5:
+	DD LARIP5_SUB-base_anims, 0
+LARIP5_SUB:
+	DD LARIP5_IMG-base_anims
+	DW 153, 95, 126, -21
+LARIP6:
+	DD LARIP6_SUB-base_anims, 0
+LARIP6_SUB:
+	DD LARIP6_IMG-base_anims
+	DW 152, 95, 127, -21
+LARIP7:
+	DD LARIP7_SUB-base_anims, 0
+LARIP7_SUB:
+	DD LARIP7_IMG-base_anims
+	DW 94, 91, 128, -21
+RBRIP1:
+	DD RBRIP1_SUB-base_anims, 0
+RBRIP1_SUB:
+	DD RBRIP1_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBRDFLA_P
+RBRIP2:
+	DD RBRIP2_SUB-base_anims, 0
+RBRIP2_SUB:
+	DD RBRIP2_IMG-base_anims
+	DW 82, 104, 54, -17
+RBRIP3:
+	DD RBRIP3_SUB-base_anims, 0
+RBRIP3_SUB:
+	DD RBRIP3_IMG-base_anims
+	DW 86, 104, 57, -17
+RBRIP4:
+	DD RBRIP4_SUB-base_anims, 0
+RBRIP4_SUB:
+	DD RBRIP4_IMG-base_anims
+	DW 129, 104, 102, -17
+	DD   _RBRDFLB_P
+RBRIP5:
+	DD RBRIP5_SUB-base_anims, 0
+RBRIP5_SUB:
+	DD RBRIP5_IMG-base_anims
+	DW 143, 104, 118, -17
+RBRIP6:
+	DD RBRIP6_SUB-base_anims, 0
+RBRIP6_SUB:
+	DD RBRIP6_IMG-base_anims
+	DW 139, 103, 121, -17
+RBRIP7:
+	DD RBRIP7_SUB-base_anims, 0
+RBRIP7_SUB:
+	DD RBRIP7_IMG-base_anims
+	DW 83, 103, 122, -17
+CYRAX_RBRIP1:
+	DD CYRAX_RBRIP1_SUB-base_anims, 0
+CYRAX_RBRIP1_SUB:
+	DD CYRAX_RBRIP1_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBYLFLA_P
+CYRAX_RBRIP4:
+	DD CYRAX_RBRIP4_SUB-base_anims, 0
+CYRAX_RBRIP4_SUB:
+	DD CYRAX_RBRIP4_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBYLFLB_P
+KLRIP1:
+	DD KLRIP1_SUB-base_anims, 0
+KLRIP1_SUB:
+	DD KLRIP1_IMG-base_anims
+	DW 62, 105, 33, -8
+	DD   _LAOFLA_P
+KLRIP2:
+	DD KLRIP2_SUB-base_anims, 0
+KLRIP2_SUB:
+	DD KLRIP2_IMG-base_anims
+	DW 78, 105, 49, -8
+KLRIP3:
+	DD KLRIP3_SUB-base_anims, 0
+KLRIP3_SUB:
+	DD KLRIP3_IMG-base_anims
+	DW 87, 104, 58, -9
+KLRIP4:
+	DD KLRIP4_SUB-base_anims, 0
+KLRIP4_SUB:
+	DD KLRIP4_IMG-base_anims
+	DW 134, 104, 108, -9
+	DD   _LAOFLB_P
+KLRIP5:
+	DD KLRIP5_SUB-base_anims, 0
+KLRIP5_SUB:
+	DD KLRIP5_IMG-base_anims
+	DW 149, 104, 126, -9
+KLRIP6:
+	DD KLRIP6_SUB-base_anims, 0
+KLRIP6_SUB:
+	DD KLRIP6_IMG-base_anims
+	DW 150, 100, 130, -11
+KLRIP7:
+	DD KLRIP7_SUB-base_anims, 0
+KLRIP7_SUB:
+	DD KLRIP7_IMG-base_anims
+	DW 65, 83, 131, -12
+TRRIP1:
+	DD TRRIP1_SUB-base_anims, 0
+TRRIP1_SUB:
+	DD TRRIP1_IMG-base_anims
+	DW 62, 107, 33, -13
+	DD   _TRFLA_P
+TRRIP2:
+	DD TRRIP2_SUB-base_anims, 0
+TRRIP2_SUB:
+	DD TRRIP2_IMG-base_anims
+	DW 82, 107, 52, -13
+TRRIP3:
+	DD TRRIP3_SUB-base_anims, 0
+TRRIP3_SUB:
+	DD TRRIP3_IMG-base_anims
+	DW 95, 107, 66, -13
+TRRIP4:
+	DD TRRIP4_SUB-base_anims, 0
+TRRIP4_SUB:
+	DD TRRIP4_IMG-base_anims
+	DW 130, 107, 100, -13
+	DD   _TRFLB_P
+TRRIP5:
+	DD TRRIP5_SUB-base_anims, 0
+TRRIP5_SUB:
+	DD TRRIP5_IMG-base_anims
+	DW 140, 107, 119, -13
+TRRIP6:
+	DD TRRIP6_SUB-base_anims, 0
+TRRIP6_SUB:
+	DD TRRIP6_IMG-base_anims
+	DW 146, 107, 126, -13
+TRRIP7:
+	DD TRRIP7_SUB-base_anims, 0
+TRRIP7_SUB:
+	DD TRRIP7_IMG-base_anims
+	DW 124, 107, 128, -13
+SGRIP1:
+	DD SGRIP1_SUB-base_anims, 0
+SGRIP1_SUB:
+	DD SGRIP1_IMG-base_anims
+	DW 80, 109, 59, -16
+	DD   _SGFLA_P
+SGRIP2:
+	DD SGRIP2_SUB-base_anims, 0
+SGRIP2_SUB:
+	DD SGRIP2_IMG-base_anims
+	DW 88, 109, 67, -16
+SGRIP3:
+	DD SGRIP3_SUB-base_anims, 0
+SGRIP3_SUB:
+	DD SGRIP3_IMG-base_anims
+	DW 110, 109, 90, -16
+SGRIP4:
+	DD SGRIP4_SUB-base_anims, 0
+SGRIP4_SUB:
+	DD SGRIP4_IMG-base_anims
+	DW 131, 109, 124, -16
+	DD   _SGFLB_P
+SGRIP5:
+	DD SGRIP5_SUB-base_anims, 0
+SGRIP5_SUB:
+	DD SGRIP5_IMG-base_anims
+	DW 139, 108, 134, -16
+SGRIP6:
+	DD SGRIP6_SUB-base_anims, 0
+SGRIP6_SUB:
+	DD SGRIP6_IMG-base_anims
+	DW 136, 102, 139, -16
+SGRIP7:
+	DD SGRIP7_SUB-base_anims, 0
+SGRIP7_SUB:
+	DD SGRIP7_IMG-base_anims
+	DW 96, 69, 139, -16
+TSRIP1:
+	DD TSRIP1_SUB-base_anims, 0
+TSRIP1_SUB:
+	DD TSRIP1_IMG-base_anims
+	DW 49, 105, 16, -3
+	DD   _TSFLA_P
+TSRIP2:
+	DD TSRIP2_SUB-base_anims, 0
+TSRIP2_SUB:
+	DD TSRIP2_IMG-base_anims
+	DW 74, 105, 42, -4
+TSRIP3:
+	DD TSRIP3_SUB-base_anims, 0
+TSRIP3_SUB:
+	DD TSRIP3_IMG-base_anims
+	DW 105, 105, 73, -4
+TSRIP4:
+	DD TSRIP4_SUB-base_anims, 0
+TSRIP4_SUB:
+	DD TSRIP4_IMG-base_anims
+	DW 133, 105, 106, -4
+	DD   _TSFLB_P
+TSRIP5:
+	DD TSRIP5_SUB-base_anims, 0
+TSRIP5_SUB:
+	DD TSRIP5_IMG-base_anims
+	DW 144, 101, 123, -6
+TSRIP6:
+	DD TSRIP6_SUB-base_anims, 0
+TSRIP6_SUB:
+	DD TSRIP6_IMG-base_anims
+	DW 147, 100, 127, -7
+TSRIP7:
+	DD TSRIP7_SUB-base_anims, 0
+TSRIP7_SUB:
+	DD TSRIP7_IMG-base_anims
+	DW 98, 51, 128, -8
+LURIP1:
+	DD LURIP1_SUB-base_anims, 0
+LURIP1_SUB:
+	DD LURIP1_IMG-base_anims
+	DW 66, 99, 44, -13
+	DD   _LUFLA_P
+LURIP2:
+	DD LURIP2_SUB-base_anims, 0
+LURIP2_SUB:
+	DD LURIP2_IMG-base_anims
+	DW 84, 99, 62, -13
+LURIP3:
+	DD LURIP3_SUB-base_anims, 0
+LURIP3_SUB:
+	DD LURIP3_IMG-base_anims
+	DW 110, 99, 88, -13
+LURIP4:
+	DD LURIP4_SUB-base_anims, 0
+LURIP4_SUB:
+	DD LURIP4_IMG-base_anims
+	DW 146, 99, 127, -13
+	DD   _LUFLA_P
+LURIP5:
+	DD LURIP5_SUB-base_anims, 0
+LURIP5_SUB:
+	DD LURIP5_IMG-base_anims
+	DW 162, 97, 146, -15
+LURIP6:
+	DD LURIP6_SUB-base_anims, 0
+LURIP6_SUB:
+	DD LURIP6_IMG-base_anims
+	DW 163, 97, 151, -15
+LURIP7:
+	DD LURIP7_SUB-base_anims, 0
+LURIP7_SUB:
+	DD LURIP7_IMG-base_anims
+	DW 86, 93, 152, -15
+SMOKE_RBRIP1:
+	DD SMOKE_RBRIP1_SUB-base_anims, 0
+SMOKE_RBRIP1_SUB:
+	DD SMOKE_RBRIP1_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBBLFLA_P
+SMOKE_RBRIP4:
+	DD SMOKE_RBRIP4_SUB-base_anims, 0
+SMOKE_RBRIP4_SUB:
+	DD SMOKE_RBRIP4_IMG-base_anims
+	DW 62, 104, 33, -17
+	DD   _RBBLFLB_P
+LIA2_LARIP1:
+	DD LIA2_LARIP1_SUB-base_anims, 0
+LIA2_LARIP1_SUB:
+	DD LIA2_LARIP1_IMG-base_anims
+	DW 78, 96, 46, -21
+	DD   _LIALTFA_P
+LIA2_LARIP4:
+	DD LIA2_LARIP4_SUB-base_anims, 0
+LIA2_LARIP4_SUB:
+	DD LIA2_LARIP4_IMG-base_anims
+	DW 151, 96, 123, -21
+	DD   _LIALTFA_P
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+SGOROSKEL1:
+	DD SGOROSKEL1_SUB-base_anims, 0
+SGOROSKEL1_SUB:
+	DD SGOROSKEL1_IMG-base_anims
+	DW 95, 110, 75, -15
+	DD   _SKELRIP_P
+SGOROSKEL2:
+	DD SGOROSKEL2_SUB-base_anims, 0
+SGOROSKEL2_SUB:
+	DD SGOROSKEL2_IMG-base_anims
+	DW 81, 110, 61, -15
+SGOROSKEL3:
+	DD SGOROSKEL3_SUB-base_anims, 0
+SGOROSKEL3_SUB:
+	DD SGOROSKEL3_IMG-base_anims
+	DW 69, 110, 49, -15

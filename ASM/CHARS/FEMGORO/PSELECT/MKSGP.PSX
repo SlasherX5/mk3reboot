@@ -1,0 +1,145 @@
+_sg_panitab1:
+	DD a__sg_stance-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_dummy-_sg_panitab1
+	DD a__sg_victory-_sg_panitab1
+a__sg_dummy:
+a__sg_stance:
+	DD SHSTANCE1-_sg_panitab1
+	DD SHSTANCE2-_sg_panitab1
+	DD SHSTANCE3-_sg_panitab1
+	DD SHSTANCE4-_sg_panitab1
+	DD SHSTANCE5-_sg_panitab1
+	DD SHSTANCE6-_sg_panitab1
+	DD SHSTANCE5-_sg_panitab1
+	DD SHSTANCE4-_sg_panitab1
+	DD SHSTANCE3-_sg_panitab1
+	DD SHSTANCE2-_sg_panitab1
+	DD ani_jump
+	DD a__sg_stance-_sg_panitab1
+a__sg_victory:
+	DD SHVICTORY1-_sg_panitab1
+	DD SHVICTORY2-_sg_panitab1
+	DD SHVICTORY3-_sg_panitab1
+	DD SHVICTORY4-_sg_panitab1
+	DD SHVICTORY5-_sg_panitab1
+	DD SHVICTORY6-_sg_panitab1
+	DD SHVICTORY7-_sg_panitab1
+	DD SHVICTORY8-_sg_panitab1
+	DD SHVICTORY9-_sg_panitab1
+	DD SHVICTORY10-_sg_panitab1
+	DD SHVICTORY11-_sg_panitab1
+	DD SHVICTORY12-_sg_panitab1
+	DD SHVICTORY13-_sg_panitab1
+	DD SHVICTORY14-_sg_panitab1
+	DD 0
+SHSTANCE1:
+	DD SHSTANCE1_SUB-_sg_panitab1, 0
+SHSTANCE1_SUB:
+	DD SHSTANCE1_IMG-_sg_panitab1
+	DW 62, 123, 26, -7
+SHSTANCE2:
+	DD SHSTANCE2_SUB-_sg_panitab1, 0
+SHSTANCE2_SUB:
+	DD SHSTANCE2_IMG-_sg_panitab1
+	DW 62, 123, 25, -7
+SHSTANCE3:
+	DD SHSTANCE3_SUB-_sg_panitab1, 0
+SHSTANCE3_SUB:
+	DD SHSTANCE3_IMG-_sg_panitab1
+	DW 62, 122, 24, -8
+SHSTANCE4:
+	DD SHSTANCE4_SUB-_sg_panitab1, 0
+SHSTANCE4_SUB:
+	DD SHSTANCE4_IMG-_sg_panitab1
+	DW 62, 122, 24, -8
+SHSTANCE5:
+	DD SHSTANCE5_SUB-_sg_panitab1, 0
+SHSTANCE5_SUB:
+	DD SHSTANCE5_IMG-_sg_panitab1
+	DW 62, 122, 24, -8
+SHSTANCE6:
+	DD SHSTANCE6_SUB-_sg_panitab1, 0
+SHSTANCE6_SUB:
+	DD SHSTANCE6_IMG-_sg_panitab1
+	DW 62, 122, 24, -8
+SHVICTORY1:
+	DD SHVICTORY1_SUB-_sg_panitab1, 0
+SHVICTORY1_SUB:
+	DD SHVICTORY1_IMG-_sg_panitab1
+	DW 60, 126, 23, -4
+SHVICTORY2:
+	DD SHVICTORY2_SUB-_sg_panitab1, 0
+SHVICTORY2_SUB:
+	DD SHVICTORY2_IMG-_sg_panitab1
+	DW 74, 126, 26, -4
+SHVICTORY3:
+	DD SHVICTORY3_SUB-_sg_panitab1, 0
+SHVICTORY3_SUB:
+	DD SHVICTORY3_IMG-_sg_panitab1
+	DW 89, 130, 34, 0
+SHVICTORY4:
+	DD SHVICTORY4_SUB-_sg_panitab1, 0
+SHVICTORY4_SUB:
+	DD SHVICTORY4_IMG-_sg_panitab1
+	DW 95, 129, 36, -1
+SHVICTORY5:
+	DD SHVICTORY5_SUB-_sg_panitab1, 0
+SHVICTORY5_SUB:
+	DD SHVICTORY5_IMG-_sg_panitab1
+	DW 98, 128, 38, -2
+SHVICTORY6:
+	DD SHVICTORY6_SUB-_sg_panitab1, 0
+SHVICTORY6_SUB:
+	DD SHVICTORY6_IMG-_sg_panitab1
+	DW 90, 133, 35, 2
+SHVICTORY7:
+	DD SHVICTORY7_SUB-_sg_panitab1, 0
+SHVICTORY7_SUB:
+	DD SHVICTORY7_IMG-_sg_panitab1
+	DW 78, 145, 30, 14
+SHVICTORY8:
+	DD SHVICTORY8_SUB-_sg_panitab1, 0
+SHVICTORY8_SUB:
+	DD SHVICTORY8_IMG-_sg_panitab1
+	DW 54, 156, 17, 25
+SHVICTORY9:
+	DD SHVICTORY9_SUB-_sg_panitab1, 0
+SHVICTORY9_SUB:
+	DD SHVICTORY9_IMG-_sg_panitab1
+	DW 82, 147, 31, 16
+SHVICTORY10:
+	DD SHVICTORY10_SUB-_sg_panitab1, 0
+SHVICTORY10_SUB:
+	DD SHVICTORY10_IMG-_sg_panitab1
+	DW 99, 134, 38, 3
+SHVICTORY11:
+	DD SHVICTORY11_SUB-_sg_panitab1, 0
+SHVICTORY11_SUB:
+	DD SHVICTORY11_IMG-_sg_panitab1
+	DW 112, 124, 44, -6
+SHVICTORY12:
+	DD SHVICTORY12_SUB-_sg_panitab1, 0
+SHVICTORY12_SUB:
+	DD SHVICTORY12_IMG-_sg_panitab1
+	DW 113, 118, 43, -12
+SHVICTORY13:
+	DD SHVICTORY13_SUB-_sg_panitab1, 0
+SHVICTORY13_SUB:
+	DD SHVICTORY13_IMG-_sg_panitab1
+	DW 116, 114, 46, -16
+SHVICTORY14:
+	DD SHVICTORY14_SUB-_sg_panitab1, 0
+SHVICTORY14_SUB:
+	DD SHVICTORY14_IMG-_sg_panitab1
+	DW 117, 113, 46, -17

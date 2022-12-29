@@ -1,0 +1,80 @@
+#include ../../mk3.mif
+
+
+all: $(EXE)robo2/robo2f1.bin \
+	 $(EXE)robo2/robo2.bin  \
+	 $(EXE)robo2/robo2a.bin \
+	 $(EXE)robo2/robo2b.bin \
+	 $(EXE)robo2/robo2f.bin \
+	 $(EXE)robo2/robo2s.bin \
+	 .SYMBOLIC
+
+# MAIN GAME	PLAY
+
+robo2.obj: robo2.asm  $(OVLARTI) \
+	..\chars\robo2\mkrobo2.psx \
+	..\chars\robo2\mkrobo2.psi \
+	..\chars\robo2\rbb.psi
+
+# FRIENDSHIP 
+
+robo2s.obj: robo2s.asm $(OVLARTI) \
+	..\chars\robo2\mkrobo2s.psx \
+	..\chars\robo2\mkrobo2s.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+
+# BABALITY
+
+robo2b.obj: robo2b.asm $(OVLARTI) \
+	..\chars\robo2\mkrobo2b.psx \
+	..\common\baby\babyr1.psx \
+	..\common\baby\babyr1.psi \
+	..\common\baby\babyxpld.psi 
+
+
+# ANIMALITY
+
+robo2a.obj: robo2a.asm $(OVLARTI) \
+	..\chars\robo2\mkrobo2a.psx \
+	..\chars\robo2\mkrobo2a.psi \
+	..\common\cutup\ocutup.psx \
+	..\common\cutup\ocutup.psi \
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+# FATALITIES
+
+robo2f.obj: robo2f.asm $(OVLARTI) \
+	..\chars\robo2\mkrobo2f.psx \
+	..\chars\robo2\mkrobo2f.psi \
+	..\common\common\arm.psx \
+	..\common\common\arm.psi \
+	..\common\common\leg.psx \
+	..\common\common\leg.psi \
+	..\common\common\arm2.psx \
+	..\common\common\arm2.psi \
+	..\common\common\leg2.psx \
+	..\common\common\leg2.psi \
+	..\common\common\limb.psx \
+	..\common\common\limb.psi \
+	..\common\common\bone.psx \
+	..\common\common\bone.psi \
+	..\common\common\cage.psx \
+	..\common\common\cage.psi \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+
+rob2f1.obj: rob2f1.asm $(OVLARTI) \
+	..\chars\robo2\mkrob2f1.psx \
+	..\chars\robo2\mkrob2f1.psi \
+	..\common\common\skelfire.psx \
+	..\common\common\skelfire.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+

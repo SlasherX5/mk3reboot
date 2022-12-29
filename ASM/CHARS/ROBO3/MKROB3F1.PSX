@@ -1,0 +1,333 @@
+robo3_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+robo3_anitab2:
+	DD 0	;a_chest_open-robo3_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0	;a_bomb-robo3_anitab1
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD a_arm_bomb-robo3_anitab1
+	DD 0	;a_earth-robo3_anitab1
+	DD a_smbomb-robo3_anitab1
+	DD ochar_reached-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0				; 30
+	DD 0
+	DD 0
+	DD a_fatality_drip-base_anims	;33
+	DD a_blood_explode-base_anims	;34
+	DD 0
+	DD a_arm2-base_anims
+	DD a_leg-base_anims
+	DD 0
+	DD a_bone-base_anims
+	DD 0
+	DD a_rib_cage-base_anims
+	DD a_skull-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+a_zap:
+a_dummy:
+;a_chest_open
+;	DW RBCHEST1-robo3_anitab1
+;	DW RBCHEST2-robo3_anitab1
+;	DW 0
+;a_bomb
+;	DW RRBOMB1-robo3_anitab1
+;	DW RRBOMB2-robo3_anitab1
+;	DW RRBOMB3-robo3_anitab1
+;	DW RRBOMB4-robo3_anitab1
+;	DW RRBOMB5-robo3_anitab1
+;	DW RRBOMB6-robo3_anitab1
+;	DW RRBOMB1-robo3_anitab1
+;	DW RRBOMB1-robo3_anitab1
+;	DW RRBOMB1-robo3_anitab1
+;	DW RRBOMB1-robo3_anitab1
+;	DW ani_jump
+;	DW a_bomb-robo3_anitab1
+;	DW 0
+;	DW PULSE1-robo3_anitab1
+;	DW PULSE2-robo3_anitab1
+;	DW PULSE3-robo3_anitab1
+;	DW PULSE4-robo3_anitab1
+;	DW PULSE5-robo3_anitab1
+;	DW PULSE6-robo3_anitab1
+;	DW 0
+;a_earth
+;	DW EARTH1-robo3_anitab1
+;	DW ani_swpal
+;	DW EARTH2-robo3_anitab1
+;	DW 0
+a_arm_bomb:
+	DD RBSHOLDER1-robo3_anitab1
+	DD ani_sladd
+	DD ARM1-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM1-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM2-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM3-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM4-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM5-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM6-robo3_anitab1
+	DD 0
+	DD ani_slani_sleep
+	DD ARM7-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM8-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM9-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM10-robo3_anitab1
+	DD ani_slani_sleep
+	DD ARM11-robo3_anitab1
+	DD 0
+a_smbomb:
+	DD SMBOMB1A-robo3_anitab1
+	DD 0
+;RBCHEST1
+;	DW RBCHEST1_SUB-robo3_anitab1, 0
+;RBCHEST1_SUB
+;	DW RBCHEST1_IMG-robo3_anitab1
+;	DH 46, 115, 19, -5
+;RBCHEST2
+;	DW RBCHEST2_SUB-robo3_anitab1, 0
+;RBCHEST2_SUB
+;	DW RBCHEST2_IMG-robo3_anitab1
+;	DH 47, 113, 20, -7
+;RRBOMB1
+;	DW RRBOMB1_SUB-robo3_anitab1, 0
+;RRBOMB1_SUB
+;	DW RRBOMB1_IMG-robo3_anitab1
+;	DH 14, 13, 0, 0
+;	dw   _ROBOMB_P
+;RRBOMB2
+;	DW RRBOMB2_SUB-robo3_anitab1, 0
+;RRBOMB2_SUB
+;	DW RRBOMB2_IMG-robo3_anitab1
+;	DH 14, 13, 0, 0
+;RRBOMB3
+;	DW RRBOMB3_SUB-robo3_anitab1, 0
+;RRBOMB3_SUB
+;	DW RRBOMB3_IMG-robo3_anitab1
+;	DH 14, 13, 0, 0
+;RRBOMB4
+;	DW RRBOMB4_SUB-robo3_anitab1, 0
+;RRBOMB4_SUB
+;	DW RRBOMB4_IMG-robo3_anitab1
+;	DH 14, 13, 0, 0
+;RRBOMB5
+;	DW RRBOMB5_SUB-robo3_anitab1, 0
+;RRBOMB5_SUB
+;	DW RRBOMB5_IMG-robo3_anitab1
+;	DH 14, 13, 0, 0
+;RRBOMB6
+;	DW RRBOMB6_SUB-robo3_anitab1, 0
+;RRBOMB6_SUB
+;	DW RRBOMB6_IMG-robo3_anitab1
+;	DH 14, 13, 0, 0
+;PULSE1
+;	DW PULSE1_SUB-robo3_anitab1, 0
+;PULSE1_SUB
+;	DW PULSE1_IMG-robo3_anitab1
+;	DH 15, 13, 1, 0
+;PULSE2
+;	DW PULSE2_SUB-robo3_anitab1, 0
+;PULSE2_SUB
+;	DW PULSE2_IMG-robo3_anitab1
+;	DH 17, 13, 2, 0
+;PULSE3
+;	DW PULSE3_SUB-robo3_anitab1, 0
+;PULSE3_SUB
+;	DW PULSE3_IMG-robo3_anitab1
+;	DH 18, 13, 2, 0
+;PULSE4
+;	DW PULSE4_SUB-robo3_anitab1, 0
+;PULSE4_SUB
+;	DW PULSE4_IMG-robo3_anitab1
+;	DH 20, 13, 3, 0
+;PULSE5
+;	DW PULSE5_SUB-robo3_anitab1, 0
+;PULSE5_SUB
+;	DW PULSE5_IMG-robo3_anitab1
+;	DH 18, 13, 2, 0
+;PULSE6
+;	DW PULSE6_SUB-robo3_anitab1, 0
+;PULSE6_SUB
+;	DW PULSE6_IMG-robo3_anitab1
+;	DH 15, 13, 1, 0
+;
+RBSHOLDER1:
+	DD RBSHOLDER1_SUB-robo3_anitab1,0
+RBSHOLDER1_SUB:
+	DD RBSHOLDER1_IMG-robo3_anitab1
+	DW 54, 114, 23, -6
+ARM1:
+	DD ARM1_SUB-robo3_anitab1, 0
+ARM1_SUB:
+	DD ARM1_IMG-robo3_anitab1
+	DW 28, 29, 6, 0
+	DD _SMMCARM_P
+ARM2:
+	DD ARM2_SUB-robo3_anitab1, 0
+ARM2_SUB:
+	DD ARM2_IMG-robo3_anitab1
+	DW 57, 40, 6, 10
+ARM3:
+	DD ARM3_SUB-robo3_anitab1, 0
+ARM3_SUB:
+	DD ARM3_IMG-robo3_anitab1
+	DW 94, 57, 6, 27
+ARM4:
+	DD ARM4_SUB-robo3_anitab1, 0
+ARM4_SUB:
+	DD ARM4_IMG-robo3_anitab1
+	DW 118, 60, 6, 30
+ARM5:
+	DD ARM5_SUB-robo3_anitab1, 0
+ARM5_SUB:
+	DD ARM5_IMG-robo3_anitab1
+	DW 118, 62, 6, 32
+ARM6:
+	DD ARM6_SUB-robo3_anitab1, 0
+ARM6_SUB:
+	DD ARM6_IMG-robo3_anitab1
+	DW 118, 65, 6, 36
+ARM7:
+	DD ARM7_SUB-robo3_anitab1, 0
+ARM7_SUB:
+	DD ARM7_IMG-robo3_anitab1
+	DW 108, 52, 6, 22
+ARM8:
+	DD ARM8_SUB-robo3_anitab1, 0
+ARM8_SUB:
+	DD ARM8_IMG-robo3_anitab1
+	DW 114, 46, 6, 16
+ARM9:
+	DD ARM9_SUB-robo3_anitab1, 0
+ARM9_SUB:
+	DD ARM9_IMG-robo3_anitab1
+	DW 90, 45, 6, 15
+ARM10:
+	DD ARM10_SUB-robo3_anitab1, 0
+ARM10_SUB:
+	DD ARM10_IMG-robo3_anitab1
+	DW 53, 27, 6, -2
+ARM11:
+	DD ARM11_SUB-robo3_anitab1, 0
+ARM11_SUB:
+	DD ARM11_IMG-robo3_anitab1
+	DW 24, 15, 6, -13
+;EARTH1
+;	DW EARTH1_SUB-robo3_anitab1, 0
+;EARTH1_SUB
+;	DW EARTH1_IMG-robo3_anitab1
+;	DH 47, 46, 23, 23
+;	dw   _EARTH01P
+;EARTH2
+;	DW EARTH2_SUB-robo3_anitab1, 0
+;EARTH2_SUB
+;	DW EARTH2_IMG-robo3_anitab1
+;	DH 138, 133, 70, 69
+;	dw   _EARTH02P
+SMBOMB1A:
+	DD SMBOMB1A_IMG-robo3_anitab1
+	DW 15, 27, -99, -4
+	DD	_SMMCARM_P

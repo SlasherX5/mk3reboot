@@ -1,0 +1,178 @@
+sg_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+sg_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+
+	DD a_scorpion-sg_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD a_arm2-base_anims
+	DD a_leg-base_anims
+	DD 0
+	DD a_bone-base_anims
+	DD 0
+	DD a_rib_cage-base_anims
+	DD a_skull-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+a_scorpion:
+	DD SCORP1-sg_anitab1
+	DD SCORP3-sg_anitab1
+	DD SCORP4-sg_anitab1
+	DD SCORP5-sg_anitab1
+	DD SCORP6-sg_anitab1
+	DD 0
+	DD SCORP7-sg_anitab1
+	DD SCORP8-sg_anitab1
+	DD SCORP9-sg_anitab1
+	DD 0
+SCORP1:
+	DD SCORP1_SUB-sg_anitab1, 0
+SCORP1_SUB:
+	DD SCORP1_IMG-sg_anitab1
+	DW 62, 121, 25, -8
+	DD   _SCORP_P
+SCORP3:
+	DD SCORP3_SUB-sg_anitab1, 0
+SCORP3_SUB:
+	DD SCORP3_IMG-sg_anitab1
+	DW 74, 105, 26, -29
+SCORP4:
+	DD SCORP4_SUB-sg_anitab1, 0
+SCORP4_SUB:
+	DD SCORP4_IMG-sg_anitab1
+	DW 79, 81, 28, -52
+SCORP5:
+	DD SCORP5_SUB-sg_anitab1, 0
+SCORP5_SUB:
+	DD SCORP5_IMG-sg_anitab1
+	DW 95, 87, 35, -48
+SCORP6:
+	DD SCORP6_SUB-sg_anitab1, 0
+SCORP6_SUB:
+	DD SCORP6_IMG-sg_anitab1
+	DW 111, 99, 43, -36
+SCORP7:
+	DD SCORP7_SUB-sg_anitab1, 0
+SCORP7_SUB:
+	DD SCORP7_IMG-sg_anitab1
+	DW 95, 102, 34, -33
+SCORP8:
+	DD SCORP8_SUB-sg_anitab1, 0
+SCORP8_SUB:
+	DD SCORP8_IMG-sg_anitab1
+	DW 79, 105, 21, -36
+SCORP9:
+	DD SCORP9_SUB-sg_anitab1, 0
+SCORP9_SUB:
+	DD SCORP9_IMG-sg_anitab1
+	DW 104, 100, 19, -40

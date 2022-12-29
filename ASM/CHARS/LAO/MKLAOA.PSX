@@ -1,0 +1,202 @@
+lao_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+lao_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+	DD a_cheetah-lao_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+a_cheetah:
+	DD CHEETA1-lao_anitab1
+	DD CHEETA3-lao_anitab1
+	DD CHEETA4-lao_anitab1
+	DD CHEETA5-lao_anitab1
+	DD CHEETA6-lao_anitab1
+	DD 0
+	DD CHEETA7-lao_anitab1
+	DD CHEETA9-lao_anitab1
+	DD 0
+	DD CHEETA10-lao_anitab1
+	DD CHEETA15-lao_anitab1
+	DD 0
+j_cheet:
+	DD CHEETA16-lao_anitab1
+	DD CHEETA17-lao_anitab1
+	DD CHEETA19-lao_anitab1
+	DD ani_jump
+	DD j_cheet-lao_anitab1
+	DD 0
+	DD CHEETA15-lao_anitab1
+	DD 0
+CHEETA1:
+	DD CHEETA1_SUB-lao_anitab1, 0
+CHEETA1_SUB:
+	DD CHEETA1_IMG-lao_anitab1
+	DW 50, 106, 21, -6
+	DD	_CHEETAH_P
+CHEETA3:
+	DD CHEETA3_SUB-lao_anitab1, 0
+CHEETA3_SUB:
+	DD CHEETA3_IMG-lao_anitab1
+	DW 58, 104, 24, -13
+CHEETA4:
+	DD CHEETA4_SUB-lao_anitab1, 0
+CHEETA4_SUB:
+	DD CHEETA4_IMG-lao_anitab1
+	DW 62, 93, 24, -23
+CHEETA5:
+	DD CHEETA5_SUB-lao_anitab1, 0
+CHEETA5_SUB:
+	DD CHEETA5_IMG-lao_anitab1
+	DW 76, 82, 25, -34
+CHEETA6:
+	DD CHEETA6_SUB-lao_anitab1, 0
+CHEETA6_SUB:
+	DD CHEETA6_IMG-lao_anitab1
+	DW 114, 70, 46, -47
+CHEETA7:
+	DD CHEETA7_SUB-lao_anitab1, 0
+CHEETA7_SUB:
+	DD CHEETA7_IMG-lao_anitab1
+	DW 130, 53, 65, -63
+CHEETA9:
+	DD CHEETA9_SUB-lao_anitab1, 0
+CHEETA9_SUB:
+	DD CHEETA9_IMG-lao_anitab1
+	DW 151, 94, 68, -19
+CHEETA10:
+	DD CHEETA10_SUB-lao_anitab1, 0
+CHEETA10_SUB:
+	DD CHEETA10_IMG-lao_anitab1
+	DW 143, 55, 59, -29
+CHEETA15:
+	DD CHEETA15_SUB-lao_anitab1, 0
+CHEETA15_SUB:
+	DD CHEETA15_IMG-lao_anitab1
+	DW 114, 48, 56, -70
+CHEETA16:
+	DD CHEETA16_SUB-lao_anitab1, 0
+CHEETA16_SUB:
+	DD CHEETA16_IMG-lao_anitab1
+	DW 111, 50, 57, -70
+CHEETA17:
+	DD CHEETA17_SUB-lao_anitab1, 0
+CHEETA17_SUB:
+	DD CHEETA17_IMG-lao_anitab1
+	DW 116, 43, 57, -76
+CHEETA19:
+	DD CHEETA19_SUB-lao_anitab1, 0
+CHEETA19_SUB:
+	DD CHEETA19_IMG-lao_anitab1
+	DW 119, 48, 58, -75

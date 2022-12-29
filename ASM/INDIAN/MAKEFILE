@@ -1,0 +1,64 @@
+
+#include ../../mk3.mif
+
+
+all: $(EXE)indian/indb.bin  \
+     $(EXE)indian/ind.bin \
+	 $(EXE)indian/inda.bin \
+	 $(EXE)indian/inds.bin \
+	 $(EXE)indian/indf.bin \
+	 $(EXE)indian/indf1.bin \
+	 .SYMBOLIC
+
+# MAIN GAME	PLAY
+
+ind.obj: ind.asm $(OVLARTI) \
+	..\chars\indian\mkind.psx \
+	..\chars\indian\mkind.psi \
+	..\chars\indian\indb.psi
+
+ind.bin: $(PALDATA) ind.lnk mkind.o
+	psylink /c /m /q /o$(ORGADDR) @$*.lnk,temp
+
+# FRIENDSHIP 
+
+inds.obj: inds.asm $(OVLARTI) \
+	..\chars\indian\mkinds.psx \
+	..\chars\indian\mkinds.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+
+# FRIENDSHIP & BABALITY
+
+indb.obj: indb.asm $(OVLARTI) \
+	..\chars\indian\mkindb.psx \
+	..\common\baby\babyind.psx \
+	..\common\baby\babyind.psi \
+	..\common\baby\babyxpld.psi 
+	$(ASM)
+
+# ANIMALITY
+
+inda.obj: inda.asm $(OVLARTI) \
+	..\chars\indian\mkinda.psx \
+	..\chars\indian\mkinda.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+# FATALITIES
+
+indf.obj: indf.asm $(OVLARTI) \
+	..\chars\indian\mkindf.psx \
+	..\chars\indian\mkindf.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+indf1.obj: indf1.asm $(OVLARTI) \
+	..\chars\indian\mkindf1.psx \
+	..\chars\indian\mkindf1.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+

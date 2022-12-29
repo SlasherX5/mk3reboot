@@ -1,0 +1,295 @@
+kano_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+kano_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_kano_friend-kano_anitab1
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_kano_friend:
+	DD KNFRIEND1-kano_anitab1
+	DD KNFRIEND2-kano_anitab1
+	DD KNFRIEND3-kano_anitab1
+	DD KNFRIEND4-kano_anitab1
+	DD KNFRIEND5-kano_anitab1
+	DD KNFRIEND6-kano_anitab1
+	DD KNFRIEND7-kano_anitab1
+	DD KNFRIEND8-kano_anitab1
+	DD KNFRIEND9-kano_anitab1
+	DD KNFRIEND10-kano_anitab1
+	DD KNFRIEND11-kano_anitab1
+	DD KNFRIEND12-kano_anitab1
+	DD KNFRIEND13-kano_anitab1
+	DD KNFRIEND14-kano_anitab1
+	DD KNFRIEND16-kano_anitab1
+	DD KNFRIEND17-kano_anitab1
+	DD KNFRIEND18-kano_anitab1
+	DD KNFRIEND19-kano_anitab1
+	DD ani_sladd
+	DD BUBGUM1-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM1-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM2-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM3-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM4-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM5-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM5-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM5-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM5-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM5-kano_anitab1
+	DD ani_calla
+	DD rsnd_big_block
+	DD ani_slani_sleep
+	DD BUBGUM6-kano_anitab1
+	DD ani_slani_sleep
+	DD BUBGUM7-kano_anitab1
+	DD 0
+KNFRIEND1:
+	DD KNFRIEND1_SUB-kano_anitab1, 0
+KNFRIEND1_SUB:
+	DD KNFRIEND1_IMG-kano_anitab1
+	DW 49, 116, 18, -2
+KNFRIEND2:
+	DD KNFRIEND2_SUB-kano_anitab1, 0
+KNFRIEND2_SUB:
+	DD KNFRIEND2_IMG-kano_anitab1
+	DW 47, 110, 17, -8
+KNFRIEND3:
+	DD KNFRIEND3_SUB-kano_anitab1, 0
+KNFRIEND3_SUB:
+	DD KNFRIEND3_IMG-kano_anitab1
+	DW 47, 112, 17, -6
+KNFRIEND4:
+	DD KNFRIEND4_SUB-kano_anitab1, 0
+KNFRIEND4_SUB:
+	DD KNFRIEND4_IMG-kano_anitab1
+	DW 46, 116, 15, -2
+KNFRIEND5:
+	DD KNFRIEND5_SUB-kano_anitab1, 0
+KNFRIEND5_SUB:
+	DD KNFRIEND5_IMG-kano_anitab1
+	DW 45, 117, 14, -1
+KNFRIEND6:
+	DD KNFRIEND6_SUB-kano_anitab1, 0
+KNFRIEND6_SUB:
+	DD KNFRIEND6_IMG-kano_anitab1
+	DW 45, 117, 14, -1
+KNFRIEND7:
+	DD KNFRIEND7_SUB-kano_anitab1, 0
+KNFRIEND7_SUB:
+	DD KNFRIEND7_IMG-kano_anitab1
+	DW 45, 117, 14, -1
+KNFRIEND8:
+	DD KNFRIEND8_SUB-kano_anitab1, 0
+KNFRIEND8_SUB:
+	DD KNFRIEND8_IMG-kano_anitab1
+	DW 46, 117, 15, -1
+KNFRIEND9:
+	DD KNFRIEND9_SUB-kano_anitab1, 0
+KNFRIEND9_SUB:
+	DD KNFRIEND9_IMG-kano_anitab1
+	DW 46, 117, 16, -1
+KNFRIEND10:
+	DD KNFRIEND10_SUB-kano_anitab1, 0
+KNFRIEND10_SUB:
+	DD KNFRIEND10_IMG-kano_anitab1
+	DW 46, 117, 16, -1
+KNFRIEND11:
+	DD KNFRIEND11_SUB-kano_anitab1, 0
+KNFRIEND11_SUB:
+	DD KNFRIEND11_IMG-kano_anitab1
+	DW 46, 117, 16, -1
+KNFRIEND12:
+	DD KNFRIEND12_SUB-kano_anitab1, 0
+KNFRIEND12_SUB:
+	DD KNFRIEND12_IMG-kano_anitab1
+	DW 46, 117, 16, -1
+KNFRIEND13:
+	DD KNFRIEND13_SUB-kano_anitab1, 0
+KNFRIEND13_SUB:
+	DD KNFRIEND13_IMG-kano_anitab1
+	DW 46, 117, 16, -1
+KNFRIEND14:
+	DD KNFRIEND14_SUB-kano_anitab1, 0
+KNFRIEND14_SUB:
+	DD KNFRIEND14_IMG-kano_anitab1
+	DW 46, 117, 16, -1
+KNFRIEND16:
+	DD KNFRIEND16_SUB-kano_anitab1, 0
+KNFRIEND16_SUB:
+	DD KNFRIEND16_IMG-kano_anitab1
+	DW 46, 117, 16, -1
+KNFRIEND17:
+	DD KNFRIEND17_SUB-kano_anitab1, 0
+KNFRIEND17_SUB:
+	DD KNFRIEND17_IMG-kano_anitab1
+	DW 46, 117, 16, -1
+KNFRIEND18:
+	DD KNFRIEND18_SUB-kano_anitab1, 0
+KNFRIEND18_SUB:
+	DD KNFRIEND18_IMG-kano_anitab1
+	DW 46, 117, 16, -1
+KNFRIEND19:
+	DD KNFRIEND19_SUB-kano_anitab1, 0
+KNFRIEND19_SUB:
+	DD KNFRIEND19_IMG-kano_anitab1
+	DW 47, 117, 17, -1
+BUBGUM1:
+	DD BUBGUM1_SUB-kano_anitab1, 0
+BUBGUM1_SUB:
+	DD BUBGUM1_IMG-kano_anitab1
+	DW 5, 4, -7, -6
+	DD   _BUBBLE_P
+BUBGUM2:
+	DD BUBGUM2_SUB-kano_anitab1, 0
+BUBGUM2_SUB:
+	DD BUBGUM2_IMG-kano_anitab1
+	DW 10, 10, -6, -1
+BUBGUM3:
+	DD BUBGUM3_SUB-kano_anitab1, 0
+BUBGUM3_SUB:
+	DD BUBGUM3_IMG-kano_anitab1
+	DW 15, 13, -5, 0
+BUBGUM4:
+	DD BUBGUM4_SUB-kano_anitab1, 0
+BUBGUM4_SUB:
+	DD BUBGUM4_IMG-kano_anitab1
+	DW 18, 16, -5, 3
+BUBGUM5:
+	DD BUBGUM5_SUB-kano_anitab1, 0
+BUBGUM5_SUB:
+	DD BUBGUM5_IMG-kano_anitab1
+	DW 22, 18, -5, 4
+BUBGUM6:
+	DD BUBGUM6_SUB-kano_anitab1, 0
+BUBGUM6_SUB:
+	DD BUBGUM6_IMG-kano_anitab1
+	DW 22, 22, 0, 3
+BUBGUM7:
+	DD BUBGUM7_SUB-kano_anitab1, 0
+BUBGUM7_SUB:
+	DD BUBGUM7_IMG-kano_anitab1
+	DW 17, 20, 6, 0

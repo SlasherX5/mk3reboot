@@ -1,0 +1,64 @@
+#include ../../mk3.mif
+
+all: .SYMBOLIC \
+	$(EXE)vs/vsindian.bin 	\
+	$(EXE)vs/vsjax.bin 		\
+	$(EXE)vs/vskano.bin 	\
+	$(EXE)vs/vslao.bin 		\
+	$(EXE)vs/vslia.bin 		\
+	$(EXE)vs/vslkang.bin 	\
+	$(EXE)vs/vsrobo1.bin 	\
+	$(EXE)vs/vsrobo2.bin 	\
+	$(EXE)vs/vsrobo3.bin 	\
+	$(EXE)vs/vssg.bin 		\
+	$(EXE)vs/vssonya.bin  	\
+	$(EXE)vs/vsst.bin 		\
+	$(EXE)vs/vsswat.bin 	\
+	$(EXE)vs/vssz.bin 		\
+	$(EXE)vs/vstusk.bin 
+
+vsindian.obj: vsindian.asm $(OVLARTI)  \
+	..\attract\vs\vsindian.psi
+
+vsjax.obj: vsjax.asm $(OVLARTI)  \
+	..\attract\vs\vsjax.psi
+
+vskano.obj: vskano.asm $(OVLARTI)  \
+	..\attract\vs\vskano.psi
+
+vslao.obj: vslao.asm $(OVLARTI)  \
+	..\attract\vs\vslao.psi
+
+vslia.obj: vslia.asm $(OVLARTI)  \
+	..\attract\vs\vslia.psi
+
+vslkang.obj: vslkang.asm $(OVLARTI)  \
+	..\attract\vs\vslkang.psi
+
+vsrobo1.obj: vsrobo1.asm $(OVLARTI)  \
+	..\attract\vs\vsrobo1.psi
+
+vsrobo2.obj: vsrobo2.asm $(OVLARTI)  \
+	..\attract\vs\vsrobo2.psi
+
+vsrobo3.obj: vsrobo3.asm $(OVLARTI)  \
+	..\attract\vs\vsrobo3.psi
+
+vssg.obj: vssg.asm $(OVLARTI)  \
+	..\attract\vs\vssg.psi
+
+vssonya.obj: vssonya.asm $(OVLARETI) \
+	..\attract\vs\vssonya.psi
+
+vsst.obj: vsst.asm $(OVLARTI)  \
+	..\attract\vs\vsst.psi
+
+vsswat.obj: vsswat.asm $(OVLARTI)  \
+	..\attract\vs\vsswat.psi
+
+vssz.obj: vssz.asm $(OVLARTI)  \
+	..\attract\vs\vssz.psi
+
+vstusk.obj: vstusk.asm $(OVLARTI)  \
+	..\attract\vs\vstusk.psi
+

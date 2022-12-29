@@ -1,0 +1,216 @@
+robo2_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+robo2_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD a_animality-base_anims
+	DD a_shark-robo2_anitab1
+	DD a_shark_fin-robo2_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0				; 30
+	DD 0
+	DD 0
+	DD 0
+	DD a_blood_explode-base_anims	;34
+	DD 0
+	DD a_arm2-base_anims
+	DD a_leg-base_anims
+	DD 0
+	DD a_bone-base_anims
+	DD 0
+	DD a_rib_cage-base_anims
+	DD a_skull-base_anims
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_zap:
+a_dummy:
+a_shark:
+	DD SHARK1-robo2_anitab1
+	DD SHARK3-robo2_anitab1
+	DD SHARK4-robo2_anitab1
+	DD SHARK5-robo2_anitab1
+	DD 0
+	DD SHARK9-robo2_anitab1
+	DD SHARK10-robo2_anitab1
+	DD SHARK11-robo2_anitab1
+	DD SHARK12-robo2_anitab1
+	DD SHARK13-robo2_anitab1
+	DD 0
+	DD SHARK14-robo2_anitab1
+	DD SHARK15-robo2_anitab1
+	DD SHARK16-robo2_anitab1
+	DD SHARK17-robo2_anitab1
+	DD SHARK19-robo2_anitab1
+	DD 0
+a_shark_fin:
+	DD SHARKFIN-robo2_anitab1
+	DD 0
+SHARK1:
+	DD SHARK1_SUB-robo2_anitab1, 0
+SHARK1_SUB:
+	DD SHARK1_IMG-robo2_anitab1
+	DW 57, 111, 18, -10
+	DD	_SHARK_P
+SHARK3:
+	DD SHARK3_SUB-robo2_anitab1, 0
+SHARK3_SUB:
+	DD SHARK3_IMG-robo2_anitab1
+	DW 67, 110, 29, -15
+SHARK4:
+	DD SHARK4_SUB-robo2_anitab1, 0
+SHARK4_SUB:
+	DD SHARK4_IMG-robo2_anitab1
+	DW 78, 94, 34, -30
+SHARK5:
+	DD SHARK5_SUB-robo2_anitab1, 0
+SHARK5_SUB:
+	DD SHARK5_IMG-robo2_anitab1
+	DW 102, 87, 51, -39
+SHARK9:
+	DD SHARK9_SUB-robo2_anitab1, 0
+SHARK9_SUB:
+	DD SHARK9_IMG-robo2_anitab1
+	DW 89, 46, 51, -77
+SHARK10:
+	DD SHARK10_SUB-robo2_anitab1, 0
+SHARK10_SUB:
+	DD SHARK10_IMG-robo2_anitab1
+	DW 110, 69, 63, -54
+SHARK11:
+	DD SHARK11_SUB-robo2_anitab1, 0
+SHARK11_SUB:
+	DD SHARK11_IMG-robo2_anitab1
+	DW 151, 101, 91, -22
+SHARK12:
+	DD SHARK12_SUB-robo2_anitab1, 0
+SHARK12_SUB:
+	DD SHARK12_IMG-robo2_anitab1
+	DW 166, 136, 96, 12
+SHARK13:
+	DD SHARK13_SUB-robo2_anitab1, 0
+SHARK13_SUB:
+	DD SHARK13_IMG-robo2_anitab1
+	DW 177, 163, 99, 39
+SHARK14:
+	DD SHARK14_SUB-robo2_anitab1, 0
+SHARK14_SUB:
+	DD SHARK14_IMG-robo2_anitab1
+	DW 190, 169, 103, 45
+SHARK15:
+	DD SHARK15_SUB-robo2_anitab1, 0
+SHARK15_SUB:
+	DD SHARK15_IMG-robo2_anitab1
+	DW 202, 130, 113, 6
+SHARK16:
+	DD SHARK16_SUB-robo2_anitab1, 0
+SHARK16_SUB:
+	DD SHARK16_IMG-robo2_anitab1
+	DW 212, 43, 114, -80
+SHARK17:
+	DD SHARK17_SUB-robo2_anitab1, 0
+SHARK17_SUB:
+	DD SHARK17_IMG-robo2_anitab1
+	DW 170, 59, 72, -64
+SHARK19:
+	DD SHARK19_SUB-robo2_anitab1, 0
+SHARK19_SUB:
+	DD SHARK19_IMG-robo2_anitab1
+	DW 127, 14, 29, -110
+SHARKFIN:
+	DD SHARKFIN_SUB-robo2_anitab1, 0
+SHARKFIN_SUB:
+	DD SHARKFIN_IMG-robo2_anitab1
+	DW 100, 75, 50, -46

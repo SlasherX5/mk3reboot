@@ -1,0 +1,343 @@
+#include ../../mk3.mif
+
+all: $(EXE)robo3\robo3.bin \
+	 $(EXE)robo3\robo3a.bin \
+	 $(EXE)robo3\robo3b.bin \
+	 $(EXE)robo3\robo3f.bin \
+	 $(EXE)robo3\robo3s.bin \
+     $(EXE)robo3\rb3f1in.bin \
+	 $(EXE)robo3\rb3f1jx.bin \
+	 $(EXE)robo3\rb3f1kl.bin \
+	 $(EXE)robo3\rb3f1kn.bin \
+	 $(EXE)robo3\rb3f1li.bin \
+	 $(EXE)robo3\rb3f1lk.bin \
+	 $(EXE)robo3\rb3f1rb.bin \
+	 $(EXE)robo3\rb3f1sg.bin \
+	 $(EXE)robo3\rb3f1sn.bin \
+	 $(EXE)robo3\rb3f1st.bin \
+	 $(EXE)robo3\rb3f1sw.bin \
+	 $(EXE)robo3\rb3f1sz.bin \
+	 $(EXE)robo3\rb3f1ts.bin \
+	.SYMBOLIC
+
+# MAIN GAME	PLAY
+
+robo3.obj: robo3.asm  $(OVLARTI) \
+	..\chars\robo3\mkrobo3.psx \
+	..\chars\robo3\mkrobo3.psi \
+	..\chars\robo2\mkgdexp.psi \
+	..\chars\robo3\rbb.psi
+
+# FRIENDSHIP & BABALITY
+
+robo3s.obj: robo3s.asm $(OVLARTI) \
+	..\chars\robo3\mkrobo3s.psx \
+	..\chars\robo3\mkrobo3s.psi \
+	..\common\common\friend.psx \
+	..\common\common\friend.psi
+
+
+# BABALITY
+
+robo3b.obj: robo3b.asm $(OVLARTI) \
+	..\chars\robo3\mkrobo3b.psx \
+	..\common\baby\babyr3.psx \
+	..\common\baby\babyr3.psi \
+	..\common\baby\babyxpld.psi
+
+# ANIMALITY
+
+robo3a.obj: robo3a.asm $(OVLARTI) \
+	..\chars\robo3\mkrobo3a.psx \
+	..\chars\robo3\mkrobo3a.psi \
+	..\common\common\animal.psx \
+	..\common\common\animal.psi
+
+# FATALITIES
+
+robo3f.obj: robo3f.asm $(OVLARTI) \
+	..\chars\robo3\mkrobo3f.psx \
+	..\chars\robo3\mkrobo3f.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+robo3f1.obj: robo3f1.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\reach\oreach.psx \
+	..\common\reach\oreach.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi \
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi
+
+rb31kn.obj: rb31kn.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orkano.psx \
+	..\common\reach\orkano.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31sn.obj: rb31sn.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orsonya.psx \
+	..\common\reach\orsonya.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31jx.obj: rb31jx.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orjax.psx \
+	..\common\reach\orjax.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31in.obj: rb31in.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orind.psx \
+	..\common\reach\orind.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31sz.obj: rb31sz.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orsz.psx \
+	..\common\reach\orsz.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31sw.obj: rb31sw.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orswat.psx \
+	..\common\reach\orswat.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31li.obj: rb31li.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orlia.psx \
+	..\common\reach\orlia.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31rb.obj: rb31rb.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orrobo.psx \
+	..\common\reach\orrobo.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31kl.obj: rb31kl.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orlao.psx \
+	..\common\reach\orlao.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31ts.obj: rb31ts.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\ortusk.psx \
+	..\common\reach\ortusk.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31sg.obj: rb31sg.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orsg.psx \
+	..\common\reach\orsg.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31st.obj: rb31st.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orst.psx \
+	..\common\reach\orst.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+
+rb31lk.obj: rb31lk.asm $(OVLARTI) \
+	..\chars\robo3\mkrob3f1.psx \
+	..\chars\robo3\mkrob3f1.psi \
+	..\common\reach\orlk.psx \
+	..\common\reach\orlk.psi \
+	..\common\common\bloodxp.psx	\
+	..\common\common\bloodxp.psi	\
+	..\common\common\arm2.psx  \
+	..\common\common\arm2.psi  \
+	..\common\common\leg.psx	  \
+	..\common\common\leg.psi	  \
+	..\common\common\bone.psx  \
+	..\common\common\bone.psi  \
+	..\common\common\cage.psx  \
+	..\common\common\cage.psi  \
+	..\common\common\skull.psx \
+	..\common\common\skull.psi \
+	..\common\common\fatal.psx \
+	..\common\common\fatal.psi
+

@@ -1,0 +1,111 @@
+_robo2_panitab1:
+	DD a_r2_stance-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_dummy-_robo2_panitab1
+	DD a_r2_victory-_robo2_panitab1
+a_r2_dummy:
+a_r2_stance:
+	DD RB2STANCE1-_robo2_panitab1
+	DD RB2STANCE2-_robo2_panitab1
+	DD RB2STANCE3-_robo2_panitab1
+	DD RB2STANCE4-_robo2_panitab1
+	DD RB2STANCE5-_robo2_panitab1
+	DD RB2STANCE6-_robo2_panitab1
+	DD RB2STANCE7-_robo2_panitab1
+	DD RB2STANCE8-_robo2_panitab1
+	DD RB2STANCE9-_robo2_panitab1
+	DD ani_jump
+	DD a_r2_stance-_robo2_panitab1
+a_r2_victory:
+	DD RB2VICTORY1-_robo2_panitab1
+	DD RB2VICTORY2-_robo2_panitab1
+	DD RB2VICTORY3-_robo2_panitab1
+	DD RB2VICTORY4-_robo2_panitab1
+	DD RB2VICTORY5-_robo2_panitab1
+	DD RB2VICTORY6-_robo2_panitab1
+	DD 0
+RB2STANCE1:
+	DD RB2STANCE1_SUB-_robo2_panitab1, 0
+RB2STANCE1_SUB:
+	DD RB2STANCE1_IMG-_robo2_panitab1
+	DW 57, 116, 24, -5
+RB2STANCE2:
+	DD RB2STANCE2_SUB-_robo2_panitab1, 0
+RB2STANCE2_SUB:
+	DD RB2STANCE2_IMG-_robo2_panitab1
+	DW 55, 116, 22, -5
+RB2STANCE3:
+	DD RB2STANCE3_SUB-_robo2_panitab1, 0
+RB2STANCE3_SUB:
+	DD RB2STANCE3_IMG-_robo2_panitab1
+	DW 54, 116, 21, -5
+RB2STANCE4:
+	DD RB2STANCE4_SUB-_robo2_panitab1, 0
+RB2STANCE4_SUB:
+	DD RB2STANCE4_IMG-_robo2_panitab1
+	DW 54, 116, 18, -5
+RB2STANCE5:
+	DD RB2STANCE5_SUB-_robo2_panitab1, 0
+RB2STANCE5_SUB:
+	DD RB2STANCE5_IMG-_robo2_panitab1
+	DW 54, 111, 18, -9
+RB2STANCE6:
+	DD RB2STANCE6_SUB-_robo2_panitab1, 0
+RB2STANCE6_SUB:
+	DD RB2STANCE6_IMG-_robo2_panitab1
+	DW 57, 111, 18, -10
+RB2STANCE7:
+	DD RB2STANCE7_SUB-_robo2_panitab1, 0
+RB2STANCE7_SUB:
+	DD RB2STANCE7_IMG-_robo2_panitab1
+	DW 58, 111, 20, -9
+RB2STANCE8:
+	DD RB2STANCE8_SUB-_robo2_panitab1, 0
+RB2STANCE8_SUB:
+	DD RB2STANCE8_IMG-_robo2_panitab1
+	DW 58, 112, 22, -8
+RB2STANCE9:
+	DD RB2STANCE9_SUB-_robo2_panitab1, 0
+RB2STANCE9_SUB:
+	DD RB2STANCE9_IMG-_robo2_panitab1
+	DW 58, 113, 23, -8
+RB2VICTORY1:
+	DD RB2VICTORY1_SUB-_robo2_panitab1, 0
+RB2VICTORY1_SUB:
+	DD RB2VICTORY1_IMG-_robo2_panitab1
+	DW 49, 111, 24, -10
+RB2VICTORY2:
+	DD RB2VICTORY2_SUB-_robo2_panitab1, 0
+RB2VICTORY2_SUB:
+	DD RB2VICTORY2_IMG-_robo2_panitab1
+	DW 44, 110, 19, -11
+RB2VICTORY3:
+	DD RB2VICTORY3_SUB-_robo2_panitab1, 0
+RB2VICTORY3_SUB:
+	DD RB2VICTORY3_IMG-_robo2_panitab1
+	DW 45, 111, 19, -10
+RB2VICTORY4:
+	DD RB2VICTORY4_SUB-_robo2_panitab1, 0
+RB2VICTORY4_SUB:
+	DD RB2VICTORY4_IMG-_robo2_panitab1
+	DW 53, 114, 23, -7
+RB2VICTORY5:
+	DD RB2VICTORY5_SUB-_robo2_panitab1, 0
+RB2VICTORY5_SUB:
+	DD RB2VICTORY5_IMG-_robo2_panitab1
+	DW 50, 126, 23, 5
+RB2VICTORY6:
+	DD RB2VICTORY6_SUB-_robo2_panitab1, 0
+RB2VICTORY6_SUB:
+	DD RB2VICTORY6_IMG-_robo2_panitab1
+	DW 47, 134, 21, 13

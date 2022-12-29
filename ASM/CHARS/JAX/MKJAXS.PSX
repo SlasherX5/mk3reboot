@@ -1,0 +1,188 @@
+jax_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+jax_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_jax_friend-jax_anitab1
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_jax_friend:
+	DD JXJUMPROPE1-jax_anitab1
+j_jax_rope:
+	DD JXJUMPROPE9-jax_anitab1
+	DD JXJUMPROPE8-jax_anitab1
+	DD JXJUMPROPE7-jax_anitab1
+	DD ani_calla
+	DD rsnd_whoosh
+	DD JXJUMPROPE6-jax_anitab1
+	DD JXJUMPROPE5-jax_anitab1
+	DD ani_calla
+	DD rsnd_whoosh
+	DD JXJUMPROPE4-jax_anitab1
+	DD JXJUMPROPE3-jax_anitab1
+	DD JXJUMPROPE2-jax_anitab1
+	DD ani_jump
+	DD j_jax_rope-jax_anitab1
+JXJUMPROPE1:
+	DD JXJUMPROPE1_SUB-jax_anitab1, 0
+JXJUMPROPE1_SUB:
+	DD JXJUMPROPE1_IMG-jax_anitab1
+	DW 83, 121, 39, -9
+JXJUMPROPE9:
+	DD JXJUMPROPE9_SUB-jax_anitab1, 0
+JXJUMPROPE9_SUB:
+	DD JXJUMPROPE9_IMG-jax_anitab1
+	DW 63, 120, 29, -10
+JXJUMPROPE8:
+	DD JXJUMPROPE8_SUB-jax_anitab1, 0
+JXJUMPROPE8_SUB:
+	DD JXJUMPROPE8_IMG-jax_anitab1
+	DW 69, 121, 34, -9
+JXJUMPROPE7:
+	DD JXJUMPROPE7_SUB-jax_anitab1, 0
+JXJUMPROPE7_SUB:
+	DD JXJUMPROPE7_IMG-jax_anitab1
+	DW 74, 120, 37, -10
+JXJUMPROPE6:
+	DD JXJUMPROPE6_SUB-jax_anitab1, 0
+JXJUMPROPE6_SUB:
+	DD JXJUMPROPE6_IMG-jax_anitab1
+	DW 76, 128, 38, -2
+JXJUMPROPE5:
+	DD JXJUMPROPE5_SUB-jax_anitab1, 0
+JXJUMPROPE5_SUB:
+	DD JXJUMPROPE5_IMG-jax_anitab1
+	DW 71, 120, 36, -10
+JXJUMPROPE4:
+	DD JXJUMPROPE4_SUB-jax_anitab1, 0
+JXJUMPROPE4_SUB:
+	DD JXJUMPROPE4_IMG-jax_anitab1
+	DW 70, 121, 34, -9
+JXJUMPROPE3:
+	DD JXJUMPROPE3_SUB-jax_anitab1, 0
+JXJUMPROPE3_SUB:
+	DD JXJUMPROPE3_IMG-jax_anitab1
+	DW 65, 120, 30, -10
+JXJUMPROPE2:
+	DD JXJUMPROPE2_SUB-jax_anitab1, 0
+JXJUMPROPE2_SUB:
+	DD JXJUMPROPE2_IMG-jax_anitab1
+	DW 61, 119, 26, -12

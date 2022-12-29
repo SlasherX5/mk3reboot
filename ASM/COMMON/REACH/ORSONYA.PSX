@@ -1,0 +1,58 @@
+ochar_reached:
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD a_reached_sonya-base_anims
+	DD 0
+a_reached_sonya:
+	DD ani_adjustxy
+	DW -5
+	DW 000H
+	DD SBMOUTH3-base_anims
+	DD SBMOUTH4-base_anims
+	DD SBMOUTH5-base_anims
+	DD SBMOUTH6-base_anims
+	DD SBMOUTH7-base_anims
+	DD SBMOUTH8-base_anims
+	DD 0
+SBMOUTH3:
+	DD SBMOUTH3_SUB-base_anims, 0
+SBMOUTH3_SUB:
+	DD SBMOUTH3_IMG-base_anims
+	DW 56, 96, 30, -23
+SBMOUTH4:
+	DD SBMOUTH4_SUB-base_anims, 0
+SBMOUTH4_SUB:
+	DD SBMOUTH4_IMG-base_anims
+	DW 62, 93, 35, -26
+SBMOUTH5:
+	DD SBMOUTH5_SUB-base_anims, 0
+SBMOUTH5_SUB:
+	DD SBMOUTH5_IMG-base_anims
+	DW 62, 93, 35, -26
+SBMOUTH6:
+	DD SBMOUTH6_SUB-base_anims, 0
+SBMOUTH6_SUB:
+	DD SBMOUTH6_IMG-base_anims
+	DW 90, 60, 55, -59
+SBMOUTH7:
+	DD SBMOUTH7_SUB-base_anims, 0
+SBMOUTH7_SUB:
+	DD SBMOUTH7_IMG-base_anims
+	DW 114, 25, 61, -94
+SBMOUTH8:
+	DD SBMOUTH8_SUB-base_anims, 0
+SBMOUTH8_SUB:
+	DD SBMOUTH8_IMG-base_anims
+	DW 112, 28, 60, -90

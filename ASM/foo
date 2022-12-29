@@ -1,0 +1,53 @@
+File ARTTEMP.ASM:
+        include bkgd\temple\multi.TPGSUFF
+File MKBT.ASM:
+        EXTERN  temple_module:
+        DD temple_module                        ; 8
+File MKTEMP.ASM:
+    EXTERN  _temple_calla
+    PUBLIC _temple_anims
+_temple_anims:
+    DD _SKTORCH1 - _temple_anims
+    DD _SKTORCH2 - _temple_anims
+    DD _SKTORCH3 - _temple_anims
+    DD _SKTORCH4 - _temple_anims
+    DD _SKTORCH5 - _temple_anims
+    DD _SKTORCH6 - _temple_anims
+    DD _a_tflame - _temple_anims
+    DD _wik1 - _temple_anims
+    DD _wik2 - _temple_anims
+    DD _wik3 - _temple_anims
+    DD _wik4 - _temple_anims
+    DD _a_candle_flame - _temple_anims
+    DD _SKTORCH1_TPG - _temple_anims
+    DD _SKTORCH2_TPG - _temple_anims
+    DD _SKTORCH3_TPG - _temple_anims
+    DD _SKTORCH4_TPG - _temple_anims
+    DD _SKTORCH5_TPG - _temple_anims
+    DD _SKTORCH6_TPG - _temple_anims
+    DD _wik1_TPG - _temple_anims
+    DD _wik2_TPG - _temple_anims
+    DD _wik3_TPG - _temple_anims
+    DD _wik4_TPG - _temple_anims
+    DD _KANDLE1_TPG - _temple_anims
+    include .\bkgd\temple\mktemple.mod
+    PUBLIC _temple_module
+_temple_module:
+    DD  _temple_calla
+    DD  temple_scroll       ; scroll table
+    DD  dlists_temple
+;   dw  mktemple_TXT
+    DD  temple1BMOD     ; _baklst1 = railing
+    DD  temple2BMOD     ; _baklst2 = poles table
+    DD  temple3BMOD     ; _baklst3 = arc
+    DD  temple4BMOD     ; _baklst4 = stainglass
+    DD  temple0BMOD     ; _baklst5 = candles
+    DD  temple1BMOD,_worldtlx1
+    DD  temple3BMOD,_worldtlx3
+    DD  temple4BMOD,_worldtlx4
+    DD  temple0BMOD,_worldtlx5
+    DD  temple2BMOD,_worldtlx7
+temple_floor_info:
+temple_scroll:
+dlists_temple:
+    include .\bkgd\floors\temple\tempfl.asm

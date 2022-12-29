@@ -1,0 +1,303 @@
+ochar_cutups:
+	DD KNCUTUP1-base_anims
+	DD SBCUT1-base_anims
+	DD JXCUTUP1-base_anims
+	DD INCUTUP1-base_anims
+	DD SZCUTUP1-base_anims
+	DD OBCUTUP1-base_anims
+	DD LICUTUP1-base_anims
+	DD RBCUTUP1-base_anims
+	DD RBCUTUP1-base_anims
+	DD KLCUTUP1-base_anims
+	DD TRCUTUP1-base_anims
+	DD SHCUTUP1-base_anims
+	DD TSCUTUP1-base_anims
+	DD LUCUTUP1-base_anims
+	DD RBCUTUP1-base_anims
+	DD 0
+KNCUTUP1:
+	DD KNCUTUP1A-base_anims
+	DD KNCUTUP1B-base_anims
+	DD KNCUTUP1C-base_anims
+	DD KNCUTUP1D-base_anims
+	DD 0
+SBCUT1:
+	DD SBCUT1A-base_anims
+	DD SBCUT1B-base_anims
+	DD SBCUT1C-base_anims
+	DD SBCUT1D-base_anims
+	DD 0
+JXCUTUP1:
+	DD JXCUTUP1A-base_anims
+	DD JXCUTUP1B-base_anims
+	DD JXCUTUP1C-base_anims
+	DD JXCUTUP1D-base_anims
+	DD 0
+INCUTUP1:
+	DD INCUTUP1A-base_anims
+	DD INCUTUP1B-base_anims
+	DD INCUTUP1C-base_anims
+	DD INCUTUP1D-base_anims
+	DD 0
+SZCUTUP1:
+	DD SZCUTUP1A-base_anims
+	DD SZCUTUP1B-base_anims
+	DD SZCUTUP1C-base_anims
+	DD SZCUTUP1D-base_anims
+	DD 0
+OBCUTUP1:
+	DD OBCUTUP1A-base_anims
+	DD OBCUTUP1B-base_anims
+	DD OBCUTUP1C-base_anims
+	DD OBCUTUP1D-base_anims
+	DD 0
+LICUTUP1:
+	DD LICUTUP1A-base_anims
+	DD LICUTUP1B-base_anims
+	DD LICUTUP1C-base_anims
+	DD LICUTUP1D-base_anims
+	DD 0
+RBCUTUP1:
+	DD RBCUTUP1A-base_anims
+	DD RBCUTUP1B-base_anims
+	DD RBCUTUP1C-base_anims
+	DD RBCUTUP1D-base_anims
+	DD 0
+KLCUTUP1:
+	DD KLCUTUP1A-base_anims
+	DD KLCUTUP1B-base_anims
+	DD KLCUTUP1C-base_anims
+	DD KLCUTUP1D-base_anims
+	DD 0
+TRCUTUP1:
+	DD TRCUTUP1A-base_anims
+	DD TRCUTUP1B-base_anims
+	DD TRCUTUP1C-base_anims
+	DD TRCUTUP1D-base_anims
+	DD 0
+SHCUTUP1:
+	DD SHCUTUP1A-base_anims
+	DD SHCUTUP1B-base_anims
+	DD SHCUTUP1C-base_anims
+	DD SHCUTUP1D-base_anims
+	DD 0
+TSCUTUP1:
+	DD TSCUTUP1A-base_anims
+	DD TSCUTUP1B-base_anims
+	DD TSCUTUP1C-base_anims
+	DD TSCUTUP1D-base_anims
+	DD 0
+LUCUTUP1:
+	DD LUCUTUP1A-base_anims
+	DD LUCUTUP1B-base_anims
+	DD LUCUTUP1C-base_anims
+	DD LUCUTUP1D-base_anims
+	DD 0
+KNCUTUP1A:
+	DD KNCUTUP1A_IMG-base_anims
+	DW 12, 17, 6, -7
+	DD _KNCUT_P
+KNCUTUP1B:
+	DD KNCUTUP1B_IMG-base_anims
+	DW 43, 30, 18, -20
+	DD _KNCUT_P
+KNCUTUP1C:
+	DD KNCUTUP1C_IMG-base_anims
+	DW 46, 43, 18, -45
+	DD _KNCUT_P
+KNCUTUP1D:
+	DD KNCUTUP1D_IMG-base_anims
+	DW 44, 36, 14, -81
+	DD _KNCUT_P
+SBCUT1A:
+	DD SBCUT1A_IMG-base_anims
+	DW 16, 20, 21, -10
+	DD _SBCUT_P
+SBCUT1B:
+	DD SBCUT1B_IMG-base_anims
+	DW 30, 30, 23, -25
+	DD _SBCUT_P
+SBCUT1C:
+	DD SBCUT1C_IMG-base_anims
+	DW 38, 40, 23, -51
+	DD _SBCUT_P
+SBCUT1D:
+	DD SBCUT1D_IMG-base_anims
+	DW 42, 29, 16, -89
+	DD _SBCUT_P
+JXCUTUP1A:
+	DD JXCUTUP1A_IMG-base_anims
+	DW 10, 17, 4, -15
+	DD _JXCUT_P
+JXCUTUP1B:
+	DD JXCUTUP1B_IMG-base_anims
+	DW 42, 37, 15, -29
+	DD _JXCUT_P
+JXCUTUP1C:
+	DD JXCUTUP1C_IMG-base_anims
+	DW 44, 43, 14, -60
+	DD _JXCUT_P
+JXCUTUP1D:
+	DD JXCUTUP1D_IMG-base_anims
+	DW 46, 31, 14, -98
+	DD _JXCUT_P
+INCUTUP1A:
+	DD INCUTUP1A_IMG-base_anims
+	DW 19, 17, 7, -10
+	DD _INCUT_P
+INCUTUP1B:
+	DD INCUTUP1B_IMG-base_anims
+	DW 31, 35, 14, -20
+	DD _INCUT_P
+INCUTUP1C:
+	DD INCUTUP1C_IMG-base_anims
+	DW 34, 36, 14, -50
+	DD _INCUT_P
+INCUTUP1D:
+	DD INCUTUP1D_IMG-base_anims
+	DW 43, 33, 16, -83
+	DD _INCUT_P
+SZCUTUP1A:
+	DD SZCUTUP1A_IMG-base_anims
+	DW 10, 19, 6, -9
+	DD _SZCUT_P
+SZCUTUP1B:
+	DD SZCUTUP1B_IMG-base_anims
+	DW 34, 26, 18, -24
+	DD _SZCUT_P
+SZCUTUP1C:
+	DD SZCUTUP1C_IMG-base_anims
+	DW 40, 43, 18, -46
+	DD _SZCUT_P
+SZCUTUP1D:
+	DD SZCUTUP1D_IMG-base_anims
+	DW 44, 29, 14, -87
+	DD _SZCUT_P
+OBCUTUP1A:
+	DD OBCUTUP1A_IMG-base_anims
+	DW 11, 17, -1, -7
+	DD _OBCUT_P
+OBCUTUP1B:
+	DD OBCUTUP1B_IMG-base_anims
+	DW 33, 32, 11, -21
+	DD _OBCUT_P
+OBCUTUP1C:
+	DD OBCUTUP1C_IMG-base_anims
+	DW 34, 46, 12, -47
+	DD _OBCUT_P
+OBCUTUP1D:
+	DD OBCUTUP1D_IMG-base_anims
+	DW 38, 28, 14, -91
+	DD _OBCUT_P
+LICUTUP1A:
+	DD LICUTUP1A_IMG-base_anims
+	DW 20, 20, 10, -6
+	DD _LICUT_P
+LICUTUP1B:
+	DD LICUTUP1B_IMG-base_anims
+	DW 29, 26, 10, -24
+	DD _LICUT_P
+LICUTUP1C:
+	DD LICUTUP1C_IMG-base_anims
+	DW 31, 43, 9, -44
+	DD _LICUT_P
+LICUTUP1D:
+	DD LICUTUP1D_IMG-base_anims
+	DW 42, 31, 13, -85
+	DD _LICUT_P
+RBCUTUP1A:
+	DD RBCUTUP1A_IMG-base_anims
+	DW 19, 25, 8, -10
+	DD _RBCUT_P
+RBCUTUP1B:
+	DD RBCUTUP1B_IMG-base_anims
+	DW 55, 45, 24, -20
+	DD _RBCUT_P
+RBCUTUP1C:
+	DD RBCUTUP1C_IMG-base_anims
+	DW 31, 43, 12, -51
+	DD _RBCUT_P
+RBCUTUP1D:
+	DD RBCUTUP1D_IMG-base_anims
+	DW 42, 34, 17, -89
+	DD _RBCUT_P
+KLCUTUP1A:
+	DD KLCUTUP1A_IMG-base_anims
+	DW 18, 29, 27, 4
+	DD _KLCUT_P
+KLCUTUP1B:
+	DD KLCUTUP1B_IMG-base_anims
+	DW 26, 32, 22, -18
+	DD _KLCUT_P
+KLCUTUP1C:
+	DD KLCUTUP1C_IMG-base_anims
+	DW 29, 42, 17, -45
+	DD _KLCUT_P
+KLCUTUP1D:
+	DD KLCUTUP1D_IMG-base_anims
+	DW 44, 29, 20, -83
+	DD _KLCUT_P
+TRCUTUP1A:
+	DD TRCUTUP1A_IMG-base_anims
+	DW 18, 26, -2, -14
+	DD _TRCUT_P
+TRCUTUP1B:
+	DD TRCUTUP1B_IMG-base_anims
+	DW 41, 35, 7, -27
+	DD _TRCUT_P
+TRCUTUP1C:
+	DD TRCUTUP1C_IMG-base_anims
+	DW 34, 35, 6, -57
+	DD _TRCUT_P
+TRCUTUP1D:
+	DD TRCUTUP1D_IMG-base_anims
+	DW 45, 33, 14, -87
+	DD _TRCUT_P
+SHCUTUP1A:
+	DD SHCUTUP1A_IMG-base_anims
+	DW 14, 17, 4, -9
+	DD _SHCUT_P
+SHCUTUP1B:
+	DD SHCUTUP1B_IMG-base_anims
+	DW 46, 31, 19, -23
+	DD _SHCUT_P
+SHCUTUP1C:
+	DD SHCUTUP1C_IMG-base_anims
+	DW 49, 48, 21, -48
+	DD _SHCUT_P
+SHCUTUP1D:
+	DD SHCUTUP1D_IMG-base_anims
+	DW 49, 35, 22, -94
+	DD _SHCUT_P
+TSCUTUP1A:
+	DD TSCUTUP1A_IMG-base_anims
+	DW 12, 20, 6, -1
+	DD _TSCUT_P
+TSCUTUP1B:
+	DD TSCUTUP1B_IMG-base_anims
+	DW 33, 24, 16, -17
+	DD _TSCUT_P
+TSCUTUP1C:
+	DD TSCUTUP1C_IMG-base_anims
+	DW 36, 46, 16, -36
+	DD _TSCUT_P
+TSCUTUP1D:
+	DD TSCUTUP1D_IMG-base_anims
+	DW 33, 31, 14, -80
+	DD _TSCUT_P
+LUCUTUP1A:
+	DD LUCUTUP1A_IMG-base_anims
+	DW 16, 21, 10, -6
+	DD _LUCUT_P
+LUCUTUP1B:
+	DD LUCUTUP1B_IMG-base_anims
+	DW 35, 28, 14, -23
+	DD _LUCUT_P
+LUCUTUP1C:
+	DD LUCUTUP1C_IMG-base_anims
+	DW 42, 38, 14, -47
+	DD _LUCUT_P
+LUCUTUP1D:
+	DD LUCUTUP1D_IMG-base_anims
+	DW 32, 29, 10, -83
+	DD _LUCUT_P

@@ -1,0 +1,2561 @@
+kano_anitab1:
+	DD a_stance-kano_anitab1
+	DD a_walkf-kano_anitab1
+	DD a_walkb-kano_anitab1
+	DD a_turn-kano_anitab1
+	DD a_duck-kano_anitab1
+	DD a_duck_turn-kano_anitab1
+	DD a_duck_block-kano_anitab1
+	DD a_duck_hit-kano_anitab1
+	DD a_duck_punch-kano_anitab1
+	DD a_duck_kick_hi-kano_anitab1
+	DD a_duck_kick_lo-kano_anitab1
+	DD a_uppercut-kano_anitab1
+	DD a_block-kano_anitab1
+	DD a_victory-kano_anitab1
+	DD a_hipunch-kano_anitab1
+	DD a_lopunch-kano_anitab1
+	DD a_elbow-kano_anitab1
+	DD a_hikick-kano_anitab1
+	DD a_lokick-kano_anitab1
+	DD a_knee-kano_anitab1
+	DD a_sweep_kick-kano_anitab1
+	DD a_roundhouse-kano_anitab1
+	DD a_jump-kano_anitab1
+	DD a_jump_kick-kano_anitab1
+	DD a_flip_punch-kano_anitab1
+	DD a_flip_kick-kano_anitab1
+	DD a_fflip-kano_anitab1
+	DD a_bflip-kano_anitab1
+	DD a_hit_hi-kano_anitab1
+	DD a_hit_lo-kano_anitab1
+	DD a_knockdown-kano_anitab1
+	DD a_sweep_fall-kano_anitab1
+	DD a_stumble-kano_anitab1
+	DD a_getup-kano_anitab1
+	DD a_sweepup-kano_anitab1
+	DD a_throw-kano_anitab1
+	DD a_zap-kano_anitab1
+	DD a_dizzy-kano_anitab1
+	DD a_fb_kano-kano_anitab1
+	DD a_fb_sonya-kano_anitab1
+	DD a_fb_jax-kano_anitab1
+	DD a_fb_ind-kano_anitab1
+	DD a_fb_sz-kano_anitab1
+	DD a_fb_swat-kano_anitab1
+	DD a_fb_lia-kano_anitab1
+	DD a_fb_robo-kano_anitab1
+	DD a_fb_robo2-kano_anitab1
+	DD a_fb_lao-kano_anitab1
+	DD a_fb_tusk-kano_anitab1
+	DD a_fb_sg-kano_anitab1
+	DD a_fb_st-kano_anitab1
+	DD a_fb_lk-kano_anitab1
+	DD a_fb_smoke-kano_anitab1
+	DD a_afb_kano-kano_anitab1
+	DD a_legged-kano_anitab1
+	DD a_projectile-kano_anitab1
+	DD a_shook-kano_anitab1
+	DD a_afb_robo2-kano_anitab1
+	DD a_zoomed-kano_anitab1
+	DD 0
+	DD 0
+	DD a_back_broke-kano_anitab1
+	DD a_run-kano_anitab1
+	DD a_thudd-kano_anitab1
+	DD a_scared-kano_anitab1
+kano_anitab2:
+	DD a_air_slam-kano_anitab1
+	DD a_swipe_knife-kano_anitab1
+	DD a_shake-kano_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_stance:
+	DD KNSTANCE1-kano_anitab1
+	DD KNSTANCE2-kano_anitab1
+	DD KNSTANCE3-kano_anitab1
+	DD KNSTANCE4-kano_anitab1
+	DD KNSTANCE5-kano_anitab1
+	DD KNSTANCE6-kano_anitab1
+	DD KNSTANCE7-kano_anitab1
+	DD KNSTANCE8-kano_anitab1
+	DD KNSTANCE9-kano_anitab1
+	DD ani_jump
+	DD a_stance-kano_anitab1
+a_walkf:
+	DD KNWALK1-kano_anitab1
+	DD KNWALK2-kano_anitab1
+	DD KNWALK3-kano_anitab1
+	DD KNWALK4-kano_anitab1
+	DD KNWALK5-kano_anitab1
+	DD KNWALK6-kano_anitab1
+	DD KNWALK7-kano_anitab1
+	DD KNWALK8-kano_anitab1
+	DD KNWALK9-kano_anitab1
+	DD ani_jump
+	DD a_walkf-kano_anitab1
+a_walkb:
+	DD KNWALK9-kano_anitab1
+	DD KNWALK8-kano_anitab1
+	DD KNWALK7-kano_anitab1
+	DD KNWALK6-kano_anitab1
+	DD KNWALK5-kano_anitab1
+	DD KNWALK4-kano_anitab1
+	DD KNWALK3-kano_anitab1
+	DD KNWALK2-kano_anitab1
+	DD KNWALK1-kano_anitab1
+	DD ani_jump
+	DD a_walkb-kano_anitab1
+a_turn:
+	DD KNTURN1-kano_anitab1
+	DD KNTURN2-kano_anitab1
+	DD ani_flip
+	DD KNTURN1-kano_anitab1
+	DD 0
+a_duck:
+	DD KNDUCK1-kano_anitab1
+	DD KNDUCK2-kano_anitab1
+	DD KNDUCK3-kano_anitab1
+	DD 0
+a_duck_turn:
+	DD KNDUCKTURN1-kano_anitab1
+	DD KNDUCKTURN2-kano_anitab1
+	DD ani_flip
+	DD KNDUCKTURN2-kano_anitab1
+	DD KNDUCKTURN1-kano_anitab1
+	DD KNDUCK3-kano_anitab1
+	DD 0
+a_duck_block:
+	DD KNDUCKBLOCK1-kano_anitab1
+	DD KNDUCKBLOCK2-kano_anitab1
+	DD KNDUCKBLOCK3-kano_anitab1
+	DD 0
+a_duck_punch:
+	DD KNDUCKPUNCH1-kano_anitab1
+	DD KNDUCKPUNCH2-kano_anitab1
+	DD KNDUCKPUNCH3-kano_anitab1
+	DD 0
+	DD KNDUCKPUNCH2-kano_anitab1
+	DD KNDUCKPUNCH1-kano_anitab1
+	DD KNDUCK3-kano_anitab1
+	DD 0
+a_duck_hit:
+	DD KNDUCKHIT2-kano_anitab1
+	DD KNDUCKHIT3-kano_anitab1
+	DD KNDUCKHIT2-kano_anitab1
+	DD KNDUCKHIT1-kano_anitab1
+	DD 0
+a_duck_kick_hi:
+	DD KNDUCKHIKICK1-kano_anitab1
+	DD KNDUCKHIKICK2-kano_anitab1
+	DD KNDUCKHIKICK3-kano_anitab1
+	DD KNDUCKHIKICK4-kano_anitab1
+	DD 0
+	DD KNDUCKHIKICK3-kano_anitab1
+	DD KNDUCKHIKICK2-kano_anitab1
+	DD KNDUCKHIKICK1-kano_anitab1
+	DD KNDUCK3-kano_anitab1
+	DD 0
+a_duck_kick_lo:
+	DD KNDUCKLOKICK1-kano_anitab1
+	DD KNDUCKLOKICK2-kano_anitab1
+	DD KNDUCKLOKICK3-kano_anitab1
+	DD KNDUCKLOKICK4-kano_anitab1
+	DD 0
+	DD KNDUCKLOKICK3-kano_anitab1
+	DD KNDUCKLOKICK2-kano_anitab1
+	DD KNDUCKLOKICK1-kano_anitab1
+	DD KNDUCK3-kano_anitab1
+	DD 0
+a_uppercut:
+	DD KNUPPERCUT1-kano_anitab1
+	DD KNUPPERCUT2-kano_anitab1
+	DD KNUPPERCUT3-kano_anitab1
+	DD KNUPPERCUT4-kano_anitab1
+	DD ani_nosleep
+	DD KNUPPERCUT5-kano_anitab1
+	DD 0
+	DD KNUPPERCUT6-kano_anitab1
+	DD 0
+a_block:
+	DD KNHIBLOCK1-kano_anitab1
+	DD KNHIBLOCK2-kano_anitab1
+	DD KNHIBLOCK3-kano_anitab1
+	DD 0
+a_hipunch:
+	DD KNHIPUNCH1-kano_anitab1
+	DD KNHIPUNCH2-kano_anitab1
+	DD KNHIPUNCH3-kano_anitab1
+	DD 0
+	DD KNHIPUNCH4-kano_anitab1
+	DD KNHIPUNCH5-kano_anitab1
+	DD KNHIPUNCH6-kano_anitab1
+	DD 0
+	DD KNHIPUNCH5-kano_anitab1
+	DD KNHIPUNCH4-kano_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-kano_anitab1
+	DD 0
+	DD KNHIPUNCH2-kano_anitab1
+	DD KNHIPUNCH1-kano_anitab1
+	DD 0
+	DD KNHIPUNCH7-kano_anitab1
+	DD 0
+	DD KNHIPUNCH4-kano_anitab1
+	DD KNLOPUNCH4-kano_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*6)/8)-kano_anitab1
+	DD 0
+	DD KNHIPUNCH5-kano_anitab1
+	DD KNHIPUNCH4-kano_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-kano_anitab1
+	DD 0
+a_lopunch:
+	DD KNHIPUNCH1-kano_anitab1
+	DD KNLOPUNCH1-kano_anitab1
+	DD KNLOPUNCH2-kano_anitab1
+	DD 0
+	DD KNLOPUNCH3-kano_anitab1
+	DD KNLOPUNCH4-kano_anitab1
+	DD KNLOPUNCH5-kano_anitab1
+	DD 0
+	DD KNLOPUNCH4-kano_anitab1
+	DD KNLOPUNCH3-kano_anitab1
+	DD ani_jump
+	DD a_lopunch+((32*2)/8)-kano_anitab1
+	DD 0
+	DD KNLOPUNCH1-kano_anitab1
+	DD KNHIPUNCH1-kano_anitab1
+	DD 0
+	DD KNLOPUNCH4-kano_anitab1
+	DD 0
+	DD KNLOPUNCH4-kano_anitab1
+	DD KNLOPUNCH5-kano_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*6)/8)-kano_anitab1
+	DD 0
+	DD KNLOPUNCH4-kano_anitab1
+	DD KNHIPUNCH2-kano_anitab1
+	DD ani_jump
+	DD a_hipunch+((32*2)/8)-kano_anitab1
+a_elbow:
+	DD KNBACKFIST1-kano_anitab1
+	DD KNBACKFIST2-kano_anitab1
+	DD KNBACKFIST3-kano_anitab1
+	DD 0
+	DD KNBACKFIST2-kano_anitab1
+	DD KNBACKFIST1-kano_anitab1
+	DD 0
+	DD KNLASER1-kano_anitab1
+	DD ani_adjustx
+	DD 12
+	DD KNLASER2-kano_anitab1
+	DD ani_adjustx
+	DD 12
+	DD KNLASER3-kano_anitab1
+	DD 0
+	DD KNLASER2-kano_anitab1
+	DD KNLASER1-kano_anitab1
+	DD 0
+a_hikick:
+	DD KNHIKICK1-kano_anitab1
+	DD KNHIKICK2-kano_anitab1
+	DD KNHIKICK3-kano_anitab1
+	DD KNHIKICK4-kano_anitab1
+	DD KNHIKICK5-kano_anitab1
+	DD KNHIKICK6-kano_anitab1
+	DD 0
+	DD KNHIKICK5-kano_anitab1
+	DD KNHIKICK4-kano_anitab1
+	DD KNHIKICK3-kano_anitab1
+	DD KNHIKICK2-kano_anitab1
+	DD KNHIKICK1-kano_anitab1
+	DD 0
+a_lokick:
+	DD KNHIKICK1-kano_anitab1
+	DD KNHIKICK2-kano_anitab1
+	DD KNHIKICK3-kano_anitab1
+	DD KNLOKICK1-kano_anitab1
+	DD KNLOKICK2-kano_anitab1
+	DD KNLOKICK3-kano_anitab1
+	DD 0
+	DD KNLOKICK3-kano_anitab1
+	DD KNLOKICK2-kano_anitab1
+	DD KNLOKICK1-kano_anitab1
+	DD KNHIKICK3-kano_anitab1
+	DD KNHIKICK2-kano_anitab1
+	DD KNHIKICK1-kano_anitab1
+	DD 0
+a_knee:
+	DD KNKNEE1-kano_anitab1
+	DD KNKNEE2-kano_anitab1
+	DD KNKNEE3-kano_anitab1
+	DD 0
+	DD KNKNEE2-kano_anitab1
+	DD KNKNEE1-kano_anitab1
+	DD 0
+a_sweep_kick:
+	DD KNSWEEPKICK1-kano_anitab1
+	DD KNSWEEPKICK2-kano_anitab1
+	DD KNSWEEPKICK3-kano_anitab1
+	DD ani_calla
+	DD sweep_sounds
+	DD KNSWEEPKICK4-kano_anitab1
+	DD KNSWEEPKICK5-kano_anitab1
+	DD 0
+	DD KNSWEEPKICK6-kano_anitab1
+	DD KNSWEEPKICK7-kano_anitab1
+	DD 0
+a_roundhouse:
+	DD KNSPINHOOK1-kano_anitab1
+	DD KNSPINHOOK2-kano_anitab1
+	DD KNSPINHOOK3-kano_anitab1
+	DD KNSPINHOOK4-kano_anitab1
+	DD 0
+	DD KNSPINHOOK5-kano_anitab1
+	DD KNSPINHOOK6-kano_anitab1
+	DD KNSPINHOOK7-kano_anitab1
+	DD KNSPINHOOK8-kano_anitab1
+	DD 0
+a_jump:
+	DD KNJUMP1-kano_anitab1
+	DD KNJUMP2-kano_anitab1
+	DD KNJUMP3-kano_anitab1
+	DD 0
+a_jump_kick:
+	DD KNJUMPKICK1-kano_anitab1
+	DD KNJUMPKICK2-kano_anitab1
+	DD KNJUMPKICK3-kano_anitab1
+	DD 0
+	DD KNJUMPKICK2-kano_anitab1
+	DD KNJUMPKICK1-kano_anitab1
+	DD 0
+a_flip_punch:
+	DD KNFLIPUNCH1-kano_anitab1
+	DD KNFLIPUNCH2-kano_anitab1
+	DD KNFLIPUNCH3-kano_anitab1
+	DD 0
+	DD KNFLIPUNCH2-kano_anitab1
+	DD KNFLIPUNCH1-kano_anitab1
+	DD 0
+a_flip_kick:
+	DD KNFLIPKICK1-kano_anitab1
+	DD KNFLIPKICK2-kano_anitab1
+	DD KNFLIPKICK3-kano_anitab1
+	DD 0
+	DD KNFLIPKICK2-kano_anitab1
+	DD KNFLIPKICK1-kano_anitab1
+	DD 0
+a_fflip:
+	DD KNJUMPFLIP1-kano_anitab1
+	DD KNJUMPFLIP2-kano_anitab1
+	DD KNJUMPFLIP3-kano_anitab1
+	DD KNJUMPFLIP4-kano_anitab1
+	DD KNJUMPFLIP5-kano_anitab1
+	DD KNJUMPFLIP6-kano_anitab1
+	DD KNJUMPFLIP7-kano_anitab1
+	DD KNJUMPFLIP8-kano_anitab1
+	DD ani_jump
+	DD a_fflip+(32/8)-kano_anitab1
+a_bflip:
+	DD KNJUMPFLIP1-kano_anitab1
+	DD KNJUMPFLIP8-kano_anitab1
+	DD KNJUMPFLIP7-kano_anitab1
+	DD KNJUMPFLIP6-kano_anitab1
+	DD KNJUMPFLIP5-kano_anitab1
+	DD KNJUMPFLIP4-kano_anitab1
+	DD KNJUMPFLIP3-kano_anitab1
+	DD KNJUMPFLIP2-kano_anitab1
+	DD ani_jump
+	DD a_bflip+(32/8)-kano_anitab1
+a_air_slam:
+	DD KNTHRUST1-kano_anitab1
+	DD KNTHRUST2-kano_anitab1
+	DD KNTHRUST3-kano_anitab1
+	DD 0
+a_hit_hi:
+	DD KNHIHIT2-kano_anitab1
+	DD KNHIHIT3-kano_anitab1
+	DD KNHIHIT2-kano_anitab1
+	DD KNHIHIT1-kano_anitab1
+	DD 0
+a_hit_lo:
+	DD KNLOHIT2-kano_anitab1
+	DD KNLOHIT3-kano_anitab1
+	DD KNLOHIT2-kano_anitab1
+	DD KNLOHIT1-kano_anitab1
+	DD 0
+a_stumble:
+	DD KNSTUMBLE1-kano_anitab1
+	DD KNSTUMBLE2-kano_anitab1
+	DD KNSTUMBLE3-kano_anitab1
+	DD KNSTUMBLE4-kano_anitab1
+	DD KNSTUMBLE5-kano_anitab1
+	DD KNSTUMBLE6-kano_anitab1
+	DD 0
+j_stumble:
+	DD KNSTUMBLE1-kano_anitab1
+	DD KNSTUMBLE2-kano_anitab1
+	DD KNSTUMBLE3-kano_anitab1
+	DD KNSTUMBLE4-kano_anitab1
+	DD KNSTUMBLE5-kano_anitab1
+	DD KNSTUMBLE6-kano_anitab1
+	DD ani_jump
+	DD j_stumble-kano_anitab1
+a_knockdown:
+	DD KNKNOCKDOWN1-kano_anitab1
+	DD KNKNOCKDOWN2-kano_anitab1
+	DD KNKNOCKDOWN3-kano_anitab1
+	DD KNKNOCKDOWN4-kano_anitab1
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD 0
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD KNKNOCKDOWN7-kano_anitab1
+	DD 0
+a_sweep_fall:
+	DD KNSWEEPFALL1-kano_anitab1
+	DD KNSWEEPFALL2-kano_anitab1
+	DD KNSWEEPFALL3-kano_anitab1
+	DD KNSWEEPFALL4-kano_anitab1
+	DD KNSWEEPFALL5-kano_anitab1
+	DD 0
+	DD KNSWEEPFALL6-kano_anitab1
+	DD KNSWEEPFALL7-kano_anitab1
+	DD 0
+a_getup:
+	DD KNGETUP1-kano_anitab1
+	DD KNGETUP2-kano_anitab1
+	DD KNGETUP3-kano_anitab1
+	DD KNGETUP4-kano_anitab1
+	DD KNGETUP5-kano_anitab1
+	DD KNGETUP6-kano_anitab1
+	DD 0
+a_sweepup:
+	DD KNSWEEPUP1-kano_anitab1
+	DD KNSWEEPUP2-kano_anitab1
+	DD KNSWEEPUP3-kano_anitab1
+	DD KNSWEEPUP4-kano_anitab1
+	DD KNSWEEPUP5-kano_anitab1
+	DD KNSWEEPUP6-kano_anitab1
+	DD 0
+a_dizzy:
+	DD KNSTUNNED1-kano_anitab1
+	DD KNSTUNNED2-kano_anitab1
+	DD KNSTUNNED3-kano_anitab1
+	DD KNSTUNNED4-kano_anitab1
+	DD KNSTUNNED5-kano_anitab1
+	DD KNSTUNNED6-kano_anitab1
+	DD KNSTUNNED7-kano_anitab1
+	DD ani_jump
+	DD a_dizzy-kano_anitab1
+a_throw:
+	DD KNFLIP1-kano_anitab1
+	DD KNFLIP2-kano_anitab1
+	DD 0
+	DD KNFLIP3-kano_anitab1
+	DD KNFLIP4-kano_anitab1
+	DD KNFLIP5-kano_anitab1
+	DD 0
+	DD KNFLIP6-kano_anitab1
+	DD KNFLIP7-kano_anitab1
+	DD ani_flip
+	DD 0
+a_afb_kano:
+	DD ani_offset_xy
+	DW -034H
+	DW -008H
+	DD KNKNOCKDOWN1-kano_anitab1
+	DD ani_offset_xy
+	DW -03dH
+	DW 014H
+	DD KNKNOCKDOWN2-kano_anitab1
+	DD ani_offset_xy
+	DW -04fH
+	DW 029H
+	DD KNKNOCKDOWN3-kano_anitab1
+	DD 0
+	DD KNKNOCKDOWN4-kano_anitab1
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD KNKNOCKDOWN7-kano_anitab1
+	DD 0
+a_fb_smoke:
+a_afb_robo2:
+	DD ani_offset_xy
+	DW -01eH
+	DW -038H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 007H
+	DW -052H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 037H
+	DW -049H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 055H
+	DW -026H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 057H
+	DW -015H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD ani_offset_xy
+	DW 06cH
+	DW 016H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD 0
+a_fb_kano:
+	DD ani_offset_xy
+	DW -039H
+	DW -010H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -023H
+	DW -036H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 042H
+	DW -047H
+	DD KNFLIPPED3-kano_anitab1
+	DD 0
+	DD KNFLIPPED4-kano_anitab1
+	DD KNFLIPPED5-kano_anitab1
+	DD KNKNOCKDOWN4-kano_anitab1
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD 0
+a_fb_sonya:
+	DD ani_offset_xy
+	DW -024H
+	DW 000H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -016H
+	DW 001H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 01eH
+	DW -01aH
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 05dH
+	DW -01fH
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 081H
+	DW -023H
+	DD KNFLIPPED4-kano_anitab1
+	DD 0
+	DD KNFLIPPED5-kano_anitab1
+	DD KNKNOCKDOWN4-kano_anitab1
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD 0
+a_fb_jax:
+	DD ani_offset_xy
+	DW -039H
+	DW -018H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -024H
+	DW -03dH
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 016H
+	DW -055H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 050H
+	DW -02eH
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 05fH
+	DW 008H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 040H
+	DW 010H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD 0
+a_fb_ind:
+	DD ani_offset_xy
+	DW -057H
+	DW -01aH
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -03dH
+	DW -042H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW -007H
+	DW -05dH
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 028H
+	DW -04cH
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 044H
+	DW -032H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD ani_offset_xy
+	DW 058H
+	DW -003H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD 0
+a_fb_sz:
+	DD ani_offset_xy
+	DW -049H
+	DW -032H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW 057H
+	DW -025H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW 040H
+	DW -003H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW -011H
+	DW -00dH
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD ani_offset_xy
+	DW -051H
+	DW -031H
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD ani_offset_xy
+	DW -081H
+	DW -064H
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD 0
+a_fb_swat:
+	DD ani_offset_xy
+	DW -043H
+	DW -00dH
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -030H
+	DW -042H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 028H
+	DW -060H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 065H
+	DW -027H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 03fH
+	DW 004H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD 0
+a_fb_lia:
+	DD ani_offset_xy
+	DW -064H
+	DW 000H
+	DD KNSTUMBLE1-kano_anitab1
+	DD ani_offset_xy
+	DW -073H
+	DW 003H
+	DD KNSTUMBLE1-kano_anitab1
+	DD ani_offset_xy
+	DW -075H
+	DW -01eH
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -057H
+	DW -03dH
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -023H
+	DW -046H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW 01eH
+	DW -04eH
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW 0a8H
+	DW 012H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 08dH
+	DW 000H
+	DD KNKNOCKDOWN7-kano_anitab1
+	DD 0
+a_fb_robo:
+	DD ani_offset_xy
+	DW -047H
+	DW -00bH
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -043H
+	DW -02fH
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW -031H
+	DW -048H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 000H
+	DW -074H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 03cH
+	DW -072H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 060H
+	DW -05bH
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 07bH
+	DW -017H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW 057H
+	DW -008H
+	DD KNKNOCKDOWN7-kano_anitab1
+	DD 0
+a_fb_robo2:
+	DD ani_offset_xy
+	DW -026H
+	DW -008H
+	DD KNSTUMBLE1-kano_anitab1
+	DD ani_offset_xy
+	DW -025H
+	DW -01eH
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -011H
+	DW -028H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 019H
+	DW -033H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 029H
+	DW -013H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 017H
+	DW -008H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW -024H
+	DW -011H
+	DD KNKNOCKDOWN7-kano_anitab1
+	DD 0
+a_fb_lao:
+	DD ani_offset_xy
+	DW -01dH
+	DW 01aH
+	DD KNSTUMBLE1-kano_anitab1
+	DD ani_offset_xy
+	DW 000H
+	DW 033H
+	DD KNSTUMBLE1-kano_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -022H
+	DW 01dH
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -046H
+	DW -00fH
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW -02cH
+	DW -057H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 014H
+	DW -06dH
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 04fH
+	DW -070H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW 05aH
+	DW -056H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW 077H
+	DW 002H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW 077H
+	DW 052H
+	DD KNFLIPPED5-kano_anitab1
+	DD 0
+a_fb_tusk:
+	DD ani_offset_xy
+	DW -06eH
+	DW 000H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -05dH
+	DW -04aH
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW -00cH
+	DW -081H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 040H
+	DW -057H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 044H
+	DW -015H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW 00fH
+	DW 01eH
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW -031H
+	DW -014H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD ani_offset_xy
+	DW -068H
+	DW 001H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -04eH
+	DW -054H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 026H
+	DW -072H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 065H
+	DW -005H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW 064H
+	DW 009H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD 0
+a_fb_sg:
+	DD ani_offset_xy
+	DW -03dH
+	DW -030H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -008H
+	DW -052H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW -001H
+	DW -05eH
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 018H
+	DW -04fH
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 01aH
+	DW -035H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_flip
+	DD ani_offset_xy
+	DW -035H
+	DW -009H
+	DD KNKNOCKDOWN7-kano_anitab1
+	DD 0
+a_fb_st:
+	DD ani_offset_xy
+	DW -04cH
+	DW 000H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -041H
+	DW 007H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -02aH
+	DW 001H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW -007H
+	DW 003H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 00eH
+	DW 025H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW -00fH
+	DW -004H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD ani_offset_xy
+	DW -023H
+	DW -004H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD ani_offset_xy
+	DW -038H
+	DW -004H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD ani_offset_xy
+	DW -060H
+	DW 019H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -067H
+	DW -00bH
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW -04cH
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 02bH
+	DW -041H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 04cH
+	DW -018H
+	DD KNFLIPPED5-kano_anitab1
+	DD ani_offset_xy
+	DW 05bH
+	DW -008H
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD 0
+a_fb_lk:
+	DD ani_offset_xy
+	DW -03aH
+	DW -001H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -037H
+	DW 007H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -013H
+	DW 002H
+	DD KNFLIPPED2-kano_anitab1
+	DD ani_offset_xy
+	DW 010H
+	DW 000H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 03cH
+	DW -003H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 088H
+	DW -025H
+	DD KNFLIPPED4-kano_anitab1
+	DD 0
+	DD KNFLIPPED5-kano_anitab1
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD KNKNOCKDOWN7-kano_anitab1
+	DD 0
+a_legged:
+	DD ani_offset_xy
+	DW -055H
+	DW 000H
+	DD KNKNOCKDOWN1-kano_anitab1
+	DD ani_offset_xy
+	DW -044H
+	DW -029H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -00aH
+	DW -050H
+	DD KNFLIPPED3-kano_anitab1
+	DD ani_offset_xy
+	DW 038H
+	DW -037H
+	DD KNFLIPPED4-kano_anitab1
+	DD ani_offset_xy
+	DW 064H
+	DW 000H
+	DD KNFLIPPED5-kano_anitab1
+	DD 0
+a_zoomed:
+	DD ani_offset_xy
+	DW 048H
+	DW -00eH
+	DD KNKNOCKDOWN3-kano_anitab1
+	DD ani_offset_xy
+	DW 04eH
+	DW 00fH
+	DD KNKNOCKDOWN4-kano_anitab1
+	DD ani_offset_xy
+	DW 01fH
+	DW 00eH
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD ani_offset_xy
+	DW -03cH
+	DW 011H
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD ani_offset_xy
+	DW -083H
+	DW -004H
+	DD KNFLIPPED1-kano_anitab1
+	DD ani_offset_xy
+	DW -027H
+	DW -066H
+	DD KNFLIPPED3-kano_anitab1
+	DD 0
+	DD KNFLIPPED3-kano_anitab1
+	DD KNFLIPPED4-kano_anitab1
+	DD KNFLIPPED5-kano_anitab1
+	DD KNKNOCKDOWN5-kano_anitab1
+	DD KNKNOCKDOWN6-kano_anitab1
+	DD KNKNOCKDOWN7-kano_anitab1
+	DD 0
+a_shook:
+	DD ani_offset_xy
+	DW -04fH
+	DW -008H
+	DD KNSTUMBLE2-kano_anitab1
+	DD ani_offset_xy
+	DW -038H
+	DW -01fH
+	DD KNSTUMBLE2-kano_anitab1
+	DD ani_offset_xy
+	DW -01bH
+	DW -01cH
+	DD KNSTUMBLE2-kano_anitab1
+	DD 0
+	DD ani_offset_xy
+	DW -01dH
+	DW -01aH
+	DD KNSTUMBLE2-kano_anitab1
+	DD ani_offset_xy
+	DW -033H
+	DW -02bH
+	DD KNSTUMBLE2-kano_anitab1
+	DD ani_offset_xy
+	DW -044H
+	DW -02dH
+	DD KNSTUMBLE2-kano_anitab1
+	DD ani_offset_xy
+	DW -033H
+	DW -02bH
+	DD KNSTUMBLE1-kano_anitab1
+	DD 0
+a_victory:
+	DD KNVICTORY1-kano_anitab1
+	DD KNVICTORY2-kano_anitab1
+	DD KNVICTORY3-kano_anitab1
+	DD KNVICTORY4-kano_anitab1
+	DD KNVICTORY5-kano_anitab1
+	DD KNVICTORY6-kano_anitab1
+	DD KNVICTORY7-kano_anitab1
+	DD KNVICTORY8-kano_anitab1
+	DD KNVICTORY9-kano_anitab1
+	DD KNVICTORY10-kano_anitab1
+	DD 0
+a_projectile:
+	DD KNSABER1-kano_anitab1
+	DD KNSABER2-kano_anitab1
+	DD KNSABER3-kano_anitab1
+	DD KNSABER4-kano_anitab1
+	DD KNSABER5-kano_anitab1
+	DD KNSABER6-kano_anitab1
+	DD 0
+	DD ani_adjustxy
+	DW 050H
+	DW 020H
+a_proj_loop:
+	DD KNSABER7-kano_anitab1
+	DD KNSABER8-kano_anitab1
+	DD KNSABER9-kano_anitab1
+	DD KNSABER10-kano_anitab1
+	DD KNSABER11-kano_anitab1
+	DD KNSABER12-kano_anitab1
+	DD KNSABER13-kano_anitab1
+	DD KNSABER14-kano_anitab1
+	DD KNSABER15-kano_anitab1
+	DD KNSABER16-kano_anitab1
+	DD ani_jump
+	DD a_proj_loop-kano_anitab1
+	DD 0
+	DD KNSABER17-kano_anitab1
+	DD KNSABER18-kano_anitab1
+	DD KNSABER19-kano_anitab1
+	DD KNSABER20-kano_anitab1
+	DD KNSABER21-kano_anitab1
+	DD KNSABER22-kano_anitab1
+	DD 0
+a_zap:
+	DD KNTHROWPRO1-kano_anitab1
+	DD KNTHROWPRO2-kano_anitab1
+	DD KNTHROWPRO3-kano_anitab1
+	DD KNTHROWPRO4-kano_anitab1
+	DD KNTHROWPRO5-kano_anitab1
+	DD KNTHROWPRO6-kano_anitab1
+	DD KNTHROWPRO7-kano_anitab1
+	DD 0
+	DD KNTHROWPRO8-kano_anitab1
+	DD 0
+a_swipe_knife:
+	DD ani_sladd
+	DD BLADE1-kano_anitab1
+	DD KNSWIPE1-kano_anitab1
+	DD ani_adjustx
+	DD 8
+	DD ani_slani
+	DD BLADE2-kano_anitab1
+	DD KNSWIPE2-kano_anitab1
+	DD ani_adjustx
+	DD 8
+	DD ani_slani
+	DD BLADE3-kano_anitab1
+	DD KNSWIPE3-kano_anitab1
+	DD ani_adjustx
+	DD 8
+	DD ani_slani
+	DD BLADE4-kano_anitab1
+	DD KNSWIPE4-kano_anitab1
+	DD ani_adjustx
+	DD 11
+	DD ani_slani
+	DD BLADE5-kano_anitab1
+	DD KNSWIPE5-kano_anitab1
+	DD 0
+	DD ani_adjustx
+	DD 11
+	DD ani_slani
+	DD BLADE6-kano_anitab1
+	DD KNSWIPE6-kano_anitab1
+	DD ani_adjustx
+	DD 11
+	DD ani_slani
+	DD BLADE7-kano_anitab1
+	DD KNSWIPE7-kano_anitab1
+	DD ani_slani
+	DD BLADE8-kano_anitab1
+	DD KNSWIPE8-kano_anitab1
+	DD 0
+	DD ani_slani
+	DD BLADE9-kano_anitab1
+	DD KNSWIPE9-kano_anitab1
+	DD ani_slani
+	DD BLADE10-kano_anitab1
+	DD KNSWIPE10-kano_anitab1
+	DD 0
+a_shake:
+	DD KNSHAKE1-kano_anitab1
+	DD KNSHAKE2-kano_anitab1
+	DD KNSHAKE3-kano_anitab1
+	DD 0
+	DD KNSHAKE3-kano_anitab1
+	DD KNSHAKE4-kano_anitab1
+	DD KNSHAKE5-kano_anitab1
+	DD 0
+	DD KNSHAKE6-kano_anitab1
+	DD KNSHAKE7-kano_anitab1
+	DD KNSHAKE8-kano_anitab1
+	DD KNSHAKE7-kano_anitab1
+	DD 0
+a_run:
+	DD KNRUN1-kano_anitab1
+	DD KNRUN2-kano_anitab1
+	DD KNRUN3-kano_anitab1
+	DD KNRUN4-kano_anitab1
+	DD ani_calla
+	DD rsnd_footstep
+	DD KNRUN5-kano_anitab1
+	DD KNRUN6-kano_anitab1
+	DD KNRUN7-kano_anitab1
+	DD KNRUN8-kano_anitab1
+	DD KNRUN9-kano_anitab1
+	DD ani_calla
+	DD rsnd_footstep
+	DD KNRUN10-kano_anitab1
+	DD KNRUN11-kano_anitab1
+	DD ani_jump
+	DD a_run-kano_anitab1
+a_thudd:
+	DD KNTHUD1-kano_anitab1
+	DD KNTHUD2-kano_anitab1
+	DD KNTHUD3-kano_anitab1
+	DD KNTHUD4-kano_anitab1
+	DD KNTHUD5-kano_anitab1
+	DD KNTHUD6-kano_anitab1
+	DD 0
+a_scared:
+	DD KNSCARED2-kano_anitab1
+	DD 0
+KNSTANCE1:
+	DD KNSTANCE1_SUB-kano_anitab1, 0
+KNSTANCE1_SUB:
+	DD KNSTANCE1_IMG-kano_anitab1
+	DW 57, 109, 25, -8
+	DD   _KANORED_P
+KNSTANCE2:
+	DD KNSTANCE2_SUB-kano_anitab1, 0
+KNSTANCE2_SUB:
+	DD KNSTANCE2_IMG-kano_anitab1
+	DW 56, 111, 24, -7
+KNSTANCE3:
+	DD KNSTANCE3_SUB-kano_anitab1, 0
+KNSTANCE3_SUB:
+	DD KNSTANCE3_IMG-kano_anitab1
+	DW 54, 111, 22, -7
+KNSTANCE4:
+	DD KNSTANCE4_SUB-kano_anitab1, 0
+KNSTANCE4_SUB:
+	DD KNSTANCE4_IMG-kano_anitab1
+	DW 54, 111, 22, -7
+KNSTANCE5:
+	DD KNSTANCE5_SUB-kano_anitab1, 0
+KNSTANCE5_SUB:
+	DD KNSTANCE5_IMG-kano_anitab1
+	DW 54, 110, 22, -8
+KNSTANCE6:
+	DD KNSTANCE6_SUB-kano_anitab1, 0
+KNSTANCE6_SUB:
+	DD KNSTANCE6_IMG-kano_anitab1
+	DW 54, 110, 22, -8
+KNSTANCE7:
+	DD KNSTANCE7_SUB-kano_anitab1, 0
+KNSTANCE7_SUB:
+	DD KNSTANCE7_IMG-kano_anitab1
+	DW 55, 110, 23, -8
+KNSTANCE8:
+	DD KNSTANCE8_SUB-kano_anitab1, 0
+KNSTANCE8_SUB:
+	DD KNSTANCE8_IMG-kano_anitab1
+	DW 57, 110, 25, -8
+KNSTANCE9:
+	DD KNSTANCE9_SUB-kano_anitab1, 0
+KNSTANCE9_SUB:
+	DD KNSTANCE9_IMG-kano_anitab1
+	DW 58, 108, 26, -9
+KNWALK1:
+	DD KNWALK1_SUB-kano_anitab1, 0
+KNWALK1_SUB:
+	DD KNWALK1_IMG-kano_anitab1
+	DW 54, 111, 23, -6
+KNWALK2:
+	DD KNWALK2_SUB-kano_anitab1, 0
+KNWALK2_SUB:
+	DD KNWALK2_IMG-kano_anitab1
+	DW 54, 111, 23, -5
+KNWALK3:
+	DD KNWALK3_SUB-kano_anitab1, 0
+KNWALK3_SUB:
+	DD KNWALK3_IMG-kano_anitab1
+	DW 54, 111, 23, -5
+KNWALK4:
+	DD KNWALK4_SUB-kano_anitab1, 0
+KNWALK4_SUB:
+	DD KNWALK4_IMG-kano_anitab1
+	DW 54, 111, 24, -6
+KNWALK5:
+	DD KNWALK5_SUB-kano_anitab1, 0
+KNWALK5_SUB:
+	DD KNWALK5_IMG-kano_anitab1
+	DW 54, 111, 25, -7
+KNWALK6:
+	DD KNWALK6_SUB-kano_anitab1, 0
+KNWALK6_SUB:
+	DD KNWALK6_IMG-kano_anitab1
+	DW 54, 112, 25, -5
+KNWALK7:
+	DD KNWALK7_SUB-kano_anitab1, 0
+KNWALK7_SUB:
+	DD KNWALK7_IMG-kano_anitab1
+	DW 54, 111, 26, -6
+KNWALK8:
+	DD KNWALK8_SUB-kano_anitab1, 0
+KNWALK8_SUB:
+	DD KNWALK8_IMG-kano_anitab1
+	DW 54, 112, 26, -5
+KNWALK9:
+	DD KNWALK9_SUB-kano_anitab1, 0
+KNWALK9_SUB:
+	DD KNWALK9_IMG-kano_anitab1
+	DW 62, 113, 25, -4
+KNTURN1:
+	DD KNTURN1_SUB-kano_anitab1, 0
+KNTURN1_SUB:
+	DD KNTURN1_IMG-kano_anitab1
+	DW 52, 114, 24, -3
+KNTURN2:
+	DD KNTURN2_SUB-kano_anitab1, 0
+KNTURN2_SUB:
+	DD KNTURN2_IMG-kano_anitab1
+	DW 50, 114, 27, -3
+KNDUCK1:
+	DD KNDUCK1_SUB-kano_anitab1, 0
+KNDUCK1_SUB:
+	DD KNDUCK1_IMG-kano_anitab1
+	DW 55, 100, 13, -17
+KNDUCK2:
+	DD KNDUCK2_SUB-kano_anitab1, 0
+KNDUCK2_SUB:
+	DD KNDUCK2_IMG-kano_anitab1
+	DW 50, 78, 17, -39
+KNDUCK3:
+	DD KNDUCK3_SUB-kano_anitab1, 0
+KNDUCK3_SUB:
+	DD KNDUCK3_IMG-kano_anitab1
+	DW 52, 65, 20, -53
+KNDUCKTURN1:
+	DD KNDUCKTURN1_SUB-kano_anitab1, 0
+KNDUCKTURN1_SUB:
+	DD KNDUCKTURN1_IMG-kano_anitab1
+	DW 41, 66, 14, -53
+KNDUCKTURN2:
+	DD KNDUCKTURN2_SUB-kano_anitab1, 0
+KNDUCKTURN2_SUB:
+	DD KNDUCKTURN2_IMG-kano_anitab1
+	DW 46, 68, 22, -53
+KNDUCKBLOCK1:
+	DD KNDUCKBLOCK1_SUB-kano_anitab1, 0
+KNDUCKBLOCK1_SUB:
+	DD KNDUCKBLOCK1_IMG-kano_anitab1
+	DW 51, 69, 16, -49
+KNDUCKBLOCK2:
+	DD KNDUCKBLOCK2_SUB-kano_anitab1, 0
+KNDUCKBLOCK2_SUB:
+	DD KNDUCKBLOCK2_IMG-kano_anitab1
+	DW 48, 75, 16, -45
+KNDUCKBLOCK3:
+	DD KNDUCKBLOCK3_SUB-kano_anitab1, 0
+KNDUCKBLOCK3_SUB:
+	DD KNDUCKBLOCK3_IMG-kano_anitab1
+	DW 48, 82, 16, -39
+KNDUCKHIT2:
+	DD KNDUCKHIT2_SUB-kano_anitab1, 0
+KNDUCKHIT2_SUB:
+	DD KNDUCKHIT2_IMG-kano_anitab1
+	DW 48, 74, 15, -45
+KNDUCKHIT3:
+	DD KNDUCKHIT3_SUB-kano_anitab1, 0
+KNDUCKHIT3_SUB:
+	DD KNDUCKHIT3_IMG-kano_anitab1
+	DW 46, 73, 16, -46
+KNDUCKHIT1:
+	DD KNDUCKHIT1_SUB-kano_anitab1, 0
+KNDUCKHIT1_SUB:
+	DD KNDUCKHIT1_IMG-kano_anitab1
+	DW 51, 71, 16, -48
+KNDUCKPUNCH1:
+	DD KNDUCKPUNCH1_SUB-kano_anitab1, 0
+KNDUCKPUNCH1_SUB:
+	DD KNDUCKPUNCH1_IMG-kano_anitab1
+	DW 50, 68, 10, -49
+KNDUCKPUNCH2:
+	DD KNDUCKPUNCH2_SUB-kano_anitab1, 0
+KNDUCKPUNCH2_SUB:
+	DD KNDUCKPUNCH2_IMG-kano_anitab1
+	DW 66, 70, 9, -48
+KNDUCKPUNCH3:
+	DD KNDUCKPUNCH3_SUB-kano_anitab1, 0
+KNDUCKPUNCH3_SUB:
+	DD KNDUCKPUNCH3_IMG-kano_anitab1
+	DW 76, 73, 7, -50
+KNDUCKHIKICK1:
+	DD KNDUCKHIKICK1_SUB-kano_anitab1, 0
+KNDUCKHIKICK1_SUB:
+	DD KNDUCKHIKICK1_IMG-kano_anitab1
+	DW 52, 70, 18, -47
+KNDUCKHIKICK2:
+	DD KNDUCKHIKICK2_SUB-kano_anitab1, 0
+KNDUCKHIKICK2_SUB:
+	DD KNDUCKHIKICK2_IMG-kano_anitab1
+	DW 54, 72, 21, -45
+KNDUCKHIKICK3:
+	DD KNDUCKHIKICK3_SUB-kano_anitab1, 0
+KNDUCKHIKICK3_SUB:
+	DD KNDUCKHIKICK3_IMG-kano_anitab1
+	DW 77, 74, 30, -45
+KNDUCKHIKICK4:
+	DD KNDUCKHIKICK4_SUB-kano_anitab1, 0
+KNDUCKHIKICK4_SUB:
+	DD KNDUCKHIKICK4_IMG-kano_anitab1
+	DW 78, 78, 35, -42
+KNDUCKLOKICK1:
+	DD KNDUCKLOKICK1_SUB-kano_anitab1, 0
+KNDUCKLOKICK1_SUB:
+	DD KNDUCKLOKICK1_IMG-kano_anitab1
+	DW 42, 65, 10, -57
+KNDUCKLOKICK2:
+	DD KNDUCKLOKICK2_SUB-kano_anitab1, 0
+KNDUCKLOKICK2_SUB:
+	DD KNDUCKLOKICK2_IMG-kano_anitab1
+	DW 58, 60, 13, -65
+KNDUCKLOKICK3:
+	DD KNDUCKLOKICK3_SUB-kano_anitab1, 0
+KNDUCKLOKICK3_SUB:
+	DD KNDUCKLOKICK3_IMG-kano_anitab1
+	DW 85, 59, 16, -64
+KNDUCKLOKICK4:
+	DD KNDUCKLOKICK4_SUB-kano_anitab1, 0
+KNDUCKLOKICK4_SUB:
+	DD KNDUCKLOKICK4_IMG-kano_anitab1
+	DW 86, 63, 11, -59
+KNUPPERCUT1:
+	DD KNUPPERCUT1_SUB-kano_anitab1, 0
+KNUPPERCUT1_SUB:
+	DD KNUPPERCUT1_IMG-kano_anitab1
+	DW 76, 83, 25, -34
+KNUPPERCUT2:
+	DD KNUPPERCUT2_SUB-kano_anitab1, 0
+KNUPPERCUT2_SUB:
+	DD KNUPPERCUT2_IMG-kano_anitab1
+	DW 46, 103, 10, -14
+KNUPPERCUT3:
+	DD KNUPPERCUT3_SUB-kano_anitab1, 0
+KNUPPERCUT3_SUB:
+	DD KNUPPERCUT3_IMG-kano_anitab1
+	DW 72, 109, 11, -8
+KNUPPERCUT4:
+	DD KNUPPERCUT4_SUB-kano_anitab1, 0
+KNUPPERCUT4_SUB:
+	DD KNUPPERCUT4_IMG-kano_anitab1
+	DW 78, 122, 18, 4
+KNUPPERCUT5:
+	DD KNUPPERCUT5_SUB-kano_anitab1, 0
+KNUPPERCUT5_SUB:
+	DD KNUPPERCUT5_IMG-kano_anitab1
+	DW 63, 128, 20, 8
+KNUPPERCUT6:
+	DD KNUPPERCUT6_SUB-kano_anitab1, 0
+KNUPPERCUT6_SUB:
+	DD KNUPPERCUT6_IMG-kano_anitab1
+	DW 51, 121, 18, 2
+KNHIBLOCK1:
+	DD KNHIBLOCK1_SUB-kano_anitab1, 0
+KNHIBLOCK1_SUB:
+	DD KNHIBLOCK1_IMG-kano_anitab1
+	DW 50, 112, 16, -5
+KNHIBLOCK2:
+	DD KNHIBLOCK2_SUB-kano_anitab1, 0
+KNHIBLOCK2_SUB:
+	DD KNHIBLOCK2_IMG-kano_anitab1
+	DW 48, 112, 17, -5
+KNHIBLOCK3:
+	DD KNHIBLOCK3_SUB-kano_anitab1, 0
+KNHIBLOCK3_SUB:
+	DD KNHIBLOCK3_IMG-kano_anitab1
+	DW 52, 111, 21, -7
+KNVICTORY1:
+	DD KNVICTORY1_SUB-kano_anitab1, 0
+KNVICTORY1_SUB:
+	DD KNVICTORY1_IMG-kano_anitab1
+	DW 58, 108, 25, -10
+KNVICTORY2:
+	DD KNVICTORY2_SUB-kano_anitab1, 0
+KNVICTORY2_SUB:
+	DD KNVICTORY2_IMG-kano_anitab1
+	DW 46, 111, 15, -8
+KNVICTORY3:
+	DD KNVICTORY3_SUB-kano_anitab1, 0
+KNVICTORY3_SUB:
+	DD KNVICTORY3_IMG-kano_anitab1
+	DW 46, 119, 15, 0
+KNVICTORY4:
+	DD KNVICTORY4_SUB-kano_anitab1, 0
+KNVICTORY4_SUB:
+	DD KNVICTORY4_IMG-kano_anitab1
+	DW 46, 136, 15, 17
+KNVICTORY5:
+	DD KNVICTORY5_SUB-kano_anitab1, 0
+KNVICTORY5_SUB:
+	DD KNVICTORY5_IMG-kano_anitab1
+	DW 80, 120, 32, 1
+KNVICTORY6:
+	DD KNVICTORY6_SUB-kano_anitab1, 0
+KNVICTORY6_SUB:
+	DD KNVICTORY6_IMG-kano_anitab1
+	DW 96, 114, 42, -4
+KNVICTORY7:
+	DD KNVICTORY7_SUB-kano_anitab1, 0
+KNVICTORY7_SUB:
+	DD KNVICTORY7_IMG-kano_anitab1
+	DW 94, 113, 41, -5
+KNVICTORY8:
+	DD KNVICTORY8_SUB-kano_anitab1, 0
+KNVICTORY8_SUB:
+	DD KNVICTORY8_IMG-kano_anitab1
+	DW 66, 120, 27, 1
+KNVICTORY9:
+	DD KNVICTORY9_SUB-kano_anitab1, 0
+KNVICTORY9_SUB:
+	DD KNVICTORY9_IMG-kano_anitab1
+	DW 54, 128, 22, 8
+KNVICTORY10:
+	DD KNVICTORY10_SUB-kano_anitab1, 0
+KNVICTORY10_SUB:
+	DD KNVICTORY10_IMG-kano_anitab1
+	DW 58, 118, 22, 0
+KNHIPUNCH1:
+	DD KNHIPUNCH1_SUB-kano_anitab1, 0
+KNHIPUNCH1_SUB:
+	DD KNHIPUNCH1_IMG-kano_anitab1
+	DW 49, 113, 13, -5
+KNHIPUNCH2:
+	DD KNHIPUNCH2_SUB-kano_anitab1, 0
+KNHIPUNCH2_SUB:
+	DD KNHIPUNCH2_IMG-kano_anitab1
+	DW 66, 113, 19, -5
+KNHIPUNCH3:
+	DD KNHIPUNCH3_SUB-kano_anitab1, 0
+KNHIPUNCH3_SUB:
+	DD KNHIPUNCH3_IMG-kano_anitab1
+	DW 83, 110, 24, -8
+KNHIPUNCH4:
+	DD KNHIPUNCH4_SUB-kano_anitab1, 0
+KNHIPUNCH4_SUB:
+	DD KNHIPUNCH4_IMG-kano_anitab1
+	DW 65, 111, 21, -7
+KNHIPUNCH5:
+	DD KNHIPUNCH5_SUB-kano_anitab1, 0
+KNHIPUNCH5_SUB:
+	DD KNHIPUNCH5_IMG-kano_anitab1
+	DW 72, 113, 17, -5
+KNHIPUNCH6:
+	DD KNHIPUNCH6_SUB-kano_anitab1, 0
+KNHIPUNCH6_SUB:
+	DD KNHIPUNCH6_IMG-kano_anitab1
+	DW 83, 111, 18, -8
+KNHIPUNCH7:
+	DD KNHIPUNCH7_SUB-kano_anitab1, 0
+KNHIPUNCH7_SUB:
+	DD KNHIPUNCH7_IMG-kano_anitab1
+	DW 61, 116, 16, -2
+KNLOPUNCH4:
+	DD KNLOPUNCH4_SUB-kano_anitab1, 0
+KNLOPUNCH4_SUB:
+	DD KNLOPUNCH4_IMG-kano_anitab1
+	DW 70, 108, 15, -9
+KNLOPUNCH1:
+	DD KNLOPUNCH1_SUB-kano_anitab1, 0
+KNLOPUNCH1_SUB:
+	DD KNLOPUNCH1_IMG-kano_anitab1
+	DW 65, 110, 18, -8
+KNLOPUNCH2:
+	DD KNLOPUNCH2_SUB-kano_anitab1, 0
+KNLOPUNCH2_SUB:
+	DD KNLOPUNCH2_IMG-kano_anitab1
+	DW 85, 105, 22, -13
+KNLOPUNCH3:
+	DD KNLOPUNCH3_SUB-kano_anitab1, 0
+KNLOPUNCH3_SUB:
+	DD KNLOPUNCH3_IMG-kano_anitab1
+	DW 67, 107, 24, -10
+KNLOPUNCH5:
+	DD KNLOPUNCH5_SUB-kano_anitab1, 0
+KNLOPUNCH5_SUB:
+	DD KNLOPUNCH5_IMG-kano_anitab1
+	DW 84, 104, 17, -13
+KNBACKFIST1:
+	DD KNBACKFIST1_SUB-kano_anitab1, 0
+KNBACKFIST1_SUB:
+	DD KNBACKFIST1_IMG-kano_anitab1
+	DW 46, 114, 15, -3
+KNBACKFIST2:
+	DD KNBACKFIST2_SUB-kano_anitab1, 0
+KNBACKFIST2_SUB:
+	DD KNBACKFIST2_IMG-kano_anitab1
+	DW 49, 116, 15, -2
+KNBACKFIST3:
+	DD KNBACKFIST3_SUB-kano_anitab1, 0
+KNBACKFIST3_SUB:
+	DD KNBACKFIST3_IMG-kano_anitab1
+	DW 66, 114, 14, -3
+KNLASER1:
+	DD KNLASER1_SUB-kano_anitab1, 0
+KNLASER1_SUB:
+	DD KNLASER1_IMG-kano_anitab1
+	DW 49, 114, 17, -3
+KNLASER2:
+	DD KNLASER2_SUB-kano_anitab1, 0
+KNLASER2_SUB:
+	DD KNLASER2_IMG-kano_anitab1
+	DW 48, 110, 16, -8
+KNLASER3:
+	DD KNLASER3_SUB-kano_anitab1, 0
+KNLASER3_SUB:
+	DD KNLASER3_IMG-kano_anitab1
+	DW 53, 105, 14, -13
+KNHIKICK1:
+	DD KNHIKICK1_SUB-kano_anitab1, 0
+KNHIKICK1_SUB:
+	DD KNHIKICK1_IMG-kano_anitab1
+	DW 55, 114, 19, -2
+KNHIKICK2:
+	DD KNHIKICK2_SUB-kano_anitab1, 0
+KNHIKICK2_SUB:
+	DD KNHIKICK2_IMG-kano_anitab1
+	DW 57, 116, 12, -2
+KNHIKICK3:
+	DD KNHIKICK3_SUB-kano_anitab1, 0
+KNHIKICK3_SUB:
+	DD KNHIKICK3_IMG-kano_anitab1
+	DW 45, 113, 10, -6
+KNHIKICK4:
+	DD KNHIKICK4_SUB-kano_anitab1, 0
+KNHIKICK4_SUB:
+	DD KNHIKICK4_IMG-kano_anitab1
+	DW 48, 106, 7, -10
+KNHIKICK5:
+	DD KNHIKICK5_SUB-kano_anitab1, 0
+KNHIKICK5_SUB:
+	DD KNHIKICK5_IMG-kano_anitab1
+	DW 69, 99, 10, -19
+KNHIKICK6:
+	DD KNHIKICK6_SUB-kano_anitab1, 0
+KNHIKICK6_SUB:
+	DD KNHIKICK6_IMG-kano_anitab1
+	DW 86, 108, 14, -9
+KNLOKICK1:
+	DD KNLOKICK1_SUB-kano_anitab1, 0
+KNLOKICK1_SUB:
+	DD KNLOKICK1_IMG-kano_anitab1
+	DW 65, 110, 7, -7
+KNLOKICK2:
+	DD KNLOKICK2_SUB-kano_anitab1, 0
+KNLOKICK2_SUB:
+	DD KNLOKICK2_IMG-kano_anitab1
+	DW 78, 108, 8, -8
+KNLOKICK3:
+	DD KNLOKICK3_SUB-kano_anitab1, 0
+KNLOKICK3_SUB:
+	DD KNLOKICK3_IMG-kano_anitab1
+	DW 95, 102, 7, -15
+KNKNEE1:
+	DD KNKNEE1_SUB-kano_anitab1, 0
+KNKNEE1_SUB:
+	DD KNKNEE1_IMG-kano_anitab1
+	DW 37, 108, 5, -8
+KNKNEE2:
+	DD KNKNEE2_SUB-kano_anitab1, 0
+KNKNEE2_SUB:
+	DD KNKNEE2_IMG-kano_anitab1
+	DW 54, 108, 10, -8
+KNKNEE3:
+	DD KNKNEE3_SUB-kano_anitab1, 0
+KNKNEE3_SUB:
+	DD KNKNEE3_IMG-kano_anitab1
+	DW 86, 102, 18, -14
+KNSWEEPKICK1:
+	DD KNSWEEPKICK1_SUB-kano_anitab1, 0
+KNSWEEPKICK1_SUB:
+	DD KNSWEEPKICK1_IMG-kano_anitab1
+	DW 64, 78, 16, -39
+KNSWEEPKICK2:
+	DD KNSWEEPKICK2_SUB-kano_anitab1, 0
+KNSWEEPKICK2_SUB:
+	DD KNSWEEPKICK2_IMG-kano_anitab1
+	DW 62, 59, 19, -61
+KNSWEEPKICK3:
+	DD KNSWEEPKICK3_SUB-kano_anitab1, 0
+KNSWEEPKICK3_SUB:
+	DD KNSWEEPKICK3_IMG-kano_anitab1
+	DW 54, 53, 11, -67
+KNSWEEPKICK4:
+	DD KNSWEEPKICK4_SUB-kano_anitab1, 0
+KNSWEEPKICK4_SUB:
+	DD KNSWEEPKICK4_IMG-kano_anitab1
+	DW 82, 45, 10, -76
+KNSWEEPKICK5:
+	DD KNSWEEPKICK5_SUB-kano_anitab1, 0
+KNSWEEPKICK5_SUB:
+	DD KNSWEEPKICK5_IMG-kano_anitab1
+	DW 98, 54, 10, -72
+KNSWEEPKICK6:
+	DD KNSWEEPKICK6_SUB-kano_anitab1, 0
+KNSWEEPKICK6_SUB:
+	DD KNSWEEPKICK6_IMG-kano_anitab1
+	DW 45, 88, 10, -49
+KNSWEEPKICK7:
+	DD KNSWEEPKICK7_SUB-kano_anitab1, 0
+KNSWEEPKICK7_SUB:
+	DD KNSWEEPKICK7_IMG-kano_anitab1
+	DW 72, 101, 27, -18
+KNSPINHOOK1:
+	DD KNSPINHOOK1_SUB-kano_anitab1, 0
+KNSPINHOOK1_SUB:
+	DD KNSPINHOOK1_IMG-kano_anitab1
+	DW 45, 111, 25, -7
+KNSPINHOOK2:
+	DD KNSPINHOOK2_SUB-kano_anitab1, 0
+KNSPINHOOK2_SUB:
+	DD KNSPINHOOK2_IMG-kano_anitab1
+	DW 59, 103, 21, -14
+KNSPINHOOK3:
+	DD KNSPINHOOK3_SUB-kano_anitab1, 0
+KNSPINHOOK3_SUB:
+	DD KNSPINHOOK3_IMG-kano_anitab1
+	DW 58, 93, 10, -25
+KNSPINHOOK4:
+	DD KNSPINHOOK4_SUB-kano_anitab1, 0
+KNSPINHOOK4_SUB:
+	DD KNSPINHOOK4_IMG-kano_anitab1
+	DW 80, 114, 9, -4
+KNSPINHOOK5:
+	DD KNSPINHOOK5_SUB-kano_anitab1, 0
+KNSPINHOOK5_SUB:
+	DD KNSPINHOOK5_IMG-kano_anitab1
+	DW 53, 96, 7, -23
+KNSPINHOOK6:
+	DD KNSPINHOOK6_SUB-kano_anitab1, 0
+KNSPINHOOK6_SUB:
+	DD KNSPINHOOK6_IMG-kano_anitab1
+	DW 41, 99, 10, -19
+KNSPINHOOK7:
+	DD KNSPINHOOK7_SUB-kano_anitab1, 0
+KNSPINHOOK7_SUB:
+	DD KNSPINHOOK7_IMG-kano_anitab1
+	DW 50, 105, 17, -13
+KNSPINHOOK8:
+	DD KNSPINHOOK8_SUB-kano_anitab1, 0
+KNSPINHOOK8_SUB:
+	DD KNSPINHOOK8_IMG-kano_anitab1
+	DW 62, 111, 25, -12
+KNJUMP1:
+	DD KNJUMP1_SUB-kano_anitab1, 0
+KNJUMP1_SUB:
+	DD KNJUMP1_IMG-kano_anitab1
+	DW 56, 99, 18, -18
+KNJUMP2:
+	DD KNJUMP2_SUB-kano_anitab1, 0
+KNJUMP2_SUB:
+	DD KNJUMP2_IMG-kano_anitab1
+	DW 59, 123, 20, 4
+KNJUMP3:
+	DD KNJUMP3_SUB-kano_anitab1, 0
+KNJUMP3_SUB:
+	DD KNJUMP3_IMG-kano_anitab1
+	DW 59, 99, 20, 5
+KNJUMPKICK1:
+	DD KNJUMPKICK1_SUB-kano_anitab1, 0
+KNJUMPKICK1_SUB:
+	DD KNJUMPKICK1_IMG-kano_anitab1
+	DW 55, 100, 24, 4
+KNJUMPKICK2:
+	DD KNJUMPKICK2_SUB-kano_anitab1, 0
+KNJUMPKICK2_SUB:
+	DD KNJUMPKICK2_IMG-kano_anitab1
+	DW 90, 81, 30, 2
+KNJUMPKICK3:
+	DD KNJUMPKICK3_SUB-kano_anitab1, 0
+KNJUMPKICK3_SUB:
+	DD KNJUMPKICK3_IMG-kano_anitab1
+	DW 98, 82, 35, 1
+KNFLIPUNCH1:
+	DD KNFLIPUNCH1_SUB-kano_anitab1, 0
+KNFLIPUNCH1_SUB:
+	DD KNFLIPUNCH1_IMG-kano_anitab1
+	DW 57, 77, 12, -11
+KNFLIPUNCH2:
+	DD KNFLIPUNCH2_SUB-kano_anitab1, 0
+KNFLIPUNCH2_SUB:
+	DD KNFLIPUNCH2_IMG-kano_anitab1
+	DW 57, 79, 12, -9
+KNFLIPUNCH3:
+	DD KNFLIPUNCH3_SUB-kano_anitab1, 0
+KNFLIPUNCH3_SUB:
+	DD KNFLIPUNCH3_IMG-kano_anitab1
+	DW 74, 80, 13, -10
+KNFLIPKICK1:
+	DD KNFLIPKICK1_SUB-kano_anitab1, 0
+KNFLIPKICK1_SUB:
+	DD KNFLIPKICK1_IMG-kano_anitab1
+	DW 63, 55, 14, -3
+KNFLIPKICK2:
+	DD KNFLIPKICK2_SUB-kano_anitab1, 0
+KNFLIPKICK2_SUB:
+	DD KNFLIPKICK2_IMG-kano_anitab1
+	DW 84, 65, 22, -4
+KNFLIPKICK3:
+	DD KNFLIPKICK3_SUB-kano_anitab1, 0
+KNFLIPKICK3_SUB:
+	DD KNFLIPKICK3_IMG-kano_anitab1
+	DW 98, 65, 26, -4
+KNJUMPFLIP1:
+	DD KNJUMPFLIP1_SUB-kano_anitab1, 0
+KNJUMPFLIP1_SUB:
+	DD KNJUMPFLIP1_IMG-kano_anitab1
+	DW 52, 125, 11, 7
+KNJUMPFLIP2:
+	DD KNJUMPFLIP2_SUB-kano_anitab1, 0
+KNJUMPFLIP2_SUB:
+	DD KNJUMPFLIP2_IMG-kano_anitab1
+	DW 45, 63, 7, -8
+KNJUMPFLIP3:
+	DD KNJUMPFLIP3_SUB-kano_anitab1, 0
+KNJUMPFLIP3_SUB:
+	DD KNJUMPFLIP3_IMG-kano_anitab1
+	DW 51, 59, 12, -13
+KNJUMPFLIP4:
+	DD KNJUMPFLIP4_SUB-kano_anitab1, 0
+KNJUMPFLIP4_SUB:
+	DD KNJUMPFLIP4_IMG-kano_anitab1
+	DW 59, 48, 23, -11
+KNJUMPFLIP5:
+	DD KNJUMPFLIP5_SUB-kano_anitab1, 0
+KNJUMPFLIP5_SUB:
+	DD KNJUMPFLIP5_IMG-kano_anitab1
+	DW 45, 63, 8, 6
+KNJUMPFLIP6:
+	DD KNJUMPFLIP6_SUB-kano_anitab1, 0
+KNJUMPFLIP6_SUB:
+	DD KNJUMPFLIP6_IMG-kano_anitab1
+	DW 50, 60, 11, 6
+KNJUMPFLIP7:
+	DD KNJUMPFLIP7_SUB-kano_anitab1, 0
+KNJUMPFLIP7_SUB:
+	DD KNJUMPFLIP7_IMG-kano_anitab1
+	DW 58, 48, 9, -3
+KNJUMPFLIP8:
+	DD KNJUMPFLIP8_SUB-kano_anitab1, 0
+KNJUMPFLIP8_SUB:
+	DD KNJUMPFLIP8_IMG-kano_anitab1
+	DW 54, 54, 5, -5
+KNHIHIT2:
+	DD KNHIHIT2_SUB-kano_anitab1, 0
+KNHIHIT2_SUB:
+	DD KNHIHIT2_IMG-kano_anitab1
+	DW 54, 113, 24, -4
+KNHIHIT3:
+	DD KNHIHIT3_SUB-kano_anitab1, 0
+KNHIHIT3_SUB:
+	DD KNHIHIT3_IMG-kano_anitab1
+	DW 56, 110, 26, -8
+KNHIHIT1:
+	DD KNHIHIT1_SUB-kano_anitab1, 0
+KNHIHIT1_SUB:
+	DD KNHIHIT1_IMG-kano_anitab1
+	DW 54, 114, 23, -3
+KNLOHIT2:
+	DD KNLOHIT2_SUB-kano_anitab1, 0
+KNLOHIT2_SUB:
+	DD KNLOHIT2_IMG-kano_anitab1
+	DW 49, 111, 18, -6
+KNLOHIT3:
+	DD KNLOHIT3_SUB-kano_anitab1, 0
+KNLOHIT3_SUB:
+	DD KNLOHIT3_IMG-kano_anitab1
+	DW 47, 111, 17, -7
+KNLOHIT1:
+	DD KNLOHIT1_SUB-kano_anitab1, 0
+KNLOHIT1_SUB:
+	DD KNLOHIT1_IMG-kano_anitab1
+	DW 54, 112, 24, -5
+KNKNOCKDOWN1:
+	DD KNKNOCKDOWN1_SUB-kano_anitab1, 0
+KNKNOCKDOWN1_SUB:
+	DD KNKNOCKDOWN1_IMG-kano_anitab1
+	DW 62, 101, 20, -9
+KNKNOCKDOWN2:
+	DD KNKNOCKDOWN2_SUB-kano_anitab1, 0
+KNKNOCKDOWN2_SUB:
+	DD KNKNOCKDOWN2_IMG-kano_anitab1
+	DW 69, 84, 22, -14
+KNKNOCKDOWN3:
+	DD KNKNOCKDOWN3_SUB-kano_anitab1, 0
+KNKNOCKDOWN3_SUB:
+	DD KNKNOCKDOWN3_IMG-kano_anitab1
+	DW 70, 54, 24, -30
+KNKNOCKDOWN4:
+	DD KNKNOCKDOWN4_SUB-kano_anitab1, 0
+KNKNOCKDOWN4_SUB:
+	DD KNKNOCKDOWN4_IMG-kano_anitab1
+	DW 62, 70, 23, -36
+KNKNOCKDOWN5:
+	DD KNKNOCKDOWN5_SUB-kano_anitab1, 0
+KNKNOCKDOWN5_SUB:
+	DD KNKNOCKDOWN5_IMG-kano_anitab1
+	DW 65, 60, 18, -54
+KNKNOCKDOWN6:
+	DD KNKNOCKDOWN6_SUB-kano_anitab1, 0
+KNKNOCKDOWN6_SUB:
+	DD KNKNOCKDOWN6_IMG-kano_anitab1
+	DW 85, 35, 26, -83
+KNKNOCKDOWN7:
+	DD KNKNOCKDOWN7_SUB-kano_anitab1, 0
+KNKNOCKDOWN7_SUB:
+	DD KNKNOCKDOWN7_IMG-kano_anitab1
+	DW 97, 26, 26, -93
+KNSWEEPFALL1:
+	DD KNSWEEPFALL1_SUB-kano_anitab1, 0
+KNSWEEPFALL1_SUB:
+	DD KNSWEEPFALL1_IMG-kano_anitab1
+	DW 50, 86, 16, -26
+KNSWEEPFALL2:
+	DD KNSWEEPFALL2_SUB-kano_anitab1, 0
+KNSWEEPFALL2_SUB:
+	DD KNSWEEPFALL2_IMG-kano_anitab1
+	DW 67, 48, 28, -38
+KNSWEEPFALL3:
+	DD KNSWEEPFALL3_SUB-kano_anitab1, 0
+KNSWEEPFALL3_SUB:
+	DD KNSWEEPFALL3_IMG-kano_anitab1
+	DW 57, 65, 22, -42
+KNSWEEPFALL4:
+	DD KNSWEEPFALL4_SUB-kano_anitab1, 0
+KNSWEEPFALL4_SUB:
+	DD KNSWEEPFALL4_IMG-kano_anitab1
+	DW 59, 59, 19, -51
+KNSWEEPFALL5:
+	DD KNSWEEPFALL5_SUB-kano_anitab1, 0
+KNSWEEPFALL5_SUB:
+	DD KNSWEEPFALL5_IMG-kano_anitab1
+	DW 76, 53, 24, -59
+KNSWEEPFALL6:
+	DD KNSWEEPFALL6_SUB-kano_anitab1, 0
+KNSWEEPFALL6_SUB:
+	DD KNSWEEPFALL6_IMG-kano_anitab1
+	DW 76, 33, 26, -87
+KNSWEEPFALL7:
+	DD KNSWEEPFALL7_SUB-kano_anitab1, 0
+KNSWEEPFALL7_SUB:
+	DD KNSWEEPFALL7_IMG-kano_anitab1
+	DW 69, 42, 30, -90
+KNSTUMBLE1:
+	DD KNSTUMBLE1_SUB-kano_anitab1, 0
+KNSTUMBLE1_SUB:
+	DD KNSTUMBLE1_IMG-kano_anitab1
+	DW 54, 109, 24, -8
+KNSTUMBLE2:
+	DD KNSTUMBLE2_SUB-kano_anitab1, 0
+KNSTUMBLE2_SUB:
+	DD KNSTUMBLE2_IMG-kano_anitab1
+	DW 60, 119, 31, 1
+KNSTUMBLE3:
+	DD KNSTUMBLE3_SUB-kano_anitab1, 0
+KNSTUMBLE3_SUB:
+	DD KNSTUMBLE3_IMG-kano_anitab1
+	DW 55, 107, 38, -10
+KNSTUMBLE4:
+	DD KNSTUMBLE4_SUB-kano_anitab1, 0
+KNSTUMBLE4_SUB:
+	DD KNSTUMBLE4_IMG-kano_anitab1
+	DW 59, 105, 32, -12
+KNSTUMBLE5:
+	DD KNSTUMBLE5_SUB-kano_anitab1, 0
+KNSTUMBLE5_SUB:
+	DD KNSTUMBLE5_IMG-kano_anitab1
+	DW 59, 105, 21, -12
+KNSTUMBLE6:
+	DD KNSTUMBLE6_SUB-kano_anitab1, 0
+KNSTUMBLE6_SUB:
+	DD KNSTUMBLE6_IMG-kano_anitab1
+	DW 55, 110, 20, -8
+KNGETUP1:
+	DD KNGETUP1_SUB-kano_anitab1, 0
+KNGETUP1_SUB:
+	DD KNGETUP1_IMG-kano_anitab1
+	DW 50, 65, 25, -51
+KNGETUP2:
+	DD KNGETUP2_SUB-kano_anitab1, 0
+KNGETUP2_SUB:
+	DD KNGETUP2_IMG-kano_anitab1
+	DW 56, 48, 30, -70
+KNGETUP3:
+	DD KNGETUP3_SUB-kano_anitab1, 0
+KNGETUP3_SUB:
+	DD KNGETUP3_IMG-kano_anitab1
+	DW 66, 77, 28, -29
+KNGETUP4:
+	DD KNGETUP4_SUB-kano_anitab1, 0
+KNGETUP4_SUB:
+	DD KNGETUP4_IMG-kano_anitab1
+	DW 65, 39, 28, -66
+KNGETUP5:
+	DD KNGETUP5_SUB-kano_anitab1, 0
+KNGETUP5_SUB:
+	DD KNGETUP5_IMG-kano_anitab1
+	DW 38, 65, 14, -51
+KNGETUP6:
+	DD KNGETUP6_SUB-kano_anitab1, 0
+KNGETUP6_SUB:
+	DD KNGETUP6_IMG-kano_anitab1
+	DW 34, 87, 17, -30
+KNSWEEPUP1:
+	DD KNSWEEPUP1_SUB-kano_anitab1, 0
+KNSWEEPUP1_SUB:
+	DD KNSWEEPUP1_IMG-kano_anitab1
+	DW 38, 50, 12, -63
+KNSWEEPUP2:
+	DD KNSWEEPUP2_SUB-kano_anitab1, 0
+KNSWEEPUP2_SUB:
+	DD KNSWEEPUP2_IMG-kano_anitab1
+	DW 30, 46, 8, -68
+KNSWEEPUP3:
+	DD KNSWEEPUP3_SUB-kano_anitab1, 0
+KNSWEEPUP3_SUB:
+	DD KNSWEEPUP3_IMG-kano_anitab1
+	DW 26, 71, 6, -44
+KNSWEEPUP4:
+	DD KNSWEEPUP4_SUB-kano_anitab1, 0
+KNSWEEPUP4_SUB:
+	DD KNSWEEPUP4_IMG-kano_anitab1
+	DW 38, 41, 14, -72
+KNSWEEPUP5:
+	DD KNSWEEPUP5_SUB-kano_anitab1, 0
+KNSWEEPUP5_SUB:
+	DD KNSWEEPUP5_IMG-kano_anitab1
+	DW 40, 51, 13, -66
+KNSWEEPUP6:
+	DD KNSWEEPUP6_SUB-kano_anitab1, 0
+KNSWEEPUP6_SUB:
+	DD KNSWEEPUP6_IMG-kano_anitab1
+	DW 40, 78, 14, -39
+KNFLIP1:
+	DD KNFLIP1_SUB-kano_anitab1, 0
+KNFLIP1_SUB:
+	DD KNFLIP1_IMG-kano_anitab1
+	DW 48, 103, 12, -16
+KNFLIP2:
+	DD KNFLIP2_SUB-kano_anitab1, 0
+KNFLIP2_SUB:
+	DD KNFLIP2_IMG-kano_anitab1
+	DW 79, 85, 13, -34
+KNFLIP3:
+	DD KNFLIP3_SUB-kano_anitab1, 0
+KNFLIP3_SUB:
+	DD KNFLIP3_IMG-kano_anitab1
+	DW 51, 105, 14, -14
+KNFLIP4:
+	DD KNFLIP4_SUB-kano_anitab1, 0
+KNFLIP4_SUB:
+	DD KNFLIP4_IMG-kano_anitab1
+	DW 50, 111, 14, -9
+KNFLIP5:
+	DD KNFLIP5_SUB-kano_anitab1, 0
+KNFLIP5_SUB:
+	DD KNFLIP5_IMG-kano_anitab1
+	DW 78, 103, 41, -17
+KNFLIP6:
+	DD KNFLIP6_SUB-kano_anitab1, 0
+KNFLIP6_SUB:
+	DD KNFLIP6_IMG-kano_anitab1
+	DW 78, 93, 38, -27
+KNFLIP7:
+	DD KNFLIP7_SUB-kano_anitab1, 0
+KNFLIP7_SUB:
+	DD KNFLIP7_IMG-kano_anitab1
+	DW 59, 104, 22, -17
+KNTHROWPRO1:
+	DD KNTHROWPRO1_SUB-kano_anitab1, 0
+KNTHROWPRO1_SUB:
+	DD KNTHROWPRO1_IMG-kano_anitab1
+	DW 48, 95, 14, -22
+KNTHROWPRO2:
+	DD KNTHROWPRO2_SUB-kano_anitab1, 0
+KNTHROWPRO2_SUB:
+	DD KNTHROWPRO2_IMG-kano_anitab1
+	DW 46, 77, 14, -40
+KNTHROWPRO3:
+	DD KNTHROWPRO3_SUB-kano_anitab1, 0
+KNTHROWPRO3_SUB:
+	DD KNTHROWPRO3_IMG-kano_anitab1
+	DW 46, 104, 14, -13
+KNTHROWPRO4:
+	DD KNTHROWPRO4_SUB-kano_anitab1, 0
+KNTHROWPRO4_SUB:
+	DD KNTHROWPRO4_IMG-kano_anitab1
+	DW 50, 114, 18, -3
+KNTHROWPRO5:
+	DD KNTHROWPRO5_SUB-kano_anitab1, 0
+KNTHROWPRO5_SUB:
+	DD KNTHROWPRO5_IMG-kano_anitab1
+	DW 62, 111, 30, -6
+KNTHROWPRO6:
+	DD KNTHROWPRO6_SUB-kano_anitab1, 0
+KNTHROWPRO6_SUB:
+	DD KNTHROWPRO6_IMG-kano_anitab1
+	DW 58, 113, 26, -4
+KNTHROWPRO7:
+	DD KNTHROWPRO7_SUB-kano_anitab1, 0
+KNTHROWPRO7_SUB:
+	DD KNTHROWPRO7_IMG-kano_anitab1
+	DW 61, 114, 14, -3
+KNTHROWPRO8:
+	DD KNTHROWPRO8_SUB-kano_anitab1, 0
+KNTHROWPRO8_SUB:
+	DD KNTHROWPRO8_IMG-kano_anitab1
+	DW 47, 114, 14, -3
+KNSTUNNED1:
+	DD KNSTUNNED1_SUB-kano_anitab1, 0
+KNSTUNNED1_SUB:
+	DD KNSTUNNED1_IMG-kano_anitab1
+	DW 48, 111, 18, -6
+KNSTUNNED2:
+	DD KNSTUNNED2_SUB-kano_anitab1, 0
+KNSTUNNED2_SUB:
+	DD KNSTUNNED2_IMG-kano_anitab1
+	DW 51, 110, 15, -7
+KNSTUNNED3:
+	DD KNSTUNNED3_SUB-kano_anitab1, 0
+KNSTUNNED3_SUB:
+	DD KNSTUNNED3_IMG-kano_anitab1
+	DW 54, 105, 15, -12
+KNSTUNNED4:
+	DD KNSTUNNED4_SUB-kano_anitab1, 0
+KNSTUNNED4_SUB:
+	DD KNSTUNNED4_IMG-kano_anitab1
+	DW 48, 102, 18, -15
+KNSTUNNED5:
+	DD KNSTUNNED5_SUB-kano_anitab1, 0
+KNSTUNNED5_SUB:
+	DD KNSTUNNED5_IMG-kano_anitab1
+	DW 50, 105, 22, -12
+KNSTUNNED6:
+	DD KNSTUNNED6_SUB-kano_anitab1, 0
+KNSTUNNED6_SUB:
+	DD KNSTUNNED6_IMG-kano_anitab1
+	DW 51, 109, 22, -8
+KNSTUNNED7:
+	DD KNSTUNNED7_SUB-kano_anitab1, 0
+KNSTUNNED7_SUB:
+	DD KNSTUNNED7_IMG-kano_anitab1
+	DW 49, 108, 20, -9
+KNFLIPPED1:
+	DD KNFLIPPED1_SUB-kano_anitab1, 0
+KNFLIPPED1_SUB:
+	DD KNFLIPPED1_IMG-kano_anitab1
+	DW 42, 99, 17, -12
+KNFLIPPED2:
+	DD KNFLIPPED2_SUB-kano_anitab1, 0
+KNFLIPPED2_SUB:
+	DD KNFLIPPED2_IMG-kano_anitab1
+	DW 58, 70, 25, -30
+KNFLIPPED3:
+	DD KNFLIPPED3_SUB-kano_anitab1, 0
+KNFLIPPED3_SUB:
+	DD KNFLIPPED3_IMG-kano_anitab1
+	DW 58, 67, 37, -34
+KNFLIPPED4:
+	DD KNFLIPPED4_SUB-kano_anitab1, 0
+KNFLIPPED4_SUB:
+	DD KNFLIPPED4_IMG-kano_anitab1
+	DW 62, 59, 49, -30
+KNFLIPPED5:
+	DD KNFLIPPED5_SUB-kano_anitab1, 0
+KNFLIPPED5_SUB:
+	DD KNFLIPPED5_IMG-kano_anitab1
+	DW 57, 74, 31, -19
+KNSABER1:
+	DD KNSABER1_SUB-kano_anitab1, 0
+KNSABER1_SUB:
+	DD KNSABER1_IMG-kano_anitab1
+	DW 42, 20, 10, -86
+	DD   _SABER_P
+KNSABER2:
+	DD KNSABER2_SUB-kano_anitab1, 0
+KNSABER2_SUB:
+	DD KNSABER2_IMG-kano_anitab1
+	DW 38, 41, 10, -63
+KNSABER3:
+	DD KNSABER3_SUB-kano_anitab1, 0
+KNSABER3_SUB:
+	DD KNSABER3_IMG-kano_anitab1
+	DW 38, 85, 11, -14
+KNSABER4:
+	DD KNSABER4_SUB-kano_anitab1, 0
+KNSABER4_SUB:
+	DD KNSABER4_IMG-kano_anitab1
+	DW 52, 111, 24, 11
+KNSABER5:
+	DD KNSABER5_SUB-kano_anitab1, 0
+KNSABER5_SUB:
+	DD KNSABER5_IMG-kano_anitab1
+	DW 48, 27, 26, 0
+KNSABER6:
+	DD KNSABER6_SUB-kano_anitab1, 0
+KNSABER6_SUB:
+	DD KNSABER6_IMG-kano_anitab1
+	DW 95, 91, 10, -5
+KNSABER7:
+	DD KNSABER7_SUB-kano_anitab1, 0
+KNSABER7_SUB:
+	DD KNSABER7_IMG-kano_anitab1
+	DW 27, 34, 6, 24
+KNSABER8:
+	DD KNSABER8_SUB-kano_anitab1, 0
+KNSABER8_SUB:
+	DD KNSABER8_IMG-kano_anitab1
+	DW 36, 22, 8, 18
+KNSABER9:
+	DD KNSABER9_SUB-kano_anitab1, 0
+KNSABER9_SUB:
+	DD KNSABER9_IMG-kano_anitab1
+	DW 34, 20, 9, 3
+KNSABER10:
+	DD KNSABER10_SUB-kano_anitab1, 0
+KNSABER10_SUB:
+	DD KNSABER10_IMG-kano_anitab1
+	DW 28, 35, 7, 8
+KNSABER11:
+	DD KNSABER11_SUB-kano_anitab1, 0
+KNSABER11_SUB:
+	DD KNSABER11_IMG-kano_anitab1
+	DW 19, 39, 8, 10
+KNSABER12:
+	DD KNSABER12_SUB-kano_anitab1, 0
+KNSABER12_SUB:
+	DD KNSABER12_IMG-kano_anitab1
+	DW 27, 34, 22, 9
+KNSABER13:
+	DD KNSABER13_SUB-kano_anitab1, 0
+KNSABER13_SUB:
+	DD KNSABER13_IMG-kano_anitab1
+	DW 37, 22, 28, 4
+KNSABER14:
+	DD KNSABER14_SUB-kano_anitab1, 0
+KNSABER14_SUB:
+	DD KNSABER14_IMG-kano_anitab1
+	DW 34, 21, 26, 17
+KNSABER15:
+	DD KNSABER15_SUB-kano_anitab1, 0
+KNSABER15_SUB:
+	DD KNSABER15_IMG-kano_anitab1
+	DW 27, 35, 21, 27
+KNSABER16:
+	DD KNSABER16_SUB-kano_anitab1, 0
+KNSABER16_SUB:
+	DD KNSABER16_IMG-kano_anitab1
+	DW 19, 38, 10, 28
+KNSABER17:
+	DD KNSABER17_SUB-kano_anitab1, 0
+KNSABER17_SUB:
+	DD KNSABER17_IMG-kano_anitab1
+	DW 46, 38, 8, 34
+KNSABER18:
+	DD KNSABER18_SUB-kano_anitab1, 0
+KNSABER18_SUB:
+	DD KNSABER18_IMG-kano_anitab1
+	DW 61, 58, 21, 50
+KNSABER19:
+	DD KNSABER19_SUB-kano_anitab1, 0
+KNSABER19_SUB:
+	DD KNSABER19_IMG-kano_anitab1
+	DW 74, 65, 29, 56
+KNSABER20:
+	DD KNSABER20_SUB-kano_anitab1, 0
+KNSABER20_SUB:
+	DD KNSABER20_IMG-kano_anitab1
+	DW 84, 75, 34, 63
+KNSABER21:
+	DD KNSABER21_SUB-kano_anitab1, 0
+KNSABER21_SUB:
+	DD KNSABER21_IMG-kano_anitab1
+	DW 95, 92, 40, 72
+KNSABER22:
+	DD KNSABER22_SUB-kano_anitab1, 0
+KNSABER22_SUB:
+	DD KNSABER22_IMG-kano_anitab1
+	DW 111, 105, 50, 76
+KNRUN1:
+	DD KNRUN1_SUB-kano_anitab1, 0
+KNRUN1_SUB:
+	DD KNRUN1_IMG-kano_anitab1
+	DW 46, 110, 24, -8
+KNRUN2:
+	DD KNRUN2_SUB-kano_anitab1, 0
+KNRUN2_SUB:
+	DD KNRUN2_IMG-kano_anitab1
+	DW 51, 111, 23, -7
+KNRUN3:
+	DD KNRUN3_SUB-kano_anitab1, 0
+KNRUN3_SUB:
+	DD KNRUN3_IMG-kano_anitab1
+	DW 58, 113, 32, -4
+KNRUN4:
+	DD KNRUN4_SUB-kano_anitab1, 0
+KNRUN4_SUB:
+	DD KNRUN4_IMG-kano_anitab1
+	DW 61, 109, 35, -5
+KNRUN5:
+	DD KNRUN5_SUB-kano_anitab1, 0
+KNRUN5_SUB:
+	DD KNRUN5_IMG-kano_anitab1
+	DW 66, 111, 39, -7
+KNRUN6:
+	DD KNRUN6_SUB-kano_anitab1, 0
+KNRUN6_SUB:
+	DD KNRUN6_IMG-kano_anitab1
+	DW 56, 111, 35, -8
+KNRUN7:
+	DD KNRUN7_SUB-kano_anitab1, 0
+KNRUN7_SUB:
+	DD KNRUN7_IMG-kano_anitab1
+	DW 42, 111, 23, -8
+KNRUN8:
+	DD KNRUN8_SUB-kano_anitab1, 0
+KNRUN8_SUB:
+	DD KNRUN8_IMG-kano_anitab1
+	DW 46, 113, 19, -5
+KNRUN9:
+	DD KNRUN9_SUB-kano_anitab1, 0
+KNRUN9_SUB:
+	DD KNRUN9_IMG-kano_anitab1
+	DW 54, 115, 29, -2
+KNRUN10:
+	DD KNRUN10_SUB-kano_anitab1, 0
+KNRUN10_SUB:
+	DD KNRUN10_IMG-kano_anitab1
+	DW 64, 111, 36, -4
+KNRUN11:
+	DD KNRUN11_SUB-kano_anitab1, 0
+KNRUN11_SUB:
+	DD KNRUN11_IMG-kano_anitab1
+	DW 54, 111, 34, -7
+KNTHUD1:
+	DD KNTHUD1_SUB-kano_anitab1, 0
+KNTHUD1_SUB:
+	DD KNTHUD1_IMG-kano_anitab1
+	DW 20, 120, 0, 0
+KNTHUD2:
+	DD KNTHUD2_SUB-kano_anitab1, 0
+KNTHUD2_SUB:
+	DD KNTHUD2_IMG-kano_anitab1
+	DW 30, 120, 10, 0
+KNTHUD3:
+	DD KNTHUD3_SUB-kano_anitab1, 0
+KNTHUD3_SUB:
+	DD KNTHUD3_IMG-kano_anitab1
+	DW 45, 116, 26, -4
+KNTHUD4:
+	DD KNTHUD4_SUB-kano_anitab1, 0
+KNTHUD4_SUB:
+	DD KNTHUD4_IMG-kano_anitab1
+	DW 69, 105, 50, -15
+KNTHUD5:
+	DD KNTHUD5_SUB-kano_anitab1, 0
+KNTHUD5_SUB:
+	DD KNTHUD5_IMG-kano_anitab1
+	DW 87, 88, 69, -32
+KNTHUD6:
+	DD KNTHUD6_SUB-kano_anitab1, 0
+KNTHUD6_SUB:
+	DD KNTHUD6_IMG-kano_anitab1
+	DW 101, 57, 83, -62
+KNSCARED2:
+	DD KNSCARED2_SUB-kano_anitab1, 0
+KNSCARED2_SUB:
+	DD KNSCARED2_IMG-kano_anitab1
+	DW 32, 118, 13, -1
+KNTHRUST1:
+	DD KNTHRUST1_SUB-kano_anitab1, 0
+KNTHRUST1_SUB:
+	DD KNTHRUST1_IMG-kano_anitab1
+	DW 52, 56, 7, -6
+KNTHRUST2:
+	DD KNTHRUST2_SUB-kano_anitab1, 0
+KNTHRUST2_SUB:
+	DD KNTHRUST2_IMG-kano_anitab1
+	DW 66, 68, 9, -8
+KNTHRUST3:
+	DD KNTHRUST3_SUB-kano_anitab1, 0
+KNTHRUST3_SUB:
+	DD KNTHRUST3_IMG-kano_anitab1
+	DW 87, 94, 24, -7
+BLADE1:
+	DD BLADE1_SUB-kano_anitab1, 0
+BLADE1_SUB:
+	DD BLADE1_IMG-kano_anitab1
+	DW 6, 13, 17, -93
+	DD   _SABER_P
+KNSWIPE1:
+	DD KNSWIPE1_SUB-kano_anitab1, 0
+KNSWIPE1_SUB:
+	DD KNSWIPE1_IMG-kano_anitab1
+	DW 54, 76, 18, -42
+BLADE2:
+	DD BLADE2_SUB-kano_anitab1, 0
+BLADE2_SUB:
+	DD BLADE2_IMG-kano_anitab1
+	DW 17, 16, 12, -85
+KNSWIPE2:
+	DD KNSWIPE2_SUB-kano_anitab1, 0
+KNSWIPE2_SUB:
+	DD KNSWIPE2_IMG-kano_anitab1
+	DW 56, 82, 16, -36
+BLADE3:
+	DD BLADE3_SUB-kano_anitab1, 0
+BLADE3_SUB:
+	DD BLADE3_IMG-kano_anitab1
+	DW 14, 20, 12, -82
+KNSWIPE3:
+	DD KNSWIPE3_SUB-kano_anitab1, 0
+KNSWIPE3_SUB:
+	DD KNSWIPE3_IMG-kano_anitab1
+	DW 51, 88, 19, -30
+BLADE4:
+	DD BLADE4_SUB-kano_anitab1, 0
+BLADE4_SUB:
+	DD BLADE4_IMG-kano_anitab1
+	DW 48, 13, -13, -86
+KNSWIPE4:
+	DD KNSWIPE4_SUB-kano_anitab1, 0
+KNSWIPE4_SUB:
+	DD KNSWIPE4_IMG-kano_anitab1
+	DW 53, 99, 20, -19
+BLADE5:
+	DD BLADE5_SUB-kano_anitab1, 0
+BLADE5_SUB:
+	DD BLADE5_IMG-kano_anitab1
+	DW 32, 46, -55, -34
+KNSWIPE5:
+	DD KNSWIPE5_SUB-kano_anitab1, 0
+KNSWIPE5_SUB:
+	DD KNSWIPE5_IMG-kano_anitab1
+	DW 78, 105, 20, -13
+BLADE6:
+	DD BLADE6_SUB-kano_anitab1, 0
+BLADE6_SUB:
+	DD BLADE6_IMG-kano_anitab1
+	DW 38, 31, -53, 10
+KNSWIPE6:
+	DD KNSWIPE6_SUB-kano_anitab1, 0
+KNSWIPE6_SUB:
+	DD KNSWIPE6_IMG-kano_anitab1
+	DW 78, 111, 19, -8
+BLADE7:
+	DD BLADE7_SUB-kano_anitab1, 0
+BLADE7_SUB:
+	DD BLADE7_IMG-kano_anitab1
+	DW 30, 38, -23, 51
+KNSWIPE7:
+	DD KNSWIPE7_SUB-kano_anitab1, 0
+KNSWIPE7_SUB:
+	DD KNSWIPE7_IMG-kano_anitab1
+	DW 55, 136, 18, 16
+BLADE8:
+	DD BLADE8_SUB-kano_anitab1, 0
+BLADE8_SUB:
+	DD BLADE8_IMG-kano_anitab1
+	DW 35, 28, 32, 43
+KNSWIPE8:
+	DD KNSWIPE8_SUB-kano_anitab1, 0
+KNSWIPE8_SUB:
+	DD KNSWIPE8_IMG-kano_anitab1
+	DW 48, 141, 16, 21
+BLADE9:
+	DD BLADE9_SUB-kano_anitab1, 0
+BLADE9_SUB:
+	DD BLADE9_IMG-kano_anitab1
+	DW 10, 40, 30, 20
+KNSWIPE9:
+	DD KNSWIPE9_SUB-kano_anitab1, 0
+KNSWIPE9_SUB:
+	DD KNSWIPE9_IMG-kano_anitab1
+	DW 59, 116, 28, -2
+BLADE10:
+	DD BLADE10_SUB-kano_anitab1, 0
+BLADE10_SUB:
+	DD BLADE10_IMG-kano_anitab1
+	DW 17, 20, 19, -35
+KNSWIPE10:
+	DD KNSWIPE10_SUB-kano_anitab1, 0
+KNSWIPE10_SUB:
+	DD KNSWIPE10_IMG-kano_anitab1
+	DW 62, 114, 26, -5
+KNSHAKE1:
+	DD KNSHAKE1_SUB-kano_anitab1, 0
+KNSHAKE1_SUB:
+	DD KNSHAKE1_IMG-kano_anitab1
+	DW 58, 111, 15, -8
+KNSHAKE2:
+	DD KNSHAKE2_SUB-kano_anitab1, 0
+KNSHAKE2_SUB:
+	DD KNSHAKE2_IMG-kano_anitab1
+	DW 68, 108, 14, -11
+KNSHAKE3:
+	DD KNSHAKE3_SUB-kano_anitab1, 0
+KNSHAKE3_SUB:
+	DD KNSHAKE3_IMG-kano_anitab1
+	DW 85, 103, 15, -16
+KNSHAKE4:
+	DD KNSHAKE4_SUB-kano_anitab1, 0
+KNSHAKE4_SUB:
+	DD KNSHAKE4_IMG-kano_anitab1
+	DW 62, 114, 14, -5
+KNSHAKE5:
+	DD KNSHAKE5_SUB-kano_anitab1, 0
+KNSHAKE5_SUB:
+	DD KNSHAKE5_IMG-kano_anitab1
+	DW 57, 108, 14, -11
+KNSHAKE6:
+	DD KNSHAKE6_SUB-kano_anitab1, 0
+KNSHAKE6_SUB:
+	DD KNSHAKE6_IMG-kano_anitab1
+	DW 57, 108, 14, -11
+KNSHAKE7:
+	DD KNSHAKE7_SUB-kano_anitab1, 0
+KNSHAKE7_SUB:
+	DD KNSHAKE7_IMG-kano_anitab1
+	DW 58, 118, 14, -1
+KNSHAKE8:
+	DD KNSHAKE8_SUB-kano_anitab1, 0
+KNSHAKE8_SUB:
+	DD KNSHAKE8_IMG-kano_anitab1
+	DW 70, 119, 15, 0
+
+a_back_broke:
+	DD	KNBROKEN1-kano_anitab1
+	DD	0
+
+KNBROKEN1:
+	DD KNBROKEN1_SUB-kano_anitab1, 0
+KNBROKEN1_SUB:
+	DD KNBROKEN1_IMG-kano_anitab1
+	DW 90, 56, 54, -48

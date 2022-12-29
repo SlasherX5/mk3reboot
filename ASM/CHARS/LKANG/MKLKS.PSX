@@ -1,0 +1,239 @@
+lk_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+lk_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_kang_friend-lk_anitab1
+
+	DD a_wall_dragon-lk_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_dummy:
+a_kang_friend:
+	DD LUFRIENDSHIP1-lk_anitab1
+	DD LUFRIENDSHIP3-lk_anitab1
+	DD 0
+	DD LUFRIENDSHIP4-lk_anitab1
+	DD LUFRIENDSHIP5-lk_anitab1
+	DD LUFRIENDSHIP6-lk_anitab1
+	DD LUFRIENDSHIP5-lk_anitab1
+	DD LUFRIENDSHIP4-lk_anitab1
+	DD LUFRIENDSHIP5-lk_anitab1
+	DD LUFRIENDSHIP6-lk_anitab1
+	DD LUFRIENDSHIP5-lk_anitab1
+	DD 0
+	DD LUFRIENDSHIP7-lk_anitab1
+	DD LUFRIENDSHIP8-lk_anitab1
+	DD 0
+a_wall_dragon:
+	DD WDRAG1-lk_anitab1
+	DD WDRAG2-lk_anitab1
+	DD WDRAG3-lk_anitab1
+	DD WDRAG4-lk_anitab1
+	DD WDRAG5-lk_anitab1
+	DD WDRAG6-lk_anitab1
+	DD WDRAG7-lk_anitab1
+	DD 0
+	DD WDRAG8-lk_anitab1
+	DD WDRAG9-lk_anitab1
+	DD WDRAG10-lk_anitab1
+	DD 0
+LUFRIENDSHIP1:
+	DD LUFRIENDSHIP1_SUB-lk_anitab1, 0
+LUFRIENDSHIP1_SUB:
+	DD LUFRIENDSHIP1_IMG-lk_anitab1
+	DW 43, 110, 22, -2
+LUFRIENDSHIP3:
+	DD LUFRIENDSHIP3_SUB-lk_anitab1, 0
+LUFRIENDSHIP3_SUB:
+	DD LUFRIENDSHIP3_IMG-lk_anitab1
+	DW 52, 111, 22, -2
+LUFRIENDSHIP4:
+	DD LUFRIENDSHIP4_SUB-lk_anitab1, 0
+LUFRIENDSHIP4_SUB:
+	DD LUFRIENDSHIP4_IMG-lk_anitab1
+	DW 53, 111, 22, -2
+LUFRIENDSHIP5:
+	DD LUFRIENDSHIP5_SUB-lk_anitab1, 0
+LUFRIENDSHIP5_SUB:
+	DD LUFRIENDSHIP5_IMG-lk_anitab1
+	DW 53, 110, 22, -2
+LUFRIENDSHIP6:
+	DD LUFRIENDSHIP6_SUB-lk_anitab1, 0
+LUFRIENDSHIP6_SUB:
+	DD LUFRIENDSHIP6_IMG-lk_anitab1
+	DW 52, 110, 22, -2
+LUFRIENDSHIP7:
+	DD LUFRIENDSHIP7_SUB-lk_anitab1, 0
+LUFRIENDSHIP7_SUB:
+	DD LUFRIENDSHIP7_IMG-lk_anitab1
+	DW 51, 109, 22, -3
+LUFRIENDSHIP8:
+	DD LUFRIENDSHIP8_SUB-lk_anitab1, 0
+LUFRIENDSHIP8_SUB:
+	DD LUFRIENDSHIP8_IMG-lk_anitab1
+	DW 49, 109, 22, -3
+WDRAG1:
+	DD WDRAG1_SUB-lk_anitab1, 0
+WDRAG1_SUB:
+	DD WDRAG1_IMG-lk_anitab1
+	DW 11, 7, -42, 0
+	DD _FSHADOW_P
+WDRAG2:
+	DD WDRAG2_SUB-lk_anitab1, 0
+WDRAG2_SUB:
+	DD WDRAG2_IMG-lk_anitab1
+	DW 37, 7, -29, 0
+WDRAG3:
+	DD WDRAG3_SUB-lk_anitab1, 0
+WDRAG3_SUB:
+	DD WDRAG3_IMG-lk_anitab1
+	DW 70, 7, -13, 0
+WDRAG4:
+	DD WDRAG4_SUB-lk_anitab1, 0
+WDRAG4_SUB:
+	DD WDRAG4_IMG-lk_anitab1
+	DW 98, 7, 0, 0
+WDRAG5:
+	DD WDRAG5_SUB-lk_anitab1, 0
+WDRAG5_SUB:
+	DD WDRAG5_IMG-lk_anitab1
+	DW 98, 26, 0, 0
+WDRAG6:
+	DD WDRAG6_SUB-lk_anitab1, 0
+WDRAG6_SUB:
+	DD WDRAG6_IMG-lk_anitab1
+	DW 98, 49, 0, 0
+WDRAG7:
+	DD WDRAG7_SUB-lk_anitab1, 0
+WDRAG7_SUB:
+	DD WDRAG7_IMG-lk_anitab1
+	DW 98, 77, 0, 0
+WDRAG8:
+	DD WDRAG8_SUB-lk_anitab1, 0
+WDRAG8_SUB:
+	DD WDRAG8_IMG-lk_anitab1
+	DW 98, 77, 0, 0
+WDRAG9:
+	DD WDRAG9_SUB-lk_anitab1, 0
+WDRAG9_SUB:
+	DD WDRAG9_IMG-lk_anitab1
+	DW 98, 77, 0, 0
+WDRAG10:
+	DD WDRAG10_SUB-lk_anitab1, 0
+WDRAG10_SUB:
+	DD WDRAG10_IMG-lk_anitab1
+	DW 98, 77, 0, 0

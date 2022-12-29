@@ -1,0 +1,281 @@
+swat_anitab1:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+swat_anitab2:
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+
+	DD 0
+	DD 0	;baby_text-base_anims
+	DD 0	;a_ground_explode-base_anims
+	DD 0	;ochar_babies-base_anims
+	DD 0
+
+	DD 0
+	DD 0
+	DD a_friend-base_anims
+	DD a_ship-base_anims
+	DD a_swat_friend-swat_anitab1
+	DD a_dog-swat_anitab1
+	DD a_wagon-swat_anitab1
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+	DD 0
+a_projectile:
+a_dummy:
+a_wagon:
+	DD WAGON1-swat_anitab1
+	DD WAGON2-swat_anitab1
+	DD WAGON3-swat_anitab1
+	DD ani_jump
+	DD a_wagon-swat_anitab1
+WAGON1:
+	DD WAGON1_IMG-swat_anitab1
+	DW 85, 56, 0, 0
+	DD _WAGON1P
+WAGON2:
+	DD WAGON2_IMG-swat_anitab1
+	DW 85, 56, 0, 0
+WAGON3:
+	DD WAGON3_IMG-swat_anitab1
+	DW 85, 56, 0, 0
+a_dog:
+	DD LAODOG1-swat_anitab1
+	DD LAODOG2-swat_anitab1
+	DD LAODOG3-swat_anitab1
+	DD LAODOG4-swat_anitab1
+	DD LAODOG5-swat_anitab1
+	DD LAODOG6-swat_anitab1
+	DD ani_jump
+	DD a_dog-swat_anitab1
+LAODOG1:
+	DD LAODOG1_IMG-swat_anitab1
+	DW 50, 30, -1, -1
+	DD   _LAODOG_P
+LAODOG2:
+	DD LAODOG2_IMG-swat_anitab1
+	DW 50, 30, -1, -2
+LAODOG3:
+	DD LAODOG3_IMG-swat_anitab1
+	DW 46, 28, -1, -3
+LAODOG4:
+	DD LAODOG4_IMG-swat_anitab1
+	DW 48, 31, 0, 0
+LAODOG5:
+	DD LAODOG5_IMG-swat_anitab1
+	DW 47, 32, -1, 0
+LAODOG6:
+	DD LAODOG6_IMG-swat_anitab1
+	DW 47, 31, -2, 0
+a_swat_friend:
+	DD OBFRIENDSHIP1-swat_anitab1
+	DD OBFRIENDSHIP2-swat_anitab1
+	DD OBFRIENDSHIP3-swat_anitab1
+	DD 0
+	DD OBFRIENDSHIP5-swat_anitab1
+	DD ani_sladd
+	DD STP1-swat_anitab1
+	DD OBFRIENDSHIP6-swat_anitab1
+	DD ani_slani
+	DD STP3-swat_anitab1
+	DD OBFRIENDSHIP8-swat_anitab1
+	DD ani_slani
+	DD STP4-swat_anitab1
+	DD OBFRIENDSHIP9-swat_anitab1
+j_swatf:
+	DD ani_slani
+	DD STP5-swat_anitab1
+	DD OBFRIENDSHIP10-swat_anitab1
+	DD ani_slani
+	DD STP6-swat_anitab1
+	DD OBFRIENDSHIP11-swat_anitab1
+	DD ani_slani
+	DD STP7-swat_anitab1
+	DD OBFRIENDSHIP12-swat_anitab1
+	DD OBFRIENDSHIP12-swat_anitab1
+	DD OBFRIENDSHIP12-swat_anitab1
+	DD ani_slani
+	DD STP6-swat_anitab1
+	DD OBFRIENDSHIP11-swat_anitab1
+	DD ani_jump
+	DD j_swatf-swat_anitab1
+OBFRIENDSHIP1:
+	DD OBFRIENDSHIP1_SUB-swat_anitab1, 0
+OBFRIENDSHIP1_SUB:
+	DD OBFRIENDSHIP1_IMG-swat_anitab1
+	DW 46, 113, 14, -6
+OBFRIENDSHIP2:
+	DD OBFRIENDSHIP2_SUB-swat_anitab1, 0
+OBFRIENDSHIP2_SUB:
+	DD OBFRIENDSHIP2_IMG-swat_anitab1
+	DW 46, 111, 14, -8
+OBFRIENDSHIP3:
+	DD OBFRIENDSHIP3_SUB-swat_anitab1, 0
+OBFRIENDSHIP3_SUB:
+	DD OBFRIENDSHIP3_IMG-swat_anitab1
+	DW 54, 106, 22, -13
+OBFRIENDSHIP5:
+	DD OBFRIENDSHIP5_SUB-swat_anitab1, 0
+OBFRIENDSHIP5_SUB:
+	DD OBFRIENDSHIP5_IMG-swat_anitab1
+	DW 50, 108, 18, -11
+STP1:
+	DD STP1_SUB-swat_anitab1, 0
+STP1_SUB:
+	DD STP1_IMG-swat_anitab1
+	DW 14, 17, 15, -31
+	DD	_STOP_P
+OBFRIENDSHIP6:
+	DD OBFRIENDSHIP6_SUB-swat_anitab1, 0
+OBFRIENDSHIP6_SUB:
+	DD OBFRIENDSHIP6_IMG-swat_anitab1
+	DW 50, 111, 18, -8
+STP3:
+	DD STP3_SUB-swat_anitab1, 0
+STP3_SUB:
+	DD STP3_IMG-swat_anitab1
+	DW 17, 20, -23, 20
+OBFRIENDSHIP8:
+	DD OBFRIENDSHIP8_SUB-swat_anitab1, 0
+OBFRIENDSHIP8_SUB:
+	DD OBFRIENDSHIP8_IMG-swat_anitab1
+	DW 49, 122, 17, 3
+STP4:
+	DD STP4_SUB-swat_anitab1, 0
+STP4_SUB:
+	DD STP4_IMG-swat_anitab1
+	DW 17, 20, -23, 20
+OBFRIENDSHIP9:
+	DD OBFRIENDSHIP9_SUB-swat_anitab1, 0
+OBFRIENDSHIP9_SUB:
+	DD OBFRIENDSHIP9_IMG-swat_anitab1
+	DW 56, 122, 23, 3
+STP5:
+	DD STP5_SUB-swat_anitab1, 0
+STP5_SUB:
+	DD STP5_IMG-swat_anitab1
+	DW 17, 20, -21, 22
+OBFRIENDSHIP10:
+	DD OBFRIENDSHIP10_SUB-swat_anitab1, 0
+OBFRIENDSHIP10_SUB:
+	DD OBFRIENDSHIP10_IMG-swat_anitab1
+	DW 64, 124, 33, 5
+STP6:
+	DD STP6_SUB-swat_anitab1, 0
+STP6_SUB:
+	DD STP6_IMG-swat_anitab1
+	DW 17, 20, -21, 22
+OBFRIENDSHIP11:
+	DD OBFRIENDSHIP11_SUB-swat_anitab1, 0
+OBFRIENDSHIP11_SUB:
+	DD OBFRIENDSHIP11_IMG-swat_anitab1
+	DW 46, 124, 15, 5
+STP7:
+	DD STP7_SUB-swat_anitab1, 0
+STP7_SUB:
+	DD STP7_IMG-swat_anitab1
+	DW 17, 20, -21, 22
+OBFRIENDSHIP12:
+	DD OBFRIENDSHIP12_SUB-swat_anitab1, 0
+OBFRIENDSHIP12_SUB:
+	DD OBFRIENDSHIP12_IMG-swat_anitab1
+	DW 46, 124, 15, 5

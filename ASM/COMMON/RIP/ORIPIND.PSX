@@ -1,0 +1,88 @@
+ochar_ripped_anis:
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD a_ind_rip-base_anims
+	DD 0
+	DD a_normal_skel-base_anims
+	DD a_normal_skel-base_anims
+	DD 0
+a_ind_rip:
+	DD INRIP1-base_anims
+	DD INRIP2-base_anims
+	DD INRIP3-base_anims
+	DD INRIP4-base_anims
+	DD INRIP5-base_anims
+	DD INRIP6-base_anims
+	DD INRIP7-base_anims
+	DD 0
+a_normal_skel:
+	DD SKELRIP1-base_anims
+	DD SKELRIP2-base_anims
+	DD SKELRIP3-base_anims
+	DD 0
+SKELRIP1:
+	DD SKELRIP1_SUB-base_anims, 0
+SKELRIP1_SUB:
+	DD SKELRIP1_IMG-base_anims
+	DW 74, 105, 48, -10
+	DD   _SKELRIP_P
+SKELRIP2:
+	DD SKELRIP2_SUB-base_anims, 0
+SKELRIP2_SUB:
+	DD SKELRIP2_IMG-base_anims
+	DW 61, 105, 35, -10
+SKELRIP3:
+	DD SKELRIP3_SUB-base_anims, 0
+SKELRIP3_SUB:
+	DD SKELRIP3_IMG-base_anims
+	DW 46, 105, 20, -10
+INRIP1:
+	DD INRIP1_SUB-base_anims, 0
+INRIP1_SUB:
+	DD INRIP1_IMG-base_anims
+	DW 63, 100, 35, -16
+	DD   _INFLA_P
+INRIP2:
+	DD INRIP2_SUB-base_anims, 0
+INRIP2_SUB:
+	DD INRIP2_IMG-base_anims
+	DW 73, 100, 45, -16
+INRIP3:
+	DD INRIP3_SUB-base_anims, 0
+INRIP3_SUB:
+	DD INRIP3_IMG-base_anims
+	DW 98, 99, 71, -16
+INRIP4:
+	DD INRIP4_SUB-base_anims, 0
+INRIP4_SUB:
+	DD INRIP4_IMG-base_anims
+	DW 110, 88, 83, -16
+	DD   _INFLB_P
+INRIP5:
+	DD INRIP5_SUB-base_anims, 0
+INRIP5_SUB:
+	DD INRIP5_IMG-base_anims
+	DW 142, 88, 119, -16
+INRIP6:
+	DD INRIP6_SUB-base_anims, 0
+INRIP6_SUB:
+	DD INRIP6_IMG-base_anims
+	DW 146, 84, 130, -16
+INRIP7:
+	DD INRIP7_SUB-base_anims, 0
+INRIP7_SUB:
+	DD INRIP7_IMG-base_anims
+	DW 126, 64, 134, -16
