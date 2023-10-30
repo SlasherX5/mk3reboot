@@ -295,8 +295,8 @@ float4 PS_RAW(VS_OUTPUT input) : SV_Target
 
 float4 PS_UP(VS_OUTPUT input) : SV_Target
 {
-	float4 tcolor = Blur2(input.uv,0.3f);
-	float4 filter = tfilter.Sample(LinearSampler, float2(input.pos.x / 5.0f, input.pos.y / 5.0f));
+	float4 tcolor = Blur2(input.uv,0.35f);
+	float4 filter = tfilter.Sample(LinearSampler, float2(input.pos.x / 5.0f, input.pos.y / 4.0f));
 	tcolor.w = 1;
 	float4 flt = pow(filter, 3.0f);
 	flt.w = 1;
@@ -311,10 +311,10 @@ float4 PS(VS_OUTPUT input) : SV_Target
 	float4 tcolor = pallookup(input.uv);
 #endif
 	
-	tcolor = lerp(Color, pow(tcolor, 1.1f), Extra.z);
+	tcolor = lerp(Color, pow(tcolor, 1.15f), Extra.z);
 	tcolor.w *= Extra.w;
 
-	float4 filter = tfilter.Sample(LinearSampler, float2(input.pos.x / 6.f, input.pos.y / 4.f));
+	float4 filter = tfilter.Sample(LinearSampler, float2(input.pos.x / 4.f, input.pos.y / 3.f));
 	float4 flt = pow(filter, 1.8f);
 	flt.w = 1;
 	return flt * tcolor;

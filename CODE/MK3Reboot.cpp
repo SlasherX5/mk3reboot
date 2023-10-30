@@ -24,9 +24,9 @@ extern "C"
 
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 240
-#define RT_WIDTH 1400
+#define RT_WIDTH 1600
 #define RT_HEIGHT 900
-#define PIXEL_WIDTH 1400
+#define PIXEL_WIDTH 1600
 #define PIXEL_HEIGHT 900
 #define USE_RTARGET
 //#define SWUPSCALE
@@ -420,7 +420,7 @@ HRESULT CompileShaderFromFile(WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szS
 #endif
 
 	ID3DBlob* pErrorBlob;
-	D3D_SHADER_MACRO macros[4];
+	D3D_SHADER_MACRO macros[4] = { 0 };
 #ifdef USE_RTARGET
 	static char macval[4] = { '0',0 };
 #else

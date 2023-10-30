@@ -1794,7 +1794,7 @@ OBJECT *object_setup(OIMGTBL *frame,void *palram,WORD getpal)
 
 		if ((DWORD)palram < 0xffff) {
 			obj->opal = 0;
-			return;
+			return 0;
 		}
 
 		if (palram) {

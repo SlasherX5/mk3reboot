@@ -3,5 +3,25 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerWorkingDirectory>$(ProjectDir)..\Runtime\</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <NintendoTargetName>Default</NintendoTargetName>
+    <NXTargetSerialNumber>$(NintendoTargetSerialNumber)</NXTargetSerialNumber>
+    <NXTargetName>$(NintendoTargetName)</NXTargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NintendoTargetName>Default</NintendoTargetName>
+    <NXTargetSerialNumber>$(NintendoTargetSerialNumber)</NXTargetSerialNumber>
+    <NXTargetName>$(NintendoTargetName)</NXTargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NintendoTargetName>Default</NintendoTargetName>
+    <NXTargetSerialNumber>$(NintendoTargetSerialNumber)</NXTargetSerialNumber>
+    <NXTargetName>$(NintendoTargetName)</NXTargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NintendoTargetName>Default</NintendoTargetName>
+    <NXTargetSerialNumber>$(NintendoTargetSerialNumber)</NXTargetSerialNumber>
+    <NXTargetName>$(NintendoTargetName)</NXTargetName>
+    <LocalDebuggerWorkingDirectory>$(ProjectDir)..\Runtime\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>
