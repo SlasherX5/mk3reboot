@@ -101,37 +101,46 @@ typedef struct
 
 static TPage Pages[16 * 2 + 2] = { 0 };
 
-/*
-	game_map_tbl[0]=pad1_map_tbl[0]=pad2_map_tbl[0]=0x0004;			//r1,block
-	game_map_tbl[1]=pad1_map_tbl[1]=pad2_map_tbl[1]=0x0004;			//l1,block
-	game_map_tbl[2]=pad1_map_tbl[2]=pad2_map_tbl[2]=0x0008;			//r2,run
-	game_map_tbl[3]=pad1_map_tbl[3]=pad2_map_tbl[3]=0x0008;			//l2,run
-
-	game_map_tbl[4]=pad1_map_tbl[4]=pad2_map_tbl[4]=0x0020;			//triangle, hk
-	game_map_tbl[5]=pad1_map_tbl[5]=pad2_map_tbl[5]=0x0040;			//circle, lk
-	game_map_tbl[6]=pad1_map_tbl[6]=pad2_map_tbl[6]=0x0080;			//x, lp
-	game_map_tbl[7]=pad1_map_tbl[7]=pad2_map_tbl[7]=0x0010;			//square, hp
-
-	game_map_tbl[8]=pad1_map_tbl[8]=pad2_map_tbl[8]=0x0100;			//coll box, (SELECT BUTTON)
-	game_map_tbl[9]=pad1_map_tbl[9]=pad2_map_tbl[9]=0x0200;			//run, needed for sony box controllers
-	game_map_tbl[10]=pad1_map_tbl[10]=pad2_map_tbl[10]=0x0400;		//block, needed for sony box controllers
-	game_map_tbl[11]=pad1_map_tbl[11]=pad2_map_tbl[11]=0x0800;		//start
-
-	game_map_tbl[12]=pad1_map_tbl[12]=pad2_map_tbl[12]=0x1000;		//up
-	game_map_tbl[13]=pad1_map_tbl[13]=pad2_map_tbl[13]=0x2000;		//right
-	game_map_tbl[14]=pad1_map_tbl[14]=pad2_map_tbl[14]=0x4000;		//down
-	game_map_tbl[15]=pad1_map_tbl[15]=pad2_map_tbl[15]=0x8000;		//left
-*/
-
-int gameKeys[2][16] =
+int gameKeys[2][16] = // see game_map_tbl in MKSONY.C
 {
-	{'U','I','B','N',
-	'G','H','T','Y',
-	'3',0,0,'1','W','D','S','A'},
-
-	{VK_ADD,VK_NUMPAD4,VK_NUMPAD3,VK_NUMPAD7,
-	VK_RETURN,VK_DECIMAL,VK_NUMPAD1,VK_NUMPAD0,
-	'4',0,0,'2',VK_UP,VK_RIGHT,VK_DOWN,VK_LEFT},
+	// @formatter:off
+	{
+		'U', // run
+		'I', // run
+		'B', // block
+		'N', // block
+		'G', // high kick
+		'H', // low kick
+		'T', // low punch
+		'Y', // high punch
+		'3', // collision box
+		0,   //
+		0,   //
+		'1', // start
+		'W', // up
+		'D', // right
+		'S', // down
+		'A'  // left
+	},
+	{
+		VK_ADD,     // run
+		VK_NUMPAD4, // run
+		VK_NUMPAD3, // block
+		VK_NUMPAD7, // block
+		VK_RETURN,  // high kick
+		VK_DECIMAL, // low kick
+		VK_NUMPAD1, // low punch
+		VK_NUMPAD0, // high punch
+		'4',        // collision box
+		0,          //
+		0,          //
+		'2',        // start
+		VK_UP,      // up
+		VK_RIGHT,   // right
+		VK_DOWN,    // left
+		VK_LEFT     // down
+	},
+	// @formatter:on
 };
 
 extern "C" void MK3_Init();
