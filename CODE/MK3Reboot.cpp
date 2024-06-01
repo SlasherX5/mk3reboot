@@ -39,7 +39,6 @@ extern "C"
 #define PIXEL_HEIGHT 900
 #define USE_RTARGET
 //#define SWUPSCALE
-#define DESIRED_FPS 52
 
 // Global Variables:
 HINSTANCE g_hInst = nullptr; // current instance
@@ -188,6 +187,8 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
 	const INIReader settings("MK3.ini");
 	const auto settingFilter = settings.GetString("graphics", "filter", "arcade/Blank.bmp");
+	const auto settingFps = settings.GetInteger("graphics", "fps", 52);
+	const auto settingFpsUnlocked = settings.GetInteger("graphics", "fps_unlocked", 1000);
 
 	if (FAILED(InitDevice()))
 	{
@@ -287,7 +288,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 #endif
 
 		g_InsideRender = 1;
-		MK3_Render(keyState[VK_SPACE] ? 1000 : DESIRED_FPS);
+		MK3_Render(keyState[VK_SPACE] ? settingFpsUnlocked : settingFps);
 		g_InsideRender = 0;
 	}
 
