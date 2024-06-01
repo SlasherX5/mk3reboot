@@ -15,6 +15,10 @@
 
 #include <xaudio2.h>
 
+#include <Xinput.h>
+#pragma comment(lib, "Xinput.lib")
+#pragma comment(lib, "Xinput9_1_0.lib")
+
 extern "C"
 {
 #include "psxlib.h"
@@ -1640,9 +1644,78 @@ extern "C"
 
 	DWORD PadRead()
 	{
-		WORD p1 = ReadKeys(gameKeys[0]);
-		WORD p2 = ReadKeys(gameKeys[1]);
-		return p1 | (p2 << 16);
+		WORD p[2] = {0, 0};
+		p[0] = ReadKeys(gameKeys[0]);
+		p[1] = ReadKeys(gameKeys[1]);
+		for (DWORD i = 0; i < 2; ++i)
+		{
+			auto state = XINPUT_STATE();
+			const auto result = XInputGetState(i, &state);
+			if (result == ERROR_SUCCESS)
+			{
+				// @formatter:off
+				// TODO collision boxes? frame buffer view? frame by frame?
+				constexpr auto JOY_RUN_L     = 1 << 0;
+				constexpr auto JOY_RUN_R     = 1 << 1;
+				constexpr auto JOY_BLOCK_L   = 1 << 2;
+				constexpr auto JOY_BLOCK_R   = 1 << 3;
+				constexpr auto JOY_HK        = 1 << 4;
+				constexpr auto JOY_LK        = 1 << 5;
+				constexpr auto JOY_LP        = 1 << 6;
+				constexpr auto JOY_HP        = 1 << 7;
+				constexpr auto JOY_COLL_BOX  = 1 << 8;  // TODO needs #define COLLISION_BOX 1
+				constexpr auto JOY_RUN_PSX   = 1 << 9;  // TODO not implemented
+				constexpr auto JOY_BLOCK_PSX = 1 << 10; // TODO not implemented
+				constexpr auto JOY_START     = 1 << 11;
+				constexpr auto JOY_UP        = 1 << 12;
+				constexpr auto JOY_RIGHT     = 1 << 13;
+				constexpr auto JOY_DOWN      = 1 << 14;
+				constexpr auto JOY_LEFT      = 1 << 15;
+
+				const auto g = state.Gamepad;
+				const auto b = g.wButtons;
+
+				if (b & XINPUT_GAMEPAD_DPAD_UP)        p[i] |= JOY_UP;
+				if (b & XINPUT_GAMEPAD_DPAD_DOWN)      p[i] |= JOY_DOWN;
+				if (b & XINPUT_GAMEPAD_DPAD_LEFT)      p[i] |= JOY_LEFT;
+				if (b & XINPUT_GAMEPAD_DPAD_RIGHT)     p[i] |= JOY_RIGHT;
+				if (b & XINPUT_GAMEPAD_START)          p[i] |= JOY_START;
+				if (b & XINPUT_GAMEPAD_BACK)           p[i] |= 0;
+				if (b & XINPUT_GAMEPAD_LEFT_THUMB)     p[i] |= 0;
+				if (b & XINPUT_GAMEPAD_RIGHT_THUMB)    p[i] |= 0;
+				if (b & XINPUT_GAMEPAD_LEFT_SHOULDER)  p[i] |= JOY_RUN_L;
+				if (b & XINPUT_GAMEPAD_RIGHT_SHOULDER) p[i] |= JOY_BLOCK_R;
+				if (b & XINPUT_GAMEPAD_A)              p[i] |= JOY_LP;
+				if (b & XINPUT_GAMEPAD_B)              p[i] |= JOY_LK;
+				if (b & XINPUT_GAMEPAD_X)              p[i] |= JOY_HP;
+				if (b & XINPUT_GAMEPAD_Y)              p[i] |= JOY_HK;
+
+				if (XINPUT_GAMEPAD_TRIGGER_THRESHOLD < g.bLeftTrigger)
+					p[i] |= JOY_BLOCK_L;
+
+				if (XINPUT_GAMEPAD_TRIGGER_THRESHOLD < g.bRightTrigger)
+					p[i] |= JOY_RUN_R;
+
+				// @formatter:on
+
+				float x = g.sThumbLX;
+				float y = g.sThumbLY;
+				const auto m = sqrt(x * x + y * y);
+				constexpr auto k = static_cast<float>(XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE);
+				if (m > k)
+				{
+					x /= m;
+					y /= m;
+					constexpr auto z = 0.5;
+					if (x < -z) p[i] |= JOY_LEFT;
+					if (x > +z) p[i] |= JOY_RIGHT;
+					if (y < -z) p[i] |= JOY_DOWN;
+					if (y > +z) p[i] |= JOY_UP;
+				}
+			}
+		}
+
+		return p[0] | p[1] << 16;
 	}
 
 	int Wav95_Play(int id, int loop)
