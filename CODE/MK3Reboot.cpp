@@ -19,6 +19,8 @@
 #pragma comment(lib, "Xinput.lib")
 #pragma comment(lib, "Xinput9_1_0.lib")
 
+#include "INIReader.h"
+
 extern "C"
 {
 #include "psxlib.h"
@@ -184,6 +186,9 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
 	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_MK3REBOOT));
 
+	const INIReader settings("MK3.ini");
+	const auto settingFilter = settings.GetString("graphics", "filter", "arcade/Blank.bmp");
+
 	if (FAILED(InitDevice()))
 	{
 		CleanupDevice();
@@ -197,14 +202,9 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	//Palette
 	CreateD3DTexture(256, 256, NULL, 32, 32);
 
+	//Filter
 	BMPINFO ft = { 0 };
-#define FILTER_NAME1 "Scanlines75x4_j4"//"" //Scanrez1_Althor
-#define FILTER_NAME2 "Scanrez1_Althor"
-#define FILTER_NAME3 "Scanrez2_Althor"
-	if (LoadTextureBmp("arcade/"
-		FILTER_NAME2
-		".bmp", &ft, 0)) {
-		//Filter
+	if (LoadTextureBmp(settingFilter.c_str(), &ft, nullptr)) {
 		CreateD3DTexture(ft.w, ft.h, ft.pixels, 32,33);
 	}
 
