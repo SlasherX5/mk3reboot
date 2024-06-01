@@ -1,6 +1,9 @@
 // MK3Reboot.cpp : Defines the entry point for the application.
 //
 
+// ReSharper disable CommentTypo
+// ReSharper disable CppInconsistentNaming
+// ReSharper disable IdentifierTypo
 #pragma warning(disable:4996)
 
 #include "framework.h"
