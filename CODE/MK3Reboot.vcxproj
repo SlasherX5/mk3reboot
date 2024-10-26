@@ -249,6 +249,8 @@
     <ClCompile Include="FLICPLAY.C" />
     <ClCompile Include="hq3x.c" />
     <ClCompile Include="hqxInit.c" />
+    <ClCompile Include="ini.c" />
+    <ClCompile Include="INIReader.cpp" />
     <ClCompile Include="LOADADDR.C" />
     <ClCompile Include="MK3Reboot.cpp" />
     <ClCompile Include="MKAMODE.C" />

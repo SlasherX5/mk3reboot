@@ -473,6 +473,12 @@
     <ClCompile Include="hqxInit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="INIReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ini.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MK3Reboot.rc">
