@@ -1,6 +1,9 @@
 // MK3Reboot.cpp : Defines the entry point for the application.
 //
 
+// ReSharper disable CommentTypo
+// ReSharper disable CppInconsistentNaming
+// ReSharper disable IdentifierTypo
 #pragma warning(disable:4996)
 
 #include "framework.h"
@@ -11,6 +14,12 @@
 #include "stdio.h"
 
 #include <xaudio2.h>
+
+#include <Xinput.h>
+#pragma comment(lib, "Xinput.lib")
+#pragma comment(lib, "Xinput9_1_0.lib")
+
+#include "INIReader.h"
 
 extern "C"
 {
@@ -30,7 +39,6 @@ extern "C"
 #define PIXEL_HEIGHT 900
 #define USE_RTARGET
 //#define SWUPSCALE
-#define DESIRED_FPS 52
 
 // Global Variables:
 HINSTANCE g_hInst = nullptr; // current instance
@@ -98,37 +106,46 @@ typedef struct
 
 static TPage Pages[16 * 2 + 2] = { 0 };
 
-/*
-	game_map_tbl[0]=pad1_map_tbl[0]=pad2_map_tbl[0]=0x0004;			//r1,block
-	game_map_tbl[1]=pad1_map_tbl[1]=pad2_map_tbl[1]=0x0004;			//l1,block
-	game_map_tbl[2]=pad1_map_tbl[2]=pad2_map_tbl[2]=0x0008;			//r2,run
-	game_map_tbl[3]=pad1_map_tbl[3]=pad2_map_tbl[3]=0x0008;			//l2,run
-
-	game_map_tbl[4]=pad1_map_tbl[4]=pad2_map_tbl[4]=0x0020;			//triangle, hk
-	game_map_tbl[5]=pad1_map_tbl[5]=pad2_map_tbl[5]=0x0040;			//circle, lk
-	game_map_tbl[6]=pad1_map_tbl[6]=pad2_map_tbl[6]=0x0080;			//x, lp
-	game_map_tbl[7]=pad1_map_tbl[7]=pad2_map_tbl[7]=0x0010;			//square, hp
-
-	game_map_tbl[8]=pad1_map_tbl[8]=pad2_map_tbl[8]=0x0100;			//coll box, (SELECT BUTTON)
-	game_map_tbl[9]=pad1_map_tbl[9]=pad2_map_tbl[9]=0x0200;			//run, needed for sony box controllers
-	game_map_tbl[10]=pad1_map_tbl[10]=pad2_map_tbl[10]=0x0400;		//block, needed for sony box controllers
-	game_map_tbl[11]=pad1_map_tbl[11]=pad2_map_tbl[11]=0x0800;		//start
-
-	game_map_tbl[12]=pad1_map_tbl[12]=pad2_map_tbl[12]=0x1000;		//up
-	game_map_tbl[13]=pad1_map_tbl[13]=pad2_map_tbl[13]=0x2000;		//right
-	game_map_tbl[14]=pad1_map_tbl[14]=pad2_map_tbl[14]=0x4000;		//down
-	game_map_tbl[15]=pad1_map_tbl[15]=pad2_map_tbl[15]=0x8000;		//left
-*/
-
-int gameKeys[2][16] =
+int gameKeys[2][16] = // see game_map_tbl in MKSONY.C
 {
-	{'U','I','B','N',
-	'G','H','T','Y',
-	'3',0,0,'1','W','D','S','A'},
-
-	{VK_ADD,VK_NUMPAD4,VK_NUMPAD3,VK_NUMPAD7,
-	VK_RETURN,VK_DECIMAL,VK_NUMPAD1,VK_NUMPAD0,
-	'4',0,0,'2',VK_UP,VK_RIGHT,VK_DOWN,VK_LEFT},
+	// @formatter:off
+	{
+		'U', // run
+		'I', // run
+		'B', // block
+		'N', // block
+		'G', // high kick
+		'H', // low kick
+		'T', // low punch
+		'Y', // high punch
+		'3', // collision box
+		0,   //
+		0,   //
+		'1', // start
+		'W', // up
+		'D', // right
+		'S', // down
+		'A'  // left
+	},
+	{
+		VK_ADD,     // run
+		VK_NUMPAD4, // run
+		VK_NUMPAD3, // block
+		VK_NUMPAD7, // block
+		VK_RETURN,  // high kick
+		VK_DECIMAL, // low kick
+		VK_NUMPAD1, // low punch
+		VK_NUMPAD0, // high punch
+		'4',        // collision box
+		0,          //
+		0,          //
+		'2',        // start
+		VK_UP,      // up
+		VK_RIGHT,   // right
+		VK_DOWN,    // left
+		VK_LEFT     // down
+	},
+	// @formatter:on
 };
 
 extern "C" void MK3_Init();
@@ -168,6 +185,11 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
 	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_MK3REBOOT));
 
+	const INIReader settings("MK3.ini");
+	const auto settingFilter = settings.GetString("graphics", "filter", "arcade/Blank.bmp");
+	const auto settingFps = settings.GetInteger("graphics", "fps", 52);
+	const auto settingFpsUnlocked = settings.GetInteger("graphics", "fps_unlocked", 1000);
+
 	if (FAILED(InitDevice()))
 	{
 		CleanupDevice();
@@ -181,14 +203,9 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	//Palette
 	CreateD3DTexture(256, 256, NULL, 32, 32);
 
+	//Filter
 	BMPINFO ft = { 0 };
-#define FILTER_NAME1 "Scanlines75x4_j4"//"" //Scanrez1_Althor
-#define FILTER_NAME2 "Scanrez1_Althor"
-#define FILTER_NAME3 "Scanrez2_Althor"
-	if (LoadTextureBmp("arcade/"
-		FILTER_NAME2
-		".bmp", &ft, 0)) {
-		//Filter
+	if (LoadTextureBmp(settingFilter.c_str(), &ft, nullptr)) {
 		CreateD3DTexture(ft.w, ft.h, ft.pixels, 32,33);
 	}
 
@@ -271,7 +288,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 #endif
 
 		g_InsideRender = 1;
-		MK3_Render(keyState[VK_SPACE] ? 1000 : DESIRED_FPS);
+		MK3_Render(keyState[VK_SPACE] ? settingFpsUnlocked : settingFps);
 		g_InsideRender = 0;
 	}
 
@@ -1628,9 +1645,78 @@ extern "C"
 
 	DWORD PadRead()
 	{
-		WORD p1 = ReadKeys(gameKeys[0]);
-		WORD p2 = ReadKeys(gameKeys[1]);
-		return p1 | (p2 << 16);
+		WORD p[2] = {0, 0};
+		p[0] = ReadKeys(gameKeys[0]);
+		p[1] = ReadKeys(gameKeys[1]);
+		for (DWORD i = 0; i < 2; ++i)
+		{
+			auto state = XINPUT_STATE();
+			const auto result = XInputGetState(i, &state);
+			if (result == ERROR_SUCCESS)
+			{
+				// @formatter:off
+				// TODO collision boxes? frame buffer view? frame by frame?
+				constexpr auto JOY_RUN_L     = 1 << 0;
+				constexpr auto JOY_RUN_R     = 1 << 1;
+				constexpr auto JOY_BLOCK_L   = 1 << 2;
+				constexpr auto JOY_BLOCK_R   = 1 << 3;
+				constexpr auto JOY_HK        = 1 << 4;
+				constexpr auto JOY_LK        = 1 << 5;
+				constexpr auto JOY_LP        = 1 << 6;
+				constexpr auto JOY_HP        = 1 << 7;
+				constexpr auto JOY_COLL_BOX  = 1 << 8;  // TODO needs #define COLLISION_BOX 1
+				constexpr auto JOY_RUN_PSX   = 1 << 9;  // TODO not implemented
+				constexpr auto JOY_BLOCK_PSX = 1 << 10; // TODO not implemented
+				constexpr auto JOY_START     = 1 << 11;
+				constexpr auto JOY_UP        = 1 << 12;
+				constexpr auto JOY_RIGHT     = 1 << 13;
+				constexpr auto JOY_DOWN      = 1 << 14;
+				constexpr auto JOY_LEFT      = 1 << 15;
+
+				const auto g = state.Gamepad;
+				const auto b = g.wButtons;
+
+				if (b & XINPUT_GAMEPAD_DPAD_UP)        p[i] |= JOY_UP;
+				if (b & XINPUT_GAMEPAD_DPAD_DOWN)      p[i] |= JOY_DOWN;
+				if (b & XINPUT_GAMEPAD_DPAD_LEFT)      p[i] |= JOY_LEFT;
+				if (b & XINPUT_GAMEPAD_DPAD_RIGHT)     p[i] |= JOY_RIGHT;
+				if (b & XINPUT_GAMEPAD_START)          p[i] |= JOY_START;
+				if (b & XINPUT_GAMEPAD_BACK)           p[i] |= 0;
+				if (b & XINPUT_GAMEPAD_LEFT_THUMB)     p[i] |= 0;
+				if (b & XINPUT_GAMEPAD_RIGHT_THUMB)    p[i] |= 0;
+				if (b & XINPUT_GAMEPAD_LEFT_SHOULDER)  p[i] |= JOY_RUN_L;
+				if (b & XINPUT_GAMEPAD_RIGHT_SHOULDER) p[i] |= JOY_BLOCK_R;
+				if (b & XINPUT_GAMEPAD_A)              p[i] |= JOY_LP;
+				if (b & XINPUT_GAMEPAD_B)              p[i] |= JOY_LK;
+				if (b & XINPUT_GAMEPAD_X)              p[i] |= JOY_HP;
+				if (b & XINPUT_GAMEPAD_Y)              p[i] |= JOY_HK;
+
+				if (XINPUT_GAMEPAD_TRIGGER_THRESHOLD < g.bLeftTrigger)
+					p[i] |= JOY_BLOCK_L;
+
+				if (XINPUT_GAMEPAD_TRIGGER_THRESHOLD < g.bRightTrigger)
+					p[i] |= JOY_RUN_R;
+
+				// @formatter:on
+
+				float x = g.sThumbLX;
+				float y = g.sThumbLY;
+				const auto m = sqrt(x * x + y * y);
+				constexpr auto k = static_cast<float>(XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE);
+				if (m > k)
+				{
+					x /= m;
+					y /= m;
+					constexpr auto z = 0.5;
+					if (x < -z) p[i] |= JOY_LEFT;
+					if (x > +z) p[i] |= JOY_RIGHT;
+					if (y < -z) p[i] |= JOY_DOWN;
+					if (y > +z) p[i] |= JOY_UP;
+				}
+			}
+		}
+
+		return p[0] | p[1] << 16;
 	}
 
 	int Wav95_Play(int id, int loop)
