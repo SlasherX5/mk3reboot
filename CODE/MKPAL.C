@@ -405,6 +405,20 @@ void unget_pal(WORD clut_id)
 	return;
 }
 
+
+WORD* get_pal(WORD clut_id)
+{
+	short l;
+	PALINFO* palptr;
+
+	/* convert clut id into palram index */
+	l = (clut_id - getClut(FORE_CLUT_START_X, FORE_CLUT_START_Y)) >> CLUT_ID_SHIFT;
+
+	if (l < 0 || l >= NUM_PALS) return 0;
+
+	return palram[l].palid;
+}
+
 /******************************************************************************
  Function: void blow_pal(WORD *pal_id)
 

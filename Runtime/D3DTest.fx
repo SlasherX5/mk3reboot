@@ -24,7 +24,8 @@ Texture2D pixels  : register(t1);
 Texture2D tfilter  : register(t2);
 
 SamplerState PointSampler  : register(s0);
-SamplerState LinearSampler : register(s1);
+SamplerState LinearSamplerW : register(s1);
+SamplerState LinearSamplerC : register(s2);
 
 //--------------------------------------------------------------------------------------
 // Vertex Shader
@@ -45,7 +46,7 @@ float4 pallookup(float2 uv)
 	return palette.Sample(PointSampler, float2(index + Extra.x, Extra.y));
 }
 
-#if UPSCALE == 4
+#if UPSCALE >= 4
 	float4 lookup(float2 uv)
 	{
 		return pallookup(uv);
@@ -60,7 +61,7 @@ float4 pallookup(float2 uv)
 
 	float4 linlookup(float2 uv)
 	{
-		return pixels.Sample(LinearSampler, uv);
+		return pixels.Sample(LinearSamplerW, uv);
 	}
 
 
@@ -213,7 +214,7 @@ float4 Blur1(float2 vTex, float s)
 
 float4 Blur2(float2 uv,float sca)
 {
-	float2 dg1 = 1.15f / float2(1600, 900);
+	float2 dg1 = sca / float2(1600, 900);
 	float2 dx = float2(dg1.x, 0.0);
 	float2 dy = float2(0.0, dg1.y);
 
@@ -288,52 +289,74 @@ float4 Blur3(float2 uv, float s)
 //--------------------------------------------------------------------------------------
 // Pixel Shader
 //--------------------------------------------------------------------------------------
-float4 PS_RAW(VS_OUTPUT input) : SV_Target
+float4 PS_RAW8(VS_OUTPUT input) : SV_Target
 {
 	return pallookup(input.uv);
+	//return pixels.Sample(PointSampler, input.uv + mUVOffsets.xy);
 }
 
 float4 PS_UP(VS_OUTPUT input) : SV_Target
 {
-	float4 tcolor = Blur2(input.uv,0.35f);
-	float4 filter = tfilter.Sample(LinearSampler, float2(input.pos.x / 5.0f, input.pos.y / 4.0f));
+	float4 tcolor = Blur3(input.uv,0.4f);
+	float4 filter = tfilter.Sample(LinearSamplerW, float2(input.pos.x / 6.0f, input.pos.y / 6.0f));
 	tcolor.w = 1;
-	float4 flt = pow(filter, 3.0f);
+	float4 flt = pow(filter, 1.2f);
 	flt.w = 1;
 	return tcolor*flt;
 }
 
 float4 PS(VS_OUTPUT input) : SV_Target
 {
-#if UPSCALE == 4
+#if UPSCALE >= 4 && HQX != 0
 	float4 tcolor = hq4x(input.uv);
 #else
 	float4 tcolor = pallookup(input.uv);
 #endif
 	
-	tcolor = lerp(Color, pow(tcolor, 1.15f), Extra.z);
+	tcolor = lerp(Color, pow(tcolor, 1.1f), Extra.z);
 	tcolor.w *= Extra.w;
 
-	float4 filter = tfilter.Sample(LinearSampler, float2(input.pos.x / 4.f, input.pos.y / 3.f));
+	float4 filter = tfilter.Sample(LinearSamplerW, float2(input.pos.x / 4.f, input.pos.y / 4.f));
 	float4 flt = pow(filter, 1.8f);
 	flt.w = 1;
-	return flt * tcolor;
+	return tcolor*flt;
 }
+
+float4 PS4X(VS_OUTPUT input) : SV_Target
+{
+	float4 tcolor = pixels.Sample(LinearSamplerC, input.uv + mUVOffsets.xy);
+	float4 gs = Extra.x; 
+
+	tcolor = lerp(Color, tcolor, Extra.z);
+	tcolor.xyz *= gs;
+	tcolor.w *= Extra.w;	
+
+	float4 filter = tfilter.Sample(LinearSamplerW, float2(input.pos.x / 2.f, input.pos.y / 3.f));
+	float4 flt = pow(filter, 1.85f);
+	flt.w = 1;
+	return tcolor * flt;
+}
+
+float4 PS_RAW32(VS_OUTPUT input) : SV_Target
+{
+	return pixels.Sample(LinearSamplerC, input.uv + mUVOffsets.xy);
+}
+
 
 float4 PS1(VS_OUTPUT input) : SV_Target
 {
 
-#if UPSCALE == 4
+#if UPSCALE >= 4 && HQX != 0
 	float4 tcolor = hq4x(input.uv);
-#elif UPSCALE == 3
+#elif UPSCALE == 3 && HQX != 0
 	float4 tcolor = hq2x(input.uv);
-#elif UPSCALE == 2
+#elif UPSCALE == 2 && HQX != 0
 	float4 tcolor = hq2x(input.uv);
 #else
 	float4 tcolor = lookup(input.uv);
 #endif
 
-	float4 filter = tfilter.Sample(LinearSampler, float2(input.pos.x / 6.f, input.pos.y / 4.f));
+	float4 filter = tfilter.Sample(LinearSamplerW, float2(input.pos.x / 6.f, input.pos.y / 4.f));
 	float4 flt = pow(filter, 2.8f);
 	flt.w = 1;
 	return flt * pow(tcolor,1.13f);
@@ -341,9 +364,8 @@ float4 PS1(VS_OUTPUT input) : SV_Target
 
 float4 PS0(VS_OUTPUT input) : SV_Target
 {
-	float4 tcolor = pixels.Sample(LinearSampler, input.uv);
-	//float4 tcolor = hq4x(input.uv);
-	float4 filter = tfilter.Sample(LinearSampler, float2(input.pos.x / 4.f, input.pos.y / 4.f));
+	float4 tcolor = pixels.Sample(LinearSamplerC, input.uv);	
+	float4 filter = tfilter.Sample(LinearSamplerW, float2(input.pos.x / 4.f, input.pos.y / 4.f));
 	float4 flt = pow(filter, 2.1f);
 	flt.w = 1;
 	return flt*pow(tcolor,1.1f);
