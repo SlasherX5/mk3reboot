@@ -23,5 +23,64 @@ struct ConstantBuffer
 	XMFLOAT4 mPalParams;
 	XMFLOAT4 mColor;
 	XMFLOAT4 mExtraParams;
-	XMFLOAT4 mUVOffsets;	
+};
+
+
+template <typename T,int FixedSize> class StaticArray 
+{
+private:
+	T* Ptr;
+	int Count;
+
+	inline void Alloc()
+	{
+		if (Ptr) return;
+		Ptr = (T*)calloc(FixedSize, sizeof(T));
+	}
+
+public:
+	StaticArray() : 
+		Ptr(nullptr),
+		Count(0)
+	{
+
+	}
+
+	~StaticArray()
+	{
+		if (Ptr) free(Ptr);
+	}
+	
+	inline T& operator[](int Index)
+	{
+		Alloc();
+		return Ptr[Index];
+	}
+
+	int Add(T& Element)
+	{
+		Alloc();
+		if (Count >= FixedSize) return -1;
+		Ptr[Count++] = Element;
+		return Count - 1;
+	}
+
+	T* AddEmpty()
+	{
+		Alloc();
+		if (Count >= FixedSize) return nullptr;
+		return &Ptr[Count++];
+	}
+
+	int Find(const T& Value)
+	{
+		for (int i = 0; i < Count; i++)
+		{
+			if (Ptr[i] == Value) return i;
+		}
+
+		return -1;
+	}
+
+	int Num() { return Count; }
 };

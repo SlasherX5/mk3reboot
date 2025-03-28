@@ -736,7 +736,7 @@ void dipinit(void)
 	f_nopower=0;
 	f_unlim_fatal=0;
 	f_level_select=0;
-	f_one_win=0;
+	// f_one_win=0; MK3Reboot.cpp sets it now
 	f_shang_morph=MORPH_QUASI;
 	credits=GAME_CREDITS;
 	f_no_sfx=0;

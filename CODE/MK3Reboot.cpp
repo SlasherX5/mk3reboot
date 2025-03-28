@@ -1,44 +1,89 @@
 // MK3Reboot.cpp : Defines the entry point for the application.
 //
 
-// ReSharper disable CommentTypo
-// ReSharper disable CppInconsistentNaming
-// ReSharper disable IdentifierTypo
 #pragma warning(disable:4996)
+#pragma warning(disable:4018)
+#pragma warning(disable:4244)
 
 #include "framework.h"
 #include "MK3Reboot.h"
 #include "timeapi.h"
 #include "stdafx.h"
-#include "D3DTest.h"
 #include "stdio.h"
-
+#include "D3DTest.h"
 #include <xaudio2.h>
 
 #include <Xinput.h>
 #pragma comment(lib, "Xinput.lib")
 #pragma comment(lib, "Xinput9_1_0.lib")
 
-#include "INIReader.h"
+#include "ini.h"
+#include <string>
+#include <vector>
 
 extern "C"
 {
 #include "psxlib.h"
 #include "MKPAL.H"
-#include "hqx.h"
 };
+
+#include "FileCache.h"
 
 #define MAX_LOADSTRING 100
 #define MAX_TEXTURES 256
 
+// internal virtual screen size
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 240
-#define RT_WIDTH 1600
-#define RT_HEIGHT 900
-#define PIXEL_WIDTH 1600
-#define PIXEL_HEIGHT 900
-#define USE_RTARGET
-//#define SWUPSCALE
+
+#define NUM_PL_SHADERS 4
+
+// Settings
+static int Mode4X;
+static int NoSound;
+static long ScreenWidth, ScreenHeight;
+
+extern "C"
+{
+	extern WORD editmode = 0;// 2 | 0x40;
+	extern WORD testmode = 0;// 2 | 0x40 | 0x100;// | 2;// 2 | 0x80;
+
+	extern WORD f_one_win;
+	extern short f_pause;				/* flag: TRUE: game paused */
+
+	extern WORD* get_pal(WORD clut_id);
+}
+
+void ParseFileName(TCHAR* FileNameStr, uint64_t FileName, uint8_t Hint)
+{
+	uint32_t dd = FileName;
+
+	switch (Hint)
+	{
+	case 1:
+		if (dd < 1000)
+		{
+			sprintf(FileNameStr, "arcade/fx%d.bmp", dd);
+		}
+		else
+		{
+			sprintf(FileNameStr, "arcade/%d%d/%d.bmp", (dd / 10000), (dd / 1000) % 10, dd % 1000);
+		}
+		return;
+	case 2:
+	case 2|4:
+		sprintf(FileNameStr, "arcade/objects4x/%d%d%d.%s", (dd / 10000), (dd / 1000) % 10, dd % 1000, Hint == 2 ? "tga" : "png");
+		return;
+	case 3:
+	case 3|4:
+		sprintf(FileNameStr, "arcade/objects4x/%I64x.%s", FileName, Hint == 3 ? "tga" : "png");
+		return;
+	}
+
+	FileNameStr[0] = '\0';
+}
+
+FileCache FileSystem("MK3RebootCache-%d.bin", ParseFileName);
 
 // Global Variables:
 HINSTANCE g_hInst = nullptr; // current instance
@@ -54,14 +99,15 @@ ID3D11RenderTargetView* g_pRenderTargetView = nullptr;
 ID3D11RenderTargetView* g_pRenderTargetView0 = nullptr;
 ID3D11ShaderResourceView* g_pRenderTargetShaderView = nullptr;
 ID3D11VertexShader* g_pVertexShader = nullptr;
-ID3D11PixelShader* g_pPixelShader = nullptr;
+ID3D11PixelShader* g_pPixelShader8 = nullptr;
+ID3D11PixelShader* g_pPixelShader32[NUM_PL_SHADERS+1] = { nullptr };
 ID3D11PixelShader* g_pPixelShaderPP = nullptr;
 ID3D11InputLayout* g_pVertexLayout = nullptr;
 ID3D11Buffer* g_pVertexBuffer = nullptr;
 ID3D11Buffer* g_pConstantBuffer = nullptr;
 ID3D11BlendState* g_pAlphaBlendingEnabledState = nullptr;
 ID3D11BlendState* g_pAlphaBlendingDisabledState = nullptr;
-ID3D11SamplerState* g_sampleStates[2] = {nullptr,nullptr};
+ID3D11SamplerState* g_sampleStates[3] = {nullptr,nullptr};
 ID3D11Texture2D* g_renderTargetTex = nullptr;
 ID3D11Texture2D* g_renderTargetStaging = nullptr;
 ID3D11Texture2D* g_renderTargetStagingBig = nullptr;
@@ -83,12 +129,21 @@ int isRunning = 1;
 int g_InsideRender = 0;
 BYTE keyState[256] = { 0 };
 
-extern "C" WORD editmode = 0;// 2 | 0x40;
-extern "C" WORD testmode = 0;// 2 | 0x40 | 0x100;// | 2;// 2 | 0x80;
+POLY_FT4 poly4x[256] = { 0 };
+DWORD poly4xcount = 0;
 
 #define TPAGE_SZ 256
+#define IMAGE_UPSCALE 4
 
-extern "C" short f_pause;				/* flag: TRUE: game paused */
+#define TPAGE_COUNT 32
+#define TPAGE_PALETTE TPAGE_COUNT
+#define TPAGE_FILTER (TPAGE_COUNT+1)
+#define TPAGE_4X_OFFSET (TPAGE_COUNT+2)
+#define TPAGE_EXTRA (TPAGE_4X_OFFSET+TPAGE_COUNT)
+#define TPAGE_EXTRA_COUNT 8
+#define TPAGE_TOTAL (TPAGE_EXTRA+TPAGE_EXTRA_COUNT)
+
+#define P1PAGE_INDEX 40
 
 #define MAX_SND_CHANNELS 32
 #define MAX_44K_CHANNELS 8
@@ -101,61 +156,448 @@ typedef struct
 {
 	ID3D11Texture2D* texture;
 	ID3D11ShaderResourceView* textureView;
-	BYTE data[TPAGE_SZ * TPAGE_SZ];	
+	int size,bits,shader_hint,bghint;
+	BYTE* data;
 }TPage;
 
-static TPage Pages[16 * 2 + 2] = { 0 };
+static TPage Pages[TPAGE_TOTAL] = { 0 };
 
-int gameKeys[2][16] = // see game_map_tbl in MKSONY.C
-{
-	// @formatter:off
-	{
-		'U', // run
-		'I', // run
-		'B', // block
-		'N', // block
-		'G', // high kick
-		'H', // low kick
-		'T', // low punch
-		'Y', // high punch
-		'3', // collision box
-		0,   //
-		0,   //
-		'1', // start
-		'W', // up
-		'D', // right
-		'S', // down
-		'A'  // left
-	},
-	{
-		VK_ADD,     // run
-		VK_NUMPAD4, // run
-		VK_NUMPAD3, // block
-		VK_NUMPAD7, // block
-		VK_RETURN,  // high kick
-		VK_DECIMAL, // low kick
-		VK_NUMPAD1, // low punch
-		VK_NUMPAD0, // high punch
-		'4',        // collision box
-		0,          //
-		0,          //
-		'2',        // start
-		VK_UP,      // up
-		VK_RIGHT,   // right
-		VK_DOWN,    // left
-		VK_LEFT     // down
-	},
-	// @formatter:on
-};
+static void InitTPage(int ti,int bts, int sz)
+{	
+	if (ti < 0 || ti >= TPAGE_TOTAL || Pages[ti].data) return;
+
+	Pages[ti].data = (BYTE*)calloc(sz * sz * bts / 32,4);
+	Pages[ti].bits = bts;
+	Pages[ti].size = sz;
+}
+
+uint16_t* gameKeys[2];
 
 extern "C" void MK3_Init();
 extern "C" void MK3_Update();
 extern "C" int MK3_Render(int fps);
 
-void DrawQuadUV(int t, int p, float x, float y, float w, float h, int sx, int sy, int sw, int sh,int flags,float);
+void DrawQuadUV(int t, int p, float x, float y, float w, float h, int sx, int sy, int sw, int sh,int flags,int);
 void DrawQuad(int x, int y, int w, int h, BYTE color[]);
 int CreateD3DTexture(int w, int h, void* data,int flags,int slot);
-bool LoadTextureBmp(const char* filename, BMPINFO* info, DWORD* Palette8888);
+bool LoadTextureBmp(uint64_t FileID, BMPINFO* info, DWORD* Palette8888);
+bool LoadTextureTGAorPNG(uint64_t FileID, uint8_t Hint, BMPINFO* info);
+
+static DWORD AllPAlettes[256 * 256];
+
+typedef struct
+{
+
+	union
+	{
+		struct
+		{
+			uint8_t r, g, b, a;
+		};
+
+		DWORD dw;
+	};
+} DW_RGBA;
+
+
+
+inline DWORD LerpColor3(DWORD a, DWORD b, float lerp)
+{
+	float lerp1 = 1.0f - lerp;
+	DW_RGBA A, B, R;
+	A.dw = a;
+	B.dw = b;
+
+	R.r = A.r * lerp + B.r * lerp1;
+	R.g = A.g * lerp + B.g * lerp1;
+	R.b = A.b * lerp + B.b * lerp1;
+	R.a = 255;
+	return R.dw;
+}
+
+inline uint8_t LuminColor(DW_RGBA a)
+{
+	float gray = 0.2 * a.r + 0.7 * a.g + 0.1 * a.b;
+	return gray;
+}
+
+inline uint8_t GrayColor(DWORD a)
+{
+	DW_RGBA A;
+	A.dw = a;
+	float gray = 0.299 * A.r + 0.587 * A.g + 0.114 * A.b;
+	return gray;
+}
+
+DWORD MultColor3(DWORD a, float scale)
+{
+	DW_RGBA A, R;
+	A.dw = a;
+	R.r = A.r * scale;
+	R.g = A.g * scale;
+	R.b = A.b * scale;
+	return R.dw;
+}
+
+void Palette565To8888(u_short* srcpal, BYTE* dest, int nelem)
+{
+	BYTE* dst = dest;
+	*dst++ = 0x00;
+	*dst++ = 0x00;
+	*dst++ = 0x00;
+	*dst++ = 0x00;
+
+	for (size_t i = 1; i < nelem; i++)
+	{
+		u_short c = srcpal[i];
+		*dst++ = ((c >> 0) & 31) << 3;// * 255 / 31;
+		*dst++ = ((c >> 5) & 31) << 3;// * 255 / 31;
+		*dst++ = ((c >> 10) & 31) << 3;// * 255 / 31;
+		*dst++ = 0xff;
+	}
+
+	for (size_t i = nelem; i < 256; i++)
+	{
+		*dst++ = 0xff;
+		*dst++ = 0xff;
+		*dst++ = 0xff;
+		*dst++ = 0xff;
+	}
+}
+
+bool Save32BitBmp(const char* filename, DWORD* src, int w, int h)
+{
+	static BYTE palette[256 * 4];
+	FILE* f = fopen(filename, "wb");
+
+	if (f == nullptr) return false;
+
+	int pitch = w * 4;
+	int padsize = (4 - (pitch % 4)) % 4;
+	int filesize = 54 + (pitch + padsize) * h;
+
+	unsigned char bmpfileheader[14] = { 'B','M', 0,0,0,0, 0,0, 0,0, 54,0,0,0 };
+	unsigned char bmpinfoheader[40] = { 40,0,0,0, 0,0,0,0, 0,0,0,0, 1,0, 32,0 };
+	unsigned char bmppad[3] = { 0,0,0 };
+
+	bmpfileheader[2] = (unsigned char)(filesize);
+	bmpfileheader[3] = (unsigned char)(filesize >> 8);
+	bmpfileheader[4] = (unsigned char)(filesize >> 16);
+	bmpfileheader[5] = (unsigned char)(filesize >> 24);
+
+	int soffset = 54;
+
+	bmpfileheader[10] = (unsigned char)(soffset);
+	bmpfileheader[11] = (unsigned char)(soffset >> 8);
+	bmpfileheader[12] = (unsigned char)(soffset >> 16);
+	bmpfileheader[13] = (unsigned char)(soffset >> 24);
+
+	bmpinfoheader[4] = (unsigned char)(w);
+	bmpinfoheader[5] = (unsigned char)(w >> 8);
+	bmpinfoheader[6] = (unsigned char)(w >> 16);
+	bmpinfoheader[7] = (unsigned char)(w >> 24);
+	bmpinfoheader[8] = (unsigned char)(h);
+	bmpinfoheader[9] = (unsigned char)(h >> 8);
+	bmpinfoheader[10] = (unsigned char)(h >> 16);
+	bmpinfoheader[11] = (unsigned char)(h >> 24);
+	bmpinfoheader[32] = 0;
+
+	fwrite(bmpfileheader, 1, 14, f);
+	fwrite(bmpinfoheader, 1, 40, f);
+
+	for (int i = 0; i < h; i++)
+	{
+		fwrite(src + (pitch * (h - i - 1)), 1, pitch, f);
+		if (padsize) fwrite(bmppad, 1, padsize, f);
+	}
+	fclose(f);
+	return true;
+}
+
+void LoadLuminPalette(const char* filename, WORD start, WORD endi, WORD slot)
+{
+	FILE* f = fopen(filename, "rb");
+	if (f == nullptr) return;
+
+	DW_RGBA srcpal[256];
+
+	for (size_t i = 0; i < 256; i++)
+	{
+		fread(&srcpal[i], 3, 1, f);
+		srcpal[i].a = 0xff;
+	}
+
+	srcpal[0].a = 0;
+
+	fclose(f);
+	
+	DWORD* dstpal = (DWORD*)AllPAlettes + slot * 256;
+
+	BYTE* dst = (BYTE*)srcpal;
+	
+	DWORD last = 0xffffffff;
+	DWORD lastind = 255;
+
+	for (size_t i = start; i < endi; i++)
+	{
+		uint8_t lindex = LuminColor(srcpal[i]);
+
+		if (lindex == lastind) continue;
+
+		float linc = 1.0f / (lastind - lindex);
+		float lp = 0;
+
+		while (lastind > lindex)
+		{
+			dstpal[lastind--] = LerpColor3(srcpal[i].dw,last,lp);
+			lp += linc;
+		}
+
+		last = srcpal[i].dw;
+		dstpal[lindex] = last;
+	}
+
+	if (lastind > 0)
+	{
+		float linc = 1.0f / lastind;
+		float lp = 1;
+
+		while (lastind-- > 0)
+		{
+			dstpal[lastind] = MultColor3(last, lp);
+			lp -= linc;
+		}
+	}
+
+	DW_RGBA bmpdata[256];
+	for (size_t i = 0; i < 256; i++)
+	{
+		DW_RGBA pix;
+		pix.dw = dstpal[i];
+		bmpdata[i].r = pix.b;
+		bmpdata[i].g = pix.g;
+		bmpdata[i].b = pix.r;
+		bmpdata[i].a = pix.a;
+	}
+	/*
+	TCHAR fname[128];
+	strcpy(fname, filename);
+	strcpy(strstr(fname, "."), "lum.bmp");
+	Save32BitBmp(fname, &bmpdata[0].dw, 256, 1);
+	*/
+}
+
+
+std::vector<std::string> ini_sections;
+std::vector<std::string> ini_keys;
+std::vector<std::string> ini_values;
+std::vector<void*>		 ini_customdata;
+
+static int handler(void* user, const char* section, const char* name,
+	const char* value)
+{
+	ini_sections.push_back(section);
+	ini_keys.push_back(name);
+	ini_values.push_back(value);
+	ini_customdata.push_back(nullptr);
+	return 1;
+}
+
+int32_t ini_getint(const char* section, const char* name, int32_t defvalue)
+{
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			return atoi(ini_values[i].c_str());
+		}
+	}
+
+	return defvalue;
+}
+
+std::string ini_getstr(const char* section, const char* name, const char* defvalue)
+{
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			return ini_values[i];
+		}
+	}
+
+	return defvalue;
+}
+
+
+uint16_t* ini_getint16raw(const char* section, const char* name, uint16_t* outsize = nullptr)
+{
+	std::vector<uint16_t> values;
+
+	const char* src = nullptr;
+	int srcind = -1;
+
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			if (ini_customdata[i])
+			{
+				if (outsize) *outsize = *(uint16_t*)ini_customdata[i];
+				return (uint16_t*)ini_customdata[i] + 1;
+			}
+
+			srcind = i;
+			src = ini_values[i].c_str();
+			break;
+		}
+	}
+
+	if (!src) return 0;
+
+	bool finished = false;
+	while (!finished)
+	{
+		const char* next = strstr(src + 1, ",");
+		if (!next)
+		{
+			next = src + strlen(src);
+			finished = true;
+		}
+		int chlen = next - src;
+
+		int32_t value32;
+		if (sscanf(src, "%d", &value32))
+		{
+			values.push_back(value32);
+		}
+
+		src = next + 1;
+	}
+
+	uint16_t* data = new uint16_t[values.size()+1];
+	data[0] = values.size();
+	memcpy(data+1, values.begin()._Ptr, values.size() * sizeof(uint16_t));
+
+	ini_customdata[srcind] = data;
+	if (outsize) *outsize = data[0];
+
+	return data+1;
+}
+
+void parse_struct(void* struct_ptr, const char* format, const char* strdata)
+{
+	const char* src = strdata;
+	
+	int i = 0;
+	int32_t value32;
+	int64_t value64;
+	uint16_t* data16 = nullptr;
+	char* dst = (char*)struct_ptr;
+
+	while (format[i])
+	{
+		if (format[i] == ' ')
+		{
+			dst++;
+		}
+		else
+		{
+			const char* next = strstr(src + 1, ",");
+			if (!next) next = src + strlen(src);
+			int chlen = next - src;
+
+			switch (format[i])
+			{
+			case 'x':
+				sscanf(src, "%I64x", &value64);
+				break;
+			case 't':
+			case 'd':
+			case 'b':
+				sscanf(src, "%d", &value32);
+				break;
+			case 'i':
+				if (chlen)
+				{
+					char dsecname[64];
+					memcpy(dsecname, src, chlen);
+					dsecname[chlen] = '\0';
+					data16 = ini_getint16raw("data16", dsecname);
+				}
+				else
+				{
+					data16 = nullptr;
+				}
+				break;
+			}
+
+			switch (format[i])
+			{
+			case 'x':
+				*(int64_t*)(dst) = value64;
+				dst += 8;
+				break;
+			case 't':
+				*(int16_t*)(dst) = (int16_t)(value32 & 0xffff);
+				dst += 2;
+				break;
+			case 'd':
+				*(int32_t*)(dst) = value32;
+				dst += 4;
+				break;
+			case 'b':
+				*(int8_t*)(dst) = (int8_t)(value32 & 0xff);
+				dst += 1;
+				break;
+			case 'i':
+				*(uint16_t**)(dst) = data16;
+				dst += sizeof(uint16_t*);
+				break;
+			}
+
+			src += chlen + 1;
+		}
+		
+		i++;
+	}
+}
+
+
+std::vector<int32_t> ini_getintarray(const char* section, const char* name)
+{
+	std::vector<int32_t> values;
+
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			values.push_back(atoi(ini_values[i].c_str()));
+		}
+	}
+
+	return std::move(values);
+}
+
+std::vector<std::string> ini_getstrarray(const char* section, const char* name)
+{
+	std::vector<std::string> values;
+
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			values.push_back(ini_values[i]);
+		}
+	}
+
+	return std::move(values);
+}
 
 //
 //
@@ -168,6 +610,25 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
 
+	if (ini_parse("MK3.ini", handler, nullptr) < 0) {
+		printf("Can't load 'MK3.ini'\n");
+		return 1;
+	}
+
+	Mode4X = ini_getint("graphics", "mode4x", 0);
+	ScreenWidth = ini_getint("graphics", "width", 1600);
+	ScreenHeight = ini_getint("graphics", "height", 900);
+
+	gameKeys[0] = ini_getint16raw("input", "p1keys");
+	gameKeys[1] = ini_getint16raw("input", "p2keys");
+		
+	NoSound = ini_getint("audio", "nosound", 0);
+
+	f_one_win = ini_getint("gameplay", "onewin", 0);
+
+	const long settingFps = ini_getint("graphics", "fps", 53);
+	const long settingFpsUnlocked = ini_getint("graphics", "fps_unlocked", 500);
+
 	// TODO: Place code here.
 	MSG msg = { 0 };
 	HACCEL hAccelTable;
@@ -178,17 +639,12 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	MyRegisterClass(hInstance);
 
 	// Perform application initialization:
-	if (!InitInstance(hInstance, nCmdShow, PIXEL_WIDTH, PIXEL_HEIGHT))
+	if (!InitInstance(hInstance, nCmdShow, ScreenWidth, ScreenHeight))
 	{
 		return FALSE;
 	}
 
 	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_MK3REBOOT));
-
-	const INIReader settings("MK3.ini");
-	const auto settingFilter = settings.GetString("graphics", "filter", "arcade/Blank.bmp");
-	const auto settingFps = settings.GetInteger("graphics", "fps", 52);
-	const auto settingFpsUnlocked = settings.GetInteger("graphics", "fps_unlocked", 1000);
 
 	if (FAILED(InitDevice()))
 	{
@@ -196,18 +652,22 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 		return 0;
 	}
 
-	hqxInit();
-
 	MK3_Init();
 
 	//Palette
 	CreateD3DTexture(256, 256, NULL, 32, 32);
 
-	//Filter
-	BMPINFO ft = { 0 };
-	if (LoadTextureBmp(settingFilter.c_str(), &ft, nullptr)) {
-		CreateD3DTexture(ft.w, ft.h, ft.pixels, 32,33);
+	uint64_t scanline_image = ini_getint("graphics", "scanline", 0);
+
+	BMPINFO ft = { 0 };	
+	if (LoadTextureBmp(scanline_image,&ft, 0))
+	{
+		//Filter
+		CreateD3DTexture(ft.w, ft.h, ft.pixels, 32,TPAGE_FILTER);
 	}
+
+	LoadLuminPalette("arcade/20.act", 32, 64, 254);
+	LoadLuminPalette("arcade/21.act", 1, 39, 255);
 
 	D3D11_VIEWPORT vp;
 	vp.MinDepth = 0.0f;
@@ -215,20 +675,18 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	vp.TopLeftX = 0;
 	vp.TopLeftY = 0;
 
-#ifndef USE_RTARGET
 	g_pImmediateContext->OMSetRenderTargets(1, &g_pRenderTargetView, nullptr);
 	g_pImmediateContext->VSSetShader(g_pVertexShader, nullptr, 0);
-	g_pImmediateContext->PSSetShader(g_pPixelShader, nullptr, 0);
+	g_pImmediateContext->PSSetShader(g_pPixelShader8, nullptr, 0);
 	g_pImmediateContext->OMSetBlendState(g_pAlphaBlendingEnabledState, 0, 0xff);
-	g_pImmediateContext->PSSetSamplers(0, 2, g_sampleStates);
+	g_pImmediateContext->PSSetSamplers(0, 3, g_sampleStates);
 	g_pImmediateContext->VSSetConstantBuffers(0, 1, &g_pConstantBuffer);
 	g_pImmediateContext->PSSetConstantBuffers(0, 1, &g_pConstantBuffer);
-	g_pImmediateContext->PSSetShaderResources(0, 1, &Pages[32].textureView);
-	g_pImmediateContext->PSSetShaderResources(2, 1, &Pages[33].textureView);
-#endif
+	g_pImmediateContext->PSSetShaderResources(0, 1, &Pages[TPAGE_PALETTE].textureView);
+	g_pImmediateContext->PSSetShaderResources(2, 1, &Pages[TPAGE_FILTER].textureView);
 
-	vp.Width = PIXEL_WIDTH;
-	vp.Height = PIXEL_HEIGHT;
+	vp.Width = ScreenWidth;
+	vp.Height = ScreenHeight;
 
 	g_pImmediateContext->RSSetViewports(1, &vp);
 
@@ -236,7 +694,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	while (isRunning)
 	{
 		static int holdingP = 0;
-		static int holdingO = 0;
+		static int holdingO = 0;		
 
 		if (keyState['P'] && !holdingP) {
 			f_pause = f_pause ? 0 : 7;
@@ -265,27 +723,6 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 		vp.MaxDepth = 1.0f;
 		vp.TopLeftX = 0;
 		vp.TopLeftY = 0;
-
-#ifdef USE_RTARGET
-
-		vp.Width  = RT_WIDTH;
-		vp.Height = RT_HEIGHT;
-		g_pImmediateContext->RSSetViewports(1, &vp);
-
-		// Setup the viewport
-		g_pImmediateContext->OMSetRenderTargets(1, &g_pRenderTargetView0, nullptr);
-		g_pImmediateContext->VSSetShader(g_pVertexShader, nullptr, 0);
-		g_pImmediateContext->PSSetShader(g_pPixelShader, nullptr, 0);
-		g_pImmediateContext->OMSetBlendState(g_pAlphaBlendingEnabledState, 0, 0xff);
-		g_pImmediateContext->PSSetSamplers(0, 2, g_sampleStates);
-		g_pImmediateContext->VSSetConstantBuffers(0, 1, &g_pConstantBuffer);
-		g_pImmediateContext->PSSetConstantBuffers(0, 1, &g_pConstantBuffer);
-		g_pImmediateContext->PSSetShaderResources(0, 1, &Pages[32].textureView);
-		g_pImmediateContext->PSSetShaderResources(2, 1, &Pages[33].textureView);
-		g_pImmediateContext->RSSetViewports(1, &vp);
-
-		g_pImmediateContext->ClearRenderTargetView(g_pRenderTargetView0, Colors::Black);
-#endif
 
 		g_InsideRender = 1;
 		MK3_Render(keyState[VK_SPACE] ? settingFpsUnlocked : settingFps);
@@ -436,13 +873,9 @@ HRESULT CompileShaderFromFile(WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szS
 	//dwShaderFlags |= D3DCOMPILE_DEBUG;
 #endif
 
-	ID3DBlob* pErrorBlob;
-	D3D_SHADER_MACRO macros[4] = { 0 };
-#ifdef USE_RTARGET
-	static char macval[4] = { '0',0 };
-#else
-	static char macval[4] = { (int)(PIXEL_WIDTH / SCREEN_WIDTH) + '0',0 };
-#endif
+	ID3DBlob* pErrorBlob = nullptr;
+	D3D_SHADER_MACRO macros[4];
+	static char macval[4] = { (int)(ScreenWidth / ScreenHeight) + '0',0 };
 	
 	macros[0].Name = "UPSCALE";
 	macros[0].Definition = macval;
@@ -462,25 +895,134 @@ HRESULT CompileShaderFromFile(WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szS
 	return S_OK;
 }
 
-bool LoadTextureBmp(const char* filename, BMPINFO* info, DWORD *Palette8888)
+typedef struct
 {
-	FILE* f;
+	uint8_t Header[12];         // File Header To Determine File Type
+} TGAHeader;
 
+typedef struct
+{
+	uint8_t header[6];          // Holds The First 6 Useful Bytes Of The File
+	uint32_t bytesPerPixel;           // Number Of BYTES Per Pixel (3 Or 4)
+	uint32_t imageSize;           // Amount Of Memory Needed To Hold The Image
+	uint32_t type;                // The Type Of Image, GL_RGB Or GL_RGBA
+	uint32_t Height;              // Height Of Image                 
+	uint32_t Width;               // Width Of Image              
+	uint32_t Bpp;             // Number Of BITS Per Pixel (24 Or 32)
+} TGA;
+
+bool LoadTextureTGAorPNG(uint64_t FileID, uint8_t Hint,BMPINFO* info)
+{
+	TGAHeader tgaheader;
+	TGA tga;
+
+	FileCache* FilePtr = FileSystem.Open(FileID, Hint, true);
+
+	if (FilePtr == nullptr)
+	{
+		FilePtr = FileSystem.Open(FileID, Hint|4, true);
+
+		if (FilePtr)
+		{
+			int x, y, comp;
+			stbi_uc* data = stbi_load_from_file(FilePtr->GetFilePtr(), &x, &y, &comp, 4);
+			
+			if (data)
+			{				
+				FilePtr->Read(nullptr, -1);
+				FilePtr->Close(false);
+				info->w = x;
+				info->h = y;
+				info->pixels = data;
+				return true;
+			}
+		}		
+
+		info->pixels = NULL;
+		info->w = 0;
+		info->h = 0;
+		if (FilePtr) FilePtr->Close(true);
+		return false;
+	}
+
+	// Attempt To Read The File Header
+	if (FilePtr->Read(&tgaheader, sizeof(TGAHeader)) == 0)
+	{
+		FilePtr->Close(true);
+		return false;               // Return False If It Fails
+	}
+
+	// Attempt To Read Next 6 Bytes
+	if (FilePtr->Read(tga.header, sizeof(tga.header)) == 0)
+	{
+		FilePtr->Close(true);
+		return false;               // Return False
+	}
+
+	info->w = tga.header[1] * 256 + tga.header[0];   // Calculate Height
+	info->h = tga.header[3] * 256 + tga.header[2];   // Calculate The Width
+	int bits = tga.header[4];                // Calculate Bits Per Pixel
+	tga.Width = info->w;              // Copy Width Into Local Structure
+	tga.Height = info->h;                // Copy Height Into Local Structure
+	tga.Bpp = bits;
+	tga.bytesPerPixel = (tga.Bpp / 8);      // Calculate The BYTES Per Pixel
+	// Calculate Memory Needed To Store Image
+	tga.imageSize = (tga.bytesPerPixel * tga.Width * tga.Height);
+
+	BYTE* img = info->pixels ? info->pixels : new BYTE[tga.Width * tga.Height * tga.bytesPerPixel];
+
+	info->pixels = img;
+
+	if (bits == 32) 
+	{
+		int pitch = tga.Width * tga.bytesPerPixel;
+
+		if (tga.header[5] & 0x20)
+		{
+			FilePtr->Read(info->pixels,tga.Height*pitch);
+		}
+		else
+		{
+			// Attempt To Read All The Image Data			
+			int row = (tga.Height - 1) * pitch;
+
+			for (size_t i = 0; i < tga.Height; i++, row -= pitch)
+			{
+				FilePtr->Read(info->pixels + row, pitch);
+			}
+		}
+
+	}
+	
+	for (int cswap = 0; cswap < (int)tga.imageSize; cswap += tga.bytesPerPixel)
+	{
+		// 1st Byte XOR 3rd Byte XOR 1st Byte XOR 3rd Byte
+		info->pixels[cswap] ^= info->pixels[cswap + 2] ^=
+		info->pixels[cswap] ^= info->pixels[cswap + 2];
+	}
+
+	FilePtr->Close(false);                   // Close The File
+
+	return true;	
+}
+
+bool LoadTextureBmp(uint64_t FileID, BMPINFO* info, DWORD *Palette8888)
+{
 	unsigned char bmpfileheader[14] = { 0 };
 	unsigned char bmpinfoheader[40] = { 0 };
 	unsigned char rgba[4] = {0xff,0xff,0xff,0xff};
 
-	f = fopen(filename, "rb");
-
-	if (f == 0) {
+	FileCache* FilePtr = FileSystem.Open(FileID, 1, true);
+	
+	if (FilePtr == nullptr) {
 		info->pixels = NULL;
 		info->w = 0;
 		info->h = 0;
 		return false;
 	}
 
-	fread(bmpfileheader, 1, 14, f);
-	fread(bmpinfoheader, 1, 40, f);
+	FilePtr->Read(bmpfileheader, 14);
+	FilePtr->Read(bmpinfoheader, 40);
 
 	int ww = bmpinfoheader[4] | (bmpinfoheader[5] << 8) | (bmpinfoheader[6] << 8) | (bmpinfoheader[7] << 8);
 	int hh = bmpinfoheader[8] | (bmpinfoheader[9] << 8) | (bmpinfoheader[10] << 8) | (bmpinfoheader[11] << 8);
@@ -502,7 +1044,7 @@ bool LoadTextureBmp(const char* filename, BMPINFO* info, DWORD *Palette8888)
 
 		for (size_t i = 0; i < palsize; i++)
 		{
-			fread(rgba, 1, 4, f);
+			FilePtr->Read(rgba, 4);
 			if (pal) {
 				*pal++ = rgba[2] | (rgba[1] << 8) | (rgba[0] << 16) | (i == 0 ? 0 : 0xff000000);
 			} 
@@ -517,7 +1059,7 @@ bool LoadTextureBmp(const char* filename, BMPINFO* info, DWORD *Palette8888)
 
 	for (size_t i = 0; i < hh; i++)
 	{
-		fread(line, 1, lsize, f);
+		FilePtr->Read(line, lsize);
 		switch (bits)
 		{
 		case 8:
@@ -545,16 +1087,18 @@ bool LoadTextureBmp(const char* filename, BMPINFO* info, DWORD *Palette8888)
 		dst -= dsize;
 	}
 
-	fclose(f);
+	FilePtr->Close(false);
 	info->w = ww;
 	info->h = hh;
 	return true;
 }
 
-void Save8BitBmp(const char* filename, BYTE* src, WORD *Palette555, int palCount, int w, int h)
+bool Save8BitBmp(const char* filename, BYTE* src, void *inpal, int palCount, int w, int h, bool pal16)
 {
 	static BYTE palette[256*4];
-	FILE* f;
+	FILE* f = fopen(filename, "wb");
+
+	if (f == nullptr) return false;
 
 	int padsize = (4 - (w % 4)) % 4;
 	int filesize = 54 + palCount*4 + (w+padsize) * h;  //w is your image width, h is image height, both int
@@ -585,18 +1129,44 @@ void Save8BitBmp(const char* filename, BYTE* src, WORD *Palette555, int palCount
 	bmpinfoheader[11] = (unsigned char)(h >> 24);
 	bmpinfoheader[32] = palCount;
 
-	BYTE* pal = palette;
-
-	for (int i = 0; i < palCount; i++)
+	if (pal16)
 	{
-		DWORD pdata = Palette555[i];
-		*pal++ = ((pdata >> 10) & 0x1f) << 3; 
-		*pal++ = ((pdata >> 5) & 0x1f) << 3;
-		*pal++ = ((pdata >> 0) & 0x1f) << 3;
-		*pal++ = 0;
-	}
+		BYTE* pal = palette;
+		WORD* Palette555 = (WORD*)inpal;
 
-	f = fopen(filename, "wb");
+		for (int i = 0; i < palCount; i++)
+		{
+			DWORD pdata = Palette555[i];
+			if (pdata == 0 && i > 0) {
+				*pal++ = 1;
+				*pal++ = 1;
+				*pal++ = 1;
+			} else {
+				*pal++ = ((pdata >> 10) & 0x1f) << 3;
+				*pal++ = ((pdata >> 5) & 0x1f) << 3;
+				*pal++ = ((pdata >> 0) & 0x1f) << 3;
+			}			
+			*pal++ = 0;
+		}
+	}
+	else
+	{
+		BYTE* pal = palette;
+		DWORD* Palette888 = (DWORD*)inpal;
+
+		for (int i = 0; i < palCount; i++)
+		{
+			DWORD pdata = Palette888[i];
+
+			if (pdata == 0xff000000 && i > 0) pdata = 0xff010101;
+			
+			*pal++ = ((pdata >> 16) & 0xff);
+			*pal++ = ((pdata >> 8) & 0xff);
+			*pal++ = ((pdata >> 0) & 0xff);
+			*pal++ = 0;
+		}
+	}
+	
 	fwrite(bmpfileheader, 1, 14, f);
 	fwrite(bmpinfoheader, 1, 40, f);
 	fwrite(palette, 1, 4* palCount, f);
@@ -607,7 +1177,7 @@ void Save8BitBmp(const char* filename, BYTE* src, WORD *Palette555, int palCount
 		if (padsize) fwrite(bmppad, 1, padsize, f);
 	}
 	fclose(f);
-
+	return true;
 }
 
 void DeleteTexture(int id)
@@ -617,6 +1187,7 @@ void DeleteTexture(int id)
 		Pages[id].textureView->Release();
 		Pages[id].texture = NULL;
 		Pages[id].textureView = NULL;
+		free(Pages[id].data);
 	}
 }
 
@@ -658,8 +1229,8 @@ HRESULT compilePixelShader(WCHAR shaderFxFile[], LPCSTR entry, ID3D11PixelShader
 	if (FAILED(hr))
 	{
 		MessageBox(nullptr,
-			"The FX file cannot be compiled.  Please run this executable from the directory that contains the FX file.",
-			"Error", MB_OK);
+			TEXT("The FX file cannot be compiled.  Please run this executable from the directory that contains the FX file."),
+			TEXT("Error"), MB_OK);
 		return hr;
 	}
 
@@ -751,83 +1322,6 @@ HRESULT InitDevice()
 	if (FAILED(hr))
 		return hr;
 
-#ifdef USE_RTARGET
-
-	D3D11_TEXTURE2D_DESC desc;
-	memset(&desc, 0, sizeof(desc));
-	desc.Width = RT_WIDTH;
-	desc.Height = RT_HEIGHT;
-	desc.MipLevels = desc.ArraySize = 1;
-	desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-	desc.SampleDesc.Count = 1;
-	desc.BindFlags = D3D11_BIND_SHADER_RESOURCE | D3D11_BIND_RENDER_TARGET;
-
-	hr = g_pd3dDevice->CreateTexture2D(&desc, NULL, &g_renderTargetTex);
-	if (FAILED(hr))
-		return hr;
-#ifdef SWUPSCALE
-	memset(&desc, 0, sizeof(desc));
-	desc.Width = SCREEN_WIDTH;
-	desc.Height = SCREEN_HEIGHT;
-	desc.MipLevels = desc.ArraySize = 1;
-	desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-	desc.SampleDesc.Count = 1;
-	desc.Usage = D3D11_USAGE_STAGING;
-	desc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
-
-	hr = g_pd3dDevice->CreateTexture2D(&desc, NULL, &g_renderTargetStaging);
-	if (FAILED(hr))
-		return hr;
-
-	desc.Width = PIXEL_WIDTH;
-	desc.Height = PIXEL_HEIGHT;
-	desc.MipLevels = desc.ArraySize = 1;
-	desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-	desc.SampleDesc.Count = 1;
-	desc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
-	desc.Usage = D3D11_USAGE_DYNAMIC;
-	desc.BindFlags = D3D11_BIND_SHADER_RESOURCE;
-
-	hr = g_pd3dDevice->CreateTexture2D(&desc, NULL, &g_renderTargetStagingBig);
-	if (FAILED(hr))
-		return hr;
-
-	D3D11_RENDER_TARGET_VIEW_DESC renderTargetViewDesc;
-	D3D11_SHADER_RESOURCE_VIEW_DESC shaderResourceViewDesc;
-	renderTargetViewDesc.Format = desc.Format;
-	renderTargetViewDesc.ViewDimension = D3D11_RTV_DIMENSION_TEXTURE2D;
-	renderTargetViewDesc.Texture2D.MipSlice = 0;
-
-	hr = g_pd3dDevice->CreateRenderTargetView(g_renderTargetStagingBig, &renderTargetViewDesc, &g_pRenderTargetView0);
-	if (FAILED(hr))
-		return hr;
-
-#else
-
-	D3D11_RENDER_TARGET_VIEW_DESC renderTargetViewDesc;
-	D3D11_SHADER_RESOURCE_VIEW_DESC shaderResourceViewDesc;
-	renderTargetViewDesc.Format = desc.Format;
-	renderTargetViewDesc.ViewDimension = D3D11_RTV_DIMENSION_TEXTURE2D;
-	renderTargetViewDesc.Texture2D.MipSlice = 0;
-
-	hr = g_pd3dDevice->CreateRenderTargetView(g_renderTargetTex, &renderTargetViewDesc, &g_pRenderTargetView0);
-	if (FAILED(hr))
-		return hr;
-
-#endif
-
-	
-	// Setup the description of the shader resource view.
-	shaderResourceViewDesc.Format = desc.Format;
-	shaderResourceViewDesc.ViewDimension = D3D11_SRV_DIMENSION_TEXTURE2D;
-	shaderResourceViewDesc.Texture2D.MostDetailedMip = 0;
-	shaderResourceViewDesc.Texture2D.MipLevels = 1;
-
-	hr = g_pd3dDevice->CreateShaderResourceView(g_renderTargetTex, &shaderResourceViewDesc, &g_pRenderTargetShaderView);
-	if (FAILED(hr))
-		return hr;
-#endif
-
 	D3D11_BLEND_DESC blendStateDescription;
 	// Clear the blend state description.
 	ZeroMemory(&blendStateDescription, sizeof(D3D11_BLEND_DESC));
@@ -896,6 +1390,29 @@ HRESULT InitDevice()
 		return false;
 	}
 
+	ZeroMemory(&samplerDesc, sizeof(samplerDesc));
+	// Create a texture sampler state description.
+	samplerDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
+	samplerDesc.AddressU = D3D11_TEXTURE_ADDRESS_CLAMP;
+	samplerDesc.AddressV = D3D11_TEXTURE_ADDRESS_CLAMP;
+	samplerDesc.AddressW = D3D11_TEXTURE_ADDRESS_CLAMP;
+	samplerDesc.MipLODBias = 0.0f;
+	samplerDesc.MaxAnisotropy = 1;
+	samplerDesc.ComparisonFunc = D3D11_COMPARISON_ALWAYS;
+	samplerDesc.BorderColor[0] = 0;
+	samplerDesc.BorderColor[1] = 0;
+	samplerDesc.BorderColor[2] = 0;
+	samplerDesc.BorderColor[3] = 0;
+	samplerDesc.MinLOD = 0;
+	samplerDesc.MaxLOD = D3D11_FLOAT32_MAX;
+
+	// Create the texture sampler state.
+	result = g_pd3dDevice->CreateSamplerState(&samplerDesc, &g_sampleStates[2]);
+	if (FAILED(result))
+	{
+		return false;
+	}
+
 	// Compile the vertex shader
 	ID3DBlob* pVSBlob = nullptr;
 	WCHAR shaderFxFile[] = { L"D3DTest.fx" };
@@ -903,8 +1420,8 @@ HRESULT InitDevice()
 	if (FAILED(hr))
 	{
 		MessageBox(nullptr,
-			"The FX file cannot be compiled.  Please run this executable from the directory that contains the FX file.", 
-			"Error", MB_OK);
+			TEXT("The FX file cannot be compiled.  Please run this executable from the directory that contains the FX file."), 
+			TEXT("Error"), MB_OK);
 		return hr;
 	}
 
@@ -933,15 +1450,24 @@ HRESULT InitDevice()
 
 	// Set the input layout
 	g_pImmediateContext->IASetInputLayout(g_pVertexLayout);
-#ifdef USE_RTARGET
-	hr = compilePixelShader(shaderFxFile, "PS_RAW", &g_pPixelShader);
+
+	hr = compilePixelShader(shaderFxFile,"PS",&g_pPixelShader8);
 	if (FAILED(hr)) return hr;
-	hr = compilePixelShader(shaderFxFile, "PS_UP", &g_pPixelShaderPP);
-	if (FAILED(hr)) return hr;
-#else
-	hr = compilePixelShader(shaderFxFile,"PS",&g_pPixelShader);
-	if (FAILED(hr)) return hr;
-#endif
+
+	for (size_t i = 0; i <= NUM_PL_SHADERS; i++)
+	{
+		char sname[128];
+		strcpy(sname, "PS4X");
+		if (i > 0)
+		{
+			strcat(sname, "_P");			
+			int Num = strlen(sname);
+			sname[Num] = '0' + i;
+			sname[Num + 1] = '\0';
+		}
+		hr = compilePixelShader(shaderFxFile, sname, &g_pPixelShader32[i]);
+		if (FAILED(hr)) return hr;
+	}
 
 	// Create vertex buffer
 	SimpleVertex vertices[] =
@@ -1007,26 +1533,130 @@ HRESULT InitDevice()
 	// Initialize the projection matrix
 	g_Projection = XMMatrixPerspectiveFovLH(XM_PIDIV2, width / (FLOAT)height, 0.01f, 100.0f);
 	cb.mProjection = XMMatrixTranspose(XMMatrixOrthographicOffCenterLH(0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 100));// XMMatrixIdentity();// XMMatrixTranspose(g_World);XMMatrixTranspose(g_Projection);
-	cb.mUVOffsets = XMFLOAT4(0,0, 0, 0);
-
-
+	
 	return S_OK;
 }
 
 void DrawQuad(int x, int y, int w, int h, BYTE c[])
 {
+	POLY_FT4* p = &poly4x[poly4xcount++];
+	p->tpage = 0xffff;
+	p->x = x;
+	p->y = y;
+	p->w = w;
+	p->h = h;
+	p->color[0] = c ? c[0] : 0xff;
+	p->color[1] = c ? c[1] : 0xff;
+	p->color[2] = c ? c[2] : 0xff;
+}
+
+#define P1_SHADER_HINT ((21 << 8) | 0xd4)
+#define P2_SHADER_HINT ((21 << 8) | 0x8a)
+
+int IsP1ShadedPage(int hint)
+{
+	if (hint == P1_SHADER_HINT) return 1;
+	return 0;
+}
+
+int IsP2ShadedPage(int hint)
+{
+	if (hint == P2_SHADER_HINT) return 2;
+	return 0;
+}
+
+ID3D11PixelShader* GetTPageShader(TPage* tp)
+{
+	if (tp->bits != 32) return g_pPixelShader8;
+
+	int ind;
+
+	if (ind = IsP1ShadedPage(tp->shader_hint))
+	{
+		return g_pPixelShader32[ind];
+	}
+	else if(ind = IsP2ShadedPage(tp->shader_hint))
+	{
+		return g_pPixelShader32[ind];
+	}
+	else
+	{
+		return g_pPixelShader32[0];
+	}
+}
+
+
+void DrawTextureUV4X(POLY_FT4* p)
+{
+	float ts = TPAGE_SZ;
+	float tw = 1.f / ts;
+	float th = 1.f / ts;
+
+	switch (p->flags & 3)
+	{
+	case 0:
+		cb.mUVParams = XMFLOAT4(p->u * tw, p->v * th, p->uw * tw, p->vw * th);
+		break;
+	case 1:
+		cb.mUVParams = XMFLOAT4((p->u + p->uw) * tw, p->v * th, -p->uw * tw, p->vw * th);
+		break;
+	case 2:
+		cb.mUVParams = XMFLOAT4(p->u * tw, (p->v + p->vw) * th, p->uw * tw, -p->vw * th);
+		break;
+	case 3:
+		cb.mUVParams = XMFLOAT4((p->u + p->uw) * tw, (p->v + p->vw) * th, -p->uw * tw, -p->vw * th);
+		break;
+	}
+
+	float x = p->x * SCREEN_WIDTH / 320.0f;
+	float w = p->w * SCREEN_WIDTH / 320.0f;
+	float y = p->y * SCREEN_HEIGHT / 240.0f;
+	float h = p->h * SCREEN_HEIGHT / 240.0f;
+
 	float* m = (float*)g_World.r;
+
 	m[12] = x + w * 0.5f;
 	m[13] = y + h * 0.5f;
 	m[0] = w;
 	m[5] = h;
+
+	TPage* tp = &Pages[p->tpage];
+
+	float cf = 0;
+
+	if (tp->bits == 32)
+	{
+		cf = 1;
+	}
+
+	cb.mExtraParams.x = cf;//Mark brightness col pal index for fade in/out
+	cb.mExtraParams.y = (p->clut >> 4) / 256.f;
+	cb.mExtraParams.z = 1;
+	cb.mExtraParams.w = p->semialpha ? 0.5f : 1.f;
+	cb.mWorld = XMMatrixTranspose(g_World);
+	cb.mColor = XMFLOAT4(1, 1, 1, 1);
+	g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, nullptr, &cb, 0, 0);
+	g_pImmediateContext->PSSetShader(GetTPageShader(tp), nullptr, 0);
+	g_pImmediateContext->PSSetShaderResources(1, 1, &tp->textureView);
+	g_pImmediateContext->Draw(4, 0);
+}
+
+
+void DrawQuad4X(POLY_FT4* p)
+{
+	float* m = (float*)g_World.r;
+	m[12] = p->x + p->w * 0.5f;
+	m[13] = p->y + p->h * 0.5f;
+	m[0] = p->w;
+	m[5] = p->h;
 	cb.mWorld = XMMatrixTranspose(g_World);	
 	cb.mUVParams = XMFLOAT4(0,0, 1, 1);
-	cb.mColor = c ? XMFLOAT4(c[0]/255.f, c[1]/255.f, c[2]/255.f, 1.0f) : XMFLOAT4(1,1,1,1);
+	cb.mColor = XMFLOAT4(p->color[0]/255.f, p->color[1]/255.f, p->color[2]/255.f, 1.0f);
 	cb.mExtraParams.x = 0;
 	cb.mExtraParams.y = 0;
 	cb.mExtraParams.z = 0;
 	cb.mExtraParams.w = 1;
+	g_pImmediateContext->PSSetShader(g_pPixelShader8, nullptr, 0);
 	g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, nullptr, &cb, 0, 0);
 	g_pImmediateContext->Draw(4, 0);
 }
@@ -1043,66 +1673,161 @@ void DrawQuadTexture(ID3D11ShaderResourceView *tview, int x, int y, int w, int h
 	cb.mColor = c ? XMFLOAT4(c[0] / 255.f, c[1] / 255.f, c[2] / 255.f, 1.0f) : XMFLOAT4(1, 1, 1, 1);
 	cb.mExtraParams = XMFLOAT4(0, 0, 0, 0);
 	g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, nullptr, &cb, 0, 0);
+	g_pImmediateContext->PSSetShader(g_pPixelShader8, nullptr, 0);
 	g_pImmediateContext->PSSetShaderResources(1, 1, &tview);
 	g_pImmediateContext->Draw(4, 0);
 }
 
-void DrawTextureUV(int tindex, int palette, float x, float y, float w, float h, int sx, int sy, int sw, int sh, int flags,float alpha=1.f)
+extern "C" uint64_t ModifyFrame(int* tindex, int sx, int sy, int sw, int sh, int palette);
+
+extern "C" void* process_exist(WORD existid, WORD mask);
+
+typedef struct
 {
-	const float tw = 1.f / TPAGE_SZ;
-	const float th = 1.f / TPAGE_SZ;
+	BYTE* src;
+	DWORD* dst;
+	WORD linesize, pitch, height, dst_pitch;
+}RectCopy;
 
-	switch (flags)
+
+void CopyRectBytes(RectCopy* rect)
+{
+	BYTE* src = rect->src;
+	DWORD* dst = rect->dst;
+
+	for (size_t i = 0; i < rect->height; i++)
 	{
-	case 0:
-		cb.mUVParams = XMFLOAT4(sx * tw, sy * th, sw * tw, sh * th);
-		break;
-	case 1:
-		cb.mUVParams = XMFLOAT4((sx + sw) * tw, sy * th, -sw * tw, sh * th);
-		break;
-	case 2:
-		cb.mUVParams = XMFLOAT4(sx * tw, (sy + sh) * th, sw * tw, -sh * th);
-		break;
-	case 3:
-		cb.mUVParams = XMFLOAT4((sx + sw) * tw, (sy + sh) * th, -sw * tw, -sh * th);
-		break;
+		memcpy(dst, src, rect->linesize);
+		dst += rect->dst_pitch;
+		src += rect->pitch;
 	}
-
-	x *= SCREEN_WIDTH  / 320.0f;	
-	w *= SCREEN_WIDTH  / 320.0f;
-	y *= SCREEN_HEIGHT / 240.0f;
-	h *= SCREEN_HEIGHT / 240.0f;
-	
-
-	float* m = (float*)g_World.r;
-
-	m[12] = x + w * 0.5f;
-	m[13] = y + h * 0.5f;
-	m[0] = w;
-	m[5] = h;
-
-	cb.mExtraParams.x = 0;
-	cb.mExtraParams.y = (palette >> 4) / 256.f;
-	cb.mExtraParams.z = 1;
-	cb.mExtraParams.w = alpha;
-	cb.mWorld = XMMatrixTranspose(g_World);
-	cb.mColor = XMFLOAT4(1, 1, 1, 1);
-	g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, nullptr, &cb, 0, 0);
-	g_pImmediateContext->PSSetShaderResources(1, 1, &Pages[tindex].textureView);
-	g_pImmediateContext->Draw(4, 0);
 }
 
-void DrawQuadUV(int tpage, int palette, float x, float y, float w, float h, int sx, int sy, int sw, int sh,int flags,float alpha)
-{	
-	int tx = (tpage & 0x0f) << 7;
-	int ty = (tpage & 0x10) << 4;
-		
-	sx += tx;
-	sy += ty;
+void TickAnim(_BMPINFO* anim, RectCopy* rect, int expected_height, int instance)
+{
+	if (anim == nullptr || anim->delay == 0) return;
 
-	WORD tindex = (sx >> 8) | ((sy >> 8) << 4);
-	
-	DrawTextureUV(tindex, palette, x, y, w, h, sx%TPAGE_SZ, sy%TPAGE_SZ, sw, sh, flags,alpha);
+	WORD numanim;
+
+	if (anim->indices)
+	{
+		numanim = 0;
+		while (anim->indices[numanim] != 0xffff) numanim++;
+	}
+	else
+	{
+		numanim = anim->num;
+	}
+
+	WORD totalframes = numanim * anim->delay;
+	WORD frameind = (anim->time[instance] / anim->delay) % numanim;
+
+	if (anim->flags & 0x08)
+	{
+		numanim /= 2;
+
+		totalframes = 0;
+		int frindex = 0;
+		frameind = 0;
+		while (anim->indices[frindex * 2] != 0xffff)
+		{
+			int delay = anim->indices[frindex * 2 + 1];
+			totalframes += delay == 0 ? anim->delay : delay;
+			if (anim->time[instance] >= totalframes)
+			{
+				frameind++;
+			}
+			frindex++;
+		}
+	}
+
+	if (anim->time[instance] >= totalframes)
+	{
+		if (anim->flags & 1)
+		{
+			frameind = 0;
+			anim->time[instance] = 0;
+		}
+		else
+		{
+			frameind = numanim - 1;
+			anim->time[instance] = totalframes - 1;
+		}
+	}
+	else if (!f_pause)
+	{
+		anim->time[instance]++;
+	}
+
+	if (anim->flags & 0x80)
+	{
+		frameind = numanim - 1 - frameind;
+	}
+
+	if (anim->indices)
+	{
+		frameind = anim->indices[anim->flags & 0x08 ? frameind * 2 : frameind];
+	}
+
+	anim->flags |= 0x40;
+
+	WORD imtileh = expected_height / anim->ty;
+
+	rect->height = anim->h * 4;
+	rect->linesize = anim->w * 4 * 4;
+
+	rect->src += (frameind % anim->tx) * rect->pitch / anim->tx; // x shift
+	rect->src += (frameind / anim->tx) * rect->pitch * imtileh; // y shift
+
+	if (imtileh > rect->height)
+	{
+		rect->src += rect->pitch * (imtileh - rect->height);
+	}
+}
+
+extern "C" DWORD g_UpdateFB3;
+
+static WORD g_NextFreePage = TPAGE_EXTRA;
+
+void DrawTextureUV(int tindex, int palette, float x, float y, float w, float h, int sx, int sy, int sw, int sh, int flags,int semialpha)
+{
+	uint64_t id = ModifyFrame(&tindex, sx, sy, sw, sh, palette);
+
+	POLY_FT4* p = &poly4x[poly4xcount++];
+	p->tpage = tindex;
+	p->clut = palette;
+	p->x = x;
+	p->y = y;
+	p->w = w;
+	p->h = h;
+	p->u = sx;
+	p->v = sy;
+	p->uw = sw;
+	p->vw = sh;
+	p->flags = flags;
+	p->semialpha = semialpha ? 0.5f : 1.0f;
+}
+
+void DrawQuadUV(int tpage, int palette, float x, float y, float w, float h, int sx, int sy, int sw, int sh,int flags,int semialpha)
+{	
+	WORD tindex;
+
+	if (tpage & 0x8000)
+	{
+		tindex = tpage;
+	}
+	else
+	{
+		int tx = (tpage & 0x0f) << 7;
+		int ty = (tpage & 0x10) << 4;
+
+		sx += tx;
+		sy += ty;
+
+		tindex = (sx >> 8) | ((sy >> 8) << 4);
+	}	
+
+	DrawTextureUV(tindex, palette, x, y, w, h, sx%TPAGE_SZ, sy%TPAGE_SZ, sw, sh, flags, semialpha);
 }
 
 
@@ -1123,7 +1848,12 @@ void CleanupDevice()
 	if (g_pVertexBuffer) g_pVertexBuffer->Release();	
 	if (g_pVertexLayout) g_pVertexLayout->Release();
 	if (g_pVertexShader) g_pVertexShader->Release();
-	if (g_pPixelShader) g_pPixelShader->Release();
+	if (g_pPixelShader8) g_pPixelShader8->Release();
+	for (size_t i = 0; i <= NUM_PL_SHADERS; i++)
+	{
+		if (g_pPixelShader32[i]) g_pPixelShader32[i]->Release();
+	}
+	
 	if (g_pPixelShaderPP) g_pPixelShaderPP->Release();
 	if (g_pRenderTargetView) g_pRenderTargetView->Release();
 	if (g_pRenderTargetView0) g_pRenderTargetView0->Release();
@@ -1135,11 +1865,10 @@ void CleanupDevice()
 
 extern "C"
 {
-	//static DWORD FighterBuffer[512 * 256];
-	static DWORD AllPAlettes[256 * 256];
-
-	static int  g_UpdatePalettes = 0;
-	static long g_UpdateFB = 0;
+	static int   g_UpdatePalettes = 0;
+	static DWORD g_UpdateFB  = 0; // Old gfx pages
+	static DWORD g_UpdateFB2 = 0; // 4x pages
+	static DWORD g_UpdateFB3 = 0; // extra overlay pages
 
 	extern short gstate;
 
@@ -1148,13 +1877,13 @@ extern "C"
 	void Win95DebugInt(const char* key, int a)
 	{
 		sprintf(MBuff, "%s: %d\r\n", key, a);
-		OutputDebugString(MBuff);
+		OutputDebugStringA(MBuff);
 	}
 
 	void Win95DebugInt2(const char* key, int a,int b)
 	{
 		sprintf(MBuff, "%s: %d, %d\r\n", key, a, b);
-		OutputDebugString(MBuff);
+		OutputDebugStringA(MBuff);
 	}
 
 	WORD GetTPage(WORD tmode, WORD tr, WORD x, WORD y)
@@ -1164,13 +1893,154 @@ extern "C"
 
 	WORD GetTIndex(WORD x, WORD y)
 	{
-		int i = (x >> 8) | ((y >> 8) << 4);			
+		int i = (x >> 7) | ((y >> 8) << 4);			
 		return i;
 	}
+		
+#define MAX_SOBJECTS 16384
 
-	void DLoadImage(RECT_PSX* rect, void* data)
+	typedef struct
 	{
-		WORD tindex = GetTIndex(rect->x*2, rect->y);
+		RECT_PSX main;
+		RECT_PSX sub[100];
+		DWORD id;
+		DWORD subcount;
+	}SRECT;
+
+	StaticArray<uint64_t, MAX_SOBJECTS> savedobjects;
+	StaticArray<uint64_t, MAX_SOBJECTS/4> loadedobjects;
+	StaticArray<uint64_t, MAX_SOBJECTS/4> fighterobjects;
+	StaticArray<int, MAX_SOBJECTS/4> fighterobjectsids;
+	StaticArray<BMPINFO, MAX_SOBJECTS/4> bmps;
+
+	BYTE sumbmp[256 * 256] = { 0 };
+	WORD palbmp[256] = { 0 }, palsize = 0;
+
+	uint64_t CheckRect(BYTE* tex, short sx, short sy, short sw, short sh, int palette, int pitch)
+	{
+		uint64_t id = 0;
+
+		//		if (sw < 16 || sh < 16)
+
+		if (sw == 160 && (sh >= 40 && sh < 85)) {
+			return 0;
+		}
+
+		DWORD paltot = 0;
+
+		WORD* pal16 = get_pal(palette);
+		if (pal16) {
+			palsize = *pal16;
+			pal16 += 3;
+			palbmp[0] = 0;
+			for (size_t i = 1; i < palsize; i++)
+			{
+				WORD pd = (*pal16 & 0x7fff);
+				palbmp[i] = pd;
+				paltot += pd << 1;
+				pal16++;
+			}
+			if (paltot == 0) return 0;
+		}
+
+		int pi = 0;
+
+		BYTE* p = tex + pitch * (sy % pitch) + (sx % pitch);
+		BYTE* dst = sumbmp;
+
+		for (size_t i = 0; i < sh; i++)
+		{
+			for (size_t j = 0; j < sw; j++)
+			{
+				*dst++ = p[j];
+				id += p[j];
+			}
+
+			id *= 7;
+			p += pitch;
+		}
+
+		return (id << 8) | (paltot & 0xff);
+	}
+
+
+	BMPINFO* LoadBitmapObject(uint64_t id, bool fighter)
+	{
+		int ipos = loadedobjects.Find(id);
+
+		if (ipos >= 0)
+		{
+			return &bmps[ipos];
+		}
+
+		BMPINFO* inf = bmps.AddEmpty();
+		if (inf == nullptr) return nullptr;
+
+		if (fighter) 
+		{
+			
+		}
+		else if (Mode4X)
+		{
+			int FOIndex = fighterobjects.Find(id);
+
+			if (FOIndex >= 0)
+			{
+				int dd = fighterobjectsids[FOIndex];
+
+				if (LoadTextureTGAorPNG(dd, 2, inf)) 
+				{
+					inf->anim = &bmps[loadedobjects.Find(dd)];
+					loadedobjects.Add(id);
+					return inf;
+				}
+			}	
+		}
+		else 
+		{
+			return NULL;
+		}
+
+
+		if (Mode4X) {
+			if (fighter) 
+			{
+				LoadTextureBmp(id, inf, NULL);
+			}
+			else 
+			{
+				LoadTextureTGAorPNG(id, 3, inf);
+
+				char MBuff[100];
+				sprintf(MBuff, "%I64x.png ", id);
+				OutputDebugStringA(MBuff);
+			}
+		}else
+		if (LoadTextureBmp(id, inf, NULL))
+		{
+			
+		}
+
+		loadedobjects.Add(id);
+		return inf;
+	}
+
+	void SaveBitmapObject(uint64_t id, void* pix, void* pal, WORD palcnt, WORD w, WORD h, bool pal16)
+	{
+		if (savedobjects.Find(id) >= 0) return;
+
+		char filename[128];
+		sprintf(filename, "arcade/objects/%I64x.bmp", id);
+		Save8BitBmp(filename, (BYTE*)pix, pal, palcnt, w, h, pal16);
+		savedobjects.Add(id);
+	}
+
+	void DLoadImage(RECT_PSX* rect, void* data, u_long id)
+	{
+    	WORD tindex = GetTIndex(rect->x, rect->y);
+
+		InitTPage(tindex, 8, TPAGE_SZ);
+
 		BYTE* dst = Pages[tindex].data + (rect->y % TPAGE_SZ) * TPAGE_SZ + ((rect->x * 2) % TPAGE_SZ);
 		BYTE* src = (BYTE*)data;
 
@@ -1191,100 +2061,89 @@ extern "C"
 		return (y<<CLUT_ID_SHIFT)+x;
 	}
 
-	BYTE outedframes[2][1024] = { 0 };
-	BMPINFO bmps[2][1024] = { 0 };
-	//DWORD paloverrides[2][2][64] = { 0 };
-
-	#define OUTFRAMES
-
 	u_short DLoadTPageFighter(u_short* pix, int x, int y, int w, int h,int pal,int fighter,int fver, int fo, WORD **info)
 	{
-		PALINFO pi = palram[pal >> 4];
+        PALINFO pi = palram[pal >> 4];
 		DWORD palCnt = *pi.palid;
-		WORD fid = pix[0] == 0xffff ? pix[1] : (((fo >> 3) & 0xffff) - 400);
-		WORD tindex = GetTIndex(x*2, y);
-
+		bool isSheet = pix[0] == 0xfefe;
+		bool isExternal = isSheet || pix[0] == 0xffff;
+		WORD tindex = GetTIndex(x, y);
+		WORD fg = fighter & 0x3f;
 		BYTE* src = (BYTE*)pix;
 		
 		*info = NULL;
 
-		if (pal && palCnt == 64 && (fighter&0x3f) == 2 
-			//&& 	(gstate == 0x02 || gstate == 0x05 || gstate == 0x07 || gstate == 0x04)
-#ifdef OUTFRAMES1
-			&& outedframes[fid] == 0 )
+		if (pal && palCnt == 64 && (fg == 2 || fg == 13) && isExternal)
 		{
-			char filename[128];
-				sprintf(filename, "output/%d.bmp", fid);
-				Save8BitBmp(filename, (BYTE*)pix, pi.palid + 2, palCnt, w, h);
-				outedframes[fid] = 1;
-		}
-#else
-			)
-		{
+			int bmpid = (fg * 10000) + (fver * 1000) + pix[1];
 
-			BYTE* ofr = &outedframes[fver][0];
+			BMPINFO* inf = LoadBitmapObject(bmpid, true);
 
-			if (ofr[fid] == 0) {
-				char filename[128];
-				sprintf(filename, "arcade/%d%d/%d.bmp", (fighter & 0x3f),fver, fid);
-
-				/*
-				if (fid == 101 && fver == 1) {
-					pp = paloverrides[fver][0];
-				}else if (fid == 102 && fver == 1) {
-					pp = paloverrides[fver][1];
-				}*/
-
-				if (!LoadTextureBmp(filename, &bmps[fver][fid], NULL)) {
-					Win95DebugInt("Frame Not Found:",fid);
-				}
-				ofr[fid] = 1;
-			}else if (editmode || testmode) {
-				ofr[fid]++;
-				ofr[fid] &= 7;
-			}
-
-			BMPINFO* inf = &bmps[fver][fid];
-
-			if (inf->pixels) {
-				/*
-				if (fver == 1)
-				{
-					if ((fighter & 0x80) == 0) {
-						paloverrides[fver][0][0] = 0;
-						memcpy(AllPAlettes + 256 * (pal >> 4), paloverrides[fver][0], 256 * 4);
-						g_UpdatePalettes = 1;
-					}
-					else if ((fighter & 0x80) != 0) {
-						paloverrides[fver][1][0] = 0;
-						memcpy(AllPAlettes + 256 * (pal >> 4), paloverrides[fver][1], 256 * 4);
-						g_UpdatePalettes = 1;
-					}
-				}
-				*/
-
+			if (inf->pixels) 
+			{
 				*info = (WORD*)inf;
 				w = inf->w;
 				h = inf->h;
 				src = inf->pixels;
+
+				static WORD* LastAnimPos[2] = { nullptr , nullptr };
+
+				WORD ins = fighter & 0x80 ? 1 : 0;
+
+				if (isSheet)
+				{
+					inf->tx    = pix[2];
+					inf->ty    = pix[3];
+					inf->num   = pix[4];
+					inf->delay = pix[5];
+					inf->flags = pix[6];
+
+					if (inf->flags & 4)
+					{
+						inf->indices = pix + 7;
+					}
+					else
+					{
+						inf->indices = nullptr;
+					}
+
+   					if (LastAnimPos[ins] != pix)
+					{
+						// reset spritesheef anim timer
+						inf->time[ins] = 0;
+						LastAnimPos[ins] = pix;
+					}
+				}
+				else
+				{
+					LastAnimPos[ins] = nullptr;
+				}
+
+				uint64_t rectid = CheckRect(inf->pixels, 0, 0, inf->w, inf->h, pal, inf->w);
+
+				if (fighterobjects.Find(rectid) < 0)
+				{
+					fighterobjectsids.Add(bmpid);
+					fighterobjects.Add(rectid);
+				}				
+
 			} else if (pix[0] == 0xffff) {
 				src = NULL;
 			}
 			
 		}
-#endif
 
+		InitTPage(tindex, 8, TPAGE_SZ);
 
-		BYTE *dst = Pages[tindex].data + (y % TPAGE_SZ) * TPAGE_SZ + ((x * 2)% TPAGE_SZ);
+		if (src) 
+		{
 
-		if (src == NULL) {
-			for (size_t i = 0; i < h; i++)
-			{
-				memset(dst, 1, w);
-				dst += TPAGE_SZ;
-			}
-		}
-		else {
+			BYTE* dst = Pages[tindex].data +
+				((y % TPAGE_SZ) * TPAGE_SZ) +
+				((x * 2) % TPAGE_SZ);
+
+			memset(dst, 0, TPAGE_SZ * TPAGE_SZ);
+
 			for (size_t i = 0; i < h; i++)
 			{
 				memcpy(dst, src, w);
@@ -1295,15 +2154,18 @@ extern "C"
 
 		g_UpdateFB |= 1<<tindex;
 
-
 		return GetTPage(0, 0, x, y);
 	}
 
-	u_short DLoadTPage(u_long* pix, int tp, int abr, int x, int y, int w, int h)
+	u_short DLoadTPage(u_long* pix, int tp, int abr, int x, int y, int w, int h, u_long id)
 	{
-		WORD tindex = GetTIndex(x*2, y);
+		WORD tindex = GetTIndex(x, y);
+
+		InitTPage(tindex,8, TPAGE_SZ);
+
 		BYTE* dst = Pages[tindex].data + (y % TPAGE_SZ) * TPAGE_SZ + ((x * 2) % TPAGE_SZ);
 		BYTE* src = (BYTE*)pix;
+
 
 		for (size_t i = 0; i < h; i++)
 		{
@@ -1318,50 +2180,7 @@ extern "C"
 
 	void LoadPaletteTex(u_short* srcpal, int nelem, int x, int y)
 	{
-		BYTE* dst = (BYTE*)AllPAlettes + 256 * 4 * y;
-		/*
-		if (srcpal[0] == 0xfdfd) {
-			char actname[128];
- 			sprintf(actname, "arcade/%d.act", srcpal[1]);
-
- 			FILE* fpal = fopen(actname, "rb");
-
-			for (int i = 0; i < 256; i++)
-			{
-				*dst++ = (fgetc(fpal)) & 0xff;
-				*dst++ = (fgetc(fpal)) & 0xff;
-				*dst++ = (fgetc(fpal)) & 0xff;
-				*dst++ = i == 0 ? 0 : 0xff;
-			}
-
-			fclose(fpal);
-		}
-		else */
-		{
-
-			*dst++ = 0x00;
-			*dst++ = 0x00;
-			*dst++ = 0x00;
-			*dst++ = 0x00;
-
-			for (size_t i = 1; i < nelem; i++)
-			{
-				u_short c = srcpal[i];
-				*dst++ = ((c >> 0) & 31) << 3;// * 255 / 31;
-				*dst++ = ((c >> 5) & 31) << 3;// * 255 / 31;
-				*dst++ = ((c >> 10) & 31) << 3;// * 255 / 31;
-				*dst++ = 0xff;
-			}
-
-			for (size_t i = nelem; i < 256; i++)
-			{
-				*dst++ = 0xff;
-				*dst++ = 0xff;
-				*dst++ = 0xff;
-				*dst++ = 0xff;
-			}
-		}
-
+		Palette565To8888(srcpal,(BYTE*)AllPAlettes + 256 * 4 * y,nelem);
 		g_UpdatePalettes = 1;
 	}
 
@@ -1400,7 +2219,7 @@ extern "C"
 
     void Win95_OUT(char* buff)
     {
-        OutputDebugString(buff);
+        OutputDebugStringA(buff);
     }
 
 	extern DB* cdb;
@@ -1410,16 +2229,143 @@ extern "C"
 		
 	}
 
+	BOOL RectIntersect(RECT_PSX* a, RECT_PSX* b)
+	{
+		short left  = a->x < b->x ? b->x : a->x;
+		short right = (a->x+a->w) > (b->x+b->w) ? (b->x+b->w) : (a->x+a->w);
+		if (left > right) return FALSE;
+		short top = a->y < b->y ? b->y : a->y;
+		short btm = (a->y + a->h) > (b->y + b->h) ? (b->y + b->h) : (a->y + a->h);
+		return top < btm;
+	}
+
+	uint64_t ModifyFrame(int *tindex, int sx, int sy, int sw, int sh, int palette)
+	{
+		uint64_t rectid;
+
+		bool bgpageload = false;
+
+		if (*tindex & 0x8000)
+		{
+			rectid = *tindex & 0x7fff;
+			*tindex = 22 + (*tindex & 0xf);
+			bgpageload = true;
+		}
+		else
+		{
+			rectid = CheckRect(Pages[*tindex].data, sx, sy, sw, sh, palette, TPAGE_SZ);
+			bgpageload = false;
+		}
+
+		if (rectid == 0) return 0;
+		if (Mode4X)
+		{
+			BMPINFO* anim = nullptr;
+			BMPINFO* info = LoadBitmapObject(rectid, false);
+
+			if (info && info->pixels)
+			{
+				*tindex += TPAGE_4X_OFFSET;
+				const DWORD ts = TPAGE_SZ * IMAGE_UPSCALE;
+				InitTPage(*tindex, 32, ts);
+
+				if (bgpageload)
+				{
+					if (Pages[*tindex].bghint != rectid)
+					{
+						memcpy(Pages[*tindex].data, info->pixels, ts * ts * 4);
+						Pages[*tindex].bghint = rectid;
+					}
+
+					rectid = (rectid << 16) | (sy << 8) | sx;
+				}
+				else
+				{
+					RectCopy rect;
+					rect.dst = ((DWORD*)Pages[*tindex].data) + ts * sy * IMAGE_UPSCALE + sx * IMAGE_UPSCALE;
+					rect.dst_pitch = ts;
+					rect.src = info->pixels;
+					rect.pitch = info->w * 4;
+					rect.linesize = rect.pitch;
+					rect.height = info->h;
+
+					int fobj = fighterobjects.Find(rectid);
+					if (fobj > 0)
+					{
+						memset(Pages[*tindex].data, 0, ts * ts * 4);
+						Pages[*tindex].shader_hint = (fighterobjectsids[fobj] / 1000) << 8 | (rectid & 0xff);
+						TickAnim(info->anim, &rect, info->h, (*tindex - P1PAGE_INDEX) & 1);
+					}
+					else
+					{
+						Pages[*tindex].shader_hint = 0;
+						TickAnim(info->anim, &rect, info->h, 0);
+					}
+
+					Pages[*tindex].bghint = 0;
+
+					CopyRectBytes(&rect);
+				}
+				
+
+				g_UpdateFB2 |= 1 << (*tindex - TPAGE_4X_OFFSET);
+				return rectid;
+			}
+		}
+
+		if (!bgpageload)
+		{
+			SaveBitmapObject(rectid, sumbmp, palbmp, palsize, sw, sh, true);
+		}
+		
+		return rectid;
+	}
+
 	void DrawPrim0(u_long* up)
 	{
 		POLY_FT4* p = (POLY_FT4*)up;
 
 		if ((p->flags & 0x80) && p->tpage == 0) {
-			DrawQuad(p->x, p->y, p->w, p->h, p->color);
+			DrawQuad(p->x, p->y, p->w, p->h, p->color);	
 		}
 		else {
-			DrawQuadUV(p->tpage, p->clut, p->x, p->y, p->w, p->h, p->u, p->v, p->uw, p->vw, p->flags & 3,p->semialpha ? 0.5f : 1.f);
+			DrawQuadUV(p->tpage, p->clut, p->x, p->y, p->w, p->h, p->u, p->v, p->uw, p->vw, p->flags & (0x03),p->semialpha ? 0.5f : 1.f);
 		}
+	}
+
+	void ClearScreen()
+	{
+		
+	}
+
+	void UpdateFB(DWORD* flag,WORD offset,WORD count)
+	{
+		if (*flag == 0) return;
+
+		D3D11_MAPPED_SUBRESOURCE mappedResource;
+
+		for (DWORD i = 0; i < count; i++)
+		{
+			if ((*flag & (1 << i)) == 0) continue;
+
+			int ii = i + offset;
+
+			int ts = Pages[ii].size;
+			if (ts < TPAGE_SZ) continue;
+			int bts = Pages[ii].bits;
+
+			if (Pages[ii].texture == nullptr) {
+				CreateD3DTexture(ts, ts, 0, bts, ii);
+			}
+
+			if (Pages[ii].texture == nullptr) continue;
+
+			int result = g_pImmediateContext->Map(Pages[ii].texture, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
+			memcpy((BYTE*)mappedResource.pData, Pages[ii].data, ts * ts * bts / 8);
+			g_pImmediateContext->Unmap(Pages[ii].texture, 0);
+		}
+		
+		*flag = 0;
 	}
 
 	void DrawSync(WORD flags)
@@ -1428,31 +2374,16 @@ extern "C"
 
 		if (g_UpdatePalettes) {
 			D3D11_MAPPED_SUBRESOURCE mappedResource;
-			int result = g_pImmediateContext->Map(Pages[32].texture, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
+			int result = g_pImmediateContext->Map(Pages[TPAGE_PALETTE].texture, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
 			memcpy((BYTE*)mappedResource.pData, AllPAlettes, sizeof(AllPAlettes));
-			g_pImmediateContext->Unmap(Pages[32].texture, 0);
+			g_pImmediateContext->Unmap(Pages[TPAGE_PALETTE].texture, 0);
 			g_UpdatePalettes = 0;
 		}
 
-		if (g_UpdateFB) {
-			D3D11_MAPPED_SUBRESOURCE mappedResource;
-			for (size_t i = 0; i < 32; i++)
-			{
-				if ((g_UpdateFB & (1 << i)) == 0) continue;
+		UpdateFB(&g_UpdateFB, 0, TPAGE_COUNT);
 
-				if (Pages[i].texture == NULL) {
-					CreateD3DTexture(TPAGE_SZ, TPAGE_SZ, 0, 8, i);
-				}
-
-				int result = g_pImmediateContext->Map(Pages[i].texture, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
-				memcpy((BYTE*)mappedResource.pData, Pages[i].data, TPAGE_SZ * TPAGE_SZ);
-				g_pImmediateContext->Unmap(Pages[i].texture, 0);
-			}
-
-			g_UpdateFB = 0;
-		}
-
-		if (keyState[VK_INSERT]) {
+		if (keyState[VK_INSERT]) 
+		{
 			g_pImmediateContext->OMSetBlendState(g_pAlphaBlendingDisabledState, 0, 0xff);			
 
 			static const int _PXTbl[] =
@@ -1473,18 +2404,36 @@ extern "C"
 
 			g_pImmediateContext->ClearRenderTargetView(g_pRenderTargetView, Colors::Black);
 
-			for (size_t i = 0; i < 32; i++)
+			for (size_t i = 0; i < TPAGE_COUNT; i++)
 			{
-				TPage* tp = Pages + i;
+				TPage* tp = Pages + i + TPAGE_4X_OFFSET;
 				if (tp->textureView == NULL) continue;
 				int tx = _PXTbl[i] * 80;
 				int ty = _PYTbl[i] * 60;
-				DrawTextureUV(i, 0, tx, ty, 80, 60, 0, 0, TPAGE_SZ, TPAGE_SZ, 0);
+
+				POLY_FT4 p;
+				p.tpage = i + TPAGE_4X_OFFSET;
+				p.clut = 0;
+				p.x = tx;
+				p.y = ty;
+				p.w = 80;
+				p.h = 60;
+				p.u = 0;
+				p.v = 0;
+				p.uw = TPAGE_SZ;
+				p.vw = TPAGE_SZ;
+				p.flags = 0;
+				p.semialpha = 1;
+
+				DrawTextureUV4X(&p);
 			}
+
 			return;
 		}
 
-		g_pImmediateContext->OMSetBlendState(g_pAlphaBlendingEnabledState, 0, 0xff);		
+		g_pImmediateContext->OMSetBlendState(g_pAlphaBlendingEnabledState, 0, 0xff);
+
+		poly4xcount = 0;
 
 		for (int i = 0; i < OTSIZE; i++)
 		{
@@ -1494,49 +2443,29 @@ extern "C"
 				p = (u_long*)(*p);
 			}
 		}
-}
+
+		UpdateFB(&g_UpdateFB2, TPAGE_4X_OFFSET, TPAGE_COUNT);
+		UpdateFB(&g_UpdateFB3, TPAGE_EXTRA, TPAGE_COUNT);
+
+		if (poly4xcount > 0)
+		{
+			for (size_t i = 0; i < poly4xcount; i++)
+			{
+				POLY_FT4 *p = &poly4x[i];
+				if (p->tpage == 0xffff)
+					DrawQuad4X(p);
+				else
+					DrawTextureUV4X(p);
+			}
+		}
+
+		g_NextFreePage = TPAGE_EXTRA;
+	}
 
     void Win95_Blast_Frame()
     {
 		if (!g_InsideRender) return;
 
-		//Post Process
-#ifdef USE_RTARGET		
-
-		D3D11_VIEWPORT vp;
-		vp.MinDepth = 0.0f;
-		vp.MaxDepth = 1.0f;
-		vp.TopLeftX = 0;
-		vp.TopLeftY = 0;
-		vp.Width = PIXEL_WIDTH;
-		vp.Height = PIXEL_HEIGHT;
-
-		g_pImmediateContext->OMSetRenderTargets(1, &g_pRenderTargetView, nullptr);
-		g_pImmediateContext->PSSetShader(g_pPixelShaderPP, nullptr, 0);
-		g_pImmediateContext->OMSetBlendState(g_pAlphaBlendingDisabledState, 0, 0xff);
-		g_pImmediateContext->PSSetSamplers(0, 2, g_sampleStates);
-		g_pImmediateContext->PSSetConstantBuffers(0, 1, &g_pConstantBuffer);
-		g_pImmediateContext->PSSetShaderResources(2, 1, &Pages[33].textureView);//screen filter pattern
-		g_pImmediateContext->RSSetViewports(1, &vp);
-
-#ifdef SWUPSCALE
-		{
-			g_pImmediateContext->CopyResource(g_renderTargetStaging, g_renderTargetTex);			
-
-			D3D11_MAPPED_SUBRESOURCE mappedResourceSrc, mappedResourceDest;
-			int result = g_pImmediateContext->Map(g_renderTargetStaging, 0, D3D11_MAP_READ, 0, &mappedResourceSrc);
-			result = g_pImmediateContext->Map(g_renderTargetStagingBig, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResourceDest);
-			/*
-			hq3x_32_rb((uint32_t*)mappedResourceSrc.pData, mappedResourceSrc.RowPitch, 
-				(uint32_t*)mappedResourceDest.pData, mappedResourceDest.RowPitch,
-				SCREEN_WIDTH, SCREEN_HEIGHT);
-				*/
-			g_pImmediateContext->Unmap(g_renderTargetStaging, 0);
-			g_pImmediateContext->Unmap(g_renderTargetStagingBig, 0);
-		}
-#endif
-		DrawQuadTexture(g_pRenderTargetShaderView, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, NULL);
-#endif
 		// Present our back buffer to our front buffer
 		g_pSwapChain->Present(0, 0);
     }
@@ -1630,7 +2559,7 @@ extern "C"
 		p->h = y;
 	}
 
-	WORD ReadKeys(int list[])
+	WORD ReadKeys(uint16_t *list)
 	{
 		WORD result = 0;
 		for (size_t i = 0; i < 16; i++)
@@ -1721,7 +2650,7 @@ extern "C"
 
 	int Wav95_Play(int id, int loop)
 	{
-		if (sndobj[id].data == NULL) return 0;
+		if (sndobj[id].data == NULL || NoSound) return 0;
 		
 		IXAudio2SourceVoice* snd = NULL;
 		XAUDIO2_VOICE_STATE state = { 0 };
