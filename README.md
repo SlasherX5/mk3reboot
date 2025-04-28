@@ -1,5 +1,5 @@
-# mk3reboot
-Duel to death with a new take!
+# MK3 4X
+Duel to the death with 4X AI-generated sprites!
 
 # Getting started (Visual Studio)
 
@@ -20,6 +20,11 @@ bootstrap-vcpkg.bat
 vcpkg integrate install
 vcpkg install inih:x86-windows
 ```
+
+## 4X Sprite Cache
+Download **MK3RebootCache-0.bin** and copy it to **\Runtime** folder, next to the executable.
+
+https://drive.google.com/file/d/1Xm8-Bu2sUaXG4ZY2cK_jjjEhxVyvhvlV/view?usp=sharing
 
 # Controls
 
