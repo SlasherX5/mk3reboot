@@ -169,7 +169,7 @@ void* character_palettes_1[2][32] =
 		TSKTAN_P,		//10 - tusk
 		FGRED_P,			//11 - she goro
 		TSYEL_P,			//12 - shang tsun
-		LK2RED_P,			//13 - kang
+		LKRED_P,			//13 - kang
 		SMOKE1_P,			//14 - smoke
 		MOTARO_P,			//15 - motaro
 		BGPAL1_P,			// 16 - shao kahn
@@ -212,7 +212,7 @@ void *character_palettes_2[2][32] =
 	TSBLU_P,		// 10 - tusk
 	FGBLUE_P,		// 11 - she goro
 	TSRED_P,		// 12 - shang tsung
-	LK2YELO_P,		// 13 - kang
+	LKYELO_P,		// 13 - kang
 	SMOKE2_P,		// 14 - smoke
 	MOTARO_P,		// 15 - motaro
 	BGPAL1_P,		// 16 - shao kahn
