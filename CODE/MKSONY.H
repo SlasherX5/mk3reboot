@@ -217,10 +217,13 @@ void load_perm_art(void);
 #define COMPUTE_ADDR(_base,_offset) ((BYTE *)(_base)+(LONG)(_offset))
 
 void SetSemiTrans(POLY_FT4* p, DWORD value);
-u_short DLoadTpage(u_long *pix, int tp, int abr, int x, int y, int w, int h);
-int DLoadImage(RECT_PSX *rect, u_long *p);
+u_short DLoadTpage(u_long *pix, int tp, int abr, int x, int y, int w, int h, u_long id);
+int DLoadImage(RECT_PSX *rect, u_long *p,u_long id);
 
 extern long Win95_timeGetTime();
+
+void DrawSync(WORD);
+void ClearScreen();
 
 #endif
 

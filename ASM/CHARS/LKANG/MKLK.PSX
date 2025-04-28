@@ -117,242 +117,237 @@ lk_anitab2:
 	DD 0
 a_dummy:
 a_stance:
-	DD LUSTANCE1-lk_anitab1
-	DD LUSTANCE2-lk_anitab1
-	DD LUSTANCE3-lk_anitab1
-	DD LUSTANCE4-lk_anitab1
-	DD LUSTANCE5-lk_anitab1
-	DD LUSTANCE6-lk_anitab1
-	DD LUSTANCE7-lk_anitab1
-	DD LUSTANCE8-lk_anitab1
-	DD LUSTANCE9-lk_anitab1
-	DD LUSTANCE8-lk_anitab1
-	DD LUSTANCE7-lk_anitab1
-	DD LUSTANCE6-lk_anitab1
-	DD LUSTANCE5-lk_anitab1
-	DD LUSTANCE4-lk_anitab1
-	DD LUSTANCE3-lk_anitab1
-	DD LUSTANCE2-lk_anitab1
+	DD LKSTANCE1-lk_anitab1
+	DD LKSTANCE2-lk_anitab1
+	DD LKSTANCE3-lk_anitab1
+	DD LKSTANCE4-lk_anitab1
+	DD LKSTANCE5-lk_anitab1
+	DD LKSTANCE6-lk_anitab1
+	DD LKSTANCE7-lk_anitab1
 	DD ani_jump
 	DD a_stance-lk_anitab1
 a_turn:
-	DD LUTURN1-lk_anitab1
-	DD LUTURN2-lk_anitab1
+	DD LKTURN1-lk_anitab1
+	DD LKTURN2-lk_anitab1
 	DD ani_flip
-	DD LUTURN1-lk_anitab1
+	DD LKTURN1-lk_anitab1
 	DD 0
 a_walkf:
-	DD LUWALK1-lk_anitab1
-	DD LUWALK2-lk_anitab1
-	DD LUWALK3-lk_anitab1
-	DD LUWALK4-lk_anitab1
-	DD LUWALK5-lk_anitab1
-	DD LUWALK6-lk_anitab1
-	DD LUWALK7-lk_anitab1
-	DD LUWALK8-lk_anitab1
+	DD LKWALKTORSO1-lk_anitab1
+	DD LKWALKTORSO2-lk_anitab1
+	DD LKWALKTORSO3-lk_anitab1
+	DD LKWALKTORSO4-lk_anitab1
+	DD LKWALKTORSO5-lk_anitab1
+	DD LKWALKTORSO6-lk_anitab1
+	DD LKWALKTORSO7-lk_anitab1
+	DD LKWALKTORSO8-lk_anitab1
+	DD LKWALKTORSO9-lk_anitab1
 	DD ani_jump
 	DD a_walkf-lk_anitab1
 a_walkb:
-	DD LUWALK8-lk_anitab1
-	DD LUWALK7-lk_anitab1
-	DD LUWALK6-lk_anitab1
-	DD LUWALK5-lk_anitab1
-	DD LUWALK4-lk_anitab1
-	DD LUWALK3-lk_anitab1
-	DD LUWALK2-lk_anitab1
-	DD LUWALK1-lk_anitab1
+	DD LKWALKTORSO9-lk_anitab1
+	DD LKWALKTORSO8-lk_anitab1
+	DD LKWALKTORSO7-lk_anitab1
+	DD LKWALKTORSO6-lk_anitab1
+	DD LKWALKTORSO5-lk_anitab1
+	DD LKWALKTORSO4-lk_anitab1
+	DD LKWALKTORSO3-lk_anitab1
+	DD LKWALKTORSO2-lk_anitab1
+	DD LKWALKTORSO1-lk_anitab1
 	DD ani_jump
 	DD a_walkb-lk_anitab1
 a_duck:
-	DD LUDUCK1-lk_anitab1
-	DD LUDUCK2-lk_anitab1
-	DD LUDUCK3-lk_anitab1
+	DD LKDUCK1-lk_anitab1
+	DD LKDUCK2-lk_anitab1
+	DD LKDUCK3-lk_anitab1
 	DD 0
 a_duck_block:
-	DD LUDUCKBLOCK1-lk_anitab1
-	DD LUDUCKBLOCK2-lk_anitab1
-	DD LUDUCKBLOCK3-lk_anitab1
+	DD LKDUCKBLOCK1-lk_anitab1
+	DD LKDUCKBLOCK2-lk_anitab1
+	DD LKDUCKBLOCK3-lk_anitab1
 	DD 0
 a_duck_hit:
-	DD LUDUCKHIT2-lk_anitab1
-	DD LUDUCKHIT3-lk_anitab1
-	DD LUDUCKHIT2-lk_anitab1
-	DD LUDUCKHIT1-lk_anitab1
+	DD LKDUCKHIT2-lk_anitab1
+	DD LKDUCKHIT3-lk_anitab1
+	DD LKDUCKHIT2-lk_anitab1
+	DD LKDUCKHIT1-lk_anitab1
 	DD 0
 a_duck_turn:
-	DD LUDUCKTURN1-lk_anitab1
-	DD LUDUCKTURN2-lk_anitab1
+	DD LKDUCKTURN1-lk_anitab1
+	DD LKDUCKTURN2-lk_anitab1
 	DD ani_flip
-	DD LUDUCKTURN2-lk_anitab1
-	DD LUDUCKTURN1-lk_anitab1
-	DD LUDUCK3-lk_anitab1
+	DD LKDUCKTURN2-lk_anitab1
+	DD LKDUCKTURN1-lk_anitab1
+	DD LKDUCK3-lk_anitab1
 	DD 0
 a_duck_punch:
-	DD LUDUCKPUNCH1-lk_anitab1
-	DD LUDUCKPUNCH2-lk_anitab1
-	DD LUDUCKPUNCH3-lk_anitab1
+	DD LKDUCKPUNCH1-lk_anitab1
+	DD LKDUCKPUNCH2-lk_anitab1
+	DD LKDUCKPUNCH3-lk_anitab1
 	DD 0
-	DD LUDUCKPUNCH2-lk_anitab1
-	DD LUDUCKPUNCH1-lk_anitab1
-	DD LUDUCK3-lk_anitab1
+	DD LKDUCKPUNCH2-lk_anitab1
+	DD LKDUCKPUNCH1-lk_anitab1
+	DD LKDUCK3-lk_anitab1
 	DD 0
 a_duck_kick_lo:
-	DD LUDUCKLOKICK1-lk_anitab1
-	DD LUDUCKLOKICK2-lk_anitab1
-	DD LUDUCKLOKICK3-lk_anitab1
+	DD LKDUCKIKLO1-lk_anitab1
+	DD LKDUCKIKLO1-lk_anitab1
+	DD LKDUCKIKLO2-lk_anitab1
 	DD 0
-	DD LUDUCKLOKICK2-lk_anitab1
-	DD LUDUCKLOKICK1-lk_anitab1
-	DD LUDUCK3-lk_anitab1
+	DD LKDUCKIKLO2-lk_anitab1
+	DD LKDUCKIKLO1-lk_anitab1
+	DD LKDUCK3-lk_anitab1
 	DD 0
 a_duck_kick_hi:
-	DD LUDUCKLOKICK1-lk_anitab1
-	DD LUDUCKHIKICK1-lk_anitab1
-	DD LUDUCKHIKICK2-lk_anitab1
-	DD LUDUCKHIKICK3-lk_anitab1
+	DD LKDUCKIKHI1-lk_anitab1
+	DD LKDUCKIKHI2-lk_anitab1
+	DD LKDUCKIKHI3-lk_anitab1
+	DD LKDUCKIKHI4-lk_anitab1
 	DD 0
-	DD LUDUCKHIKICK2-lk_anitab1
-	DD LUDUCKHIKICK1-lk_anitab1
-	DD LUDUCKLOKICK1-lk_anitab1
-	DD LUDUCK3-lk_anitab1
+	DD LKDUCKIKHI3-lk_anitab1
+	DD LKDUCKIKHI2-lk_anitab1
+	DD LKDUCKIKHI1-lk_anitab1
+	DD LKDUCK3-lk_anitab1
 	DD 0
 a_uppercut:
-	DD LUUPPERCUT2-lk_anitab1
-	DD LUUPPERCUT3-lk_anitab1
-	DD LUUPPERCUT4-lk_anitab1
-	DD LUUPPERCUT5-lk_anitab1
+	DD LKUPPERCUT1-lk_anitab1
+	DD LKUPPERCUT2-lk_anitab1
+	DD LKUPPERCUT3-lk_anitab1
+	DD LKUPPERCUT4-lk_anitab1
 	DD ani_nosleep
-	DD LUUPPERCUT7-lk_anitab1
+	DD LKUPPERCUT5-lk_anitab1
 	DD 0
-	DD LUHIPUNCH1-lk_anitab1
+	DD LKHIPUNCH1-lk_anitab1
 	DD 0
 a_hipunch:
-	DD LUHIPUNCH1-lk_anitab1
-	DD LUHIPUNCH2-lk_anitab1
-	DD LUHIPUNCH3-lk_anitab1
+	DD LKHIPUNCH1-lk_anitab1
+	DD LKHIPUNCH2-lk_anitab1
+	DD LKHIPUNCH3-lk_anitab1
 	DD 0
-	DD LUHIPUNCH4-lk_anitab1
-	DD LUHIPUNCH5-lk_anitab1
-	DD LUHIPUNCH6-lk_anitab1
+	DD LKHIPUNCH4-lk_anitab1
+	DD LKHIPUNCH5-lk_anitab1
+	DD LKHIPUNCH6-lk_anitab1
 	DD 0
-	DD LUHIPUNCH5-lk_anitab1
-	DD LUHIPUNCH4-lk_anitab1
+	DD LKHIPUNCH5-lk_anitab1
+	DD LKHIPUNCH4-lk_anitab1
 	DD ani_jump
 	DD a_hipunch+((32*2)/8)-lk_anitab1
 	DD 0
-	DD LUHIPUNCH2-lk_anitab1
-	DD LUHIPUNCH1-lk_anitab1
+	DD LKHIPUNCH2-lk_anitab1
+	DD LKHIPUNCH1-lk_anitab1
 	DD 0
-	DD LULOPUNCH7-lk_anitab1
+	DD LKHIPUNCH6-lk_anitab1
 	DD 0
-	DD LUHIPUNCH4-lk_anitab1
-	DD LULOPUNCH5-lk_anitab1
+	DD LKHIPUNCH4-lk_anitab1
+	DD LKHIPUNCH5-lk_anitab1
 	DD ani_jump
 	DD a_lopunch+((32*6)/8)-lk_anitab1
 	DD 0
-	DD LUHIPUNCH5-lk_anitab1
-	DD LULOPUNCH2-lk_anitab1
+	DD LKHIPUNCH5-lk_anitab1
+	DD LKHIPUNCH2-lk_anitab1
 	DD ani_jump
 	DD a_lopunch+((32*2)/8)-lk_anitab1
 	DD 0
 a_lopunch:
-	DD LULOPUNCH1-lk_anitab1
-	DD LULOPUNCH2-lk_anitab1
-	DD LULOPUNCH3-lk_anitab1
+	DD LKHIPUNCH1-lk_anitab1
+	DD LKHIPUNCH2-lk_anitab1
+	DD LKLOPUNCH1-lk_anitab1
 	DD 0
-	DD LULOPUNCH4-lk_anitab1
-	DD LULOPUNCH5-lk_anitab1
-	DD LULOPUNCH6-lk_anitab1
+	DD LKHIPUNCH4-lk_anitab1
+	DD LKLOPUNCH2-lk_anitab1
 	DD 0
-	DD LULOPUNCH5-lk_anitab1
-	DD LULOPUNCH4-lk_anitab1
+	DD LKHIPUNCH2-lk_anitab1
+	DD LKHIPUNCH1-lk_anitab1
 	DD ani_jump
 	DD a_lopunch+((32*2)/8)-lk_anitab1
 	DD 0
-	DD LULOPUNCH2-lk_anitab1
-	DD LULOPUNCH1-lk_anitab1
+	DD LKHIPUNCH2-lk_anitab1
+	DD LKHIPUNCH1-lk_anitab1
 	DD 0
-	DD LULOPUNCH7-lk_anitab1
+	DD LKLOPUNCH2-lk_anitab1
 	DD 0
-	DD LULOPUNCH4-lk_anitab1
-	DD LULOPUNCH5-lk_anitab1
+	DD LKHIPUNCH2-lk_anitab1
+	DD LKHIPUNCH1-lk_anitab1
 	DD ani_jump
 	DD a_hipunch+((32*6)/8)-lk_anitab1
 	DD 0
-	DD LULOPUNCH4-lk_anitab1
-	DD LUHIPUNCH5-lk_anitab1
+	DD LKHIPUNCH2-lk_anitab1
+	DD LKHIPUNCH1-lk_anitab1
 	DD ani_jump
 	DD a_hipunch+((32*2)/8)-lk_anitab1
 a_block:
-	DD LUHIBLOCK1-lk_anitab1
-	DD LUHIBLOCK2-lk_anitab1
-	DD LUHIBLOCK3-lk_anitab1
+	DD LKHIBLOCK1-lk_anitab1
+	DD LKHIBLOCK2-lk_anitab1
+	DD LKHIBLOCK3-lk_anitab1
 	DD 0
 a_elbow:
 	DD ani_adjustx
 	DD 5
-	DD LUCOMBO1-lk_anitab1
+	DD LKPALMSTRIKE1-lk_anitab1
 	DD ani_adjustx
 	DD 5
-	DD LUCOMBO2-lk_anitab1
-	DD LUCOMBO3-lk_anitab1
+	DD LKPALMSTRIKE2-lk_anitab1
+	DD LKPALMSTRIKE3-lk_anitab1
 	DD 0
 j_lkunelbow:
-	DD LUCOMBO2-lk_anitab1
-	DD LUCOMBO1-lk_anitab1
+	DD LKPALMSTRIKE2-lk_anitab1
+	DD LKPALMSTRIKE1-lk_anitab1
 	DD 0
 	DD ani_adjustx
 	DD 12
-	DD LUCOMBO4-lk_anitab1
+	DD LKPALMSTRIKE2-lk_anitab1
+	DD LKPALMSTRIKE1-lk_anitab1
 	DD ani_adjustx
 	DD 12
-	DD LUCOMBO5-lk_anitab1
-	DD LUCOMBO6-lk_anitab1
+	DD LKPALMSTRIKE1-lk_anitab1
+	DD LKPALMSTRIKE2-lk_anitab1
 	DD 0
 	DD ani_adjustx
 	DD 10
-	DD LUCOMBO7-lk_anitab1
+	DD LKPALMSTRIKE1-lk_anitab1
+	DD LKPALMSTRIKE2-lk_anitab1
 	DD ani_adjustx
 	DD 10
-	DD LUCOMBO8-lk_anitab1
+	DD LKPALMSTRIKE1-lk_anitab1
+	DD LKPALMSTRIKE2-lk_anitab1
 	DD 0
 	DD ani_jump
 	DD j_lkunelbow-lk_anitab1
 a_hikick:
-	DD LUHIKICK1-lk_anitab1
-	DD LUHIKICK2-lk_anitab1
-	DD LUHIKICK3-lk_anitab1
-	DD LUHIKICK4-lk_anitab1
-	DD LUHIKICK5-lk_anitab1
-	DD LUHIKICK6-lk_anitab1
+	DD LKHIKICK1-lk_anitab1
+	DD LKHIKICK2-lk_anitab1
+	DD LKHIKICK3-lk_anitab1
+	DD LKHIKICK4-lk_anitab1
+	DD LKHIKICK5-lk_anitab1
+	DD LKHIKICK6-lk_anitab1
 	DD 0
-	DD LUHIKICK5-lk_anitab1
-	DD LUHIKICK4-lk_anitab1
-	DD LUHIKICK3-lk_anitab1
-	DD LUHIKICK2-lk_anitab1
-	DD LUHIKICK1-lk_anitab1
+	DD LKHIKICK5-lk_anitab1
+	DD LKHIKICK4-lk_anitab1
+	DD LKHIKICK3-lk_anitab1
+	DD LKHIKICK2-lk_anitab1
+	DD LKHIKICK1-lk_anitab1
 	DD 0
 a_lokick:
-	DD LUHIKICK1-lk_anitab1
-	DD LUHIKICK2-lk_anitab1
-	DD LUHIKICK3-lk_anitab1
-	DD LUHIKICK4-lk_anitab1
-	DD LULOKICK1-lk_anitab1
-	DD LULOKICK2-lk_anitab1
+	DD LKHIKICK1-lk_anitab1
+	DD LKHIKICK2-lk_anitab1
+	DD LKHIKICK3-lk_anitab1
+	DD LKHIKICK4-lk_anitab1
+	DD LKHIKICK5-lk_anitab1
+	DD LKLOKICK1-lk_anitab1
 	DD 0
-	DD LULOKICK1-lk_anitab1
-	DD LUHIKICK4-lk_anitab1
-	DD LUHIKICK3-lk_anitab1
-	DD LUHIKICK2-lk_anitab1
-	DD LUHIKICK1-lk_anitab1
+	DD LKLOKICK1-lk_anitab1
+	DD LKHIKICK4-lk_anitab1
+	DD LKHIKICK3-lk_anitab1
+	DD LKHIKICK2-lk_anitab1
+	DD LKHIKICK1-lk_anitab1
 	DD 0
 a_knee:
-	DD LUKNEECOMBO1-lk_anitab1
-	DD LUKNEECOMBO2-lk_anitab1
-	DD LUKNEECOMBO3-lk_anitab1
+	DD LKKNEE1-lk_anitab1
+	DD LKKNEE2-lk_anitab1
+	DD LKKNEE3-lk_anitab1
 	DD 0
-	DD LUKNEECOMBO2-lk_anitab1
-	DD LUKNEECOMBO1-lk_anitab1
+	DD LKKNEE2-lk_anitab1
+	DD LKKNEE1-lk_anitab1
 	DD 0
 	DD LUKNEECOMBO4-lk_anitab1
 	DD LUKNEECOMBO5-lk_anitab1
@@ -376,174 +371,161 @@ a_knee:
 	DD LUKNEECOMBO12-lk_anitab1
 	DD 0
 a_sweep_kick:
-	DD LUSWEEPKICK1-lk_anitab1
-	DD LUSWEEPKICK2-lk_anitab1
-	DD LUSWEEPKICK3-lk_anitab1
+	DD LKSWEEPKICK1-lk_anitab1
+	DD LKSWEEPKICK2-lk_anitab1
+	DD LKSWEEPKICK3-lk_anitab1
 	DD ani_calla
 	DD sweep_sounds
-	DD LUSWEEPKICK4-lk_anitab1
-	DD LUSWEEPKICK5-lk_anitab1
+	DD LKSWEEPKICK4-lk_anitab1
+	DD LKSWEEPKICK5-lk_anitab1
 	DD 0
-	DD LUSWEEPKICK6-lk_anitab1
-	DD LUSWEEPKICK7-lk_anitab1
-	DD LUSWEEPKICK8-lk_anitab1
+	DD LKSWEEPKICK6-lk_anitab1
+	DD LKSWEEPKICK7-lk_anitab1
 	DD 0
 a_roundhouse:
-	DD LUSPINHOOK1-lk_anitab1
-	DD LUSPINHOOK2-lk_anitab1
-	DD LUSPINHOOK3-lk_anitab1
-	DD LUSPINHOOK4-lk_anitab1
+	DD LKROUNDKICK1-lk_anitab1
+	DD LKROUNDKICK2-lk_anitab1
+	DD LKROUNDKICK3-lk_anitab1
+	DD LKROUNDKICK4-lk_anitab1
 	DD ani_nosleep
-	DD LUSPINHOOK5-lk_anitab1
+	DD LKROUNDKIK5-lk_anitab1
 	DD 0
-	DD LUSPINHOOK6-lk_anitab1
-	DD LUSPINHOOK7-lk_anitab1
-	DD LUSPINHOOK8-lk_anitab1
+	DD LKROUNDKICK6-lk_anitab1
+	DD LKROUNDKICK7-lk_anitab1
+	DD LKROUNDKICK8-lk_anitab1
 	DD 0
 a_jump:
-	DD LUJUMP1-lk_anitab1
-	DD LUJUMP2-lk_anitab1
-	DD LUJUMP3-lk_anitab1
+	DD LKJUMP1-lk_anitab1
+	DD LKJUMP2-lk_anitab1
+	DD LKJUMP3-lk_anitab1
 	DD 0
 a_jump_kick:
-	DD LUJUMPKICK1-lk_anitab1
-	DD LUJUMPKICK2-lk_anitab1
-	DD LUJUMPKICK3-lk_anitab1
+	DD LKJUMPKICK1-lk_anitab1
+	DD LKJUMPKICK2-lk_anitab1
 	DD 0
-	DD LUJUMPKICK2-lk_anitab1
-	DD LUJUMPKICK1-lk_anitab1
+	DD LKJUMPKICK1-lk_anitab1
 	DD 0
 a_fflip:
-	DD LUFLIP1-lk_anitab1
-	DD LUFLIP2-lk_anitab1
-	DD LUFLIP3-lk_anitab1
-	DD LUFLIP4-lk_anitab1
-	DD LUFLIP5-lk_anitab1
-	DD LUFLIP6-lk_anitab1
-	DD LUFLIP7-lk_anitab1
-	DD LUFLIP8-lk_anitab1
+	DD LKJUMPFLIP1-lk_anitab1
+	DD LKJUMPFLIP2-lk_anitab1
+	DD LKJUMPFLIP3-lk_anitab1
+	DD LKJUMPFLIP4-lk_anitab1
+	DD LKJUMPFLIP5-lk_anitab1
+	DD LKJUMPFLIP6-lk_anitab1
+	DD LKJUMPFLIP7-lk_anitab1
+	DD LKJUMPFLIP8-lk_anitab1
 	DD ani_jump
 	DD a_fflip+(32/8)-lk_anitab1
 a_bflip:
-	DD LUFLIP1-lk_anitab1
-	DD LUFLIP8-lk_anitab1
-	DD LUFLIP7-lk_anitab1
-	DD LUFLIP6-lk_anitab1
-	DD LUFLIP5-lk_anitab1
-	DD LUFLIP4-lk_anitab1
-	DD LUFLIP3-lk_anitab1
-	DD LUFLIP2-lk_anitab1
+	DD LKJUMPFLIP1-lk_anitab1
+	DD LKJUMPFLIP8-lk_anitab1
+	DD LKJUMPFLIP7-lk_anitab1
+	DD LKJUMPFLIP6-lk_anitab1
+	DD LKJUMPFLIP5-lk_anitab1
+	DD LKJUMPFLIP4-lk_anitab1
+	DD LKJUMPFLIP3-lk_anitab1
+	DD LKJUMPFLIP2-lk_anitab1
 	DD ani_jump
 	DD a_bflip+(32/8)-lk_anitab1
 a_super_kang:
-	DD LUFLIPKICK1-lk_anitab1
-	DD LUFLIPKICK2-lk_anitab1
-	DD LUFLYKICK1-lk_anitab1
+	DD LKFLIPKICK1-lk_anitab1
+	DD LKFLIPKICK2-lk_anitab1
+	DD LKFLIPKICK3-lk_anitab1
 	DD 0
 	DD ani_jump
 	DD j_flyk-lk_anitab1
 a_flip_kick:
-	DD LUFLIPKICK1-lk_anitab1
-	DD LUFLIPKICK2-lk_anitab1
-	DD LUFLIPKICK3-lk_anitab1
+	DD LKFLIPKICK1-lk_anitab1
+	DD LKFLIPKICK2-lk_anitab1
+	DD LKFLIPKICK3-lk_anitab1
 	DD 0
 j_flyk:
-	DD LUFLIPKICK2-lk_anitab1
-	DD LUFLIPKICK1-lk_anitab1
+	DD LKFLIPKICK2-lk_anitab1
+	DD LKFLIPKICK1-lk_anitab1
 	DD 0
 a_flip_punch:
-	DD LUFLIPUNCH4-lk_anitab1
-	DD LUFLIPUNCH5-lk_anitab1
-	DD LUFLIPUNCH6-lk_anitab1
+	DD LKFLIPUNCH1-lk_anitab1
+	DD LKFLIPUNCH2-lk_anitab1
+	DD LKFLIPUNCH3-lk_anitab1
 	DD 0
-	DD LUFLIPUNCH5-lk_anitab1
-	DD LUFLIPUNCH4-lk_anitab1
+	DD LKFLIPUNCH2-lk_anitab1
+	DD LKFLIPUNCH1-lk_anitab1
 	DD 0
 a_hit_hi:
-	DD LUHIHIT2-lk_anitab1
-	DD LUHIHIT3-lk_anitab1
-	DD LUHIHIT2-lk_anitab1
-	DD LUHIHIT1-lk_anitab1
+	DD LKHIHIT2-lk_anitab1
+	DD LKHIHIT3-lk_anitab1
+	DD LKHIHIT2-lk_anitab1
+	DD LKHIHIT1-lk_anitab1
 	DD 0
 a_hit_lo:
-	DD LULOHIT2-lk_anitab1
-	DD LULOHIT3-lk_anitab1
-	DD LULOHIT2-lk_anitab1
-	DD LULOHIT1-lk_anitab1
+	DD LKLOHIT2-lk_anitab1
+	DD LKLOHIT3-lk_anitab1
+	DD LKLOHIT2-lk_anitab1
+	DD LKLOHIT1-lk_anitab1
 	DD 0
 a_stumble:
-	DD LUSTUMBLE1-lk_anitab1
-	DD LUSTUMBLE2-lk_anitab1
-	DD LUSTUMBLE3-lk_anitab1
-	DD LUSTUMBLE4-lk_anitab1
-	DD LUSTUMBLE5-lk_anitab1
-	DD LUSTUMBLE6-lk_anitab1
-	DD LUSTUMBLE7-lk_anitab1
+	DD LKSTUMBLE1-lk_anitab1
+	DD LKSTUMBLE2-lk_anitab1
+	DD LKSTUMBLE3-lk_anitab1
+	DD LKSTUMBLE4-lk_anitab1
+	DD LKSTUMBLE5-lk_anitab1
 	DD 0
 j_stumble:
-	DD LUSTUMBLE1-lk_anitab1
-	DD LUSTUMBLE2-lk_anitab1
-	DD LUSTUMBLE3-lk_anitab1
-	DD LUSTUMBLE4-lk_anitab1
-	DD LUSTUMBLE5-lk_anitab1
-	DD LUSTUMBLE6-lk_anitab1
-	DD LUSTUMBLE7-lk_anitab1
+	DD LKSTUMBLE1-lk_anitab1
+	DD LKSTUMBLE2-lk_anitab1
+	DD LKSTUMBLE3-lk_anitab1
+	DD LKSTUMBLE4-lk_anitab1
+	DD LKSTUMBLE5-lk_anitab1
 	DD ani_jump
 	DD j_stumble-lk_anitab1
 a_dizzy:
-	DD LUSTUNNED1-lk_anitab1
-	DD LUSTUNNED2-lk_anitab1
-	DD LUSTUNNED3-lk_anitab1
-	DD LUSTUNNED4-lk_anitab1
-	DD LUSTUNNED5-lk_anitab1
-	DD LUSTUNNED6-lk_anitab1
-	DD LUSTUNNED7-lk_anitab1
-	DD LUSTUNNED8-lk_anitab1
-	DD LUSTUNNED9-lk_anitab1
+	DD LKSTUNNED1-lk_anitab1
+	DD LKSTUNNED2-lk_anitab1
+	DD LKSTUNNED3-lk_anitab1
+	DD LKSTUNNED4-lk_anitab1
+	DD LKSTUNNED5-lk_anitab1
+	DD LKSTUNNED6-lk_anitab1
+	DD LKSTUNNED7-lk_anitab1
 	DD ani_jump
 	DD a_dizzy-lk_anitab1
 a_knockdown:
-	DD LUKNOCKDOWN1-lk_anitab1
-	DD LUKNOCKDOWN2-lk_anitab1
-	DD LUKNOCKDOWN3-lk_anitab1
-	DD LUKNOCKDOWN4-lk_anitab1
-	DD LUKNOCKDOWN5-lk_anitab1
-	DD LUKNOCKDOWN6-lk_anitab1
-	DD 0
-	DD LUKNOCKDOWN7-lk_anitab1
-	DD LUKNOCKDOWN8-lk_anitab1
+	DD LKKNOCKDOWN1-lk_anitab1
+	DD LKKNOCKDOWN2-lk_anitab1
+	DD LKKNOCKDOWN3-lk_anitab1
+	DD LKKNOCKDOWN4-lk_anitab1
+	DD LKKNOCKDOWN5-lk_anitab1
+	DD 0	
+	DD LKKNOCKDOWN6-lk_anitab1
+	DD LKKNOCKDOWN7-lk_anitab1
 	DD 0
 a_getup:
-	DD LUGETUP1-lk_anitab1
-	DD LUGETUP2-lk_anitab1
-	DD LUGETUP3-lk_anitab1
-	DD LUGETUP4-lk_anitab1
-	DD LUGETUP5-lk_anitab1
-	DD LUGETUP6-lk_anitab1
+	DD LKGETUP1-lk_anitab1
+	DD LKGETUP2-lk_anitab1
+	DD LKGETUP3-lk_anitab1
+	DD LKGETUP4-lk_anitab1
+	DD LKGETUP5-lk_anitab1
 	DD 0
 a_sweep_fall:
-	DD LUSWEEPFALL1-lk_anitab1
-	DD LUSWEEPFALL2-lk_anitab1
-	DD LUSWEEPFALL3-lk_anitab1
-	DD LUSWEEPFALL4-lk_anitab1
-	DD LUSWEEPFALL5-lk_anitab1
+	DD LKSWEEPFALL1-lk_anitab1
+	DD LKSWEEPFALL2-lk_anitab1
+	DD LKSWEEPFALL3-lk_anitab1
+	DD LKSWEEPFALL4-lk_anitab1	
 	DD 0
-	DD LUSWEEPFALL6-lk_anitab1
-	DD LUSWEEPFALL7-lk_anitab1
+	DD LKSWEEPFALL5-lk_anitab1
 	DD 0
 a_sweepup:
-	DD LUSWEEPUP1-lk_anitab1
-	DD LUSWEEPUP2-lk_anitab1
-	DD LUSWEEPUP3-lk_anitab1
-	DD LUSWEEPUP4-lk_anitab1
-	DD LUSWEEPUP5-lk_anitab1
-	DD LUSWEEPUP6-lk_anitab1
+	DD LKSWEEPUP1-lk_anitab1
+	DD LKSWEEPUP2-lk_anitab1
+	DD LKSWEEPUP3-lk_anitab1
+	DD LKSWEEPUP4-lk_anitab1
+	DD LKSWEEPUP5-lk_anitab1
+	DD LKSWEEPUP6-lk_anitab1
 	DD 0
 a_afb_kano:
 	DD ani_offset_xy
 	DW -040H
 	DW -01bH
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -039H
 	DW 005H
@@ -562,19 +544,19 @@ a_afb_robo2:
 	DD ani_offset_xy
 	DW -025H
 	DW -026H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW 001H
 	DW -03bH
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 030H
 	DW -03eH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 04bH
 	DW -01eH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 058H
 	DW -003H
@@ -588,17 +570,17 @@ a_fb_kano:
 	DD ani_offset_xy
 	DW -03fH
 	DW -00fH
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -028H
 	DW -01eH
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW 035H
 	DW -037H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD 0
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD LUKNOCKDOWN5-lk_anitab1
 	DD LUKNOCKDOWN6-lk_anitab1
 	DD LUKNOCKDOWN7-lk_anitab1
@@ -607,25 +589,25 @@ a_fb_sonya:
 	DD ani_offset_xy
 	DW -029H
 	DW 00bH
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -01fH
 	DW 015H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW 00eH
 	DW 004H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 056H
 	DW -00aH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 08cH
 	DW -021H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD 0
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD LUKNOCKDOWN5-lk_anitab1
 	DD LUKNOCKDOWN6-lk_anitab1
 	DD LUKNOCKDOWN7-lk_anitab1
@@ -634,19 +616,19 @@ a_fb_jax:
 	DD ani_offset_xy
 	DW -043H
 	DW -016H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -02aH
 	DW -02eH
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW 006H
 	DW -044H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 035H
 	DW -02eH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 055H
 	DW -01dH
@@ -660,23 +642,23 @@ a_fb_ind:
 	DD ani_offset_xy
 	DW -057H
 	DW -00fH
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -048H
 	DW -030H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW -020H
 	DW -058H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 027H
 	DW -04bH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 03bH
 	DW -013H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 04dH
 	DW 007H
@@ -686,16 +668,16 @@ a_fb_sz:
 	DD ani_offset_xy
 	DW -049H
 	DW -032H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_flip
 	DD ani_offset_xy
 	DW 042H
 	DW -01fH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 038H
 	DW 005H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 002H
 	DW 018H
@@ -713,19 +695,19 @@ a_fb_swat:
 	DD ani_offset_xy
 	DW -04aH
 	DW -007H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -03cH
 	DW -033H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW 01cH
 	DW -050H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 056H
 	DW -020H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 054H
 	DW 006H
@@ -743,23 +725,23 @@ a_fb_lia:
 	DD ani_offset_xy
 	DW -075H
 	DW -01eH
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -057H
 	DW -03dH
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -023H
 	DW -046H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW 01eH
 	DW -04eH
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW 0a8H
 	DW 012H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 0a7H
 	DW 008H
@@ -769,31 +751,31 @@ a_fb_robo:
 	DD ani_offset_xy
 	DW -052H
 	DW -00bH
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -04fH
 	DW -032H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW -038H
 	DW -048H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW -00aH
 	DW -06cH
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 038H
 	DW -062H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 05cH
 	DW -050H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 07bH
 	DW -013H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 05aH
 	DW -011H
@@ -807,23 +789,23 @@ a_fb_robo2:
 	DD ani_offset_xy
 	DW -02cH
 	DW -01dH
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -00eH
 	DW -01cH
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW 00eH
 	DW -016H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 018H
 	DW 003H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 009H
 	DW 00bH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW -00eH
 	DW -011H
@@ -842,57 +824,57 @@ a_fb_lao:
 	DD ani_offset_xy
 	DW -029H
 	DW 022H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -04aH
 	DW -00fH
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW -032H
 	DW -04fH
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 010H
 	DW -067H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 03fH
 	DW -069H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 054H
 	DW -057H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 077H
 	DW 002H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 077H
 	DW 052H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD 0
 a_fb_tusk:
 	DD ani_offset_xy
 	DW -072H
 	DW 000H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -05dH
 	DW -038H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW -01bH
 	DW -078H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 039H
 	DW -050H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 039H
 	DW -010H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 01aH
 	DW 00fH
@@ -904,19 +886,19 @@ a_fb_tusk:
 	DD ani_offset_xy
 	DW -068H
 	DW 001H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -056H
 	DW -044H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW 01bH
 	DW -066H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 065H
 	DW -005H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 064H
 	DW 009H
@@ -926,23 +908,23 @@ a_fb_sg:
 	DD ani_offset_xy
 	DW -03dH
 	DW -030H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -013H
 	DW -045H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW -006H
 	DW -050H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 00fH
 	DW -03bH
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 00fH
 	DW -01fH
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_flip
 	DD ani_offset_xy
 	DW -016H
@@ -953,23 +935,23 @@ a_fb_st:
 	DD ani_offset_xy
 	DW -04cH
 	DW 000H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -041H
 	DW 007H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -02aH
 	DW 011H
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW -00eH
 	DW 00dH
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 011H
 	DW 01fH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW -005H
 	DW -001H
@@ -985,23 +967,23 @@ a_fb_st:
 	DD ani_offset_xy
 	DW -056H
 	DW 003H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -059H
 	DW -016H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -034H
 	DW -03eH
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW 02bH
 	DW -041H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 03aH
 	DW -018H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 048H
 	DW -003H
@@ -1011,29 +993,29 @@ a_fb_lk:
 	DD ani_offset_xy
 	DW -03eH
 	DW -001H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -03bH
 	DW 007H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -01aH
 	DW 00eH
-	DD LUFLIPPED2-lk_anitab1
+	DD LKFLIPPED2-lk_anitab1
 	DD ani_offset_xy
 	DW 00aH
 	DW 008H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 037H
 	DW 003H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 088H
 	DW -01fH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD 0
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD LUKNOCKDOWN5-lk_anitab1
 	DD LUKNOCKDOWN6-lk_anitab1
 	DD LUKNOCKDOWN7-lk_anitab1
@@ -1046,19 +1028,19 @@ a_legged:
 	DD ani_offset_xy
 	DW -051H
 	DW -023H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -01bH
 	DW -03eH
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD ani_offset_xy
 	DW 031H
 	DW -02dH
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD ani_offset_xy
 	DW 05eH
 	DW 000H
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD 0
 a_zoomed:
 	DD ani_offset_xy
@@ -1080,14 +1062,14 @@ a_zoomed:
 	DD ani_offset_xy
 	DW -081H
 	DW -008H
-	DD LUFLIPPED1-lk_anitab1
+	DD LKFLIPPED1-lk_anitab1
 	DD ani_offset_xy
 	DW -041H
 	DW -055H
-	DD LUFLIPPED3-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
 	DD 0
-	DD LUFLIPPED3-lk_anitab1
-	DD LUFLIPPED4-lk_anitab1
+	DD LKFLIPPED3-lk_anitab1
+	DD LKFLIPPED4-lk_anitab1
 	DD LUKNOCKDOWN5-lk_anitab1
 	DD LUKNOCKDOWN6-lk_anitab1
 	DD LUKNOCKDOWN7-lk_anitab1
@@ -1124,70 +1106,60 @@ a_shook:
 	DD LUSTUMBLE2-lk_anitab1
 	DD 0
 a_throw:
-	DD LUSLAM1-lk_anitab1
+	DD LKFLIP1-lk_anitab1
 	DD 0
-	DD LUSLAM2-lk_anitab1
-	DD LUSLAM3-lk_anitab1
-	DD LUSLAM4-lk_anitab1
-	DD LUSLAM5-lk_anitab1
-	DD LUSLAM6-lk_anitab1
-	DD LUSLAM7-lk_anitab1
+	DD LKFLIP2-lk_anitab1
+	DD LKFLIP3-lk_anitab1
+	DD LKFLIP4-lk_anitab1
+	DD LKFLIP5-lk_anitab1
+	DD LKFLIP6-lk_anitab1
 	DD 0
-	DD LUSLAM6-lk_anitab1
-	DD LUSLAM5-lk_anitab1
-	DD LUSLAM4-lk_anitab1
-	DD LUSLAM3-lk_anitab1
-	DD LUSLAM2-lk_anitab1
+	DD LKFLIP5-lk_anitab1
+	DD LKFLIP4-lk_anitab1
+	DD LKFLIP3-lk_anitab1
+	DD LKFLIP2-lk_anitab1
 	DD 0
 a_run:
-	DD LURUN1-lk_anitab1
-	DD LURUN2-lk_anitab1
-	DD LURUN3-lk_anitab1
-	DD LURUN4-lk_anitab1
+	DD LKWALKTORSO1-lk_anitab1
+	DD LKWALKTORSO2-lk_anitab1
+	DD LKWALKTORSO3-lk_anitab1	
 	DD ani_calla
 	DD rsnd_footstep
-	DD LURUN5-lk_anitab1
-	DD LURUN6-lk_anitab1
-	DD LURUN7-lk_anitab1
-	DD LURUN8-lk_anitab1
-	DD LURUN9-lk_anitab1
+	DD LKWALKTORSO4-lk_anitab1
+	DD LKWALKTORSO5-lk_anitab1
+	DD LKWALKTORSO6-lk_anitab1
 	DD ani_calla
 	DD rsnd_footstep
-	DD LURUN10-lk_anitab1
-	DD LURUN11-lk_anitab1
-	DD LURUN12-lk_anitab1
+	DD LKWALKTORSO7-lk_anitab1
+	DD LKWALKTORSO8-lk_anitab1
+	DD LKWALKTORSO9-lk_anitab1
 	DD ani_jump
 	DD a_run-lk_anitab1
 	DD 0
 a_victory:
-	DD LUVICTORY1-lk_anitab1
-	DD LUVICTORY2-lk_anitab1
-	DD LUVICTORY3-lk_anitab1
-	DD LUVICTORY4-lk_anitab1
-	DD LUVICTORY5-lk_anitab1
-	DD LUVICTORY6-lk_anitab1
-	DD LUVICTORY7-lk_anitab1
-	DD LUVICTORY8-lk_anitab1
-	DD LUVICTORY9-lk_anitab1
-	DD LUVICTORY10-lk_anitab1
-	DD LUVICTORY11-lk_anitab1
-	DD LUVICTORY12-lk_anitab1
-	DD LUVICTORY13-lk_anitab1
-	DD LUVICTORY14-lk_anitab1
-	DD LUVICTORY15-lk_anitab1
+	DD LKVICTORY1-lk_anitab1
+	DD LKVICTORY2-lk_anitab1
+	DD LKVICTORY3-lk_anitab1
+	DD LKVICTORY4-lk_anitab1
+	DD LKVICTORY5-lk_anitab1
+	DD LKVICTORY6-lk_anitab1
+	DD LKVICTORY7-lk_anitab1
+	DD LKVICTORY8-lk_anitab1
 	DD 0
 a_bike_kick:
-	DD LUBIKEKICK1-lk_anitab1
-	DD LUBIKEKICK2-lk_anitab1
-	DD LUBIKEKICK3-lk_anitab1
-	DD LUBIKEKICK4-lk_anitab1
-	DD LUBIKEKICK5-lk_anitab1
+	DD LKBIKEKICK1-lk_anitab1
+	DD LKBIKEKICK2-lk_anitab1
+	DD LKBIKEKICK3-lk_anitab1
+	DD LKBIKEKICK4-lk_anitab1
+	DD LKBIKEKICK5-lk_anitab1
+	DD LKBIKEKICK6-lk_anitab1
+	DD LKBIKEKICK7-lk_anitab1
 	DD ani_jump
 	DD a_bike_kick-lk_anitab1
 a_zap:
-	DD LUHITHROW1-lk_anitab1
-	DD LUHITHROW2-lk_anitab1
-	DD LUHITHROW3-lk_anitab1
+	DD LKTHROWHI1-lk_anitab1
+	DD LKTHROWHI2-lk_anitab1
+	DD LKTHROWHI3-lk_anitab1
 	DD ani_sladd
 	DD DRAG1-lk_anitab1
 	DD ani_slani_sleep
@@ -1201,13 +1173,12 @@ j_zap3:
 	DD ani_slani_sleep
 	DD DRAG4-lk_anitab1
 	DD 0
-	DD LUHITHROW2-lk_anitab1
-	DD LUHITHROW1-lk_anitab1
+	DD LKTHROWHI2-lk_anitab1
+	DD LKTHROWHI1-lk_anitab1
 	DD 0
 a_zap_lo:
-	DD LULOTHROW4-lk_anitab1
-	DD LULOTHROW5-lk_anitab1
-	DD LULOTHROW6-lk_anitab1
+	DD LKTHROWLO1-lk_anitab1
+	DD LKTHROWLO2-lk_anitab1
 	DD ani_sladd
 	DD DRAG1-lk_anitab1
 	DD ani_calla
@@ -1217,26 +1188,24 @@ a_zap_lo:
 	DD DRAG2-lk_anitab1
 	DD ani_calla
 	DD lower_dragon
-	DD LULOTHROW6-lk_anitab1
+	DD LKTHROWLO2-lk_anitab1
 	DD ani_slani
 	DD DRAG3-lk_anitab1
 	DD ani_calla
 	DD lower_dragon
-	DD LULOTHROW6-lk_anitab1
+	DD LKTHROWLO2-lk_anitab1
 	DD ani_slani
 	DD DRAG4-lk_anitab1
 	DD ani_calla
 	DD lower_dragon
-	DD LULOTHROW6-lk_anitab1
+	DD LKTHROWLO2-lk_anitab1
 	DD 0
-	DD LULOTHROW5-lk_anitab1
-	DD LULOTHROW4-lk_anitab1
+	DD LKTHROWLO2-lk_anitab1
+	DD LKTHROWLO1-lk_anitab1
 	DD 0
 a_zap_air:
-	DD LUAIRTHROW1-lk_anitab1
-	DD LUAIRTHROW2-lk_anitab1
-	DD LUAIRTHROW3-lk_anitab1
-	DD LUAIRTHROW4-lk_anitab1
+	DD LKJUMPTHROW1-lk_anitab1
+	DD LKJUMPTHROW2-lk_anitab1
 	DD ani_sladd
 	DD DRAG1-lk_anitab1
 	DD ani_calla
@@ -1246,21 +1215,20 @@ a_zap_air:
 	DD DRAG2-lk_anitab1
 	DD ani_calla
 	DD air_dragon
-	DD LUAIRTHROW4-lk_anitab1
+	DD LKJUMPTHROW2-lk_anitab1
 	DD ani_slani
 	DD DRAG3-lk_anitab1
 	DD ani_calla
 	DD air_dragon
-	DD LUAIRTHROW4-lk_anitab1
+	DD LKJUMPTHROW2-lk_anitab1
 	DD ani_slani
 	DD DRAG4-lk_anitab1
 	DD ani_calla
 	DD air_dragon
-	DD LUAIRTHROW4-lk_anitab1
+	DD LKJUMPTHROW2-lk_anitab1
 	DD 0
-	DD LUAIRTHROW3-lk_anitab1
-	DD LUAIRTHROW2-lk_anitab1
-	DD LUAIRTHROW1-lk_anitab1
+	DD LKJUMPTHROW2-lk_anitab1
+	DD LKJUMPTHROW1-lk_anitab1
 	DD 0
 a_projectile:
 	DD DRAG5-lk_anitab1
@@ -1273,13 +1241,13 @@ a_scared:
 	DD LUSCARED2-lk_anitab1
 	DD 0
 a_thudd:
-	DD LUTHUD1-lk_anitab1
-	DD LUTHUD2-lk_anitab1
-	DD LUTHUD3-lk_anitab1
-	DD LUTHUD4-lk_anitab1
-	DD LUTHUD5-lk_anitab1
-	DD LUTHUD6-lk_anitab1
-	DD LUTHUD7-lk_anitab1
+	DD LKKNOCKDOWN1-lk_anitab1
+	DD LKKNOCKDOWN2-lk_anitab1
+	DD LKKNOCKDOWN3-lk_anitab1
+	DD LKKNOCKDOWN4-lk_anitab1
+	DD LKKNOCKDOWN5-lk_anitab1
+	DD LKKNOCKDOWN6-lk_anitab1
+	DD LKKNOCKDOWN7-lk_anitab1
 	DD 0
 LUSTANCE1:
 	DD LUSTANCE1_SUB-lk_anitab1, 0
@@ -2508,3 +2476,1074 @@ LUBACKBREAK1:
 LUBACKBREAK1_SUB:
 	DD LUBACKBREAK1_IMG-lk_anitab1
 	DW 100, 42, 52, -48
+
+LKSTANCE1:
+	DD LKSTANCE1_SUB - lk_anitab1, 0
+LKSTANCE1_SUB:
+	DD LKSTANCE1_IMG - lk_anitab1
+	DW 78, 138, 24, -4
+LKSTANCE2:
+	DD LKSTANCE2_SUB - lk_anitab1, 0
+LKSTANCE2_SUB:
+	DD LKSTANCE2_IMG - lk_anitab1
+	DW 76, 137, 24, -5
+LKSTANCE3:
+	DD LKSTANCE3_SUB - lk_anitab1, 0
+LKSTANCE3_SUB:
+	DD LKSTANCE3_IMG - lk_anitab1
+	DW 75, 136, 24, -5
+LKSTANCE4:
+	DD LKSTANCE4_SUB - lk_anitab1, 0
+LKSTANCE4_SUB:
+	DD LKSTANCE4_IMG - lk_anitab1
+	DW 75, 136, 24, -5
+LKSTANCE5:
+	DD LKSTANCE5_SUB - lk_anitab1, 0
+LKSTANCE5_SUB:
+	DD LKSTANCE5_IMG - lk_anitab1
+	DW 75, 137, 24, -5
+LKSTANCE6:
+	DD LKSTANCE6_SUB - lk_anitab1, 0
+LKSTANCE6_SUB:
+	DD LKSTANCE6_IMG - lk_anitab1
+	DW 75, 138, 24, -4
+LKSTANCE7:
+	DD LKSTANCE7_SUB - lk_anitab1, 0
+LKSTANCE7_SUB:
+	DD LKSTANCE7_IMG - lk_anitab1
+	DW 74, 139, 24, -3
+LKTURN1:
+	DD LKTURN1_SUB - lk_anitab1, 0
+LKTURN1_SUB:
+	DD LKTURN1_IMG - lk_anitab1
+	DW 67, 141, 23, -1
+LKTURN2:
+	DD LKTURN2_SUB - lk_anitab1, 0
+LKTURN2_SUB:
+	DD LKTURN2_IMG - lk_anitab1
+	DW 63, 141, 23, -2
+LKHIPUNCH1:
+	DD LKHIPUNCH1_SUB - lk_anitab1, 0
+LKHIPUNCH1_SUB:
+	DD LKHIPUNCH1_IMG - lk_anitab1
+	DW 64, 144, 18, 0
+LKHIPUNCH2:
+	DD LKHIPUNCH2_SUB - lk_anitab1, 0
+LKHIPUNCH2_SUB:
+	DD LKHIPUNCH2_IMG - lk_anitab1
+	DW 76, 144, 19, 1
+LKHIPUNCH3:
+	DD LKHIPUNCH3_SUB - lk_anitab1, 0
+LKHIPUNCH3_SUB:
+	DD LKHIPUNCH3_IMG - lk_anitab1
+	DW 107, 144, 18, 0
+LKHIPUNCH4:
+	DD LKHIPUNCH4_SUB - lk_anitab1, 0
+LKHIPUNCH4_SUB:
+	DD LKHIPUNCH4_IMG - lk_anitab1
+	DW 66, 145, 15, 1
+LKHIPUNCH5:
+	DD LKHIPUNCH5_SUB - lk_anitab1, 0
+LKHIPUNCH5_SUB:
+	DD LKHIPUNCH5_IMG - lk_anitab1
+	DW 62, 143, 16, 0
+LKHIPUNCH6:
+	DD LKHIPUNCH6_SUB - lk_anitab1, 0
+LKHIPUNCH6_SUB:
+	DD LKHIPUNCH6_IMG - lk_anitab1
+	DW 105, 142, 16, -1
+LKLOPUNCH1:
+	DD LKLOPUNCH1_SUB - lk_anitab1, 0
+LKLOPUNCH1_SUB:
+	DD LKLOPUNCH1_IMG - lk_anitab1
+	DW 106, 143, 18, 0
+LKLOPUNCH2:
+	DD LKLOPUNCH2_SUB - lk_anitab1, 0
+LKLOPUNCH2_SUB:
+	DD LKLOPUNCH2_IMG - lk_anitab1
+	DW 109, 137, 20, -6
+LKPALMSTRIKE1:
+	DD LKPALMSTRIKE1_SUB - lk_anitab1, 0
+LKPALMSTRIKE1_SUB:
+	DD LKPALMSTRIKE1_IMG - lk_anitab1
+	DW 71, 134, 22, -9
+LKPALMSTRIKE2:
+	DD LKPALMSTRIKE2_SUB - lk_anitab1, 0
+LKPALMSTRIKE2_SUB:
+	DD LKPALMSTRIKE2_IMG - lk_anitab1
+	DW 65, 131, 10, -11
+LKPALMSTRIKE3:
+	DD LKPALMSTRIKE3_SUB - lk_anitab1, 0
+LKPALMSTRIKE3_SUB:
+	DD LKPALMSTRIKE3_IMG - lk_anitab1
+	DW 54, 142, 0, -2
+LKHIKICK1:
+	DD LKHIKIK1_SUB - lk_anitab1, 0
+LKHIKIK1_SUB:
+	DD LKHIKIK1_IMG - lk_anitab1
+	DW 73, 139, 24, -2
+LKHIKICK2:
+	DD LKHIKIK2_SUB - lk_anitab1, 0
+LKHIKIK2_SUB:
+	DD LKHIKIK2_IMG - lk_anitab1
+	DW 70, 140, 15, 0
+LKHIKICK3:
+	DD LKHIKICK3_SUB - lk_anitab1, 0
+LKHIKICK3_SUB:
+	DD LKHIKICK3_IMG - lk_anitab1
+	DW 60, 139, 16, 0
+LKHIKICK4:
+	DD LKHIKIK4_SUB - lk_anitab1, 0
+LKHIKIK4_SUB:
+	DD LKHIKIK4_IMG - lk_anitab1
+	DW 73, 137, 13, -2
+LKHIKICK5:
+	DD LKHIKIK5_SUB - lk_anitab1, 0
+LKHIKIK5_SUB:
+	DD LKHIKIK5_IMG - lk_anitab1
+	DW 95, 129, 14, -9
+LKHIKICK6:
+	DD LKHIKIK6_SUB - lk_anitab1, 0
+LKHIKIK6_SUB:
+	DD LKHIKIK6_IMG - lk_anitab1
+	DW 115, 135, 15, -4
+LKLOKICK1:
+	DD LKLOKIK1_SUB - lk_anitab1, 0
+LKLOKIK1_SUB:
+	DD LKLOKIK1_IMG - lk_anitab1
+	DW 124, 123, 12, -14
+LKKNEE1:
+	DD LKKNEE1_SUB - lk_anitab1, 0
+LKKNEE1_SUB:
+	DD LKKNEE1_IMG - lk_anitab1
+	DW 68, 140, 22, -3
+LKKNEE2:
+	DD LKKNEE2_SUB - lk_anitab1, 0
+LKKNEE2_SUB:
+	DD LKKNEE2_IMG - lk_anitab1
+	DW 59, 135, 8, -3
+LKKNEE3:
+	DD LKKNEE3_SUB - lk_anitab1, 0
+LKKNEE3_SUB:
+	DD LKKNEE3_IMG - lk_anitab1
+	DW 71, 124, 13, -12
+LKROUNDKICK1:
+	DD LKROUNDKIK1_SUB - lk_anitab1, 0
+LKROUNDKIK1_SUB:
+	DD LKROUNDKIK1_IMG - lk_anitab1
+	DW 70, 133, 27, -5
+LKROUNDKICK2:
+	DD LKROUNDKIK2_SUB - lk_anitab1, 0
+LKROUNDKIK2_SUB:
+	DD LKROUNDKIK2_IMG - lk_anitab1
+	DW 72, 129, 27, -8
+LKROUNDKICK3:
+	DD LKROUNDKIK3_SUB - lk_anitab1, 0
+LKROUNDKIK3_SUB:
+	DD LKROUNDKIK3_IMG - lk_anitab1
+	DW 79, 122, 20, -14
+LKROUNDKICK4:
+	DD LKROUNDKIK4_SUB - lk_anitab1, 0
+LKROUNDKIK4_SUB:
+	DD LKROUNDKIK4_IMG - lk_anitab1
+	DW 103, 138, 4, 0
+LKROUNDKIK5:
+	DD LKROUNDKIK5_SUB - lk_anitab1, 0
+LKROUNDKIK5_SUB:
+	DD LKROUNDKIK5_IMG - lk_anitab1
+	DW 75, 103, 5, -30
+LKROUNDKICK6:
+	DD LKROUNDKIK6_SUB - lk_anitab1, 0
+LKROUNDKIK6_SUB:
+	DD LKROUNDKIK6_IMG - lk_anitab1
+	DW 56, 116, -4, -19
+LKROUNDKICK7:
+	DD LKROUNDKIK7_SUB - lk_anitab1, 0
+LKROUNDKIK7_SUB:
+	DD LKROUNDKIK7_IMG - lk_anitab1
+	DW 51, 130, 0, -7
+LKROUNDKICK8:
+	DD LKROUNDKIK8_SUB - lk_anitab1, 0
+LKROUNDKIK8_SUB:
+	DD LKROUNDKIK8_IMG - lk_anitab1
+	DW 69, 141, 20, 0
+LKSWEEPKICK1:
+	DD LKSWEEPKIK1_SUB - lk_anitab1, 0
+LKSWEEPKIK1_SUB:
+	DD LKSWEEPKIK1_IMG - lk_anitab1
+	DW 83, 127, 32, -12
+LKSWEEPKICK2:
+	DD LKSWEEPKIK2_SUB - lk_anitab1, 0
+LKSWEEPKIK2_SUB:
+	DD LKSWEEPKIK2_IMG - lk_anitab1
+	DW 69, 108, 28, -28
+LKSWEEPKICK3:
+	DD LKSWEEPKIK3_SUB - lk_anitab1, 0
+LKSWEEPKIK3_SUB:
+	DD LKSWEEPKIK3_IMG - lk_anitab1
+	DW 78, 89, 30, -45
+LKSWEEPKICK4:
+	DD LKSWEEPKIK4_SUB - lk_anitab1, 0
+LKSWEEPKIK4_SUB:
+	DD LKSWEEPKIK4_IMG - lk_anitab1
+	DW 97, 76, 19, -56
+LKSWEEPKICK5:
+	DD LKSWEEPKIK5_SUB - lk_anitab1, 0
+LKSWEEPKIK5_SUB:
+	DD LKSWEEPKIK5_IMG - lk_anitab1
+	DW 120, 81, 18, -58
+LKSWEEPKICK6:
+	DD LKSWEEPKIK6_SUB - lk_anitab1, 0
+LKSWEEPKIK6_SUB:
+	DD LKSWEEPKIK6_IMG - lk_anitab1
+	DW 97, 95, 38, -57
+LKSWEEPKICK7:
+	DD LKSWEEPKIK7_SUB - lk_anitab1, 0
+LKSWEEPKIK7_SUB:
+	DD LKSWEEPKIK7_IMG - lk_anitab1
+	DW 86, 108, 34, -27
+LKDUCK1:
+	DD LKDUCK1_SUB - lk_anitab1, 0
+LKDUCK1_SUB:
+	DD LKDUCK1_IMG - lk_anitab1
+	DW 76, 124, 20, -17
+LKDUCK2:
+	DD LKDUCK2_SUB - lk_anitab1, 0
+LKDUCK2_SUB:
+	DD LKDUCK2_IMG - lk_anitab1
+	DW 75, 102, 20, -35
+LKDUCK3:
+	DD LKDUCK3_SUB - lk_anitab1, 0
+LKDUCK3_SUB:
+	DD LKDUCK3_IMG - lk_anitab1
+	DW 72, 78, 24, -56
+LKDUCKTURN1:
+	DD LKDUCKTURN1_SUB - lk_anitab1, 0
+LKDUCKTURN1_SUB:
+	DD LKDUCKTURN1_IMG - lk_anitab1
+	DW 73, 90, 23, -44
+LKDUCKTURN2:
+	DD LKDUCKTURN2_SUB - lk_anitab1, 0
+LKDUCKTURN2_SUB:
+	DD LKDUCKTURN2_IMG - lk_anitab1
+	DW 66, 93, 24, -41
+LKDUCKPUNCH1:
+	DD LKDUCKPUNCH1_SUB - lk_anitab1, 0
+LKDUCKPUNCH1_SUB:
+	DD LKDUCKPUNCH1_IMG - lk_anitab1
+	DW 65, 91, 20, -44
+LKDUCKPUNCH2:
+	DD LKDUCKPUNCH2_SUB - lk_anitab1, 0
+LKDUCKPUNCH2_SUB:
+	DD LKDUCKPUNCH2_IMG - lk_anitab1
+	DW 70, 96, 20, -39
+LKDUCKPUNCH3:
+	DD LKDUCKPUNCH3_SUB - lk_anitab1, 0
+LKDUCKPUNCH3_SUB:
+	DD LKDUCKPUNCH3_IMG - lk_anitab1
+	DW 102, 95, 19, -43
+LKDUCKBLOCK1:
+	DD LKDUCKBLOCK1_SUB - lk_anitab1, 0
+LKDUCKBLOCK1_SUB:
+	DD LKDUCKBLOCK1_IMG - lk_anitab1
+	DW 80, 91, 26, -45
+LKDUCKBLOCK2:
+	DD LKDUCKBLOCK2_SUB - lk_anitab1, 0
+LKDUCKBLOCK2_SUB:
+	DD LKDUCKBLOCK2_IMG - lk_anitab1
+	DW 72, 96, 26, -40
+LKDUCKBLOCK3:
+	DD LKDUCKBLOCK3_SUB - lk_anitab1, 0
+LKDUCKBLOCK3_SUB:
+	DD LKDUCKBLOCK3_IMG - lk_anitab1
+	DW 68, 106, 24, -32
+LKDUCKIKHI1:
+	DD LKDUCKIKHI1_SUB - lk_anitab1, 0
+LKDUCKIKHI1_SUB:
+	DD LKDUCKIKHI1_IMG - lk_anitab1
+	DW 77, 83, 28, -50
+LKDUCKIKHI2:
+	DD LKDUCKIKHI2_SUB - lk_anitab1, 0
+LKDUCKIKHI2_SUB:
+	DD LKDUCKIKHI2_IMG - lk_anitab1
+	DW 62, 79, 19, -65
+LKDUCKIKHI3:
+	DD LKDUCKIKHI3_SUB - lk_anitab1, 0
+LKDUCKIKHI3_SUB:
+	DD LKDUCKIKHI3_IMG - lk_anitab1
+	DW 75, 76, 18, -68
+LKDUCKIKHI4:
+	DD LKDUCKIKHI4_SUB - lk_anitab1, 0
+LKDUCKIKHI4_SUB:
+	DD LKDUCKIKHI4_IMG - lk_anitab1
+	DW 110, 85, 17, -60
+LKDUCKIKLO1:
+	DD LKDUCKIKLO1_SUB - lk_anitab1, 0
+LKDUCKIKLO1_SUB:
+	DD LKDUCKIKLO1_IMG - lk_anitab1
+	DW 79, 77, 8, -68
+LKDUCKIKLO2:
+	DD LKDUCKIKLO2_SUB - lk_anitab1, 0
+LKDUCKIKLO2_SUB:
+	DD LKDUCKIKLO2_IMG - lk_anitab1
+	DW 94, 77, 8, -68
+LKUPPERCUT1:
+	DD LKUPPERCUT1_SUB - lk_anitab1, 0
+LKUPPERCUT1_SUB:
+	DD LKUPPERCUT1_IMG - lk_anitab1
+	DW 85, 100, 27, -36
+LKUPPERCUT2:
+	DD LKUPPERCUT2_SUB - lk_anitab1, 0
+LKUPPERCUT2_SUB:
+	DD LKUPPERCUT2_IMG - lk_anitab1
+	DW 67, 118, 22, -22
+LKUPPERCUT3:
+	DD LKUPPERCUT3_SUB - lk_anitab1, 0
+LKUPPERCUT3_SUB:
+	DD LKUPPERCUT3_IMG - lk_anitab1
+	DW 98, 129, 23, -12
+LKUPPERCUT4:
+	DD LKUPPERCUT4_SUB - lk_anitab1, 0
+LKUPPERCUT4_SUB:
+	DD LKUPPERCUT4_IMG - lk_anitab1
+	DW 94, 136, 20, -7
+LKUPPERCUT5:
+	DD LKUPPERCUT5_SUB - lk_anitab1, 0
+LKUPPERCUT5_SUB:
+	DD LKUPPERCUT5_IMG - lk_anitab1
+	DW 75, 152, 28, 5
+LKDUCKHIT1:
+	DD LKDUCKHIT1_SUB - lk_anitab1, 0
+LKDUCKHIT1_SUB:
+	DD LKDUCKHIT1_IMG - lk_anitab1
+	DW 69, 94, 24, -42
+LKDUCKHIT2:
+	DD LKDUCKHIT2_SUB - lk_anitab1, 0
+LKDUCKHIT2_SUB:
+	DD LKDUCKHIT2_IMG - lk_anitab1
+	DW 69, 100, 24, -37
+LKDUCKHIT3:
+	DD LKDUCKHIT3_SUB - lk_anitab1, 0
+LKDUCKHIT3_SUB:
+	DD LKDUCKHIT3_IMG - lk_anitab1
+	DW 68, 100, 24, -37
+LKHIHIT1:
+	DD LKHIHIT1_SUB - lk_anitab1, 0
+LKHIHIT1_SUB:
+	DD LKHIHIT1_IMG - lk_anitab1
+	DW 66, 139, 24, -3
+LKHIHIT2:
+	DD LKHIHIT2_SUB - lk_anitab1, 0
+LKHIHIT2_SUB:
+	DD LKHIHIT2_IMG - lk_anitab1
+	DW 66, 140, 26, -2
+LKHIHIT3:
+	DD LKHIHIT3_SUB - lk_anitab1, 0
+LKHIHIT3_SUB:
+	DD LKHIHIT3_IMG - lk_anitab1
+	DW 71, 133, 28, -8
+LKLOHIT1:
+	DD LKLOHIT1_SUB - lk_anitab1, 0
+LKLOHIT1_SUB:
+	DD LKLOHIT1_IMG - lk_anitab1
+	DW 67, 137, 24, -5
+LKLOHIT2:
+	DD LKLOHIT2_SUB - lk_anitab1, 0
+LKLOHIT2_SUB:
+	DD LKLOHIT2_IMG - lk_anitab1
+	DW 70, 133, 26, -9
+LKLOHIT3:
+	DD LKLOHIT3_SUB - lk_anitab1, 0
+LKLOHIT3_SUB:
+	DD LKLOHIT3_IMG - lk_anitab1
+	DW 71, 130, 28, -11
+LKSTUMBLE1:
+	DD LKSTUMBLE1_SUB - lk_anitab1, 0
+LKSTUMBLE1_SUB:
+	DD LKSTUMBLE1_IMG - lk_anitab1
+	DW 67, 134, 22, -8
+LKSTUMBLE2:
+	DD LKSTUMBLE2_SUB - lk_anitab1, 0
+LKSTUMBLE2_SUB:
+	DD LKSTUMBLE2_IMG - lk_anitab1
+	DW 79, 135, 17, -7
+LKSTUMBLE3:
+	DD LKSTUMBLE3_SUB - lk_anitab1, 0
+LKSTUMBLE3_SUB:
+	DD LKSTUMBLE3_IMG - lk_anitab1
+	DW 68, 132, 13, -10
+LKSTUMBLE4:
+	DD LKSTUMBLE4_SUB - lk_anitab1, 0
+LKSTUMBLE4_SUB:
+	DD LKSTUMBLE4_IMG - lk_anitab1
+	DW 66, 129, 12, -11
+LKSTUMBLE5:
+	DD LKSTUMBLE5_SUB - lk_anitab1, 0
+LKSTUMBLE5_SUB:
+	DD LKSTUMBLE5_IMG - lk_anitab1
+	DW 60, 131, 19, -7
+LKHIBLOCK1:
+	DD LKHIBLOCK1_SUB - lk_anitab1, 0
+LKHIBLOCK1_SUB:
+	DD LKHIBLOCK1_IMG - lk_anitab1
+	DW 78, 138, 24, -5
+LKHIBLOCK2:
+	DD LKHIBLOCK2_SUB - lk_anitab1, 0
+LKHIBLOCK2_SUB:
+	DD LKHIBLOCK2_IMG - lk_anitab1
+	DW 71, 142, 25, -1
+LKHIBLOCK3:
+	DD LKHIBLOCK3_SUB - lk_anitab1, 0
+LKHIBLOCK3_SUB:
+	DD LKHIBLOCK3_IMG - lk_anitab1
+	DW 68, 142, 24, -1
+LKKNOCKDOWN1:
+	DD LKKNOCKDOWN1_SUB - lk_anitab1, 0
+LKKNOCKDOWN1_SUB:
+	DD LKKNOCKDOWN1_IMG - lk_anitab1
+	DW 83, 136, 26, -5
+LKKNOCKDOWN2:
+	DD LKKNOCKDOWN2_SUB - lk_anitab1, 0
+LKKNOCKDOWN2_SUB:
+	DD LKKNOCKDOWN2_IMG - lk_anitab1
+	DW 109, 151, 25, 18
+LKKNOCKDOWN3:
+	DD LKKNOCKDOWN3_SUB - lk_anitab1, 0
+LKKNOCKDOWN3_SUB:
+	DD LKKNOCKDOWN3_IMG - lk_anitab1
+	DW 89, 96, 21, 0
+LKKNOCKDOWN4:
+	DD LKKNOCKDOWN4_SUB - lk_anitab1, 0
+LKKNOCKDOWN4_SUB:
+	DD LKKNOCKDOWN4_IMG - lk_anitab1
+	DW 87, 70, 26, -40
+LKKNOCKDOWN5:
+	DD LKKNOCKDOWN5_SUB - lk_anitab1, 0
+LKKNOCKDOWN5_SUB:
+	DD LKKNOCKDOWN5_IMG - lk_anitab1
+	DW 94, 71, 29, -64
+LKKNOCKDOWN6:
+	DD LKKNOCKDOWN6_SUB - lk_anitab1, 0
+LKKNOCKDOWN6_SUB:
+	DD LKKNOCKDOWN6_IMG - lk_anitab1
+	DW 122, 68, 47, -72
+LKKNOCKDOWN7:
+	DD LKKNOCKDOWN7_SUB - lk_anitab1, 0
+LKKNOCKDOWN7_SUB:
+	DD LKKNOCKDOWN7_IMG - lk_anitab1
+	DW 130, 46, 48, -93
+LKGETUP1:
+	DD LKGETUP1_SUB - lk_anitab1, 0
+LKGETUP1_SUB:
+	DD LKGETUP1_IMG - lk_anitab1
+	DW 76, 84, 48, -54
+LKGETUP2:
+	DD LKGETUP2_SUB - lk_anitab1, 0
+LKGETUP2_SUB:
+	DD LKGETUP2_IMG - lk_anitab1
+	DW 116, 90, 48, -44
+LKGETUP3:
+	DD LKGETUP3_SUB - lk_anitab1, 0
+LKGETUP3_SUB:
+	DD LKGETUP3_IMG - lk_anitab1
+	DW 95, 75, 50, -59
+LKGETUP4:
+	DD LKGETUP4_SUB - lk_anitab1, 0
+LKGETUP4_SUB:
+	DD LKGETUP4_IMG - lk_anitab1
+	DW 71, 117, 26, -23
+LKGETUP5:
+	DD LKGETUP5_SUB - lk_anitab1, 0
+LKGETUP5_SUB:
+	DD LKGETUP5_IMG - lk_anitab1
+	DW 82, 141, 31, -5
+LKSWEEPUP1:
+	DD LKSWEEPUP1_SUB - lk_anitab1, 0
+LKSWEEPUP1_SUB:
+	DD LKSWEEPUP1_IMG - lk_anitab1
+	DW 110, 62, 40, -87
+LKSWEEPUP2:
+	DD LKSWEEPUP2_SUB - lk_anitab1, 0
+LKSWEEPUP2_SUB:
+	DD LKSWEEPUP2_IMG - lk_anitab1
+	DW 59, 67, 21, -62
+LKSWEEPUP3:
+	DD LKSWEEPUP3_SUB - lk_anitab1, 0
+LKSWEEPUP3_SUB:
+	DD LKSWEEPUP3_IMG - lk_anitab1
+	DW 42, 95, 11, -40
+LKSWEEPUP4:
+	DD LKSWEEPUP4_SUB - lk_anitab1, 0
+LKSWEEPUP4_SUB:
+	DD LKSWEEPUP4_IMG - lk_anitab1
+	DW 63, 55, 19, -74
+LKSWEEPUP5:
+	DD LKSWEEPUP5_SUB - lk_anitab1, 0
+LKSWEEPUP5_SUB:
+	DD LKSWEEPUP5_IMG - lk_anitab1
+	DW 69, 67, 25, -65
+LKSWEEPUP6:
+	DD LKSWEEPUP6_SUB - lk_anitab1, 0
+LKSWEEPUP6_SUB:
+	DD LKSWEEPUP6_IMG - lk_anitab1
+	DW 68, 102, 27, -35
+LKSWEEPFALL1:
+	DD LKSWEEPFALL1_SUB - lk_anitab1, 0
+LKSWEEPFALL1_SUB:
+	DD LKSWEEPFALL1_IMG - lk_anitab1
+	DW 93, 111, 31, -18
+LKSWEEPFALL2:
+	DD LKSWEEPFALL2_SUB - lk_anitab1, 0
+LKSWEEPFALL2_SUB:
+	DD LKSWEEPFALL2_IMG - lk_anitab1
+	DW 116, 59, 38, -36
+LKSWEEPFALL3:
+	DD LKSWEEPFALL3_SUB - lk_anitab1, 0
+LKSWEEPFALL3_SUB:
+	DD LKSWEEPFALL3_IMG - lk_anitab1
+	DW 97, 66, 39, -48
+LKSWEEPFALL4:
+	DD LKSWEEPFALL4_SUB - lk_anitab1, 0
+LKSWEEPFALL4_SUB:
+	DD LKSWEEPFALL4_IMG - lk_anitab1
+	DW 94, 49, 36, -72
+LKSWEEPFALL5:
+	DD LKSWEEPFALL5_SUB - lk_anitab1, 0
+LKSWEEPFALL5_SUB:
+	DD LKSWEEPFALL5_IMG - lk_anitab1
+	DW 96, 46, 32, -92
+LKFLIPPED1:
+	DD LKFLIPPED1_SUB - lk_anitab1, 0
+LKFLIPPED1_SUB:
+	DD LKFLIPPED1_IMG - lk_anitab1
+	DW 75, 130, 31, -9
+LKFLIPPED2:
+	DD LKFLIPPED2_SUB - lk_anitab1, 0
+LKFLIPPED2_SUB:
+	DD LKFLIPPED2_IMG - lk_anitab1
+	DW 111, 89, 44, -10
+LKFLIPPED3:
+	DD LKFLIPPED3_SUB - lk_anitab1, 0
+LKFLIPPED3_SUB:
+	DD LKFLIPPED3_IMG - lk_anitab1
+	DW 78, 109, 36, 7
+LKFLIPPED4:
+	DD LKFLIPPED4_SUB - lk_anitab1, 0
+LKFLIPPED4_SUB:
+	DD LKFLIPPED4_IMG - lk_anitab1
+	DW 84, 109, 36, -8
+LKFLIP1:
+	DD LKFLIP1_SUB - lk_anitab1, 0
+LKFLIP1_SUB:
+	DD LKFLIP1_IMG - lk_anitab1
+	DW 89, 124, 17, -16
+LKFLIP2:
+	DD LKFLIP2_SUB - lk_anitab1, 0
+LKFLIP2_SUB:
+	DD LKFLIP2_IMG - lk_anitab1
+	DW 80, 88, 30, -48
+LKFLIP3:
+	DD LKFLIP3_SUB - lk_anitab1, 0
+LKFLIP3_SUB:
+	DD LKFLIP3_IMG - lk_anitab1
+	DW 96, 79, 35, -53
+LKFLIP4:
+	DD LKFLIP4_SUB - lk_anitab1, 0
+LKFLIP4_SUB:
+	DD LKFLIP4_IMG - lk_anitab1
+	DW 108, 70, 53, -61
+LKFLIP5:
+	DD LKFLIP5_SUB - lk_anitab1, 0
+LKFLIP5_SUB:
+	DD LKFLIP5_IMG - lk_anitab1
+	DW 106, 94, 64, -40
+LKFLIP6:
+	DD LKFLIP6_SUB - lk_anitab1, 0
+LKFLIP6_SUB:
+	DD LKFLIP6_IMG - lk_anitab1
+	DW 89, 77, 70, -55
+LKJUMP1:
+	DD LKJUMP1_SUB - lk_anitab1, 0
+LKJUMP1_SUB:
+	DD LKJUMP1_IMG - lk_anitab1
+	DW 73, 113, 21, -25
+LKJUMP2:
+	DD LKJUMP2_SUB - lk_anitab1, 0
+LKJUMP2_SUB:
+	DD LKJUMP2_IMG - lk_anitab1
+	DW 87, 152, 20, 7
+LKJUMP3:
+	DD LKJUMP3_SUB - lk_anitab1, 0
+LKJUMP3_SUB:
+	DD LKJUMP3_IMG - lk_anitab1
+	DW 86, 100, 19, 7
+LKJUMPKICK1:
+	DD LKJUMPKICK1_SUB - lk_anitab1, 0
+LKJUMPKICK1_SUB:
+	DD LKJUMPKICK1_IMG - lk_anitab1
+	DW 84, 142, 19, 18
+LKJUMPKICK2:
+	DD LKJUMPKICK2_SUB - lk_anitab1, 0
+LKJUMPKICK2_SUB:
+	DD LKJUMPKICK2_IMG - lk_anitab1
+	DW 115, 135, 17, 10
+LKJUMPFLIP1:
+	DD LKJUMPFLIP1_SUB - lk_anitab1, 0
+LKJUMPFLIP1_SUB:
+	DD LKJUMPFLIP1_IMG - lk_anitab1
+	DW 75, 149, 20, 5
+LKFLIPUNCH2:
+	DD LKFLIPUNCH2_SUB - lk_anitab1, 0
+LKFLIPUNCH2_SUB:
+	DD LKFLIPUNCH2_IMG - lk_anitab1
+	DW 90, 88, 28, 19
+LKFLIPUNCH3:
+	DD LKFLIPUNCH3_SUB - lk_anitab1, 0
+LKFLIPUNCH3_SUB:
+	DD LKFLIPUNCH3_IMG - lk_anitab1
+	DW 156, 88, 60, 21
+LKFLIPKICK2:
+	DD LKFLIPKICK2_SUB - lk_anitab1, 0
+LKFLIPKICK2_SUB:
+	DD LKFLIPKICK2_IMG - lk_anitab1
+	DW 85, 79, 17, 21
+LKFLIPKICK3:
+	DD LKFLIPKICK3_SUB - lk_anitab1, 0
+LKFLIPKICK3_SUB:
+	DD LKFLIPKICK3_IMG - lk_anitab1
+	DW 117, 75, 20, 17
+LKFLIPUNCH1:
+	DD LKFLIPUNCH1_SUB - lk_anitab1, 0
+LKFLIPUNCH1_SUB:
+	DD LKFLIPUNCH1_IMG - lk_anitab1
+	DW 81, 86, 20, 21
+LKFLIPKICK1:
+	DD LKFLIPKICK1_SUB - lk_anitab1, 0
+LKFLIPKICK1_SUB:
+	DD LKFLIPKICK1_IMG - lk_anitab1
+	DW 74, 81, 20, 22
+LKJUMPFLIP2:
+	DD LKJUMPFLIP2_SUB - lk_anitab1, 0
+LKJUMPFLIP2_SUB:
+	DD LKJUMPFLIP2_IMG - lk_anitab1
+	DW 56, 66, 7, 5
+LKJUMPFLIP3:
+	DD LKJUMPFLIP3_SUB - lk_anitab1, 0
+LKJUMPFLIP3_SUB:
+	DD LKJUMPFLIP3_IMG - lk_anitab1
+	DW 64, 64, 6, 3
+LKJUMPFLIP4:
+	DD LKJUMPFLIP4_SUB - lk_anitab1, 0
+LKJUMPFLIP4_SUB:
+	DD LKJUMPFLIP4_IMG - lk_anitab1
+	DW 68, 57, 15, 2
+LKJUMPFLIP5:
+	DD LKJUMPFLIP5_SUB - lk_anitab1, 0
+LKJUMPFLIP5_SUB:
+	DD LKJUMPFLIP5_IMG - lk_anitab1
+	DW 64, 66, 17, 7
+LKJUMPFLIP6:
+	DD LKJUMPFLIP6_SUB - lk_anitab1, 0
+LKJUMPFLIP6_SUB:
+	DD LKJUMPFLIP6_IMG - lk_anitab1
+	DW 60, 67, 13, 13
+LKJUMPFLIP7:
+	DD LKJUMPFLIP7_SUB - lk_anitab1, 0
+LKJUMPFLIP7_SUB:
+	DD LKJUMPFLIP7_IMG - lk_anitab1
+	DW 68, 57, 15, 12
+LKJUMPFLIP8:
+	DD LKJUMPFLIP8_SUB - lk_anitab1, 0
+LKJUMPFLIP8_SUB:
+	DD LKJUMPFLIP8_IMG - lk_anitab1
+	DW 68, 65, 9, 8
+LKBIKEKICK1:
+	DD LKBIKEKICK1_SUB - lk_anitab1, 0
+LKBIKEKICK1_SUB:
+	DD LKBIKEKICK1_IMG - lk_anitab1
+	DW 117, 63, 30, -11
+LKBIKEKICK2:
+	DD LKBIKEKICK2_SUB - lk_anitab1, 0
+LKBIKEKICK2_SUB:
+	DD LKBIKEKICK2_IMG - lk_anitab1
+	DW 112, 77, 30, -5
+LKBIKEKICK3:
+	DD LKBIKEKICK3_SUB - lk_anitab1, 0
+LKBIKEKICK3_SUB:
+	DD LKBIKEKICK3_IMG - lk_anitab1
+	DW 106, 69, 30, -8
+LKBIKEKICK4:
+	DD LKBIKEKICK4_SUB - lk_anitab1, 0
+LKBIKEKICK4_SUB:
+	DD LKBIKEKICK4_IMG - lk_anitab1
+	DW 120, 62, 32, -13
+LKBIKEKICK5:
+	DD LKBIKEKICK5_SUB - lk_anitab1, 0
+LKBIKEKICK5_SUB:
+	DD LKBIKEKICK5_IMG - lk_anitab1
+	DW 117, 68, 30, -13
+LKBIKEKICK6:
+	DD LKBIKEKICK6_SUB - lk_anitab1, 0
+LKBIKEKICK6_SUB:
+	DD LKBIKEKICK6_IMG - lk_anitab1
+	DW 103, 68, 30, -13
+LKBIKEKICK7:
+	DD LKBIKEKICK7_SUB - lk_anitab1, 0
+LKBIKEKICK7_SUB:
+	DD LKBIKEKICK7_IMG - lk_anitab1
+	DW 112, 62, 29, -13
+LKJUMPTHROW1:
+	DD LKJUMPTHROW1_SUB - lk_anitab1, 0
+LKJUMPTHROW1_SUB:
+	DD LKJUMPTHROW1_IMG - lk_anitab1
+	DW 73, 136, 23, 18
+LKJUMPTHROW2:
+	DD LKJUMPTHROW2_SUB - lk_anitab1, 0
+LKJUMPTHROW2_SUB:
+	DD LKJUMPTHROW2_IMG - lk_anitab1
+	DW 114, 107, 36, 15
+LKTHROWHI1:
+	DD LKTHROWHI1_SUB - lk_anitab1, 0
+LKTHROWHI1_SUB:
+	DD LKTHROWHI1_IMG - lk_anitab1
+	DW 74, 137, 34, -5
+LKTHROWHI2:
+	DD LKTHROWHI2_SUB - lk_anitab1, 0
+LKTHROWHI2_SUB:
+	DD LKTHROWHI2_IMG - lk_anitab1
+	DW 58, 132, 29, -9
+LKTHROWHI3:
+	DD LKTHROWHI3_SUB - lk_anitab1, 0
+LKTHROWHI3_SUB:
+	DD LKTHROWHI3_IMG - lk_anitab1
+	DW 61, 127, 35, -13
+LKTHROWLO1:
+	DD LKTHROWLO1_SUB - lk_anitab1, 0
+LKTHROWLO1_SUB:
+	DD LKTHROWLO1_IMG - lk_anitab1
+	DW 70, 110, 25, -28
+LKTHROWLO2:
+	DD LKTHROWLO2_SUB - lk_anitab1, 0
+LKTHROWLO2_SUB:
+	DD LKTHROWLO2_IMG - lk_anitab1
+	DW 70, 87, 24, -48
+LKSTUNNED1:
+	DD LKSTUNNED1_SUB - lk_anitab1, 0
+LKSTUNNED1_SUB:
+	DD LKSTUNNED1_IMG - lk_anitab1
+	DW 60, 138, 23, -4
+LKSTUNNED2:
+	DD LKSTUNNED2_SUB - lk_anitab1, 0
+LKSTUNNED2_SUB:
+	DD LKSTUNNED2_IMG - lk_anitab1
+	DW 62, 136, 23, -5
+LKSTUNNED3:
+	DD LKSTUNNED3_SUB - lk_anitab1, 0
+LKSTUNNED3_SUB:
+	DD LKSTUNNED3_IMG - lk_anitab1
+	DW 59, 133, 23, -8
+LKSTUNNED4:
+	DD LKSTUNNED4_SUB - lk_anitab1, 0
+LKSTUNNED4_SUB:
+	DD LKSTUNNED4_IMG - lk_anitab1
+	DW 62, 128, 25, -12
+LKSTUNNED5:
+	DD LKSTUNNED5_SUB - lk_anitab1, 0
+LKSTUNNED5_SUB:
+	DD LKSTUNNED5_IMG - lk_anitab1
+	DW 62, 137, 23, -5
+LKSTUNNED6:
+	DD LKSTUNNED6_SUB - lk_anitab1, 0
+LKSTUNNED6_SUB:
+	DD LKSTUNNED6_IMG - lk_anitab1
+	DW 61, 141, 23, -1
+LKSTUNNED7:
+	DD LKSTUNNED7_SUB - lk_anitab1, 0
+LKSTUNNED7_SUB:
+	DD LKSTUNNED7_IMG - lk_anitab1
+	DW 61, 140, 23, -2
+LKVICTORY1:
+	DD LKVICTORY1_SUB - lk_anitab1, 0
+LKVICTORY1_SUB:
+	DD LKVICTORY1_IMG - lk_anitab1
+	DW 62, 140, 24, -2
+LKVICTORY2:
+	DD LKVICTORY2_SUB - lk_anitab1, 0
+LKVICTORY2_SUB:
+	DD LKVICTORY2_IMG - lk_anitab1
+	DW 57, 139, 24, -3
+LKVICTORY3:
+	DD LKVICTORY3_SUB - lk_anitab1, 0
+LKVICTORY3_SUB:
+	DD LKVICTORY3_IMG - lk_anitab1
+	DW 56, 74, 24, -4
+LKVICTORY4:
+	DD LKVICTORY4_SUB - lk_anitab1, 0
+LKVICTORY4_SUB:
+	DD LKVICTORY4_IMG - lk_anitab1
+	DW 126, 62, 52, -2
+LKVICTORY5:
+	DD LKVICTORY5_SUB - lk_anitab1, 0
+LKVICTORY5_SUB:
+	DD LKVICTORY5_IMG - lk_anitab1
+	DW 105, 73, 42, 6
+LKVICTORY6:
+	DD LKVICTORY6_SUB - lk_anitab1, 0
+LKVICTORY6_SUB:
+	DD LKVICTORY6_IMG - lk_anitab1
+	DW 44, 90, 18, 21
+LKVICTORY7:
+	DD LKVICTORY7_SUB - lk_anitab1, 0
+LKVICTORY7_SUB:
+	DD LKVICTORY7_IMG - lk_anitab1
+	DW 48, 61, 20, -3
+LKVICTORY8:
+	DD LKVICTORY8_SUB - lk_anitab1, 0
+LKVICTORY8_SUB:
+	DD LKVICTORY8_IMG - lk_anitab1
+	DW 52, 56, 20, -9
+LKVICTORYLEGS:
+	DD LKVICTORYLEGS_SUB - lk_anitab1, 0
+LKVICTORYLEGS_SUB:
+	DD LKVICTORYLEGS_IMG - lk_anitab1
+	DW 32, 82, 3, -51
+LKWHEELKIK1:
+	DD LKWHEELKIK1_SUB - lk_anitab1, 0
+LKWHEELKIK1_SUB:
+	DD LKWHEELKIK1_IMG - lk_anitab1
+	DW 76, 112, 32, -28
+LKWHEELKIK2:
+	DD LKWHEELKIK2_SUB - lk_anitab1, 0
+LKWHEELKIK2_SUB:
+	DD LKWHEELKIK2_IMG - lk_anitab1
+	DW 119, 87, 48, -47
+LKWHEELKIK3:
+	DD LKWHEELKIK3_SUB - lk_anitab1, 0
+LKWHEELKIK3_SUB:
+	DD LKWHEELKIK3_IMG - lk_anitab1
+	DW 90, 142, 39, 3
+LKWHEELKIK4:
+	DD LKWHEELKIK4_SUB - lk_anitab1, 0
+LKWHEELKIK4_SUB:
+	DD LKWHEELKIK4_IMG - lk_anitab1
+	DW 108, 127, 46, 4
+LKWHEELKIK5:
+	DD LKWHEELKIK5_SUB - lk_anitab1, 0
+LKWHEELKIK5_SUB:
+	DD LKWHEELKIK5_IMG - lk_anitab1
+	DW 135, 72, 46, -9
+LKWHEELKICK6:
+	DD LKWHEELKIK6_SUB - lk_anitab1, 0
+LKWHEELKIK6_SUB:
+	DD LKWHEELKIK6_IMG - lk_anitab1
+	DW 78, 144, 24, 11
+LKWHEELKICK7:
+	DD LKWHEELKIK7_SUB - lk_anitab1, 0
+LKWHEELKIK7_SUB:
+	DD LKWHEELKIK7_IMG - lk_anitab1
+	DW 98, 129, 33, -8
+LKWHEELKIK8:
+	DD LKWHEELKIK8_SUB - lk_anitab1, 0
+LKWHEELKIK8_SUB:
+	DD LKWHEELKIK8_IMG - lk_anitab1
+	DW 124, 86, 51, -46
+LKWHEELKIK9:
+	DD LKWHEELKIK9_SUB - lk_anitab1, 0
+LKWHEELKIK9_SUB:
+	DD LKWHEELKIK9_IMG - lk_anitab1
+	DW 69, 78, 31, -56
+LKDEADLEG1:
+	DD LKDEADLEG1_SUB - lk_anitab1, 0
+LKDEADLEG1_SUB:
+	DD LKDEADLEG1_IMG - lk_anitab1
+	DW 39, 100, 12, -38
+LKDEADLEG2:
+	DD LKDEADLEG2_SUB - lk_anitab1, 0
+LKDEADLEG2_SUB:
+	DD LKDEADLEG2_IMG - lk_anitab1
+	DW 57, 87, 12, -49
+LKDEADLEG3:
+	DD LKDEADLEG3_SUB - lk_anitab1, 0
+LKDEADLEG3_SUB:
+	DD LKDEADLEG3_IMG - lk_anitab1
+	DW 59, 59, 12, -73
+LKDEADLEG4:
+	DD LKDEADLEG4_SUB - lk_anitab1, 0
+LKDEADLEG4_SUB:
+	DD LKDEADLEG4_IMG - lk_anitab1
+	DW 57, 64, 12, -68
+LKDEADLEG5:
+	DD LKDEADLEG5_SUB - lk_anitab1, 0
+LKDEADLEG5_SUB:
+	DD LKDEADLEG5_IMG - lk_anitab1
+	DW 65, 63, 13, -69
+LKDEADLEG6:
+	DD LKDEADLEG6_SUB - lk_anitab1, 0
+LKDEADLEG6_SUB:
+	DD LKDEADLEG6_IMG - lk_anitab1
+	DW 87, 48, 9, -82
+LKDEADLEG7:
+	DD LKDEADLEG7_SUB - lk_anitab1, 0
+LKDEADLEG7_SUB:
+	DD LKDEADLEG7_IMG - lk_anitab1
+	DW 104, 36, 13, -96
+LKDEADTORSO1:
+	DD LKDEADTORSO1_SUB - lk_anitab1, 0
+LKDEADTORSO1_SUB:
+	DD LKDEADTORSO1_IMG - lk_anitab1
+	DW 42, 66, 12, -19
+LKDEADTORSO2:
+	DD LKDEADTORSO2_SUB - lk_anitab1, 0
+LKDEADTORSO2_SUB:
+	DD LKDEADTORSO2_IMG - lk_anitab1
+	DW 82, 45, 17, -26
+LKDEADTORSO3:
+	DD LKDEADTORSO3_SUB - lk_anitab1, 0
+LKDEADTORSO3_SUB:
+	DD LKDEADTORSO3_IMG - lk_anitab1
+	DW 72, 54, 11, -45
+LKDEADTORSO4:
+	DD LKDEADTORSO4_SUB - lk_anitab1, 0
+LKDEADTORSO4_SUB:
+	DD LKDEADTORSO4_IMG - lk_anitab1
+	DW 40, 56, -7, -45
+LKDEADTORSO5:
+	DD LKDEADTORSO5_SUB - lk_anitab1, 0
+LKDEADTORSO5_SUB:
+	DD LKDEADTORSO5_IMG - lk_anitab1
+	DW 36, 65, -25, -46
+LKDEADTORSO6:
+	DD LKDEADTORSO6_SUB - lk_anitab1, 0
+LKDEADTORSO6_SUB:
+	DD LKDEADTORSO6_IMG - lk_anitab1
+	DW 39, 68, -45, -70
+LKDEADTORSO7:
+	DD LKDEADTORSO7_SUB - lk_anitab1, 0
+LKDEADTORSO7_SUB:
+	DD LKDEADTORSO7_IMG - lk_anitab1
+	DW 44, 44, -50, -94
+LKIMPALED1:
+	DD LKIMPALED1_SUB - lk_anitab1, 0
+LKIMPALED1_SUB:
+	DD LKIMPALED1_IMG - lk_anitab1
+	DW 44, 147, 12, 2
+LKIMPALED2:
+	DD LKIMPALED2_SUB - lk_anitab1, 0
+LKIMPALED2_SUB:
+	DD LKIMPALED2_IMG - lk_anitab1
+	DW 48, 141, 12, 0
+LKIMPALED3:
+	DD LKIMPALED3_SUB - lk_anitab1, 0
+LKIMPALED3_SUB:
+	DD LKIMPALED3_IMG - lk_anitab1
+	DW 52, 139, 11, -3
+LKIMPALED4:
+	DD LKIMPALED4_SUB - lk_anitab1, 0
+LKIMPALED4_SUB:
+	DD LKIMPALED4_IMG - lk_anitab1
+	DW 48, 136, 10, -1
+LKIMPALED5:
+	DD LKIMPALED5_SUB - lk_anitab1, 0
+LKIMPALED5_SUB:
+	DD LKIMPALED5_IMG - lk_anitab1
+	DW 51, 136, 11, -3
+LKNUTCRUNCH1:
+	DD LKNUTCRUNCH1_SUB - lk_anitab1, 0
+LKNUTCRUNCH1_SUB:
+	DD LKNUTCRUNCH1_IMG - lk_anitab1
+	DW 61, 136, 23, -5
+LKNUTCRUNCH2:
+	DD LKNUTCRUNCH2_SUB - lk_anitab1, 0
+LKNUTCRUNCH2_SUB:
+	DD LKNUTCRUNCH2_IMG - lk_anitab1
+	DW 65, 98, 25, -37
+LKRIPTORSO1:
+	DD LKRIPTORSO1_SUB - lk_anitab1, 0
+LKRIPTORSO1_SUB:
+	DD LKRIPTORSO1_IMG - lk_anitab1
+	DW 58, 80, 7, 10
+LKRIPTORSO2:
+	DD LKRIPTORSO2_SUB - lk_anitab1, 0
+LKRIPTORSO2_SUB:
+	DD LKRIPTORSO2_IMG - lk_anitab1
+	DW 73, 61, 12, -5
+LKRIPTORSO3:
+	DD LKRIPTORSO3_SUB - lk_anitab1, 0
+LKRIPTORSO3_SUB:
+	DD LKRIPTORSO3_IMG - lk_anitab1
+	DW 44, 72, 12, -1
+LKRIPTORSO4:
+	DD LKRIPTORSO4_SUB - lk_anitab1, 0
+LKRIPTORSO4_SUB:
+	DD LKRIPTORSO4_IMG - lk_anitab1
+	DW 75, 50, 17, -16
+LKRIPTORSO5:
+	DD LKRIPTORSO5_SUB - lk_anitab1, 0
+LKRIPTORSO5_SUB:
+	DD LKRIPTORSO5_IMG - lk_anitab1
+	DW 55, 60, 4, -18
+LKRIPTORSO6:
+	DD LKRIPTORSO6_SUB - lk_anitab1, 0
+LKRIPTORSO6_SUB:
+	DD LKRIPTORSO6_IMG - lk_anitab1
+	DW 90, 40, 12, -42
+LKBACKBREAK1:
+	DD LKBACKBREAK1_SUB - lk_anitab1, 0
+LKBACKBREAK1_SUB:
+	DD LKBACKBREAK1_IMG - lk_anitab1
+	DW 89, 60, 24, -23
+LKBACKBREAK2:
+	DD LKBACKBREAK2_SUB - lk_anitab1, 0
+LKBACKBREAK2_SUB:
+	DD LKBACKBREAK2_IMG - lk_anitab1
+	DW 117, 63, 38, -32
+LKBACKBREAK3:
+	DD LKBACKBREAK3_SUB - lk_anitab1, 0
+LKBACKBREAK3_SUB:
+	DD LKBACKBREAK3_IMG - lk_anitab1
+	DW 136, 64, 41, -52
+LKWALKTORSO1:
+	DD LKWALKTORSO1_SUB - lk_anitab1, 0
+LKWALKTORSO1_SUB:
+	DD LKWALKTORSO1_IMG - lk_anitab1
+	DW 74, 69, 25, 0
+LKWALKTORSO2:
+	DD LKWALKTORSO2_SUB - lk_anitab1, 0
+LKWALKTORSO2_SUB:
+	DD LKWALKTORSO2_IMG - lk_anitab1
+	DW 74, 69, 25, 0
+LKWALKTORSO3:
+	DD LKWALKTORSO3_SUB - lk_anitab1, 0
+LKWALKTORSO3_SUB:
+	DD LKWALKTORSO3_IMG - lk_anitab1
+	DW 74, 69, 25, 0
+LKWALKTORSO4:
+	DD LKWALKTORSO4_SUB - lk_anitab1, 0
+LKWALKTORSO4_SUB:
+	DD LKWALKTORSO4_IMG - lk_anitab1
+	DW 74, 69, 25, 0
+LKWALKTORSO5:
+	DD LKWALKTORSO5_SUB - lk_anitab1, 0
+LKWALKTORSO5_SUB:
+	DD LKWALKTORSO5_IMG - lk_anitab1
+	DW 74, 69, 25, 0
+LKWALKTORSO6:
+	DD LKWALKTORSO6_SUB - lk_anitab1, 0
+LKWALKTORSO6_SUB:
+	DD LKWALKTORSO6_IMG - lk_anitab1
+	DW 74, 69, 25, 0
+LKWALKTORSO7:
+	DD LKWALKTORSO7_SUB - lk_anitab1, 0
+LKWALKTORSO7_SUB:
+	DD LKWALKTORSO7_IMG - lk_anitab1
+	DW 74, 69, 25, 0
+LKWALKTORSO8:
+	DD LKWALKTORSO8_SUB - lk_anitab1, 0
+LKWALKTORSO8_SUB:
+	DD LKWALKTORSO8_IMG - lk_anitab1
+	DW 74, 69, 25, -1
+LKWALKTORSO9:
+	DD LKWALKTORSO9_SUB - lk_anitab1, 0
+LKWALKTORSO9_SUB:
+	DD LKWALKTORSO9_IMG - lk_anitab1
+	DW 74, 69, 25, -3

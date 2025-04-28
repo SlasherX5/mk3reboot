@@ -930,9 +930,37 @@
 #define		TUNE_WIN1B		  607
 #define		TUNE_WIN1C		  608
 
+#define TRK_RND1_FIGHT	 609 //33 //80		/* round 1 fight, ROUND1.RAW */
+#define TRK_RND2_FIGHT	 610 //33 //81		/* round 2 fight, ROUND2.RAW */
+#define TRK_RND3_FIGHT	 611 //33 //82		/* round 3 fight, ROUND3.RAW */
+#define TRK_RND4_FIGHT	 612 //33 //83		/* round 4 fight, ROUND4.RAW */
+
+
 #define  	TS_LOGO				 	485	// ... was 448 before mod
 
-#define NUMBER_OF_SEQUENCES 		609	// ... was 448 before mod
+#define ST_JAX_YEAH 613
+#define ST_JAX_YEAH2 614
+#define ST_JAX_SUCKER 615
+#define ST_JAX_YOUGET 616
+#define ST_JAX_GETSOME 617
+
+#define GS_DEATH_JX 618
+#define GS_SHOOK_JX 619
+#define GS_RUN_JX 620
+#define GS_TV_JX 621
+#define GS_FHV_JX1 622
+#define GS_FHV_JX2 623
+#define GS_FHV_JX3 624
+#define GS_ATK_JX1 625
+#define GS_ATK_JX2 626
+#define GS_JUMP_JX 627
+#define GS_GRAB_JX 628
+#define GS_SLAM_JX 629
+#define GS_WST_JX1 630
+#define GS_WST_JX2 631
+
+
+#define NUMBER_OF_SEQUENCES 		632	// ... was 448 before mod
 
 
 

@@ -178,7 +178,7 @@ void baby_start_pause(void)
 
 	/* load babality file data */
 	player_heap_adj();
-	character_texture_load((current_proc->pdata.p_otherguy)->ochar, (current_proc->pdata.p_otherguy)->over,CHAR_BABY,finish_heap_ptr,ASYNC_LOAD|FATAL_LOAD); // want to load baby file for loser, hence otherguy
+	character_texture_load((current_proc->pdata.p_otherguy)->ochar, (current_proc->pdata.p_otherguy)->over,CHAR_BABY,finish_heap_ptr,ASYNC_LOAD|FATAL_LOAD, obj == p1_obj ? 0 : 1); // want to load baby file for loser, hence otherguy
 
 	/* sleep for fade */
 	process_sleep(0x20);

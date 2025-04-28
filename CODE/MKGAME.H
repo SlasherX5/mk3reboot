@@ -67,6 +67,7 @@
 #define FT_MOTARO		15			// big bad boss
 #define FT_SK			16
 #define FT_NOOB 		17
+#define FT_COUNT		18
 
 /* special equates */
 #define FT_ENDUR2A		0x20
@@ -448,6 +449,7 @@
 #define ACT_LEGGED		0x506
 #define ACT_REACT_FLIPK	0x507
 #define ACT_PITTING		0x508	// knocking someone into the pit
+#define ACT_POST_AIRSTK	0x50a
 
 /* sitting duck states */
 #define ACT_SWEEP_SD	0x600	// sweep sitting duck mode

@@ -1887,9 +1887,7 @@ void jax_slice(void)
 {
 	fatality_start_pause();
 
-	if (current_proc->pa8->over != 0)
-		playsnd(TS_SK_SUBERB);
-	else
+	if (current_proc->pa8->over == 0)
 		ochar_sound(7);
 
 	animate2_a9(5,ANIM_JAX_MORPH);		
@@ -3648,7 +3646,7 @@ void fatality_start_pause(void)
 
 	/* load fatality file data */
 	player_heap_adj();
-	character_texture_load(obj->ochar, obj->over, fataltype,finish_heap_ptr,FATAL_LOAD|ASYNC_LOAD);
+	character_texture_load(obj->ochar, obj->over, fataltype,finish_heap_ptr,FATAL_LOAD|ASYNC_LOAD, obj == p1_obj ? 0 : 1);
 
 	/* sleep for fade */
 	process_sleep(0x20);

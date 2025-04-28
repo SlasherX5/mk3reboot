@@ -83,7 +83,7 @@ void wess_pan_mode_set(WORD v)
 
 }
 
-extern File_IO_Struct module_int;
+// extern File_IO_Struct module_int;
 
 WORD PCinit()
 {

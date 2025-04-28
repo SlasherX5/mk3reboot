@@ -172,6 +172,7 @@
     </MASM>
     <MASM Include="JAX\JAX.ASM" />
     <MASM Include="JAX\JAXF.ASM" />
+    <MASM Include="LKANG\LKANG.ASM" />
     <MASM Include="MKBELL.ASM">
       <FileType>Document</FileType>
     </MASM>

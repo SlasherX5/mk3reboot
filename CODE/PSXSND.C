@@ -7,6 +7,10 @@
 #include "psxsnd.h"
 #include "mk3snd.h"
 
+typedef void* OBJECT;
+
+#include "MKSOUND.H"
+
 EMSOUNDOBJ sndobj[MAX_SOUND_OBJS] = { 0 };
 
 #define GENERALGRP  0x00000001
@@ -20,6 +24,30 @@ LcdList lcdfightlist_arr[] = {
     {"KANO\\KANO.LCD"          },
     {"SONYA\\SONYA.LCD"        },
     {"JAX\\JAX.LCD"           },
+    {"INDIAN\\INDIAN.LCD"      },
+    {"SUBZERO\\SUBZERO.LCD"    },
+    {"SWAT\\SWAT.LCD"          },
+    {"LIA\\LIA.LCD"            },
+    {"ROBO1\\ROBO1.LCD"        },
+    {"ROBO2\\ROBO2.LCD"        },
+    {"LAO\\KUNGLAO.LCD"        },
+    {"TUSK\\TUSK.LCD"          },
+    {"SHEEVA\\SHEEVA.LCD"      },
+    {"SHANG\\SHANG.LCD"        },
+    {"LKANG\\LIUKANG.LCD"      },
+    {"ROBO3\\SMOKE.LCD"        },
+    {"MOTARO\\MOTARO.LCD"      },
+    {"SHAOKAHN\\SKFIGHT.LCD"   },
+    {"KANO\\NOOB.LCD"          },
+    {0},
+    {0},
+    {0}
+};
+
+LcdList lcdfightlist_arr2[] = {
+    {"KANO\\KANO.LCD"          },
+    {"SONYA\\SONYA.LCD"        },
+    {"JAX\\JAX.LCD"            },
     {"INDIAN\\INDIAN.LCD"      },
     {"SUBZERO\\SUBZERO.LCD"    },
     {"SWAT\\SWAT.LCD"          },
@@ -152,10 +180,10 @@ LcdList lcddatalist2_arr[] = {
     {"SNDDATA\\TUNE_TONG.LCD"     },
     {"SNDDATA\\TUNE_CHURCH.LCD"   },
     {"SNDDATA\\TUNE_GRAVE.LCD"    },
-    {0},
-    {0},
-    {0},
-    {0}
+    {"SNDDATA\\TUNE_PIT.LCD"      },
+    {"SNDDATA\\TUNE_PIT.LCD"      },
+    {"SNDDATA\\TUNE_PIT.LCD"      },
+    {"SNDDATA\\TUNE_PIT.LCD"      },
 };
 
 void DoSoundBlockClear(unsigned long sampblk)
@@ -204,16 +232,16 @@ void PsxSoundLoadData(int lcdnum)
 
 extern WORD p1_version,p2_version;
 							 		
-void PsxSoundLoadFighter1(int lcdnum)
+void PsxSoundLoadFighter1(int lcdnum, int lcdver)
 {
     DoSoundBlockClear(FIGHTER1GRP);
-	Win95_Load_LCD_File( lcdfightlist_arr[lcdnum], FIGHTER1GRP, FALSE);
+	Win95_Load_LCD_File(lcdver ? lcdfightlist_arr2[lcdnum] : lcdfightlist_arr[lcdnum], FIGHTER1GRP, FALSE);
 }
 
-void PsxSoundLoadFighter2(int lcdnum)
+void PsxSoundLoadFighter2(int lcdnum, int lcdver)
 {
     DoSoundBlockClear(FIGHTER2GRP);
-	Win95_Load_LCD_File(lcdfightlist_arr[lcdnum], FIGHTER2GRP, FALSE  );
+	Win95_Load_LCD_File(lcdver ? lcdfightlist_arr2[lcdnum] : lcdfightlist_arr[lcdnum], FIGHTER2GRP, FALSE  );
 }
 
 void PsxSoundLoadFighter1Babality(int lcdnum)

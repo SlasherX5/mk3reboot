@@ -2097,6 +2097,8 @@ void duck_turnaround(void)
 
  Description:	jump up punch or kick routine
 ******************************************************************************/
+void combo_air_pause(WORD pa0);
+
 void do_jumpup_kick_punch(WORD jtype)
 {
 	OBJECT *obj=current_proc->pa8;
@@ -2132,17 +2134,19 @@ void do_jumpup_kick_punch(WORD jtype)
 
 	if (results==SYSTEM_CARRY_SET)
 	{
+		combo_air_pause(8);
+
 		/* hit routine */
 		current_proc->pdata.p_action=ACT_HITFALL_SD;		// action: falling to ground !
 
 		/* stop in midair */
-		grav.pos=obj->ograv.pos;
-		yvel.pos=obj->oyvel.pos;
-		obj->oyvel.pos=0;
-		obj->ograv.pos=0;
-		process_sleep(8);
-		obj->ograv.pos=grav.pos;
-		obj->oyvel.pos=yvel.pos;
+//		grav.pos=obj->ograv.pos;
+//		yvel.pos=obj->oyvel.pos;
+//		obj->oyvel.pos=0;
+//		obj->ograv.pos=0;
+//		process_sleep(8);
+//		obj->ograv.pos=grav.pos;
+//		obj->oyvel.pos=yvel.pos;
 
 		((ADDRESS *)current_proc->pa9)++;					// pa9 --> jump kick finish animation
 
@@ -2217,34 +2221,135 @@ void do_flip_kick(void)
 
  Description:	flip in air punch
 ******************************************************************************/
+void air_combo_setup(void);
+void update_block_fk(void);
+
 void do_flip_punch(void)
 {
-	OBJECT *obj=current_proc->pa8;
+	OBJECT* obj = current_proc->pa8;
 
 	face_opponent(obj);
 	rsnd_whoosh();
 	group_sound(0);
 
-	current_proc->pdata.p_stk=0x0c;
+	current_proc->pdata.p_stk = 0x0c;
 
-	current_proc->pdata.p_action=ACT_FLYPUNCH;
+	current_proc->pdata.p_action = ACT_FLYPUNCH;
 
-	current_proc->a4=POW_FLIPKP;
-	if (air_strike(0x0c,16,3,ANGLE_GRAV,ANIM_FLIPPUNCH)==SYSTEM_CARRY_SET)
+	current_proc->a4 = POW_FLIPKP;
+	if (air_strike(0x0c, 16, 3, ANGLE_GRAV, ANIM_FLIPPUNCH) == SYSTEM_CARRY_SET)
 	{
-		/* pow !*/
-		mid_air_pause(obj,8);								// pause ticks
+		combo_air_pause(8);								// pause ticks
 
-		current_proc->pdata.p_action=ACT_FK_SD;			// flag: i'm vulnerable
-		current_proc->pdata.p_store4=NULL;				// avoid double drone punches
-		obj->ograv.pos=SCY(0xc000);
+		current_proc->pdata.p_action = ACT_FK_SD;			// flag: i'm vulnerable
+		current_proc->pdata.p_store4 = NULL;				// avoid double drone punches
+		obj->ograv.pos = SCY(0xc000);
 		flight_loop(obj);
 	}
 
-	current_proc->pdata.p_action=ACT_FK_SD;
+	current_proc->pdata.p_action = ACT_FK_SD;
 
 	/* jfp8 */
 	angle_jump_land_jsrp();
+
+	return;
+}
+
+
+
+void cap_elbow(void)
+{
+	air_combo_setup();
+	do_elbow();
+	reaction_exit(current_proc->pa8);
+}
+
+void cap_knee(void)
+{
+	air_combo_setup();
+	do_knee();
+	reaction_exit(current_proc->pa8);
+}
+
+void cap_airborn(void)
+{
+	short ta10;
+
+	ta10 = current_proc->a10;
+	ta10 -= 4;
+	if (ta10 < 0)
+		ta10 = 1;
+	(long)current_proc->a10 = (long)ta10;
+	process_sleep(ta10);
+	return;
+}
+
+void combo_air_pause(WORD pa0)
+{
+	OBJECT* obj = current_proc->pa8;
+	short ta0;
+	WORD* ta10, * ta11;
+
+	current_proc->pdata.p_store1 = f_block;
+	stop_me(obj);
+	clear_combo_butn();
+	current_proc->a10 = current_proc->pdata.p_anicount = pa0;
+	process_sleep(4);
+
+	if (is_he_airborn() == SYSTEM_CARRY_SET)
+	{
+		cap_airborn();
+		return;
+	}
+
+	if (am_i_joy() == SYSTEM_CARRY_CLR)
+	{
+		cap_elbow();			// drone ==combo
+	}		
+
+	if (obj == p1_obj)
+	{
+		ta11 = &c_hp[0];
+		ta10 = &c_hk[0];
+	}
+	else
+	{
+		ta11 = &c_hp[1];
+		ta10 = &c_hk[1];
+	}
+
+	/*
+	 * a10 = kick button location
+	 * a11 = punch button location
+	 */
+	ta0 = (short)current_proc->pdata.p_anicount - 4;
+	if (ta0 < 0)
+		ta0 = 1;
+	do
+	{
+		process_sleep(1);
+		if (*ta11 != 0)
+			cap_elbow();
+
+		if (*ta10 != 0)
+			cap_knee();
+	} while (--ta0 > 0);
+	return;
+}
+
+
+void air_combo_setup(void)
+{
+	if (current_proc->pdata.p_store1 == 0)
+	{
+		/* calla_for_him */
+		set_no_block(current_proc->pdata.p_otherguy);
+	}
+
+	ground_player(current_proc->pa8);
+	match_me_with_him();
+	flip_multi(current_proc->pa8);
+	multi_adjust_xy(current_proc->pa8, -SCX(0x40), 0);
 
 	return;
 }
@@ -2268,7 +2373,54 @@ void do_flip_punch(void)
 
  Description:	routine for making a strike animation while in the air
 ******************************************************************************/
-WORD air_strike(WORD strkoff,WORD framecnt,WORD anispeed,long gravity,WORD anioff)
+WORD air_strike(WORD strkoff, WORD framecnt, WORD anispeed, long gravity, WORD anioff)
+{
+	OBJECT* obj = current_proc->pa8;
+
+	obj->ograv.pos = gravity;								// set yer gravity
+	current_proc->pdata.p_store2 = current_proc->a4;
+
+	init_anirate(anispeed);
+
+	get_char_ani(ANIM_TABLE1, anioff);					// animation setup
+
+AS2:
+	process_sleep(1);
+	next_anirate();
+
+	if (GET_LONG(current_proc->pa9) == 0)
+	{
+		if (current_proc->pdata.p_store2 > (current_proc->pdata.p_otherproc)->pdata.p_power) 	// i have enough power to take them on
+		{
+			if (strike_check_a0(obj, strkoff) == SYSTEM_CARRY_SET)
+				return(SYSTEM_CARRY_SET);
+		}
+	}
+
+AS5:
+	if ((--framecnt) == 0)									// no hit, count this pass
+	{
+	AS7:
+		((ADDRESS*)current_proc->pa9)++;						// 2nd part of animation
+		current_proc->pdata.p_action = ACT_POST_AIRSTK;
+		current_proc->pdata.p_store4 = NULL;					// dornes -> dont try to kick again
+		flight_loop(obj);
+		return(SYSTEM_CARRY_CLR);
+	}
+
+AS3:
+	if (obj->oyvel.pos < 0)								// head upwards = loop
+		goto AS2;
+
+	if (obj->oypos.u.intpos < current_proc->pdata.p_ganiy)
+		goto AS2;										// am I on the ground
+
+	stop_me(obj);
+	ground_player(obj);									// landed attack failed
+	return(SYSTEM_CARRY_CLR);
+}
+
+WORD air_strike_OLD(WORD strkoff,WORD framecnt,WORD anispeed,long gravity,WORD anioff)
 {
 	OBJECT *obj=current_proc->pa8;
 
@@ -2924,14 +3076,14 @@ void shang_morph(WORD pa9)
 	{
 		psxcd_pause();
 
-		character_texture_load(pa9,0,CHAR_NORMAL,obj->oheap,SYNC_LOAD);
+		character_texture_load(pa9,0,CHAR_NORMAL,obj->oheap,SYNC_LOAD, obj == p1_obj ? 0 : 1);
 		if (obj==p1_obj)							// set heap to belong to correct owner
 			p1_heap_char=pa9;
 		else p2_heap_char=pa9;
 
 		if (obj->oid==OID_P1  )
-			PsxSoundLoadFighter1(pa9);
-		else PsxSoundLoadFighter2(pa9);
+			PsxSoundLoadFighter1(pa9, p1_version);
+		else PsxSoundLoadFighter2(pa9, p2_version);
 
 		psxcd_restart(cd_vol_tbl[f_music]);
 	}

@@ -338,6 +338,9 @@ extern	long skdiepit_module[];
 extern	long hscore_module[];
 extern	long mockpit_module[];
 
+// mk2 stuff
+extern	long deadpool_module[];
+
 void *table_o_mods[] = {
 	&subway_module,		//subway_module			; 0
 	&street_module,		//street_module			; 1
@@ -350,7 +353,7 @@ void *table_o_mods[] = {
 	&temple_module,		//temple_module 			; 8
 	&grave_module,			//grave_module				; 9
 	&pit_module,			//pit_module				; a
-	&portal_module,		//portal_module			; b
+	&deadpool_module,		//portal_module			; b
 	&buyin_module,			//buyin_module				; c
 	&hscore_module,		//hscore_module			; d
 	&ladder_module,		//ladder_module 			; e

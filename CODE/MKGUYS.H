@@ -432,6 +432,8 @@ extern WORD FIRE_P[];
 /* liu kang palette */
 extern WORD LKRED_P[];
 extern WORD LKYELO_P[];
+extern WORD LK2RED_P[];
+extern WORD LK2YELO_P[];
 
 /* motaro palettes */
 extern WORD MOTARO_P[];

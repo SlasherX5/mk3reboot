@@ -45,9 +45,13 @@ typedef struct p_palinfo {
 	WORD paltime;									/* @tick value when this palette was deleted */
 } PALINFO;
 
-typedef struct {
+typedef struct _BMPINFO {
 	WORD w, h;
+	BYTE tx, ty, num, delay,flags;
+	WORD* indices;
+	WORD time[2];
 	BYTE* pixels;
+	struct _BMPINFO* anim;
 } BMPINFO;
 
 /* 

@@ -127,10 +127,6 @@
 #define TRK_MOTARO_MERCY            		-1 //51
 
 #define TRK_FIGHT					-1 //61	//79		/* fight, ROUND5.RAW */
-#define TRK_RND1_FIGHT	 			-1 //33 //80		/* round 1 fight, ROUND1.RAW */
-#define TRK_RND2_FIGHT	 			-1 //33 //81		/* round 2 fight, ROUND2.RAW */
-#define TRK_RND3_FIGHT	 			-1 //33 //82		/* round 3 fight, ROUND3.RAW */
-#define TRK_RND4_FIGHT	 			-1 //33 //83		/* round 4 fight, ROUND4.RAW */
 
 /* wins with flawless streams */
 #define TRK_KANO_FWINS				-1 //33 //	(63-30+33)		/* all winning endings, STcharacter.RAW */

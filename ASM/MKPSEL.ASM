@@ -212,7 +212,7 @@ _HDJAX2:
 	DW 38, 50, 0, 0
 	DD _HDJAX_P
 _HDJAX2_TPG:
-	DW 2,    85,   173,    0
+	DW 4,  121,   154,    0
 
 	;CNOP	0,4
 	PUBLIC _HDLAO
@@ -486,6 +486,10 @@ _ochar_order_mugs:
 	DD _HDSMOKE
 	DD _HDMOTARO
 	DD _HDSHAO
+	DD _HDJAX2
+	DD _HDJAX2
+	DD _HDJAX2
+	DD _HDJAX2
 
 	ALIGN 4
 	PUBLIC _emh_images

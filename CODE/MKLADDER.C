@@ -41,41 +41,12 @@ extern void *MKBRICK2[];
 extern void *UPEVILA[];
 extern void *UPEVILB[];
 
-#if OLD_LADDER
-extern void *a_lbadge_spin[];
-extern void *LHDSHANG[];
-extern void *LHDSUBZERO[];
-extern void *LHDSWAT[];
-extern void *LHDBRIDE[];
-extern void *LHDJAX[];
-extern void *LHDLAO[];
-extern void *LHDSONYA[];
-extern void *LHDKANO[];
-extern void *LHDMUSTARD[];
-extern void *LHDLIUKANG[];
-extern void *LHDSHEGORO[];
-extern void *LHDINDIAN[];
-extern void *LHDKETCHUP[];
-extern void *LHDTUSKAN[];
-extern void *LHDSMOKE[];
-extern void *LHDSHAO[];
-extern void *LHDMOTARO[];
-extern void *LMKCOIN_01[];
-extern void *LMKCOIN_02[];
-extern void *LMKCOIN_03[];
-extern void *LMKCOIN_04[];
-extern void *LMKCOIN_05[];
-extern void *LMKCOIN_06[];
-extern void *LMKCOIN_07[];
-extern void *LMKCOIN_08[];
-extern void *LMKCOIN_09[];
-#endif
-
 extern void *HDSHANG[];
 extern void *HDSUBZERO[];
 extern void *HDSWAT[];
 extern void *HDBRIDE[];
 extern void *HDJAX[];
+extern void *HDJAX2[];
 extern void *HDLAO[];
 extern void *HDSONYA[];
 extern void *HDKANO[];
@@ -101,6 +72,48 @@ extern void *MKCOIN_09[];
 extern void *TXT_NOVICE[];
 extern void *TXT_MASTER[];
 extern void *TXT_WARRIOR[];
+
+WORD f_samemap;
+WORD map_same[] =
+{
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	FT_MOTARO,
+	FT_SK,
+	SP_END,
+
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	FT_MOTARO,
+	FT_SK,
+	SP_END,
+
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	FT_MOTARO,
+	FT_SK,
+	SP_END,
+
+	0xfefe,
+};
 
 /*******************************************************************************
  MAP ROM TABLES
@@ -129,7 +142,7 @@ WORD map_1[]=
 	FT_SK,
 	SP_END,
 
-	FT_ST,
+	FT_JAX,
 	FT_LK,
 	FT_TUSK,
 	FT_ROBO2,
@@ -168,7 +181,7 @@ WORD map_2[]=
 	FT_SK,
 	SP_END,
 
-	FT_ST,
+	FT_JAX,
 	FT_SG,
 	FT_LK,
 	FT_TUSK,
@@ -207,7 +220,7 @@ WORD map_3[]=
 	FT_SK,
 	SP_END,
 
-	FT_ST,
+	FT_JAX,
 	FT_LK,
 	FT_SG,
 	FT_TUSK,
@@ -285,7 +298,7 @@ WORD map_5[]=
 	FT_SK,
 	SP_END,
 
-	FT_SG,
+	FT_JAX,
 	FT_LK,
 	FT_ST,
 	FT_LAO,
@@ -405,46 +418,6 @@ MHE_ORD *mhe_ladder_order[]=
 	easy_1st
 };
 
-#if OLD_LADDER
-ADDRESS *ladder_perm_vram_list[]=
-{
-	(ADDRESS *)MKBRICK,
-	(ADDRESS *)MKBRICK2,
-	(ADDRESS *)UPEVILA,
-	(ADDRESS *)UPEVILB,
-	(ADDRESS *)LHDSHANG,
-	(ADDRESS *)LHDSUBZERO,
-	(ADDRESS *)LHDSWAT,
-	(ADDRESS *)LHDBRIDE,
-	(ADDRESS *)LHDJAX,
-	(ADDRESS *)LHDLAO,
-	(ADDRESS *)LHDSONYA,
-	(ADDRESS *)LHDKANO,
-	(ADDRESS *)LHDMUSTARD,
-	(ADDRESS *)LHDLIUKANG,
-	(ADDRESS *)LHDSHEGORO,
-	(ADDRESS *)LHDINDIAN,
-	(ADDRESS *)LHDKETCHUP,
-	(ADDRESS *)LHDTUSKAN,
-	(ADDRESS *)LHDSMOKE,
-	(ADDRESS *)LHDSHAO,
-	(ADDRESS *)LHDMOTARO,
-	(ADDRESS *)LMKCOIN_01,
-	(ADDRESS *)LMKCOIN_02,
-	(ADDRESS *)LMKCOIN_03,
-	(ADDRESS *)LMKCOIN_04,
-	(ADDRESS *)LMKCOIN_05,
-	(ADDRESS *)LMKCOIN_06,
-	(ADDRESS *)LMKCOIN_07,
-	(ADDRESS *)LMKCOIN_08,
-	(ADDRESS *)LMKCOIN_09,
-	(ADDRESS *)TXT_NOVICE,
-	(ADDRESS *)TXT_MASTER,
-	(ADDRESS *)TXT_WARRIOR,
-	NULL
-};
-#endif
-
 ADDRESS *ladder_perm_vram_list[]=
 {
 	(ADDRESS *)MKBRICK,
@@ -456,6 +429,7 @@ ADDRESS *ladder_perm_vram_list[]=
 	(ADDRESS *)HDSWAT,
 	(ADDRESS *)HDBRIDE,
 	(ADDRESS *)HDJAX,
+	(ADDRESS*)HDJAX2,
 	(ADDRESS *)HDLAO,
 	(ADDRESS *)HDSONYA,
 	(ADDRESS *)HDKANO,
@@ -479,7 +453,7 @@ ADDRESS *ladder_perm_vram_list[]=
 	(ADDRESS *)MKCOIN_09,
 	(ADDRESS *)TXT_NOVICE,
 	(ADDRESS *)TXT_MASTER,
-	(ADDRESS *)TXT_WARRIOR,
+	(ADDRESS *)TXT_WARRIOR,	
 	NULL
 };
 
@@ -529,7 +503,7 @@ void mk_ladder(void)
 	else
 	{
 		/* lad2 */
-		ladder_base=rom_maps_tbl[randu(6)-1];
+		ladder_base = f_samemap ? map_same : rom_maps_tbl[randu(6)-1];
 
 		setup_distant_ladder();
 		ladder_switch_scan();
@@ -1163,9 +1137,13 @@ extern ADDRESS ochar_order_mugs[];
 ******************************************************************************/
 ADDRESS get_player_ochar_a5(void)
 {
-	if (p1_state==PS_ACTIVE)
-		return(ochar_order_mugs[p1_char]);
-	else return(ochar_order_mugs[p2_char]);
+	WORD chr;
+	if (p1_state == PS_ACTIVE)
+		chr = p1_version && p1_char == FT_JAX ? FT_COUNT : p1_char;
+	else 
+		chr = p2_version && p2_char == FT_JAX ? FT_COUNT : p2_char;
+
+	return ochar_order_mugs[chr];
 }
 
 /******************************************************************************
@@ -1455,6 +1433,8 @@ void process_a_ladder(MHE_ORD *pa0,short pa2)
 
  Description:	draw a brick
 ******************************************************************************/
+extern WORD drone_ver;
+
 void get_a_brick(WORD pa7,OBJECT **olist)
 {
 	OBJECT *obj;
@@ -1464,8 +1444,10 @@ void get_a_brick(WORD pa7,OBJECT **olist)
 	alloc_cache(MKBRICK,&ladder_anims,obj);
 	obj->oyvel.pos=-PANDOWN;
 
-	gso_dmawnz_ns(obj1,ochar_order_mugs[pa7],ladder_anims,0);
-	alloc_cache((void *)ochar_order_mugs[pa7],&ladder_anims,obj1);
+	WORD mugi = drone_ver && pa7 == FT_JAX ? FT_COUNT : pa7;
+
+	gso_dmawnz_ns(obj1,ochar_order_mugs[mugi],ladder_anims,0);
+	alloc_cache((void *)ochar_order_mugs[mugi],&ladder_anims,obj1);
 	obj1->oyvel.pos=-PANDOWN;
 
 	insert_object(obj1,olist);
@@ -1531,7 +1513,7 @@ short mhe_match_1_diffs[]={0,3,0};
 
 void set_match_1_diff(void)
 {
-	diff=(ladder_order<=2)?mhe_match_1_diffs[ladder_order]:mhe_match_1_diffs[2];
+	diff = ladder_order == 1 ? 9 : mhe_match_1_diffs[ladder_order];// : mhe_match_1_diffs[2];	
 	return;
 }
 

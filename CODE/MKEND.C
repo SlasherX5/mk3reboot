@@ -138,18 +138,22 @@ extern void *dlists_end1[];
 extern void *dlists_end2[];
 void show_ending_story(WORD pa0)
 {
+	f_fade = 0;
 	murder_myoinit_score();
 	DISPLAY_OFF;
 	process_sleep(3);
 
 	load_bkgd=pa0+BKGD_END_KANO;								// load correct BIO
+	
+	// load and place textures in memory
+	LoadBinToVram(end_texture_addr[pa0], bkgd_base_x, BACK_TEXTURE_BASE_Y);
+
 	init_background_module(table_o_mods[load_bkgd]);
 //	play_generic_tune(TRK_SOUL);								// start tune from prev screen
 
 	//vram_texture_load(bkgd_base_x,BACK_TEXTURE_BASE_Y,end_texture_addr[pa0]);
 
-	// load and place textures in memory
-	LoadBinToVram(end_texture_addr[pa0],bkgd_base_x,BACK_TEXTURE_BASE_Y);
+	
 
 	/* display first part of story */
 	dlists=dlists_end1;
@@ -771,7 +775,7 @@ void shao_kahn_death_fx(void)
 	while ( psxcd_async_on() )
 		process_sleep(1);
 #ifndef BLOCK_FILE_IO
-	module_os_close(module_int);
+	//module_os_close(module_int);
 #endif 
 	bkgd_preload=1;
 #else
@@ -1226,11 +1230,11 @@ void mk3_cast_o_characters(void)
 
 		/* coc7, get dudes out here */
 		p1_char=GET_WORD(ta11)++;
-		character_texture_load(p1_char,p1_version,CHAR_NORMAL,p1_heap,ASYNC_LOAD);
+		character_texture_load(p1_char,p1_version,CHAR_NORMAL,p1_heap,ASYNC_LOAD, 0);
 		while ( psxcd_async_on() )
 			process_sleep(1);
 #ifndef BLOCK_FILE_IO
-		module_os_close(module_int);			// make sure to close async file
+		//module_os_close(module_int);			// make sure to close async file
 #endif
 		obj1=current_proc->pa8=make_player_obj(p1_char,p1_version,SHADOW_MODE,PLAYER1_TYPE,p1_heap,0);
 		(current_proc->pa8)->ochar=p1_char;
@@ -1244,11 +1248,11 @@ void mk3_cast_o_characters(void)
 		else
 		{
 			p2_char=GET_WORD(ta11)++;
-			character_texture_load(p2_char,p2_version,CHAR_NORMAL,p2_heap,ASYNC_LOAD);
+			character_texture_load(p2_char,p2_version,CHAR_NORMAL,p2_heap,ASYNC_LOAD,1);
 			while ( psxcd_async_on() )
 				process_sleep(1);
 #ifndef BLOCK_FILE_IO
-			module_os_close(module_int);			// make sure to close async file
+			//module_os_close(module_int);			// make sure to close async file
 #endif
 			obj2=current_proc->pa8=make_player_obj(p2_char, p2_version, SHADOW_MODE,PLAYER2_TYPE,p2_heap,0);
 			get_player_palette(character_palettes_1[p2_version]);

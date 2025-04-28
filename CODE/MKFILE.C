@@ -19,6 +19,7 @@ extern long sonyaf_data[];
 extern long sonyf1_data[];
 #endif
 
+extern unsigned int lkang_lkang_bin[];
 extern unsigned int jax_jax_bin[];
 extern unsigned int jax_jax2_bin[];
 extern unsigned int jaxf_jax2_bin[];
@@ -44,6 +45,8 @@ extern WORD f_load;
 extern WORD p1_bar;
 extern WORD p2_bar;
 extern WORD g_marker;
+
+//File_IO_Struct* module_int = 0;
 
 void FlushCacheRam(void);
 
@@ -84,8 +87,6 @@ int module_io_init(void)
 
 }
 
-File_IO_Struct* module_int = NULL;
-
 /******************************************************************************
  Function: File_IO_Struct *module_os_open(char *filename)
 
@@ -103,8 +104,8 @@ File_IO_Struct* module_os_open(char *filename)
 {
 	char fname[64];
 #if PC_FILE
-	module_int=PCopen(filename,0,0);
-	return module_int;
+	//module_int=PCopen(filename,0,0);
+	return 0;// module_int;
 #else
 
 #if _CD_ABS_OPEN_ == 0
@@ -243,13 +244,13 @@ BYTE table_o_levels[]=
 	LVL_TEMPLE,                                     // 8, temple
 	LVL_GRAVE,                                      // 9, grave
 	LVL_PIT,                                        // a, pit/throne
-	LVL_PORTAL,                                     // b, portal module
+	LVL_DEADPOOL,                                   // b, deadpool
 	LVL_BUYIN,                                      // c, buyin module
 	LVL_HSCORE,                                     // d, not used
 	LVL_LADDER,                                     // e, ladder
 	LVL_VERSE,                                      // f, vs screem
 	LVL_COIN,                                       // 10, coin
-	LVL_NONE,                                       // 11, not used
+	LVL_NONE,										// 11, Unused
 	LVL_SOUL,                               // 12, no wall
 	LVL_GRADIENT,                                   // 13, red color gradient for text messages
 	LVL_GRADIENT,                                   // 14, green color gradient for text messages
@@ -459,6 +460,7 @@ char *level_texture_filename[]=
 	"BKGDS\\ARTSKEND.BIN",          // 60, skdie endings
 	"ATTRACT\\ARTHSCOR.BIN",        // 61, high score background plate
 	"BKGDS\\ARTMOCK.BIN",           // 62, mock pit
+	(char*)NO_FILE,		            // 63, embedded dead-pool
 
 };
 #else
@@ -535,7 +537,7 @@ int texture_level_load(WORD level,WORD sync)
 {
 	char *path;
 
-	if ((path = level_texture_filename[level]) != (char *)NO_FILE )
+ 	if ((path = level_texture_filename[level]) != (char *)NO_FILE )
 	{
 		permanent_art_loadaddr0 = p2_heap;
 		bkgd_texture_loadaddr   = p2_heap;
@@ -632,6 +634,8 @@ int texture_level_load(WORD level,WORD sync)
 
 #if 1 // for win95 we use files  // _CD_ABS_OPEN_==0 /* CDSEARCHFILE CASE */
 
+WORD char_texture_type[2] = { 0,0 };
+
 char *char_texture_filename[2][32][8]=
 {
 	{
@@ -648,7 +652,7 @@ char *char_texture_filename[2][32][8]=
 		{"TUSK\\TUSKB.BIN","TUSK\\TUSK.BIN","TUSK\\TUSKA.BIN","TUSK\\TUSKS.BIN","TUSK\\TUSKF.BIN","TUSK\\TUSKF1.BIN","VS\\VSTUSK.BIN"},
 		{"SHEEVA\\SHEEVAB.BIN","SHEEVA\\SHEEVA.BIN","SHEEVA\\SHEEVAA.BIN","SHEEVA\\SHEEVAS.BIN","SHEEVA\\SHEEVAF.BIN",(char*)CHAR_SPECIAL_4,"VS\\VSSG.BIN"},
 		{"SHANG\\SHANGB.BIN","SHANG\\SHANG.BIN","SHANG\\SHANGA.BIN","SHANG\\SHANGS.BIN","SHANG\\SHANGF.BIN","SHANG\\SHANGF1.BIN","VS\\VSST.BIN"},
-		{"LKANG\\LKANGB.BIN","LKANG\\LKANG.BIN","LKANG\\LKANGA.BIN","LKANG\\LKANGS.BIN","LKANG\\LKANGF.BIN","LKANG\\LKANGF1.BIN","VS\\VSLKANG.BIN"},
+		{"LKANG\\LKANGB.BIN",(char*)lkang_lkang_bin,"LKANG\\LKANGA.BIN","LKANG\\LKANGS.BIN","LKANG\\LKANGF.BIN","LKANG\\LKANGF1.BIN","VS\\VSLKANG.BIN"},
 		{"ROBO3\\ROBO3B.BIN","ROBO3\\ROBO3.BIN","ROBO3\\ROBO3A.BIN","ROBO3\\ROBO3S.BIN","ROBO3\\ROBO3F.BIN",(char*)CHAR_SPECIAL_6,"VS\\VSROBO3.BIN"},
 		{(char*)NO_FILE,"MOTARO\\MOTARO.BIN",(char*)NO_FILE,(char*)NO_FILE,(char*)NO_FILE,(char*)NO_FILE},
 		{(char*)NO_FILE,"SHAOKAHN\\SHAO.BIN",(char*)NO_FILE,"SHAOKAHN\\SHAOF.BIN",(char*)NO_FILE,(char*)NO_FILE},
@@ -755,12 +759,13 @@ char *char_lia_rip[]=
 };
 
 #endif
-int character_texture_load(WORD pchar,WORD pver,WORD type,void *dest,WORD sync)
+int character_texture_load(WORD pchar,WORD pver,WORD type,void *dest,WORD sync,WORD side)
 {
 #ifdef USE_OVERLAY_LOADER // windows 95 overlays
 	long size;
 	char *fname;
 
+	char_texture_type[side] = type;
    	fname = char_texture_filename[pver][pchar][type];
 
 	switch((LONG)fname)

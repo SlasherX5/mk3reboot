@@ -120,12 +120,8 @@ typedef unsigned short (*FUNCW)();                      /* void function with a 
 #define SCF_X 80                                                        /* scale factor percent x */
 #define SCF_Y 85                                                        /* scale factor percent y */
 
-#define SCALE_FACTOR_X ((float)SCF_X/100)                       /* scale factor between sony and arcade X */
-#define SCALE_FACTOR_Y ((float)SCF_Y/100)                       /* scale factor between sony and arcade Y */
-
-
-#define SCX(_x) ((long)(SCALE_FACTOR_X*(long)(_x)))
-#define SCY(_y) ((long)(SCALE_FACTOR_Y*(long)(_y)))
+#define SCX(_x) ((long)(SCF_X*(long)(_x))/100)
+#define SCY(_y) ((long)(SCF_Y*(long)(_y))/100)
 
 #define SCX_V(_x,_v) ((long)((_v)*(long)(_x)))
 #define SCY_V(_y,_v) ((long)((_v)*(long)(_y)))

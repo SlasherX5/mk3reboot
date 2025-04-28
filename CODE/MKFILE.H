@@ -78,11 +78,12 @@ typedef struct ovl
 #define LVL_PIT				9
 #define LVL_BUYIN			10
 #define LVL_BIO				11
-#define LVL_LADDER		15 	//12
+#define LVL_LADDER			15
 #define LVL_VERSE			13
 #define LVL_COIN			14
 #define LVL_SELECT			15
 #define LVL_TITLE			16
+#define LVL_DEADPOOL		63
 
 #define LVL_BIO_KANO		17
 #define LVL_BIO_SONYA		18
@@ -110,7 +111,7 @@ typedef struct ovl
 #define LVL_OPTTEXT			38
 #define LVL_CONTROL			39
 #define LVL_FONTS			40
-#define LVL_LOADING		41
+#define LVL_LOADING			41
 
 #define LVL_PORTAL 			42
 #define LVL_GRADIENT		43
@@ -139,7 +140,7 @@ typedef struct ovl
 /*
  *	RAM
  */
-__EXTERN__ File_IO_Struct *module_int;
+// __EXTERN__ File_IO_Struct *module_int;
 
 __EXTERN__ BYTE load_level;				// current level in load_addr area
 __EXTERN__ BYTE load_pal;				// current img palette overlay loaded (0-NTSC, 1-RGB)
@@ -160,7 +161,7 @@ int module_os_size(File_IO_Struct *fileptr);
 //int module_os_close(File_IO_Struct *fileptr);
 
 int texture_level_load(WORD level,WORD sync);
-int character_texture_load(WORD pchar,WORD pver,WORD type,void *dest,WORD sync);
+int character_texture_load(WORD pchar,WORD pver,WORD type,void *dest,WORD sync,WORD side);
 int generic_overlay_load(WORD overnum);
 BYTE *special_fx_load(WORD fxtype);
 int level_overlay_load(WORD level);

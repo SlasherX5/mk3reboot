@@ -677,7 +677,7 @@ void main_init(void)
 	//WIN95: Generate a random seed 
 {
 	long time = Win95_timeGetTime();
-	randomize((short)time,(short)time>>16);
+	randomize((short)time,(short)(time>>16));
 	//randomize(1,1);
 }
 
@@ -735,8 +735,7 @@ void dipinit(void)
 	f_cheat_menu=0;
 	f_nopower=0;
 	f_unlim_fatal=0;
-	f_level_select=0;
-	f_one_win=0;
+	f_level_select=0;	
 	f_shang_morph=MORPH_QUASI;
 	credits=GAME_CREDITS;
 	f_no_sfx=0;

@@ -147,12 +147,13 @@
   <ItemGroup>
     <ClInclude Include="..\sound\WAVE.H" />
     <ClInclude Include="BIGSTACK.H" />
-    <ClInclude Include="D3DTest.h" />
+    <ClInclude Include="types.h" />
     <ClInclude Include="DAVID.H" />
     <ClInclude Include="DIGLOAD.H" />
     <ClInclude Include="emulator.h" />
+    <ClInclude Include="FileCache.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="hqxcommon.h" />
+    <ClInclude Include="ini.h" />
     <ClInclude Include="LCDLOAD.H" />
     <ClInclude Include="LOADADDR.H" />
     <ClInclude Include="MK3Reboot.h" />
@@ -219,6 +220,7 @@
     <ClInclude Include="SEQLOAD.H" />
     <ClInclude Include="SNDLST.H" />
     <ClInclude Include="SOUNDHW.H" />
+    <ClInclude Include="stb_image.h" />
     <ClInclude Include="stdstuff.h" />
     <ClInclude Include="SYSTEM.H" />
     <ClInclude Include="targetver.h" />
@@ -247,10 +249,7 @@
     <ClCompile Include="BKGDSOUL.C" />
     <ClCompile Include="BKGDTEMP.C" />
     <ClCompile Include="FLICPLAY.C" />
-    <ClCompile Include="hq3x.c" />
-    <ClCompile Include="hqxInit.c" />
     <ClCompile Include="ini.c" />
-    <ClCompile Include="INIReader.cpp" />
     <ClCompile Include="LOADADDR.C" />
     <ClCompile Include="MK3Reboot.cpp" />
     <ClCompile Include="MKAMODE.C" />

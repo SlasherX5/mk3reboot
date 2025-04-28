@@ -1,25 +1,28 @@
 // MK3Reboot.cpp : Defines the entry point for the application.
 //
 
-// ReSharper disable CommentTypo
-// ReSharper disable CppInconsistentNaming
-// ReSharper disable IdentifierTypo
 #pragma warning(disable:4996)
+#pragma warning(disable:4018)
+#pragma warning(disable:4244)
+
 
 #include "framework.h"
 #include "MK3Reboot.h"
 #include "timeapi.h"
 #include "stdafx.h"
 #include "stdio.h"
-#include "D3DTest.h"
-
+#include "types.h"
 #include <xaudio2.h>
 
 #include <Xinput.h>
 #pragma comment(lib, "Xinput.lib")
 #pragma comment(lib, "Xinput9_1_0.lib")
 
-#include "INIReader.h"
+#include "ini.h"
+#include <string>
+#include <vector>
+
+#include "FileCache.h"
 
 extern "C"
 {
@@ -30,25 +33,140 @@ extern "C"
 #define MAX_LOADSTRING 100
 #define MAX_TEXTURES 256
 
+// internal virtual screen size
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 240
 
-//#define USE_RTARGET
-//#define SWUPSCALE
-#ifdef USE_RTARGET
-#define RT_WIDTH 1600
-#define RT_HEIGHT 900
-#endif
+// Settings
+static uint16_t* CustomShaderHints = nullptr;
+static uint16_t* CustomShaderMap = nullptr;
+static uint16_t* CustomShaderParamsX = nullptr;
+static uint16_t* CustomShaderParamsY = nullptr;
+static uint16_t* CustomShaderParamsZ = nullptr;
+static uint16_t NumCharShaders = 0;
+static uint16_t NumShaderMaps = 0;
 
-#define DESIRED_FPS 53
+static uint16_t* Fighters4X = nullptr;
+static uint16_t Fighters4XCount = 0;
 
-static int Mode4X = 1;
-static int NoSound = 0;
+bool IsFighter4X(uint16_t id)
+{
+	for (size_t i = 0; i < Fighters4XCount; i++)
+	{
+		if (Fighters4X[i] == id) return true;
 
-static int settingScreenWidth = 1920;
-static int settingScreenHeight = 1080;
+	}
+	return false;
+}
 
-FileCache FileSystem("MK3RebootCache-%d.bin");
+static uint16_t Mode4X = 1;
+static uint16_t NoSound = 0;
+static uint16_t ScreenWidth, ScreenHeight;
+
+typedef struct
+{
+	uint64_t rectid;
+	uint32_t overlays[2];
+	int16_t offsetx, offsety;
+	uint16_t width, height;
+	uint16_t flags;
+	BMPINFO anim;
+	BMPINFO image4x[2];
+}SpecialBMP;
+//xddttttt
+
+class Bitmap24_256x256_Base
+{
+public:
+	uint32_t id, flags;
+	uint8_t withdata;
+
+	Bitmap24_256x256_Base() :
+		id(0),
+		flags(0),
+		withdata(0)
+	{
+
+	}
+};
+
+class Bitmap24_256x256_Data : public Bitmap24_256x256_Base
+{
+public:
+	uint8_t pixels[256 * 256 * 3];
+	StaticArray<uint16_t> rects;
+
+	Bitmap24_256x256_Data() : 
+		rects(256)
+	{
+		clear();
+	}	
+
+	void clear() 
+	{
+		memset(pixels, 0, sizeof(pixels));
+		rects.Clear();
+		id = 0;
+		flags = 0;
+		withdata = 1;
+	}
+};
+
+extern "C"
+{
+	extern WORD editmode = 0;// 2 | 0x40;
+	extern WORD testmode = 0;// 2 | 0x40 | 0x100;// | 2;// 2 | 0x80;
+
+	extern WORD* _fade_table;
+	extern WORD* get_pal(WORD clut_id);
+	extern WORD c_fatal, f_fade;
+
+	extern WORD allow_fade = 0;
+	extern WORD drone_ver;
+	extern WORD f_one_win;	
+	extern WORD map_same[], f_samemap;
+
+	extern const char* lcdfightlist_arr2[];
+	extern short ochar_voice_groups[2][32];
+
+	extern short f_pause;				/* flag: TRUE: game paused */
+
+	extern WORD char_texture_type[2];
+}
+
+const char* FSReadFolder = "arcade";
+uint64_t FSMaxFileSize = 2 * 1024;
+
+void ParseFileName(TCHAR* FileNameStr, uint64_t FileName, uint8_t Hint)
+{
+	uint32_t dd = FileName;
+
+	switch (Hint)
+	{
+	case 1:
+		if (dd < 1000)
+		{
+			sprintf(FileNameStr, "%s/fx%d.bmp", FSReadFolder, dd);
+		}
+		else
+		{
+			sprintf(FileNameStr, "%s/%d%d/%d.bmp", FSReadFolder, (dd / 10000), (dd / 1000) % 10, dd % 1000);
+		}
+		return;
+	case 2:
+	case 2 | 4:
+		sprintf(FileNameStr, "%s/objects4x/%d.%s", FSReadFolder,dd, Hint == 2 ? "tga" : "png");
+		return;
+	case 3:
+	case 3 | 4:
+		sprintf(FileNameStr, "%s/objects4x/%I64x.%s", FSReadFolder, FileName, Hint == 3 ? "tga" : "png");
+		return;
+	}
+
+	FileNameStr[0] = '\0';
+}
+
+FileCache FileSystem("MK3RebootCache-%d.bin", ParseFileName);
 
 // Global Variables:
 HINSTANCE g_hInst = nullptr; // current instance
@@ -65,7 +183,8 @@ ID3D11RenderTargetView* g_pRenderTargetView0 = nullptr;
 ID3D11ShaderResourceView* g_pRenderTargetShaderView = nullptr;
 ID3D11VertexShader* g_pVertexShader = nullptr;
 ID3D11PixelShader* g_pPixelShader8 = nullptr;
-ID3D11PixelShader* g_pPixelShader32 = nullptr;
+ID3D11PixelShader* g_pPixelShaderBG = nullptr;
+ID3D11PixelShader* g_pPixelShader32[64] = { nullptr };
 ID3D11PixelShader* g_pPixelShaderPP = nullptr;
 ID3D11InputLayout* g_pVertexLayout = nullptr;
 ID3D11Buffer* g_pVertexBuffer = nullptr;
@@ -94,21 +213,26 @@ int isRunning = 1;
 int g_InsideRender = 0;
 BYTE keyState[256] = { 0 };
 
-extern "C" WORD editmode = 0;// 2 | 0x40;
-extern "C" WORD testmode = 0;// 2 | 0x40 | 0x100;// | 2;// 2 | 0x80;
-
-extern "C" WORD * get_pal(WORD clut_id);
-
 POLY_FT4 poly4x[256] = { 0 };
 DWORD poly4xcount = 0;
 
 #define TPAGE_SZ 256
 #define IMAGE_UPSCALE 4
 
-extern "C" short f_pause;				/* flag: TRUE: game paused */
+#define TPAGE_COUNT 32
+#define TPAGE_PALETTE TPAGE_COUNT
+#define TPAGE_FILTER (TPAGE_COUNT+1)
+#define TPAGE_4X_OFFSET (TPAGE_COUNT+2)
+#define TPAGE_EXTRA (TPAGE_4X_OFFSET+TPAGE_COUNT)
+#define TPAGE_EXTRA_COUNT 8
+#define TPAGE_TOTAL (TPAGE_EXTRA+TPAGE_EXTRA_COUNT)
+
+#define P1PAGE_INDEX 40
 
 #define MAX_SND_CHANNELS 32
 #define MAX_44K_CHANNELS 8
+
+#define RECTID_MASK 0xffffffffffffff00
 
 extern "C" EMSOUNDOBJ sndobj[MAX_SOUND_OBJS];
 IXAudio2SourceVoice* soundChannels11[MAX_SND_CHANNELS] = { 0 };
@@ -118,62 +242,22 @@ typedef struct
 {
 	ID3D11Texture2D* texture;
 	ID3D11ShaderResourceView* textureView;
-	int size,bits;
-	BYTE* data;
+	uint32_t size,bits,shader_hint,bghint;	
+	uint8_t* data;
 }TPage;
 
-static TPage Pages[16 * 2 + 2 + 32] = { 0 };
+static TPage Pages[TPAGE_TOTAL] = { 0 };
 
-static void InitTPage(int ti, int bts, int sz)
-{
-	if (Pages[ti].data) return;
+static void InitTPage(int ti,int bts, int sz)
+{	
+	if (ti < 0 || ti >= TPAGE_TOTAL || Pages[ti].data) return;
 
-	Pages[ti].data = (BYTE*)calloc(sz * sz * bts / 32, 4);
+	Pages[ti].data = (BYTE*)calloc(sz * sz * bts / 32,4);
 	Pages[ti].bits = bts;
 	Pages[ti].size = sz;
 }
 
-int gameKeys[2][16] = // see game_map_tbl in MKSONY.C
-{
-	// @formatter:off
-	{
-		'U', // run
-		'I', // run
-		'B', // block
-		'N', // block
-		'G', // high kick
-		'H', // low kick
-		'T', // low punch
-		'Y', // high punch
-		'3', // collision box
-		0,   //
-		0,   //
-		'1', // start
-		'W', // up
-		'D', // right
-		'S', // down
-		'A'  // left
-	},
-	{
-		VK_ADD,     // run
-		VK_NUMPAD4, // run
-		VK_NUMPAD3, // block
-		VK_NUMPAD7, // block
-		VK_RETURN,  // high kick
-		VK_DECIMAL, // low kick
-		VK_NUMPAD1, // low punch
-		VK_NUMPAD0, // high punch
-		'4',        // collision box
-		0,          //
-		0,          //
-		'2',        // start
-		VK_UP,      // up
-		VK_RIGHT,   // right
-		VK_DOWN,    // left
-		VK_LEFT     // down
-	},
-	// @formatter:on
-};
+uint16_t* gameKeys[2];
 
 extern "C" void MK3_Init();
 extern "C" void MK3_Update();
@@ -183,9 +267,550 @@ void DrawQuadUV(int t, int p, float x, float y, float w, float h, int sx, int sy
 void DrawQuad(int x, int y, int w, int h, BYTE color[]);
 int CreateD3DTexture(int w, int h, void* data,int flags,int slot);
 bool LoadTextureBmp(uint64_t FileID, BMPINFO* info, DWORD* Palette8888);
-bool LoadTextureTGA(uint64_t FileID, uint8_t Hint, BMPINFO* info);
+bool LoadTextureTGAorPNG(uint64_t FileID, uint8_t Hint, BMPINFO* info);
 
-int settingHQX = 0;
+static DWORD AllPAlettes[256 * 256];
+
+typedef struct
+{
+	union
+	{
+		struct
+		{
+			uint8_t r, g, b, a;
+		};
+
+		DWORD dw;
+	};
+} DW_RGBA;
+
+
+
+inline DWORD LerpColor3(DWORD a, DWORD b, float lerp)
+{
+	float lerp1 = 1.0f - lerp;
+	DW_RGBA A, B, R;
+	A.dw = a;
+	B.dw = b;
+
+	R.r = A.r * lerp + B.r * lerp1;
+	R.g = A.g * lerp + B.g * lerp1;
+	R.b = A.b * lerp + B.b * lerp1;
+	R.a = 255;
+	return R.dw;
+}
+
+inline uint8_t LuminColor(DW_RGBA a)
+{
+	float gray = 0.2 * a.r + 0.7 * a.g + 0.1 * a.b;
+	return gray;
+}
+
+inline uint8_t GrayColor(DWORD a)
+{
+	DW_RGBA A;
+	A.dw = a;
+	float gray = 0.299 * A.r + 0.587 * A.g + 0.114 * A.b;
+	return gray;
+}
+
+DWORD MultColor3(DWORD a, float scale)
+{
+	DW_RGBA A, R;
+	A.dw = a;
+	R.r = A.r * scale;
+	R.g = A.g * scale;
+	R.b = A.b * scale;
+	return R.dw;
+}
+
+void Palette565To8888(u_short* srcpal, BYTE* dest, int nelem)
+{
+	BYTE* dst = dest;
+	*dst++ = 0x00;
+	*dst++ = 0x00;
+	*dst++ = 0x00;
+	*dst++ = 0x00;
+
+	for (size_t i = 1; i < nelem; i++)
+	{
+		u_short c = srcpal[i];
+		*dst++ = ((c >> 0) & 31) << 3;// * 255 / 31;
+		*dst++ = ((c >> 5) & 31) << 3;// * 255 / 31;
+		*dst++ = ((c >> 10) & 31) << 3;// * 255 / 31;
+		*dst++ = 0xff;
+	}
+
+	for (size_t i = nelem; i < 256; i++)
+	{
+		*dst++ = 0xff;
+		*dst++ = 0xff;
+		*dst++ = 0xff;
+		*dst++ = 0xff;
+	}
+}
+
+bool Save32BitBmp(const char* filename, DWORD* src, int w, int h)
+{
+	static BYTE palette[256 * 4];
+	FILE* f = fopen(filename, "wb");
+
+	if (f == nullptr) return false;
+
+	int pitch = w * 4;
+	int padsize = (4 - (pitch % 4)) % 4;
+	int filesize = 54 + (pitch + padsize) * h;
+
+	unsigned char bmpfileheader[14] = { 'B','M', 0,0,0,0, 0,0, 0,0, 54,0,0,0 };
+	unsigned char bmpinfoheader[40] = { 40,0,0,0, 0,0,0,0, 0,0,0,0, 1,0, 32,0 };
+	unsigned char bmppad[3] = { 0,0,0 };
+
+	bmpfileheader[2] = (unsigned char)(filesize);
+	bmpfileheader[3] = (unsigned char)(filesize >> 8);
+	bmpfileheader[4] = (unsigned char)(filesize >> 16);
+	bmpfileheader[5] = (unsigned char)(filesize >> 24);
+
+	int soffset = 54;
+
+	bmpfileheader[10] = (unsigned char)(soffset);
+	bmpfileheader[11] = (unsigned char)(soffset >> 8);
+	bmpfileheader[12] = (unsigned char)(soffset >> 16);
+	bmpfileheader[13] = (unsigned char)(soffset >> 24);
+
+	bmpinfoheader[4] = (unsigned char)(w);
+	bmpinfoheader[5] = (unsigned char)(w >> 8);
+	bmpinfoheader[6] = (unsigned char)(w >> 16);
+	bmpinfoheader[7] = (unsigned char)(w >> 24);
+	bmpinfoheader[8] = (unsigned char)(h);
+	bmpinfoheader[9] = (unsigned char)(h >> 8);
+	bmpinfoheader[10] = (unsigned char)(h >> 16);
+	bmpinfoheader[11] = (unsigned char)(h >> 24);
+	bmpinfoheader[32] = 0;
+
+	fwrite(bmpfileheader, 1, 14, f);
+	fwrite(bmpinfoheader, 1, 40, f);
+
+	for (int i = 0; i < h; i++)
+	{
+		fwrite(src + (pitch * (h - i - 1)), 1, pitch, f);
+		if (padsize) fwrite(bmppad, 1, padsize, f);
+	}
+	fclose(f);
+	return true;
+}
+
+void LoadLuminPalette(const char* filename, WORD start, WORD endi, WORD slot)
+{
+	FILE* f = fopen(filename, "rb");
+	if (f == nullptr) return;
+
+	DW_RGBA srcpal[256];
+
+	for (size_t i = 0; i < 256; i++)
+	{
+		fread(&srcpal[i], 3, 1, f);
+		srcpal[i].a = 0xff;
+	}
+
+	srcpal[0].a = 0;
+
+	fclose(f);
+	
+	DWORD* dstpal = (DWORD*)AllPAlettes + slot * 256;
+
+	BYTE* dst = (BYTE*)srcpal;
+	
+	DWORD last = 0xffffffff;
+	DWORD lastind = 255;
+
+	for (size_t i = start; i < endi; i++)
+	{
+		uint8_t lindex = LuminColor(srcpal[i]);
+
+		if (lindex == lastind) continue;
+
+		float linc = 1.0f / (lastind - lindex);
+		float lp = 0;
+
+		while (lastind > lindex)
+		{
+			dstpal[lastind--] = LerpColor3(srcpal[i].dw,last,lp);
+			lp += linc;
+		}
+
+		last = srcpal[i].dw;
+		dstpal[lindex] = last;
+	}
+
+	if (lastind > 0)
+	{
+		float linc = 1.0f / lastind;
+		float lp = 1;
+
+		while (lastind-- > 0)
+		{
+			dstpal[lastind] = MultColor3(last, lp);
+			lp -= linc;
+		}
+	}
+
+	DW_RGBA bmpdata[256];
+	for (size_t i = 0; i < 256; i++)
+	{
+		DW_RGBA pix;
+		pix.dw = dstpal[i];
+		bmpdata[i].r = pix.b;
+		bmpdata[i].g = pix.g;
+		bmpdata[i].b = pix.r;
+		bmpdata[i].a = pix.a;
+	}
+
+	TCHAR fname[128];
+	strcpy(fname, filename);
+	strcpy(strstr(fname, "."), "lum.bmp");
+	Save32BitBmp(fname, &bmpdata[0].dw, 256, 1);
+}
+
+
+std::vector<std::string> ini_sections;
+std::vector<std::string> ini_keys;
+std::vector<std::string> ini_values;
+std::vector<void*>		 ini_customdata;
+
+static int handler(void* user, const char* section, const char* name,
+	const char* value)
+{
+	ini_sections.push_back(section);
+	ini_keys.push_back(name);
+	ini_values.push_back(value);
+	ini_customdata.push_back(nullptr);
+	return 1;
+}
+
+int32_t ini_getint(const char* section, const char* name, int32_t defvalue)
+{
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			return atoi(ini_values[i].c_str());
+		}
+	}
+
+	return defvalue;
+}
+
+std::string ini_getstr(const char* section, const char* name, const char* defvalue)
+{
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			return ini_values[i];
+		}
+	}
+
+	return defvalue;
+}
+
+uint16_t* ini_str2int16raw(const char* string, uint16_t index, uint16_t* outsize = nullptr)
+{
+	std::vector<uint16_t> values;
+
+	bool finished = false;
+	while (!finished)
+	{
+		const char* next = strstr(string + 1, ",");
+		if (!next)
+		{
+			next = string + strlen(string);
+			finished = true;
+		}
+		int chlen = next - string;
+
+		int32_t value32;
+		if (string[chlen-1] == 'h')
+		{
+			sscanf(string, "%xh", &value32);
+			values.push_back(value32);
+		}
+		else
+		if (sscanf(string, "%d", &value32))
+		{
+			values.push_back(value32);
+		}
+
+		string = next + 1;
+	}
+
+	uint16_t* data = new uint16_t[values.size() + 1];
+	data[0] = values.size();
+	memcpy(data + 1, values.begin()._Ptr, values.size() * sizeof(uint16_t));
+
+	ini_customdata[index] = data;
+	if (outsize) *outsize = data[0];
+
+	return data + 1;
+}
+
+uint16_t* ini_getint16raw(const char* section, const char* name, uint16_t* outsize = nullptr)
+{
+	const char* src = nullptr;
+	int srcind = -1;
+
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			if (ini_customdata[i])
+			{
+				if (outsize) *outsize = *(uint16_t*)ini_customdata[i];
+				return (uint16_t*)ini_customdata[i] + 1;
+			}
+
+			srcind = i;
+			src = ini_values[i].c_str();
+			break;
+		}
+	}
+
+	if (!src) return 0;
+
+	return ini_str2int16raw(src, srcind, outsize);
+}
+
+void parse_struct(void* struct_ptr, const char* format, const char* strdata)
+{
+	const char* src = strdata;
+	
+	int i = 0;
+	int32_t value32;
+	int64_t value64;
+	uint16_t* data16 = nullptr;
+	char* dst = (char*)struct_ptr;
+
+	while (format[i])
+	{
+		if (format[i] == ' ')
+		{
+			dst++;
+		}
+		else
+		{
+			const char* next = strstr(src + 1, ",");
+			if (!next) next = src + strlen(src);
+			int chlen = next - src;
+
+			switch (format[i])
+			{
+			case 'x':
+				sscanf(src, "%I64x", &value64);
+				break;
+			case 't':
+			case 'd':
+			case 'b':
+				sscanf(src, "%d", &value32);
+				break;
+			case 'i':
+				if (chlen)
+				{
+					char dsecname[64];
+					memcpy(dsecname, src, chlen);
+					dsecname[chlen] = '\0';
+					data16 = ini_getint16raw("data16", dsecname);
+				}
+				else
+				{
+					data16 = nullptr;
+				}
+				break;
+			}
+
+			switch (format[i])
+			{
+			case 'x':
+				*(int64_t*)(dst) = value64;
+				dst += 8;
+				break;
+			case 't':
+				*(int16_t*)(dst) = (int16_t)(value32 & 0xffff);
+				dst += 2;
+				break;
+			case 'd':
+				*(int32_t*)(dst) = value32;
+				dst += 4;
+				break;
+			case 'b':
+				*(int8_t*)(dst) = (int8_t)(value32 & 0xff);
+				dst += 1;
+				break;
+			case 'i':
+				*(uint16_t**)(dst) = data16;
+				dst += sizeof(uint16_t*);
+				break;
+			}
+
+			src += chlen + 1;
+		}
+		
+		i++;
+	}
+}
+
+uint16_t ini_getintarray(const char* section, const char* name, uint16_t outarray[])
+{
+	uint16_t count = 0;
+
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			outarray[count++] = atoi(ini_values[i].c_str());
+		}
+	}
+
+	return count;
+}
+
+
+std::vector<int32_t> ini_getintarray(const char* section, const char* name)
+{
+	std::vector<int32_t> values;
+
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			values.push_back(atoi(ini_values[i].c_str()));
+		}
+	}
+
+	return std::move(values);
+}
+
+std::vector<std::string> ini_getstrarray(const char* section, const char* name)
+{
+	std::vector<std::string> values;
+
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			values.push_back(ini_values[i]);
+		}
+	}
+
+	return std::move(values);
+}
+
+std::vector<uint16_t*> ini_getint16array(const char* section, const char* name)
+{
+	std::vector<uint16_t*> values;
+
+	for (int i = 0; i < ini_sections.size(); i++)
+	{
+		if (ini_sections[i].compare(section) == 0 &&
+			ini_keys[i].compare(name) == 0)
+		{
+			values.push_back(ini_str2int16raw(ini_values[i].c_str(), i));
+		}
+	}
+
+	return std::move(values);
+}
+
+void CacheFiles(const char* subpath, int pathid)
+{
+	WIN32_FIND_DATA data;
+	char Path[256];
+	if (pathid > 0)
+	{
+		sprintf(Path, "%s\\%d\\*", FSReadFolder, pathid);
+	}
+	else if (pathid == 0)
+	{
+		sprintf(Path, "%s\\%s\\*", FSReadFolder, subpath);
+	}
+	else
+	{
+		sprintf(Path, "%s\\*", FSReadFolder);
+	}
+
+	uint64_t value64 = 0;
+	uint32_t value32 = 0;
+
+	HANDLE hFind = FindFirstFile(Path, &data);      // DIRECTORY
+
+	if (hFind != INVALID_HANDLE_VALUE) {
+		do
+		{
+			int status = -1;
+
+			if ((data.nFileSizeLow >> 10) > FSMaxFileSize) continue;
+
+			if (!sscanf(data.cFileName, "%d.bmp", &value32))
+			{
+				value32 = 0;
+			}
+
+			if (!sscanf(data.cFileName, "%I64x.png", &value64))
+			{
+				value32 = 0;
+			}
+
+			if (pathid == 0 && (value32 || value64))
+			{
+				if (value32 && IsFighter4X(value32 / 1000))
+				{
+					status = FileSystem.Cache(value32,6) ? 1 : 0;
+				}
+				else
+				{
+					status = FileSystem.Cache(value64,7) ? 1 : 0;
+				}				
+			}
+			else
+			if (pathid > 0 && value32)
+			{
+				status = FileSystem.Cache(pathid * 1000 + value32, 1) ? 1 : 0;
+			}
+			else
+			if (pathid < 0 && sscanf(data.cFileName, "fx%d.bmp", &value32))
+			{
+				status = FileSystem.Cache(value32, 1) ? 1 : 0;
+			}
+
+			if (status >= 0)
+			{
+				if (status == 0) OutputDebugStringA("FAILED:");
+				OutputDebugStringA(data.cFileName);
+				OutputDebugStringA("\n");
+			}
+
+		} while (FindNextFile(hFind, &data));
+		FindClose(hFind);
+	}
+}
+
+
+void CacheAllFiles(const char* SrcFolder,uint64_t MaxFileSize)
+{
+	FSReadFolder = SrcFolder;
+	FSMaxFileSize = MaxFileSize;
+	CacheFiles("", -1);
+	for (size_t i = 0; i < Fighters4XCount; i++)
+	{
+		CacheFiles("", Fighters4X[i]);
+	}
+	CacheFiles("objects4x", 0);
+	FSReadFolder = "arcade";
+}
 
 //
 //
@@ -198,6 +823,70 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
 
+	if (ini_parse("MK3.ini", handler, nullptr) < 0) {
+		printf("Can't load 'test.ini'\n");
+		return 1;
+	}
+
+	Fighters4X = ini_getint16raw("data16", "Fighters", &Fighters4XCount);
+
+	std::string importfolder = ini_getstr("util", "importfolder", "");
+	if (importfolder.length())
+	{
+		CacheAllFiles(importfolder.c_str(),ini_getint("util","maxfilesize",FSMaxFileSize));
+	}
+
+	FileCache::CacheOnlyMode = ini_getstr("util", "cacheonlymode", "false")._Equal("true");
+
+	Mode4X = ini_getint("graphics", "mode4x", Mode4X);
+	ScreenWidth = ini_getint("graphics", "width", 1600);
+	ScreenHeight = ini_getint("graphics", "height", 900);
+
+	gameKeys[0] = ini_getint16raw("input", "p1keys");
+	gameKeys[1] = ini_getint16raw("input", "p2keys");
+		
+	NoSound = ini_getint("audio", "nosound", 0);
+
+	long lcdoverride = ini_getint("audio", "lcdoverridenum", -1);
+	std::string lcdfileoverride;
+
+	if (lcdoverride >= 0)
+	{
+		lcdfileoverride = ini_getstr("audio", "lcdoverride", lcdfightlist_arr2[lcdoverride]);
+		lcdfightlist_arr2[lcdoverride] = lcdfileoverride.c_str();
+		ochar_voice_groups[1][lcdoverride] = ini_getint("audio", "lcdgroup", ochar_voice_groups[1][lcdoverride]);
+	}
+
+	allow_fade = ini_getint("graphics", "fade", 0);
+	f_one_win = ini_getint("gameplay", "onewin", 0);
+	
+	drone_ver = ini_getint("gameplay", "dronever", drone_ver);
+
+	NumCharShaders = ini_getint("data16", "numshaders", 0);
+	CustomShaderHints = ini_getint16raw("data16", "customshaders", &NumShaderMaps);
+	CustomShaderMap = ini_getint16raw("data16", "customshadermaps", &NumShaderMaps);
+	CustomShaderParamsX = ini_getint16raw("data16", "shaderparamsx", nullptr);
+	CustomShaderParamsY = ini_getint16raw("data16", "shaderparamsy", nullptr);
+	CustomShaderParamsZ = ini_getint16raw("data16", "shaderparamsz", nullptr);
+
+	f_samemap = ini_getint("gameplay", "samemap", 0);
+
+	if (f_samemap)
+	{
+		int i = 0;
+		while (map_same[i] != 0xfefe)
+		{
+			if (map_same[i] == 0)
+			{
+				map_same[i] = f_samemap;
+			}
+			i++;
+		}
+	}
+
+	const long settingFps = ini_getint("graphics", "fps", 53);
+	const long settingFpsUnlocked = ini_getint("graphics", "fps_unlocked", 500);
+
 	// TODO: Place code here.
 	MSG msg = { 0 };
 	HACCEL hAccelTable;
@@ -207,17 +896,8 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	LoadString(hInstance, IDC_MK3REBOOT, g_szWindowClass, MAX_LOADSTRING);
 	MyRegisterClass(hInstance);
 
-	// Load ini settings
-	const INIReader settings("MK3.ini");
-	settingScreenWidth = settings.GetInteger("graphics", "screenwidth", 1920);
-	settingScreenHeight = settings.GetInteger("graphics", "screenheight", 1080);
-	settingHQX = settings.GetInteger("graphics", "hqx", 0);
-	const auto settingFilter = settings.GetInteger("graphics", "filter", 0);
-	const auto settingFps = settings.GetInteger("graphics", "fps", 52);
-	const auto settingFpsUnlocked = settings.GetInteger("graphics", "fps_unlocked", 1000);
-
 	// Perform application initialization:
-	if (!InitInstance(hInstance, nCmdShow, settingScreenWidth, settingScreenHeight))
+	if (!InitInstance(hInstance, nCmdShow, ScreenWidth, ScreenHeight))
 	{
 		return FALSE;
 	}
@@ -235,11 +915,13 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	//Palette
 	CreateD3DTexture(256, 256, NULL, 32, 32);
 
+	const long scanline_image = ini_getint("graphics", "scanline", 0);
+
 	BMPINFO ft = { 0 };	
-	if (LoadTextureBmp(settingFilter,&ft, 0))
+	if (LoadTextureBmp(scanline_image,&ft, 0))
 	{
 		//Filter
-		CreateD3DTexture(ft.w, ft.h, ft.pixels, 32,33);
+		CreateD3DTexture(ft.w, ft.h, ft.pixels, 32,TPAGE_FILTER);
 	}
 
 	D3D11_VIEWPORT vp;
@@ -248,7 +930,6 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	vp.TopLeftX = 0;
 	vp.TopLeftY = 0;
 
-#ifndef USE_RTARGET
 	g_pImmediateContext->OMSetRenderTargets(1, &g_pRenderTargetView, nullptr);
 	g_pImmediateContext->VSSetShader(g_pVertexShader, nullptr, 0);
 	g_pImmediateContext->PSSetShader(g_pPixelShader8, nullptr, 0);
@@ -256,12 +937,11 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	g_pImmediateContext->PSSetSamplers(0, 3, g_sampleStates);
 	g_pImmediateContext->VSSetConstantBuffers(0, 1, &g_pConstantBuffer);
 	g_pImmediateContext->PSSetConstantBuffers(0, 1, &g_pConstantBuffer);
-	g_pImmediateContext->PSSetShaderResources(0, 1, &Pages[32].textureView);
-	g_pImmediateContext->PSSetShaderResources(2, 1, &Pages[33].textureView);
-#endif
+	g_pImmediateContext->PSSetShaderResources(0, 1, &Pages[TPAGE_PALETTE].textureView);
+	g_pImmediateContext->PSSetShaderResources(2, 1, &Pages[TPAGE_FILTER].textureView);
 
-	vp.Width = settingScreenWidth;
-	vp.Height = settingScreenHeight;
+	vp.Width = ScreenWidth;
+	vp.Height = ScreenHeight;
 
 	g_pImmediateContext->RSSetViewports(1, &vp);
 
@@ -298,26 +978,6 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 		vp.MaxDepth = 1.0f;
 		vp.TopLeftX = 0;
 		vp.TopLeftY = 0;
-
-#ifdef USE_RTARGET
-
-		vp.Width  = RT_WIDTH;
-		vp.Height = RT_HEIGHT;
-		g_pImmediateContext->RSSetViewports(1, &vp);
-
-		// Setup the viewport
-		g_pImmediateContext->OMSetRenderTargets(1, &g_pRenderTargetView0, nullptr);
-		g_pImmediateContext->VSSetShader(g_pVertexShader, nullptr, 0);		
-		g_pImmediateContext->OMSetBlendState(g_pAlphaBlendingEnabledState, 0, 0xff);
-		g_pImmediateContext->PSSetSamplers(0, 3, g_sampleStates);
-		g_pImmediateContext->VSSetConstantBuffers(0, 1, &g_pConstantBuffer);
-		g_pImmediateContext->PSSetConstantBuffers(0, 1, &g_pConstantBuffer);
-		g_pImmediateContext->PSSetShaderResources(0, 1, &Pages[32].textureView);
-		g_pImmediateContext->PSSetShaderResources(2, 1, &Pages[33].textureView);
-		g_pImmediateContext->RSSetViewports(1, &vp);
-
-		g_pImmediateContext->ClearRenderTargetView(g_pRenderTargetView0, Colors::Black);
-#endif
 
 		g_InsideRender = 1;
 		MK3_Render(keyState[VK_SPACE] ? settingFpsUnlocked : settingFps);
@@ -470,19 +1130,12 @@ HRESULT CompileShaderFromFile(WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szS
 
 	ID3DBlob* pErrorBlob = nullptr;
 	D3D_SHADER_MACRO macros[4];
-#ifdef USE_RTARGET
-	static char macval[4] = { '0',0 };
-#else
-	static char macval[4] = { (char)(settingScreenWidth / SCREEN_WIDTH) + '0',0 };
-	static char machqx[4] = { settingHQX + '0',0 };
-#endif
+	static char macval[4] = { (int)(ScreenWidth / ScreenHeight) + '0',0 };
 	
 	macros[0].Name = "UPSCALE";
 	macros[0].Definition = macval;
-	macros[1].Name = "HQX";
-	macros[1].Definition = machqx;
-	macros[2].Name = NULL;
-	macros[2].Definition = NULL;
+	macros[1].Name = NULL;
+	macros[1].Definition = NULL;
 	hr = D3DCompileFromFile(szFileName, macros, nullptr, szEntryPoint, szShaderModel,
 		dwShaderFlags, 0, ppBlobOut, &pErrorBlob);
 	if (FAILED(hr))
@@ -513,7 +1166,7 @@ typedef struct
 	uint32_t Bpp;             // Number Of BITS Per Pixel (24 Or 32)
 } TGA;
 
-bool LoadTextureTGA(uint64_t FileID, uint8_t Hint,BMPINFO* info)
+bool LoadTextureTGAorPNG(uint64_t FileID, uint8_t Hint,BMPINFO* info)
 {
 	TGAHeader tgaheader;
 	TGA tga;
@@ -522,21 +1175,42 @@ bool LoadTextureTGA(uint64_t FileID, uint8_t Hint,BMPINFO* info)
 
 	if (FilePtr == nullptr)
 	{
+		FilePtr = FileSystem.Open(FileID, Hint|4, true);
+
+		if (FilePtr)
+		{
+			int x, y, comp;
+			stbi_uc* data = stbi_load_from_file(FilePtr->GetFilePtr(), &x, &y, &comp, 4);
+			
+			if (data)
+			{				
+				FilePtr->Read(nullptr, -1);
+				FilePtr->Close(false);
+				info->w = x;
+				info->h = y;
+				info->pixels = data;
+				return true;
+			}
+		}		
+
 		info->pixels = NULL;
 		info->w = 0;
 		info->h = 0;
+		if (FilePtr) FilePtr->Close(true);
 		return false;
 	}
 
 	// Attempt To Read The File Header
 	if (FilePtr->Read(&tgaheader, sizeof(TGAHeader)) == 0)
 	{
+		FilePtr->Close(true);
 		return false;               // Return False If It Fails
 	}
 
 	// Attempt To Read Next 6 Bytes
 	if (FilePtr->Read(tga.header, sizeof(tga.header)) == 0)
 	{
+		FilePtr->Close(true);
 		return false;               // Return False
 	}
 
@@ -582,7 +1256,7 @@ bool LoadTextureTGA(uint64_t FileID, uint8_t Hint,BMPINFO* info)
 		info->pixels[cswap] ^= info->pixels[cswap + 2];
 	}
 
-	FilePtr->Close();                   // Close The File
+	FilePtr->Close(false);                   // Close The File
 
 	return true;	
 }
@@ -668,7 +1342,7 @@ bool LoadTextureBmp(uint64_t FileID, BMPINFO* info, DWORD *Palette8888)
 		dst -= dsize;
 	}
 
-	FilePtr->Close();
+	FilePtr->Close(false);
 	info->w = ww;
 	info->h = hh;
 	return true;
@@ -677,7 +1351,9 @@ bool LoadTextureBmp(uint64_t FileID, BMPINFO* info, DWORD *Palette8888)
 void Save8BitBmp(const char* filename, BYTE* src, void *inpal, int palCount, int w, int h, bool pal16)
 {
 	static BYTE palette[256*4];
-	FILE* f;
+	FILE* f = fopen(filename, "wb");
+
+	if (f == nullptr) return;
 
 	int padsize = (4 - (w % 4)) % 4;
 	int filesize = 54 + palCount*4 + (w+padsize) * h;  //w is your image width, h is image height, both int
@@ -746,8 +1422,6 @@ void Save8BitBmp(const char* filename, BYTE* src, void *inpal, int palCount, int
 		}
 	}
 	
-
-	f = fopen(filename, "wb");
 	fwrite(bmpfileheader, 1, 14, f);
 	fwrite(bmpinfoheader, 1, 40, f);
 	fwrite(palette, 1, 4* palCount, f);
@@ -903,83 +1577,6 @@ HRESULT InitDevice()
 	if (FAILED(hr))
 		return hr;
 
-#ifdef USE_RTARGET
-
-	D3D11_TEXTURE2D_DESC desc;
-	memset(&desc, 0, sizeof(desc));
-	desc.Width = RT_WIDTH;
-	desc.Height = RT_HEIGHT;
-	desc.MipLevels = desc.ArraySize = 1;
-	desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-	desc.SampleDesc.Count = 1;
-	desc.BindFlags = D3D11_BIND_SHADER_RESOURCE | D3D11_BIND_RENDER_TARGET;
-
-	hr = g_pd3dDevice->CreateTexture2D(&desc, NULL, &g_renderTargetTex);
-	if (FAILED(hr))
-		return hr;
-#ifdef SWUPSCALE
-	memset(&desc, 0, sizeof(desc));
-	desc.Width = SCREEN_WIDTH;
-	desc.Height = SCREEN_HEIGHT;
-	desc.MipLevels = desc.ArraySize = 1;
-	desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-	desc.SampleDesc.Count = 1;
-	desc.Usage = D3D11_USAGE_STAGING;
-	desc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
-
-	hr = g_pd3dDevice->CreateTexture2D(&desc, NULL, &g_renderTargetStaging);
-	if (FAILED(hr))
-		return hr;
-
-	desc.Width = PIXEL_WIDTH;
-	desc.Height = PIXEL_HEIGHT;
-	desc.MipLevels = desc.ArraySize = 1;
-	desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-	desc.SampleDesc.Count = 1;
-	desc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
-	desc.Usage = D3D11_USAGE_DYNAMIC;
-	desc.BindFlags = D3D11_BIND_SHADER_RESOURCE;
-
-	hr = g_pd3dDevice->CreateTexture2D(&desc, NULL, &g_renderTargetStagingBig);
-	if (FAILED(hr))
-		return hr;
-
-	D3D11_RENDER_TARGET_VIEW_DESC renderTargetViewDesc;
-	D3D11_SHADER_RESOURCE_VIEW_DESC shaderResourceViewDesc;
-	renderTargetViewDesc.Format = desc.Format;
-	renderTargetViewDesc.ViewDimension = D3D11_RTV_DIMENSION_TEXTURE2D;
-	renderTargetViewDesc.Texture2D.MipSlice = 0;
-
-	hr = g_pd3dDevice->CreateRenderTargetView(g_renderTargetStagingBig, &renderTargetViewDesc, &g_pRenderTargetView0);
-	if (FAILED(hr))
-		return hr;
-
-#else
-
-	D3D11_RENDER_TARGET_VIEW_DESC renderTargetViewDesc;
-	D3D11_SHADER_RESOURCE_VIEW_DESC shaderResourceViewDesc;
-	renderTargetViewDesc.Format = desc.Format;
-	renderTargetViewDesc.ViewDimension = D3D11_RTV_DIMENSION_TEXTURE2D;
-	renderTargetViewDesc.Texture2D.MipSlice = 0;
-
-	hr = g_pd3dDevice->CreateRenderTargetView(g_renderTargetTex, &renderTargetViewDesc, &g_pRenderTargetView0);
-	if (FAILED(hr))
-		return hr;
-
-#endif
-
-	
-	// Setup the description of the shader resource view.
-	shaderResourceViewDesc.Format = desc.Format;
-	shaderResourceViewDesc.ViewDimension = D3D11_SRV_DIMENSION_TEXTURE2D;
-	shaderResourceViewDesc.Texture2D.MostDetailedMip = 0;
-	shaderResourceViewDesc.Texture2D.MipLevels = 1;
-
-	hr = g_pd3dDevice->CreateShaderResourceView(g_renderTargetTex, &shaderResourceViewDesc, &g_pRenderTargetShaderView);
-	if (FAILED(hr))
-		return hr;
-#endif
-
 	D3D11_BLEND_DESC blendStateDescription;
 	// Clear the blend state description.
 	ZeroMemory(&blendStateDescription, sizeof(D3D11_BLEND_DESC));
@@ -1108,21 +1705,27 @@ HRESULT InitDevice()
 
 	// Set the input layout
 	g_pImmediateContext->IASetInputLayout(g_pVertexLayout);
-#ifdef USE_RTARGET
-	hr = compilePixelShader(shaderFxFile, "PS_RAW8", &g_pPixelShader8);	
-	if (FAILED(hr)) return hr;
-	hr = compilePixelShader(shaderFxFile, "PS_RAW32", &g_pPixelShader32);
-	if (FAILED(hr)) return hr;
-	hr = compilePixelShader(shaderFxFile, "PS_UP", &g_pPixelShaderPP);
-	if (FAILED(hr)) return hr;
-#else
-	hr = compilePixelShader(shaderFxFile,"PS",&g_pPixelShader8);	
-	if (FAILED(hr)) return hr;	
-	hr = compilePixelShader(shaderFxFile, "PS4X", &g_pPixelShader32);
-	if (FAILED(hr)) return hr;
-#endif
 
-	
+	hr = compilePixelShader(shaderFxFile,"PS",&g_pPixelShader8);
+	if (FAILED(hr)) return hr;
+
+	hr = compilePixelShader(shaderFxFile, "PS_BG", &g_pPixelShaderBG);
+	if (FAILED(hr)) return hr;
+
+	for (size_t i = 0; i <= NumCharShaders; i++)
+	{
+		char sname[128];
+		strcpy(sname, "PS4X");
+		if (i > 0)
+		{
+			strcat(sname, "_P");			
+			int Num = strlen(sname);
+			sname[Num] = '0' + i;
+			sname[Num + 1] = '\0';
+		}
+		hr = compilePixelShader(shaderFxFile, sname, &g_pPixelShader32[i]);
+		if (FAILED(hr)) return hr;
+	}
 
 	// Create vertex buffer
 	SimpleVertex vertices[] =
@@ -1188,9 +1791,7 @@ HRESULT InitDevice()
 	// Initialize the projection matrix
 	g_Projection = XMMatrixPerspectiveFovLH(XM_PIDIV2, width / (FLOAT)height, 0.01f, 100.0f);
 	cb.mProjection = XMMatrixTranspose(XMMatrixOrthographicOffCenterLH(0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 100));// XMMatrixIdentity();// XMMatrixTranspose(g_World);XMMatrixTranspose(g_Projection);
-	cb.mUVOffsets = XMFLOAT4(0,0, 0, 0);
-
-
+	
 	return S_OK;
 }
 
@@ -1205,6 +1806,29 @@ void DrawQuad(int x, int y, int w, int h, BYTE c[])
 	p->color[0] = c ? c[0] : 0xff;
 	p->color[1] = c ? c[1] : 0xff;
 	p->color[2] = c ? c[2] : 0xff;
+}
+
+ID3D11PixelShader* GetTPageShader(TPage* tp)
+{
+	if (tp->bits != 32) return g_pPixelShader8;
+
+	if (tp->bghint)
+	{
+		return g_pPixelShaderBG;
+	}
+
+	for (size_t i = 0; i < NumShaderMaps; i++)
+	{
+		if (CustomShaderHints[i] == tp->shader_hint)
+		{
+			cb.mPalParams.x = CustomShaderParamsX[i]/255.0f;
+			cb.mPalParams.y = CustomShaderParamsY[i]/255.0f;
+			cb.mPalParams.z = CustomShaderParamsZ[i]/255.0f;
+			return g_pPixelShader32[CustomShaderMap[i]];
+		}
+	}
+
+	return g_pPixelShader32[0];
 }
 
 
@@ -1244,15 +1868,30 @@ void DrawTextureUV4X(POLY_FT4* p)
 
 	TPage* tp = &Pages[p->tpage];
 
-	cb.mExtraParams.x = tp->bits == 32 ? 1 : 0;//Mark brightness col pal index for fade in/out
+	float cf = 1;
+
+	if (tp->bits == 32)
+	{
+		if (f_fade && _fade_table && allow_fade && tp->bghint > 1)
+		{
+			cf = 0.5 + *_fade_table / 256.f;
+		}
+
+		if (p->tpage >= TPAGE_4X_OFFSET)
+		{
+			g_pImmediateContext->PSSetShaderResources(3, 1, &Pages[p->tpage-TPAGE_4X_OFFSET].textureView);			
+		}
+	}
+
+	cb.mExtraParams.x = cf;//Mark brightness col pal index for fade in/out
 	cb.mExtraParams.y = (p->clut >> 4) / 256.f;
 	cb.mExtraParams.z = 1;
 	cb.mExtraParams.w = p->semialpha ? 0.5f : 1.f;
 	cb.mWorld = XMMatrixTranspose(g_World);
 	cb.mColor = XMFLOAT4(1, 1, 1, 1);
+	g_pImmediateContext->PSSetShader(GetTPageShader(tp), nullptr, 0);
 	g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, nullptr, &cb, 0, 0);
-	g_pImmediateContext->PSSetShader(tp->bits == 32 ? g_pPixelShader32 : g_pPixelShader8, nullptr, 0);
-	g_pImmediateContext->PSSetShaderResources(1, 1, &tp->textureView);
+	g_pImmediateContext->PSSetShaderResources(1, 1, &tp->textureView);	
 	g_pImmediateContext->Draw(4, 0);
 }
 
@@ -1293,13 +1932,118 @@ void DrawQuadTexture(ID3D11ShaderResourceView *tview, int x, int y, int w, int h
 	g_pImmediateContext->Draw(4, 0);
 }
 
-extern "C" int ModifyFrame(int* tindex, int sx, int sy, int sw, int sh, int palette);
+extern "C" uint64_t ModifyFrame(int* tindex, int sx, int sy, int sw, int sh, int palette);
 
-extern "C" void* process_exist(WORD existid, WORD mask);
+typedef struct
+{
+	BYTE* src;
+	DWORD* dst;
+	WORD linesize, pitch, height, dst_pitch;
+}RectCopy;
+
+
+void CopyRectBytes(RectCopy* rect)
+{
+	BYTE* src = rect->src;
+	DWORD* dst = rect->dst;
+
+	for (size_t i = 0; i < rect->height; i++)
+	{
+		memcpy(dst, src, rect->linesize);
+		dst += rect->dst_pitch;
+		src += rect->pitch;
+	}
+}
+
+void TickAnim(_BMPINFO* anim, RectCopy* rect, int expected_height, int instance)
+{
+	if (anim == nullptr || anim->delay == 0) return;
+
+	WORD numanim;
+
+	if (anim->indices)
+	{
+		numanim = 0;
+		while (anim->indices[numanim] != 0xffff) numanim++;
+	}
+	else
+	{
+		numanim = anim->num;
+	}
+
+	WORD totalframes = numanim * anim->delay;
+	WORD frameind = (anim->time[instance] / anim->delay) % numanim;
+
+	if (anim->flags & 0x08)
+	{
+		numanim /= 2;
+
+		totalframes = 0;
+		int frindex = 0;
+		frameind = 0;
+		while (anim->indices[frindex * 2] != 0xffff)
+		{
+			int delay = anim->indices[frindex * 2 + 1];
+			totalframes += delay == 0 ? anim->delay : delay;
+			if (anim->time[instance] >= totalframes)
+			{
+				frameind++;
+			}
+			frindex++;
+		}
+	}
+
+	if (anim->time[instance] >= totalframes)
+	{
+		if (anim->flags & 1)
+		{
+			frameind = 0;
+			anim->time[instance] = 0;
+		}
+		else
+		{
+			frameind = numanim - 1;
+			anim->time[instance] = totalframes - 1;
+		}
+	}
+	else if (!f_pause)
+	{
+		anim->time[instance]++;
+	}
+
+	if (anim->flags & 0x80)
+	{
+		frameind = numanim - 1 - frameind;
+	}
+
+	if (anim->indices)
+	{
+		frameind = anim->indices[anim->flags & 0x08 ? frameind * 2 : frameind];
+	}
+
+	anim->flags |= 0x40;
+
+	WORD imtileh = expected_height / anim->ty;
+
+	rect->height = anim->h * 4;
+	rect->linesize = anim->w * 4 * 4;
+
+	rect->src += (frameind % anim->tx) * rect->pitch / anim->tx; // x shift
+	rect->src += (frameind / anim->tx) * rect->pitch * imtileh; // y shift
+
+	if (imtileh > rect->height)
+	{
+		rect->src += rect->pitch * (imtileh - rect->height);
+	}
+}
+
+extern "C" DWORD g_UpdateFB3;
+
+static WORD g_NextFreePage = TPAGE_EXTRA;
 
 void DrawTextureUV(int tindex, int palette, float x, float y, float w, float h, int sx, int sy, int sw, int sh, int flags,int semialpha)
 {
-	ModifyFrame(&tindex, sx, sy, sw, sh, palette);
+	uint64_t id = ModifyFrame(&tindex, sx, sy, sw, sh, palette);
 
 	POLY_FT4* p = &poly4x[poly4xcount++];
 	p->tpage = tindex;
@@ -1318,14 +2062,23 @@ void DrawTextureUV(int tindex, int palette, float x, float y, float w, float h, 
 
 void DrawQuadUV(int tpage, int palette, float x, float y, float w, float h, int sx, int sy, int sw, int sh,int flags,int semialpha)
 {	
-	int tx = (tpage & 0x0f) << 7;
-	int ty = (tpage & 0x10) << 4;
-		
-	sx += tx;
-	sy += ty;
+	WORD tindex;
 
-	WORD tindex = (sx >> 8) | ((sy >> 8) << 4);
-	
+	if (tpage & 0x8000)
+	{
+		tindex = tpage;
+	}
+	else
+	{
+		int tx = (tpage & 0x0f) << 7;
+		int ty = (tpage & 0x10) << 4;
+
+		sx += tx;
+		sy += ty;
+
+		tindex = (sx >> 8) | ((sy >> 8) << 4);
+	}	
+
 	DrawTextureUV(tindex, palette, x, y, w, h, sx%TPAGE_SZ, sy%TPAGE_SZ, sw, sh, flags, semialpha);
 }
 
@@ -1348,7 +2101,12 @@ void CleanupDevice()
 	if (g_pVertexLayout) g_pVertexLayout->Release();
 	if (g_pVertexShader) g_pVertexShader->Release();
 	if (g_pPixelShader8) g_pPixelShader8->Release();
-	if (g_pPixelShader32) g_pPixelShader32->Release();
+	if (g_pPixelShaderBG) g_pPixelShaderBG->Release();
+	for (size_t i = 0; i <= NumCharShaders; i++)
+	{
+		if (g_pPixelShader32[i]) g_pPixelShader32[i]->Release();
+	}
+	
 	if (g_pPixelShaderPP) g_pPixelShaderPP->Release();
 	if (g_pRenderTargetView) g_pRenderTargetView->Release();
 	if (g_pRenderTargetView0) g_pRenderTargetView0->Release();
@@ -1360,12 +2118,10 @@ void CleanupDevice()
 
 extern "C"
 {
-	//static DWORD FighterBuffer[512 * 256];
-	static DWORD AllPAlettes[256 * 256];
-
 	static int   g_UpdatePalettes = 0;
-	static DWORD g_UpdateFB  = 0;
-	static DWORD g_UpdateFB2 = 0;
+	static DWORD g_UpdateFB  = 0; // Old gfx pages
+	static DWORD g_UpdateFB2 = 0; // 4x pages
+	static DWORD g_UpdateFB3 = 0; // extra overlay pages
 
 	extern short gstate;
 
@@ -1404,24 +2160,24 @@ extern "C"
 		DWORD subcount;
 	}SRECT;
 
-	uint64_t savedobjects[MAX_SOBJECTS] = { 0 };
-	DWORD  savedobj_count = 0;
+	StaticArray<uint64_t> savedobjects(MAX_SOBJECTS);
 
-	uint64_t loadedobjects[MAX_SOBJECTS];
-	uint64_t fighterobjects[MAX_SOBJECTS/4];
-	int fighterobjectsids[MAX_SOBJECTS / 4];
-	DWORD  loadedobj_count = 0,loadedfighterobj_count = 0;
-	BMPINFO bmps [MAX_SOBJECTS]= { 0 };
+	HashMap<uint64_t,uint32_t> fighterobjects;
+	HashMap<uint64_t,uint32_t> fighterobjects2;
+	HashMap<uint64_t,BMPINFO, 254, 16> bmps;
+	Bitmap24_256x256_Base* bgbitmapslots[32] = { 0 };
 
 	BYTE sumbmp[256 * 256] = { 0 };
 	WORD palbmp[256] = { 0 }, palsize = 0;
-
 
 	uint64_t CheckRect(BYTE* tex, short sx, short sy, short sw, short sh, int palette, int pitch)
 	{
 		uint64_t id = 0;
 
-		//		if (sw < 16 || sh < 16)
+		if (sw == 0 || sh == 0)
+		{
+			return 0;
+		}
 
 		if (sw == 160 && (sh >= 40 && sh < 85)) {
 			return 0;
@@ -1429,19 +2185,22 @@ extern "C"
 
 		DWORD paltot = 0;
 
-		WORD* pal16 = get_pal(palette);
-		if (pal16) {
-			palsize = *pal16;
-			pal16 += 3;
-			palbmp[0] = 0;
-			for (size_t i = 1; i < palsize; i++)
-			{
-				WORD pd = (*pal16 & 0x7fff);
-				palbmp[i] = pd;
-				paltot += pd << 1;
-				pal16++;
+		if (palette >= 0)
+		{
+			WORD* pal16 = get_pal(palette);
+			if (pal16) {
+				palsize = *pal16;
+				pal16 += 3;
+				palbmp[0] = 0;
+				for (size_t i = 1; i < palsize; i++)
+				{
+					WORD pd = (*pal16 & 0x7fff);
+					palbmp[i] = pd;
+					paltot += pd << 1;
+					pal16++;
+				}
+				if (paltot == 0) return 0;
 			}
-			if (paltot == 0) return 0;
 		}
 
 		int pi = 0;
@@ -1464,21 +2223,17 @@ extern "C"
 		return (id << 8) | (paltot & 0xff);
 	}
 
-
-
 	BMPINFO* LoadBitmapObject(uint64_t id, bool fighter)
 	{
-		int ipos = -1;
+		BMPINFO* bmp = bmps.Find(id);
 
-		for (size_t i = 0; i < loadedobj_count; i++)
+		if (bmp)
 		{
-			if (loadedobjects[i] == id) {
-				ipos = i;
-				return &bmps[i];
-			}
+			return bmp;
 		}
 
-		BMPINFO* inf = &bmps[loadedobj_count];		
+		BMPINFO* inf = bmps.AddEmpty(id);
+		if (inf == nullptr) return nullptr;
 
 		if (fighter) 
 		{
@@ -1486,79 +2241,128 @@ extern "C"
 		}
 		else if (Mode4X)
 		{
-			for (size_t i = 0; i < loadedfighterobj_count; i++)
+			uint32_t* ddV = fighterobjects.Find(id);
+
+			if (ddV)
 			{
-				if (fighterobjects[i] == id) {
-					int dd = fighterobjectsids[i];
-					if (LoadTextureTGA(dd,2,inf)) {
-						loadedobjects[loadedobj_count++] = id;
-						return inf;
-					}
+				if (LoadTextureTGAorPNG(*ddV, 2, inf))
+				{
+					inf->anim = bmps.Find(*ddV);
+					return inf;
 				}
-			}			
+			}	
 		}
-		else {
-			return NULL;
+		else 
+		{
+			return nullptr;
 		}
 
 
-		if (Mode4X) {
-			if (fighter) {
-				LoadTextureBmp(id, inf, NULL);
+		if (Mode4X) 
+		{
+			if (fighter) 
+			{
+				LoadTextureBmp(id, inf, nullptr);
 			}
-			else {
-				LoadTextureTGA(id, 3, inf);
-			}				
+			else 
+			{
+				LoadTextureTGAorPNG(id, 3, inf);
+			}
 		}else
-		if (LoadTextureBmp(id, inf, NULL))
+		if (LoadTextureBmp(id, inf, nullptr))
 		{
 			
 		}
-
-		loadedobjects[loadedobj_count++] = id;		
 		return inf;
 	}
 
-	void SaveBitmapObject(uint64_t id, void* pix, void* pal, WORD palcnt, WORD w, WORD h, bool pal16)
+	void SaveBitmapObject(uint64_t id, void* pix, void* pal, WORD palcnt, WORD w, WORD h, bool savefighter, bool pal16)
 	{
-		bool saved = false;
+		if (savedobjects.Find(id) >= 0) return;
 
-		for (size_t i = 0; i < savedobj_count; i++)
+		char filename[128];
+
+		if (savefighter)
 		{
-			if (savedobjects[i] == id) {
-				saved = true;
-				break;
-			}
+			uint32_t fighter = id / 10000;
+			sprintf(filename, "arcade/objects/%d0", fighter);
+			CreateDirectoryA(filename, nullptr);
+			sprintf(filename, "arcade/objects/%d0/%d.bmp", fighter, (uint32_t)(id % 1000));
 		}
-
-		if (!saved)
+		else
 		{
-			char filename[128];
 			sprintf(filename, "arcade/objects/%I64x.bmp", id);
-			Save8BitBmp(filename, (BYTE*)pix, pal, palcnt, w, h, pal16);
-			savedobjects[savedobj_count++] = id;
 		}
+		
+		Save8BitBmp(filename, (BYTE*)pix, pal, palcnt, w, h, pal16);
+		savedobjects.Add(id);
 	}
 
 	void DLoadImage(RECT_PSX* rect, void* data, u_long id)
 	{
-		WORD tindex = GetTIndex(rect->x, rect->y);
+    	WORD tindex = GetTIndex(rect->x, rect->y);
 
 		InitTPage(tindex, 8, TPAGE_SZ);
 
 		BYTE* dst = Pages[tindex].data + (rect->y % TPAGE_SZ) * TPAGE_SZ + ((rect->x * 2) % TPAGE_SZ);
 		BYTE* src = (BYTE*)data;
 
-		int pitch = rect->w*2;
+		g_UpdateFB |= 1 << tindex;
 
-		for (size_t i = 0; i < rect->h; i++)
+		int pitch = rect->w * 2;
+		
+		if (id > 0 && pitch == TPAGE_SZ)
 		{
-			memcpy(dst, src, pitch);
-			dst += TPAGE_SZ;
-			src += pitch;
-		}
+			memcpy(dst, src, TPAGE_SZ * rect->h);
 
-		g_UpdateFB |= 1<<tindex;
+			BMPINFO* bitmap4x = LoadBitmapObject(id, false);
+
+			if (bitmap4x && bitmap4x->pixels)
+			{
+				if (bgbitmapslots[tindex] == nullptr)
+				{
+					bgbitmapslots[tindex] = new Bitmap24_256x256_Base();
+				}
+
+				bgbitmapslots[tindex]->id = id;
+				bgbitmapslots[tindex]->flags = 0xff;
+
+				int tindex32 = tindex + TPAGE_4X_OFFSET;
+				const DWORD ts = TPAGE_SZ * IMAGE_UPSCALE;
+				InitTPage(tindex32, 32, ts);
+				memcpy(Pages[tindex32].data, bitmap4x->pixels, ts * ts * 4);
+				Pages[tindex32].bghint = id;
+
+				g_UpdateFB2 |= 1 << tindex;
+			}
+			else
+			if (bgbitmapslots[tindex] == nullptr || !bgbitmapslots[tindex]->withdata)
+			{
+				if (bgbitmapslots[tindex]) delete bgbitmapslots[tindex];
+				bgbitmapslots[tindex] = new Bitmap24_256x256_Data();
+			}
+			else if (bgbitmapslots[tindex]->withdata)
+			{
+				((Bitmap24_256x256_Data*)bgbitmapslots[tindex])->clear();
+			}
+
+			bgbitmapslots[tindex]->id = id;
+		}
+		else
+		{
+			if (bgbitmapslots[tindex])
+			{
+				delete bgbitmapslots[tindex];
+				bgbitmapslots[tindex] = nullptr;
+			}			
+
+			for (size_t i = 0; i < rect->h; i++)
+			{
+				memcpy(dst, src, pitch);
+				dst += TPAGE_SZ;
+				src += pitch;
+			}
+		}
 	}
 
 	WORD getClut(WORD x, WORD y)
@@ -1566,61 +2370,98 @@ extern "C"
 		return (y<<CLUT_ID_SHIFT)+x;
 	}
 
-	u_short DLoadTPageFighter(u_short* pix, int x, int y, int w, int h,int pal,int fighter,int fver, int fo, WORD **info)
+	u_short DLoadTPageFighter(u_short* pix, int x, int y, int w, int h,int pal,int fighter,int fver, int frame_offset, WORD **info)
 	{
         PALINFO pi = palram[pal >> 4];
 		DWORD palCnt = *pi.palid;
-		WORD fid = pix[0] == 0xffff ? pix[1] : (((fo >> 3) & 0xffff) - 400);
+		bool isExternal = pix[0] == 0xffff;
 		WORD tindex = GetTIndex(x, y);
-
+		WORD fg = fighter & 0x3f;
 		BYTE* src = (BYTE*)pix;
-		
-		*info = NULL;
+		unsigned int bmpid = 0;
+		BYTE* addrect = nullptr;
+		*info = nullptr;
+		uint64_t rectid0 = 0;
+		WORD side = fighter & 0x80 ? 1 : 0;
 
-		if (pal && palCnt == 64 && (fighter&0x3f) == 2)
+		if (pal && (palCnt > 62 && palCnt < 65))
 		{
-			int bmpid = ((fighter & 0x3f) * 10000) + (fver * 1000) +  fid;
+			if (isExternal)
+			{
+				bmpid = (fg * 10000) + (fver * 1000) + pix[1];
+			}
+			else 
+			{
+				if (char_texture_type[side] < 2)
+				{
+					bmpid = (fg * 10000) + (fver * 1000) + 100 + ((frame_offset / 20) % 1000);
+				}
 
+				if (IsFighter4X(fg * 10 + fver))
+				{
+					rectid0 = CheckRect(src, 0, 0, w, h, -1, w);
+
+					if (uint32_t* idptr = fighterobjects2.Find(rectid0))
+					{
+						bmpid = *idptr;
+					}
+				}
+				// GS_FIGHTING
+				else if (gstate == 0x02)
+				{
+					addrect = src;
+				}
+				else
+				{
+					bmpid = 0;
+				}
+			}
+		}
+		else
+		if (isExternal)
+		{
+			src = nullptr;
+		}
+
+		if (bmpid)
+		{
 			BMPINFO* inf = LoadBitmapObject(bmpid, true);
 
-			if (inf->pixels) {
+			if (inf->pixels)
+			{				
 				*info = (WORD*)inf;
 				w = inf->w;
 				h = inf->h;
 				src = inf->pixels;
-
-				uint64_t rectid = CheckRect(inf->pixels, 0, 0, inf->w, inf->h, pal, inf->w);
-				bool found = false;
-
-				for (size_t i = 0; i < loadedfighterobj_count; i++)
-				{
-					if (fighterobjects[i] == rectid) {
-						found = true;
-						break;
-					}
-				}
-
-				if (!found) {
-					fighterobjectsids[loadedfighterobj_count] = bmpid;
-					fighterobjects[loadedfighterobj_count++] = rectid;
-				}				
-
-			} else if (pix[0] == 0xffff) {
-				src = NULL;
+				if (addrect == nullptr) addrect = src;				
 			}
-			
+		}
+
+		if (addrect && bmpid)
+		{
+			uint64_t rectid = CheckRect(addrect, 0, 0, w, h, -1, w);
+			uint32_t* idptr = fighterobjects.Find(rectid);
+			if (idptr == nullptr)
+			{
+				fighterobjects.Add(rectid,bmpid);
+
+				if (rectid0)
+				{
+					if (fighterobjects2.Find(rectid0) == nullptr)
+					{
+						fighterobjects2.Add(rectid0, bmpid);
+					}					
+				}
+			}
 		}
 
 		InitTPage(tindex, 8, TPAGE_SZ);
 
 		if (src) 
 		{
-
 			BYTE* dst = Pages[tindex].data +
 				((y % TPAGE_SZ) * TPAGE_SZ) +
 				((x * 2) % TPAGE_SZ);
-
-			memset(dst, 0, TPAGE_SZ * TPAGE_SZ);
 
 			for (size_t i = 0; i < h; i++)
 			{
@@ -1628,6 +2469,10 @@ extern "C"
 				dst += TPAGE_SZ;
 				src += w;
 			}
+		}
+		else
+		{
+			memset(Pages[tindex].data, 0, TPAGE_SZ*TPAGE_SZ);
 		}
 
 		g_UpdateFB |= 1<<tindex;
@@ -1654,32 +2499,6 @@ extern "C"
 
 		g_UpdateFB |= 1<< tindex;
 		return GetTPage(0,0,x,y);
-	}
-
-	void Palette565To8888(u_short* srcpal, BYTE *dest, int nelem)
-	{		
-		BYTE* dst = dest;
-		*dst++ = 0x00;
-		*dst++ = 0x00;
-		*dst++ = 0x00;
-		*dst++ = 0x00;
-
-		for (size_t i = 1; i < nelem; i++)
-		{
-			u_short c = srcpal[i];
-			*dst++ = ((c >> 0) & 31) << 3;// * 255 / 31;
-			*dst++ = ((c >> 5) & 31) << 3;// * 255 / 31;
-			*dst++ = ((c >> 10) & 31) << 3;// * 255 / 31;
-			*dst++ = 0xff;
-		}
-
-		for (size_t i = nelem; i < 256; i++)
-		{
-			*dst++ = 0xff;
-			*dst++ = 0xff;
-			*dst++ = 0xff;
-			*dst++ = 0xff;
-		}
 	}
 
 	void LoadPaletteTex(u_short* srcpal, int nelem, int x, int y)
@@ -1743,38 +2562,122 @@ extern "C"
 		return top < btm;
 	}
 
-	int ModifyFrame(int *tindex, int sx, int sy, int sw, int sh, int palette)
+	uint64_t ModifyFrame(int *tindex, int sx, int sy, int sw, int sh, int palette)
 	{
-		uint64_t rectid = CheckRect(Pages[*tindex].data, sx, sy, sw, sh,palette,TPAGE_SZ);
+		uint64_t rectid;
+
+		bool bgpageload = false;
+
+		if (*tindex & 0x8000)
+		{
+			rectid = *tindex & 0x7fff;
+			*tindex = 22 + (*tindex & 0xf);
+			bgpageload = true;
+		}
+		else if (bgbitmapslots[*tindex])
+		{
+			if (bgbitmapslots[*tindex]->flags == 0xff)
+			{
+				rectid = bgbitmapslots[*tindex]->id;
+				rectid |= (sx & 0xff) | ((sy & 0xff) << 8);
+				
+				*tindex += TPAGE_4X_OFFSET;
+				return rectid;
+			}
+			else
+			{		
+				return 0;
+			}
+			
+		}
+		else
+		{
+			rectid = CheckRect(Pages[*tindex].data, sx, sy, sw, sh, palette, TPAGE_SZ);
+			bgpageload = false;
+		}
+
 		if (rectid == 0) return 0;
-		if (Mode4X == 0) {
-			SaveBitmapObject(rectid, sumbmp, palbmp, palsize, sw, sh, true);
-		}else 
+
 		if (Mode4X)
 		{
+			BMPINFO* anim = nullptr;
+
+			// try to load as full sprite
 			BMPINFO* info = LoadBitmapObject(rectid, false);
+
+			int fobj = -1;
+
+			if (!bgpageload && (info == nullptr || info->pixels == nullptr))
+			{
+				// try to load as fighter sprite
+				info = LoadBitmapObject(rectid & RECTID_MASK, false);
+
+				if (uint32_t *fpos = fighterobjects.Find(rectid & RECTID_MASK))
+				{
+					fobj = *fpos;
+
+					if (info && info->pixels == nullptr)
+					{
+						SaveBitmapObject(fobj, sumbmp, palbmp, palsize, sw, sh, true, true);
+						return rectid & RECTID_MASK;
+					}
+				}
+			}
 
 			if (info && info->pixels)
 			{
-				*tindex += 34;
-				DWORD ts = TPAGE_SZ * IMAGE_UPSCALE;
+				*tindex += TPAGE_4X_OFFSET;
+				const DWORD ts = TPAGE_SZ * IMAGE_UPSCALE;
 				InitTPage(*tindex, 32, ts);
-				BYTE* p = info->pixels;
-				DWORD* dst = ((DWORD*)Pages[*tindex].data) + ts * sy * IMAGE_UPSCALE + sx * IMAGE_UPSCALE;
-				DWORD pitch = info->w * 4;
 
-				for (size_t i = 0; i < info->h; i++)
+				if (bgpageload)
 				{
-					memcpy(dst, p, pitch);
-					dst += ts;
-					p += pitch;
-				}
+					if (Pages[*tindex].bghint != rectid)
+					{
+						memcpy(Pages[*tindex].data, info->pixels, ts * ts * 4);
+						Pages[*tindex].bghint = rectid;
+					}
 
-				g_UpdateFB2 |= 1 << (*tindex - 34);
-				return 1;
+					rectid = (rectid << 16) | (sy << 8) | sx;
+				}
+				else
+				{
+					RectCopy rect;
+					rect.dst = ((DWORD*)Pages[*tindex].data) + ts * sy * IMAGE_UPSCALE + sx * IMAGE_UPSCALE;
+					rect.dst_pitch = ts;
+					rect.src = info->pixels;
+					rect.pitch = info->w * 4;
+					rect.linesize = rect.pitch;
+					rect.height = info->h;
+
+					if (fobj >= 0)
+					{
+						memset(Pages[*tindex].data, 0, ts * ts * 4);
+						Pages[*tindex].shader_hint = ((fobj / 1000) << 8) | (rectid & 0xff);						
+						TickAnim(info->anim, &rect, info->h, (*tindex - P1PAGE_INDEX) & 1);
+					}
+					else
+					{
+						Pages[*tindex].shader_hint = 0;
+					}
+
+					Pages[*tindex].bghint = 0;
+
+					CopyRectBytes(&rect);
+				}
+				
+
+				g_UpdateFB2 |= 1 << (*tindex - TPAGE_4X_OFFSET);
+				return rectid;
 			}
 		}
-		return 0;
+		
+		if (!bgpageload)
+		{
+			SaveBitmapObject(rectid, sumbmp, palbmp, palsize, sw, sh, false, true);
+		}
+		
+		return rectid;
 	}
 
 	void DrawPrim0(u_long* up)
@@ -1794,25 +2697,27 @@ extern "C"
 		
 	}
 
-	void UpdateFB(DWORD* flag,WORD index)
+	void UpdateFB(DWORD* flag,WORD offset,WORD count)
 	{
 		if (*flag == 0) return;
 
 		D3D11_MAPPED_SUBRESOURCE mappedResource;
 
-		for (DWORD i = 0; i < 32; i++)
+		for (DWORD i = 0; i < count; i++)
 		{
 			if ((*flag & (1 << i)) == 0) continue;
 
-			int ii = i + index;
+			int ii = i + offset;
 
 			int ts = Pages[ii].size;
 			if (ts < TPAGE_SZ) continue;
 			int bts = Pages[ii].bits;
 
-			if (Pages[ii].texture == NULL) {
+			if (Pages[ii].texture == nullptr) {
 				CreateD3DTexture(ts, ts, 0, bts, ii);
 			}
+
+			if (Pages[ii].texture == nullptr) continue;
 
 			int result = g_pImmediateContext->Map(Pages[ii].texture, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
 			memcpy((BYTE*)mappedResource.pData, Pages[ii].data, ts * ts * bts / 8);
@@ -1828,13 +2733,13 @@ extern "C"
 
 		if (g_UpdatePalettes) {
 			D3D11_MAPPED_SUBRESOURCE mappedResource;
-			int result = g_pImmediateContext->Map(Pages[32].texture, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
+			int result = g_pImmediateContext->Map(Pages[TPAGE_PALETTE].texture, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
 			memcpy((BYTE*)mappedResource.pData, AllPAlettes, sizeof(AllPAlettes));
-			g_pImmediateContext->Unmap(Pages[32].texture, 0);
+			g_pImmediateContext->Unmap(Pages[TPAGE_PALETTE].texture, 0);
 			g_UpdatePalettes = 0;
 		}
 
-		UpdateFB(&g_UpdateFB, 0);
+		UpdateFB(&g_UpdateFB, 0, TPAGE_COUNT);
 
 		if (keyState[VK_INSERT]) 
 		{
@@ -1858,15 +2763,15 @@ extern "C"
 
 			g_pImmediateContext->ClearRenderTargetView(g_pRenderTargetView, Colors::Black);
 
-			for (size_t i = 0; i < 32; i++)
+			for (size_t i = 0; i < TPAGE_COUNT; i++)
 			{
-				TPage* tp = Pages + i + 34;
+				TPage* tp = Pages + i;
 				if (tp->textureView == NULL) continue;
 				int tx = _PXTbl[i] * 80;
 				int ty = _PYTbl[i] * 60;
 
 				POLY_FT4 p;
-				p.tpage = i+34;
+				p.tpage = i;
 				p.clut = 0;
 				p.x = tx;
 				p.y = ty;
@@ -1898,7 +2803,8 @@ extern "C"
 			}
 		}
 
-		UpdateFB(&g_UpdateFB2, 34);
+		UpdateFB(&g_UpdateFB2, TPAGE_4X_OFFSET, TPAGE_COUNT);
+		UpdateFB(&g_UpdateFB3, TPAGE_EXTRA, TPAGE_COUNT);
 
 		if (poly4xcount > 0)
 		{
@@ -1911,49 +2817,25 @@ extern "C"
 					DrawTextureUV4X(p);
 			}
 		}
+
+		g_NextFreePage = TPAGE_EXTRA;
+
+		if (_fade_table) {
+			if (_fade_table[1] == 0xffff) {
+				if (_fade_table[0] > 0) {
+					_fade_table = NULL;
+				}
+			}
+			else {
+				_fade_table++;
+			}
+		}
 	}
 
     void Win95_Blast_Frame()
     {
 		if (!g_InsideRender) return;
 
-		//Post Process
-#ifdef USE_RTARGET		
-
-		D3D11_VIEWPORT vp;
-		vp.MinDepth = 0.0f;
-		vp.MaxDepth = 1.0f;
-		vp.TopLeftX = 0;
-		vp.TopLeftY = 0;
-		vp.Width = PIXEL_WIDTH;
-		vp.Height = PIXEL_HEIGHT;
-
-		g_pImmediateContext->OMSetRenderTargets(1, &g_pRenderTargetView, nullptr);
-		g_pImmediateContext->PSSetShader(g_pPixelShaderPP, nullptr, 0);
-		g_pImmediateContext->OMSetBlendState(g_pAlphaBlendingDisabledState, 0, 0xff);
-		g_pImmediateContext->PSSetSamplers(0, 2, g_sampleStates);
-		g_pImmediateContext->PSSetConstantBuffers(0, 1, &g_pConstantBuffer);
-		g_pImmediateContext->PSSetShaderResources(2, 1, &Pages[33].textureView);//screen filter pattern
-		g_pImmediateContext->RSSetViewports(1, &vp);
-
-#ifdef SWUPSCALE
-		{
-			g_pImmediateContext->CopyResource(g_renderTargetStaging, g_renderTargetTex);			
-
-			D3D11_MAPPED_SUBRESOURCE mappedResourceSrc, mappedResourceDest;
-			int result = g_pImmediateContext->Map(g_renderTargetStaging, 0, D3D11_MAP_READ, 0, &mappedResourceSrc);
-			result = g_pImmediateContext->Map(g_renderTargetStagingBig, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResourceDest);
-			/*
-			hq3x_32_rb((uint32_t*)mappedResourceSrc.pData, mappedResourceSrc.RowPitch, 
-				(uint32_t*)mappedResourceDest.pData, mappedResourceDest.RowPitch,
-				SCREEN_WIDTH, SCREEN_HEIGHT);
-				*/
-			g_pImmediateContext->Unmap(g_renderTargetStaging, 0);
-			g_pImmediateContext->Unmap(g_renderTargetStagingBig, 0);
-		}
-#endif
-		DrawQuadTexture(g_pRenderTargetShaderView, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, NULL);
-#endif
 		// Present our back buffer to our front buffer
 		g_pSwapChain->Present(0, 0);
     }
@@ -2047,7 +2929,7 @@ extern "C"
 		p->h = y;
 	}
 
-	WORD ReadKeys(int list[])
+	WORD ReadKeys(uint16_t *list)
 	{
 		WORD result = 0;
 		for (size_t i = 0; i < 16; i++)
@@ -2215,6 +3097,9 @@ extern "C"
 		}
 		void* data = sndobj[id].data;
 		if (data == NULL) return;
+
+		
+		
 
 		for (size_t i = 0; i < MAX_SND_CHANNELS; i++)
 		{

@@ -470,7 +470,7 @@ void vram_texture_load(WORD tsx,WORD tsy,ADDRESS *text_tbl)
 		}
 		//#endif
 
-		DLoadImage(&frame,text_info);                            /* load data */
+		DLoadImage(&frame,text_info, ((load_level+1)<<24) + (l<<16));                            /* load data */
 
 		frame.x +=128;                                          /* move to next texture pos */
 
@@ -662,7 +662,7 @@ void background_routine(void)
 	{
 		multi_plane();
 		process_sleep(current_proc->a10);
-	};
+	}
 }
 
 /******************************************************************************
@@ -1018,11 +1018,19 @@ int add_block(OBJECT **baklst,LONG *bakbit,OBLOCK *bakblk,OHEADER *hdr_info,XYTY
 	obj->ozval=bakblk->zdepth;                                                      /* set z depth, for priority */
 
 	/* set texture info */
-	obj->header.tpage=(hdr_info->tpage<<1)+bkgd_base_tpage;
-	obj->header.t_xoffset=hdr_info->t_xoffset;
-	obj->header.t_yoffset=hdr_info->t_yoffset;
-	obj->osize.u.xpos=obj->header.t_width=hdr_info->t_width;
-	obj->osize.u.ypos=obj->header.t_height=hdr_info->t_height;
+	if (hdr_info->tpage & 0x8000)
+	{
+		obj->header.tpage = hdr_info->tpage;
+	}
+	else
+	{
+		obj->header.tpage = (hdr_info->tpage << 1) + bkgd_base_tpage;
+				
+	}
+	obj->header.t_xoffset = hdr_info->t_xoffset;
+	obj->header.t_yoffset = hdr_info->t_yoffset;
+	obj->osize.u.xpos = obj->header.t_width = hdr_info->t_width;
+	obj->osize.u.ypos = obj->header.t_height = hdr_info->t_height;
 	obj->bmp = NULL;
 
 	/* set texture flips */

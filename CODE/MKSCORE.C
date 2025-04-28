@@ -848,7 +848,7 @@ void load_p1_name(void)
 	setRECT(&img,CP_TEXT_X+P1_NAME_TXT_X/2,(CP_TEXT_Y+P1_NAME_TXT_Y),((name_wh[pchar][0]+3)&(~3))/2,name_wh[pchar][1]);
 
 	src=(ADDRESS*)uncompress_image((BYTE *)(name_anim_imgs[pchar]));
-	DLoadImage(&img,src);
+	DLoadImage(&img,src,0);
 }
 
 void load_p2_name(void)
@@ -863,5 +863,5 @@ void load_p2_name(void)
 	setRECT(&img,CP_TEXT_X+P2_NAME_TXT_X/2,(CP_TEXT_Y+P2_NAME_TXT_Y),((name_wh[pchar][0]+3)&(~3))/2,name_wh[pchar][1]);
 
 	src=(ADDRESS*)uncompress_image((BYTE *)(name_anim_imgs[pchar]));
-	DLoadImage(&img,src);
+	DLoadImage(&img,src,0);
 }

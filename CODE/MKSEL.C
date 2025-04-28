@@ -56,7 +56,7 @@ extern void *HDSUBZERO[];
 extern void *HDSWAT[];
 extern void *HDBRIDE[];
 extern void *HDJAX[];
-extern void* HDJAX2[];
+extern void *HDJAX2[];
 extern void *HDLAO[];
 extern void *HDSONYA[];
 extern void *HDKANO[];
@@ -166,7 +166,7 @@ MUGS mug_shot_table[] =
 	{(OIMGTBL *)HDLIUKANG,MUG1_X+(X_SPACE*4),MUG1_Y+(Y_SPACE*0),FT_LK,0},
 	{(OIMGTBL *)HDSONYA,MUG1_X+(X_SPACE*0),MUG1_Y+(Y_SPACE*1),FT_SONYA,0},
 	{(OIMGTBL *)HDSWAT,MUG1_X+(X_SPACE*1),MUG1_Y+(Y_SPACE*1),FT_SWAT,0},
-	{(OIMGTBL *)HDJAX2,MUG1_X+(X_SPACE*2)-2,MUG1_Y+(Y_SPACE*1)-2,FT_JAX,1},
+	{(OIMGTBL *)HDJAX2,MUG1_X+(X_SPACE*2),MUG1_Y+(Y_SPACE*1),FT_JAX,1},
 	{(OIMGTBL *)HDSUBZERO,MUG1_X+(X_SPACE*3),MUG1_Y+(Y_SPACE*1),FT_SUBZERO,0},
 	{(OIMGTBL *)HDMUSTARD,MUG1_X+(X_SPACE*4),MUG1_Y+(Y_SPACE*1),FT_ROBO2,0},
 	{(OIMGTBL *)HDKETCHUP,MUG1_X+(X_SPACE*0),MUG1_Y+(Y_SPACE*2),FT_ROBO1,0},
@@ -184,7 +184,8 @@ ADDRESS *psel_vram_list[] =
 	(ADDRESS *)HDSUBZERO,
 	(ADDRESS *)HDSWAT,
 	(ADDRESS *)HDBRIDE,
-	(ADDRESS *)HDJAX,
+	(ADDRESS *)HDJAX,	
+	(ADDRESS*)HDJAX2,
 	(ADDRESS *)HDLAO,
 	(ADDRESS *)HDSONYA,
 	(ADDRESS *)HDKANO,
@@ -216,7 +217,7 @@ ADDRESS *psel_vram_list[] =
 	(ADDRESS *)MKCOIN_06,
 	(ADDRESS *)MKCOIN_07,
 	(ADDRESS *)MKCOIN_08,
-	(ADDRESS *)MKCOIN_09,
+	(ADDRESS *)MKCOIN_09,	
 	NULL
 };
 
@@ -232,7 +233,7 @@ char txt_bell[]="KOMBAT ZONE: SHAO KAHN TOWER";
 char txt_temple[]="KOMBAT ZONE: THE TEMPLE";
 char txt_grave[]="KOMBAT ZONE: GRAVEYARD";
 char txt_pit[]="KOMBAT ZONE: THE PIT 3";
-char txt_hidden[]="KOMBAT ZONE: THE HIDDEN PORTAL";
+char txt_deadpool[]="KOMBAT ZONE: THE DEAD POOL";
 char txt_select_back[]="SELECT KOMBAT ZONE";
 char *background_names[]=
 {
@@ -247,7 +248,7 @@ char *background_names[]=
 	txt_temple,
 	txt_grave,
 	txt_pit,
-	txt_hidden
+	txt_deadpool
 };
 
 char txt_select_msg[]="SELECT YOUR FIGHTER";
@@ -267,6 +268,9 @@ char txt_iar_num[]="%d WINS";
 
  Description:	player select screen setup
 ******************************************************************************/
+extern DWORD char_texture_type[];
+extern DWORD drone_ver;
+
 void player_select(void)
 {
 	MUGS *mptr;
@@ -286,6 +290,10 @@ void player_select(void)
 	init_player_variables();
 	//nosounds();
 	wess_seq_stopall();
+
+	char_texture_type[0] = 1;
+	char_texture_type[1] = 1;	
+	if (drone_ver > 1) drone_ver++;
 
 	//file_load_message();
 
@@ -335,11 +343,11 @@ void player_select(void)
 	}
 
 	/* psel2 */
-	if (curback<=10)
+	if (curback<MAX_BACKGROUNDS)
 //WIN95:		pds_centered(background_names[curback],SCX(0xc8),SCY(0xec)+12);
 		pds_centered(background_names[curback],SCX(0xc8),SCY(0xec)+8);
 
-//WIN95:
+/*
 	{
 		char *str;
 		char buffer[40];
@@ -623,7 +631,7 @@ void p1_select(void)
 
 	current_proc->pdata.p_store4=OID_CURSOR1;
 
-	curs3(2);
+	curs3(7);
 }
 
 /******************************************************************************
@@ -659,7 +667,7 @@ void p2_select(void)
 
 	current_proc->pdata.p_store4=OID_CURSOR2;
 
-	curs3(4);
+	curs3(7);
 }
 
 WORD upsans[]={0,1,2,3,4};
@@ -1036,7 +1044,7 @@ void cmove9(void)
 	}
 	while(--(current_proc->a11)>0 );
 
-	swpal(ochar_picked_palettes[current_proc->pdata.p_store1],current_proc->pa8);		// dim down
+	// swpal(ochar_picked_palettes[current_proc->pdata.p_store1],current_proc->pa8);		// dim down
 
 	dallobj(current_proc->pdata.p_store4);
 

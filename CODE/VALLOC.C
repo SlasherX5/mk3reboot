@@ -529,7 +529,7 @@ WORD alloc_vram_mem(void *img,OHEADER *tinfo,WORD ventry)
 *************************************************/
 		vmem->v_imgptr=img;
 
-		DLoadTPage(vptr,TEXTURE_MODE,TRANS_RATE,vx,vy,(tinfo->t_width+3)&(~3),tinfo->t_height);
+		DLoadTPage(vptr,TEXTURE_MODE,TRANS_RATE,vx,vy,(tinfo->t_width+3)&(~3),tinfo->t_height,0);
 
 		return(vfind);
 	}
@@ -672,7 +672,7 @@ WORD alloc_vram_perm(OIMGTBL *permimg,void *heapptr,WORD vx,WORD vy)
 			LOCKUP;
 
 			/* load tpage */
-			vtinfo->tpage= DLoadTPage(frame,TEXTURE_MODE,TRANS_RATE,vx,vy,(vtinfo->t_width+3)&(~3),vtinfo->t_height);
+			vtinfo->tpage= DLoadTPage(frame,TEXTURE_MODE,TRANS_RATE,vx,vy,(vtinfo->t_width+3)&(~3),vtinfo->t_height,0);
 
 			return(i);
 		}

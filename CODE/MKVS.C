@@ -103,8 +103,8 @@ void vs_or_ladder(void)
 
 
 	/* load character 1 and character 2 data */
-	character_texture_load(p1_char,p1_version,CHAR_VS,p1_heap,SYNC_LOAD);
-	character_texture_load(p2_char,p2_version,CHAR_VS,p2_heap,SYNC_LOAD);
+	character_texture_load(p1_char,p1_version,CHAR_VS,p1_heap,SYNC_LOAD,0);
+	character_texture_load(p2_char,p2_version,CHAR_VS,p2_heap,SYNC_LOAD,1);
 
 	/* set decomp base to p2 data area */
 	idcomp_base=(LONG *)(&player_heap[PLAYER_HEAP_SIZE]-200000);
@@ -774,11 +774,11 @@ void cd_preload_fade(void)
 
 void cd_preload_p1(void)
 {
-	character_texture_load(p1_char,p1_version,CHAR_NORMAL,p1_heap,ASYNC_LOAD);
+	character_texture_load(p1_char,p1_version,CHAR_NORMAL,p1_heap,ASYNC_LOAD,0);
 	while ( psxcd_async_on() )
 		process_sleep(1);
 #ifndef BLOCK_FILE_IO
-	module_os_close(module_int);
+	// module_os_close(module_int);
 #endif
 	p1_preload=1;
 
@@ -809,7 +809,7 @@ void cd_preload_bkgd(void)
 			{
 				if (f_smoke==0 && (p1_char==FT_SMOKE || p2_char==FT_SMOKE))
 				{
-					save_curback=BKGD_HIDDEN_MOD;		// play on hidden
+					save_curback= BKGD_DEADPOOL_MOD;		// play on hidden
 				}
 				else save_curback=curback;
 			}
@@ -820,7 +820,7 @@ void cd_preload_bkgd(void)
 	while ( psxcd_async_on() )
 		process_sleep(1);
 #ifndef BLOCK_FILE_IO
-	module_os_close(module_int);
+	//module_os_close(module_int);
 #endif
 	bkgd_preload=1;
 

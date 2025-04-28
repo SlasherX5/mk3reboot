@@ -43,8 +43,8 @@ extern void PsxSoundExit(void);
 
 extern void PsxSoundLoadClear(void);
 extern void PsxSoundLoadData(int lcdnum);
-extern void PsxSoundLoadFighter1(int lcdnum);
-extern void PsxSoundLoadFighter2(int lcdnum);
+extern void PsxSoundLoadFighter1(int lcdnum,int);
+extern void PsxSoundLoadFighter2(int lcdnum,int);
 extern void PsxSoundLoadFighter1Babality(int lcdnum);
 extern void PsxSoundLoadFighter2Babality(int lcdnum);
 extern void PsxSoundLoadFighter1Animality(int lcdnum);

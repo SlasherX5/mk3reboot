@@ -437,7 +437,7 @@ void setup_text_fonts(void)
 	frame.x=FONT_15_BASE_X;
 	frame.y=FONT_15_BASE_Y;
 	texture_level_load(LVL_FONTS,SYNC_LOAD);
-	DLoadImage(&frame,(ADDRESS *)p2_heap);
+	DLoadImage(&frame,(ADDRESS *)p2_heap, 0);
 	font_lists[0].f_tpage=font_lists[1].f_tpage=font_lists[2].f_tpage=GetTPage(TEXTURE_MODE,TRANS_RATE,FONT_15_BASE_X,FONT_15_BASE_Y);
 	DrawSync(0);
 	return;

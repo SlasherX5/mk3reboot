@@ -82,7 +82,7 @@ void friendship_start_pause(void)
 
 	/* load friendship file data */
 	player_heap_adj();
-	character_texture_load(obj->ochar, obj->over, CHAR_FRIEND,finish_heap_ptr,FATAL_LOAD|ASYNC_LOAD);
+	character_texture_load(obj->ochar, obj->over, CHAR_FRIEND,finish_heap_ptr,FATAL_LOAD|ASYNC_LOAD, obj == p1_obj ? 0 : 1);
 
 	/* sleep for fade */
 	process_sleep(0x20);

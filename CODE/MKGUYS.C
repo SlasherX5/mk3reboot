@@ -105,7 +105,7 @@ short ochar_ground_offsets[2][32] = {
 		SCY(0x94) - 1,			// tusk
 		SCY(0x9e) - 2,			// she goro
 		SCY(0x88) - 3,			// shang tsung
-		SCY(0x8b) - 2,			// kang
+		SCY(0x92),			// kang
 		SCY(0x93),				// smoke
 		SCY(0xaa),				// motaro
 		SCY(0xad),				// kahn
@@ -169,7 +169,7 @@ void* character_palettes_1[2][32] =
 		TSKTAN_P,		//10 - tusk
 		FGRED_P,			//11 - she goro
 		TSYEL_P,			//12 - shang tsun
-		LKRED_P,			//13 - kang
+		LK2RED_P,			//13 - kang
 		SMOKE1_P,			//14 - smoke
 		MOTARO_P,			//15 - motaro
 		BGPAL1_P,			// 16 - shao kahn
@@ -212,7 +212,7 @@ void *character_palettes_2[2][32] =
 	TSBLU_P,		// 10 - tusk
 	FGBLUE_P,		// 11 - she goro
 	TSRED_P,		// 12 - shang tsung
-	LKYELO_P,		// 13 - kang
+	LK2YELO_P,		// 13 - kang
 	SMOKE2_P,		// 14 - smoke
 	MOTARO_P,		// 15 - motaro
 	BGPAL1_P,		// 16 - shao kahn
@@ -376,6 +376,9 @@ void make_player_1_obj(void)
 
 	ltype=(gstate==GS_GAMEOVER && p1_char==FT_SK)?CHAR_FATAL1:CHAR_NORMAL;
 
+	if (p1_char != FT_JAX && p1_version) p1_version = 0;
+	if (p2_char != FT_JAX && p2_version) p2_version = 0;
+
 	void* anitab = character_sel_anitabs[p1_char][p1_version];
 	if (anitab == 0) {
 		anitab = character_sel_anitabs[p1_char][0];
@@ -395,9 +398,9 @@ void make_player_1_obj(void)
 		if ( (p1_heap_char != p1_char && round_23_jsrp!=6) || (p1_heap_char !=p1_char && round_23_jsrp==6 & round_num==1))
 		{
 			if ( !p1_preload )
-				character_texture_load(p1_char,p1_version,ltype,p1_heap,SYNC_LOAD);
+				character_texture_load(p1_char,p1_version,ltype,p1_heap,SYNC_LOAD,0);
 			p1_preload=0;
-			PsxSoundLoadFighter1(p1_char);
+			PsxSoundLoadFighter1(p1_char,p1_version);
 			p1_heap_char=p1_char;							// assign character with heap
 		}
 
@@ -461,8 +464,8 @@ void make_player_2_obj(void)
 	{
 		if ( (p2_heap_char != p2_char && round_23_jsrp!=6) || (p2_heap_char !=p2_char && round_23_jsrp==6 & round_num==1))
 		{
-			character_texture_load(p2_char,p2_version,ltype,p2_heap,SYNC_LOAD);
-			PsxSoundLoadFighter2(p2_char);
+			character_texture_load(p2_char,p2_version,ltype,p2_heap,SYNC_LOAD,1);
+			PsxSoundLoadFighter2(p2_char,p2_version);
 			p2_heap_char=p2_char;							// assign character with heap
 		}
 
@@ -960,7 +963,7 @@ WORD q_nice_pal(void)
 			if (current_proc->a0==current_proc->a1)
 			{
 				/* neither_shang_same */
-				if (p2_obj==current_proc->pa8)
+				if (p2_obj==current_proc->pa8 && p2_version == p1_version)
 					return(SYSTEM_CARRY_CLR);
 				else return(SYSTEM_CARRY_SET);
 			}

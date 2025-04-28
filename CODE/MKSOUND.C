@@ -44,7 +44,8 @@ short gs_death[]=
    	GS_DEATH_ROBO,	 		// 5 = hey
    	GS_DEATH_KANG,			// kang
 	GS_DEATH_SG,			// sheeva
-	GS_DEATH_SK			// shao kahn
+	GS_DEATH_SK,			// shao kahn
+	GS_DEATH_JX
 };
 
 short gs_shook[]=
@@ -58,7 +59,8 @@ short gs_shook[]=
 	GS_SHOOK_ROBO,	 	// robo: shook
 	GS_SHOOK_KANG,	 	// kang: run (borrow)
 	GS_SHOOK_SG,			// sheeva
-	GS_SHOOK_SK			// shao kahn
+	GS_SHOOK_SK,			// shao kahn
+	GS_SHOOK_JX
 };
 
 short gs_run[]=
@@ -72,7 +74,8 @@ short gs_run[]=
   	GS_RUN_ROBO,	 	// robo: run
   	GS_RUN_KANG,		// kang: run
 	GS_RUN_SG,			// sheeva
-	GS_RUN_SG			// shao kahn
+	GS_RUN_SG,			// shao kahn
+	GS_RUN_JX
 };
 
 short gs_tripped_voice[]=
@@ -86,7 +89,8 @@ short gs_tripped_voice[]=
 	0xffff,		 	// robo
 	GS_TV_KANG,			// JH: tripped
 	GS_TV_SG,			// sheeva
-	GS_TV_SK			// shao kahn
+	GS_TV_SK,			// shao kahn
+	GS_TV_JX
 };
 
 short gs_face_hit_voice[]=
@@ -126,7 +130,11 @@ short gs_face_hit_voice[]=
 
 	GS_FHV_SK1,			// shao kahn
 	GS_FHV_SK2,			// shao kahn
-	GS_FHV_SK3			// shao kahn
+	GS_FHV_SK3,			// shao kahn
+
+	GS_FHV_JX1,			// jax
+	GS_FHV_JX2,			// jax
+	GS_FHV_JX3			// jax
 
 };
 
@@ -150,7 +158,9 @@ short gs_attack[]=
 	GS_ATK_SG1,			// sheeva
 	GS_ATK_SG2,			// sheeva
 	GS_ATK_SK1,			// shao kahn
-	GS_ATK_SK2			// shao kahn
+	GS_ATK_SK2,			// shao kahn
+	GS_ATK_JX1,			// shao kahn
+	GS_ATK_JX2			// shao kahn
 };
 
 short gs_jump[]=
@@ -164,7 +174,8 @@ short gs_jump[]=
 		0xffff,		 				// robo = sans
    	GS_JUMP_KANG,		// kang: jump
 	GS_JUMP_SG,			// sheeva
-	GS_JUMP_SK			// shao kahn
+	GS_JUMP_SK,			// shao kahn
+	GS_JUMP_JX,			// shao kahn
 };
 
 short gs_grab[]=
@@ -178,7 +189,8 @@ short gs_grab[]=
    	GS_GRAB_ROBO,				 	// robo: grab
    	GS_GRAB_KANG,		// kang: grab
 	GS_GRAB_SG,			// sheeva
-	GS_GRAB_SK			// shao kahn
+	GS_GRAB_SK,			// shao kahn
+	GS_GRAB_JX
 };
 
 short gs_slam[]=
@@ -192,7 +204,8 @@ short gs_slam[]=
 	GS_SLAM_ROBO,	 	// robo: throw voice
 	GS_SLAM_KANG,		// kang: throw voice
 	GS_SLAM_SG,			// sheeva
-	GS_SLAM_SK			// shao kahn
+	GS_SLAM_SK,			// shao kahn
+	GS_SLAM_JX
 };
 
 short gs_wasted[]=
@@ -206,8 +219,8 @@ short gs_wasted[]=
 	GS_WST_DF1,			// DF: Wast
 	GS_WST_EB1,		  	// EB: Wast #1
 	GS_WST_EB2,		  	// EB: Wast #2
-	GS_WST_JH2,		  	// JH: Wast #1
-	GS_WST_JH1,		  	// JH: Wast #2
+	GS_WST_JH1,		  	// JH: Wast #1
+	GS_WST_JH2,		  	// JH: Wast #2
 	GS_WST_ROBO1,	 	// robo: wasted
 	GS_WST_ROBO2,	 	// robo: wasted
 	GS_WST_KANG1, 	// kang: Wast #1
@@ -215,7 +228,9 @@ short gs_wasted[]=
 	GS_WST_SG1,			// sheeva
 	GS_WST_SG2,			// sheeva
 	GS_WST_SK1,			// shao kahn
-	GS_WST_SK2			// shao kahn
+	GS_WST_SK2,			// shao kahn
+	GS_WST_JX1,			// shao kahn
+	GS_WST_JX2			// shao kahn
 };
 
 short *group_table[]=
@@ -232,7 +247,8 @@ short *group_table[]=
 	gs_death			// 9
 };
 
-short ochar_voice_groups[32] =
+short ochar_voice_groups[2][32] =
+{
 {
 	GP_MALE3,	//
 	GP_FEMALE,	//
@@ -253,6 +269,28 @@ short ochar_voice_groups[32] =
 	GP_SHAO_KAHN,
 	GP_MALE4,
 	GP_MALE4
+},
+{
+	GP_MALE3,	//
+	GP_FEMALE,	//
+	GP_MALE3,	//
+	GP_MALE2,	//
+	GP_MALE4,	//
+	GP_MALE1,	//
+	GP_FEMALE,	//
+	GP_ROBO,		//
+	GP_ROBO,		//
+	GP_MALE4,	//
+	GP_MALE1,	//
+	GP_SHEEVA,	//
+	GP_MALE3,	//
+	GP_KANG,		//
+	GP_ROBO,	//
+	-1,
+	GP_SHAO_KAHN,
+	GP_MALE4,
+	GP_MALE4
+},
 };
 
 /******************************************************************************
@@ -278,7 +316,7 @@ void group_sound(WORD offset)
 	current_proc->a2=GET_WORD(stbl)++;				// # of entries
 	current_proc->a3=current_proc->a2;
 
-	(short)current_proc->a1=ochar_voice_groups[obj->ochar];		// a1 = my group (offset into groups data)
+	(short)current_proc->a1=ochar_voice_groups[obj->over][obj->ochar];		// a1 = my group (offset into groups data)
 
 	if (((short)current_proc->a1)<0)
 		return;									// neg = no group for me
@@ -318,7 +356,7 @@ void kill_group_sound(WORD offset,OBJECT *obj)
 	current_proc->a2=GET_WORD(stbl)++;				// # of entries
 	current_proc->a3=current_proc->a2;
 
-	(short)current_proc->a1=ochar_voice_groups[obj->ochar];		// a1 = my group (offset into groups data)
+	(short)current_proc->a1=ochar_voice_groups[obj->over][obj->ochar];		// a1 = my group (offset into groups data)
 
 	if (((short)current_proc->a1)<0)
 		return;									// neg = no group for me
@@ -1070,7 +1108,12 @@ short st_jax[]=
 	FT_JAX_CRUNCH1,			//8 - crunch!
 	FT_JAX_CRUNCH2,			//9 - crunch #1
 	FT_JAX_QUAKE,			//a - death quake
-	ST_JAX_BREAK			//b - bax break
+	ST_JAX_BREAK,			//b - bax break
+	ST_JAX_YEAH,			//c - yeaaah
+	ST_JAX_YEAH2,			//d - yeaaah
+	ST_JAX_SUCKER,			//e - sucker!
+	ST_JAX_YOUGET,			//f - you get
+	ST_JAX_GETSOME			//10 - you get
 };
 
 short st_subzero[]=

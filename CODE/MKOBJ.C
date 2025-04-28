@@ -974,7 +974,7 @@ void floor_code_setup(void)
 
 	/* blast images into memory */
 	rect.x = FLR_L_BASE_X, rect.y = FLR_L_BASE_Y, rect.w = FLR_BUFFER_X/2, rect.h = skew_height+12;
-	DLoadImage(&rect, (ADDRESS *)floor_draw_buf);
+	DLoadImage(&rect, (ADDRESS *)floor_draw_buf,0);
 	//LOADIMAGE(&rect, (ADDRESS *)dbr);
 
 	DrawSync(0);
@@ -1006,7 +1006,7 @@ void floor_code_setup(void)
 
 	/* blast images into memory */
 	rect.x = FLR_R_BASE_X, rect.y = FLR_R_BASE_Y;
-	DLoadImage(&rect, (ADDRESS *)floor_draw_buf);
+	DLoadImage(&rect, (ADDRESS *)floor_draw_buf,0);
 	//LOADIMAGE(&rect, (ADDRESS *)dbr);
 #endif
 }

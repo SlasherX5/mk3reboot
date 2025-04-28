@@ -1,505 +1,501 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MK3Reboot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BIGSTACK.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DAVID.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DIGLOAD.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LCDLOAD.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LOADADDR.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MK3SND.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKAMODE.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKANI.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKANIMAL.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKBIO.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKBKGD.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKBLOOD.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKBONUS.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKBOSS.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKBRIEF.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKBUG.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKBUYIN.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKCANNED.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKCOMBO.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKDIAG.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKDRONE.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKEND.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKFADE.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKFATAL.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKFILE.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKFRIEND.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKFX.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKGAME.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKGUYS.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKHSTD.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKINIT.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKJOY.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKLADDER.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKMAIN.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKMARK.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKOBJ.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKOPT.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKOS.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKPAL.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKPROP.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKR1.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKREACT.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKREPELL.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKSCORE.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKSEL.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKSLAM.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKSND.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKSONY.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKSOUND.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKSTAT.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKTEXT.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKUTIL.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKVS.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MKZAP.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MOVES.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PCH.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PSXCD.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PSXCDABS.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PSXCDOLD.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PSXSND.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PSXSPU.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SEQLOAD.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SNDLST.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SOUNDHW.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SYSTEM.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="VALLOC.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WESSAPI.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="XCHARS.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PSXLIB.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="stdstuff.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="win_port.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="emulator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OVERLAY.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ovlextrn.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3DTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\sound\WAVE.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hqxcommon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="MK3Reboot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDBANK.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDBELL.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDBRIG.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDCITY.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDGRAV.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDMOCK.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDPIT.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDPORT.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDSBST.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDSKEN.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDSOUL.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BKGDTEMP.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="FLICPLAY.C">
-      <Filter>Source Files</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="LOADADDR.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKAMODE.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKANI.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKANIMAL.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKBIO.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKBKGD.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKBKMOD.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKBLOOD.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKBONUS.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKBOSS.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKBT.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKBUG.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKBUYIN.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKCANNED.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKCOMBO.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKDIAG.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKDRONE.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKEND.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKFADE.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKFATAL.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKFILE.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKFRIEND.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKFX.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKGLOBAL.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKGUYS.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKHSTD.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Mkinit.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKJOY.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKLADDER.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKMAIN.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKMARK.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKOBJ.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKOS.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKPAL.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKPROP.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKR1.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKREACT.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKREPELL.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKSCORE.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKSEL.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKSLAM.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKSONY.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKSOUND.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKSTAT.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKTEXT.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKUTIL.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKVS.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKWIN95.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MKZAP.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MOVES.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PSXSND.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VALLOC.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WESSAPI.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WESSARC.C">
-      <Filter>Source Files</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="OVERLAY.C">
-      <Filter>Source Files</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="hq3x.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="PSXSND.C">
+      <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="hqxInit.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="VALLOC.C">
+      <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="INIReader.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="WESSAPI.C">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WESSARC.C">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MK3Reboot.cpp">
+      <Filter>Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="MKAMODE.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKANI.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKANIMAL.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKBIO.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKBKGD.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKBKMOD.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKBLOOD.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKBONUS.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKBOSS.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKBT.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKBUG.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKBUYIN.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKCANNED.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKCOMBO.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKDIAG.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKDRONE.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKEND.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKFADE.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKFATAL.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKFILE.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKFRIEND.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKFX.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKGLOBAL.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKGUYS.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKHSTD.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Mkinit.c">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKJOY.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKLADDER.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKMAIN.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKMARK.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKOBJ.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKOS.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKPAL.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKPROP.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKR1.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKREACT.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKREPELL.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKSCORE.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKSEL.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKSLAM.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKSONY.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKSOUND.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKSTAT.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKTEXT.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKUTIL.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKVS.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKWIN95.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MKZAP.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MOVES.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDTEMP.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDSOUL.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDSKEN.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDSBST.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDPORT.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDPIT.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDMOCK.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDGRAV.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDCITY.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDBRIG.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDBELL.C">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BKGDBANK.C">
+      <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="ini.c">
-      <Filter>Source Files</Filter>
+      <Filter>Win32</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MK3Reboot.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <ClInclude Include="BIGSTACK.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="DAVID.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="DIGLOAD.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="emulator.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="LCDLOAD.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="LOADADDR.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="MK3SND.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="OVERLAY.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ovlextrn.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PCH.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PSXCD.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PSXCDABS.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PSXCDOLD.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PSXLIB.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PSXSND.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PSXSPU.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="SEQLOAD.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="SNDLST.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="SOUNDHW.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="stdstuff.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="SYSTEM.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="VALLOC.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sound\WAVE.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="WESSAPI.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="win_port.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="XCHARS.H">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="FileCache.h">
+      <Filter>Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="MK3Reboot.h">
+      <Filter>Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="MKAMODE.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKANI.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKANIMAL.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKBIO.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKBKGD.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKBLOOD.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKBONUS.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKBOSS.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKBRIEF.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKBUG.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKBUYIN.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKCANNED.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKCOMBO.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKDIAG.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKDRONE.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKEND.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKFADE.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKFATAL.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKFILE.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKFRIEND.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKFX.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKGAME.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKGUYS.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKHSTD.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKINIT.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKJOY.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKLADDER.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKMAIN.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKMARK.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKOBJ.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKOPT.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKOS.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKPAL.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKPROP.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKR1.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKREACT.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKREPELL.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKSCORE.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKSEL.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKSLAM.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKSND.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKSONY.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKSOUND.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKSTAT.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKTEXT.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKUTIL.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKVS.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MKZAP.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MOVES.H">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ini.h">
+      <Filter>Win32</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
-      <Filter>Resource Files</Filter>
+      <Filter>Source</Filter>
     </Image>
     <Image Include="MK3Reboot.ico">
-      <Filter>Resource Files</Filter>
+      <Filter>Win32</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Runtime\D3DTest.fx" />
     <None Include="..\sound\BUILDSND.C">
-      <Filter>Source Files</Filter>
+      <Filter>Source</Filter>
     </None>
     <None Include="..\sound\WAVE.C">
-      <Filter>Source Files</Filter>
+      <Filter>Source</Filter>
     </None>
+    <None Include="..\Runtime\D3DTest.fx">
+      <Filter>Win32</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{6e8b580e-3d89-4193-a27d-2e7393aa00ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Win32">
+      <UniqueIdentifier>{498bdeb8-5237-4a07-a12c-b92769a6d3cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{7a6b9896-92d5-4ded-a1e8-afd7ab5d7cd6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MK3Reboot.rc">
+      <Filter>Win32</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

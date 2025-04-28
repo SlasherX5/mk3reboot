@@ -29,7 +29,8 @@
 #define BKGD_TEMPLE_MOD		0x08
 #define BKGD_GRAVE_MOD		0x09
 #define BKGD_PIT_MOD		0x0a
-#define BKGD_HIDDEN_MOD		0x0b
+#define BKGD_DEADPOOL_MOD	0x0b
+#define MAX_BACKGROUNDS		0x0b	/* maximum # of backgrounds in the game */
 
 #define BKGD_MK3_BUYIN		0x0c
 #define BKGD_MK3_HSCORE	0x0d

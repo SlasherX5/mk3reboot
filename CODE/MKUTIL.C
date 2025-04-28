@@ -244,7 +244,7 @@ void clr_scrn(void)
 	//DrawOTag(cdb->ot);                                                         /* draw */
 	//DrawSync(0);                                                                    // wait for everything to finish
 #endif
-
+	ClearScreen();
 	return;
 }
 
@@ -1744,7 +1744,7 @@ OBJECT *get_single_obj(LONG frame,void *heapptr,void *pal,WORD palflag)
 
 	obj=object_setup((OIMGTBL *)frame,pal,palflag & PFLAG_PALLOAD);         // flag: get a  pal
 
-       	obj->oheap=heapptr;
+    obj->oheap=heapptr;
 
 	(LONG)obj->oimg=frame;
 
@@ -1792,10 +1792,11 @@ OBJECT *object_setup(OIMGTBL *frame,void *palram,WORD getpal)
 			palram = (frame + 1)->isagptr;//get the hidden pal reference
 		}
 
+		/*
 		if ((DWORD)palram < 0xffff) {
 			obj->opal = 0;
 			return 0;
-		}
+		}*/
 
 		if (palram) {
 			obj->opal = get_fore_pal((WORD*)palram);
@@ -2279,7 +2280,7 @@ short nrand(void)
 	or1=or2;
 	or2=ret;
 
-	return(ret);
+	return ret;
 }
 
 /******************************************************************************
@@ -2532,12 +2533,12 @@ void back_to_shang_form(void)
 	{
 		psxcd_pause();
 
-		character_texture_load(FT_ST,0,CHAR_NORMAL,obj->oheap,SYNC_LOAD);
+		character_texture_load(FT_ST,0,CHAR_NORMAL,obj->oheap,SYNC_LOAD, obj == p1_obj ? 0 : 1);
 
 		if (obj->oid==OID_P1)
-			PsxSoundLoadFighter1(FT_ST);
+			PsxSoundLoadFighter1(FT_ST, p1_version);
 		else 
-			PsxSoundLoadFighter2(FT_ST);
+			PsxSoundLoadFighter2(FT_ST, p2_version);
 
 		if (obj==p1_obj)                                                        // set heap to belong to correct owner
 			p1_heap_char=FT_ST;

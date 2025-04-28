@@ -26,6 +26,9 @@
 #include "mkfade.h"
 #include "emulator.h"
 
+WORD* _fade_table = 0;
+WORD** _fade_excludes = 0;
+
 /******************************************************************************
  Fade Tables
 ******************************************************************************/
@@ -828,6 +831,9 @@ void fader(WORD **pa0,WORD *pa11)
 	short i;
 	WORD **ta7;
 	PROCESS *ptemp;
+
+  	_fade_table = pa11;
+	_fade_excludes = pa0;
 
 	/* pallp, walk through all palettes and see */
     for (i=0;i<NUM_PALS;i++)

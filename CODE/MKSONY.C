@@ -882,7 +882,7 @@ void load_perm_art(void)
 
 	/* load control panel graphics */
 	texture_level_load(LVL_CONTROL,SYNC_LOAD);
-	control_floor_tpage= DLoadTPage((ADDRESS *)permanent_art_loadaddr0,TEXTURE_MODE,0,CP_TEXT_X,CP_TEXT_Y,256,256);		// 0 trans for score bar
+	control_floor_tpage= DLoadTPage((ADDRESS *)permanent_art_loadaddr0,TEXTURE_MODE,0,CP_TEXT_X,CP_TEXT_Y,256,256, LVL_CONTROL*10000 + 500000);		// 0 trans for score bar
 	DrawSync(0);
 
 	/* load text graphics */

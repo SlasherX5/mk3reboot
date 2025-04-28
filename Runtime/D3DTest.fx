@@ -8,8 +8,7 @@ cbuffer ConstantBuffer : register(b0)
 	float4 UVParams;
 	float4 PalParams;
 	float4 Color;
-	float4 Extra;	
-	float4 mUVOffsets;
+	float4 Extra;
 }
 
 //--------------------------------------------------------------------------------------
@@ -22,6 +21,7 @@ struct VS_OUTPUT
 Texture2D palette : register(t0);
 Texture2D pixels  : register(t1);
 Texture2D tfilter  : register(t2);
+Texture2D pixels8 : register(t3);
 
 SamplerState PointSampler  : register(s0);
 SamplerState LinearSamplerW : register(s1);
@@ -42,8 +42,8 @@ VS_OUTPUT VS(float4 pos : POSITION, float2 uv : TEXCOORD)
 
 float4 pallookup(float2 uv)
 {
-	float  index = pixels.Sample(PointSampler, uv + mUVOffsets.xy).x;
-	return palette.Sample(PointSampler, float2(index + Extra.x, Extra.y));
+	float  index = pixels.Sample(PointSampler, uv).x;
+	return palette.Sample(PointSampler, float2(index, Extra.y));
 }
 
 #if UPSCALE >= 4
@@ -292,7 +292,7 @@ float4 Blur3(float2 uv, float s)
 float4 PS_RAW8(VS_OUTPUT input) : SV_Target
 {
 	return pallookup(input.uv);
-	//return pixels.Sample(PointSampler, input.uv + mUVOffsets.xy);
+	//return pixels.Sample(PointSampler, input.uv);
 }
 
 float4 PS_UP(VS_OUTPUT input) : SV_Target
@@ -307,7 +307,7 @@ float4 PS_UP(VS_OUTPUT input) : SV_Target
 
 float4 PS(VS_OUTPUT input) : SV_Target
 {
-#if UPSCALE >= 4 && HQX != 0
+#if UPSCALE >= 4
 	float4 tcolor = hq4x(input.uv);
 #else
 	float4 tcolor = pallookup(input.uv);
@@ -322,35 +322,109 @@ float4 PS(VS_OUTPUT input) : SV_Target
 	return tcolor*flt;
 }
 
+
+float3 rgb2hsv(float3 c)
+{
+    float4 K = float4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
+    float4 p = lerp(float4(c.bg, K.wz), float4(c.gb, K.xy), step(c.b, c.g));
+    float4 q = lerp(float4(p.xyw, c.r), float4(c.r, p.yzx), step(p.x, c.r));
+
+    float d = q.x - min(q.w, q.y);
+    float e = 1.0e-10;
+    return float3(abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x);
+}
+
+float3 hsv2rgb(float3 c)
+{
+    float4 K = float4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+    float3 p = abs(frac(c.xxx + K.xyz) * 6.0 - K.www);
+    return c.z * lerp(K.xxx, saturate(p - K.xxx), c.y);
+}
+
+float4 hsvreplace(float2 uv, float3 shift)
+{
+	// LinearSamplerC
+    float4 srccolor = pixels.Sample(LinearSamplerC, uv);
+    float3 hsv = rgb2hsv(srccolor.xyz);
+		
+    const float px = 1.0 / 512.0;
+	
+    float2 kernel[] =
+    {
+		float2(0,0),
+        float2( - px,  0),
+		float2( + px,  0),
+		float2(    0,  + px),
+		float2(    0,  - px),
+		float2(-px, -px),
+		float2(+px, -px),
+		float2(-px, +px),
+		float2(+px, +px),
+    };
+	
+    for (int i = 0; i < 5;i++)
+    {
+        float expalind = pixels8.Sample(PointSampler, uv + kernel[i]).x;
+		
+        float paldist = expalind - PalParams.x;
+		
+        if (paldist >= 0 && paldist < PalParams.y)
+        {			
+            hsv.x = (hsv.x + shift.x) % 1.0;
+            hsv.yz = saturate(hsv.yz + shift.yz);
+            return float4(hsv2rgb(hsv), srccolor.w);
+        }
+    }
+	
+	
+    return srccolor;
+}
+
+float4 PS_BG(VS_OUTPUT input) : SV_Target
+{
+    float4 tcolor = pixels.Sample(PointSampler, input.uv);
+    float4 gs = Extra.x;
+    tcolor = lerp(Color, tcolor, Extra.z);
+    tcolor.xyz *= gs;
+    tcolor.w *= Extra.w;
+    return tcolor;
+}
+
 float4 PS4X(VS_OUTPUT input) : SV_Target
 {
-	float4 tcolor = pixels.Sample(LinearSamplerC, input.uv + mUVOffsets.xy);
-	float4 gs = Extra.x; 
+    float4 tcolor = pixels.Sample(LinearSamplerC, input.uv);
+    float4 gs = Extra.x;
 
-	tcolor = lerp(Color, tcolor, Extra.z);
-	tcolor.xyz *= gs;
-	tcolor.w *= Extra.w;	
+    tcolor = lerp(Color, tcolor, Extra.z);
+    tcolor.xyz *= gs;
+    tcolor.w *= Extra.w;
+    return tcolor;
+}
 
-	float4 filter = tfilter.Sample(LinearSamplerW, float2(input.pos.x / 2.f, input.pos.y / 3.f));
-	float4 flt = pow(filter, 1.85f);
-	flt.w = 1;
-	return tcolor * flt;
+float4 PS4X_P1(VS_OUTPUT input) : SV_Target
+{    
+    float4 tcolor = hsvreplace(input.uv, float3(PalParams.z, 0, -0.15));
+	float4 gs = Extra.x;
+	
+    tcolor = lerp(Color, tcolor, Extra.z);
+    tcolor.xyz *= gs;
+    tcolor.w *= Extra.w;
+    return tcolor;
 }
 
 float4 PS_RAW32(VS_OUTPUT input) : SV_Target
 {
-	return pixels.Sample(LinearSamplerC, input.uv + mUVOffsets.xy);
+	return pixels.Sample(LinearSamplerC, input.uv);
 }
-
 
 float4 PS1(VS_OUTPUT input) : SV_Target
 {
 
-#if UPSCALE >= 4 && HQX != 0
+#if UPSCALE >= 4
 	float4 tcolor = hq4x(input.uv);
-#elif UPSCALE == 3 && HQX != 0
+#elif UPSCALE == 3
 	float4 tcolor = hq2x(input.uv);
-#elif UPSCALE == 2 && HQX != 0
+#elif UPSCALE == 2
 	float4 tcolor = hq2x(input.uv);
 #else
 	float4 tcolor = lookup(input.uv);
@@ -364,7 +438,8 @@ float4 PS1(VS_OUTPUT input) : SV_Target
 
 float4 PS0(VS_OUTPUT input) : SV_Target
 {
-	float4 tcolor = pixels.Sample(LinearSamplerC, input.uv);	
+	float4 tcolor = pixels.Sample(LinearSamplerC, input.uv);
+	//float4 tcolor = hq4x(input.uv);
 	float4 filter = tfilter.Sample(LinearSamplerW, float2(input.pos.x / 4.f, input.pos.y / 4.f));
 	float4 flt = pow(filter, 2.1f);
 	flt.w = 1;

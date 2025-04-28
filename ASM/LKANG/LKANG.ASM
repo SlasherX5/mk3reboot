@@ -1,17 +1,24 @@
 
 
-	include overlay.i
+	include win95.i
 	include mkchar.i
 
-	BEGIN_OVERLAY
-	;CNOP 0,4
-	include ..\chars\lkang\mklk.psx
-	;CNOP 0,4
-	include ..\chars\lkang\mklk.psi
-	;CNOP 0,4
-	include ..\chars\lkang\lub.psi
+	PUBLIC _lkang_lkang_bin
 
+	EXTERN _LKRED_P : DWORD
+	EXTERN _DRAGFIR_P : DWORD
+	
 
-	END_OVERLAY
+	BEGIN_DATA
+	ALIGN 4
+_lkang_lkang_bin:
+	DD -1,_enddata1-lk_anitab1
+	include chars\lkang\mklk.psx
+	include chars\lkang\mklk.psn
+	include chars\lkang\mklk.psi
+	include chars\lkang\lub.psi
+_enddata1:
+	END_DATA
+
 	end
 

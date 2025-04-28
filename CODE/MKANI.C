@@ -364,7 +364,7 @@ void animate2(OBJECT *obj,ADDRESS *framelist)
 			{
 				u_short* header = (u_short*)(pram_ptr->prsagptr);
 
-				if (header[0] == 0xffff) {
+				if (header[0] == 0xffff || header[0] == 0xfefe) {
 					int frno = header[1];
 				} else {
 					pram_ptr->prsagptr = (ADDRESS)uncompress_image((BYTE*)(pram_ptr->prsagptr));

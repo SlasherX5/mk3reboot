@@ -87,7 +87,7 @@ void animality_start_pause(void)
 
 	/* load animality file data */
 	player_heap_adj();
-	character_texture_load(obj->ochar,obj->over,CHAR_ANIMAL,finish_heap_ptr,ASYNC_LOAD|FATAL_LOAD);
+	character_texture_load(obj->ochar,obj->over,CHAR_ANIMAL,finish_heap_ptr,ASYNC_LOAD|FATAL_LOAD,obj == p1_obj ? 0 : 1);
 
 	/* sleep for fade */
 	process_sleep(0x20);
