@@ -117,6 +117,9 @@ extern "C"
 	extern WORD editmode = 0;// 2 | 0x40;
 	extern WORD testmode = 0;// 2 | 0x40 | 0x100;// | 2;// 2 | 0x80;
 
+	extern WORD* character_palettes_1[2][32];
+	extern WORD* character_palettes_2[2][32];
+
 	extern WORD* _fade_table;
 	extern WORD* get_pal(WORD clut_id);
 	extern WORD c_fatal, f_fade;
@@ -397,6 +400,28 @@ bool Save32BitBmp(const char* filename, DWORD* src, int w, int h)
 	}
 	fclose(f);
 	return true;
+}
+
+void LoadACTPalette(const char* filename, WORD* dst, WORD palcount)
+{
+	FILE* f = fopen(filename, "rb");
+	if (f == nullptr) return;
+
+	DW_RGBA srcpix;
+
+	*dst++ = palcount;
+	*dst++ = 0;
+
+	for (size_t i = 0; i < palcount; i++)
+	{
+		fread(&srcpix, 3, 1, f);
+		dst[i] =
+			((srcpix.r * 31 / 255) << 0) |
+			((srcpix.g * 31 / 255) << 5) |
+			((srcpix.b * 31 / 255) << 10);
+	}
+
+	fclose(f);
 }
 
 void LoadLuminPalette(const char* filename, WORD start, WORD endi, WORD slot)
@@ -837,6 +862,17 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	}
 
 	FileCache::CacheOnlyMode = ini_getstr("util", "cacheonlymode", "false")._Equal("true");
+
+	WORD PalOverrideCount = 0;
+	WORD* PalOverrides = ini_getint16raw("palettes", "PaletteOverrides", &PalOverrideCount);
+	std::vector<std::string> palettefiles = ini_getstrarray("palettes", "palette");
+
+	for (int i = 0; i < PalOverrideCount; i++)
+	{
+		WORD fi = PalOverrides[i];
+		LoadACTPalette(palettefiles[2 * i + 0].c_str(), character_palettes_1[fi % 10][fi / 10], 64);
+		LoadACTPalette(palettefiles[2 * i + 1].c_str(), character_palettes_2[fi % 10][fi / 10], 64);
+	}
 
 	Mode4X = ini_getint("graphics", "mode4x", Mode4X);
 	ScreenWidth = ini_getint("graphics", "width", 1600);

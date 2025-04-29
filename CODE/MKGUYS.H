@@ -266,8 +266,8 @@
 /*
  *	PROTOTYPES
  */
-extern void *character_palettes_1[2][32];
-extern void *character_palettes_2[2][32];
+extern WORD *character_palettes_1[2][32];
+extern WORD *character_palettes_2[2][32];
 
 void setup_players(void);
 void init_p_others(void);
@@ -311,6 +311,13 @@ void ochar_bank_bit(OBJECT *pa8);
 
 #define mot_anitab1 lk_anitab1
 #define mot_anitab2 lk_anitab2
+
+// external palettes
+extern WORD JAX2PRP_P[];
+extern WORD JZX2GRN_P[];
+extern WORD LK2RED_P[];
+extern WORD LK2YELO_P[];
+
 
 /* shadow pal */
 extern WORD SHADOW_P[];

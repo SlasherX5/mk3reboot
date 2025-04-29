@@ -48,6 +48,12 @@ extern void *sg_panitab1[];
 extern void *st_panitab1[];
 extern void *lk_panitab1[];
 
+// external palettes
+WORD JAX2PRP_P[2+64];
+WORD JZX2GRN_P[2+64];
+WORD LK2RED_P[2+64];
+WORD LK2YELO_P[2+64];
+
 void *character_sel_anitabs[][2] =
 {
 	{kano_panitab1,0},
@@ -133,7 +139,7 @@ short ochar_ground_offsets[2][32] = {
 	},
 };
 
-void* character_palettes_1[2][32] = 
+WORD* character_palettes_1[2][32] = 
 {
 	{
 		KANORED_P,    	// 0 - kano
@@ -169,7 +175,7 @@ void* character_palettes_1[2][32] =
 		TSKTAN_P,		//10 - tusk
 		FGRED_P,			//11 - she goro
 		TSYEL_P,			//12 - shang tsun
-		LKRED_P,			//13 - kang
+		LK2RED_P,			//13 - kang
 		SMOKE1_P,			//14 - smoke
 		MOTARO_P,			//15 - motaro
 		BGPAL1_P,			// 16 - shao kahn
@@ -177,7 +183,7 @@ void* character_palettes_1[2][32] =
 	}
 };
 
-void *character_palettes_2[2][32] =
+WORD *character_palettes_2[2][32] =
 {
 {
 	KANOBLU_P,		// 0 - kano
@@ -212,7 +218,7 @@ void *character_palettes_2[2][32] =
 	TSBLU_P,		// 10 - tusk
 	FGBLUE_P,		// 11 - she goro
 	TSRED_P,		// 12 - shang tsung
-	LKYELO_P,		// 13 - kang
+	LK2YELO_P,		// 13 - kang
 	SMOKE2_P,		// 14 - smoke
 	MOTARO_P,		// 15 - motaro
 	BGPAL1_P,		// 16 - shao kahn
